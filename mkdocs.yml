@@ -1,6 +1,7 @@
 site_name: Radiology Protocol Manager
-site_url: https://your-hospital-intranet/protocol_manager/
+site_url: https://dfergs93.github.io/radiology-protocols/
 
+# Rest of your config...
 theme:
   name: material
   features:
