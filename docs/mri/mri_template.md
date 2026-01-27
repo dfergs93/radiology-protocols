@@ -61,17 +61,21 @@
 
 === "For Radiologist (Overview)"
 
-    #### Scan & Reconstruction Summary
+    #### Sequence & Reconstruction Summary
 
-    | Phase / Type      | Series / Recon Name         | Key Features & Notes                          |
-    |:------------------|:----------------------------|:----------------------------------------------|
-    | **Scan Acquisition** |                             |                                               |
-    |                   | Portal Venous Phase         | ~70 sec delay. Acquired at **2.5mm** thickness |
-    | **Reconstructions**  |                             | *All recons created from Portal Venous data*  |
-    |                   | Axial Soft Tissue           | 2.5mm thickness                               |
-    |                   | Axial Bone Algorithm        | 5.0mm thickness                               |
-    |                   | Coronal Soft Tissue         | 3.0mm thickness                               |
-    |                   | Sagittal Soft Tissue        | 3.0mm thickness                               |
+    | Phase / Type | Sequence / Recon            | Key Features & Notes              |
+    |:-------------|:----------------------------|:----------------------------------|
+    | **Pre-Contrast** |                             |                                   |
+    |              | Sagittal T1 SE                | Midline Anatomy                   |
+    |              | Axial T2 FLAIR                | Excellent for MS Lesions          |
+    |              | Axial DWI                     | For Acute Stroke                  |
+    | **Post-Contrast**|                             |                                   |
+    |              | Axial T1 SE                   | <span class="badge">FatSat</span> |
+    |              | 3D T1 MPRAGE                  | <span class="badge">3D</span> Isotropic Volume |
+    | **Reconstructions**|                         |                                   |
+    |              | Coronal & Sagittal Reformats  | From 3D MPRAGE                    |
+    |              | ADC Map                       | From DWI                          |
+
 
 === "For Technologist (Full Protocol)"
 

@@ -30,7 +30,7 @@
 
 ## Protocol Details
 
-=== "For Radiologist 2 (Overview)"
+=== "For Radiologist (Overview)"
 
     #### Sequence & Reconstruction Summary
 
