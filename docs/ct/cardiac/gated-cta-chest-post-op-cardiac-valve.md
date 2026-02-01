@@ -94,8 +94,8 @@
       section Contrast Injection
       Contrast (1.3 mL/kg)    :active, contrast, 00:00, 20s
       Saline (50mL)          :active, saline, after contrast, 11s
-      section Cardiac Acquisition
-      Gated CTA    :crit, scan2, 00:25, 10s
+      section Arterial Phase
+      Gated CTA    :crit, scan1, 00:25, 10s
   ```
 
 

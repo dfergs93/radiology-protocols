@@ -16,8 +16,8 @@
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
         | Non-Contrast | Non-contrast | Top kidneys to Iliac crests |
-        | Corticomedullary | Contrast (20 sec after 1st injection delay) | Top kidneys to Iliac crests |
-        | Nephrographic/IVP | Contrast (90-120 sec after 2nd injection delay) | Top kidneys to Pubic symphysis |
+        | Corticomedullary | Contrast (20 sec delay) | Top kidneys to Iliac crests |
+        | Nephrographic/IVP | Contrast (90-120 sec from 2nd injection delay) | Top kidneys to Pubic symphysis |
 
     === "Clinical Indications"
 
@@ -93,7 +93,7 @@
       Contrast bolus 1 (77mL)  :active, contrast1, 00:00, 19s
       Saline flush (50mL)                  :active, saline1, after contrast1, 12s
       section First Scan Phase
-      First acquisition                    :crit, scan1, after scan1, 15s
+      First acquisition                    :crit, scan1, 00:20, 15s
       section Wait Period
       Wait for second injection            :milestone, wait, after scan1, 05:00
       section Second Injection
@@ -110,8 +110,8 @@
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout | Diaphragm | Iliac crests | N/A | N/A | AP |
     | Non-Contrast | Top kidneys | Iliac crests | N/A | 2.5 mm | Baseline - detect fat/calcium |
-    | Corticomedullary | Top kidneys | Iliac crests | 20 sec after 1st injection | 1.25 mm | Arterial/nephrographic |
-    | Nephrographic/IVP | Top kidneys | Pubic symphysis | 90-120 sec after 2nd injection | 1.25 mm | Delayed enhancement + collecting system |
+    | Corticomedullary | Top kidneys | Iliac crests | 20 sec | 1.25 mm | Arterial/nephrographic |
+    | Nephrographic/IVP | Top kidneys | Pubic symphysis | 90-120 sec from 2nd injection | 1.25 mm | Delayed enhancement + collecting system |
 
 === "Technical Parameters"
 

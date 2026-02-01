@@ -15,7 +15,6 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Scout/Topogram | Non-contrast | Xiphoid to Pubic symphysis |
         | CTA Arterial | Arterial (bolus tracked) | Xiphoid to Pubic symphysis |
 
     === "Clinical Indications"
@@ -92,7 +91,7 @@
       Contrast (100 mL)    :active, contrast, 00:00, 25s
       Saline (50mL)          :active, saline, after contrast, 12s
       section Arterial Phase
-      CTA Arterial    :crit, scan2, 00:25, 16s
+      CTA Arterial    :crit, scan1, 00:25, 16s
   ```
 
 

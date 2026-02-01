@@ -15,7 +15,6 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Scout/Topogram | Non-contrast | Diaphragm to Femoral heads |
         | CTA Arterial | Arterial (bolus tracked) | Diaphragm to Femoral heads |
 
     === "Clinical Indications"
@@ -97,7 +96,7 @@
       Contrast (125 mL)    :active, contrast, 00:00, 31s
       Saline (50mL)          :active, saline, after contrast, 12s
       section Arterial Phase
-      CTA Arterial    :crit, scan2, 00:25, 10s
+      CTA Arterial    :crit, scan1, 00:25, 10s
   ```
 
 

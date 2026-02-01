@@ -94,8 +94,8 @@
       section Contrast Injection
       Contrast (75-100 mL)    :active, contrast, 00:00, 16s
       Saline (50mL)          :active, saline, after contrast, 11s
-      section Scan Phase 3
-      CTA Head    :crit, scan3, 00:25, 8s
+      section Arterial Phase
+      CTA Head    :crit, scan1, 00:25, 8s
   ```
 
 

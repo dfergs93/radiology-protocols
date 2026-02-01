@@ -95,10 +95,10 @@
       section Contrast Injection
       Contrast (1.5 mL/kg)    :active, contrast, 00:00, 23s
       Saline (50mL)          :active, saline, after contrast, 11s
-      section Scan Phase 2
-      Pancreatic Phase    :crit, scan2, 00:25, 12s
+      section Scan Phase 1
+      Pancreatic Phase    :crit, scan1, 00:40, 12s
       section Portal Venous Phase
-      Portal Venous    :done, scan3, 01:10, 12s
+      Portal Venous    :done, scan2, 01:10, 12s
   ```
 
 

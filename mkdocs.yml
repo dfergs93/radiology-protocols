@@ -12,7 +12,22 @@ theme:
     - search.highlight
     - content.tabs.link
     - toc.integrate
-
+  palette:
+    # Light mode
+    - scheme: default
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    
+    # Dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 plugins:
   - search
   - awesome-pages
@@ -22,6 +37,9 @@ extra_css:
 
 extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - javascripts/mermaid-init.js
+  - javascripts/protocol-compare.js
+  - javascripts/protocol-comparison-index.json  # Pre-generated JSON data for comparison index
 
 markdown_extensions:
   - admonition

@@ -92,8 +92,8 @@
       section Contrast Injection
       Contrast (1.5 mL/kg)    :active, contrast, 00:00, 23s
       Saline (50mL)          :active, saline, after contrast, 11s
-      section Scan Phase 2
-      Enteric Phase    :done, scan2, 00:45, 25s
+      section Scan Phase 1
+      Enteric Phase    :done, scan1, 00:45, 25s
   ```
 
 

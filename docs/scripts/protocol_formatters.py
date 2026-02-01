@@ -3,6 +3,9 @@ Formatting functions for protocol generation
 """
 import re
 
+MAX_SERIES = 10  # Maximum number of series supported
+MAX_RECONS = 10  # Maximum number of post-processing reconstructions supported
+
 def clean_value(value):
     """Clean and format CSV values"""
     if not value or value.lower() in ['n/a', 'none', '']:
@@ -99,36 +102,45 @@ def create_gantt_from_series(row, indent_level=6):
                     saline_duration = int(50 / rate_ml_s)
                     gantt_lines.append(f"Saline (50mL)          :active, saline, after contrast, {saline_duration}s")
     
-    # Process each series (skip for split bolus as we handle it above)
-    if 'split bolus' not in volume.lower():
-        for i in range(1, 5):
-            series_name = clean_value(row.get(f'series_{i}_name'))
-            if series_name == 'N/A' or 'scout' in series_name.lower():
-                continue
-            
-            delay = clean_value(row.get(f'series_{i}_delay'))
-            
-            # Skip non-contrast or N/A delays
-            if delay == 'N/A':
-                continue
-            
-            # Parse delay
-            delay_time = parse_delay_time(delay)
-            if not delay_time:
-                continue
-            
-            # Estimate scan duration based on coverage
-            start_loc = clean_value(row.get(f'series_{i}_start'))
-            end_loc = clean_value(row.get(f'series_{i}_end'))
-            scan_duration = estimate_scan_duration(start_loc, end_loc, row)
-            
-            # Determine section name and style
-            section_name = determine_section_name(series_name, i)
-            scan_style = determine_scan_style(series_name, delay)
-            
-            gantt_lines.append(f"section {section_name}")
-            gantt_lines.append(f"{series_name}    :{scan_style}, scan{i}, {delay_time}, {scan_duration}s")
-    
+        # Process each series (skip for split bolus as we handle it above)
+        if 'split bolus' not in volume.lower():
+            scan_counter = 0  # Track actual scan numbers
+            last_scan_id = "saline" if has_contrast else None  # Track previous scan
+            for i in range(1, MAX_SERIES + 1):
+                series_name = clean_value(row.get(f'series_{i}_name'))
+                
+                if not series_name or series_name == 'N/A' or 'scout' in series_name.lower():
+                    continue
+                
+                delay = clean_value(row.get(f'series_{i}_delay'))
+                
+                # Skip non-contrast or N/A delays
+                if delay == 'N/A':
+                    continue
+                
+                # Increment scan counter
+                scan_counter += 1
+                current_scan_id = f"scan{scan_counter}"
+                
+                # Parse delay with context
+                delay_time = parse_delay_time(delay, last_scan_id, has_contrast)
+                if not delay_time:
+                    continue
+                
+                # Estimate scan duration based on coverage
+                start_loc = clean_value(row.get(f'series_{i}_start'))
+                end_loc = clean_value(row.get(f'series_{i}_end'))
+                scan_duration = estimate_scan_duration(start_loc, end_loc, row)
+                
+                # Determine section name and style
+                section_name = determine_section_name(series_name, scan_counter)  # Use scan_counter
+                scan_style = determine_scan_style(series_name, delay)
+                
+                gantt_lines.append(f"section {section_name}")
+                gantt_lines.append(f"{series_name}    :{scan_style}, scan{scan_counter}, {delay_time}, {scan_duration}s")
+
+                last_scan_id = current_scan_id 
+
     if not gantt_lines:
         gantt_lines.append("section Acquisition")
         gantt_lines.append("Standard scan    :done, scan1, 00:00, 10s")
@@ -178,7 +190,7 @@ def calculate_split_bolus_wait(row):
 def get_first_scan_delay(row):
     """Get timing for first scan in split bolus protocol"""
     # Look for arterial or corticomedullary phase
-    for i in range(1, 5):
+    for i in range(1, MAX_SERIES + 1):
         series_name = clean_value(row.get(f'series_{i}_name'))
         delay = clean_value(row.get(f'series_{i}_delay'))
         
@@ -231,40 +243,36 @@ def parse_flow_rate(flow_str):
         return None
 
 
-def parse_delay_time(delay_str):
-    """Parse delay time and convert to mm:ss format"""
+def parse_delay_time(delay_str, previous_scan_id=None, has_contrast=False):
+    """Parse delay time - expects clean standardized input"""
     if not delay_str or delay_str == 'N/A':
         return None
     
-    # Handle 'Bolus tracked' or similar
-    if 'bolus' in delay_str.lower() or 'track' in delay_str.lower():
-        return "00:25"  # Standard arterial timing
+    delay_lower = delay_str.lower().strip()
     
-    # Handle 'Immediate' or 'After'
-    if 'immediate' in delay_str.lower() or 'after' in delay_str.lower():
-        return "after scan1"
+    # Bolus tracking
+    if 'bolus tracked' in delay_lower:
+        return "00:25"
     
-    # Handle numeric seconds like '70 sec' or '60s'
-    sec_match = re.search(r'(\d+)\s*s', delay_str.lower())
-    if sec_match:
-        total_sec = int(sec_match.group(1))
-        minutes = total_sec // 60
-        seconds = total_sec % 60
-        return f"{minutes:02d}:{seconds:02d}"
+    # Immediate = after previous event (check with 'in' not '==')
+    if 'immediate' in delay_lower:
+        if previous_scan_id:
+            return f"after {previous_scan_id}"
+        elif has_contrast:
+            return "after saline"
+        else:
+            return "00:00"
     
-    # Handle mm:ss format already
-    if re.match(r'\d{2}:\d{2}', delay_str):
+    # Numeric seconds: "70 sec"
+    if 'sec' in delay_lower:
+        seconds = int(re.search(r'(\d+)', delay_str).group(1))
+        return f"{seconds // 60:02d}:{seconds % 60:02d}"
+    
+    # Already formatted: "01:10"
+    if ':' in delay_str:
         return delay_str
     
-    # Handle plain numbers (assume seconds)
-    try:
-        total_sec = int(delay_str)
-        minutes = total_sec // 60
-        seconds = total_sec % 60
-        return f"{minutes:02d}:{seconds:02d}"
-    except:
-        return None
-
+    return None
 
 def estimate_scan_duration(start_loc, end_loc, row):
     """Estimate scan duration based on coverage area"""
@@ -320,7 +328,7 @@ def determine_section_name(series_name, index):
     """Determine Gantt section name from series"""
     series_lower = series_name.lower()
     
-    if 'arterial' in series_lower:
+    if 'arterial' in series_lower or 'cta' in series_lower or 'angiogram' in series_lower:
         return 'Arterial Phase'
     elif 'portal' in series_lower or 'venous' in series_lower:
         return 'Portal Venous Phase'
@@ -331,7 +339,7 @@ def determine_section_name(series_name, index):
     elif 'excretory' in series_lower or 'ivp' in series_lower:
         return 'Excretory Phase'
     elif 'gated' in series_lower or 'cardiac' in series_lower:
-        return 'Cardiac Acquisition'
+        return 'Gated Acquisition'
     else:
         return f'Scan Phase {index}'
 
@@ -349,7 +357,7 @@ def determine_scan_style(series_name, delay):
     delay_lower = delay.lower() if delay != 'N/A' else ''
     
     # Arterial phases - critical (RED)
-    if any(word in series_lower for word in ['arterial', 'cta', 'angiogram', 'corticomedullary']):
+    if any(word in series_lower for word in ['arterial', 'cta', 'angiogram', 'corticomedullary', 'flash']):
         return 'crit'
     
     # Bolus tracked - critical (RED)
@@ -455,9 +463,9 @@ def create_acquisition_summary_table(row):
     """Generate acquisition summary table for clinical overview"""
     summary_rows = []
     
-    for i in range(1, 5):
+    for i in range(1, MAX_SERIES + 1):
         series_name = clean_value(row.get(f'series_{i}_name'))
-        if series_name == 'N/A' or series_name == 'Scout':
+        if series_name == 'N/A' or 'Scout' in series_name:
             continue
         
         # Determine phase type from series name or delay
@@ -500,7 +508,7 @@ def create_series_table(row):
     """Generate series acquisition table"""
     series_rows = []
     
-    for i in range(1, 5):
+    for i in range(1, MAX_SERIES + 1):
         series_name = clean_value(row.get(f'series_{i}_name'))
         if series_name == 'N/A':
             continue
@@ -536,7 +544,7 @@ def create_postproc_table(row):
     """Generate post-processing reconstruction table"""
     postproc_rows = []
     
-    for i in range(1, 5):
+    for i in range(1, MAX_RECONS + 1):
         plane = clean_value(row.get(f'postproc_{i}_plane'))
         if plane == 'N/A':
             continue

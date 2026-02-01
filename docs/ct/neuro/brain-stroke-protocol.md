@@ -18,6 +18,7 @@
         | NC Head | Non-contrast | Vertex to Foramen magnum |
         | CTA Head | Arterial (bolus tracked) | Skull base to Vertex |
         | CTA Neck | Contrast (Continues from head delay) | Aortic arch to Skull base |
+        | CTP (optional) | Contrast (Auto-triggered delay) | Basal ganglia level to 8cm slab |
 
     === "Clinical Indications"
 
@@ -95,8 +96,8 @@
       section Contrast Injection
       Contrast (100 mL)    :active, contrast, 00:00, 22s
       Saline (50mL)          :active, saline, after contrast, 11s
-      section Scan Phase 3
-      CTA Head    :crit, scan3, 00:25, 8s
+      section Arterial Phase
+      CTA Head    :crit, scan1, 00:25, 8s
   ```
 
 
@@ -108,6 +109,7 @@
     | NC Head | Vertex | Foramen magnum | N/A | 5 mm | STAT no contrast |
     | CTA Head | Skull base | Vertex | Bolus tracked aorta | 0.625 mm | Intracranial vessels |
     | CTA Neck | Aortic arch | Skull base | Continues from head | 0.625 mm | Extracranial vessels |
+    | CTP (optional) | Basal ganglia level | 8cm slab | Auto-triggered | 5 mm dynamic | Perfusion if candidate |
 
 === "Technical Parameters"
 

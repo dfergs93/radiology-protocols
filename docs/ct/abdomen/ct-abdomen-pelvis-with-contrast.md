@@ -15,7 +15,6 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Scout/Topogram | Non-contrast | Diaphragm to Pubic symphysis |
         | Portal Venous Phase | Contrast (70 sec delay) | Diaphragm to Pubic symphysis |
 
     === "Clinical Indications"
@@ -94,7 +93,7 @@
       Contrast (125 mL)    :active, contrast, 00:00, 41s
       Saline (50mL)          :active, saline, after contrast, 16s
       section Portal Venous Phase
-      Portal Venous Phase    :done, scan2, 01:10, 25s
+      Portal Venous Phase    :done, scan1, 01:10, 25s
   ```
 
 

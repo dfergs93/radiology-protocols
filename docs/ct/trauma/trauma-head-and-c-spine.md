@@ -15,9 +15,7 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Scout Head | Non-contrast | Vertex to C1 |
         | NC Head | Non-contrast | Vertex to Foramen magnum |
-        | Scout C-spine | Non-contrast | Skull base to T1 |
         | NC C-spine | Non-contrast | Skull base to T1 |
 
     === "Clinical Indications"

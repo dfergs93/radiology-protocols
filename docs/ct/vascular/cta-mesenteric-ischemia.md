@@ -15,7 +15,6 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Scout/Topogram | Non-contrast | Diaphragm to Pubic symphysis |
         | Arterial Phase | Contrast (25 sec delay) | Diaphragm to Iliac crests |
         | Portal Venous | Contrast (70 sec delay) | Diaphragm to Pubic symphysis |
 
@@ -97,9 +96,9 @@
       Contrast (125 mL)    :active, contrast, 00:00, 25s
       Saline (50mL)          :active, saline, after contrast, 10s
       section Arterial Phase
-      Arterial Phase    :crit, scan2, 00:25, 12s
+      Arterial Phase    :crit, scan1, 00:25, 12s
       section Portal Venous Phase
-      Portal Venous    :done, scan3, 01:10, 25s
+      Portal Venous    :done, scan2, 01:10, 25s
   ```
 
 

@@ -15,7 +15,6 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Scout/Topogram | Non-contrast | Vertex to C1 |
         | Non-Contrast Head | Non-contrast | Vertex to Foramen magnum |
 
     === "Clinical Indications"

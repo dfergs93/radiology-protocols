@@ -16,7 +16,7 @@
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
         | Gated CTA Chest | Arterial (bolus tracked) | Thoracic inlet to Diaphragm |
-        | Flash CTA AP | Contrast (After gated delay) | Diaphragm to Femoral heads |
+        | Flash CTA AP | Contrast (Immediate delay) | Diaphragm to Femoral heads |
 
     === "Clinical Indications"
 
@@ -94,10 +94,10 @@
       section Contrast Injection
       Contrast (140 mL)    :active, contrast, 00:00, 35s
       Saline (50mL)          :active, saline, after contrast, 12s
-      section Cardiac Acquisition
-      Gated CTA Chest    :crit, scan2, 00:25, 12s
-      section Scan Phase 3
-      Flash CTA AP    :crit, scan3, after scan1, 10s
+      section Arterial Phase
+      Gated CTA Chest    :crit, scan1, 00:25, 12s
+      section Arterial Phase
+      Flash CTA AP    :crit, scan2, after scan1, 10s
   ```
 
 
@@ -107,7 +107,7 @@
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout | Thoracic inlet | Femoral heads | N/A | N/A | AP lateral full |
     | Gated CTA Chest | Thoracic inlet | Diaphragm | Bolus tracked | 0.5 mm | Retrospective gating for valve |
-    | Flash CTA AP | Diaphragm | Femoral heads | After gated | 0.625 mm | Iliofemoral access planning |
+    | Flash CTA AP | Diaphragm | Femoral heads | Immediate | 0.625 mm | Iliofemoral access planning |
 
 === "Technical Parameters"
 

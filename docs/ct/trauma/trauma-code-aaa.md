@@ -95,9 +95,9 @@
       Contrast (125 mL)    :active, contrast, 00:00, 27s
       Saline (50mL)          :active, saline, after contrast, 11s
       section Arterial Phase
-      Arterial CAP    :crit, scan3, 00:30, 25s
+      Arterial CAP    :crit, scan1, 00:25, 25s
       section Portal Venous Phase
-      Portal Venous CAP    :done, scan4, 01:10, 25s
+      Portal Venous CAP    :done, scan2, 01:10, 25s
   ```
 
 

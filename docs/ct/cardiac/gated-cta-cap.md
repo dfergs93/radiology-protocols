@@ -95,10 +95,10 @@
       section Contrast Injection
       Contrast (140 mL)    :active, contrast, 00:00, 35s
       Saline (50mL)          :active, saline, after contrast, 12s
-      section Cardiac Acquisition
-      Gated CTA Chest    :crit, scan2, 00:25, 12s
-      section Scan Phase 3
-      Flash CTA AP    :crit, scan3, after scan1, 25s
+      section Arterial Phase
+      Gated CTA Chest    :crit, scan1, 00:25, 12s
+      section Arterial Phase
+      Flash CTA AP    :crit, scan2, after scan1, 25s
   ```
 
 

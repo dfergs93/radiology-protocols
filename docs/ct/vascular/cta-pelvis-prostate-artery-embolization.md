@@ -15,7 +15,6 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Scout/Topogram | Non-contrast | L3 to Proximal femur |
         | CTA Arterial | Arterial (bolus tracked) | L3 to Proximal femur |
 
     === "Clinical Indications"
@@ -93,7 +92,7 @@
       Contrast (100 mL)    :active, contrast, 00:00, 28s
       Saline (50mL)          :active, saline, after contrast, 14s
       section Arterial Phase
-      CTA Arterial    :crit, scan2, 00:25, 16s
+      CTA Arterial    :crit, scan1, 00:25, 16s
   ```
 
 

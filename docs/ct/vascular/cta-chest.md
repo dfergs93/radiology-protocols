@@ -15,7 +15,6 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Scout/Topogram | Non-contrast | Lung apices to Adrenal glands |
         | CTA Arterial Chest | Arterial (bolus tracked) | Lung apices to Adrenal glands |
 
     === "Clinical Indications"
@@ -94,7 +93,7 @@
       Contrast (100 mL)    :active, contrast, 00:00, 25s
       Saline (50mL)          :active, saline, after contrast, 12s
       section Arterial Phase
-      CTA Arterial Chest    :crit, scan2, 00:25, 10s
+      CTA Arterial Chest    :crit, scan1, 00:25, 10s
   ```
 
 

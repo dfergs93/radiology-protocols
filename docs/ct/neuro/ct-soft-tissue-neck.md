@@ -91,8 +91,8 @@
       section Contrast Injection
       Contrast (100 mL)    :active, contrast, 00:00, 33s
       Saline (50mL)          :active, saline, after contrast, 16s
-      section Scan Phase 2
-      Contrast Neck    :done, scan2, 01:10, 15s
+      section Scan Phase 1
+      Contrast Neck    :done, scan1, 01:00, 15s
   ```
 
 

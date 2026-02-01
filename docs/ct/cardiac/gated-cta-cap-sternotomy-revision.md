@@ -16,7 +16,7 @@
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
         | Gated CTA Chest | Arterial (bolus tracked) | Thoracic inlet to Diaphragm |
-        | Flash AP | Contrast (After gated delay) | Diaphragm to Pubic symphysis |
+        | Flash AP | Contrast (Immediate delay) | Diaphragm to Pubic symphysis |
         | Venogram Chest | Contrast (60 sec delay) | Thoracic inlet to Diaphragm |
 
     === "Clinical Indications"
@@ -95,12 +95,12 @@
       section Contrast Injection
       Contrast (150 mL)    :active, contrast, 00:00, 37s
       Saline (50mL)          :active, saline, after contrast, 12s
-      section Cardiac Acquisition
-      Gated CTA Chest    :crit, scan2, 00:25, 12s
+      section Arterial Phase
+      Gated CTA Chest    :crit, scan1, 00:25, 12s
+      section Scan Phase 2
+      Flash AP    :done, scan2, after scan1, 25s
       section Scan Phase 3
-      Flash AP    :done, scan3, after scan1, 25s
-      section Scan Phase 4
-      Venogram Chest    :done, scan4, 01:00, 12s
+      Venogram Chest    :done, scan3, 01:00, 12s
   ```
 
 
@@ -110,7 +110,7 @@
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout | Thoracic inlet | Pubic symphysis | N/A | N/A | AP lateral full |
     | Gated CTA Chest | Thoracic inlet | Diaphragm | Bolus tracked | 0.5-0.625 mm | Retrospective gating |
-    | Flash AP | Diaphragm | Pubic symphysis | After gated | 0.625 mm | Arterial phase AP |
+    | Flash AP | Diaphragm | Pubic symphysis | Immediate | 0.625 mm | Arterial phase AP |
     | Venogram Chest | Thoracic inlet | Diaphragm | 60 sec | 1 mm | Retrosternal venous structures |
 
 === "Technical Parameters"

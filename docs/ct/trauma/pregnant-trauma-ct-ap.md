@@ -90,7 +90,7 @@
       Contrast (125 mL)    :active, contrast, 00:00, 41s
       Saline (50mL)          :active, saline, after contrast, 16s
       section Portal Venous Phase
-      Portal Venous AP    :done, scan2, 01:10, 25s
+      Portal Venous AP    :done, scan1, 01:10, 25s
   ```
 
 

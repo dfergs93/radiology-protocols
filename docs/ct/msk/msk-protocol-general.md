@@ -94,8 +94,8 @@
       section Contrast Injection
       Contrast (100 mL if contrast)    :active, contrast, 00:00, 40s
       Saline (50mL)          :active, saline, after contrast, 20s
-      section Scan Phase 3
-      Contrast phase    :done, scan3, 01:30, 10s
+      section Scan Phase 1
+      Contrast phase    :done, scan1, 01:00, 10s
   ```
 
 

@@ -18,6 +18,7 @@
         | Non-Contrast | Non-contrast | Skull base to Carina |
         | Arterial Phase | Contrast (25 sec delay) | Skull base to Carina |
         | Venous Phase | Contrast (55 sec delay) | Skull base to Carina |
+        | Delayed Phase | Contrast (90 sec delay) | Skull base to Carina |
 
     === "Clinical Indications"
 
@@ -95,9 +96,11 @@
       Contrast (75-100 mL)    :active, contrast, 00:00, 18s
       Saline (50mL)          :active, saline, after contrast, 12s
       section Arterial Phase
-      Arterial Phase    :crit, scan3, 00:25, 15s
+      Arterial Phase    :crit, scan1, 00:25, 15s
       section Portal Venous Phase
-      Venous Phase    :done, scan4, 00:55, 15s
+      Venous Phase    :done, scan2, 00:55, 15s
+      section Delayed Phase
+      Delayed Phase    :done, scan3, 01:30, 15s
   ```
 
 
@@ -109,6 +112,7 @@
     | Non-Contrast | Skull base | Carina | N/A | 2.5 mm | Baseline |
     | Arterial Phase | Skull base | Carina | 25 sec | 2 mm | Parathyroid enhancement |
     | Venous Phase | Skull base | Carina | 55 sec | 2 mm | Thyroid enhancement |
+    | Delayed Phase | Skull base | Carina | 90 sec | 2.5 mm | Washout phase |
 
 === "Technical Parameters"
 

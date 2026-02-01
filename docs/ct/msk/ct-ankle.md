@@ -15,7 +15,6 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Scout Bilateral | Non-contrast | Bilateral ankles to Feet |
         | CT Ankle | Contrast (N/A or 60s if contrast delay) | Distal tib/fib to Hindfoot |
 
     === "Clinical Indications"
@@ -92,8 +91,6 @@
       section Contrast Injection
       Contrast (If contrast: 75 mL)    :active, contrast, 00:00, 30s
       Saline (50mL)          :active, saline, after contrast, 20s
-      section Scan Phase 2
-      CT Ankle    :done, scan2, 01:00, 10s
   ```
 
 

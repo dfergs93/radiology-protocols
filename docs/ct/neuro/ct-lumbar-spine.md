@@ -91,8 +91,6 @@
       section Contrast Injection
       Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 33s
       Saline (50mL)          :active, saline, after contrast, 16s
-      section Scan Phase 2
-      L-spine Helical    :done, scan2, 01:00, 10s
   ```
 
 

@@ -15,7 +15,6 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Scout Bilateral | Non-contrast | Bilateral knees to Extended |
         | CT Knee | Contrast (N/A or 60s if contrast delay) | Distal femur to Proximal tib/fib |
 
     === "Clinical Indications"
@@ -92,8 +91,6 @@
       section Contrast Injection
       Contrast (If contrast: 75 mL)    :active, contrast, 00:00, 30s
       Saline (50mL)          :active, saline, after contrast, 20s
-      section Scan Phase 2
-      CT Knee    :done, scan2, 01:00, 10s
   ```
 
 

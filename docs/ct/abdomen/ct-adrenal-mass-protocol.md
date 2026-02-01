@@ -17,7 +17,7 @@
         |:-------|:------|:---------|
         | Non-Contrast | Non-contrast | Diaphragm to Kidneys |
         | Portal Venous | Contrast (70 sec delay) | Diaphragm to Kidneys |
-        | 15 Minute Delay | Contrast (15 min (900 sec) delay) | Diaphragm to Kidneys |
+        | 15 Minute Delay | Contrast (900 sec delay) | Diaphragm to Kidneys |
 
     === "Clinical Indications"
 
@@ -92,9 +92,9 @@
       Contrast (1.5 mL/kg)    :active, contrast, 00:00, 30s
       Saline (50mL)          :active, saline, after contrast, 14s
       section Portal Venous Phase
-      Portal Venous    :done, scan3, 01:10, 15s
+      Portal Venous    :done, scan1, 01:10, 15s
       section Delayed Phase
-      15 Minute Delay    :done, scan4, 15:00, 15s
+      15 Minute Delay    :done, scan2, 15:00, 15s
   ```
 
 
@@ -105,7 +105,7 @@
     | Scout | Diaphragm | Kidneys | N/A | N/A | AP |
     | Non-Contrast | Diaphragm | Kidneys | N/A | 2.5 mm | Measure absolute HU in mass |
     | Portal Venous | Diaphragm | Kidneys | 70 sec | 2.5 mm | Enhanced HU measurement |
-    | 15 Minute Delay | Diaphragm | Kidneys | 15 min (900 sec) | 2.5 mm | Delayed HU for washout calculation |
+    | 15 Minute Delay | Diaphragm | Kidneys | 900 sec | 2.5 mm | Delayed HU for washout calculation |
 
 === "Technical Parameters"
 

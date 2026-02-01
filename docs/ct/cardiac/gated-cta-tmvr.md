@@ -95,10 +95,10 @@
       section Contrast Injection
       Contrast (140 mL)    :active, contrast, 00:00, 35s
       Saline (50mL)          :active, saline, after contrast, 12s
-      section Cardiac Acquisition
-      Gated CTA Chest    :crit, scan2, 00:25, 10s
+      section Arterial Phase
+      Gated CTA Chest    :crit, scan1, 00:25, 10s
       section Delayed Phase
-      Delayed CAP    :done, scan3, 01:30, 10s
+      Delayed CAP    :done, scan2, 01:30, 10s
   ```
 
 

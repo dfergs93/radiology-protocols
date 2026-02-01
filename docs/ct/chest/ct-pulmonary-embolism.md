@@ -15,7 +15,6 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Scout/Topogram | Non-contrast | Lung apices to Adrenal glands |
         | Pulmonary Angiogram | Arterial (bolus tracked) | Lung apices to Adrenal glands |
 
     === "Clinical Indications"
@@ -95,8 +94,8 @@
       section Contrast Injection
       Contrast (100 mL)    :active, contrast, 00:00, 22s
       Saline (50mL)          :active, saline, after contrast, 11s
-      section Scan Phase 2
-      Pulmonary Angiogram    :crit, scan2, 00:25, 10s
+      section Arterial Phase
+      Pulmonary Angiogram    :crit, scan1, 00:25, 10s
   ```
 
 

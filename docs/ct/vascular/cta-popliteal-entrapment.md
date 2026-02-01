@@ -15,7 +15,6 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Scout/Topogram | Non-contrast | Distal femur to Ankle |
         | CTA Neutral Position | Arterial (bolus tracked) | Distal femur to Ankle |
         | CTA Plantarflexion | Contrast (Immediately after delay) | Distal femur to Ankle |
 
@@ -94,10 +93,10 @@
       section Contrast Injection
       Contrast (100 mL)    :active, contrast, 00:00, 25s
       Saline (50mL)          :active, saline, after contrast, 12s
-      section Scan Phase 2
-      CTA Neutral Position    :crit, scan2, 00:25, 15s
-      section Scan Phase 3
-      CTA Plantarflexion    :crit, scan3, after scan1, 15s
+      section Arterial Phase
+      CTA Neutral Position    :crit, scan1, 00:25, 15s
+      section Arterial Phase
+      CTA Plantarflexion    :crit, scan2, after scan1, 15s
   ```
 
 

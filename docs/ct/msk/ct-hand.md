@@ -91,8 +91,6 @@
       section Contrast Injection
       Contrast (If contrast: 50 mL)    :active, contrast, 00:00, 25s
       Saline (50mL)          :active, saline, after contrast, 25s
-      section Scan Phase 2
-      CT Hand    :done, scan2, 01:00, 10s
   ```
 
 

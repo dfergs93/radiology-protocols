@@ -91,8 +91,8 @@
       section Contrast Injection
       Contrast (If contrast: 50 mL)    :active, contrast, 00:00, 25s
       Saline (50mL)          :active, saline, after contrast, 25s
-      section Scan Phase 2
-      CT Wrist    :done, scan2, after scan1, 10s
+      section Scan Phase 1
+      CT Wrist    :done, scan1, after saline, 10s
   ```
 
 

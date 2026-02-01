@@ -15,7 +15,6 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Scout/Topogram | Non-contrast | L3 to Proximal femur |
         | CTA Resting Position | Arterial (bolus tracked) | L3 to Mid femur |
         | CTA Hip Flexion | Contrast (Immediately after delay) | L3 to Mid femur |
 
@@ -93,10 +92,10 @@
       section Contrast Injection
       Contrast (100 mL)    :active, contrast, 00:00, 25s
       Saline (50mL)          :active, saline, after contrast, 12s
-      section Scan Phase 2
-      CTA Resting Position    :crit, scan2, 00:25, 16s
-      section Scan Phase 3
-      CTA Hip Flexion    :crit, scan3, after scan1, 16s
+      section Arterial Phase
+      CTA Resting Position    :crit, scan1, 00:25, 16s
+      section Arterial Phase
+      CTA Hip Flexion    :crit, scan2, after scan1, 16s
   ```
 
 

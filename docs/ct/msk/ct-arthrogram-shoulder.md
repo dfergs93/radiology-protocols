@@ -89,8 +89,8 @@
       dateFormat mm:ss
       axisFormat %M:%S 
       
-      section Scan Phase 2
-      CT Arthrogram    :done, scan2, after scan1, 10s
+      section Scan Phase 1
+      CT Arthrogram    :done, scan1, after saline, 10s
   ```
 
 

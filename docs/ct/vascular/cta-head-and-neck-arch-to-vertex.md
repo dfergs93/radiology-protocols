@@ -15,9 +15,8 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Scout/Topogram | Non-contrast | Aortic arch to Vertex |
         | CTA Neck | Arterial (bolus tracked) | Aortic arch to Skull base |
-        | CTA Head | Contrast (Continues from neck delay) | Skull base to Vertex |
+        | CTA Head | Contrast (Immediate delay) | Skull base to Vertex |
 
     === "Clinical Indications"
 
@@ -97,8 +96,10 @@
       section Contrast Injection
       Contrast (80-100 mL)    :active, contrast, 00:00, 17s
       Saline (50mL)          :active, saline, after contrast, 11s
-      section Scan Phase 2
-      CTA Neck    :crit, scan2, 00:25, 16s
+      section Arterial Phase
+      CTA Neck    :crit, scan1, 00:25, 16s
+      section Arterial Phase
+      CTA Head    :crit, scan2, after scan1, 8s
   ```
 
 
@@ -108,7 +109,7 @@
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout/Topogram | Aortic arch | Vertex | N/A | N/A | AP and lateral |
     | CTA Neck | Aortic arch | Skull base | Bolus tracked | 0.625 mm | Arterial phase - caudocranial |
-    | CTA Head | Skull base | Vertex | Continues from neck | 0.625 mm | Same bolus as neck - single acquisition |
+    | CTA Head | Skull base | Vertex | Immediate | 0.625 mm | Same bolus as neck - single acquisition |
 
 === "Technical Parameters"
 

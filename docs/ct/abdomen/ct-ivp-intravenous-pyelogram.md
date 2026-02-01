@@ -16,8 +16,8 @@
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
         | Non-Contrast (optional) | Non-contrast | Top kidneys to Pubic symphysis |
-        | Early Portal Venous | Contrast (60 sec after 1st delay) | Top kidneys to Iliac crests |
-        | Excretory Phase | Contrast (90-120 sec after 2nd delay) | Top kidneys to Pubic symphysis |
+        | Early Portal Venous | Contrast (60 sec from 1st delay) | Top kidneys to Iliac crests |
+        | Excretory Phase | Contrast (90-120 sec from 2nd delay) | Top kidneys to Pubic symphysis |
 
     === "Clinical Indications"
 
@@ -111,8 +111,8 @@
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout | Top kidneys | Pubic symphysis | N/A | N/A | AP |
     | Non-Contrast (optional) | Top kidneys | Pubic symphysis | N/A | 2 mm | Optional stone detection |
-    | Early Portal Venous | Top kidneys | Iliac crests | 60 sec after 1st | 2.5 mm | Nephrographic phase |
-    | Excretory Phase | Top kidneys | Pubic symphysis | 90-120 sec after 2nd | 1.25 mm | Collecting system opacification |
+    | Early Portal Venous | Top kidneys | Iliac crests | 60 sec from 1st | 2.5 mm | Nephrographic phase |
+    | Excretory Phase | Top kidneys | Pubic symphysis | 90-120 sec from 2nd | 1.25 mm | Collecting system opacification |
 
 === "Technical Parameters"
 

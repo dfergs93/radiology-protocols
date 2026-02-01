@@ -94,7 +94,7 @@
       Contrast (125 mL)    :active, contrast, 00:00, 27s
       Saline (50mL)          :active, saline, after contrast, 11s
       section Arterial Phase
-      CTA Arterial    :crit, scan2, 00:25, 10s
+      CTA Arterial    :crit, scan1, 00:25, 10s
   ```
 
 

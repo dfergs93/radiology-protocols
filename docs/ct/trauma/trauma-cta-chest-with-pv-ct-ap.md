@@ -94,10 +94,10 @@
       section Contrast Injection
       Contrast (125 mL)    :active, contrast, 00:00, 31s
       Saline (50mL)          :active, saline, after contrast, 12s
-      section Scan Phase 2
-      CTA Chest    :crit, scan2, 00:25, 8s
+      section Arterial Phase
+      CTA Chest    :crit, scan1, 00:25, 8s
       section Portal Venous Phase
-      Portal Venous AP    :done, scan3, 01:10, 25s
+      Portal Venous AP    :done, scan2, 01:10, 25s
   ```
 
 

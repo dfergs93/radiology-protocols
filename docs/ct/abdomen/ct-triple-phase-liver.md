@@ -18,6 +18,7 @@
         | Non-Contrast | Non-contrast | Diaphragm to Iliac crests |
         | Late Arterial | Arterial (bolus tracked) | Diaphragm to Iliac crests |
         | Portal Venous | Contrast (70 sec delay) | Diaphragm to Pubic symphysis |
+        | Delayed Phase | Contrast (300 sec delay) | Diaphragm to Iliac crests |
 
     === "Clinical Indications"
 
@@ -97,9 +98,11 @@
       Contrast (1.5 mL/kg)    :active, contrast, 00:00, 23s
       Saline (50mL)          :active, saline, after contrast, 11s
       section Arterial Phase
-      Late Arterial    :crit, scan3, 00:25, 12s
+      Late Arterial    :crit, scan1, 00:30, 12s
       section Portal Venous Phase
-      Portal Venous    :done, scan4, 01:10, 25s
+      Portal Venous    :done, scan2, 01:10, 25s
+      section Delayed Phase
+      Delayed Phase    :done, scan3, 05:00, 12s
   ```
 
 
@@ -111,6 +114,7 @@
     | Non-Contrast | Diaphragm | Iliac crests | N/A | 2.5 mm | Liver FOV |
     | Late Arterial | Diaphragm | Iliac crests | 30-35 sec or bolus track | 1.25 mm | Liver FOV - hypervascular lesions |
     | Portal Venous | Diaphragm | Pubic symphysis | 70 sec | 2.5 mm | Full AP FOV |
+    | Delayed Phase | Diaphragm | Iliac crests | 300 sec | 2.5 mm | Liver FOV - washout assessment |
 
 === "Technical Parameters"
 

@@ -15,7 +15,6 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Scout Prone | Non-contrast | Lung apices to Costophrenic angles |
         | HRCT Prone | Contrast (Full inspiration delay) | Lung apices to Costophrenic angles |
 
     === "Clinical Indications"

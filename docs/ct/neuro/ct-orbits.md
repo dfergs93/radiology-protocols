@@ -91,8 +91,6 @@
       section Contrast Injection
       Contrast (75-100 mL if contrast)    :active, contrast, 00:00, 25s
       Saline (50mL)          :active, saline, after contrast, 16s
-      section Scan Phase 2
-      Axial Orbits    :done, scan2, 01:00, 10s
   ```
 
 

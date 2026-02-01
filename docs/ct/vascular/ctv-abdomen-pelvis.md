@@ -15,7 +15,6 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Scout/Topogram | Non-contrast | Diaphragm to Proximal femur |
         | CTV Venous Phase | Contrast (180 sec delay) | Diaphragm to Proximal femur |
 
     === "Clinical Indications"
@@ -94,7 +93,7 @@
       Contrast (125 mL)    :active, contrast, 00:00, 41s
       Saline (50mL)          :active, saline, after contrast, 16s
       section Portal Venous Phase
-      CTV Venous Phase    :done, scan2, 03:00, 10s
+      CTV Venous Phase    :done, scan1, 03:00, 10s
   ```
 
 

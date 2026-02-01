@@ -91,8 +91,8 @@
       section Contrast Injection
       Contrast (75-100 mL)    :active, contrast, 00:00, 21s
       Saline (50mL)          :active, saline, after contrast, 14s
-      section Scan Phase 3
-      CTV Head    :done, scan3, 01:30, 8s
+      section Scan Phase 1
+      CTV Head    :done, scan1, 01:00, 8s
   ```
 
 

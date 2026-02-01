@@ -15,3 +15,331 @@
 .badge.recon {
   background-color: #007bff; /* Blue for Recons */
 }
+/* Protocol Comparison Styles */
+.protocol-selector {
+  background: var(--md-code-bg-color);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+#protocol-selectors {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.protocol-select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 4px;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  min-width: 300px;
+}
+
+.protocol-select:focus {
+  outline: none;
+  border-color: var(--md-accent-fg-color);
+}
+
+.protocol-selector button {
+  margin: 10px 5px 0 0;
+}
+
+#comparison-results {
+  margin-top: 30px;
+}
+
+#comparison-results > div {
+  margin-bottom: 40px;
+}
+
+#comparison-results h3 {
+  border-bottom: 2px solid var(--md-accent-fg-color);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* Gantt Grid */
+.gantt-container {
+  display: grid;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.gantt-container > div {
+  background: var(--md-code-bg-color);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.gantt-container h4 {
+  margin-top: 0;
+  color: var(--md-accent-fg-color);
+  font-size: 1.1em;
+  border-bottom: 1px solid var(--md-default-fg-color--lighter);
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+/* Comparison Tables */
+#contrast-table-container table,
+#series-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+
+#contrast-table-container th,
+#series-table-container th {
+  background: var(--md-accent-fg-color);
+  color: white;
+  padding: 12px 8px;
+  text-align: left;
+  font-weight: 600;
+}
+
+#contrast-table-container td,
+#series-table-container td {
+  padding: 12px 8px;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  vertical-align: top;
+}
+
+#contrast-table-container tr:hover,
+#series-table-container tr:hover {
+  background: var(--md-code-bg-color);
+}
+
+#series-table-container td {
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .gantt-container {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .protocol-select {
+    min-width: 100%;
+  }
+  
+  #contrast-table-container table,
+  #series-table-container table {
+    font-size: 0.8em;
+  }
+  
+  #contrast-table-container th,
+  #contrast-table-container td,
+  #series-table-container th,
+  #series-table-container td {
+    padding: 8px 4px;
+  }
+}
+
+/* Print Styles for Comparison */
+@media print {
+  .protocol-selector {
+    display: none;
+  }
+  
+  .gantt-container {
+    page-break-inside: avoid;
+  }
+  
+  #comparison-results h3 {
+    page-break-after: avoid;
+  }
+}
+
+/* Style the timeline end marker */
+#gantt-container .mermaid g[class*="timeend"] rect {
+  width: 3px !important;
+  opacity: 0.3;
+  fill: var(--md-default-fg-color--light);
+}
+
+#gantt-container .mermaid g[class*="timeend"] text {
+  display: none;
+}
+
+/* Hide the section label for the marker */
+#gantt-container .mermaid g.sectionTitle:last-child text {
+  display: none;
+}
+
+/* Use Material Design color variables that auto-adjust for dark mode */
+
+/* Protocol Comparison Styles */
+.protocol-selector {
+  background: var(--md-code-bg-color);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+#protocol-selectors {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.protocol-select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  border-radius: 4px;
+  background: var(--md-default-bg-color);
+  color: var(--md-default-fg-color);
+  min-width: 300px;
+}
+
+.protocol-select:focus {
+  outline: none;
+  border-color: var(--md-accent-fg-color);
+}
+
+.protocol-selector button {
+  margin: 10px 5px 0 0;
+}
+
+#comparison-results {
+  margin-top: 30px;
+}
+
+#comparison-results > div {
+  margin-bottom: 40px;
+}
+
+#comparison-results h3 {
+  border-bottom: 2px solid var(--md-accent-fg-color);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* Gantt Grid */
+.gantt-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-top: 20px;
+}
+
+.gantt-container > div {
+  background: var(--md-code-bg-color);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.gantt-container h4 {
+  margin-top: 0;
+  color: var(--md-accent-fg-color);
+  font-size: 1.1em;
+  border-bottom: 1px solid var(--md-default-fg-color--lighter);
+  padding-bottom: 8px;
+  margin-bottom: 15px;
+}
+
+/* Comparison Tables */
+#contrast-table-container table,
+#series-table-container table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  font-size: 0.9em;
+}
+
+#contrast-table-container th,
+#series-table-container th {
+  background: var(--md-accent-fg-color);
+  color: var(--md-primary-bg-color);
+  padding: 12px 8px;
+  text-align: left;
+  font-weight: 600;
+}
+
+#contrast-table-container td,
+#series-table-container td {
+  padding: 12px 8px;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  vertical-align: top;
+}
+
+#contrast-table-container tr:hover,
+#series-table-container tr:hover {
+  background: var(--md-code-bg-color);
+}
+
+#series-table-container td {
+  line-height: 1.6;
+}
+
+/* Style timeline end marker */
+#gantt-container .mermaid g[class*="timeend"] rect {
+  width: 3px !important;
+  opacity: 0.3;
+}
+
+#gantt-container .mermaid g[class*="timeend"] text {
+  display: none;
+}
+
+#gantt-container .mermaid g.sectionTitle:last-child text {
+  display: none;
+}
+
+/* Dark mode specific adjustments */
+[data-md-color-scheme="slate"] .protocol-select {
+  background: var(--md-code-bg-color);
+}
+
+[data-md-color-scheme="slate"] #contrast-table-container th,
+[data-md-color-scheme="slate"] #series-table-container th {
+  color: white;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .gantt-container {
+    grid-template-columns: 1fr !important;
+  }
+  
+  .protocol-select {
+    min-width: 100%;
+  }
+  
+  #contrast-table-container table,
+  #series-table-container table {
+    font-size: 0.8em;
+  }
+  
+  #contrast-table-container th,
+  #contrast-table-container td,
+  #series-table-container th,
+  #series-table-container td {
+    padding: 8px 4px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .protocol-selector {
+    display: none;
+  }
+  
+  .gantt-container {
+    page-break-inside: avoid;
+  }
+  
+  #comparison-results h3 {
+    page-break-after: avoid;
+  }
+}
