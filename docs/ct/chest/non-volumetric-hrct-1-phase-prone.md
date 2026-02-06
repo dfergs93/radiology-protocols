@@ -26,11 +26,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A
-        - **Allergy:** N/A
-    
+
     - **Position:** Prone with arms extended forward
     - **NPO Status:** N/A
     
@@ -54,7 +50,12 @@
 
         - Position patient prone safely. Cushion support. Breath hold coaching
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A
+            - **Allergy:** N/A
+
     === "Radiologist Notes"
+
         - Differentiate dependent atelectasis from true fibrosis. Posterior lung better aerated prone
 
     === "Tips & Tricks"

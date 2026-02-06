@@ -27,16 +27,11 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 4 hours
-    - **Pre-Medication:** 
-      Oral contrast optional - omit for vascular indication
-
+    - **Pre-Medication:**
+        - Oral contrast optional - omit for vascular indication
 
 -   __3. IV Contrast & Injection__    
 
@@ -71,7 +66,12 @@
 
         - 18-20G IV antecubital
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history
+
     === "Radiologist Notes"
+
         - Measure AAA if present. Assess renal and mesenteric arteries. Evaluate iliac vessels
 
     === "Tips & Tricks"
@@ -94,9 +94,9 @@
       
       section Contrast Injection
       Contrast (125 mL)    :active, contrast, 00:00, 31s
-      Saline (50mL)          :active, saline, after contrast, 12s
+      Saline (20mL)          :active, saline, after contrast, 5s
       section Arterial Phase
-      CTA Arterial    :crit, scan1, 00:25, 10s
+      CTA Arterial    :crit, scan1, after contrast, 5s
   ```
 
 

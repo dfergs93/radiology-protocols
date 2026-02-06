@@ -28,11 +28,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A or eGFR > 30
-        - **Allergy:** N/A or check allergy
-    
+
     - **Position:** Prone with wrist extended (superman) or positioned for comfort
     - **NPO Status:** N/A
     
@@ -67,7 +63,12 @@
 
         - No IV unless contrast or arthrogram needed
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A or eGFR > 30
+            - **Allergy:** N/A or check allergy
+
     === "Radiologist Notes"
+
         - Distal radius fractures. Carpal fractures (scaphoid). DRUJ. Carpal alignment. Ligaments on arthrogram
 
     === "Tips & Tricks"
@@ -90,9 +91,9 @@
       
       section Contrast Injection
       Contrast (If contrast: 50 mL)    :active, contrast, 00:00, 25s
-      Saline (50mL)          :active, saline, after contrast, 25s
+      Saline (20mL)          :active, saline, after contrast, 10s
       section Scan Phase 1
-      CT Wrist    :done, scan1, after saline, 10s
+      CT Wrist    :done, scan1, after saline, 5s
   ```
 
 

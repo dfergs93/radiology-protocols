@@ -27,11 +27,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A or eGFR > 30
-        - **Allergy:** N/A or check allergy
-    
+
     - **Position:** Supine
     - **NPO Status:** N/A
     
@@ -66,7 +62,12 @@
 
         - No IV unless contrast needed
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A or eGFR > 30
+            - **Allergy:** N/A or check allergy
+
     === "Radiologist Notes"
+
         - Fractures. Alignment. Comminution. Intra-articular extension. Hardware position. Infection on contrast
 
     === "Tips & Tricks"
@@ -89,7 +90,7 @@
       
       section Contrast Injection
       Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 40s
-      Saline (50mL)          :active, saline, after contrast, 20s
+      Saline (20mL)          :active, saline, after contrast, 8s
   ```
 
 

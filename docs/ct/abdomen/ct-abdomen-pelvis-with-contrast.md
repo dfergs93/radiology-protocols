@@ -27,16 +27,11 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history. Pre-medicate if prior reaction
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 4 hours for solids
-    - **Pre-Medication:** 
-      Oral contrast: 900 mL Readi-Cat 2 over 90 minutes. Last cup 30 min before scan
-
+    - **Pre-Medication:**
+        - Oral contrast: 900 mL Readi-Cat 2 over 90 minutes. Last cup 30 min before scan
 
 -   __3. IV Contrast & Injection__    
 
@@ -68,7 +63,12 @@
 
         - 18-20G IV required. Verify patent IV. May give rectal contrast for distal colon/rectal evaluation. Oral contrast 900mL given 2 hrs before
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history. Pre-medicate if prior reaction
+
     === "Radiologist Notes"
+
         - Systematic review of all solid organs. Check for free fluid/air. Assess bowel enhancement pattern
 
     === "Tips & Tricks"
@@ -91,9 +91,9 @@
       
       section Contrast Injection
       Contrast (125 mL)    :active, contrast, 00:00, 41s
-      Saline (50mL)          :active, saline, after contrast, 16s
+      Saline (20mL)          :active, saline, after contrast, 6s
       section Portal Venous Phase
-      Portal Venous Phase    :done, scan1, 01:10, 25s
+      Portal Venous Phase    :done, scan1, 01:10, 7s
   ```
 
 

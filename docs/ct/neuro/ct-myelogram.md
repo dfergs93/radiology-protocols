@@ -27,16 +27,11 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A
-        - **Allergy:** N/A
-    
+
     - **Position:** Supine. Post-lumbar puncture
     - **NPO Status:** N/A
-    - **Pre-Medication:** 
-      Intrathecal contrast already given
-
+    - **Pre-Medication:**
+        - Intrathecal contrast already given
 
 -   __3. IV Contrast & Injection__    
 
@@ -68,7 +63,12 @@
 
         - Patient already had LP with IT contrast. Position comfortably
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A
+            - **Allergy:** N/A
+
     === "Radiologist Notes"
+
         - Nerve root sleeves. Thecal sac compression. Spinal stenosis. Disc herniations. Surgical planning detail
 
     === "Tips & Tricks"

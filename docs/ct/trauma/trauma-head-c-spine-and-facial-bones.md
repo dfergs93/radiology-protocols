@@ -28,11 +28,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A
-        - **Allergy:** N/A
-    
+
     - **Position:** Supine head-first. C-collar on
     - **NPO Status:** None - trauma
     
@@ -56,7 +52,12 @@
 
         - C-collar precautions. Document mechanism of injury
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A
+            - **Allergy:** N/A
+
     === "Radiologist Notes"
+
         - Head: intracranial injury. C-spine: fractures. Face: Le Fort midface orbital mandible fractures
 
     === "Tips & Tricks"

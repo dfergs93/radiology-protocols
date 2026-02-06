@@ -28,11 +28,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A
-        - **Allergy:** N/A
-    
+
     - **Position:** Supine head-first
     - **NPO Status:** N/A
     
@@ -56,7 +52,12 @@
 
         - No IV. Remove dentures and metal
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A
+            - **Allergy:** N/A
+
     === "Radiologist Notes"
+
         - Assess all sinuses. Ostiomeatal complex. Anatomic variants. Mucosal thickening. Polyps. Bony anatomy
 
     === "Tips & Tricks"

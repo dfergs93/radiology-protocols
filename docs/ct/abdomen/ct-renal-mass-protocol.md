@@ -28,11 +28,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 4 hours
     
@@ -41,7 +37,7 @@
 
     ---
     
-    ===   "Contrast Details"
+    ===   "Injection Parameters"
         
         | Parameter | Value |
         |-----------|-------|
@@ -50,7 +46,7 @@
         | Flow Rate | 4 mL/s |
         | Timing | Split bolus technique |
 
-    ===   "Contrast Notes"
+    ===   "Lab Requirements"
 
         Full dose if eGFR > 30. Split bolus technique
 
@@ -68,7 +64,12 @@
 
         - 18-20G IV. Explain split bolus technique and delay
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history
+
     === "Radiologist Notes"
+
         - NC: fat/calcification. Arterial: vascular anatomy and hypervascular masses. Nephrographic/IVP: delayed enhancement and collecting system
 
     === "Tips & Tricks"

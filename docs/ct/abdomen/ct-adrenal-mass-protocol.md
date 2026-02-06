@@ -28,11 +28,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history. Explain 15 min delay
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 4 hours
     
@@ -67,7 +63,12 @@
 
         - 18-20G IV. Patient must wait 15 min for delayed phase
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history. Explain 15 min delay
+
     === "Radiologist Notes"
+
         - NC: lipid-rich adenoma < 10 HU. Portal venous: enhancement. 15 min delay: calculate washout (adenoma shows washout)
 
     === "Tips & Tricks"
@@ -89,12 +90,12 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 30s
-      Saline (50mL)          :active, saline, after contrast, 14s
+      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 32s
+      Saline (20mL)          :active, saline, after contrast, 5s
       section Portal Venous Phase
-      Portal Venous    :done, scan1, 01:10, 15s
+      Portal Venous    :done, scan1, 01:10, 5s
       section Delayed Phase
-      15 Minute Delay    :done, scan2, 15:00, 15s
+      15 Minute Delay    :done, scan2, 15:00, 5s
   ```
 
 

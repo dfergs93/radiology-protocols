@@ -26,11 +26,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history. Explain hip flexion positioning
-    
+
     - **Position:** Supine initially then with hip flexion
     - **NPO Status:** NPO 2-4 hours
     
@@ -68,7 +64,12 @@
 
         - 18-20G IV
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history. Explain hip flexion positioning
+
     === "Radiologist Notes"
+
         - Compare resting vs flexed position. Look for iliac artery kinking stenosis or occlusion with hip flexion. Common in competitive cyclists
 
     === "Tips & Tricks"
@@ -91,11 +92,11 @@
       
       section Contrast Injection
       Contrast (100 mL)    :active, contrast, 00:00, 25s
-      Saline (50mL)          :active, saline, after contrast, 12s
+      Saline (20mL)          :active, saline, after contrast, 5s
       section Arterial Phase
-      CTA Resting Position    :crit, scan1, 00:25, 16s
+      CTA Resting Position    :crit, scan1, after contrast, 5s
       section Arterial Phase
-      CTA Hip Flexion    :crit, scan2, after scan1, 16s
+      CTA Hip Flexion    :crit, scan2, after scan1, 5s
   ```
 
 

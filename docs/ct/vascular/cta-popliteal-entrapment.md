@@ -27,11 +27,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history. Explain plantarflexion maneuver to patient
-    
+
     - **Position:** Supine with legs extended in neutral position
     - **NPO Status:** NPO 2-4 hours
     
@@ -69,7 +65,12 @@
 
         - 18-20G IV antecubital
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history. Explain plantarflexion maneuver to patient
+
     === "Radiologist Notes"
+
         - Compare neutral vs plantarflexion images. Look for popliteal artery compression deviation or occlusion with plantarflexion. Assess muscle anatomy
 
     === "Tips & Tricks"
@@ -92,11 +93,11 @@
       
       section Contrast Injection
       Contrast (100 mL)    :active, contrast, 00:00, 25s
-      Saline (50mL)          :active, saline, after contrast, 12s
+      Saline (20mL)          :active, saline, after contrast, 5s
       section Arterial Phase
-      CTA Neutral Position    :crit, scan1, 00:25, 15s
+      CTA Neutral Position    :crit, scan1, after contrast, 3s
       section Arterial Phase
-      CTA Plantarflexion    :crit, scan2, after scan1, 15s
+      CTA Plantarflexion    :crit, scan2, after scan1, 3s
   ```
 
 

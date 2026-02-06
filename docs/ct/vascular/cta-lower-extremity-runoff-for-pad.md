@@ -27,11 +27,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history
-    
+
     - **Position:** Supine with arms raised. Legs straight
     - **NPO Status:** NPO 2-4 hours
     
@@ -69,7 +65,12 @@
 
         - 18-20G IV antecubital
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history
+
     === "Radiologist Notes"
+
         - Assess aortoiliac femoral popliteal and tibial vessels. Grade stenoses. Identify occlusions. Assess runoff vessels
 
     === "Tips & Tricks"
@@ -92,9 +93,9 @@
       
       section Contrast Injection
       Contrast (150 mL)    :active, contrast, 00:00, 37s
-      Saline (50mL)          :active, saline, after contrast, 12s
+      Saline (20mL)          :active, saline, after contrast, 5s
       section Arterial Phase
-      CTA Arterial    :crit, scan1, 00:25, 10s
+      CTA Arterial    :crit, scan1, after contrast, 5s
   ```
 
 

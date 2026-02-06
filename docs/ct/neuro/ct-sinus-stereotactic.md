@@ -26,11 +26,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A
-        - **Allergy:** N/A
-    
+
     - **Position:** Supine head-first. Surgical planning position
     - **NPO Status:** N/A
     
@@ -54,7 +50,12 @@
 
         - Position as for surgery. Fiducials if required
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A
+            - **Allergy:** N/A
+
     === "Radiologist Notes"
+
         - Complete sinus anatomy for surgical navigation. Ostiomeatal complex. Skull base. Lamina papyracea
 
     === "Tips & Tricks"

@@ -27,11 +27,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history
-    
+
     - **Position:** Supine with arms raised above head
     - **NPO Status:** NPO 2-4 hours
     
@@ -69,7 +65,12 @@
 
         - 20G IV minimum. Antecubital or proximal forearm preferred
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history
+
     === "Radiologist Notes"
+
         - Assess entire aorta for dissection/aneurysm. Measure aortic dimensions. Check branch vessels
 
     === "Tips & Tricks"
@@ -92,9 +93,9 @@
       
       section Contrast Injection
       Contrast (125 mL)    :active, contrast, 00:00, 31s
-      Saline (50mL)          :active, saline, after contrast, 12s
+      Saline (20mL)          :active, saline, after contrast, 5s
       section Arterial Phase
-      CTA Arterial    :crit, scan1, 00:25, 35s
+      CTA Arterial    :crit, scan1, after contrast, 10s
   ```
 
 

@@ -1,0 +1,9 @@
+nav:
+  - Abdomen: abdomen
+  - Cardiac: cardiac
+  - Vascular: vascular
+  - Chest: chest
+  - MSK: msk
+  - Neuro: neuro
+  - Trauma: trauma
+collapse_single_pages: true

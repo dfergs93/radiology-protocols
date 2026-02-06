@@ -26,11 +26,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A
-        - **Allergy:** N/A
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** N/A
     
@@ -54,7 +50,12 @@
 
         - No IV. Single inspiration breath hold
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A
+            - **Allergy:** N/A
+
     === "Radiologist Notes"
+
         - Follow ILD changes. Bronchiectasis. Lower radiation than volumetric
 
     === "Tips & Tricks"

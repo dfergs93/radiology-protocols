@@ -26,11 +26,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A
-        - **Allergy:** N/A
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** N/A
     
@@ -54,7 +50,12 @@
 
         - No IV. Explain screening purpose and low radiation
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A
+            - **Allergy:** N/A
+
     === "Radiologist Notes"
+
         - Lung nodule detection. Measure nodules. Lung-RADS classification. Emphysema assessment
 
     === "Tips & Tricks"

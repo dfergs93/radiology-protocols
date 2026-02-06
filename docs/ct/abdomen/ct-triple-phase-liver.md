@@ -29,16 +29,11 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 4 hours
-    - **Pre-Medication:** 
-      None typically. Oral contrast optional
-
+    - **Pre-Medication:**
+        - None typically. Oral contrast optional
 
 -   __3. IV Contrast & Injection__    
 
@@ -73,7 +68,12 @@
 
         - 18-20G IV. High flow rate critical
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history
+
     === "Radiologist Notes"
+
         - NC: characterize lesion. Arterial: hypervascular lesions HCC. Portal: most liver lesions. Delayed: washout pattern
 
     === "Tips & Tricks"
@@ -95,14 +95,14 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 23s
-      Saline (50mL)          :active, saline, after contrast, 11s
+      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s
+      Saline (20mL)          :active, saline, after contrast, 4s
       section Arterial Phase
-      Late Arterial    :crit, scan1, 00:30, 12s
+      Late Arterial    :crit, scan1, 00:30, 7s
       section Portal Venous Phase
-      Portal Venous    :done, scan2, 01:10, 25s
+      Portal Venous    :done, scan2, 01:10, 7s
       section Delayed Phase
-      Delayed Phase    :done, scan3, 05:00, 12s
+      Delayed Phase    :done, scan3, 05:00, 7s
   ```
 
 

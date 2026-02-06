@@ -26,16 +26,11 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history
-    
+
     - **Position:** Supine feet-first
     - **NPO Status:** NPO 2-4 hours
-    - **Pre-Medication:** 
-      HR < 65 preferred. Metoprolol if needed
-
+    - **Pre-Medication:**
+        - HR < 65 preferred. Metoprolol if needed
 
 -   __3. IV Contrast & Injection__    
 
@@ -70,7 +65,12 @@
 
         - 20G IV minimum
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history
+
     === "Radiologist Notes"
+
         - Assess prosthetic valve function. Look for paravalvular leak. Evaluate perivalvular complications. Metal artifact reduction critical
 
     === "Tips & Tricks"
@@ -92,10 +92,10 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (1.3 mL/kg)    :active, contrast, 00:00, 20s
-      Saline (50mL)          :active, saline, after contrast, 11s
+      Contrast (1.3 mL/kg)    :active, contrast, 00:00, 21s
+      Saline (20mL)          :active, saline, after contrast, 4s
       section Arterial Phase
-      Gated CTA    :crit, scan1, 00:25, 10s
+      Gated CTA    :crit, scan1, after contrast, 5s
   ```
 
 

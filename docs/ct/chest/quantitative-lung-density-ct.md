@@ -28,11 +28,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A
-        - **Allergy:** N/A
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** N/A
     
@@ -56,7 +52,12 @@
 
         - No IV. Coach complete inspiration and complete expiration
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A
+            - **Allergy:** N/A
+
     === "Radiologist Notes"
+
         - Quantify emphysema (% lung <-950 HU inspiration). Air trapping (% lung <-856 HU expiration). Emphysema distribution
 
     === "Tips & Tricks"

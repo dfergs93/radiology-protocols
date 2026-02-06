@@ -27,16 +27,11 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A
-        - **Allergy:** Contrast reaction history
-    
+
     - **Position:** Supine with arm at side
     - **NPO Status:** N/A
-    - **Pre-Medication:** 
-      Intra-articular contrast injection by radiologist
-
+    - **Pre-Medication:**
+        - Intra-articular contrast injection by radiologist
 
 -   __3. IV Contrast & Injection__    
 
@@ -68,7 +63,12 @@
 
         - Radiologist performs injection. Patient to CT immediately after
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A
+            - **Allergy:** Contrast reaction history
+
     === "Radiologist Notes"
+
         - Labral tears. Rotator cuff tears. Capsular tears. Glenohumeral ligaments. Paralabral cysts
 
     === "Tips & Tricks"
@@ -90,7 +90,7 @@
       axisFormat %M:%S 
       
       section Scan Phase 1
-      CT Arthrogram    :done, scan1, after saline, 10s
+      CT Arthrogram    :done, scan1, after saline, 5s
   ```
 
 

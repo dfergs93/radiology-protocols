@@ -27,16 +27,11 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 2-4 hours
-    - **Pre-Medication:** 
-      HR < 65 target. Metoprolol 5mg IV prn. Nitro 0.4mg SL
-
+    - **Pre-Medication:**
+        - HR < 65 target. Metoprolol 5mg IV prn. Nitro 0.4mg SL
 
 -   __3. IV Contrast & Injection__    
 
@@ -71,7 +66,12 @@
 
         - 20G IV minimum
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history
+
     === "Radiologist Notes"
+
         - Gated chest: assess aortic root valve coronaries. Flash AP: assess aorta and branches. Combined cardiac and vascular
 
     === "Tips & Tricks"
@@ -94,11 +94,11 @@
       
       section Contrast Injection
       Contrast (140 mL)    :active, contrast, 00:00, 35s
-      Saline (50mL)          :active, saline, after contrast, 12s
+      Saline (20mL)          :active, saline, after contrast, 5s
       section Arterial Phase
-      Gated CTA Chest    :crit, scan1, 00:25, 12s
+      Gated CTA Chest    :crit, scan1, after contrast, 6s
       section Arterial Phase
-      Flash CTA AP    :crit, scan2, after scan1, 25s
+      Flash CTA AP    :crit, scan2, after scan1, 7s
   ```
 
 

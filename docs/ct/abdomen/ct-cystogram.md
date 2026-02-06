@@ -30,16 +30,11 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Foley placement. Prepare dilute contrast
-    
+
     - **Position:** Supine
     - **NPO Status:** NPO 2-4 hours
-    - **Pre-Medication:** 
-      Bladder contrast: 350-400 mL dilute contrast (30 mL contrast in 350 mL saline)
-
+    - **Pre-Medication:**
+        - Bladder contrast: 350-400 mL dilute contrast (30 mL contrast in 350 mL saline)
 
 -   __3. IV Contrast & Injection__    
 
@@ -71,7 +66,12 @@
 
         - Foley catheter required. Dilute contrast preparation (30mL in 350mL saline). Gravity fill bladder. Patient signals fullness
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Foley placement. Prepare dilute contrast
+
     === "Radiologist Notes"
+
         - Portal venous: solid organs. Cystogram: bladder integrity extravasation. Post-void: small leaks
 
     === "Tips & Tricks"
@@ -94,15 +94,15 @@
       
       section Contrast Injection
       Contrast (100 mL)    :active, contrast, 00:00, 28s
-      Saline (50mL)          :active, saline, after contrast, 14s
+      Saline (20mL)          :active, saline, after contrast, 5s
       section Portal Venous Phase
-      Portal Venous    :done, scan1, 01:10, 25s
+      Portal Venous    :done, scan1, 01:10, 7s
       section Scan Phase 2
-      Bladder Filling    :done, scan2, 01:30, 10s
+      Bladder Filling    :done, scan2, 01:30, 3s
       section Scan Phase 3
-      Cystogram    :done, scan3, 01:40, 15s
+      Cystogram    :done, scan3, 01:40, 5s
       section Scan Phase 4
-      Post-Void    :done, scan4, after scan3, 15s
+      Post-Void    :done, scan4, after scan3, 5s
   ```
 
 

@@ -29,11 +29,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history. Explain arm repositioning
-    
+
     - **Position:** Supine with arms initially UP then DOWN
     - **NPO Status:** NPO 4 hours
     
@@ -71,7 +67,12 @@
 
         - 20G IV minimum. Verify good flow for multiple phases
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history. Explain arm repositioning
+
     === "Radiologist Notes"
+
         - Screen all vascular beds for FMD. Look for beading stenosis aneurysm dissection. Assess renal carotid vertebral intracranial arteries
 
     === "Tips & Tricks"
@@ -94,11 +95,11 @@
       
       section Contrast Injection
       Contrast (150 mL total)    :active, contrast, 00:00, 37s
-      Saline (50mL)          :active, saline, after contrast, 12s
+      Saline (20mL)          :active, saline, after contrast, 5s
       section Arterial Phase
-      CTA Neck    :crit, scan1, 00:25, 25s
+      CTA Neck    :crit, scan1, after contrast, 8s
       section Arterial Phase
-      CTA CAP    :crit, scan2, 00:35, 25s
+      CTA CAP    :crit, scan2, 00:35, 7s
   ```
 
 

@@ -1,2 +1,5 @@
-docs/liver_protocol.csv
-docs/protocols.csv
+csv/
+.env
+backend/chromadb/
+backend/
+scripts/

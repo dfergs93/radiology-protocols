@@ -30,11 +30,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Emergency proceed
-        - **Allergy:** STAT protocol
-    
+
     - **Position:** Supine head-first
     - **NPO Status:** None - emergency
     
@@ -72,7 +68,12 @@
 
         - No IV for NC. Large bore for CTA/CTP. STAT coordination
 
+        !!! warning "Safety First"
+            - **Renal Function:** Emergency proceed
+            - **Allergy:** STAT protocol
+
     === "Radiologist Notes"
+
         - NC: hemorrhage early ischemia hyperdense vessel. CTA: LVO large vessel occlusion. CTP: penumbra core mismatch
 
     === "Tips & Tricks"
@@ -95,9 +96,9 @@
       
       section Contrast Injection
       Contrast (100 mL)    :active, contrast, 00:00, 22s
-      Saline (50mL)          :active, saline, after contrast, 11s
+      Saline (20mL)          :active, saline, after contrast, 4s
       section Arterial Phase
-      CTA Head    :crit, scan1, 00:25, 8s
+      CTA Head    :crit, scan1, after contrast, 3s
   ```
 
 

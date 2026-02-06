@@ -29,11 +29,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A
-        - **Allergy:** N/A
-    
+
     - **Position:** Supine head-first
     - **NPO Status:** N/A
     
@@ -57,7 +53,12 @@
 
         - No IV. Remove hearing aids and earrings
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A
+            - **Allergy:** N/A
+
     === "Radiologist Notes"
+
         - Ossicles. Cochlea. Semicircular canals. Internal auditory canal. Mastoid air cells. Cholesteatoma. Fracture. Tegmen
 
     === "Tips & Tricks"

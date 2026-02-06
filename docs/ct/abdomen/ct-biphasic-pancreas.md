@@ -27,16 +27,11 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history. Coordinate water intake
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 4 hours
-    - **Pre-Medication:** 
-      Water PO: 900 mL water orally 15-30 min before scan for gastric/duodenal distension
-
+    - **Pre-Medication:**
+        - Water PO: 900 mL water orally 15-30 min before scan for gastric/duodenal distension
 
 -   __3. IV Contrast & Injection__    
 
@@ -71,7 +66,12 @@
 
         - 18-20G IV. Ensure water intake for duodenal distension
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history. Coordinate water intake
+
     === "Radiologist Notes"
+
         - Pancreatic phase: optimal pancreatic enhancement and small lesions. Portal venous: liver and venous structures
 
     === "Tips & Tricks"
@@ -93,12 +93,12 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 23s
-      Saline (50mL)          :active, saline, after contrast, 11s
+      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s
+      Saline (20mL)          :active, saline, after contrast, 4s
       section Scan Phase 1
-      Pancreatic Phase    :crit, scan1, 00:40, 12s
+      Pancreatic Phase    :crit, scan1, 00:40, 7s
       section Portal Venous Phase
-      Portal Venous    :done, scan2, 01:10, 12s
+      Portal Venous    :done, scan2, 01:10, 7s
   ```
 
 

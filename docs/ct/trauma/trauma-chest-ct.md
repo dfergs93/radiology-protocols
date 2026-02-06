@@ -27,11 +27,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A
-        - **Allergy:** N/A
-    
+
     - **Position:** Supine with arms raised if possible
     - **NPO Status:** None - trauma
     
@@ -55,7 +51,12 @@
 
         - Trauma precautions. Arms up if able
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A
+            - **Allergy:** N/A
+
     === "Radiologist Notes"
+
         - Pneumothorax hemothorax. Rib fractures (count and location). Pulmonary contusion. Aortic injury. Sternal/scapular fractures
 
     === "Tips & Tricks"

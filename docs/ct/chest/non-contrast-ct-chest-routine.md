@@ -27,11 +27,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A
-        - **Allergy:** N/A
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** N/A
     
@@ -55,7 +51,12 @@
 
         - No IV needed. Breath hold coaching
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A
+            - **Allergy:** N/A
+
     === "Radiologist Notes"
+
         - Assess lung parenchyma nodules masses. Mediastinal lymph nodes. Pleura. Incidental findings
 
     === "Tips & Tricks"

@@ -29,11 +29,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 4 hours
     
@@ -42,7 +38,7 @@
 
     ---
     
-    ===   "Contrast Details"
+    ===   "Injection Parameters"
         
         | Parameter | Value |
         |-----------|-------|
@@ -51,7 +47,7 @@
         | Flow Rate | 4 mL/s |
         | Timing | Split bolus technique |
 
-    ===   "Contrast Notes"
+    ===   "Lab Requirements"
 
         Full dose if eGFR > 30. Split bolus for combined nephrographic and excretory phases
 
@@ -69,7 +65,12 @@
 
         - 18-20G IV. Split bolus technique. May give Lasix 10-20mg IV for better opacification
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history
+
     === "Radiologist Notes"
+
         - NC optional: detect stones. Early PV: renal parenchyma. Excretory: collecting system ureters bladder for urothelial lesions
 
     === "Tips & Tricks"

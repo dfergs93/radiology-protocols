@@ -27,11 +27,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Check if available
-        - **Allergy:** Trauma indication
-    
+
     - **Position:** Supine legs extended
     - **NPO Status:** None - trauma
     
@@ -69,7 +65,12 @@
 
         - 18-20G IV. May need proximal IV if arm injury
 
+        !!! warning "Safety First"
+            - **Renal Function:** Check if available
+            - **Allergy:** Trauma indication
+
     === "Radiologist Notes"
+
         - Assess arterial injury: transection pseudoaneurysm occlusion extravasation. Evaluate fracture relationship to vessels
 
     === "Tips & Tricks"
@@ -92,9 +93,9 @@
       
       section Contrast Injection
       Contrast (125 mL)    :active, contrast, 00:00, 27s
-      Saline (50mL)          :active, saline, after contrast, 11s
+      Saline (20mL)          :active, saline, after contrast, 4s
       section Arterial Phase
-      CTA Arterial    :crit, scan1, 00:25, 10s
+      CTA Arterial    :crit, scan1, after contrast, 5s
   ```
 
 

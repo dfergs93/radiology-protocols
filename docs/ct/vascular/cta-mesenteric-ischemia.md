@@ -27,16 +27,11 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** eGFR > 30 preferred
-        - **Allergy:** Emergency study - document indication
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO (emergent - as patient presents)
-    - **Pre-Medication:** 
-      None - emergent study
-
+    - **Pre-Medication:**
+        - None - emergent study
 
 -   __3. IV Contrast & Injection__    
 
@@ -71,7 +66,12 @@
 
         - 18G IV required for 5 mL/s flow. Must be patent
 
+        !!! warning "Safety First"
+            - **Renal Function:** eGFR > 30 preferred
+            - **Allergy:** Emergency study - document indication
+
     === "Radiologist Notes"
+
         - Arterial: assess celiac SMA IMA origins. Portal: look for bowel wall enhancement. Check for pneumatosis
 
     === "Tips & Tricks"
@@ -94,11 +94,11 @@
       
       section Contrast Injection
       Contrast (125 mL)    :active, contrast, 00:00, 25s
-      Saline (50mL)          :active, saline, after contrast, 10s
+      Saline (20mL)          :active, saline, after contrast, 4s
       section Arterial Phase
-      Arterial Phase    :crit, scan1, 00:25, 12s
+      Arterial Phase    :crit, scan1, 00:25, 7s
       section Portal Venous Phase
-      Portal Venous    :done, scan2, 01:10, 25s
+      Portal Venous    :done, scan2, 01:10, 7s
   ```
 
 

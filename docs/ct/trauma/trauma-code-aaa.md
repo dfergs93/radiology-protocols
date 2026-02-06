@@ -28,11 +28,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Emergent - proceed
-        - **Allergy:** Document emergency
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** None - emergency
     
@@ -70,7 +66,12 @@
 
         - Large bore IV 18G minimum. Blood products ready
 
+        !!! warning "Safety First"
+            - **Renal Function:** Emergent - proceed
+            - **Allergy:** Document emergency
+
     === "Radiologist Notes"
+
         - NC: retroperitoneal hematoma. Arterial: active extravasation aneurysm morphology. Portal: solid organs
 
     === "Tips & Tricks"
@@ -93,11 +94,11 @@
       
       section Contrast Injection
       Contrast (125 mL)    :active, contrast, 00:00, 27s
-      Saline (50mL)          :active, saline, after contrast, 11s
+      Saline (20mL)          :active, saline, after contrast, 4s
       section Arterial Phase
-      Arterial CAP    :crit, scan1, 00:25, 25s
+      Arterial CAP    :crit, scan1, 00:25, 7s
       section Portal Venous Phase
-      Portal Venous CAP    :done, scan2, 01:10, 25s
+      Portal Venous CAP    :done, scan2, 01:10, 7s
   ```
 
 

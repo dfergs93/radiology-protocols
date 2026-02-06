@@ -31,11 +31,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A or eGFR > 30
-        - **Allergy:** N/A or check allergy
-    
+
     - **Position:** Depends on body part
     - **NPO Status:** NPO 2-4 hours if contrast
     
@@ -70,7 +66,12 @@
 
         - IV for contrast studies. Document indication
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A or eGFR > 30
+            - **Allergy:** N/A or check allergy
+
     === "Radiologist Notes"
+
         - NC: baseline bone soft tissue. Contrast: enhancement pattern. Delayed: washout or persistent enhancement. 3D for surgical planning
 
     === "Tips & Tricks"
@@ -93,9 +94,9 @@
       
       section Contrast Injection
       Contrast (100 mL if contrast)    :active, contrast, 00:00, 40s
-      Saline (50mL)          :active, saline, after contrast, 20s
+      Saline (20mL)          :active, saline, after contrast, 8s
       section Scan Phase 1
-      Contrast phase    :done, scan1, 01:00, 10s
+      Contrast phase    :done, scan1, 01:00, 5s
   ```
 
 

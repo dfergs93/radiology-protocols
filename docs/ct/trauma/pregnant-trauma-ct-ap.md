@@ -26,11 +26,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Check if known
-        - **Allergy:** Trauma indication documented
-    
+
     - **Position:** Supine with left lateral tilt if possible
     - **NPO Status:** None - trauma
     
@@ -65,7 +61,12 @@
 
         - Pregnancy documented. Fetal heart tones if equipment available. Shield if possible
 
+        !!! warning "Safety First"
+            - **Renal Function:** Check if known
+            - **Allergy:** Trauma indication documented
+
     === "Radiologist Notes"
+
         - Assess maternal injuries. Minimize fetal radiation exposure. Document placental injury if visible
 
     === "Tips & Tricks"
@@ -88,9 +89,9 @@
       
       section Contrast Injection
       Contrast (125 mL)    :active, contrast, 00:00, 41s
-      Saline (50mL)          :active, saline, after contrast, 16s
+      Saline (20mL)          :active, saline, after contrast, 6s
       section Portal Venous Phase
-      Portal Venous AP    :done, scan1, 01:10, 25s
+      Portal Venous AP    :done, scan1, 01:10, 7s
   ```
 
 

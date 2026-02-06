@@ -29,11 +29,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history
-    
+
     - **Position:** Supine head-first with arms down
     - **NPO Status:** NPO 4 hours
     
@@ -71,7 +67,12 @@
 
         - 18-20G IV. High flow rate for arterial
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history
+
     === "Radiologist Notes"
+
         - NC: baseline. Arterial: parathyroid lights up. Venous: thyroid enhances. Delayed: parathyroid washes out faster than thyroid
 
     === "Tips & Tricks"
@@ -94,13 +95,13 @@
       
       section Contrast Injection
       Contrast (75-100 mL)    :active, contrast, 00:00, 18s
-      Saline (50mL)          :active, saline, after contrast, 12s
+      Saline (20mL)          :active, saline, after contrast, 5s
       section Arterial Phase
-      Arterial Phase    :crit, scan1, 00:25, 15s
+      Arterial Phase    :crit, scan1, 00:25, 5s
       section Portal Venous Phase
-      Venous Phase    :done, scan2, 00:55, 15s
+      Venous Phase    :done, scan2, 00:55, 5s
       section Delayed Phase
-      Delayed Phase    :done, scan3, 01:30, 15s
+      Delayed Phase    :done, scan3, 01:30, 5s
   ```
 
 

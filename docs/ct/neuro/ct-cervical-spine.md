@@ -28,11 +28,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A or verify eGFR
-        - **Allergy:** N/A or check allergy
-    
+
     - **Position:** Supine head-first
     - **NPO Status:** N/A
     
@@ -67,7 +63,12 @@
 
         - No IV unless contrast needed. Cervical precautions if trauma
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A or verify eGFR
+            - **Allergy:** N/A or check allergy
+
     === "Radiologist Notes"
+
         - Alignment. Fractures. Disc spaces. Neural foramina. Spinal canal. Facet joints. Degenerative changes
 
     === "Tips & Tricks"
@@ -90,7 +91,7 @@
       
       section Contrast Injection
       Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 33s
-      Saline (50mL)          :active, saline, after contrast, 16s
+      Saline (20mL)          :active, saline, after contrast, 6s
   ```
 
 

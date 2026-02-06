@@ -27,16 +27,11 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Large contrast load - verify renal function
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 4 hours
-    - **Pre-Medication:** 
-      HR < 65. Metoprolol IV prn. Nitro 0.4mg SL
-
+    - **Pre-Medication:**
+        - HR < 65. Metoprolol IV prn. Nitro 0.4mg SL
 
 -   __3. IV Contrast & Injection__    
 
@@ -71,7 +66,12 @@
 
         - 20G IV
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Large contrast load - verify renal function
+
     === "Radiologist Notes"
+
         - Gated: cardiac anatomy. Arterial: systemic vessels. VENOUS: retrosternal veins and adherent structures critical for surgical planning
 
     === "Tips & Tricks"
@@ -94,13 +94,13 @@
       
       section Contrast Injection
       Contrast (150 mL)    :active, contrast, 00:00, 37s
-      Saline (50mL)          :active, saline, after contrast, 12s
+      Saline (20mL)          :active, saline, after contrast, 5s
       section Arterial Phase
-      Gated CTA Chest    :crit, scan1, 00:25, 12s
+      Gated CTA Chest    :crit, scan1, after contrast, 6s
       section Scan Phase 2
-      Flash AP    :done, scan2, after scan1, 25s
+      Flash AP    :crit, scan2, after scan1, 7s
       section Scan Phase 3
-      Venogram Chest    :done, scan3, 01:00, 12s
+      Venogram Chest    :done, scan3, 01:00, 6s
   ```
 
 

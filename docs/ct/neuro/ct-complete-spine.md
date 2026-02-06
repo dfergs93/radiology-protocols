@@ -27,11 +27,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A or verify eGFR
-        - **Allergy:** N/A or check allergy
-    
+
     - **Position:** Supine
     - **NPO Status:** None - usually trauma
     
@@ -66,7 +62,12 @@
 
         - No IV unless contrast needed. Complete spine coverage
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A or verify eGFR
+            - **Allergy:** N/A or check allergy
+
     === "Radiologist Notes"
+
         - Entire spine alignment. Fractures all levels. Spinal canal. Paraspinal masses. Metastatic disease
 
     === "Tips & Tricks"
@@ -89,7 +90,7 @@
       
       section Contrast Injection
       Contrast (If contrast: 125 mL)    :active, contrast, 00:00, 41s
-      Saline (50mL)          :active, saline, after contrast, 16s
+      Saline (20mL)          :active, saline, after contrast, 6s
   ```
 
 

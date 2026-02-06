@@ -28,11 +28,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history
-    
+
     - **Position:** Supine head-first
     - **NPO Status:** NPO 2 hours
     
@@ -67,7 +63,12 @@
 
         - 18-20G IV. Coach no swallowing during scan
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history
+
     === "Radiologist Notes"
+
         - Assess neck spaces. Retropharyngeal. Parapharyngeal. Masticator. Parotid. Submandibular. Thyroid. Lymph nodes. Abscess vs phlegmon
 
     === "Tips & Tricks"
@@ -90,9 +91,9 @@
       
       section Contrast Injection
       Contrast (100 mL)    :active, contrast, 00:00, 33s
-      Saline (50mL)          :active, saline, after contrast, 16s
+      Saline (20mL)          :active, saline, after contrast, 6s
       section Scan Phase 1
-      Contrast Neck    :done, scan1, 01:00, 15s
+      Contrast Neck    :done, scan1, 01:00, 5s
   ```
 
 

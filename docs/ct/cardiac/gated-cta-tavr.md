@@ -26,16 +26,11 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 4 hours
-    - **Pre-Medication:** 
-      HR < 65 target. Metoprolol IV. Nitro 0.4mg SL
-
+    - **Pre-Medication:**
+        - HR < 65 target. Metoprolol IV. Nitro 0.4mg SL
 
 -   __3. IV Contrast & Injection__    
 
@@ -70,7 +65,12 @@
 
         - 20G IV antecubital
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history
+
     === "Radiologist Notes"
+
         - Measure aortic annulus (3 diameters). Coronary heights. Access vessels (iliofemoral). Valve calcium. Comprehensive TAVR measurements
 
     === "Tips & Tricks"
@@ -93,11 +93,11 @@
       
       section Contrast Injection
       Contrast (140 mL)    :active, contrast, 00:00, 35s
-      Saline (50mL)          :active, saline, after contrast, 12s
+      Saline (20mL)          :active, saline, after contrast, 5s
       section Arterial Phase
-      Gated CTA Chest    :crit, scan1, 00:25, 12s
+      Gated CTA Chest    :crit, scan1, after contrast, 6s
       section Arterial Phase
-      Flash CTA AP    :crit, scan2, after scan1, 10s
+      Flash CTA AP    :crit, scan2, after scan1, 5s
   ```
 
 

@@ -29,16 +29,11 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check metoprolol contraindications
-    
+
     - **Position:** Supine feet-first
     - **NPO Status:** NPO 2-4 hours
-    - **Pre-Medication:** 
-      HR < 60 target. Metoprolol 5mg IV up to 15mg total. Nitro 0.4mg SL. Check BP > 100
-
+    - **Pre-Medication:**
+        - HR < 60 target. Metoprolol 5mg IV up to 15mg total. Nitro 0.4mg SL. Check BP > 100
 
 -   __3. IV Contrast & Injection__    
 
@@ -73,7 +68,12 @@
 
         - 20G IV minimum. HR control critical. Nitro administration. Monitor BP
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check metoprolol contraindications
+
     === "Radiologist Notes"
+
         - Assess coronaries for stenosis plaque. Evaluate anomalous anatomy. Stent patency if applicable. Cardiac function from multi-phase
 
     === "Tips & Tricks"
@@ -95,12 +95,12 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 17s
-      Saline (50mL)          :active, saline, after contrast, 11s
+      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s
+      Saline (20mL)          :active, saline, after contrast, 4s
       section Arterial Phase
-      Gated CTA    :crit, scan1, 00:25, 10s
+      Gated CTA    :crit, scan1, after contrast, 5s
       section Delayed Phase
-      Stent delay (optional)    :done, scan2, 00:40, 10s
+      Stent delay (optional)    :done, scan2, 00:40, 5s
   ```
 
 

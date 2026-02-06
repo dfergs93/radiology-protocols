@@ -29,11 +29,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** eGFR > 30 preferred but can proceed emergently
-        - **Allergy:** Document allergy history. Emergency indication overrides mild allergy
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO if possible (emergent study)
     
@@ -71,7 +67,12 @@
 
         - Large bore IV 18-20G essential. Must achieve 5 mL/s flow rate. Verify with saline test
 
+        !!! warning "Safety First"
+            - **Renal Function:** eGFR > 30 preferred but can proceed emergently
+            - **Allergy:** Document allergy history. Emergency indication overrides mild allergy
+
     === "Radiologist Notes"
+
         - Look for arterial extravasation (early) and pooling (delayed). Note location and potential source vessel
 
     === "Tips & Tricks"
@@ -94,13 +95,13 @@
       
       section Contrast Injection
       Contrast (125 mL)    :active, contrast, 00:00, 25s
-      Saline (50mL)          :active, saline, after contrast, 10s
+      Saline (20mL)          :active, saline, after contrast, 4s
       section Arterial Phase
-      Arterial Phase    :crit, scan1, 00:25, 25s
+      Arterial Phase    :crit, scan1, 00:25, 7s
       section Portal Venous Phase
-      Portal Venous Phase    :done, scan2, 01:10, 25s
+      Portal Venous Phase    :done, scan2, 01:10, 7s
       section Delayed Phase
-      Delayed Phase    :done, scan3, 01:30, 25s
+      Delayed Phase    :done, scan3, 01:30, 7s
   ```
 
 

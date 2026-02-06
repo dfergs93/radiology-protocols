@@ -3,7 +3,7 @@
     "filepath": "ct/abdomen/ct-abdomen-pelvis-with-contrast.md",
     "title": "CT Abdomen Pelvis with Contrast",
     "category": "Abdomen",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Abdomen Pelvis with Contrast Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 41s\n      Saline (50mL)          :active, saline, after contrast, 16s\n      section Portal Venous Phase\n      Portal Venous Phase    :done, scan1, 01:10, 25s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Abdomen Pelvis with Contrast Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 41s\n      Saline (20mL)          :active, saline, after contrast, 6s\n      section Portal Venous Phase\n      Portal Venous Phase    :done, scan1, 01:10, 7s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
       "volume": "125 mL",
@@ -42,7 +42,7 @@
     "filepath": "ct/abdomen/ct-adrenal-mass-protocol.md",
     "title": "CT Adrenal Mass Protocol",
     "category": "Abdomen",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Adrenal Mass Protocol Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 30s\n      Saline (50mL)          :active, saline, after contrast, 14s\n      section Portal Venous Phase\n      Portal Venous    :done, scan1, 01:10, 15s\n      section Delayed Phase\n      15 Minute Delay    :done, scan2, 15:00, 15s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Adrenal Mass Protocol Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 32s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Portal Venous Phase\n      Portal Venous    :done, scan1, 01:10, 5s\n      section Delayed Phase\n      15 Minute Delay    :done, scan2, 15:00, 5s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
       "volume": "1.5 mL/kg",
@@ -100,7 +100,7 @@
     "filepath": "ct/abdomen/ct-biphasic-pancreas.md",
     "title": "CT Biphasic Pancreas",
     "category": "Abdomen",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Biphasic Pancreas Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 23s\n      Saline (50mL)          :active, saline, after contrast, 11s\n      section Scan Phase 1\n      Pancreatic Phase    :crit, scan1, 00:40, 12s\n      section Portal Venous Phase\n      Portal Venous    :done, scan2, 01:10, 12s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Biphasic Pancreas Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Scan Phase 1\n      Pancreatic Phase    :crit, scan1, 00:40, 7s\n      section Portal Venous Phase\n      Portal Venous    :done, scan2, 01:10, 7s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
       "volume": "1.5 mL/kg",
@@ -147,7 +147,7 @@
     "filepath": "ct/abdomen/ct-chest-abdomen-pelvis-with-contrast.md",
     "title": "CT Chest Abdomen Pelvis with Contrast",
     "category": "Abdomen",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Chest Abdomen Pelvis with Contrast Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 30s\n      Saline (50mL)          :active, saline, after contrast, 14s\n      section Portal Venous Phase\n      Portal Venous Phase    :done, scan1, 01:10, 25s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Chest Abdomen Pelvis with Contrast Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 32s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Portal Venous Phase\n      Portal Venous Phase    :done, scan1, 01:10, 7s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
       "volume": "1.5 mL/kg",
@@ -186,7 +186,7 @@
     "filepath": "ct/abdomen/ct-cystogram.md",
     "title": "CT Cystogram",
     "category": "Abdomen",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Cystogram Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 28s\n      Saline (50mL)          :active, saline, after contrast, 14s\n      section Portal Venous Phase\n      Portal Venous    :done, scan1, 01:10, 25s\n      section Scan Phase 2\n      Bladder Filling    :done, scan2, 01:30, 10s\n      section Scan Phase 3\n      Cystogram    :done, scan3, 01:40, 15s\n      section Scan Phase 4\n      Post-Void    :done, scan4, after scan3, 15s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Cystogram Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 28s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Portal Venous Phase\n      Portal Venous    :done, scan1, 01:10, 7s\n      section Scan Phase 2\n      Bladder Filling    :done, scan2, 01:30, 3s\n      section Scan Phase 3\n      Cystogram    :done, scan3, 01:40, 5s\n      section Scan Phase 4\n      Post-Void    :done, scan4, after scan3, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "100 mL",
@@ -258,7 +258,7 @@
     "filepath": "ct/abdomen/ct-enterography.md",
     "title": "CT Enterography",
     "category": "Abdomen",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Enterography Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 23s\n      Saline (50mL)          :active, saline, after contrast, 11s\n      section Scan Phase 1\n      Enteric Phase    :done, scan1, 00:45, 25s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Enterography Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Scan Phase 1\n      Enteric Phase    :done, scan1, 00:45, 7s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
       "volume": "1.5 mL/kg",
@@ -433,7 +433,7 @@
     "filepath": "ct/abdomen/ct-triple-phase-liver.md",
     "title": "CT Triple Phase Liver",
     "category": "Abdomen",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Triple Phase Liver Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 23s\n      Saline (50mL)          :active, saline, after contrast, 11s\n      section Arterial Phase\n      Late Arterial    :crit, scan1, 00:30, 12s\n      section Portal Venous Phase\n      Portal Venous    :done, scan2, 01:10, 25s\n      section Delayed Phase\n      Delayed Phase    :done, scan3, 05:00, 12s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Triple Phase Liver Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      Late Arterial    :crit, scan1, 00:30, 7s\n      section Portal Venous Phase\n      Portal Venous    :done, scan2, 01:10, 7s\n      section Delayed Phase\n      Delayed Phase    :done, scan3, 05:00, 7s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
       "volume": "1.5 mL/kg",
@@ -517,8 +517,8 @@
         "name": "Calcium Score",
         "start": "Carina",
         "end": "Below heart",
-        "delay": "Prospective 75%",
-        "thickness": "3 mm",
+        "delay": "N/A",
+        "thickness": "1.5 mm",
         "notes": "Sequential axial gated acquisition",
         "coverage": "Carina \u2192 Below heart"
       }
@@ -526,7 +526,7 @@
     "summary": [
       {
         "series": "Calcium Score",
-        "phase": "Contrast (Prospective 75% delay)",
+        "phase": "Non-contrast",
         "coverage": "Carina to Below heart"
       }
     ]
@@ -535,101 +535,7 @@
     "filepath": "ct/cardiac/coronary-cta.md",
     "title": "Coronary CTA",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Coronary CTA Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1-1.3 mL/kg)    :active, contrast, 00:00, 17s\n      Saline (50mL)          :active, saline, after contrast, 11s\n      section Arterial Phase\n      Gated CTA    :crit, scan1, 00:25, 10s\n  ```",
-    "contrast": {
-      "agent": "Isovue 370",
-      "volume": "1.1-1.3 mL/kg",
-      "flow_rate": "4-5 mL/s",
-      "timing": "Bolus Tracking",
-      "roi": "Ascending aorta",
-      "trigger": "200 HU",
-      "type": "IV Contrast"
-    },
-    "series": [
-      {
-        "name": "Non-contrast",
-        "start": "Top of heart",
-        "end": "Below heart",
-        "delay": "N/A",
-        "thickness": "3 mm",
-        "notes": "Calcium score",
-        "coverage": "Top of heart \u2192 Below heart"
-      },
-      {
-        "name": "Gated CTA",
-        "start": "Top of heart",
-        "end": "Below heart",
-        "delay": "Bolus tracked",
-        "thickness": "0.5-0.625 mm",
-        "notes": "Retrospective gating",
-        "coverage": "Top of heart \u2192 Below heart"
-      }
-    ],
-    "summary": [
-      {
-        "series": "Non-contrast",
-        "phase": "Non-contrast",
-        "coverage": "Top of heart to Below heart"
-      },
-      {
-        "series": "Gated CTA",
-        "phase": "Arterial (bolus tracked)",
-        "coverage": "Top of heart to Below heart"
-      }
-    ]
-  },
-  {
-    "filepath": "ct/cardiac/coronary-cta-post-cabg.md",
-    "title": "Coronary CTA Post-CABG",
-    "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Coronary CTA Post-CABG Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1-1.3 mL/kg)    :active, contrast, 00:00, 17s\n      Saline (50mL)          :active, saline, after contrast, 11s\n      section Arterial Phase\n      Gated CTA    :crit, scan1, 00:25, 10s\n  ```",
-    "contrast": {
-      "agent": "Isovue 370",
-      "volume": "1.1-1.3 mL/kg",
-      "flow_rate": "4-5 mL/s",
-      "timing": "Bolus Tracking",
-      "roi": "Ascending aorta",
-      "trigger": "200 HU",
-      "type": "IV Contrast"
-    },
-    "series": [
-      {
-        "name": "Non-contrast",
-        "start": "Top of heart",
-        "end": "Below heart",
-        "delay": "N/A",
-        "thickness": "3 mm",
-        "notes": "Calcium score",
-        "coverage": "Top of heart \u2192 Below heart"
-      },
-      {
-        "name": "Gated CTA",
-        "start": "Thoracic inlet",
-        "end": "Below heart",
-        "delay": "Bolus tracked",
-        "thickness": "0.5-0.625 mm",
-        "notes": "Retrospective gating - full chest FOV",
-        "coverage": "Thoracic inlet \u2192 Below heart"
-      }
-    ],
-    "summary": [
-      {
-        "series": "Non-contrast",
-        "phase": "Non-contrast",
-        "coverage": "Top of heart to Below heart"
-      },
-      {
-        "series": "Gated CTA",
-        "phase": "Arterial (bolus tracked)",
-        "coverage": "Thoracic inlet to Below heart"
-      }
-    ]
-  },
-  {
-    "filepath": "ct/cardiac/endocarditiscardiac-mass.md",
-    "title": "Endocarditis/Cardiac Mass",
-    "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Endocarditis/Cardiac Mass Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 17s\n      Saline (50mL)          :active, saline, after contrast, 11s\n      section Arterial Phase\n      Gated CTA    :crit, scan1, 00:25, 10s\n      section Delayed Phase\n      Delayed phase    :done, scan2, 03:00, 10s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Coronary CTA Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      Gated CTA    :crit, scan1, after contrast, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "1.1 mL/kg",
@@ -641,10 +547,110 @@
     },
     "series": [
       {
+        "name": "Calcium Score",
+        "start": "Carina",
+        "end": "Below heart",
+        "delay": "N/A",
+        "thickness": "3 mm",
+        "notes": "Calcium score",
+        "coverage": "Carina \u2192 Below heart"
+      },
+      {
+        "name": "Gated CTA",
+        "start": "2cm above LAD",
+        "end": "2cm below heart apex",
+        "delay": "Bolus tracked",
+        "thickness": "0.5-0.625 mm",
+        "notes": "Retrospective gating",
+        "coverage": "2cm above LAD \u2192 2cm below heart apex"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Calcium Score",
+        "phase": "Non-contrast",
+        "coverage": "Carina to Below heart"
+      },
+      {
+        "series": "Gated CTA",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "2cm above LAD to 2cm below heart apex"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/cardiac/coronary-cta-post-cabg.md",
+    "title": "Coronary CTA Post-CABG",
+    "category": "Cardiac",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Coronary CTA Post-CABG Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      Gated CTA    :crit, scan1, after contrast, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "1.1 mL/kg",
+      "flow_rate": "4-5 mL/s",
+      "timing": "Bolus Tracking",
+      "roi": "Ascending aorta",
+      "trigger": "200 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Calcium Score",
+        "start": "Lung apices",
+        "end": "Diaphragm",
+        "delay": "N/A",
+        "thickness": "1.5 mm",
+        "notes": "Calcium score",
+        "coverage": "Lung apices \u2192 Diaphragm"
+      },
+      {
+        "name": "Gated CTA",
+        "start": "Lung apices",
+        "end": "2cm below heart apex",
+        "delay": "Bolus tracked",
+        "thickness": "0.5-0.625 mm",
+        "notes": "Retrospective gating - full chest FOV",
+        "coverage": "Lung apices \u2192 2cm below heart apex"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Calcium Score",
+        "phase": "Non-contrast",
+        "coverage": "Lung apices to Diaphragm"
+      },
+      {
+        "series": "Gated CTA",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Lung apices to 2cm below heart apex"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/cardiac/endocarditiscardiac-mass.md",
+    "title": "Endocarditis/Cardiac Mass",
+    "category": "Cardiac",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Endocarditis/Cardiac Mass Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.6 mL/kg)    :active, contrast, 00:00, 34s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      Gated CTA    :crit, scan1, 00:30, 5s\n      section Delayed Phase\n      Delayed phase    :done, scan2, 01:10, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "1.6 mL/kg",
+      "flow_rate": "3-4 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Non-contrast",
+        "start": "Top of heart",
+        "end": "Below heart",
+        "delay": "N/A",
+        "thickness": "3 mm",
+        "notes": "Flash Non-contrast",
+        "coverage": "Top of heart \u2192 Below heart"
+      },
+      {
         "name": "Gated CTA",
         "start": "Top of heart",
         "end": "Below heart",
-        "delay": "Bolus tracked",
+        "delay": "30 sec",
         "thickness": "0.5-0.625 mm",
         "notes": "Retrospective ECG gating",
         "coverage": "Top of heart \u2192 Below heart"
@@ -653,21 +659,26 @@
         "name": "Delayed phase",
         "start": "Top of heart",
         "end": "Below heart",
-        "delay": "180 sec",
-        "thickness": "2 mm",
-        "notes": "Optional for perfusion assessment",
+        "delay": "70 sec",
+        "thickness": "1 mm",
+        "notes": "To detect for abscess, vegetation, masses",
         "coverage": "Top of heart \u2192 Below heart"
       }
     ],
     "summary": [
       {
+        "series": "Non-contrast",
+        "phase": "Non-contrast",
+        "coverage": "Top of heart to Below heart"
+      },
+      {
         "series": "Gated CTA",
-        "phase": "Arterial (bolus tracked)",
+        "phase": "Contrast (30 sec delay)",
         "coverage": "Top of heart to Below heart"
       },
       {
         "series": "Delayed phase",
-        "phase": "Contrast (180 sec delay)",
+        "phase": "Contrast (70 sec delay)",
         "coverage": "Top of heart to Below heart"
       }
     ]
@@ -676,7 +687,7 @@
     "filepath": "ct/cardiac/gated-cta-cap.md",
     "title": "Gated CTA CAP",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA CAP Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (140 mL)    :active, contrast, 00:00, 35s\n      Saline (50mL)          :active, saline, after contrast, 12s\n      section Arterial Phase\n      Gated CTA Chest    :crit, scan1, 00:25, 12s\n      section Arterial Phase\n      Flash CTA AP    :crit, scan2, after scan1, 25s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA CAP Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (140 mL)    :active, contrast, 00:00, 35s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      Gated CTA Chest    :crit, scan1, after contrast, 6s\n      section Arterial Phase\n      Flash CTA AP    :crit, scan2, after scan1, 7s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "140 mL",
@@ -723,7 +734,7 @@
     "filepath": "ct/cardiac/gated-cta-cap-sternotomy-revision.md",
     "title": "Gated CTA CAP Sternotomy Revision",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA CAP Sternotomy Revision Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (150 mL)    :active, contrast, 00:00, 37s\n      Saline (50mL)          :active, saline, after contrast, 12s\n      section Arterial Phase\n      Gated CTA Chest    :crit, scan1, 00:25, 12s\n      section Scan Phase 2\n      Flash AP    :done, scan2, after scan1, 25s\n      section Scan Phase 3\n      Venogram Chest    :done, scan3, 01:00, 12s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA CAP Sternotomy Revision Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (150 mL)    :active, contrast, 00:00, 37s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      Gated CTA Chest    :crit, scan1, after contrast, 6s\n      section Scan Phase 2\n      Flash AP    :crit, scan2, after scan1, 7s\n      section Scan Phase 3\n      Venogram Chest    :done, scan3, 01:00, 6s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "150 mL",
@@ -784,7 +795,7 @@
     "filepath": "ct/cardiac/gated-cta-chest.md",
     "title": "Gated CTA Chest",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA Chest Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 17s\n      Saline (50mL)          :active, saline, after contrast, 11s\n      section Arterial Phase\n      Gated CTA    :crit, scan1, 00:25, 10s\n      section Delayed Phase\n      Stent delay (optional)    :done, scan2, 00:40, 10s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA Chest Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      Gated CTA    :crit, scan1, after contrast, 5s\n      section Delayed Phase\n      Stent delay (optional)    :done, scan2, 00:40, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "1.1 mL/kg",
@@ -845,7 +856,7 @@
     "filepath": "ct/cardiac/gated-cta-chest-post-op-cardiac-valve.md",
     "title": "Gated CTA Chest Post-op Cardiac Valve",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA Chest Post-op Cardiac Valve Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.3 mL/kg)    :active, contrast, 00:00, 20s\n      Saline (50mL)          :active, saline, after contrast, 11s\n      section Arterial Phase\n      Gated CTA    :crit, scan1, 00:25, 10s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA Chest Post-op Cardiac Valve Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.3 mL/kg)    :active, contrast, 00:00, 21s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      Gated CTA    :crit, scan1, after contrast, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "1.3 mL/kg",
@@ -878,7 +889,7 @@
     "filepath": "ct/cardiac/gated-cta-heart-left-atrial-mapping.md",
     "title": "Gated CTA Heart Left Atrial Mapping",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA Heart Left Atrial Mapping Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 17s\n      Saline (50mL)          :active, saline, after contrast, 11s\n      section Arterial Phase\n      Gated CTA    :crit, scan1, 00:25, 10s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA Heart Left Atrial Mapping Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      Gated CTA    :crit, scan1, after contrast, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "1.1 mL/kg",
@@ -911,7 +922,7 @@
     "filepath": "ct/cardiac/gated-cta-tavr.md",
     "title": "Gated CTA TAVR",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA TAVR Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (140 mL)    :active, contrast, 00:00, 35s\n      Saline (50mL)          :active, saline, after contrast, 12s\n      section Arterial Phase\n      Gated CTA Chest    :crit, scan1, 00:25, 12s\n      section Arterial Phase\n      Flash CTA AP    :crit, scan2, after scan1, 10s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA TAVR Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (140 mL)    :active, contrast, 00:00, 35s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      Gated CTA Chest    :crit, scan1, after contrast, 6s\n      section Arterial Phase\n      Flash CTA AP    :crit, scan2, after scan1, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "140 mL",
@@ -958,7 +969,7 @@
     "filepath": "ct/cardiac/gated-cta-tmvr.md",
     "title": "Gated CTA TMVR",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA TMVR Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (140 mL)    :active, contrast, 00:00, 35s\n      Saline (50mL)          :active, saline, after contrast, 12s\n      section Arterial Phase\n      Gated CTA Chest    :crit, scan1, 00:25, 10s\n      section Delayed Phase\n      Delayed CAP    :done, scan2, 01:30, 10s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA TMVR Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (140 mL)    :active, contrast, 00:00, 35s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      Gated CTA Chest    :crit, scan1, after contrast, 5s\n      section Delayed Phase\n      Delayed CAP    :done, scan2, 01:30, 5s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
       "volume": "140 mL",
@@ -1005,7 +1016,7 @@
     "filepath": "ct/cardiac/gated-cta-ttvr.md",
     "title": "Gated CTA TTVR",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA TTVR Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (140 mL)    :active, contrast, 00:00, 35s\n      Saline (50mL)          :active, saline, after contrast, 12s\n      section Arterial Phase\n      Gated CTA Chest    :crit, scan1, 00:25, 10s\n      section Delayed Phase\n      Delayed CAP    :done, scan2, 01:30, 10s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA TTVR Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (140 mL)    :active, contrast, 00:00, 35s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      Gated CTA Chest    :crit, scan1, after contrast, 5s\n      section Delayed Phase\n      Delayed CAP    :done, scan2, 01:30, 5s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
       "volume": "140 mL",
@@ -1052,7 +1063,7 @@
     "filepath": "ct/chest/ct-pulmonary-embolism.md",
     "title": "CT Pulmonary Embolism",
     "category": "Chest",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Pulmonary Embolism Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 22s\n      Saline (50mL)          :active, saline, after contrast, 11s\n      section Arterial Phase\n      Pulmonary Angiogram    :crit, scan1, 00:25, 10s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Pulmonary Embolism Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 22s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      Pulmonary Angiogram    :crit, scan1, after contrast, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "100 mL",
@@ -1430,7 +1441,7 @@
     "filepath": "ct/msk/ct-ankle.md",
     "title": "CT Ankle",
     "category": "Msk",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Ankle Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 75 mL)    :active, contrast, 00:00, 30s\n      Saline (50mL)          :active, saline, after contrast, 20s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Ankle Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 75 mL)    :active, contrast, 00:00, 30s\n      Saline (20mL)          :active, saline, after contrast, 8s\n  ```",
     "contrast": {
       "agent": "None typically. Contrast if infection/mass",
       "volume": "If contrast: 75 mL",
@@ -1469,7 +1480,7 @@
     "filepath": "ct/msk/ct-arthrogram-shoulder.md",
     "title": "CT Arthrogram Shoulder",
     "category": "Msk",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Arthrogram Shoulder Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Scan Phase 1\n      CT Arthrogram    :done, scan1, after saline, 10s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Arthrogram Shoulder Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Scan Phase 1\n      CT Arthrogram    :done, scan1, after saline, 5s\n  ```",
     "contrast": {
       "agent": "Omnipaque 240 or 300 diluted",
       "volume": "12-15 mL intra-articular",
@@ -1499,7 +1510,7 @@
     "filepath": "ct/msk/ct-elbow.md",
     "title": "CT Elbow",
     "category": "Msk",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Elbow Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 75 mL)    :active, contrast, 00:00, 30s\n      Saline (50mL)          :active, saline, after contrast, 20s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Elbow Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 75 mL)    :active, contrast, 00:00, 30s\n      Saline (20mL)          :active, saline, after contrast, 8s\n  ```",
     "contrast": {
       "agent": "None typically. Contrast if infection",
       "volume": "If contrast: 75 mL",
@@ -1529,7 +1540,7 @@
     "filepath": "ct/msk/ct-foot.md",
     "title": "CT Foot",
     "category": "Msk",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Foot Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 75 mL)    :active, contrast, 00:00, 30s\n      Saline (50mL)          :active, saline, after contrast, 20s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Foot Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 75 mL)    :active, contrast, 00:00, 30s\n      Saline (20mL)          :active, saline, after contrast, 8s\n  ```",
     "contrast": {
       "agent": "None typically. Contrast if infection",
       "volume": "If contrast: 75 mL",
@@ -1586,7 +1597,7 @@
     "filepath": "ct/msk/ct-hand.md",
     "title": "CT Hand",
     "category": "Msk",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Hand Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 50 mL)    :active, contrast, 00:00, 25s\n      Saline (50mL)          :active, saline, after contrast, 25s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Hand Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 50 mL)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 10s\n  ```",
     "contrast": {
       "agent": "None typically. Contrast if infection",
       "volume": "If contrast: 50 mL",
@@ -1616,7 +1627,7 @@
     "filepath": "ct/msk/ct-hip.md",
     "title": "CT Hip",
     "category": "Msk",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Hip Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 40s\n      Saline (50mL)          :active, saline, after contrast, 20s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Hip Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 40s\n      Saline (20mL)          :active, saline, after contrast, 8s\n  ```",
     "contrast": {
       "agent": "None typically. Contrast if infection/mass",
       "volume": "If contrast: 100 mL",
@@ -1646,7 +1657,7 @@
     "filepath": "ct/msk/ct-knee.md",
     "title": "CT Knee",
     "category": "Msk",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Knee Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 75 mL)    :active, contrast, 00:00, 30s\n      Saline (50mL)          :active, saline, after contrast, 20s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Knee Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 75 mL)    :active, contrast, 00:00, 30s\n      Saline (20mL)          :active, saline, after contrast, 8s\n  ```",
     "contrast": {
       "agent": "None typically. Contrast if infection/mass",
       "volume": "If contrast: 75 mL",
@@ -1685,7 +1696,7 @@
     "filepath": "ct/msk/ct-lower-extremity.md",
     "title": "CT Lower Extremity",
     "category": "Msk",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Lower Extremity Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 40s\n      Saline (50mL)          :active, saline, after contrast, 20s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Lower Extremity Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 40s\n      Saline (20mL)          :active, saline, after contrast, 8s\n  ```",
     "contrast": {
       "agent": "None typically. Contrast if infection",
       "volume": "If contrast: 100 mL",
@@ -1715,7 +1726,7 @@
     "filepath": "ct/msk/ct-pelvis-msk.md",
     "title": "CT Pelvis MSK",
     "category": "Msk",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Pelvis MSK Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 40s\n      Saline (50mL)          :active, saline, after contrast, 20s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Pelvis MSK Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 40s\n      Saline (20mL)          :active, saline, after contrast, 8s\n  ```",
     "contrast": {
       "agent": "None typically. Contrast if infection",
       "volume": "If contrast: 100 mL",
@@ -1745,7 +1756,7 @@
     "filepath": "ct/msk/ct-shoulder.md",
     "title": "CT Shoulder",
     "category": "Msk",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Shoulder Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 75 mL)    :active, contrast, 00:00, 30s\n      Saline (50mL)          :active, saline, after contrast, 20s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Shoulder Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 75 mL)    :active, contrast, 00:00, 30s\n      Saline (20mL)          :active, saline, after contrast, 8s\n  ```",
     "contrast": {
       "agent": "None typically. Contrast if infection/mass",
       "volume": "If contrast: 75 mL",
@@ -1775,7 +1786,7 @@
     "filepath": "ct/msk/ct-upper-extremity.md",
     "title": "CT Upper Extremity",
     "category": "Msk",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Upper Extremity Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 75 mL)    :active, contrast, 00:00, 30s\n      Saline (50mL)          :active, saline, after contrast, 20s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Upper Extremity Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 75 mL)    :active, contrast, 00:00, 30s\n      Saline (20mL)          :active, saline, after contrast, 8s\n  ```",
     "contrast": {
       "agent": "None typically. Contrast if infection",
       "volume": "If contrast: 75 mL",
@@ -1805,7 +1816,7 @@
     "filepath": "ct/msk/ct-wrist.md",
     "title": "CT Wrist",
     "category": "Msk",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Wrist Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 50 mL)    :active, contrast, 00:00, 25s\n      Saline (50mL)          :active, saline, after contrast, 25s\n      section Scan Phase 1\n      CT Wrist    :done, scan1, after saline, 10s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Wrist Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 50 mL)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 10s\n      section Scan Phase 1\n      CT Wrist    :done, scan1, after saline, 5s\n  ```",
     "contrast": {
       "agent": "None typically. Contrast if infection",
       "volume": "If contrast: 50 mL",
@@ -1835,7 +1846,7 @@
     "filepath": "ct/msk/msk-protocol-general.md",
     "title": "MSK Protocol General",
     "category": "Msk",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title MSK Protocol General Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL if contrast)    :active, contrast, 00:00, 40s\n      Saline (50mL)          :active, saline, after contrast, 20s\n      section Scan Phase 1\n      Contrast phase    :done, scan1, 01:00, 10s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title MSK Protocol General Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL if contrast)    :active, contrast, 00:00, 40s\n      Saline (20mL)          :active, saline, after contrast, 8s\n      section Scan Phase 1\n      Contrast phase    :done, scan1, 01:00, 5s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350 if contrast",
       "volume": "100 mL if contrast",
@@ -1893,7 +1904,7 @@
     "filepath": "ct/neuro/brain-stroke-protocol.md",
     "title": "Brain Stroke Protocol",
     "category": "Neuro",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Brain Stroke Protocol Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 22s\n      Saline (50mL)          :active, saline, after contrast, 11s\n      section Arterial Phase\n      CTA Head    :crit, scan1, 00:25, 8s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Brain Stroke Protocol Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 22s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      CTA Head    :crit, scan1, after contrast, 3s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350 for CTA/CTP",
       "volume": "100 mL",
@@ -1968,7 +1979,7 @@
     "filepath": "ct/neuro/ct-cervical-spine.md",
     "title": "CT Cervical Spine",
     "category": "Neuro",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Cervical Spine Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 33s\n      Saline (50mL)          :active, saline, after contrast, 16s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Cervical Spine Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 33s\n      Saline (20mL)          :active, saline, after contrast, 6s\n  ```",
     "contrast": {
       "agent": "None typically. Contrast if infection/tumor",
       "volume": "If contrast: 100 mL",
@@ -1998,7 +2009,7 @@
     "filepath": "ct/neuro/ct-complete-spine.md",
     "title": "CT Complete Spine",
     "category": "Neuro",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Complete Spine Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 125 mL)    :active, contrast, 00:00, 41s\n      Saline (50mL)          :active, saline, after contrast, 16s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Complete Spine Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 125 mL)    :active, contrast, 00:00, 41s\n      Saline (20mL)          :active, saline, after contrast, 6s\n  ```",
     "contrast": {
       "agent": "None typically. Contrast if infection/mets",
       "volume": "If contrast: 125 mL",
@@ -2055,7 +2066,7 @@
     "filepath": "ct/neuro/ct-head-3d-stereotactic.md",
     "title": "CT Head 3D Stereotactic",
     "category": "Neuro",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Head 3D Stereotactic Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 33s\n      Saline (50mL)          :active, saline, after contrast, 16s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Head 3D Stereotactic Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 33s\n      Saline (20mL)          :active, saline, after contrast, 6s\n  ```",
     "contrast": {
       "agent": "None typically. Contrast optional",
       "volume": "If contrast: 100 mL",
@@ -2085,7 +2096,7 @@
     "filepath": "ct/neuro/ct-lumbar-spine.md",
     "title": "CT Lumbar Spine",
     "category": "Neuro",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Lumbar Spine Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 33s\n      Saline (50mL)          :active, saline, after contrast, 16s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Lumbar Spine Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 33s\n      Saline (20mL)          :active, saline, after contrast, 6s\n  ```",
     "contrast": {
       "agent": "None typically. Contrast if infection/tumor/post-op",
       "volume": "If contrast: 100 mL",
@@ -2145,7 +2156,7 @@
     "filepath": "ct/neuro/ct-orbits.md",
     "title": "CT Orbits",
     "category": "Neuro",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Orbits Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (75-100 mL if contrast)    :active, contrast, 00:00, 25s\n      Saline (50mL)          :active, saline, after contrast, 16s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Orbits Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (75-100 mL if contrast)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 6s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350 if contrast",
       "volume": "75-100 mL if contrast",
@@ -2175,7 +2186,7 @@
     "filepath": "ct/neuro/ct-parathyroid-4d.md",
     "title": "CT Parathyroid 4D",
     "category": "Neuro",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Parathyroid 4D Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (75-100 mL)    :active, contrast, 00:00, 18s\n      Saline (50mL)          :active, saline, after contrast, 12s\n      section Arterial Phase\n      Arterial Phase    :crit, scan1, 00:25, 15s\n      section Portal Venous Phase\n      Venous Phase    :done, scan2, 00:55, 15s\n      section Delayed Phase\n      Delayed Phase    :done, scan3, 01:30, 15s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Parathyroid 4D Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (75-100 mL)    :active, contrast, 00:00, 18s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      Arterial Phase    :crit, scan1, 00:25, 5s\n      section Portal Venous Phase\n      Venous Phase    :done, scan2, 00:55, 5s\n      section Delayed Phase\n      Delayed Phase    :done, scan3, 01:30, 5s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
       "volume": "75-100 mL",
@@ -2318,7 +2329,7 @@
     "filepath": "ct/neuro/ct-soft-tissue-neck.md",
     "title": "CT Soft Tissue Neck",
     "category": "Neuro",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Soft Tissue Neck Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 33s\n      Saline (50mL)          :active, saline, after contrast, 16s\n      section Scan Phase 1\n      Contrast Neck    :done, scan1, 01:00, 15s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Soft Tissue Neck Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 33s\n      Saline (20mL)          :active, saline, after contrast, 6s\n      section Scan Phase 1\n      Contrast Neck    :done, scan1, 01:00, 5s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
       "volume": "100 mL",
@@ -2389,7 +2400,7 @@
     "filepath": "ct/neuro/ct-thoracic-spine.md",
     "title": "CT Thoracic Spine",
     "category": "Neuro",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Thoracic Spine Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 33s\n      Saline (50mL)          :active, saline, after contrast, 16s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Thoracic Spine Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 33s\n      Saline (20mL)          :active, saline, after contrast, 6s\n  ```",
     "contrast": {
       "agent": "None typically. Contrast if infection/tumor",
       "volume": "If contrast: 100 mL",
@@ -2419,7 +2430,7 @@
     "filepath": "ct/neuro/cta-head.md",
     "title": "CTA Head",
     "category": "Neuro",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Head Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (75-100 mL)    :active, contrast, 00:00, 16s\n      Saline (50mL)          :active, saline, after contrast, 11s\n      section Arterial Phase\n      CTA Head    :crit, scan1, 00:25, 8s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Head Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (75-100 mL)    :active, contrast, 00:00, 16s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      CTA Head    :crit, scan1, after contrast, 3s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
       "volume": "75-100 mL",
@@ -2466,7 +2477,7 @@
     "filepath": "ct/neuro/cta-neck.md",
     "title": "CTA Neck",
     "category": "Neuro",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Neck Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (90-100 mL)    :active, contrast, 00:00, 20s\n      Saline (50mL)          :active, saline, after contrast, 11s\n      section Arterial Phase\n      CTA Neck    :crit, scan1, 00:25, 16s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Neck Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (90-100 mL)    :active, contrast, 00:00, 20s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      CTA Neck    :crit, scan1, after contrast, 5s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
       "volume": "90-100 mL",
@@ -2499,7 +2510,7 @@
     "filepath": "ct/neuro/ctv-head.md",
     "title": "CTV Head",
     "category": "Neuro",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTV Head Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (75-100 mL)    :active, contrast, 00:00, 21s\n      Saline (50mL)          :active, saline, after contrast, 14s\n      section Scan Phase 1\n      CTV Head    :done, scan1, 01:00, 8s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTV Head Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (75-100 mL)    :active, contrast, 00:00, 21s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Scan Phase 1\n      CTV Head    :done, scan1, 01:00, 3s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
       "volume": "75-100 mL",
@@ -2579,7 +2590,7 @@
     "filepath": "ct/trauma/pregnant-trauma-ct-ap.md",
     "title": "Pregnant Trauma CT AP",
     "category": "Trauma",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Pregnant Trauma CT AP Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 41s\n      Saline (50mL)          :active, saline, after contrast, 16s\n      section Portal Venous Phase\n      Portal Venous AP    :done, scan1, 01:10, 25s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Pregnant Trauma CT AP Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 41s\n      Saline (20mL)          :active, saline, after contrast, 6s\n      section Portal Venous Phase\n      Portal Venous AP    :done, scan1, 01:10, 7s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
       "volume": "125 mL",
@@ -2609,7 +2620,7 @@
     "filepath": "ct/trauma/trauma-cta-chest-with-pv-ct-ap.md",
     "title": "Trauma CTA Chest with PV CT AP",
     "category": "Trauma",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Trauma CTA Chest with PV CT AP Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 31s\n      Saline (50mL)          :active, saline, after contrast, 12s\n      section Arterial Phase\n      CTA Chest    :crit, scan1, 00:25, 8s\n      section Portal Venous Phase\n      Portal Venous AP    :done, scan2, 01:10, 25s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Trauma CTA Chest with PV CT AP Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 31s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Chest    :crit, scan1, after contrast, 6s\n      section Portal Venous Phase\n      Portal Venous AP    :done, scan2, 01:10, 7s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
       "volume": "125 mL",
@@ -2683,7 +2694,7 @@
     "filepath": "ct/trauma/trauma-code-aaa.md",
     "title": "Trauma Code AAA",
     "category": "Trauma",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Trauma Code AAA Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 27s\n      Saline (50mL)          :active, saline, after contrast, 11s\n      section Arterial Phase\n      Arterial CAP    :crit, scan1, 00:25, 25s\n      section Portal Venous Phase\n      Portal Venous CAP    :done, scan2, 01:10, 25s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Trauma Code AAA Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 27s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      Arterial CAP    :crit, scan1, 00:25, 7s\n      section Portal Venous Phase\n      Portal Venous CAP    :done, scan2, 01:10, 7s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
       "volume": "125 mL",
@@ -2858,7 +2869,7 @@
     "filepath": "ct/trauma/trauma-lower-extremity-runoff-cta.md",
     "title": "Trauma Lower Extremity Runoff CTA",
     "category": "Trauma",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Trauma Lower Extremity Runoff CTA Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 27s\n      Saline (50mL)          :active, saline, after contrast, 11s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, 00:25, 10s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Trauma Lower Extremity Runoff CTA Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 27s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, after contrast, 5s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
       "volume": "125 mL",
@@ -2891,7 +2902,7 @@
     "filepath": "ct/vascular/cta-abdomen-pelvis.md",
     "title": "CTA Abdomen Pelvis",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Abdomen Pelvis Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 31s\n      Saline (50mL)          :active, saline, after contrast, 12s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, 00:25, 10s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Abdomen Pelvis Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 31s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, after contrast, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "125 mL",
@@ -2933,7 +2944,7 @@
     "filepath": "ct/vascular/cta-chest.md",
     "title": "CTA Chest",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Chest Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 25s\n      Saline (50mL)          :active, saline, after contrast, 12s\n      section Arterial Phase\n      CTA Arterial Chest    :crit, scan1, 00:25, 10s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Chest Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Arterial Chest    :crit, scan1, after contrast, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "100 mL",
@@ -2975,7 +2986,7 @@
     "filepath": "ct/vascular/cta-chest-abdomen-pelvis.md",
     "title": "CTA Chest Abdomen Pelvis",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Chest Abdomen Pelvis Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 31s\n      Saline (50mL)          :active, saline, after contrast, 12s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, 00:25, 35s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Chest Abdomen Pelvis Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 31s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, after contrast, 10s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "125 mL",
@@ -3017,7 +3028,7 @@
     "filepath": "ct/vascular/cta-diep-flap-pre-operative.md",
     "title": "CTA DIEP Flap Pre-operative",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA DIEP Flap Pre-operative Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 25s\n      Saline (50mL)          :active, saline, after contrast, 12s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, 00:25, 16s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA DIEP Flap Pre-operative Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, after contrast, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "100 mL",
@@ -3059,7 +3070,7 @@
     "filepath": "ct/vascular/cta-head-and-neck-arch-to-vertex.md",
     "title": "CTA Head and Neck (Arch to Vertex)",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Head and Neck (Arch to Vertex) Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (80-100 mL)    :active, contrast, 00:00, 17s\n      Saline (50mL)          :active, saline, after contrast, 11s\n      section Arterial Phase\n      CTA Neck    :crit, scan1, 00:25, 16s\n      section Arterial Phase\n      CTA Head    :crit, scan2, after scan1, 8s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Head and Neck (Arch to Vertex) Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (80-100 mL)    :active, contrast, 00:00, 17s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      CTA Neck    :crit, scan1, after contrast, 5s\n      section Arterial Phase\n      CTA Head    :crit, scan2, after scan1, 3s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "80-100 mL",
@@ -3115,7 +3126,7 @@
     "filepath": "ct/vascular/cta-lower-extremity-free-flap.md",
     "title": "CTA Lower Extremity Free Flap",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Lower Extremity Free Flap Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (120 mL)    :active, contrast, 00:00, 30s\n      Saline (50mL)          :active, saline, after contrast, 12s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, 00:25, 16s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Lower Extremity Free Flap Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (120 mL)    :active, contrast, 00:00, 30s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, after contrast, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "120 mL",
@@ -3157,7 +3168,7 @@
     "filepath": "ct/vascular/cta-lower-extremity-runoff-for-pad.md",
     "title": "CTA Lower Extremity Runoff for PAD",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Lower Extremity Runoff for PAD Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (150 mL)    :active, contrast, 00:00, 37s\n      Saline (50mL)          :active, saline, after contrast, 12s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, 00:25, 10s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Lower Extremity Runoff for PAD Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (150 mL)    :active, contrast, 00:00, 37s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, after contrast, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "150 mL",
@@ -3199,7 +3210,7 @@
     "filepath": "ct/vascular/cta-mesenteric-ischemia.md",
     "title": "CTA Mesenteric Ischemia",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Mesenteric Ischemia Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 25s\n      Saline (50mL)          :active, saline, after contrast, 10s\n      section Arterial Phase\n      Arterial Phase    :crit, scan1, 00:25, 12s\n      section Portal Venous Phase\n      Portal Venous    :done, scan2, 01:10, 25s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Mesenteric Ischemia Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      Arterial Phase    :crit, scan1, 00:25, 7s\n      section Portal Venous Phase\n      Portal Venous    :done, scan2, 01:10, 7s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "125 mL",
@@ -3255,7 +3266,7 @@
     "filepath": "ct/vascular/cta-pelvis-cyclist-iliac-artery-maneuver.md",
     "title": "CTA Pelvis Cyclist Iliac Artery Maneuver",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Pelvis Cyclist Iliac Artery Maneuver Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 25s\n      Saline (50mL)          :active, saline, after contrast, 12s\n      section Arterial Phase\n      CTA Resting Position    :crit, scan1, 00:25, 16s\n      section Arterial Phase\n      CTA Hip Flexion    :crit, scan2, after scan1, 16s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Pelvis Cyclist Iliac Artery Maneuver Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Resting Position    :crit, scan1, after contrast, 5s\n      section Arterial Phase\n      CTA Hip Flexion    :crit, scan2, after scan1, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "100 mL",
@@ -3311,7 +3322,7 @@
     "filepath": "ct/vascular/cta-pelvis-prostate-artery-embolization.md",
     "title": "CTA Pelvis Prostate Artery Embolization",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Pelvis Prostate Artery Embolization Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 28s\n      Saline (50mL)          :active, saline, after contrast, 14s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, 00:25, 16s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Pelvis Prostate Artery Embolization Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 28s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, after contrast, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "100 mL",
@@ -3353,7 +3364,7 @@
     "filepath": "ct/vascular/cta-popliteal-entrapment.md",
     "title": "CTA Popliteal Entrapment",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Popliteal Entrapment Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 25s\n      Saline (50mL)          :active, saline, after contrast, 12s\n      section Arterial Phase\n      CTA Neutral Position    :crit, scan1, 00:25, 15s\n      section Arterial Phase\n      CTA Plantarflexion    :crit, scan2, after scan1, 15s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Popliteal Entrapment Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Neutral Position    :crit, scan1, after contrast, 3s\n      section Arterial Phase\n      CTA Plantarflexion    :crit, scan2, after scan1, 3s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "100 mL",
@@ -3409,7 +3420,7 @@
     "filepath": "ct/vascular/cta-scadfmd-protocol.md",
     "title": "CTA SCAD/FMD Protocol",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA SCAD/FMD Protocol Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (150 mL total)    :active, contrast, 00:00, 37s\n      Saline (50mL)          :active, saline, after contrast, 12s\n      section Arterial Phase\n      CTA Neck    :crit, scan1, 00:25, 25s\n      section Arterial Phase\n      CTA CAP    :crit, scan2, 00:35, 25s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA SCAD/FMD Protocol Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (150 mL total)    :active, contrast, 00:00, 37s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Neck    :crit, scan1, after contrast, 8s\n      section Arterial Phase\n      CTA CAP    :crit, scan2, 00:35, 7s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "150 mL total",
@@ -3484,7 +3495,7 @@
     "filepath": "ct/vascular/cta-upper-extremity.md",
     "title": "CTA Upper Extremity",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Upper Extremity Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 25s\n      Saline (50mL)          :active, saline, after contrast, 12s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, 00:25, 16s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Upper Extremity Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, after contrast, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "100 mL",
@@ -3526,7 +3537,7 @@
     "filepath": "ct/vascular/cta-for-gi-bleed.md",
     "title": "CTA for GI Bleed",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA for GI Bleed Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 25s\n      Saline (50mL)          :active, saline, after contrast, 10s\n      section Arterial Phase\n      Arterial Phase    :crit, scan1, 00:25, 25s\n      section Portal Venous Phase\n      Portal Venous Phase    :done, scan2, 01:10, 25s\n      section Delayed Phase\n      Delayed Phase    :done, scan3, 01:30, 25s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA for GI Bleed Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      Arterial Phase    :crit, scan1, 00:25, 7s\n      section Portal Venous Phase\n      Portal Venous Phase    :done, scan2, 01:10, 7s\n      section Delayed Phase\n      Delayed Phase    :done, scan3, 01:30, 7s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "125 mL",
@@ -3596,7 +3607,7 @@
     "filepath": "ct/vascular/ctv-abdomen-pelvis.md",
     "title": "CTV Abdomen Pelvis",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTV Abdomen Pelvis Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 41s\n      Saline (50mL)          :active, saline, after contrast, 16s\n      section Portal Venous Phase\n      CTV Venous Phase    :done, scan1, 03:00, 10s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTV Abdomen Pelvis Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 41s\n      Saline (20mL)          :active, saline, after contrast, 6s\n      section Portal Venous Phase\n      CTV Venous Phase    :done, scan1, 03:00, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "125 mL",
@@ -3635,7 +3646,7 @@
     "filepath": "ct/vascular/ctv-chest-abdomen-pelvis.md",
     "title": "CTV Chest Abdomen Pelvis",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTV Chest Abdomen Pelvis Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 41s\n      Saline (50mL)          :active, saline, after contrast, 16s\n      section Portal Venous Phase\n      CTV Venous Phase    :done, scan1, 03:00, 10s\n  ```",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTV Chest Abdomen Pelvis Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 41s\n      Saline (20mL)          :active, saline, after contrast, 6s\n      section Portal Venous Phase\n      CTV Venous Phase    :done, scan1, 03:00, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "125 mL",

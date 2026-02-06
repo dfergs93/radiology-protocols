@@ -132,7 +132,21 @@ function displayGanttComparison() {
     const col = document.createElement('div');
     
     const title = document.createElement('h4');
-    title.textContent = protocol.title;
+    const link = document.createElement('a');
+    
+    let url = protocol.filepath.replace('.md', '/');
+    link.href = `/radiology-protocols/${url}`;  // Leading slash makes it absolute
+    
+    link.textContent = protocol.title;
+    link.style.textDecoration = 'none';
+    link.style.color = 'inherit';
+    link.addEventListener('mouseenter', () => {
+      link.style.textDecoration = 'underline';
+    });
+    link.addEventListener('mouseleave', () => {
+      link.style.textDecoration = 'none';
+    });
+    title.appendChild(link);
     col.appendChild(title);
     
     if (protocol.gantt) {

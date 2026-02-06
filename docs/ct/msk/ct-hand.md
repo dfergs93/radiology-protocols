@@ -28,11 +28,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A or eGFR > 30
-        - **Allergy:** N/A or check allergy
-    
+
     - **Position:** Prone with hand extended (superman position) or supine with arm at side
     - **NPO Status:** N/A
     
@@ -67,7 +63,12 @@
 
         - No IV unless infection suspected
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A or eGFR > 30
+            - **Allergy:** N/A or check allergy
+
     === "Radiologist Notes"
+
         - Carpal fractures (scaphoid navicular lunate). Metacarpals. Phalanges. CMC joints. Foreign bodies
 
     === "Tips & Tricks"
@@ -90,7 +91,7 @@
       
       section Contrast Injection
       Contrast (If contrast: 50 mL)    :active, contrast, 00:00, 25s
-      Saline (50mL)          :active, saline, after contrast, 25s
+      Saline (20mL)          :active, saline, after contrast, 10s
   ```
 
 

@@ -26,16 +26,11 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check iodine allergy history and prior reactions
-    
+
     - **Position:** Supine feet-first with arms raised
     - **NPO Status:** NPO 2 hours recommended
-    - **Pre-Medication:** 
-      None required
-
+    - **Pre-Medication:**
+        - None required
 
 -   __3. IV Contrast & Injection__    
 
@@ -70,7 +65,12 @@
 
         - 20G or larger IV in antecubital preferred. Verify good flow before injection
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check iodine allergy history and prior reactions
+
     === "Radiologist Notes"
+
         - Assess RV/LV ratio. Look for signs of right heart strain. Check for DVT in leg veins if imaged
 
     === "Tips & Tricks"
@@ -93,9 +93,9 @@
       
       section Contrast Injection
       Contrast (100 mL)    :active, contrast, 00:00, 22s
-      Saline (50mL)          :active, saline, after contrast, 11s
+      Saline (20mL)          :active, saline, after contrast, 4s
       section Arterial Phase
-      Pulmonary Angiogram    :crit, scan1, 00:25, 10s
+      Pulmonary Angiogram    :crit, scan1, after contrast, 5s
   ```
 
 

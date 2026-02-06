@@ -28,16 +28,11 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history and renal function
-    
+
     - **Position:** Supine head-first with arms at sides
     - **NPO Status:** NPO 2 hours
-    - **Pre-Medication:** 
-      None typically. Consider anxiolytic if severe claustrophobia
-
+    - **Pre-Medication:**
+        - None typically. Consider anxiolytic if severe claustrophobia
 
 -   __3. IV Contrast & Injection__    
 
@@ -72,7 +67,12 @@
 
         - Good antecubital IV access required - 20G minimum. Verify injection site for extravasation risk
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history and renal function
+
     === "Radiologist Notes"
+
         - Evaluate complete circle of Willis. Assess carotid bifurcations. Look for dissection. Check aneurysms
 
     === "Tips & Tricks"
@@ -95,11 +95,11 @@
       
       section Contrast Injection
       Contrast (80-100 mL)    :active, contrast, 00:00, 17s
-      Saline (50mL)          :active, saline, after contrast, 11s
+      Saline (20mL)          :active, saline, after contrast, 4s
       section Arterial Phase
-      CTA Neck    :crit, scan1, 00:25, 16s
+      CTA Neck    :crit, scan1, after contrast, 5s
       section Arterial Phase
-      CTA Head    :crit, scan2, after scan1, 8s
+      CTA Head    :crit, scan2, after scan1, 3s
   ```
 
 

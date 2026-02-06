@@ -27,16 +27,11 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 2-4 hours
-    - **Pre-Medication:** 
-      Oral contrast optional
-
+    - **Pre-Medication:**
+        - Oral contrast optional
 
 -   __3. IV Contrast & Injection__    
 
@@ -68,7 +63,12 @@
 
         - 18-20G IV
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history
+
     === "Radiologist Notes"
+
         - Assess IVC iliac femoral veins for thrombosis. Look for compression (May-Thurner). Measure vessel caliber for filter sizing
 
     === "Tips & Tricks"
@@ -91,9 +91,9 @@
       
       section Contrast Injection
       Contrast (125 mL)    :active, contrast, 00:00, 41s
-      Saline (50mL)          :active, saline, after contrast, 16s
+      Saline (20mL)          :active, saline, after contrast, 6s
       section Portal Venous Phase
-      CTV Venous Phase    :done, scan1, 03:00, 10s
+      CTV Venous Phase    :done, scan1, 03:00, 5s
   ```
 
 

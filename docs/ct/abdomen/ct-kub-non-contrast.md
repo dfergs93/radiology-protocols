@@ -27,11 +27,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A
-        - **Allergy:** N/A
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** None required
     
@@ -55,7 +51,12 @@
 
         - No IV needed. No oral contrast. Explain low radiation technique
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A
+            - **Allergy:** N/A
+
     === "Radiologist Notes"
+
         - Look for stones - measure size and location. Check for hydronephrosis. Assess for alternative diagnoses
 
     === "Tips & Tricks"

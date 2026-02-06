@@ -27,16 +27,11 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 4 hours solids. Clear liquids OK up to 2 hours
-    - **Pre-Medication:** 
-      Oral contrast: 250-500 mL neutral (Volumen or water). Give 60-90 min before scan
-
+    - **Pre-Medication:**
+        - Oral contrast: 250-500 mL neutral (Volumen or water). Give 60-90 min before scan
 
 -   __3. IV Contrast & Injection__    
 
@@ -68,7 +63,12 @@
 
         - 18-20G IV. Adequate oral contrast intake. Verify renal function
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history
+
     === "Radiologist Notes"
+
         - Portal venous phase optimal for solid organ and bowel assessment. Systematic review all organs
 
     === "Tips & Tricks"
@@ -90,10 +90,10 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 30s
-      Saline (50mL)          :active, saline, after contrast, 14s
+      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 32s
+      Saline (20mL)          :active, saline, after contrast, 5s
       section Portal Venous Phase
-      Portal Venous Phase    :done, scan1, 01:10, 25s
+      Portal Venous Phase    :done, scan1, 01:10, 7s
   ```
 
 

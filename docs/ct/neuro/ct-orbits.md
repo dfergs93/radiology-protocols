@@ -28,11 +28,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A or verify eGFR > 30
-        - **Allergy:** N/A or check allergy
-    
+
     - **Position:** Supine head-first
     - **NPO Status:** NPO 2 hours if contrast
     
@@ -67,7 +63,12 @@
 
         - Contrast for mass or inflammation. NC for trauma and metallic foreign body
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A or verify eGFR > 30
+            - **Allergy:** N/A or check allergy
+
     === "Radiologist Notes"
+
         - Extraocular muscles. Optic nerve. Globe integrity. Orbital fat. Preseptal vs postseptal. Masses. Foreign body
 
     === "Tips & Tricks"
@@ -90,7 +91,7 @@
       
       section Contrast Injection
       Contrast (75-100 mL if contrast)    :active, contrast, 00:00, 25s
-      Saline (50mL)          :active, saline, after contrast, 16s
+      Saline (20mL)          :active, saline, after contrast, 6s
   ```
 
 

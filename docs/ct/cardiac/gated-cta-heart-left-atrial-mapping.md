@@ -26,16 +26,11 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history
-    
+
     - **Position:** Supine feet-first
     - **NPO Status:** NPO 2-4 hours
-    - **Pre-Medication:** 
-      HR < 65 preferred. Metoprolol if needed. Nitro not typically required
-
+    - **Pre-Medication:**
+        - HR < 65 preferred. Metoprolol if needed. Nitro not typically required
 
 -   __3. IV Contrast & Injection__    
 
@@ -70,7 +65,12 @@
 
         - 20G IV
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history
+
     === "Radiologist Notes"
+
         - Map pulmonary vein anatomy (number ostia diameters). Left atrial appendage morphology. Esophageal position. LA size
 
     === "Tips & Tricks"
@@ -92,10 +92,10 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 17s
-      Saline (50mL)          :active, saline, after contrast, 11s
+      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s
+      Saline (20mL)          :active, saline, after contrast, 4s
       section Arterial Phase
-      Gated CTA    :crit, scan1, 00:25, 10s
+      Gated CTA    :crit, scan1, after contrast, 5s
   ```
 
 

@@ -28,11 +28,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history
-    
+
     - **Position:** Supine head-first
     - **NPO Status:** NPO 2 hours
     
@@ -67,7 +63,12 @@
 
         - 18-20G IV
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history
+
     === "Radiologist Notes"
+
         - NC: hemorrhage. CTV: filling defects in sinuses. Venous thrombosis. Cortical vein thrombosis
 
     === "Tips & Tricks"
@@ -90,9 +91,9 @@
       
       section Contrast Injection
       Contrast (75-100 mL)    :active, contrast, 00:00, 21s
-      Saline (50mL)          :active, saline, after contrast, 14s
+      Saline (20mL)          :active, saline, after contrast, 5s
       section Scan Phase 1
-      CTV Head    :done, scan1, 01:00, 8s
+      CTV Head    :done, scan1, 01:00, 3s
   ```
 
 

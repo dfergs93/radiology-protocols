@@ -27,11 +27,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A
-        - **Allergy:** N/A
-    
+
     - **Position:** Supine head-first
     - **NPO Status:** N/A
     
@@ -55,7 +51,12 @@
 
         - No IV required. Explain importance of staying still
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A
+            - **Allergy:** N/A
+
     === "Radiologist Notes"
+
         - Look for hyperdense MCA sign. Assess grey-white differentiation. Check for hemorrhage and mass effect
 
     === "Tips & Tricks"

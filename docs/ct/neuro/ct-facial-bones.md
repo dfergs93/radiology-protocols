@@ -28,11 +28,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A
-        - **Allergy:** N/A
-    
+
     - **Position:** Supine head-first
     - **NPO Status:** N/A
     
@@ -56,7 +52,12 @@
 
         - Remove all facial metal. Dentures out
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A
+            - **Allergy:** N/A
+
     === "Radiologist Notes"
+
         - Le Fort classification. Orbital floor. Zygoma. Nasal bones. Mandible. NOE complex. 3D for surgical planning
 
     === "Tips & Tricks"

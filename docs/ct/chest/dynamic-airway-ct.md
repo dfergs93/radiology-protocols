@@ -29,11 +29,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A
-        - **Allergy:** N/A
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** N/A
     
@@ -57,7 +53,12 @@
 
         - No IV. Coach dynamic breathing. May need forced expiration
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A
+            - **Allergy:** N/A
+
     === "Radiologist Notes"
+
         - Measure tracheal collapse percentage. >50% collapse suggests tracheomalacia. Assess bronchi
 
     === "Tips & Tricks"

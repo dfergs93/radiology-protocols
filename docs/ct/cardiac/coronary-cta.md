@@ -1,7 +1,7 @@
 # Coronary CTA
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Johnson
+**Last Updated:** 2026-02-02  
+**Author:** 
 
 ---
 
@@ -15,8 +15,8 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Non-contrast | Non-contrast | Top of heart to Below heart |
-        | Gated CTA | Arterial (bolus tracked) | Top of heart to Below heart |
+        | Calcium Score | Non-contrast | Carina to Below heart |
+        | Gated CTA | Arterial (bolus tracked) | 2cm above LAD to 2cm below heart apex |
 
     === "Clinical Indications"
 
@@ -29,16 +29,13 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check metoprolol contraindications. BP > 100 required
-    
+
     - **Position:** Supine feet-first
     - **NPO Status:** NPO 2-4 hours
-    - **Pre-Medication:** 
-      HR < 60 target. Metoprolol 5mg IV increments up to 15mg. Nitro 0.4mg SL before scan
-
+    - **Pre-Medication:**
+        - HR < 60 target.
+        - **Metoprolol** 5mg IV increments up to 15mg. Metoprolol contraindications include sBP < 100, 2nd/3rd degree heart block, and inhaler dependent asthma.
+        - **Nitroglycerin** 0.4mg SL 5 minutes before scan. Nitroglycerin contraindications include sBP < 100, PDE5 inhibitors within 48 hrs, severe aortic stenosis.
 
 -   __3. IV Contrast & Injection__    
 
@@ -49,7 +46,7 @@
         | Parameter | Value |
         |-----------|-------|
         | Agent | Isovue 370 |
-        | Volume | 1.1-1.3 mL/kg |
+        | Volume | 1.1 mL/kg |
         | Flow Rate | 4-5 mL/s |
         | Timing Method | Bolus Tracking |
         | ROI Placement | Ascending aorta |
@@ -57,7 +54,7 @@
 
     ===   "Lab Requirements"
         
-        Full dose if eGFR > 30
+        Full dose if eGFR > 30, If low eGFR can use low dose calculation **Maximum Contrast Dose** = [(Patient Weight in kg/75 kg) * eGFR] *2
 
 
 
@@ -67,13 +64,20 @@
 
     === "Technologist Notes"
 
-        - Retrospective ECG gating. 3mm slices. Cover entire heart. 75% R-R interval typical. Ensure ECG leads well connected
+        - Non-valsalva breathing technique, cardiac breathing instruction. Put in study notes if patient unable to follow breathing instructions.
+        - If high HR variability, can trigger by millisecond (200ms - 450 ms pulse range). Revolution CT is better for Afib.
+        - Target End diastole if HR < 65bpm. Target End systole if HR > 86bpm. Target End diastole to End systole if HR 66 - 75 bpm
 
     === "Nursing Notes"
 
-        - 20G IV minimum. HR control critical - target < 60. Nitro administration
+        - 20G IV minimum. Check for metoprolol or nitroglycerin contraindications. Nitro is priority over metoprolol if BP is borderline.
+
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history
 
     === "Radiologist Notes"
+
         - Calculate Agatston score. Give CAD-RADS score. Check function look for potential focal wall motion abnormalities
 
     === "Tips & Tricks"
@@ -95,10 +99,10 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (1.1-1.3 mL/kg)    :active, contrast, 00:00, 17s
-      Saline (50mL)          :active, saline, after contrast, 11s
+      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s
+      Saline (20mL)          :active, saline, after contrast, 4s
       section Arterial Phase
-      Gated CTA    :crit, scan1, 00:25, 10s
+      Gated CTA    :crit, scan1, after contrast, 5s
   ```
 
 
@@ -107,8 +111,8 @@
     | Series Name | Start Location | End Location | Delay | Slice Thickness | Notes |
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout | Thoracic inlet | Below heart | N/A | N/A | AP lateral |
-    | Non-contrast | Top of heart | Below heart | N/A | 3 mm | Calcium score |
-    | Gated CTA | Top of heart | Below heart | Bolus tracked | 0.5-0.625 mm | Retrospective gating |
+    | Calcium Score | Carina | Below heart | N/A | 3 mm | Calcium score |
+    | Gated CTA | 2cm above LAD | 2cm below heart apex | Bolus tracked | 0.5-0.625 mm | Retrospective gating |
 
 === "Technical Parameters"
 
@@ -123,15 +127,15 @@
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |
     |:------|:------------|:----|:--------------------|:-------|:------------|:------|
-    | Axial | Gated CTA | Heart | 0.75 mm/0.5 mm | Cardiac | 3 | Thin slice for grafts and native vessels |
-    | Curved MPR | Gated CTA | Heart | 0.75 mm | Cardiac | 3 | Vessels |
-    | Axial | Gated CTA | Heart | 0.75 mm/0.5 mm | Cardiac | 3 | Native coronary assessment |
-    | 3D VR | Gated CTA | Heart/grafts | 0.5 mm source | Cardiac | 3 | 3D overview grafts and native vessels |
+    | Axial | Calcium score | Heart | 3 mm/3 mm | Standard | 3 | For Agatston score calculation |
+    | Axial | Calcium score | Chest | 1.5 mm/1.5 mm | Lung | 3 | Lung FOV for Extracardiac findings |
+    | Axial | Gated CTA | Heart | 0.625 mm/0.625 mm | Cardiac | 3 | Native coronary assessment |
+    | 3D VR | Gated CTA | Heart | 0.5 mm source | Cardiac | 3 | MPRs by 3D lab |
 
 
 ### Additional Reconstructions
 
-Curved MPR of all grafts. Label LIMA RIMA SVG. 3D VR color-coded
+Curved MPR of all coronaries.
 
 Category: Cardiac
 

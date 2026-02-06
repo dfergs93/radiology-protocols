@@ -26,11 +26,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history. May need bilateral IVs
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 2-4 hours
     
@@ -65,7 +61,12 @@
 
         - 18-20G IV - may need bilateral arm IVs for SVC
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history. May need bilateral IVs
+
     === "Radiologist Notes"
+
         - Assess SVC IVC and major tributaries. Look for thrombosis compression or tumor invasion
 
     === "Tips & Tricks"
@@ -88,9 +89,9 @@
       
       section Contrast Injection
       Contrast (125 mL)    :active, contrast, 00:00, 41s
-      Saline (50mL)          :active, saline, after contrast, 16s
+      Saline (20mL)          :active, saline, after contrast, 6s
       section Portal Venous Phase
-      CTV Venous Phase    :done, scan1, 03:00, 10s
+      CTV Venous Phase    :done, scan1, 03:00, 5s
   ```
 
 

@@ -28,11 +28,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A or verify eGFR
-        - **Allergy:** N/A or check allergy
-    
+
     - **Position:** Supine in surgical position. Head in frame if required
     - **NPO Status:** N/A
     
@@ -67,7 +63,12 @@
 
         - Position exactly as for surgery. Frame placement if required
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A or verify eGFR
+            - **Allergy:** N/A or check allergy
+
     === "Radiologist Notes"
+
         - Isotropic high-resolution for surgical targeting. Anatomic landmarks. Tumor if contrast
 
     === "Tips & Tricks"
@@ -90,7 +91,7 @@
       
       section Contrast Injection
       Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 33s
-      Saline (50mL)          :active, saline, after contrast, 16s
+      Saline (20mL)          :active, saline, after contrast, 6s
   ```
 
 

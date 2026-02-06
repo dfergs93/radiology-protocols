@@ -27,11 +27,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A
-        - **Allergy:** N/A
-    
+
     - **Position:** Supine head-first. Cervical collar in place
     - **NPO Status:** None - trauma
     
@@ -55,7 +51,12 @@
 
         - Maintain cervical precautions. C-collar remains on. Document GCS
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A
+            - **Allergy:** N/A
+
     === "Radiologist Notes"
+
         - Head: acute hemorrhage skull fractures. C-spine: fractures alignment ligamentous injury
 
     === "Tips & Tricks"

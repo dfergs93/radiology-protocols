@@ -27,11 +27,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A
-        - **Allergy:** N/A
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** N/A
     
@@ -55,7 +51,12 @@
 
         - No IV. Careful breath hold coaching. Inspiration and expiration
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A
+            - **Allergy:** N/A
+
     === "Radiologist Notes"
+
         - ILD pattern recognition. Honeycombing. Ground glass. Reticular. Mosaic attenuation on expiration
 
     === "Tips & Tricks"

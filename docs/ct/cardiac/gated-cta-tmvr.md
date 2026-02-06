@@ -27,16 +27,11 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 4 hours
-    - **Pre-Medication:** 
-      HR < 65. Metoprolol IV prn
-
+    - **Pre-Medication:**
+        - HR < 65. Metoprolol IV prn
 
 -   __3. IV Contrast & Injection__    
 
@@ -71,7 +66,12 @@
 
         - 20G IV
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history
+
     === "Radiologist Notes"
+
         - Measure mitral annulus. LA size. LVOT assessment. Coronary proximity. Access vessels. TMVR-specific measurements
 
     === "Tips & Tricks"
@@ -94,11 +94,11 @@
       
       section Contrast Injection
       Contrast (140 mL)    :active, contrast, 00:00, 35s
-      Saline (50mL)          :active, saline, after contrast, 12s
+      Saline (20mL)          :active, saline, after contrast, 5s
       section Arterial Phase
-      Gated CTA Chest    :crit, scan1, 00:25, 10s
+      Gated CTA Chest    :crit, scan1, after contrast, 5s
       section Delayed Phase
-      Delayed CAP    :done, scan2, 01:30, 10s
+      Delayed CAP    :done, scan2, 01:30, 5s
   ```
 
 

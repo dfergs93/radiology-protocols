@@ -28,11 +28,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history
-    
+
     - **Position:** Supine head-first
     - **NPO Status:** NPO 2 hours
     
@@ -70,7 +66,12 @@
 
         - 20G IV minimum. Good bolus essential
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history
+
     === "Radiologist Notes"
+
         - Assess circle of Willis. Aneurysms. Stenosis. Vascular malformations. Anatomic variants
 
     === "Tips & Tricks"
@@ -93,9 +94,9 @@
       
       section Contrast Injection
       Contrast (75-100 mL)    :active, contrast, 00:00, 16s
-      Saline (50mL)          :active, saline, after contrast, 11s
+      Saline (20mL)          :active, saline, after contrast, 4s
       section Arterial Phase
-      CTA Head    :crit, scan1, 00:25, 8s
+      CTA Head    :crit, scan1, after contrast, 3s
   ```
 
 

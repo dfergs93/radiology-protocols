@@ -28,11 +28,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** N/A
-        - **Allergy:** N/A
-    
+
     - **Position:** Variable - affected joint
     - **NPO Status:** N/A
     
@@ -56,7 +52,12 @@
 
         - No IV. Document affected joints
 
+        !!! warning "Safety First"
+            - **Renal Function:** N/A
+            - **Allergy:** N/A
+
     === "Radiologist Notes"
+
         - Urate crystals color-coded on DECT. Tophi. Joint erosions. Soft tissue deposits. Quantify urate burden
 
     === "Tips & Tricks"

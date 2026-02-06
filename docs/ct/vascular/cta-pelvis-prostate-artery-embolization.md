@@ -25,11 +25,7 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 2-4 hours
     
@@ -67,7 +63,12 @@
 
         - 18-20G IV
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history
+
     === "Radiologist Notes"
+
         - Identify prostate artery origins (usually anterior division of internal iliac). Map anatomy for IR. Note variants and anastomoses
 
     === "Tips & Tricks"
@@ -90,9 +91,9 @@
       
       section Contrast Injection
       Contrast (100 mL)    :active, contrast, 00:00, 28s
-      Saline (50mL)          :active, saline, after contrast, 14s
+      Saline (20mL)          :active, saline, after contrast, 5s
       section Arterial Phase
-      CTA Arterial    :crit, scan1, 00:25, 16s
+      CTA Arterial    :crit, scan1, after contrast, 5s
   ```
 
 

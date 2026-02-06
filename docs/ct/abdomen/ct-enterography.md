@@ -27,16 +27,11 @@
 -   __2. Patient Prep__
 
     ---
-    
-    !!! warning "Safety First"
-        - **Renal Function:** Verify eGFR > 30
-        - **Allergy:** Check allergy history. Coordinate oral contrast timing
-    
+
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 4 hours solids
-    - **Pre-Medication:** 
-      Neutral oral contrast (VoLumen): 1st bottle (450mL) at 90 min. 2nd bottle (450mL) at 60 min. Half bottle (225mL) at 30 min. Other half (225mL) at 5 min before scan
-
+    - **Pre-Medication:**
+        - Neutral oral contrast (VoLumen): 1st bottle (450mL) at 90 min. 2nd bottle (450mL) at 60 min. Half bottle (225mL) at 30 min. Other half (225mL) at 5 min before scan
 
 -   __3. IV Contrast & Injection__    
 
@@ -68,7 +63,12 @@
 
         - 18-20G IV. Ensure adequate oral contrast intake (total ~1350mL). May need anti-peristaltic agent
 
+        !!! warning "Safety First"
+            - **Renal Function:** Verify eGFR > 30
+            - **Allergy:** Check allergy history. Coordinate oral contrast timing
+
     === "Radiologist Notes"
+
         - Assess bowel wall enhancement and thickness. Look for strictures fistulas abscesses. Mesenteric vascularity
 
     === "Tips & Tricks"
@@ -90,10 +90,10 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 23s
-      Saline (50mL)          :active, saline, after contrast, 11s
+      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s
+      Saline (20mL)          :active, saline, after contrast, 4s
       section Scan Phase 1
-      Enteric Phase    :done, scan1, 00:45, 25s
+      Enteric Phase    :done, scan1, 00:45, 7s
   ```
 
 
