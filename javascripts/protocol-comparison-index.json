@@ -1,0 +1,3684 @@
+[
+  {
+    "filepath": "ct/abdomen/ct-abdomen-pelvis-with-contrast.md",
+    "title": "CT Abdomen Pelvis with Contrast",
+    "category": "Abdomen",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Abdomen Pelvis with Contrast Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 41s\n      Saline (20mL)          :active, saline, after contrast, 6s\n      section Portal Venous Phase\n      Portal Venous Phase    :done, scan1, 01:10, 7s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 350",
+      "volume": "125 mL",
+      "flow_rate": "3 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Scout/Topogram",
+        "start": "Diaphragm",
+        "end": "Pubic symphysis",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "AP and lateral",
+        "coverage": "Diaphragm \u2192 Pubic symphysis"
+      },
+      {
+        "name": "Portal Venous Phase",
+        "start": "Diaphragm",
+        "end": "Pubic symphysis",
+        "delay": "70 sec",
+        "thickness": "0.625 mm",
+        "notes": "Standard portal venous timing",
+        "coverage": "Diaphragm \u2192 Pubic symphysis"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Portal Venous Phase",
+        "phase": "Contrast (70 sec delay)",
+        "coverage": "Diaphragm to Pubic symphysis"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/abdomen/ct-adrenal-mass-protocol.md",
+    "title": "CT Adrenal Mass Protocol",
+    "category": "Abdomen",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Adrenal Mass Protocol Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 32s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Portal Venous Phase\n      Portal Venous    :done, scan1, 01:10, 5s\n      section Delayed Phase\n      15 Minute Delay    :done, scan2, 15:00, 5s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 350",
+      "volume": "1.5 mL/kg",
+      "flow_rate": "3-4 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Non-Contrast",
+        "start": "Diaphragm",
+        "end": "Kidneys",
+        "delay": "N/A",
+        "thickness": "2.5 mm",
+        "notes": "Measure absolute HU in mass",
+        "coverage": "Diaphragm \u2192 Kidneys"
+      },
+      {
+        "name": "Portal Venous",
+        "start": "Diaphragm",
+        "end": "Kidneys",
+        "delay": "70 sec",
+        "thickness": "2.5 mm",
+        "notes": "Enhanced HU measurement",
+        "coverage": "Diaphragm \u2192 Kidneys"
+      },
+      {
+        "name": "15 Minute Delay",
+        "start": "Diaphragm",
+        "end": "Kidneys",
+        "delay": "900 sec",
+        "thickness": "2.5 mm",
+        "notes": "Delayed HU for washout calculation",
+        "coverage": "Diaphragm \u2192 Kidneys"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Non-Contrast",
+        "phase": "Non-contrast",
+        "coverage": "Diaphragm to Kidneys"
+      },
+      {
+        "series": "Portal Venous",
+        "phase": "Contrast (70 sec delay)",
+        "coverage": "Diaphragm to Kidneys"
+      },
+      {
+        "series": "15 Minute Delay",
+        "phase": "Contrast (900 sec delay)",
+        "coverage": "Diaphragm to Kidneys"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/abdomen/ct-biphasic-pancreas.md",
+    "title": "CT Biphasic Pancreas",
+    "category": "Abdomen",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Biphasic Pancreas Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Scan Phase 1\n      Pancreatic Phase    :crit, scan1, 00:40, 7s\n      section Portal Venous Phase\n      Portal Venous    :done, scan2, 01:10, 7s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 350",
+      "volume": "1.5 mL/kg",
+      "flow_rate": "4-5 mL/s",
+      "timing": "Dual phase: Pancreatic arterial + Portal venous",
+      "roi": "Abdominal aorta",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Pancreatic Phase",
+        "start": "Diaphragm",
+        "end": "Iliac crests",
+        "delay": "40-45 sec or bolus track",
+        "thickness": "1-1.25 mm",
+        "notes": "Thin slices for small lesions",
+        "coverage": "Diaphragm \u2192 Iliac crests"
+      },
+      {
+        "name": "Portal Venous",
+        "start": "Diaphragm",
+        "end": "Iliac crests",
+        "delay": "70 sec",
+        "thickness": "2.5 mm",
+        "notes": "Standard PV phase",
+        "coverage": "Diaphragm \u2192 Iliac crests"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Pancreatic Phase",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Diaphragm to Iliac crests"
+      },
+      {
+        "series": "Portal Venous",
+        "phase": "Contrast (70 sec delay)",
+        "coverage": "Diaphragm to Iliac crests"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/abdomen/ct-chest-abdomen-pelvis-with-contrast.md",
+    "title": "CT Chest Abdomen Pelvis with Contrast",
+    "category": "Abdomen",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Chest Abdomen Pelvis with Contrast Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 32s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Portal Venous Phase\n      Portal Venous Phase    :done, scan1, 01:10, 7s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 350",
+      "volume": "1.5 mL/kg",
+      "flow_rate": "3-4 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Scout/Topogram",
+        "start": "Thoracic inlet",
+        "end": "Pubic symphysis",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "AP and lateral",
+        "coverage": "Thoracic inlet \u2192 Pubic symphysis"
+      },
+      {
+        "name": "Portal Venous Phase",
+        "start": "Lung bases or diaphragm",
+        "end": "Pubic symphysis",
+        "delay": "70 sec",
+        "thickness": "0.625 mm",
+        "notes": "Single portal venous phase",
+        "coverage": "Lung bases or diaphragm \u2192 Pubic symphysis"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Portal Venous Phase",
+        "phase": "Contrast (70 sec delay)",
+        "coverage": "Lung bases or diaphragm to Pubic symphysis"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/abdomen/ct-cystogram.md",
+    "title": "CT Cystogram",
+    "category": "Abdomen",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Cystogram Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 28s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Portal Venous Phase\n      Portal Venous    :done, scan1, 01:10, 7s\n      section Scan Phase 2\n      Bladder Filling    :done, scan2, 01:30, 3s\n      section Scan Phase 3\n      Cystogram    :done, scan3, 01:40, 5s\n      section Scan Phase 4\n      Post-Void    :done, scan4, after scan3, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "100 mL",
+      "flow_rate": "3-4 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Portal Venous",
+        "start": "Diaphragm",
+        "end": "Pubic symphysis",
+        "delay": "70 sec",
+        "thickness": "2.5 mm",
+        "notes": "Standard IV contrast",
+        "coverage": "Diaphragm \u2192 Pubic symphysis"
+      },
+      {
+        "name": "Bladder Filling",
+        "start": "N/A",
+        "end": "N/A",
+        "delay": "90 sec",
+        "thickness": "N/A",
+        "notes": "Fill via Foley - not scanned",
+        "coverage": "N/A \u2192 N/A"
+      },
+      {
+        "name": "Cystogram",
+        "start": "Iliac crests",
+        "end": "Below bladder",
+        "delay": "100 sec",
+        "thickness": "2 mm",
+        "notes": "Scan distended bladder",
+        "coverage": "Iliac crests \u2192 Below bladder"
+      },
+      {
+        "name": "Post-Void",
+        "start": "Iliac crests",
+        "end": "Below bladder",
+        "delay": "Immediate",
+        "thickness": "2 mm",
+        "notes": "Scan after drainage",
+        "coverage": "Iliac crests \u2192 Below bladder"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Portal Venous",
+        "phase": "Contrast (70 sec delay)",
+        "coverage": "Diaphragm to Pubic symphysis"
+      },
+      {
+        "series": "Bladder Filling",
+        "phase": "Contrast (90 sec delay)",
+        "coverage": "Standard coverage"
+      },
+      {
+        "series": "Cystogram",
+        "phase": "Contrast (100 sec delay)",
+        "coverage": "Iliac crests to Below bladder"
+      },
+      {
+        "series": "Post-Void",
+        "phase": "Contrast (Immediate delay)",
+        "coverage": "Iliac crests to Below bladder"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/abdomen/ct-enterography.md",
+    "title": "CT Enterography",
+    "category": "Abdomen",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Enterography Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Scan Phase 1\n      Enteric Phase    :done, scan1, 00:45, 7s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 350",
+      "volume": "1.5 mL/kg",
+      "flow_rate": "4-5 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Enteric Phase",
+        "start": "Diaphragm",
+        "end": "Pubic symphysis",
+        "delay": "45 sec",
+        "thickness": "0.625 mm",
+        "notes": "Optimal small bowel enhancement",
+        "coverage": "Diaphragm \u2192 Pubic symphysis"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Enteric Phase",
+        "phase": "Contrast (45 sec delay)",
+        "coverage": "Diaphragm to Pubic symphysis"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/abdomen/ct-ivp-intravenous-pyelogram.md",
+    "title": "CT IVP (Intravenous Pyelogram)",
+    "category": "Abdomen",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT IVP (Intravenous Pyelogram) Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section First Injection\n      Contrast bolus 1 (77mL)  :active, contrast1, 00:00, 19s\n      Saline flush (50mL)                  :active, saline1, after contrast1, 12s\n      section First Scan Phase\n      First acquisition                    :crit, scan1, 00:20, 15s\n      section Wait Period\n      Wait for second injection            :milestone, wait, after scan1, 05:00\n      section Second Injection\n      Contrast bolus 2 (28mL)  :active, contrast2, after wait, 7s\n      Saline flush (50mL)                  :active, saline2, after contrast2, 12s\n      section Second Scan Phase\n      Second acquisition                   :done, scan2, after saline2, 20s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 350",
+      "volume": "Split bolus: 1st injection 1.1 mL/kg + 2nd injection 0.4 mL/kg",
+      "flow_rate": "4 mL/s",
+      "timing": "Split bolus technique",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Non-Contrast (optional)",
+        "start": "Top kidneys",
+        "end": "Pubic symphysis",
+        "delay": "N/A",
+        "thickness": "2 mm",
+        "notes": "Optional stone detection",
+        "coverage": "Top kidneys \u2192 Pubic symphysis"
+      },
+      {
+        "name": "Early Portal Venous",
+        "start": "Top kidneys",
+        "end": "Iliac crests",
+        "delay": "60 sec from 1st",
+        "thickness": "2.5 mm",
+        "notes": "Nephrographic phase",
+        "coverage": "Top kidneys \u2192 Iliac crests"
+      },
+      {
+        "name": "Excretory Phase",
+        "start": "Top kidneys",
+        "end": "Pubic symphysis",
+        "delay": "90-120 sec from 2nd",
+        "thickness": "1.25 mm",
+        "notes": "Collecting system opacification",
+        "coverage": "Top kidneys \u2192 Pubic symphysis"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Non-Contrast (optional)",
+        "phase": "Non-contrast",
+        "coverage": "Top kidneys to Pubic symphysis"
+      },
+      {
+        "series": "Early Portal Venous",
+        "phase": "Contrast (60 sec from 1st delay)",
+        "coverage": "Top kidneys to Iliac crests"
+      },
+      {
+        "series": "Excretory Phase",
+        "phase": "Contrast (90-120 sec from 2nd delay)",
+        "coverage": "Top kidneys to Pubic symphysis"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/abdomen/ct-kub-non-contrast.md",
+    "title": "CT KUB Non-Contrast",
+    "category": "Abdomen",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT KUB Non-Contrast Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Acquisition\n      Standard scan    :done, scan1, 00:00, 10s\n  ```",
+    "contrast": {
+      "type": "Non-contrast"
+    },
+    "series": [
+      {
+        "name": "Non-Contrast KUB",
+        "start": "Top of kidneys",
+        "end": "Pubic symphysis",
+        "delay": "N/A",
+        "thickness": "1-2 mm",
+        "notes": "Low dose technique",
+        "coverage": "Top of kidneys \u2192 Pubic symphysis"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Non-Contrast KUB",
+        "phase": "Non-contrast",
+        "coverage": "Top of kidneys to Pubic symphysis"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/abdomen/ct-renal-mass-protocol.md",
+    "title": "CT Renal Mass Protocol",
+    "category": "Abdomen",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Renal Mass Protocol Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section First Injection\n      Contrast bolus 1 (77mL)  :active, contrast1, 00:00, 19s\n      Saline flush (50mL)                  :active, saline1, after contrast1, 12s\n      section First Scan Phase\n      First acquisition                    :crit, scan1, 00:20, 15s\n      section Wait Period\n      Wait for second injection            :milestone, wait, after scan1, 05:00\n      section Second Injection\n      Contrast bolus 2 (28mL)  :active, contrast2, after wait, 7s\n      Saline flush (50mL)                  :active, saline2, after contrast2, 12s\n      section Second Scan Phase\n      Second acquisition                   :done, scan2, after saline2, 20s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 350",
+      "volume": "Split bolus: 1st injection 1.1 mL/kg + 2nd injection 0.4 mL/kg",
+      "flow_rate": "4 mL/s",
+      "timing": "Split bolus technique",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Non-Contrast",
+        "start": "Top kidneys",
+        "end": "Iliac crests",
+        "delay": "N/A",
+        "thickness": "2.5 mm",
+        "notes": "Baseline - detect fat/calcium",
+        "coverage": "Top kidneys \u2192 Iliac crests"
+      },
+      {
+        "name": "Corticomedullary",
+        "start": "Top kidneys",
+        "end": "Iliac crests",
+        "delay": "20 sec",
+        "thickness": "1.25 mm",
+        "notes": "Arterial/nephrographic",
+        "coverage": "Top kidneys \u2192 Iliac crests"
+      },
+      {
+        "name": "Nephrographic/IVP",
+        "start": "Top kidneys",
+        "end": "Pubic symphysis",
+        "delay": "90-120 sec from 2nd injection",
+        "thickness": "1.25 mm",
+        "notes": "Delayed enhancement + collecting system",
+        "coverage": "Top kidneys \u2192 Pubic symphysis"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Non-Contrast",
+        "phase": "Non-contrast",
+        "coverage": "Top kidneys to Iliac crests"
+      },
+      {
+        "series": "Corticomedullary",
+        "phase": "Contrast (20 sec delay)",
+        "coverage": "Top kidneys to Iliac crests"
+      },
+      {
+        "series": "Nephrographic/IVP",
+        "phase": "Contrast (90-120 sec from 2nd injection delay)",
+        "coverage": "Top kidneys to Pubic symphysis"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/abdomen/ct-triple-phase-liver.md",
+    "title": "CT Triple Phase Liver",
+    "category": "Abdomen",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Triple Phase Liver Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      Late Arterial    :crit, scan1, 00:30, 7s\n      section Portal Venous Phase\n      Portal Venous    :done, scan2, 01:10, 7s\n      section Delayed Phase\n      Delayed Phase    :done, scan3, 05:00, 7s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 350",
+      "volume": "1.5 mL/kg",
+      "flow_rate": "4-5 mL/s",
+      "timing": "Triple phase: NC + Arterial + Portal Venous + Delayed",
+      "roi": "Abdominal aorta",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Non-Contrast",
+        "start": "Diaphragm",
+        "end": "Iliac crests",
+        "delay": "N/A",
+        "thickness": "2.5 mm",
+        "notes": "Liver FOV",
+        "coverage": "Diaphragm \u2192 Iliac crests"
+      },
+      {
+        "name": "Late Arterial",
+        "start": "Diaphragm",
+        "end": "Iliac crests",
+        "delay": "30-35 sec or bolus track",
+        "thickness": "1.25 mm",
+        "notes": "Liver FOV - hypervascular lesions",
+        "coverage": "Diaphragm \u2192 Iliac crests"
+      },
+      {
+        "name": "Portal Venous",
+        "start": "Diaphragm",
+        "end": "Pubic symphysis",
+        "delay": "70 sec",
+        "thickness": "2.5 mm",
+        "notes": "Full AP FOV",
+        "coverage": "Diaphragm \u2192 Pubic symphysis"
+      },
+      {
+        "name": "Delayed Phase",
+        "start": "Diaphragm",
+        "end": "Iliac crests",
+        "delay": "300 sec",
+        "thickness": "2.5 mm",
+        "notes": "Liver FOV - washout assessment",
+        "coverage": "Diaphragm \u2192 Iliac crests"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Non-Contrast",
+        "phase": "Non-contrast",
+        "coverage": "Diaphragm to Iliac crests"
+      },
+      {
+        "series": "Late Arterial",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Diaphragm to Iliac crests"
+      },
+      {
+        "series": "Portal Venous",
+        "phase": "Contrast (70 sec delay)",
+        "coverage": "Diaphragm to Pubic symphysis"
+      },
+      {
+        "series": "Delayed Phase",
+        "phase": "Contrast (300 sec delay)",
+        "coverage": "Diaphragm to Iliac crests"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/cardiac/calcium-score.md",
+    "title": "Calcium Score",
+    "category": "Cardiac",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Calcium Score Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Acquisition\n      Standard scan    :done, scan1, 00:00, 10s\n  ```",
+    "contrast": {
+      "type": "Non-contrast"
+    },
+    "series": [
+      {
+        "name": "Calcium Score",
+        "start": "Carina",
+        "end": "Below heart",
+        "delay": "N/A",
+        "thickness": "1.5 mm",
+        "notes": "Sequential axial gated acquisition",
+        "coverage": "Carina \u2192 Below heart"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Calcium Score",
+        "phase": "Non-contrast",
+        "coverage": "Carina to Below heart"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/cardiac/coronary-cta.md",
+    "title": "Coronary CTA",
+    "category": "Cardiac",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Coronary CTA Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      Gated CTA    :crit, scan1, after contrast, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "1.1 mL/kg",
+      "flow_rate": "4-5 mL/s",
+      "timing": "Bolus Tracking",
+      "roi": "Ascending aorta",
+      "trigger": "200 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Calcium Score",
+        "start": "Carina",
+        "end": "Below heart",
+        "delay": "N/A",
+        "thickness": "3 mm",
+        "notes": "Calcium score",
+        "coverage": "Carina \u2192 Below heart"
+      },
+      {
+        "name": "Gated CTA",
+        "start": "2cm above LAD",
+        "end": "2cm below heart apex",
+        "delay": "Bolus tracked",
+        "thickness": "0.5-0.625 mm",
+        "notes": "Retrospective gating",
+        "coverage": "2cm above LAD \u2192 2cm below heart apex"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Calcium Score",
+        "phase": "Non-contrast",
+        "coverage": "Carina to Below heart"
+      },
+      {
+        "series": "Gated CTA",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "2cm above LAD to 2cm below heart apex"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/cardiac/coronary-cta-post-cabg.md",
+    "title": "Coronary CTA Post-CABG",
+    "category": "Cardiac",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Coronary CTA Post-CABG Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      Gated CTA    :crit, scan1, after contrast, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "1.1 mL/kg",
+      "flow_rate": "4-5 mL/s",
+      "timing": "Bolus Tracking",
+      "roi": "Ascending aorta",
+      "trigger": "200 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Calcium Score",
+        "start": "Lung apices",
+        "end": "Diaphragm",
+        "delay": "N/A",
+        "thickness": "1.5 mm",
+        "notes": "Calcium score",
+        "coverage": "Lung apices \u2192 Diaphragm"
+      },
+      {
+        "name": "Gated CTA",
+        "start": "Lung apices",
+        "end": "2cm below heart apex",
+        "delay": "Bolus tracked",
+        "thickness": "0.5-0.625 mm",
+        "notes": "Retrospective gating - full chest FOV",
+        "coverage": "Lung apices \u2192 2cm below heart apex"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Calcium Score",
+        "phase": "Non-contrast",
+        "coverage": "Lung apices to Diaphragm"
+      },
+      {
+        "series": "Gated CTA",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Lung apices to 2cm below heart apex"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/cardiac/endocarditiscardiac-mass.md",
+    "title": "Endocarditis/Cardiac Mass",
+    "category": "Cardiac",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Endocarditis/Cardiac Mass Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.6 mL/kg)    :active, contrast, 00:00, 34s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      Gated CTA    :crit, scan1, 00:30, 5s\n      section Delayed Phase\n      Delayed phase    :done, scan2, 01:10, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "1.6 mL/kg",
+      "flow_rate": "3-4 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Non-contrast",
+        "start": "Top of heart",
+        "end": "Below heart",
+        "delay": "N/A",
+        "thickness": "3 mm",
+        "notes": "Flash Non-contrast",
+        "coverage": "Top of heart \u2192 Below heart"
+      },
+      {
+        "name": "Gated CTA",
+        "start": "Top of heart",
+        "end": "Below heart",
+        "delay": "30 sec",
+        "thickness": "0.5-0.625 mm",
+        "notes": "Retrospective ECG gating",
+        "coverage": "Top of heart \u2192 Below heart"
+      },
+      {
+        "name": "Delayed phase",
+        "start": "Top of heart",
+        "end": "Below heart",
+        "delay": "70 sec",
+        "thickness": "1 mm",
+        "notes": "To detect for abscess, vegetation, masses",
+        "coverage": "Top of heart \u2192 Below heart"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Non-contrast",
+        "phase": "Non-contrast",
+        "coverage": "Top of heart to Below heart"
+      },
+      {
+        "series": "Gated CTA",
+        "phase": "Contrast (30 sec delay)",
+        "coverage": "Top of heart to Below heart"
+      },
+      {
+        "series": "Delayed phase",
+        "phase": "Contrast (70 sec delay)",
+        "coverage": "Top of heart to Below heart"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/cardiac/gated-cta-cap.md",
+    "title": "Gated CTA CAP",
+    "category": "Cardiac",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA CAP Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (140 mL)    :active, contrast, 00:00, 35s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      Gated CTA Chest    :crit, scan1, after contrast, 6s\n      section Arterial Phase\n      Flash CTA AP    :crit, scan2, after scan1, 7s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "140 mL",
+      "flow_rate": "4 mL/s",
+      "timing": "Dual phase: Gated chest + Flash AP",
+      "roi": "Ascending aorta",
+      "trigger": "180 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Gated CTA Chest",
+        "start": "Thoracic inlet",
+        "end": "Diaphragm",
+        "delay": "Bolus tracked",
+        "thickness": "0.5-0.625 mm",
+        "notes": "Retrospective gating chest",
+        "coverage": "Thoracic inlet \u2192 Diaphragm"
+      },
+      {
+        "name": "Flash CTA AP",
+        "start": "Diaphragm",
+        "end": "Pubic symphysis",
+        "delay": "Immediate after chest",
+        "thickness": "0.625 mm",
+        "notes": "High pitch helical - no gating",
+        "coverage": "Diaphragm \u2192 Pubic symphysis"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Gated CTA Chest",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Thoracic inlet to Diaphragm"
+      },
+      {
+        "series": "Flash CTA AP",
+        "phase": "Contrast (Immediate after chest delay)",
+        "coverage": "Diaphragm to Pubic symphysis"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/cardiac/gated-cta-cap-sternotomy-revision.md",
+    "title": "Gated CTA CAP Sternotomy Revision",
+    "category": "Cardiac",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA CAP Sternotomy Revision Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (150 mL)    :active, contrast, 00:00, 37s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      Gated CTA Chest    :crit, scan1, after contrast, 6s\n      section Scan Phase 2\n      Flash AP    :crit, scan2, after scan1, 7s\n      section Scan Phase 3\n      Venogram Chest    :done, scan3, 01:00, 6s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "150 mL",
+      "flow_rate": "4 mL/s",
+      "timing": "Triple phase: Gated chest + AP arterial + Chest venous",
+      "roi": "Ascending aorta",
+      "trigger": "180 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Gated CTA Chest",
+        "start": "Thoracic inlet",
+        "end": "Diaphragm",
+        "delay": "Bolus tracked",
+        "thickness": "0.5-0.625 mm",
+        "notes": "Retrospective gating",
+        "coverage": "Thoracic inlet \u2192 Diaphragm"
+      },
+      {
+        "name": "Flash AP",
+        "start": "Diaphragm",
+        "end": "Pubic symphysis",
+        "delay": "Immediate",
+        "thickness": "0.625 mm",
+        "notes": "Arterial phase AP",
+        "coverage": "Diaphragm \u2192 Pubic symphysis"
+      },
+      {
+        "name": "Venogram Chest",
+        "start": "Thoracic inlet",
+        "end": "Diaphragm",
+        "delay": "60 sec",
+        "thickness": "1 mm",
+        "notes": "Retrosternal venous structures",
+        "coverage": "Thoracic inlet \u2192 Diaphragm"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Gated CTA Chest",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Thoracic inlet to Diaphragm"
+      },
+      {
+        "series": "Flash AP",
+        "phase": "Contrast (Immediate delay)",
+        "coverage": "Diaphragm to Pubic symphysis"
+      },
+      {
+        "series": "Venogram Chest",
+        "phase": "Contrast (60 sec delay)",
+        "coverage": "Thoracic inlet to Diaphragm"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/cardiac/gated-cta-chest.md",
+    "title": "Gated CTA Chest",
+    "category": "Cardiac",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA Chest Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      Gated CTA    :crit, scan1, after contrast, 5s\n      section Delayed Phase\n      Stent delay (optional)    :done, scan2, 00:40, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "1.1 mL/kg",
+      "flow_rate": "4-5 mL/s",
+      "timing": "Bolus Tracking",
+      "roi": "Ascending aorta",
+      "trigger": "200 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Non-contrast",
+        "start": "Top of heart",
+        "end": "Below heart",
+        "delay": "N/A",
+        "thickness": "3 mm",
+        "notes": "Calcium score",
+        "coverage": "Top of heart \u2192 Below heart"
+      },
+      {
+        "name": "Gated CTA",
+        "start": "Top of heart",
+        "end": "Below heart",
+        "delay": "Bolus tracked",
+        "thickness": "0.5-0.625 mm",
+        "notes": "Retrospective ECG gating",
+        "coverage": "Top of heart \u2192 Below heart"
+      },
+      {
+        "name": "Stent delay (optional)",
+        "start": "Top of heart",
+        "end": "Below heart",
+        "delay": "40 sec",
+        "thickness": "0.5-0.625 mm",
+        "notes": "Optional for stent assessment",
+        "coverage": "Top of heart \u2192 Below heart"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Non-contrast",
+        "phase": "Non-contrast",
+        "coverage": "Top of heart to Below heart"
+      },
+      {
+        "series": "Gated CTA",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Top of heart to Below heart"
+      },
+      {
+        "series": "Stent delay (optional)",
+        "phase": "Contrast (40 sec delay)",
+        "coverage": "Top of heart to Below heart"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/cardiac/gated-cta-chest-post-op-cardiac-valve.md",
+    "title": "Gated CTA Chest Post-op Cardiac Valve",
+    "category": "Cardiac",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA Chest Post-op Cardiac Valve Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.3 mL/kg)    :active, contrast, 00:00, 21s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      Gated CTA    :crit, scan1, after contrast, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "1.3 mL/kg",
+      "flow_rate": "4-5 mL/s",
+      "timing": "Bolus Tracking",
+      "roi": "Ascending aorta",
+      "trigger": "200 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Gated CTA",
+        "start": "Top of heart",
+        "end": "Below heart",
+        "delay": "Bolus tracked",
+        "thickness": "0.5-0.625 mm",
+        "notes": "Retrospective gating HIGH kV",
+        "coverage": "Top of heart \u2192 Below heart"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Gated CTA",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Top of heart to Below heart"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/cardiac/gated-cta-heart-left-atrial-mapping.md",
+    "title": "Gated CTA Heart Left Atrial Mapping",
+    "category": "Cardiac",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA Heart Left Atrial Mapping Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      Gated CTA    :crit, scan1, after contrast, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "1.1 mL/kg",
+      "flow_rate": "4-5 mL/s",
+      "timing": "Bolus Tracking",
+      "roi": "Ascending aorta",
+      "trigger": "200 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Gated CTA",
+        "start": "Pulmonary veins",
+        "end": "Below LA",
+        "delay": "Bolus tracked",
+        "thickness": "0.5 mm",
+        "notes": "Retrospective - thin slices critical",
+        "coverage": "Pulmonary veins \u2192 Below LA"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Gated CTA",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Pulmonary veins to Below LA"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/cardiac/gated-cta-tavr.md",
+    "title": "Gated CTA TAVR",
+    "category": "Cardiac",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA TAVR Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (140 mL)    :active, contrast, 00:00, 35s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      Gated CTA Chest    :crit, scan1, after contrast, 6s\n      section Arterial Phase\n      Flash CTA AP    :crit, scan2, after scan1, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "140 mL",
+      "flow_rate": "4 mL/s",
+      "timing": "Dual phase: Gated chest + Flash AP",
+      "roi": "Ascending aorta",
+      "trigger": "180 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Gated CTA Chest",
+        "start": "Thoracic inlet",
+        "end": "Diaphragm",
+        "delay": "Bolus tracked",
+        "thickness": "0.5 mm",
+        "notes": "Retrospective gating for valve",
+        "coverage": "Thoracic inlet \u2192 Diaphragm"
+      },
+      {
+        "name": "Flash CTA AP",
+        "start": "Diaphragm",
+        "end": "Femoral heads",
+        "delay": "Immediate",
+        "thickness": "0.625 mm",
+        "notes": "Iliofemoral access planning",
+        "coverage": "Diaphragm \u2192 Femoral heads"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Gated CTA Chest",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Thoracic inlet to Diaphragm"
+      },
+      {
+        "series": "Flash CTA AP",
+        "phase": "Contrast (Immediate delay)",
+        "coverage": "Diaphragm to Femoral heads"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/cardiac/gated-cta-tmvr.md",
+    "title": "Gated CTA TMVR",
+    "category": "Cardiac",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA TMVR Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (140 mL)    :active, contrast, 00:00, 35s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      Gated CTA Chest    :crit, scan1, after contrast, 5s\n      section Delayed Phase\n      Delayed CAP    :done, scan2, 01:30, 5s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 350",
+      "volume": "140 mL",
+      "flow_rate": "4 mL/s",
+      "timing": "Dual phase: Gated chest NO dose modulation + 90 sec delayed CAP",
+      "roi": "Ascending aorta",
+      "trigger": "180 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Gated CTA Chest",
+        "start": "Top of heart",
+        "end": "Below heart",
+        "delay": "Bolus tracked",
+        "thickness": "0.5 mm",
+        "notes": "NO DOSE PULSING - retrospective all phases",
+        "coverage": "Top of heart \u2192 Below heart"
+      },
+      {
+        "name": "Delayed CAP",
+        "start": "Diaphragm",
+        "end": "Femoral heads",
+        "delay": "90 sec",
+        "thickness": "0.625 mm",
+        "notes": "Access planning and coronaries",
+        "coverage": "Diaphragm \u2192 Femoral heads"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Gated CTA Chest",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Top of heart to Below heart"
+      },
+      {
+        "series": "Delayed CAP",
+        "phase": "Contrast (90 sec delay)",
+        "coverage": "Diaphragm to Femoral heads"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/cardiac/gated-cta-ttvr.md",
+    "title": "Gated CTA TTVR",
+    "category": "Cardiac",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Gated CTA TTVR Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (140 mL)    :active, contrast, 00:00, 35s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      Gated CTA Chest    :crit, scan1, after contrast, 5s\n      section Delayed Phase\n      Delayed CAP    :done, scan2, 01:30, 5s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 350",
+      "volume": "140 mL",
+      "flow_rate": "4 mL/s",
+      "timing": "Dual phase: Gated chest NO dose modulation + 90 sec delayed CAP",
+      "roi": "Ascending aorta",
+      "trigger": "180 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Gated CTA Chest",
+        "start": "Top of heart",
+        "end": "Below heart",
+        "delay": "Bolus tracked",
+        "thickness": "0.5 mm",
+        "notes": "NO DOSE PULSING - all phases",
+        "coverage": "Top of heart \u2192 Below heart"
+      },
+      {
+        "name": "Delayed CAP",
+        "start": "Diaphragm",
+        "end": "Femoral heads",
+        "delay": "90 sec",
+        "thickness": "0.625 mm",
+        "notes": "Access planning",
+        "coverage": "Diaphragm \u2192 Femoral heads"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Gated CTA Chest",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Top of heart to Below heart"
+      },
+      {
+        "series": "Delayed CAP",
+        "phase": "Contrast (90 sec delay)",
+        "coverage": "Diaphragm to Femoral heads"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/chest/ct-pulmonary-embolism.md",
+    "title": "CT Pulmonary Embolism",
+    "category": "Chest",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Pulmonary Embolism Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 22s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      Pulmonary Angiogram    :crit, scan1, after contrast, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "100 mL",
+      "flow_rate": "4-5 mL/s",
+      "timing": "Bolus Tracking",
+      "roi": "Main Pulmonary Artery",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Scout/Topogram",
+        "start": "Lung apices",
+        "end": "Adrenal glands",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "AP and lateral",
+        "coverage": "Lung apices \u2192 Adrenal glands"
+      },
+      {
+        "name": "Pulmonary Angiogram",
+        "start": "Lung apices",
+        "end": "Adrenal glands",
+        "delay": "Bolus tracked",
+        "thickness": "0.625 mm",
+        "notes": "Caudocranial direction from diaphragm to apices",
+        "coverage": "Lung apices \u2192 Adrenal glands"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Pulmonary Angiogram",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Lung apices to Adrenal glands"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/chest/dynamic-airway-ct.md",
+    "title": "Dynamic Airway CT",
+    "category": "Chest",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Dynamic Airway CT Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Acquisition\n      Standard scan    :done, scan1, 00:00, 10s\n  ```",
+    "contrast": {
+      "type": "Non-contrast"
+    },
+    "series": [
+      {
+        "name": "Inspiration",
+        "start": "Thoracic inlet",
+        "end": "Carina+10cm",
+        "delay": "Full inspiration",
+        "thickness": "0.625-1 mm",
+        "notes": "Thin for 3D",
+        "coverage": "Thoracic inlet \u2192 Carina+10cm"
+      },
+      {
+        "name": "Mid-Expiration",
+        "start": "Thoracic inlet",
+        "end": "Carina+10cm",
+        "delay": "Forced mid-expiration",
+        "thickness": "0.625-1 mm",
+        "notes": "Same level as inspiration",
+        "coverage": "Thoracic inlet \u2192 Carina+10cm"
+      },
+      {
+        "name": "Cine (optional)",
+        "start": "Carina level",
+        "end": "Single slice",
+        "delay": "Continuous breathing",
+        "thickness": "Cine mode",
+        "notes": "Dynamic collapse",
+        "coverage": "Carina level \u2192 Single slice"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Inspiration",
+        "phase": "Contrast (Full inspiration delay)",
+        "coverage": "Thoracic inlet to Carina+10cm"
+      },
+      {
+        "series": "Mid-Expiration",
+        "phase": "Contrast (Forced mid-expiration delay)",
+        "coverage": "Thoracic inlet to Carina+10cm"
+      },
+      {
+        "series": "Cine (optional)",
+        "phase": "Contrast (Continuous breathing delay)",
+        "coverage": "Carina level to Single slice"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/chest/non-contrast-ct-chest-low-dose.md",
+    "title": "Non-Contrast CT Chest Low Dose",
+    "category": "Chest",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Non-Contrast CT Chest Low Dose Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Acquisition\n      Standard scan    :done, scan1, 00:00, 10s\n  ```",
+    "contrast": {
+      "type": "Non-contrast"
+    },
+    "series": [
+      {
+        "name": "Low Dose Chest",
+        "start": "Lung apices",
+        "end": "Costophrenic angles",
+        "delay": "N/A",
+        "thickness": "1-1.25 mm",
+        "notes": "Low dose helical",
+        "coverage": "Lung apices \u2192 Costophrenic angles"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Low Dose Chest",
+        "phase": "Non-contrast",
+        "coverage": "Lung apices to Costophrenic angles"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/chest/non-contrast-ct-chest-routine.md",
+    "title": "Non-Contrast CT Chest Routine",
+    "category": "Chest",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Non-Contrast CT Chest Routine Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Acquisition\n      Standard scan    :done, scan1, 00:00, 10s\n  ```",
+    "contrast": {
+      "type": "Non-contrast"
+    },
+    "series": [
+      {
+        "name": "NC Chest",
+        "start": "Lung apices",
+        "end": "Costophrenic angles",
+        "delay": "N/A",
+        "thickness": "1-1.25 mm",
+        "notes": "Standard dose helical",
+        "coverage": "Lung apices \u2192 Costophrenic angles"
+      }
+    ],
+    "summary": [
+      {
+        "series": "NC Chest",
+        "phase": "Non-contrast",
+        "coverage": "Lung apices to Costophrenic angles"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/chest/non-contrast-chest-lung-nodule-ultra-low-dose.md",
+    "title": "Non-Contrast Chest Lung Nodule Ultra Low Dose",
+    "category": "Chest",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Non-Contrast Chest Lung Nodule Ultra Low Dose Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Acquisition\n      Standard scan    :done, scan1, 00:00, 10s\n  ```",
+    "contrast": {
+      "type": "Non-contrast"
+    },
+    "series": [
+      {
+        "name": "Ultra Low Dose Chest",
+        "start": "Lung apices",
+        "end": "Costophrenic angles",
+        "delay": "N/A",
+        "thickness": "1-1.25 mm",
+        "notes": "Ultra low dose helical",
+        "coverage": "Lung apices \u2192 Costophrenic angles"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Ultra Low Dose Chest",
+        "phase": "Non-contrast",
+        "coverage": "Lung apices to Costophrenic angles"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/chest/non-volumetric-hrct-1-phase-prone.md",
+    "title": "Non-Volumetric HRCT 1 Phase Prone",
+    "category": "Chest",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Non-Volumetric HRCT 1 Phase Prone Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Acquisition\n      Standard scan    :done, scan1, 00:00, 10s\n  ```",
+    "contrast": {
+      "type": "Non-contrast"
+    },
+    "series": [
+      {
+        "name": "Scout Prone",
+        "start": "Lung apices",
+        "end": "Costophrenic angles",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "Lateral",
+        "coverage": "Lung apices \u2192 Costophrenic angles"
+      },
+      {
+        "name": "HRCT Prone",
+        "start": "Lung apices",
+        "end": "Costophrenic angles",
+        "delay": "Full inspiration",
+        "thickness": "1 mm at 1-2cm intervals",
+        "notes": "Sequential prone",
+        "coverage": "Lung apices \u2192 Costophrenic angles"
+      }
+    ],
+    "summary": [
+      {
+        "series": "HRCT Prone",
+        "phase": "Contrast (Full inspiration delay)",
+        "coverage": "Lung apices to Costophrenic angles"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/chest/non-volumetric-hrct-1-respiratory-phase.md",
+    "title": "Non-Volumetric HRCT 1 Respiratory Phase",
+    "category": "Chest",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Non-Volumetric HRCT 1 Respiratory Phase Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Acquisition\n      Standard scan    :done, scan1, 00:00, 10s\n  ```",
+    "contrast": {
+      "type": "Non-contrast"
+    },
+    "series": [
+      {
+        "name": "HRCT Inspiration",
+        "start": "Lung apices",
+        "end": "Costophrenic angles",
+        "delay": "Full inspiration",
+        "thickness": "1 mm at 1-2cm intervals",
+        "notes": "Sequential slices",
+        "coverage": "Lung apices \u2192 Costophrenic angles"
+      }
+    ],
+    "summary": [
+      {
+        "series": "HRCT Inspiration",
+        "phase": "Contrast (Full inspiration delay)",
+        "coverage": "Lung apices to Costophrenic angles"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/chest/non-volumetric-hrct-3-respiratory-phases.md",
+    "title": "Non-Volumetric HRCT 3 Respiratory Phases",
+    "category": "Chest",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Non-Volumetric HRCT 3 Respiratory Phases Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Acquisition\n      Standard scan    :done, scan1, 00:00, 10s\n  ```",
+    "contrast": {
+      "type": "Non-contrast"
+    },
+    "series": [
+      {
+        "name": "Inspiration",
+        "start": "Lung apices",
+        "end": "Costophrenic angles",
+        "delay": "Full inspiration",
+        "thickness": "1 mm axial at 1-2cm intervals",
+        "notes": "Sequential non-volumetric",
+        "coverage": "Lung apices \u2192 Costophrenic angles"
+      },
+      {
+        "name": "Mid-Expiration",
+        "start": "Lung apices",
+        "end": "Costophrenic angles",
+        "delay": "Mid-expiration",
+        "thickness": "1 mm at intervals",
+        "notes": "Sequential",
+        "coverage": "Lung apices \u2192 Costophrenic angles"
+      },
+      {
+        "name": "Full Expiration",
+        "start": "Lung apices",
+        "end": "Costophrenic angles",
+        "delay": "Full expiration",
+        "thickness": "1 mm at intervals",
+        "notes": "Sequential",
+        "coverage": "Lung apices \u2192 Costophrenic angles"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Inspiration",
+        "phase": "Contrast (Full inspiration delay)",
+        "coverage": "Lung apices to Costophrenic angles"
+      },
+      {
+        "series": "Mid-Expiration",
+        "phase": "Contrast (Mid-expiration delay)",
+        "coverage": "Lung apices to Costophrenic angles"
+      },
+      {
+        "series": "Full Expiration",
+        "phase": "Contrast (Full expiration delay)",
+        "coverage": "Lung apices to Costophrenic angles"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/chest/quantitative-lung-density-ct.md",
+    "title": "Quantitative Lung Density CT",
+    "category": "Chest",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Quantitative Lung Density CT Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Acquisition\n      Standard scan    :done, scan1, 00:00, 10s\n  ```",
+    "contrast": {
+      "type": "Non-contrast"
+    },
+    "series": [
+      {
+        "name": "Volumetric Inspiration",
+        "start": "Lung apices",
+        "end": "Costophrenic angles",
+        "delay": "Full inspiration (TLC)",
+        "thickness": "0.625-1 mm",
+        "notes": "Contiguous for quantification",
+        "coverage": "Lung apices \u2192 Costophrenic angles"
+      },
+      {
+        "name": "Volumetric Expiration",
+        "start": "Lung apices",
+        "end": "Costophrenic angles",
+        "delay": "Full expiration (RV)",
+        "thickness": "0.625-1 mm",
+        "notes": "Contiguous complete exhalation",
+        "coverage": "Lung apices \u2192 Costophrenic angles"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Volumetric Inspiration",
+        "phase": "Contrast (Full inspiration (TLC) delay)",
+        "coverage": "Lung apices to Costophrenic angles"
+      },
+      {
+        "series": "Volumetric Expiration",
+        "phase": "Contrast (Full expiration (RV) delay)",
+        "coverage": "Lung apices to Costophrenic angles"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/chest/volumetric-hrct-2-respiratory-phases.md",
+    "title": "Volumetric HRCT 2 Respiratory Phases",
+    "category": "Chest",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Volumetric HRCT 2 Respiratory Phases Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Acquisition\n      Standard scan    :done, scan1, 00:00, 10s\n  ```",
+    "contrast": {
+      "type": "Non-contrast"
+    },
+    "series": [
+      {
+        "name": "Volumetric Inspiration",
+        "start": "Lung apices",
+        "end": "Costophrenic angles",
+        "delay": "Full inspiration",
+        "thickness": "1 mm",
+        "notes": "Contiguous 1mm slices",
+        "coverage": "Lung apices \u2192 Costophrenic angles"
+      },
+      {
+        "name": "Limited Expiration",
+        "start": "Carina",
+        "end": "Costophrenic angles",
+        "delay": "Full expiration",
+        "thickness": "1 mm",
+        "notes": "Limited coverage expiration",
+        "coverage": "Carina \u2192 Costophrenic angles"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Volumetric Inspiration",
+        "phase": "Contrast (Full inspiration delay)",
+        "coverage": "Lung apices to Costophrenic angles"
+      },
+      {
+        "series": "Limited Expiration",
+        "phase": "Contrast (Full expiration delay)",
+        "coverage": "Carina to Costophrenic angles"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/msk/ct-ankle.md",
+    "title": "CT Ankle",
+    "category": "Msk",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Ankle Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 75 mL)    :active, contrast, 00:00, 30s\n      Saline (20mL)          :active, saline, after contrast, 8s\n  ```",
+    "contrast": {
+      "agent": "None typically. Contrast if infection/mass",
+      "volume": "If contrast: 75 mL",
+      "flow_rate": "2-3 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Scout Bilateral",
+        "start": "Bilateral ankles",
+        "end": "Feet",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "AP for positioning",
+        "coverage": "Bilateral ankles \u2192 Feet"
+      },
+      {
+        "name": "CT Ankle",
+        "start": "Distal tib/fib",
+        "end": "Hindfoot",
+        "delay": "N/A or 60s if contrast",
+        "thickness": "0.625 mm",
+        "notes": "Submillimeter",
+        "coverage": "Distal tib/fib \u2192 Hindfoot"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CT Ankle",
+        "phase": "Contrast (N/A or 60s if contrast delay)",
+        "coverage": "Distal tib/fib to Hindfoot"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/msk/ct-arthrogram-shoulder.md",
+    "title": "CT Arthrogram Shoulder",
+    "category": "Msk",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Arthrogram Shoulder Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Scan Phase 1\n      CT Arthrogram    :done, scan1, after saline, 5s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 240 or 300 diluted",
+      "volume": "12-15 mL intra-articular",
+      "flow_rate": "N/A",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "CT Arthrogram",
+        "start": "Acromion",
+        "end": "Proximal humerus",
+        "delay": "Immediate post-injection",
+        "thickness": "0.625 mm",
+        "notes": "Submillimeter for labrum",
+        "coverage": "Acromion \u2192 Proximal humerus"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CT Arthrogram",
+        "phase": "Contrast (Immediate post-injection delay)",
+        "coverage": "Acromion to Proximal humerus"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/msk/ct-elbow.md",
+    "title": "CT Elbow",
+    "category": "Msk",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Elbow Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 75 mL)    :active, contrast, 00:00, 30s\n      Saline (20mL)          :active, saline, after contrast, 8s\n  ```",
+    "contrast": {
+      "agent": "None typically. Contrast if infection",
+      "volume": "If contrast: 75 mL",
+      "flow_rate": "2-3 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "CT Elbow",
+        "start": "Distal humerus",
+        "end": "Proximal radius/ulna",
+        "delay": "N/A or 60s if contrast",
+        "thickness": "0.625 mm",
+        "notes": "Submillimeter",
+        "coverage": "Distal humerus \u2192 Proximal radius/ulna"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CT Elbow",
+        "phase": "Contrast (N/A or 60s if contrast delay)",
+        "coverage": "Distal humerus to Proximal radius/ulna"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/msk/ct-foot.md",
+    "title": "CT Foot",
+    "category": "Msk",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Foot Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 75 mL)    :active, contrast, 00:00, 30s\n      Saline (20mL)          :active, saline, after contrast, 8s\n  ```",
+    "contrast": {
+      "agent": "None typically. Contrast if infection",
+      "volume": "If contrast: 75 mL",
+      "flow_rate": "2-3 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "CT Foot",
+        "start": "Calcaneus",
+        "end": "Toes",
+        "delay": "N/A or 60s if contrast",
+        "thickness": "0.625 mm",
+        "notes": "Submillimeter",
+        "coverage": "Calcaneus \u2192 Toes"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CT Foot",
+        "phase": "Contrast (N/A or 60s if contrast delay)",
+        "coverage": "Calcaneus to Toes"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/msk/ct-gout-protocol.md",
+    "title": "CT Gout Protocol",
+    "category": "Msk",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Gout Protocol Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Acquisition\n      Standard scan    :done, scan1, 00:00, 10s\n  ```",
+    "contrast": {
+      "type": "Non-contrast"
+    },
+    "series": [
+      {
+        "name": "DECT or CT",
+        "start": "Joint region",
+        "end": "Extended coverage",
+        "delay": "N/A",
+        "thickness": "0.625-1 mm",
+        "notes": "Dual energy if available",
+        "coverage": "Joint region \u2192 Extended coverage"
+      }
+    ],
+    "summary": [
+      {
+        "series": "DECT or CT",
+        "phase": "Non-contrast",
+        "coverage": "Joint region to Extended coverage"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/msk/ct-hand.md",
+    "title": "CT Hand",
+    "category": "Msk",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Hand Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 50 mL)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 10s\n  ```",
+    "contrast": {
+      "agent": "None typically. Contrast if infection",
+      "volume": "If contrast: 50 mL",
+      "flow_rate": "2 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "CT Hand",
+        "start": "Distal radius/ulna",
+        "end": "Fingertips",
+        "delay": "N/A or 60s if contrast",
+        "thickness": "0.625 mm",
+        "notes": "Submillimeter",
+        "coverage": "Distal radius/ulna \u2192 Fingertips"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CT Hand",
+        "phase": "Contrast (N/A or 60s if contrast delay)",
+        "coverage": "Distal radius/ulna to Fingertips"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/msk/ct-hip.md",
+    "title": "CT Hip",
+    "category": "Msk",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Hip Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 40s\n      Saline (20mL)          :active, saline, after contrast, 8s\n  ```",
+    "contrast": {
+      "agent": "None typically. Contrast if infection/mass",
+      "volume": "If contrast: 100 mL",
+      "flow_rate": "2-3 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "CT Pelvis/Hips",
+        "start": "Iliac crests",
+        "end": "Proximal femurs",
+        "delay": "N/A or 60s if contrast",
+        "thickness": "0.625 mm",
+        "notes": "Submillimeter for 3D",
+        "coverage": "Iliac crests \u2192 Proximal femurs"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CT Pelvis/Hips",
+        "phase": "Contrast (N/A or 60s if contrast delay)",
+        "coverage": "Iliac crests to Proximal femurs"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/msk/ct-knee.md",
+    "title": "CT Knee",
+    "category": "Msk",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Knee Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 75 mL)    :active, contrast, 00:00, 30s\n      Saline (20mL)          :active, saline, after contrast, 8s\n  ```",
+    "contrast": {
+      "agent": "None typically. Contrast if infection/mass",
+      "volume": "If contrast: 75 mL",
+      "flow_rate": "2-3 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Scout Bilateral",
+        "start": "Bilateral knees",
+        "end": "Extended",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "AP for alignment",
+        "coverage": "Bilateral knees \u2192 Extended"
+      },
+      {
+        "name": "CT Knee",
+        "start": "Distal femur",
+        "end": "Proximal tib/fib",
+        "delay": "N/A or 60s if contrast",
+        "thickness": "0.625 mm",
+        "notes": "Submillimeter",
+        "coverage": "Distal femur \u2192 Proximal tib/fib"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CT Knee",
+        "phase": "Contrast (N/A or 60s if contrast delay)",
+        "coverage": "Distal femur to Proximal tib/fib"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/msk/ct-lower-extremity.md",
+    "title": "CT Lower Extremity",
+    "category": "Msk",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Lower Extremity Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 40s\n      Saline (20mL)          :active, saline, after contrast, 8s\n  ```",
+    "contrast": {
+      "agent": "None typically. Contrast if infection",
+      "volume": "If contrast: 100 mL",
+      "flow_rate": "2-3 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "CT Lower Extremity",
+        "start": "Proximal to injury",
+        "end": "Distal to injury",
+        "delay": "N/A or 60s if contrast",
+        "thickness": "0.625-1 mm",
+        "notes": "Submillimeter",
+        "coverage": "Proximal to injury \u2192 Distal to injury"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CT Lower Extremity",
+        "phase": "Contrast (N/A or 60s if contrast delay)",
+        "coverage": "Proximal to injury to Distal to injury"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/msk/ct-pelvis-msk.md",
+    "title": "CT Pelvis MSK",
+    "category": "Msk",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Pelvis MSK Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 40s\n      Saline (20mL)          :active, saline, after contrast, 8s\n  ```",
+    "contrast": {
+      "agent": "None typically. Contrast if infection",
+      "volume": "If contrast: 100 mL",
+      "flow_rate": "2-3 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "CT Pelvis",
+        "start": "Iliac crests",
+        "end": "Proximal femurs",
+        "delay": "N/A or 60s if contrast",
+        "thickness": "0.625 mm",
+        "notes": "Submillimeter for 3D",
+        "coverage": "Iliac crests \u2192 Proximal femurs"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CT Pelvis",
+        "phase": "Contrast (N/A or 60s if contrast delay)",
+        "coverage": "Iliac crests to Proximal femurs"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/msk/ct-shoulder.md",
+    "title": "CT Shoulder",
+    "category": "Msk",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Shoulder Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 75 mL)    :active, contrast, 00:00, 30s\n      Saline (20mL)          :active, saline, after contrast, 8s\n  ```",
+    "contrast": {
+      "agent": "None typically. Contrast if infection/mass",
+      "volume": "If contrast: 75 mL",
+      "flow_rate": "2-3 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "CT Shoulder",
+        "start": "Entire scapula",
+        "end": "Proximal humerus",
+        "delay": "N/A or 60s if contrast",
+        "thickness": "0.625 mm",
+        "notes": "Submillimeter",
+        "coverage": "Entire scapula \u2192 Proximal humerus"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CT Shoulder",
+        "phase": "Contrast (N/A or 60s if contrast delay)",
+        "coverage": "Entire scapula to Proximal humerus"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/msk/ct-upper-extremity.md",
+    "title": "CT Upper Extremity",
+    "category": "Msk",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Upper Extremity Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 75 mL)    :active, contrast, 00:00, 30s\n      Saline (20mL)          :active, saline, after contrast, 8s\n  ```",
+    "contrast": {
+      "agent": "None typically. Contrast if infection",
+      "volume": "If contrast: 75 mL",
+      "flow_rate": "2-3 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "CT Upper Extremity",
+        "start": "Proximal to injury",
+        "end": "Distal to injury",
+        "delay": "N/A or 60s if contrast",
+        "thickness": "0.625-1 mm",
+        "notes": "Submillimeter",
+        "coverage": "Proximal to injury \u2192 Distal to injury"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CT Upper Extremity",
+        "phase": "Contrast (N/A or 60s if contrast delay)",
+        "coverage": "Proximal to injury to Distal to injury"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/msk/ct-wrist.md",
+    "title": "CT Wrist",
+    "category": "Msk",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Wrist Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 50 mL)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 10s\n      section Scan Phase 1\n      CT Wrist    :done, scan1, after saline, 5s\n  ```",
+    "contrast": {
+      "agent": "None typically. Contrast if infection",
+      "volume": "If contrast: 50 mL",
+      "flow_rate": "2 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "CT Wrist",
+        "start": "Distal radius/ulna",
+        "end": "Mid-carpus",
+        "delay": "N/A or immediate if arthrogram",
+        "thickness": "0.625 mm",
+        "notes": "Submillimeter",
+        "coverage": "Distal radius/ulna \u2192 Mid-carpus"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CT Wrist",
+        "phase": "Contrast (N/A or immediate if arthrogram delay)",
+        "coverage": "Distal radius/ulna to Mid-carpus"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/msk/msk-protocol-general.md",
+    "title": "MSK Protocol General",
+    "category": "Msk",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title MSK Protocol General Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL if contrast)    :active, contrast, 00:00, 40s\n      Saline (20mL)          :active, saline, after contrast, 8s\n      section Scan Phase 1\n      Contrast phase    :done, scan1, 01:00, 5s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 350 if contrast",
+      "volume": "100 mL if contrast",
+      "flow_rate": "2-3 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Non-contrast",
+        "start": "Region",
+        "end": "Region",
+        "delay": "N/A",
+        "thickness": "0.625-1 mm",
+        "notes": "Baseline if done",
+        "coverage": "Region \u2192 Region"
+      },
+      {
+        "name": "Contrast phase",
+        "start": "Region",
+        "end": "Region",
+        "delay": "60-90 sec if done",
+        "thickness": "0.625-1 mm",
+        "notes": "Standard if done",
+        "coverage": "Region \u2192 Region"
+      },
+      {
+        "name": "Delayed phase",
+        "start": "Region",
+        "end": "Region",
+        "delay": "5-10 min if done",
+        "thickness": "1-2 mm",
+        "notes": "For infection/tumor",
+        "coverage": "Region \u2192 Region"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Non-contrast",
+        "phase": "Non-contrast",
+        "coverage": "Region to Region"
+      },
+      {
+        "series": "Contrast phase",
+        "phase": "Contrast (60-90 sec if done delay)",
+        "coverage": "Region to Region"
+      },
+      {
+        "series": "Delayed phase",
+        "phase": "Contrast (5-10 min if done delay)",
+        "coverage": "Region to Region"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/neuro/brain-stroke-protocol.md",
+    "title": "Brain Stroke Protocol",
+    "category": "Neuro",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Brain Stroke Protocol Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 22s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      CTA Head    :crit, scan1, after contrast, 3s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 350 for CTA/CTP",
+      "volume": "100 mL",
+      "flow_rate": "4-5 mL/s",
+      "timing": "Multi-phase stroke protocol",
+      "roi": "Multiple ROIs",
+      "trigger": "Varies",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "NC Head",
+        "start": "Vertex",
+        "end": "Foramen magnum",
+        "delay": "N/A",
+        "thickness": "5 mm",
+        "notes": "STAT no contrast",
+        "coverage": "Vertex \u2192 Foramen magnum"
+      },
+      {
+        "name": "CTA Head",
+        "start": "Skull base",
+        "end": "Vertex",
+        "delay": "Bolus tracked aorta",
+        "thickness": "0.625 mm",
+        "notes": "Intracranial vessels",
+        "coverage": "Skull base \u2192 Vertex"
+      },
+      {
+        "name": "CTA Neck",
+        "start": "Aortic arch",
+        "end": "Skull base",
+        "delay": "Continues from head",
+        "thickness": "0.625 mm",
+        "notes": "Extracranial vessels",
+        "coverage": "Aortic arch \u2192 Skull base"
+      },
+      {
+        "name": "CTP (optional)",
+        "start": "Basal ganglia level",
+        "end": "8cm slab",
+        "delay": "Auto-triggered",
+        "thickness": "5 mm dynamic",
+        "notes": "Perfusion if candidate",
+        "coverage": "Basal ganglia level \u2192 8cm slab"
+      }
+    ],
+    "summary": [
+      {
+        "series": "NC Head",
+        "phase": "Non-contrast",
+        "coverage": "Vertex to Foramen magnum"
+      },
+      {
+        "series": "CTA Head",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Skull base to Vertex"
+      },
+      {
+        "series": "CTA Neck",
+        "phase": "Contrast (Continues from head delay)",
+        "coverage": "Aortic arch to Skull base"
+      },
+      {
+        "series": "CTP (optional)",
+        "phase": "Contrast (Auto-triggered delay)",
+        "coverage": "Basal ganglia level to 8cm slab"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/neuro/ct-cervical-spine.md",
+    "title": "CT Cervical Spine",
+    "category": "Neuro",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Cervical Spine Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 33s\n      Saline (20mL)          :active, saline, after contrast, 6s\n  ```",
+    "contrast": {
+      "agent": "None typically. Contrast if infection/tumor",
+      "volume": "If contrast: 100 mL",
+      "flow_rate": "3 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "C-spine Helical",
+        "start": "Skull base",
+        "end": "T1",
+        "delay": "N/A or 60s if contrast",
+        "thickness": "0.625 mm",
+        "notes": "Submillimeter acquisition",
+        "coverage": "Skull base \u2192 T1"
+      }
+    ],
+    "summary": [
+      {
+        "series": "C-spine Helical",
+        "phase": "Contrast (N/A or 60s if contrast delay)",
+        "coverage": "Skull base to T1"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/neuro/ct-complete-spine.md",
+    "title": "CT Complete Spine",
+    "category": "Neuro",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Complete Spine Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 125 mL)    :active, contrast, 00:00, 41s\n      Saline (20mL)          :active, saline, after contrast, 6s\n  ```",
+    "contrast": {
+      "agent": "None typically. Contrast if infection/mets",
+      "volume": "If contrast: 125 mL",
+      "flow_rate": "3 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Complete Spine",
+        "start": "Skull base",
+        "end": "Sacrum",
+        "delay": "N/A or 60s if contrast",
+        "thickness": "0.625-1 mm",
+        "notes": "Submillimeter entire spine",
+        "coverage": "Skull base \u2192 Sacrum"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Complete Spine",
+        "phase": "Contrast (N/A or 60s if contrast delay)",
+        "coverage": "Skull base to Sacrum"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/neuro/ct-facial-bones.md",
+    "title": "CT Facial Bones",
+    "category": "Neuro",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Facial Bones Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Acquisition\n      Standard scan    :done, scan1, 00:00, 10s\n  ```",
+    "contrast": {
+      "type": "Non-contrast"
+    },
+    "series": [
+      {
+        "name": "Facial Bones",
+        "start": "Frontal sinus",
+        "end": "Mandible",
+        "delay": "N/A",
+        "thickness": "0.625 mm",
+        "notes": "Submillimeter for 3D",
+        "coverage": "Frontal sinus \u2192 Mandible"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Facial Bones",
+        "phase": "Non-contrast",
+        "coverage": "Frontal sinus to Mandible"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/neuro/ct-head-3d-stereotactic.md",
+    "title": "CT Head 3D Stereotactic",
+    "category": "Neuro",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Head 3D Stereotactic Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 33s\n      Saline (20mL)          :active, saline, after contrast, 6s\n  ```",
+    "contrast": {
+      "agent": "None typically. Contrast optional",
+      "volume": "If contrast: 100 mL",
+      "flow_rate": "3 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Stereotactic Head",
+        "start": "Vertex",
+        "end": "Skull base",
+        "delay": "N/A (or 60-90s if contrast)",
+        "thickness": "0.5-0.625 mm",
+        "notes": "Isotropic submillimeter",
+        "coverage": "Vertex \u2192 Skull base"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Stereotactic Head",
+        "phase": "Contrast (N/A (or 60-90s if contrast) delay)",
+        "coverage": "Vertex to Skull base"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/neuro/ct-lumbar-spine.md",
+    "title": "CT Lumbar Spine",
+    "category": "Neuro",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Lumbar Spine Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 33s\n      Saline (20mL)          :active, saline, after contrast, 6s\n  ```",
+    "contrast": {
+      "agent": "None typically. Contrast if infection/tumor/post-op",
+      "volume": "If contrast: 100 mL",
+      "flow_rate": "3 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "L-spine Helical",
+        "start": "T12",
+        "end": "Sacrum",
+        "delay": "N/A or 60s if contrast",
+        "thickness": "0.625 mm",
+        "notes": "Submillimeter",
+        "coverage": "T12 \u2192 Sacrum"
+      }
+    ],
+    "summary": [
+      {
+        "series": "L-spine Helical",
+        "phase": "Contrast (N/A or 60s if contrast delay)",
+        "coverage": "T12 to Sacrum"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/neuro/ct-myelogram.md",
+    "title": "CT Myelogram",
+    "category": "Neuro",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Myelogram Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Acquisition\n      Standard scan    :done, scan1, 00:00, 10s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 240 intrathecal",
+      "volume": "10-15 mL IT",
+      "flow_rate": "N/A",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "CT Myelogram",
+        "start": "Region of interest",
+        "end": "Extended coverage",
+        "delay": "N/A",
+        "thickness": "0.625 mm",
+        "notes": "Submillimeter for detail",
+        "coverage": "Region of interest \u2192 Extended coverage"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CT Myelogram",
+        "phase": "Non-contrast",
+        "coverage": "Region of interest to Extended coverage"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/neuro/ct-orbits.md",
+    "title": "CT Orbits",
+    "category": "Neuro",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Orbits Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (75-100 mL if contrast)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 6s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 350 if contrast",
+      "volume": "75-100 mL if contrast",
+      "flow_rate": "3 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Axial Orbits",
+        "start": "Superior orbital rim",
+        "end": "Maxillary sinus",
+        "delay": "N/A or 60s if contrast",
+        "thickness": "1-1.5 mm",
+        "notes": "Parallel to optic nerves",
+        "coverage": "Superior orbital rim \u2192 Maxillary sinus"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Axial Orbits",
+        "phase": "Contrast (N/A or 60s if contrast delay)",
+        "coverage": "Superior orbital rim to Maxillary sinus"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/neuro/ct-parathyroid-4d.md",
+    "title": "CT Parathyroid 4D",
+    "category": "Neuro",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Parathyroid 4D Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (75-100 mL)    :active, contrast, 00:00, 18s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      Arterial Phase    :crit, scan1, 00:25, 5s\n      section Portal Venous Phase\n      Venous Phase    :done, scan2, 00:55, 5s\n      section Delayed Phase\n      Delayed Phase    :done, scan3, 01:30, 5s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 350",
+      "volume": "75-100 mL",
+      "flow_rate": "4 mL/s",
+      "timing": "4D multi-phase",
+      "roi": "Carotid artery",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Non-Contrast",
+        "start": "Skull base",
+        "end": "Carina",
+        "delay": "N/A",
+        "thickness": "2.5 mm",
+        "notes": "Baseline",
+        "coverage": "Skull base \u2192 Carina"
+      },
+      {
+        "name": "Arterial Phase",
+        "start": "Skull base",
+        "end": "Carina",
+        "delay": "25 sec",
+        "thickness": "2 mm",
+        "notes": "Parathyroid enhancement",
+        "coverage": "Skull base \u2192 Carina"
+      },
+      {
+        "name": "Venous Phase",
+        "start": "Skull base",
+        "end": "Carina",
+        "delay": "55 sec",
+        "thickness": "2 mm",
+        "notes": "Thyroid enhancement",
+        "coverage": "Skull base \u2192 Carina"
+      },
+      {
+        "name": "Delayed Phase",
+        "start": "Skull base",
+        "end": "Carina",
+        "delay": "90 sec",
+        "thickness": "2.5 mm",
+        "notes": "Washout phase",
+        "coverage": "Skull base \u2192 Carina"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Non-Contrast",
+        "phase": "Non-contrast",
+        "coverage": "Skull base to Carina"
+      },
+      {
+        "series": "Arterial Phase",
+        "phase": "Contrast (25 sec delay)",
+        "coverage": "Skull base to Carina"
+      },
+      {
+        "series": "Venous Phase",
+        "phase": "Contrast (55 sec delay)",
+        "coverage": "Skull base to Carina"
+      },
+      {
+        "series": "Delayed Phase",
+        "phase": "Contrast (90 sec delay)",
+        "coverage": "Skull base to Carina"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/neuro/ct-sinus.md",
+    "title": "CT Sinus",
+    "category": "Neuro",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Sinus Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Acquisition\n      Standard scan    :done, scan1, 00:00, 10s\n  ```",
+    "contrast": {
+      "type": "Non-contrast"
+    },
+    "series": [
+      {
+        "name": "Coronal Sinus",
+        "start": "Frontal sinus",
+        "end": "Maxillary sinus",
+        "delay": "N/A",
+        "thickness": "0.625 mm",
+        "notes": "Direct coronal if possible",
+        "coverage": "Frontal sinus \u2192 Maxillary sinus"
+      },
+      {
+        "name": "Axial reformat",
+        "start": "Frontal",
+        "end": "Maxillary",
+        "delay": "From coronal",
+        "thickness": "0.625 mm",
+        "notes": "Reformatted from coronal",
+        "coverage": "Frontal \u2192 Maxillary"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Coronal Sinus",
+        "phase": "Non-contrast",
+        "coverage": "Frontal sinus to Maxillary sinus"
+      },
+      {
+        "series": "Axial reformat",
+        "phase": "Contrast (From coronal delay)",
+        "coverage": "Frontal to Maxillary"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/neuro/ct-sinus-stereotactic.md",
+    "title": "CT Sinus Stereotactic",
+    "category": "Neuro",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Sinus Stereotactic Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Acquisition\n      Standard scan    :done, scan1, 00:00, 10s\n  ```",
+    "contrast": {
+      "type": "Non-contrast"
+    },
+    "series": [
+      {
+        "name": "Stereotactic Sinus",
+        "start": "Frontal sinus",
+        "end": "Hard palate",
+        "delay": "N/A",
+        "thickness": "0.625 mm",
+        "notes": "Isotropic submillimeter",
+        "coverage": "Frontal sinus \u2192 Hard palate"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Stereotactic Sinus",
+        "phase": "Non-contrast",
+        "coverage": "Frontal sinus to Hard palate"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/neuro/ct-soft-tissue-neck.md",
+    "title": "CT Soft Tissue Neck",
+    "category": "Neuro",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Soft Tissue Neck Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 33s\n      Saline (20mL)          :active, saline, after contrast, 6s\n      section Scan Phase 1\n      Contrast Neck    :done, scan1, 01:00, 5s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 350",
+      "volume": "100 mL",
+      "flow_rate": "3 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Contrast Neck",
+        "start": "Skull base",
+        "end": "Thoracic inlet",
+        "delay": "60-70 sec",
+        "thickness": "1-2 mm",
+        "notes": "Venous phase",
+        "coverage": "Skull base \u2192 Thoracic inlet"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Contrast Neck",
+        "phase": "Contrast (60-70 sec delay)",
+        "coverage": "Skull base to Thoracic inlet"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/neuro/ct-temporal-bones.md",
+    "title": "CT Temporal Bones",
+    "category": "Neuro",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Temporal Bones Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Acquisition\n      Standard scan    :done, scan1, 00:00, 10s\n  ```",
+    "contrast": {
+      "type": "Non-contrast"
+    },
+    "series": [
+      {
+        "name": "Axial Temporal",
+        "start": "EAC",
+        "end": "Petrous apex",
+        "delay": "N/A",
+        "thickness": "0.5-0.625 mm",
+        "notes": "Parallel to lateral SCC",
+        "coverage": "EAC \u2192 Petrous apex"
+      },
+      {
+        "name": "Coronal Temporal",
+        "start": "EAC",
+        "end": "IAC",
+        "delay": "N/A",
+        "thickness": "0.5-0.625 mm",
+        "notes": "Perpendicular to petrous ridge",
+        "coverage": "EAC \u2192 IAC"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Axial Temporal",
+        "phase": "Non-contrast",
+        "coverage": "EAC to Petrous apex"
+      },
+      {
+        "series": "Coronal Temporal",
+        "phase": "Non-contrast",
+        "coverage": "EAC to IAC"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/neuro/ct-thoracic-spine.md",
+    "title": "CT Thoracic Spine",
+    "category": "Neuro",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Thoracic Spine Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 33s\n      Saline (20mL)          :active, saline, after contrast, 6s\n  ```",
+    "contrast": {
+      "agent": "None typically. Contrast if infection/tumor",
+      "volume": "If contrast: 100 mL",
+      "flow_rate": "3 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "T-spine Helical",
+        "start": "C7",
+        "end": "L1",
+        "delay": "N/A or 60s if contrast",
+        "thickness": "0.625-1 mm",
+        "notes": "Submillimeter",
+        "coverage": "C7 \u2192 L1"
+      }
+    ],
+    "summary": [
+      {
+        "series": "T-spine Helical",
+        "phase": "Contrast (N/A or 60s if contrast delay)",
+        "coverage": "C7 to L1"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/neuro/cta-head.md",
+    "title": "CTA Head",
+    "category": "Neuro",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Head Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (75-100 mL)    :active, contrast, 00:00, 16s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      CTA Head    :crit, scan1, after contrast, 3s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 350",
+      "volume": "75-100 mL",
+      "flow_rate": "4-5 mL/s",
+      "timing": "Bolus Tracking",
+      "roi": "Aortic arch or carotid",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "NC Head (optional)",
+        "start": "Vertex",
+        "end": "Foramen magnum",
+        "delay": "N/A",
+        "thickness": "5 mm",
+        "notes": "Baseline if SAH",
+        "coverage": "Vertex \u2192 Foramen magnum"
+      },
+      {
+        "name": "CTA Head",
+        "start": "Skull base",
+        "end": "Vertex",
+        "delay": "Bolus tracked",
+        "thickness": "0.5-0.625 mm",
+        "notes": "Submillimeter for 3D",
+        "coverage": "Skull base \u2192 Vertex"
+      }
+    ],
+    "summary": [
+      {
+        "series": "NC Head (optional)",
+        "phase": "Non-contrast",
+        "coverage": "Vertex to Foramen magnum"
+      },
+      {
+        "series": "CTA Head",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Skull base to Vertex"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/neuro/cta-neck.md",
+    "title": "CTA Neck",
+    "category": "Neuro",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Neck Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (90-100 mL)    :active, contrast, 00:00, 20s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      CTA Neck    :crit, scan1, after contrast, 5s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 350",
+      "volume": "90-100 mL",
+      "flow_rate": "4-5 mL/s",
+      "timing": "Bolus Tracking",
+      "roi": "Aortic arch",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "CTA Neck",
+        "start": "Aortic arch",
+        "end": "Skull base",
+        "delay": "Bolus tracked",
+        "thickness": "0.625 mm",
+        "notes": "Caudocranial",
+        "coverage": "Aortic arch \u2192 Skull base"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CTA Neck",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Aortic arch to Skull base"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/neuro/ctv-head.md",
+    "title": "CTV Head",
+    "category": "Neuro",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTV Head Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (75-100 mL)    :active, contrast, 00:00, 21s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Scan Phase 1\n      CTV Head    :done, scan1, 01:00, 3s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 350",
+      "volume": "75-100 mL",
+      "flow_rate": "3-4 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "NC Head",
+        "start": "Vertex",
+        "end": "Foramen magnum",
+        "delay": "N/A",
+        "thickness": "5 mm",
+        "notes": "Baseline",
+        "coverage": "Vertex \u2192 Foramen magnum"
+      },
+      {
+        "name": "CTV Head",
+        "start": "Skull base",
+        "end": "Vertex",
+        "delay": "60-90 sec delay",
+        "thickness": "0.625-1 mm",
+        "notes": "Venous phase",
+        "coverage": "Skull base \u2192 Vertex"
+      }
+    ],
+    "summary": [
+      {
+        "series": "NC Head",
+        "phase": "Non-contrast",
+        "coverage": "Vertex to Foramen magnum"
+      },
+      {
+        "series": "CTV Head",
+        "phase": "Contrast (60-90 sec delay delay)",
+        "coverage": "Skull base to Vertex"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/neuro/non-contrast-ct-head.md",
+    "title": "Non-Contrast CT Head",
+    "category": "Neuro",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Non-Contrast CT Head Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Acquisition\n      Standard scan    :done, scan1, 00:00, 10s\n  ```",
+    "contrast": {
+      "type": "Non-contrast"
+    },
+    "series": [
+      {
+        "name": "Scout/Topogram",
+        "start": "Vertex",
+        "end": "C1",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "Lateral scout",
+        "coverage": "Vertex \u2192 C1"
+      },
+      {
+        "name": "Non-Contrast Head",
+        "start": "Vertex",
+        "end": "Foramen magnum",
+        "delay": "N/A",
+        "thickness": "5 mm",
+        "notes": "Angle parallel to hard palate",
+        "coverage": "Vertex \u2192 Foramen magnum"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Non-Contrast Head",
+        "phase": "Non-contrast",
+        "coverage": "Vertex to Foramen magnum"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/trauma/pregnant-trauma-ct-ap.md",
+    "title": "Pregnant Trauma CT AP",
+    "category": "Trauma",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Pregnant Trauma CT AP Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 41s\n      Saline (20mL)          :active, saline, after contrast, 6s\n      section Portal Venous Phase\n      Portal Venous AP    :done, scan1, 01:10, 7s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 350",
+      "volume": "125 mL",
+      "flow_rate": "3 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Portal Venous AP",
+        "start": "Diaphragm",
+        "end": "Pubic symphysis",
+        "delay": "70 sec",
+        "thickness": "2.5 mm",
+        "notes": "Single phase minimize radiation",
+        "coverage": "Diaphragm \u2192 Pubic symphysis"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Portal Venous AP",
+        "phase": "Contrast (70 sec delay)",
+        "coverage": "Diaphragm to Pubic symphysis"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/trauma/trauma-cta-chest-with-pv-ct-ap.md",
+    "title": "Trauma CTA Chest with PV CT AP",
+    "category": "Trauma",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Trauma CTA Chest with PV CT AP Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 31s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Chest    :crit, scan1, after contrast, 6s\n      section Portal Venous Phase\n      Portal Venous AP    :done, scan2, 01:10, 7s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 350",
+      "volume": "125 mL",
+      "flow_rate": "4 mL/s",
+      "timing": "Dual phase: CTA Chest arterial + Portal venous AP",
+      "roi": "Descending aorta",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "CTA Chest",
+        "start": "Lung apices",
+        "end": "Diaphragm",
+        "delay": "Bolus tracked",
+        "thickness": "0.625 mm",
+        "notes": "Arterial phase",
+        "coverage": "Lung apices \u2192 Diaphragm"
+      },
+      {
+        "name": "Portal Venous AP",
+        "start": "Diaphragm",
+        "end": "Pubic symphysis",
+        "delay": "70 sec from start",
+        "thickness": "0.625 mm",
+        "notes": "Portal venous phase",
+        "coverage": "Diaphragm \u2192 Pubic symphysis"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CTA Chest",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Lung apices to Diaphragm"
+      },
+      {
+        "series": "Portal Venous AP",
+        "phase": "Contrast (70 sec from start delay)",
+        "coverage": "Diaphragm to Pubic symphysis"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/trauma/trauma-chest-ct.md",
+    "title": "Trauma Chest CT",
+    "category": "Trauma",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Trauma Chest CT Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Acquisition\n      Standard scan    :done, scan1, 00:00, 10s\n  ```",
+    "contrast": {
+      "type": "Non-contrast"
+    },
+    "series": [
+      {
+        "name": "NC Chest",
+        "start": "Lung apices",
+        "end": "Costophrenic angles",
+        "delay": "N/A",
+        "thickness": "0.625-1 mm",
+        "notes": "Submillimeter for ribs",
+        "coverage": "Lung apices \u2192 Costophrenic angles"
+      }
+    ],
+    "summary": [
+      {
+        "series": "NC Chest",
+        "phase": "Non-contrast",
+        "coverage": "Lung apices to Costophrenic angles"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/trauma/trauma-code-aaa.md",
+    "title": "Trauma Code AAA",
+    "category": "Trauma",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Trauma Code AAA Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 27s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      Arterial CAP    :crit, scan1, 00:25, 7s\n      section Portal Venous Phase\n      Portal Venous CAP    :done, scan2, 01:10, 7s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 350",
+      "volume": "125 mL",
+      "flow_rate": "4-5 mL/s",
+      "timing": "Triple phase: NC + Arterial + Portal venous",
+      "roi": "Abdominal aorta",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Non-Contrast CAP",
+        "start": "Diaphragm",
+        "end": "Pubic symphysis",
+        "delay": "N/A",
+        "thickness": "2.5 mm",
+        "notes": "RAPID - hematoma",
+        "coverage": "Diaphragm \u2192 Pubic symphysis"
+      },
+      {
+        "name": "Arterial CAP",
+        "start": "Diaphragm",
+        "end": "Pubic symphysis",
+        "delay": "25-30 sec",
+        "thickness": "0.625 mm",
+        "notes": "Active bleeding + aneurysm",
+        "coverage": "Diaphragm \u2192 Pubic symphysis"
+      },
+      {
+        "name": "Portal Venous CAP",
+        "start": "Diaphragm",
+        "end": "Pubic symphysis",
+        "delay": "70 sec",
+        "thickness": "2.5 mm",
+        "notes": "Organs and venous",
+        "coverage": "Diaphragm \u2192 Pubic symphysis"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Non-Contrast CAP",
+        "phase": "Non-contrast",
+        "coverage": "Diaphragm to Pubic symphysis"
+      },
+      {
+        "series": "Arterial CAP",
+        "phase": "Contrast (25-30 sec delay)",
+        "coverage": "Diaphragm to Pubic symphysis"
+      },
+      {
+        "series": "Portal Venous CAP",
+        "phase": "Contrast (70 sec delay)",
+        "coverage": "Diaphragm to Pubic symphysis"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/trauma/trauma-head-c-spine-and-facial-bones.md",
+    "title": "Trauma Head C-Spine and Facial Bones",
+    "category": "Trauma",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Trauma Head C-Spine and Facial Bones Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Acquisition\n      Standard scan    :done, scan1, 00:00, 10s\n  ```",
+    "contrast": {
+      "type": "Non-contrast"
+    },
+    "series": [
+      {
+        "name": "NC Head",
+        "start": "Vertex",
+        "end": "Foramen magnum",
+        "delay": "N/A",
+        "thickness": "5 mm",
+        "notes": "Standard head",
+        "coverage": "Vertex \u2192 Foramen magnum"
+      },
+      {
+        "name": "NC C-spine",
+        "start": "Skull base",
+        "end": "T1",
+        "delay": "N/A",
+        "thickness": "0.625 mm",
+        "notes": "Submillimeter",
+        "coverage": "Skull base \u2192 T1"
+      },
+      {
+        "name": "NC Facial Bones",
+        "start": "Frontal sinus",
+        "end": "Mandible",
+        "delay": "N/A",
+        "thickness": "0.625 mm",
+        "notes": "Submillimeter for 3D",
+        "coverage": "Frontal sinus \u2192 Mandible"
+      }
+    ],
+    "summary": [
+      {
+        "series": "NC Head",
+        "phase": "Non-contrast",
+        "coverage": "Vertex to Foramen magnum"
+      },
+      {
+        "series": "NC C-spine",
+        "phase": "Non-contrast",
+        "coverage": "Skull base to T1"
+      },
+      {
+        "series": "NC Facial Bones",
+        "phase": "Non-contrast",
+        "coverage": "Frontal sinus to Mandible"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/trauma/trauma-head-and-c-spine.md",
+    "title": "Trauma Head and C-Spine",
+    "category": "Trauma",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Trauma Head and C-Spine Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Acquisition\n      Standard scan    :done, scan1, 00:00, 10s\n  ```",
+    "contrast": {
+      "type": "Non-contrast"
+    },
+    "series": [
+      {
+        "name": "Scout Head",
+        "start": "Vertex",
+        "end": "C1",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "Lateral",
+        "coverage": "Vertex \u2192 C1"
+      },
+      {
+        "name": "NC Head",
+        "start": "Vertex",
+        "end": "Foramen magnum",
+        "delay": "N/A",
+        "thickness": "5 mm",
+        "notes": "Parallel to hard palate",
+        "coverage": "Vertex \u2192 Foramen magnum"
+      },
+      {
+        "name": "Scout C-spine",
+        "start": "Skull base",
+        "end": "T1",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "AP and lateral",
+        "coverage": "Skull base \u2192 T1"
+      },
+      {
+        "name": "NC C-spine",
+        "start": "Skull base",
+        "end": "T1",
+        "delay": "N/A",
+        "thickness": "0.625 mm",
+        "notes": "Helical submillimeter",
+        "coverage": "Skull base \u2192 T1"
+      }
+    ],
+    "summary": [
+      {
+        "series": "NC Head",
+        "phase": "Non-contrast",
+        "coverage": "Vertex to Foramen magnum"
+      },
+      {
+        "series": "NC C-spine",
+        "phase": "Non-contrast",
+        "coverage": "Skull base to T1"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/trauma/trauma-lower-extremity-runoff-cta.md",
+    "title": "Trauma Lower Extremity Runoff CTA",
+    "category": "Trauma",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title Trauma Lower Extremity Runoff CTA Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 27s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, after contrast, 5s\n  ```",
+    "contrast": {
+      "agent": "Omnipaque 350",
+      "volume": "125 mL",
+      "flow_rate": "4-5 mL/s",
+      "timing": "Bolus Tracking",
+      "roi": "Abdominal aorta or proximal to injury",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "CTA Arterial",
+        "start": "Coverage as needed",
+        "end": "Distal to injury",
+        "delay": "Bolus tracked",
+        "thickness": "0.625 mm",
+        "notes": "Arterial phase runoff",
+        "coverage": "Coverage as needed \u2192 Distal to injury"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CTA Arterial",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Coverage as needed to Distal to injury"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/vascular/cta-abdomen-pelvis.md",
+    "title": "CTA Abdomen Pelvis",
+    "category": "Vascular",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Abdomen Pelvis Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 31s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, after contrast, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "125 mL",
+      "flow_rate": "4 mL/s",
+      "timing": "Bolus Tracking",
+      "roi": "Abdominal aorta at celiac",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Scout/Topogram",
+        "start": "Diaphragm",
+        "end": "Femoral heads",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "AP lateral",
+        "coverage": "Diaphragm \u2192 Femoral heads"
+      },
+      {
+        "name": "CTA Arterial",
+        "start": "Diaphragm",
+        "end": "Femoral heads",
+        "delay": "Bolus tracked",
+        "thickness": "0.625 mm",
+        "notes": "Caudocranial direction",
+        "coverage": "Diaphragm \u2192 Femoral heads"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CTA Arterial",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Diaphragm to Femoral heads"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/vascular/cta-chest.md",
+    "title": "CTA Chest",
+    "category": "Vascular",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Chest Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Arterial Chest    :crit, scan1, after contrast, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "100 mL",
+      "flow_rate": "4 mL/s",
+      "timing": "Bolus Tracking",
+      "roi": "Ascending aorta or main PA",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Scout/Topogram",
+        "start": "Lung apices",
+        "end": "Adrenal glands",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "AP and lateral",
+        "coverage": "Lung apices \u2192 Adrenal glands"
+      },
+      {
+        "name": "CTA Arterial Chest",
+        "start": "Lung apices",
+        "end": "Adrenal glands",
+        "delay": "Bolus tracked",
+        "thickness": "0.625 mm",
+        "notes": "Caudocranial direction",
+        "coverage": "Lung apices \u2192 Adrenal glands"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CTA Arterial Chest",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Lung apices to Adrenal glands"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/vascular/cta-chest-abdomen-pelvis.md",
+    "title": "CTA Chest Abdomen Pelvis",
+    "category": "Vascular",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Chest Abdomen Pelvis Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 31s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, after contrast, 10s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "125 mL",
+      "flow_rate": "4 mL/s",
+      "timing": "Bolus Tracking",
+      "roi": "Descending thoracic aorta",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Scout/Topogram",
+        "start": "Thoracic inlet",
+        "end": "Pubic symphysis",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "AP and lateral",
+        "coverage": "Thoracic inlet \u2192 Pubic symphysis"
+      },
+      {
+        "name": "CTA Arterial",
+        "start": "Thoracic inlet",
+        "end": "Pubic symphysis",
+        "delay": "Bolus tracked",
+        "thickness": "0.625 mm",
+        "notes": "Caudocranial from feet to head",
+        "coverage": "Thoracic inlet \u2192 Pubic symphysis"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CTA Arterial",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Thoracic inlet to Pubic symphysis"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/vascular/cta-diep-flap-pre-operative.md",
+    "title": "CTA DIEP Flap Pre-operative",
+    "category": "Vascular",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA DIEP Flap Pre-operative Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, after contrast, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "100 mL",
+      "flow_rate": "4 mL/s",
+      "timing": "Bolus Tracking",
+      "roi": "Abdominal aorta",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Scout/Topogram",
+        "start": "Xiphoid",
+        "end": "Pubic symphysis",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "AP",
+        "coverage": "Xiphoid \u2192 Pubic symphysis"
+      },
+      {
+        "name": "CTA Arterial",
+        "start": "Xiphoid",
+        "end": "Pubic symphysis",
+        "delay": "Bolus tracked",
+        "thickness": "0.625 mm",
+        "notes": "Focus on abdominal wall",
+        "coverage": "Xiphoid \u2192 Pubic symphysis"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CTA Arterial",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Xiphoid to Pubic symphysis"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/vascular/cta-head-and-neck-arch-to-vertex.md",
+    "title": "CTA Head and Neck (Arch to Vertex)",
+    "category": "Vascular",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Head and Neck (Arch to Vertex) Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (80-100 mL)    :active, contrast, 00:00, 17s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      CTA Neck    :crit, scan1, after contrast, 5s\n      section Arterial Phase\n      CTA Head    :crit, scan2, after scan1, 3s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "80-100 mL",
+      "flow_rate": "4-5 mL/s",
+      "timing": "Bolus Tracking",
+      "roi": "Aortic arch",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Scout/Topogram",
+        "start": "Aortic arch",
+        "end": "Vertex",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "AP and lateral",
+        "coverage": "Aortic arch \u2192 Vertex"
+      },
+      {
+        "name": "CTA Neck",
+        "start": "Aortic arch",
+        "end": "Skull base",
+        "delay": "Bolus tracked",
+        "thickness": "0.625 mm",
+        "notes": "Arterial phase - caudocranial",
+        "coverage": "Aortic arch \u2192 Skull base"
+      },
+      {
+        "name": "CTA Head",
+        "start": "Skull base",
+        "end": "Vertex",
+        "delay": "Immediate",
+        "thickness": "0.625 mm",
+        "notes": "Same bolus as neck - single acquisition",
+        "coverage": "Skull base \u2192 Vertex"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CTA Neck",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Aortic arch to Skull base"
+      },
+      {
+        "series": "CTA Head",
+        "phase": "Contrast (Immediate delay)",
+        "coverage": "Skull base to Vertex"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/vascular/cta-lower-extremity-free-flap.md",
+    "title": "CTA Lower Extremity Free Flap",
+    "category": "Vascular",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Lower Extremity Free Flap Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (120 mL)    :active, contrast, 00:00, 30s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, after contrast, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "120 mL",
+      "flow_rate": "4 mL/s",
+      "timing": "Bolus Tracking",
+      "roi": "Femoral artery",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Scout/Topogram",
+        "start": "Iliac crest",
+        "end": "Ankle",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "AP both legs for comparison",
+        "coverage": "Iliac crest \u2192 Ankle"
+      },
+      {
+        "name": "CTA Arterial",
+        "start": "Iliac crest",
+        "end": "Ankle",
+        "delay": "Bolus tracked",
+        "thickness": "0.625 mm",
+        "notes": "Bilateral for comparison and variants",
+        "coverage": "Iliac crest \u2192 Ankle"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CTA Arterial",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Iliac crest to Ankle"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/vascular/cta-lower-extremity-runoff-for-pad.md",
+    "title": "CTA Lower Extremity Runoff for PAD",
+    "category": "Vascular",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Lower Extremity Runoff for PAD Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (150 mL)    :active, contrast, 00:00, 37s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, after contrast, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "150 mL",
+      "flow_rate": "4 mL/s",
+      "timing": "Bolus Tracking",
+      "roi": "Abdominal aorta",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Scout/Topogram",
+        "start": "Renal arteries",
+        "end": "Feet",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "AP full legs",
+        "coverage": "Renal arteries \u2192 Feet"
+      },
+      {
+        "name": "CTA Arterial",
+        "start": "Renal arteries",
+        "end": "Ankle",
+        "delay": "Bolus tracked",
+        "thickness": "0.625 mm",
+        "notes": "May need slower table speed if severe PAD",
+        "coverage": "Renal arteries \u2192 Ankle"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CTA Arterial",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Renal arteries to Ankle"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/vascular/cta-mesenteric-ischemia.md",
+    "title": "CTA Mesenteric Ischemia",
+    "category": "Vascular",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Mesenteric Ischemia Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      Arterial Phase    :crit, scan1, 00:25, 7s\n      section Portal Venous Phase\n      Portal Venous    :done, scan2, 01:10, 7s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "125 mL",
+      "flow_rate": "5 mL/s",
+      "timing": "Dual phase: Arterial + Portal Venous",
+      "roi": "Abdominal aorta at celiac",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Scout/Topogram",
+        "start": "Diaphragm",
+        "end": "Pubic symphysis",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "AP",
+        "coverage": "Diaphragm \u2192 Pubic symphysis"
+      },
+      {
+        "name": "Arterial Phase",
+        "start": "Diaphragm",
+        "end": "Iliac crests",
+        "delay": "25 sec",
+        "thickness": "0.625 mm",
+        "notes": "Focus on celiac SMA IMA",
+        "coverage": "Diaphragm \u2192 Iliac crests"
+      },
+      {
+        "name": "Portal Venous",
+        "start": "Diaphragm",
+        "end": "Pubic symphysis",
+        "delay": "70 sec",
+        "thickness": "0.625 mm",
+        "notes": "Assess bowel wall enhancement",
+        "coverage": "Diaphragm \u2192 Pubic symphysis"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Arterial Phase",
+        "phase": "Contrast (25 sec delay)",
+        "coverage": "Diaphragm to Iliac crests"
+      },
+      {
+        "series": "Portal Venous",
+        "phase": "Contrast (70 sec delay)",
+        "coverage": "Diaphragm to Pubic symphysis"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/vascular/cta-pelvis-cyclist-iliac-artery-maneuver.md",
+    "title": "CTA Pelvis Cyclist Iliac Artery Maneuver",
+    "category": "Vascular",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Pelvis Cyclist Iliac Artery Maneuver Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Resting Position    :crit, scan1, after contrast, 5s\n      section Arterial Phase\n      CTA Hip Flexion    :crit, scan2, after scan1, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "100 mL",
+      "flow_rate": "4 mL/s",
+      "timing": "Dual position: Resting + Hip flexion cycling position",
+      "roi": "External iliac artery",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Scout/Topogram",
+        "start": "L3",
+        "end": "Proximal femur",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "AP pelvis",
+        "coverage": "L3 \u2192 Proximal femur"
+      },
+      {
+        "name": "CTA Resting Position",
+        "start": "L3",
+        "end": "Mid femur",
+        "delay": "Bolus tracked",
+        "thickness": "0.625 mm",
+        "notes": "Supine resting position",
+        "coverage": "L3 \u2192 Mid femur"
+      },
+      {
+        "name": "CTA Hip Flexion",
+        "start": "L3",
+        "end": "Mid femur",
+        "delay": "Immediately after",
+        "thickness": "0.625 mm",
+        "notes": "Hips flexed 90 degrees - cycling position",
+        "coverage": "L3 \u2192 Mid femur"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CTA Resting Position",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "L3 to Mid femur"
+      },
+      {
+        "series": "CTA Hip Flexion",
+        "phase": "Contrast (Immediately after delay)",
+        "coverage": "L3 to Mid femur"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/vascular/cta-pelvis-prostate-artery-embolization.md",
+    "title": "CTA Pelvis Prostate Artery Embolization",
+    "category": "Vascular",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Pelvis Prostate Artery Embolization Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 28s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, after contrast, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "100 mL",
+      "flow_rate": "3-4 mL/s",
+      "timing": "Bolus Tracking",
+      "roi": "Common iliac artery",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Scout/Topogram",
+        "start": "L3",
+        "end": "Proximal femur",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "AP pelvis",
+        "coverage": "L3 \u2192 Proximal femur"
+      },
+      {
+        "name": "CTA Arterial",
+        "start": "L3",
+        "end": "Proximal femur",
+        "delay": "Bolus tracked",
+        "thickness": "0.625 mm",
+        "notes": "Focus on internal iliac branches",
+        "coverage": "L3 \u2192 Proximal femur"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CTA Arterial",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "L3 to Proximal femur"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/vascular/cta-popliteal-entrapment.md",
+    "title": "CTA Popliteal Entrapment",
+    "category": "Vascular",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Popliteal Entrapment Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Neutral Position    :crit, scan1, after contrast, 3s\n      section Arterial Phase\n      CTA Plantarflexion    :crit, scan2, after scan1, 3s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "100 mL",
+      "flow_rate": "4 mL/s",
+      "timing": "Dual position: Neutral + Plantarflexion",
+      "roi": "Popliteal artery",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Scout/Topogram",
+        "start": "Distal femur",
+        "end": "Ankle",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "AP both legs",
+        "coverage": "Distal femur \u2192 Ankle"
+      },
+      {
+        "name": "CTA Neutral Position",
+        "start": "Distal femur",
+        "end": "Ankle",
+        "delay": "Bolus tracked",
+        "thickness": "0.625 mm",
+        "notes": "Both legs neutral resting position",
+        "coverage": "Distal femur \u2192 Ankle"
+      },
+      {
+        "name": "CTA Plantarflexion",
+        "start": "Distal femur",
+        "end": "Ankle",
+        "delay": "Immediately after",
+        "thickness": "0.625 mm",
+        "notes": "Patient actively plantarflexes both feet - point toes",
+        "coverage": "Distal femur \u2192 Ankle"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CTA Neutral Position",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Distal femur to Ankle"
+      },
+      {
+        "series": "CTA Plantarflexion",
+        "phase": "Contrast (Immediately after delay)",
+        "coverage": "Distal femur to Ankle"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/vascular/cta-scadfmd-protocol.md",
+    "title": "CTA SCAD/FMD Protocol",
+    "category": "Vascular",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA SCAD/FMD Protocol Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (150 mL total)    :active, contrast, 00:00, 37s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Neck    :crit, scan1, after contrast, 8s\n      section Arterial Phase\n      CTA CAP    :crit, scan2, 00:35, 7s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "150 mL total",
+      "flow_rate": "4 mL/s",
+      "timing": "Multi-phase: NC Head + CTA Neck + CTA CAP arms up + Post-contrast Head arms down",
+      "roi": "Multiple ROIs",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Non-contrast Head",
+        "start": "Vertex",
+        "end": "Foramen magnum",
+        "delay": "N/A",
+        "thickness": "5 mm",
+        "notes": "Arms down - baseline",
+        "coverage": "Vertex \u2192 Foramen magnum"
+      },
+      {
+        "name": "CTA Neck",
+        "start": "Aortic arch",
+        "end": "Vertex",
+        "delay": "Bolus tracked",
+        "thickness": "0.625 mm",
+        "notes": "Arms down - carotid/vertebral",
+        "coverage": "Aortic arch \u2192 Vertex"
+      },
+      {
+        "name": "CTA CAP",
+        "start": "Diaphragm",
+        "end": "Pubic symphysis",
+        "delay": "35 sec after neck",
+        "thickness": "0.625 mm",
+        "notes": "Arms UP - renal and mesenteric",
+        "coverage": "Diaphragm \u2192 Pubic symphysis"
+      },
+      {
+        "name": "Post-contrast Head",
+        "start": "Vertex",
+        "end": "Foramen magnum",
+        "delay": "After CAP",
+        "thickness": "1.25 mm",
+        "notes": "Arms DOWN - intracranial vessels",
+        "coverage": "Vertex \u2192 Foramen magnum"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Non-contrast Head",
+        "phase": "Non-contrast",
+        "coverage": "Vertex to Foramen magnum"
+      },
+      {
+        "series": "CTA Neck",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Aortic arch to Vertex"
+      },
+      {
+        "series": "CTA CAP",
+        "phase": "Contrast (35 sec after neck delay)",
+        "coverage": "Diaphragm to Pubic symphysis"
+      },
+      {
+        "series": "Post-contrast Head",
+        "phase": "Contrast (After CAP delay)",
+        "coverage": "Vertex to Foramen magnum"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/vascular/cta-upper-extremity.md",
+    "title": "CTA Upper Extremity",
+    "category": "Vascular",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA Upper Extremity Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 5s\n      section Arterial Phase\n      CTA Arterial    :crit, scan1, after contrast, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "100 mL",
+      "flow_rate": "4 mL/s",
+      "timing": "Bolus Tracking",
+      "roi": "Subclavian artery",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Scout/Topogram",
+        "start": "Aortic arch",
+        "end": "Fingertips",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "AP of arm",
+        "coverage": "Aortic arch \u2192 Fingertips"
+      },
+      {
+        "name": "CTA Arterial",
+        "start": "Aortic arch",
+        "end": "Fingertips",
+        "delay": "Bolus tracked",
+        "thickness": "0.625 mm",
+        "notes": "Include arch through hand",
+        "coverage": "Aortic arch \u2192 Fingertips"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CTA Arterial",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Aortic arch to Fingertips"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/vascular/cta-for-gi-bleed.md",
+    "title": "CTA for GI Bleed",
+    "category": "Vascular",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTA for GI Bleed Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Arterial Phase\n      Arterial Phase    :crit, scan1, 00:25, 7s\n      section Portal Venous Phase\n      Portal Venous Phase    :done, scan2, 01:10, 7s\n      section Delayed Phase\n      Delayed Phase    :done, scan3, 01:30, 7s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "125 mL",
+      "flow_rate": "5 mL/s",
+      "timing": "Triple phase: Arterial + Portal Venous + Delayed",
+      "roi": "Abdominal aorta",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Scout/Topogram",
+        "start": "Diaphragm",
+        "end": "Pubic symphysis",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "AP scout",
+        "coverage": "Diaphragm \u2192 Pubic symphysis"
+      },
+      {
+        "name": "Arterial Phase",
+        "start": "Diaphragm",
+        "end": "Pubic symphysis",
+        "delay": "25 sec",
+        "thickness": "0.625 mm",
+        "notes": "High flow rate 5 mL/s critical",
+        "coverage": "Diaphragm \u2192 Pubic symphysis"
+      },
+      {
+        "name": "Portal Venous Phase",
+        "start": "Diaphragm",
+        "end": "Pubic symphysis",
+        "delay": "70 sec",
+        "thickness": "0.625 mm",
+        "notes": "Standard portal venous timing",
+        "coverage": "Diaphragm \u2192 Pubic symphysis"
+      },
+      {
+        "name": "Delayed Phase",
+        "start": "Diaphragm",
+        "end": "Pubic symphysis",
+        "delay": "90-180 sec",
+        "thickness": "0.625 mm",
+        "notes": "Extended delay to see pooling of contrast",
+        "coverage": "Diaphragm \u2192 Pubic symphysis"
+      }
+    ],
+    "summary": [
+      {
+        "series": "Arterial Phase",
+        "phase": "Contrast (25 sec delay)",
+        "coverage": "Diaphragm to Pubic symphysis"
+      },
+      {
+        "series": "Portal Venous Phase",
+        "phase": "Contrast (70 sec delay)",
+        "coverage": "Diaphragm to Pubic symphysis"
+      },
+      {
+        "series": "Delayed Phase",
+        "phase": "Contrast (90-180 sec delay)",
+        "coverage": "Diaphragm to Pubic symphysis"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/vascular/ctv-abdomen-pelvis.md",
+    "title": "CTV Abdomen Pelvis",
+    "category": "Vascular",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTV Abdomen Pelvis Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 41s\n      Saline (20mL)          :active, saline, after contrast, 6s\n      section Portal Venous Phase\n      CTV Venous Phase    :done, scan1, 03:00, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "125 mL",
+      "flow_rate": "3 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Scout/Topogram",
+        "start": "Diaphragm",
+        "end": "Proximal femur",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "AP",
+        "coverage": "Diaphragm \u2192 Proximal femur"
+      },
+      {
+        "name": "CTV Venous Phase",
+        "start": "Diaphragm",
+        "end": "Proximal femur",
+        "delay": "180 sec",
+        "thickness": "0.625 mm",
+        "notes": "Extended delay for venous opacification",
+        "coverage": "Diaphragm \u2192 Proximal femur"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CTV Venous Phase",
+        "phase": "Contrast (180 sec delay)",
+        "coverage": "Diaphragm to Proximal femur"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/vascular/ctv-chest-abdomen-pelvis.md",
+    "title": "CTV Chest Abdomen Pelvis",
+    "category": "Vascular",
+    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CTV Chest Abdomen Pelvis Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 41s\n      Saline (20mL)          :active, saline, after contrast, 6s\n      section Portal Venous Phase\n      CTV Venous Phase    :done, scan1, 03:00, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "125 mL",
+      "flow_rate": "3 mL/s",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Scout/Topogram",
+        "start": "Thoracic inlet",
+        "end": "Proximal femur",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "AP full body",
+        "coverage": "Thoracic inlet \u2192 Proximal femur"
+      },
+      {
+        "name": "CTV Venous Phase",
+        "start": "Thoracic inlet",
+        "end": "Proximal femur",
+        "delay": "180 sec",
+        "thickness": "0.625 mm",
+        "notes": "Extended venous phase",
+        "coverage": "Thoracic inlet \u2192 Proximal femur"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CTV Venous Phase",
+        "phase": "Contrast (180 sec delay)",
+        "coverage": "Thoracic inlet to Proximal femur"
+      }
+    ]
+  }
+]
