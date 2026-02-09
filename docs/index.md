@@ -8,11 +8,9 @@ title: Radiology Protocol Manager
 
 <div class="hero-buttons">
   <a href="/radiology-protocols/compare/" class="hero-btn primary">
-    <span class="hero-btn-icon">⚡</span>
     Compare Protocols
   </a>
-  <a href="/radiology-protocols/compare/ct/abdomen" class="hero-btn secondary">
-    <span class="hero-btn-icon">📋</span>
+  <a href="/radiology-protocols/ct/cardiac" class="hero-btn secondary">
     Browse Protocols
   </a>
 </div>
@@ -25,7 +23,6 @@ title: Radiology Protocol Manager
     1. **Browse protocols** by body region above
     2. **Compare protocols** using the comparison tool
     3. **Ask questions** using the AI chatbot (click the chat icon in the bottom right)
-    4. **Copy protocols** directly into your PACS system
 
 ---
 
