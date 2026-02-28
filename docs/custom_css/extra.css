@@ -28,7 +28,7 @@
   font-weight: 600;
   font-size: 1rem;
   transition: all 0.3s ease;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .hero-btn.primary {
@@ -39,7 +39,7 @@
 .hero-btn.primary:hover {
   background: var(--md-accent-fg-color);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 .hero-btn.secondary {
@@ -76,7 +76,7 @@
 
 .feature-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
 }
 
 .feature-icon {
@@ -130,7 +130,7 @@
 
 .body-part-card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
   border-color: var(--md-primary-fg-color);
 }
 
@@ -218,7 +218,7 @@
 
 [data-md-color-scheme="slate"] .body-part-card:hover {
   border-color: var(--md-accent-fg-color);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.4);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
 /* Responsive Design */
@@ -227,19 +227,19 @@
     flex-direction: column;
     align-items: stretch;
   }
-  
+
   .hero-btn {
     justify-content: center;
   }
-  
+
   .features-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .body-parts-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .update-item {
     grid-template-columns: 1fr;
     gap: 0.5rem;
@@ -313,7 +313,7 @@ html {
   margin-top: 30px;
 }
 
-#comparison-results > div {
+#comparison-results>div {
   margin-bottom: 40px;
 }
 
@@ -331,7 +331,7 @@ html {
   margin-top: 20px;
 }
 
-.gantt-container > div {
+.gantt-container>div {
   background: var(--md-code-bg-color);
   padding: 15px;
   border-radius: 8px;
@@ -427,7 +427,7 @@ html {
   color: white;
   border: none;
   cursor: pointer;
-  box-shadow: -2px 2px 12px rgba(0,0,0,0.15);
+  box-shadow: -2px 2px 12px rgba(0, 0, 0, 0.15);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -437,7 +437,7 @@ html {
 
 .chat-toggle:hover {
   width: 64px;
-  box-shadow: -4px 4px 16px rgba(0,0,0,0.25);
+  box-shadow: -4px 4px 16px rgba(0, 0, 0, 0.25);
 }
 
 .chat-badge {
@@ -467,7 +467,7 @@ html {
 }
 
 .chat-control-btn:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* Side panel - pushes content, no overlay */
@@ -479,7 +479,7 @@ html {
   height: 100vh;
   background: var(--md-default-bg-color);
   border-left: 1px solid var(--md-default-fg-color--lightest);
-  box-shadow: -2px 0 8px rgba(0,0,0,0.1);
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   z-index: 9999;
@@ -500,7 +500,7 @@ html {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   flex-shrink: 0;
 }
 
@@ -526,7 +526,7 @@ html {
 }
 
 .chat-close-btn:hover {
-  background: rgba(255,255,255,0.1);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* Messages area */
@@ -554,6 +554,7 @@ html {
     opacity: 0;
     transform: translateX(20px);
   }
+
   to {
     opacity: 1;
     transform: translateX(0);
@@ -784,7 +785,7 @@ html {
 }
 
 [data-md-color-scheme="slate"] .chat-panel {
-  box-shadow: -4px 0 24px rgba(0,0,0,0.5);
+  box-shadow: -4px 0 24px rgba(0, 0, 0, 0.5);
 }
 
 [data-md-color-scheme="slate"] .chat-message.assistant {
@@ -804,31 +805,31 @@ html {
   .gantt-container {
     grid-template-columns: 1fr !important;
   }
-  
+
   .protocol-select {
     min-width: 100%;
   }
-  
+
   #contrast-table-container table,
   #series-table-container table {
     font-size: 0.8em;
   }
-  
+
   #contrast-table-container th,
   #contrast-table-container td,
   #series-table-container th,
   #series-table-container td {
     padding: 8px 4px;
   }
-  
+
   .chat-panel {
     width: 100vw;
   }
-  
+
   .chat-panel.open {
     transform: translateX(0);
   }
-  
+
   .chat-toggle {
     top: auto;
     bottom: 20px;
@@ -838,7 +839,7 @@ html {
     height: 56px;
     padding: 0;
   }
-  
+
   .chat-toggle:hover {
     width: 56px;
   }
@@ -852,19 +853,19 @@ html {
   .protocol-selector {
     display: none;
   }
-  
+
   .gantt-container {
     page-break-inside: avoid;
   }
-  
+
   #comparison-results h3 {
     page-break-after: avoid;
   }
-  
+
   #protocol-chat-widget {
     display: none;
   }
-  
+
   .chat-overlay {
     display: none;
   }
@@ -937,4 +938,10 @@ html {
 
 [data-md-color-scheme="slate"] .protocol-list tbody tr:hover {
   background: rgba(255, 255, 255, 0.05);
+}
+
+/* Admonition text size*/
+.md-typeset .admonition,
+.md-typeset details {
+  font-size: 13px
 }

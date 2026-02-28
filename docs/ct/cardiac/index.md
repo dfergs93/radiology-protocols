@@ -24,28 +24,36 @@ Protocols for coronary CTA, calcium scoring, and functional cardiac imaging.
 
 
 ---
+<div class="grid cards" markdown>
 
-
-### Cardiac Gating Tips
-
-!!! danger "Critical for Image Quality"
-    Target HR: <60 bpm for coronary CTA
+-   **Cardiac Gating Tips**
+    
+    ---
+    
+    **Target HR: <60 bpm for coronary CTA**
     If HR > 75 bpm despite beta blockers, scan targeting end systole. 
 
-### Metoprolol
-- Dose: 5 mg IV prn (max 15 mg)
-- Contraindications: Severe asthma/COPD, Heart block (2nd/3rd degree), SBP <100 mmHg
+    ---
 
-### Nitroglycerin
-- Dose: 0.4 mg SL
-- Timing: 3-5 min before scan
-- Contraindications: Recent PDE5 inhibitor (< 48hrs), severe aortic stenosis, SBP <100
+-   **Cardiac Medications**
 
-### Contrast Timing
-\[
-\text{Scan Delay} = \text{Scan Time} - 5 \text{ seconds}
-\]
+    ---
 
+    **Metoprolol 5 mg IV PRN (max 15 mg)**
+    Contraindications: Severe asthma/COPD, Heart block (2nd/3rd degree), SBP <100 mmHg
+
+    ---
+
+    **Nitroglycerin 0.4 mg SL**
+    Timing: 3-5 min before scan
+    Contraindications: Recent PDE5 inhibitor (< 48hrs), severe aortic stenosis, SBP <100
+
+</div>
 
 ---
 
+!!! important "Contrast Timing"
+    \(\text{Scan Delay} = \text{Scan Time} - 5 \text{ seconds}\)
+
+!!! warning "Low Contrast Dose Calculation"
+    **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)

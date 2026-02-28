@@ -28,10 +28,11 @@
 -   __2. Patient Prep__
 
     ---
-
-    - **Position:** Supine feet-first
-    - **NPO Status:** No caffeine day of exam
-    - **Pre-Medication:**
+    !!! info ""
+        **Position:** Supine feet-first.  
+        **NPO Status:** No caffeine day of exam
+    ---
+    !!! danger "**Pre-Medication:**"
         - HR control not needed for calcium score
 
 -   __3. IV Contrast & Injection__    

@@ -1,7 +1,6 @@
 site_name: Radiology Protocol Manager
 site_url: https://dfergs93.github.io/radiology-protocols/
 
-# Rest of your config...
 theme:
   name: material
   features:
@@ -41,6 +40,7 @@ extra_javascript:
   - javascripts/mermaid-init.js
   - https://cdn.jsdelivr.net/npm/marked/marked.min.js
   - javascripts/protocol-compare.js
+  - javascripts/protocoller.js
   - javascripts/protocol-comparison-index.json  # Pre-generated JSON data for comparison index
   - javascripts/chatbot.js # Chatbot script
   - javascripts/mathjax.js

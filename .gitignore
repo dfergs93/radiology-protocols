@@ -3,3 +3,4 @@ csv/
 backend/chromadb/
 backend/
 scripts/
+mri/
