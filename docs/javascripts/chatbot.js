@@ -1,7 +1,7 @@
 // Chat widget for protocol assistant
 const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
   ? 'http://localhost:8001'
-  : 'https://protocol-manager-backend.onrender.com'; // Replace with your actual production backend URL
+  : 'https://radiology-protocols.onrender.com'; // Replace with your actual production backend URL
 
 const CHAT_API = `${API_BASE_URL}/api/chat`;
 
