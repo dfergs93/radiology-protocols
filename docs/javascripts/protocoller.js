@@ -1,4 +1,8 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+        ? 'http://localhost:8001'
+        : 'https://protocol-manager-backend.onrender.com'; // Replace with your actual production backend URL
+
     const input = document.getElementById('protocoller-input');
     const btn = document.getElementById('protocoller-btn');
     const resultsContainer = document.getElementById('protocoller-results');
@@ -22,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         resultsContainer.innerHTML = '';
 
         try {
-            const response = await fetch('http://localhost:8001/api/protocoller', {
+            const response = await fetch(`${API_BASE_URL}/api/protocoller`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

@@ -1,6 +1,4 @@
 csv/
 .env
-backend/chromadb/
-backend/
 scripts/
 mri/
