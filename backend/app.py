@@ -1,11 +1,13 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 import chromadb
 from openai import OpenAI
 import os
 import json
 from dotenv import load_dotenv
+import asyncio
 
 load_dotenv()
 
@@ -226,7 +228,7 @@ Multiple phases → custom_protocol with multiple series entries
 
 @app.post("/api/chat")
 async def chat(query: ChatQuery):
-    """RAG chatbot endpoint"""
+    """RAG chatbot endpoint with streaming"""
     
     if not collection:
         raise HTTPException(status_code=500, detail="Vector database not initialized")
@@ -249,12 +251,20 @@ async def chat(query: ChatQuery):
     context_docs = []
     print(f"Retrieved {len(results['documents'][0])} protocols:")
     
+    sources = []
     for i, doc in enumerate(results['documents'][0]):
         metadata = results['metadatas'][0][i]
         print(f"  {i+1}. {metadata['title']} (relevance: {1-results['distances'][0][i]:.2f})")
         
         # Add protocol to context
         context_docs.append(f"### Protocol: {metadata['title']}\n{doc[:10000]}")  # First 10000 chars
+        
+        # Collect sources
+        sources.append({
+            "title": metadata['title'],
+            "filepath": metadata['filepath'],
+            "category": metadata['category']
+        })
     
     context = "\n\n---\n\n".join(context_docs)
     
@@ -304,34 +314,52 @@ You have access to both institutional protocols AND clinical guidelines."""
     for msg in query.messages[-6:]:
         messages.append({"role": msg.role, "content": msg.content})
     
-    # Call OpenAI
-    try:
-        print("Calling OpenAI...")
-        response = openai_client.chat.completions.create(
-            model="gpt-4o-mini",
-            messages=messages,
-            temperature=0.1,
-            max_tokens=800
-        )
-        
-        answer = response.choices[0].message.content
-        print(f"Response generated ({len(answer)} chars)\n")
-        
-        return {
-            "response": answer,
-            "sources": [
-                {
-                    "title": results['metadatas'][0][i]['title'],
-                    "filepath": results['metadatas'][0][i]['filepath'],
-                    "category": results['metadatas'][0][i]['category']
-                }
-                for i in range(len(results['documents'][0]))
-            ]
-        }
+    # Streaming generator function
+    async def generate_stream():
+        try:
+            print("Calling OpenAI with streaming...")
+            
+            # Create streaming response
+            stream = openai_client.chat.completions.create(
+                model="gpt-4o-mini",
+                messages=messages,
+                temperature=0.1,
+                max_tokens=800,
+                stream=True  # Enable streaming
+            )
+            
+            # Send sources first as a special event
+            sources_json = json.dumps({"sources": sources})
+            yield f"data: {sources_json}\n\n"
+            
+            # Stream the response content
+            for chunk in stream:
+                if chunk.choices[0].delta.content is not None:
+                    content = chunk.choices[0].delta.content
+                    # Send each chunk as Server-Sent Event
+                    chunk_json = json.dumps({"content": content})
+                    yield f"data: {chunk_json}\n\n"
+                    await asyncio.sleep(0)  # Allow other tasks to run
+            
+            # Send done signal
+            yield f"data: {json.dumps({'done': True})}\n\n"
+            
+            print("Streaming completed\n")
+            
+        except Exception as e:
+            print(f"OpenAI streaming error: {e}")
+            error_json = json.dumps({"error": str(e)})
+            yield f"data: {error_json}\n\n"
     
-    except Exception as e:
-        print(f"OpenAI error: {e}")
-        raise HTTPException(status_code=500, detail=str(e))
+    return StreamingResponse(
+        generate_stream(),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "Connection": "keep-alive",
+            "X-Accel-Buffering": "no"  # Disable buffering in nginx
+        }
+    )
 
 @app.get("/api/health")
 async def health():

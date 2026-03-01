@@ -1,7 +1,7 @@
 // Chat widget for protocol assistant
 const API_BASE_URL = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
   ? 'http://localhost:8001'
-  : 'https://radiology-protocols.onrender.com'; // Replace with your actual production backend URL
+  : 'https://radiology-protocols.onrender.com';
 
 const CHAT_API = `${API_BASE_URL}/api/chat`;
 
@@ -136,7 +136,6 @@ function createChatWidget() {
   }
 }
 
-
 function restoreChatHistory() {
   const messagesContainer = document.getElementById('chat-messages');
 
@@ -171,7 +170,6 @@ function clearChatHistory() {
     `;
   }
 }
-
 
 function openChat() {
   isOpen = true;
@@ -222,11 +220,17 @@ function closeChat() {
   saveChatState();
 }
 
+// NEW: Streaming message handler
 async function sendMessage() {
   const input = document.getElementById('chat-input');
   const question = input.value.trim();
 
   if (!question) return;
+
+  // Disable input while processing
+  const sendBtn = document.getElementById('chat-send');
+  input.disabled = true;
+  sendBtn.disabled = true;
 
   // Add user message to UI
   addMessage('user', question);
@@ -237,8 +241,18 @@ async function sendMessage() {
   chatHistory.push({ role: 'user', content: question });
   saveChatState();
 
-  // Show typing indicator
-  const typingId = addMessage('assistant', '<em>Thinking...</em>');
+  // Create placeholder for streaming response
+  const messageId = `msg-${Date.now()}`;
+  const messages = document.getElementById('chat-messages');
+  const messageDiv = document.createElement('div');
+  messageDiv.id = messageId;
+  messageDiv.className = 'chat-message assistant';
+  messageDiv.innerHTML = '<div class="message-content"><em>Thinking...</em></div>';
+  messages.appendChild(messageDiv);
+  messages.scrollTop = messages.scrollHeight;
+
+  let fullResponse = '';
+  let sources = [];
 
   try {
     const currentPage = window.location.pathname;
@@ -253,27 +267,111 @@ async function sendMessage() {
     });
 
     if (!response.ok) {
-      const error = await response.json();
-      throw new Error(error.detail || 'API error');
+      throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-    const data = await response.json();
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder();
 
-    // Remove typing indicator
-    document.getElementById(typingId).remove();
+    while (true) {
+      const { value, done } = await reader.read();
+      if (done) break;
 
-    // Add assistant response
-    addMessage('assistant', data.response, data.sources);
+      const chunk = decoder.decode(value);
+      const lines = chunk.split('\n');
 
-    // Add to history
-    chatHistory.push({ role: 'assistant', content: data.response, sources: data.sources });
+      for (const line of lines) {
+        if (line.startsWith('data: ')) {
+          try {
+            const data = JSON.parse(line.slice(6));
+
+            if (data.sources) {
+              // Store sources for later
+              sources = data.sources;
+            } else if (data.content) {
+              // Append content chunk
+              fullResponse += data.content;
+
+              // Update message in real-time
+              updateStreamingMessage(messageId, fullResponse, sources);
+            } else if (data.done) {
+              // Streaming complete
+              console.log('Streaming complete');
+            } else if (data.error) {
+              throw new Error(data.error);
+            }
+          } catch (parseError) {
+            console.warn('Failed to parse SSE data:', line, parseError);
+          }
+        }
+      }
+    }
+
+    // Save complete response to history
+    chatHistory.push({
+      role: 'assistant',
+      content: fullResponse,
+      sources: sources
+    });
     saveChatState();
 
   } catch (error) {
     console.error('Chat error:', error);
-    document.getElementById(typingId).remove();
-    addMessage('assistant', `❌ Error: ${error.message}. Is the backend running?`);
+    messageDiv.innerHTML = `
+      <div class="message-content">
+        ❌ Error: ${error.message}
+        <br><small>Please check if the backend is running.</small>
+      </div>
+    `;
+  } finally {
+    // Re-enable input
+    input.disabled = false;
+    sendBtn.disabled = false;
+    input.focus();
   }
+}
+
+// NEW: Update streaming message in real-time
+function updateStreamingMessage(messageId, content, sources = []) {
+  const messageDiv = document.getElementById(messageId);
+  if (!messageDiv) return;
+
+  // Parse markdown to HTML
+  let htmlContent;
+  if (typeof marked !== 'undefined') {
+    marked.setOptions({
+      breaks: true,
+      gfm: true,
+      headerIds: false,
+      mangle: false
+    });
+    htmlContent = marked.parse(content);
+  } else {
+    htmlContent = content.replace(/\n/g, '<br>');
+  }
+
+  let html = `<div class="message-content">${htmlContent}</div>`;
+
+  // Add sources if available
+  if (sources && sources.length > 0) {
+    html += '<div class="sources"><small><strong>📚 Sources:</strong> ';
+
+    const pathParts = window.location.pathname.split('/').filter(p => p);
+    const basePath = pathParts.length > 0 && pathParts[0] !== 'index.html' ? pathParts[0] : '';
+
+    html += sources.map(s => {
+      const url = basePath ? `/${basePath}/${s.filepath.replace('.md', '')}` : `/${s.filepath.replace('.md', '')}`;
+      return `<a href="${url}" target="_blank">${s.title}</a>`;
+    }).join(' • ');
+
+    html += '</small></div>';
+  }
+
+  messageDiv.innerHTML = html;
+
+  // Auto-scroll to bottom
+  const messagesContainer = document.getElementById('chat-messages');
+  messagesContainer.scrollTop = messagesContainer.scrollHeight;
 }
 
 function addMessage(role, content, sources = []) {
