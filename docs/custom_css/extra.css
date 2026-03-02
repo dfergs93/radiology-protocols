@@ -283,6 +283,10 @@ html {
   margin-bottom: 30px;
 }
 
+.protocol-selector h3 {
+  margin: 0;
+}
+
 #protocol-selectors {
   display: flex;
   flex-direction: column;
@@ -944,4 +948,40 @@ html {
 .md-typeset .admonition,
 .md-typeset details {
   font-size: 13px
+}/* ============================================
+   MERMAID GANTT STYLING
+   ============================================ */
+.mermaid g.grid rect.active {
+    fill: #2094f3 !important;
+    /* Theme blue for contrast */
+    stroke: #1a73e8 !important;
+}
+
+.mermaid g.grid rect.saline {
+    fill: #4ed5ff !important;
+    /* Sky blue for saline */
+    stroke: #2094f3 !important;
+}
+
+/* Mermaid Dark Mode Overrides */
+[data-md-color-scheme="slate"] .mermaid svg {
+    filter: invert(0.9) hue-rotate(180deg);
+}
+
+[data-md-color-scheme="slate"] .mermaid .label,
+[data-md-color-scheme="slate"] .mermaid .tick text {
+    fill: #eee !important;
+}
+
+[data-md-color-scheme="slate"] .mermaid .grid line {
+    stroke: #444 !important;
+}
+
+[data-md-color-scheme="slate"] .mermaid rect.section {
+    fill: #333 !important;
+    stroke: #555 !important;
+}
+
+[data-md-color-scheme="slate"] .mermaid .sectionTitle {
+    fill: #fff !important;
 }

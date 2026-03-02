@@ -52,67 +52,68 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function displayResults(data) {
+        const wrapper = document.getElementById('protocol-suggestions-wrapper');
         resultsContainer.innerHTML = '';
+
+        if (!data.recommended_protocols?.length && !data.custom_protocol) {
+            wrapper.style.display = 'none';
+            return;
+        }
+
+        // Show and auto-open results
+        wrapper.style.display = 'block';
+        wrapper.open = true;
         resultsContainer.style.display = 'flex';
 
-        // 1. Recommended Standard Protocols
-        if (data.recommended_protocols && data.recommended_protocols.length > 0) {
-            const header = document.createElement('h4');
-            header.textContent = 'Recommended Standard Protocols';
-            resultsContainer.appendChild(header);
+        const allProtocols = [];
 
-            data.recommended_protocols.forEach(rec => {
-                const card = document.createElement('div');
-                card.className = 'protocol-rec-card';
-                card.innerHTML = `
-                    <div class="rec-title">${rec.title}</div>
-                    <div class="rec-reasoning">${rec.reasoning}</div>
-                    <div style="margin-top: 8px; font-size: 0.8em; color: var(--md-primary-fg-color);">
-                        Click to Select for Comparison
-                    </div>
-                `;
-
-                card.addEventListener('click', () => {
-                    selectProtocol(rec.title);
-                    card.style.borderColor = 'green';
-                    card.style.backgroundColor = 'rgba(0, 255, 0, 0.05)';
-                    setTimeout(() => {
-                        card.style.borderColor = '';
-                        card.style.backgroundColor = '';
-                    }, 500);
-                });
-
-                resultsContainer.appendChild(card);
+        // Add standard protocols
+        if (data.recommended_protocols) {
+            data.recommended_protocols.forEach(p => {
+                allProtocols.push({ ...p, type: 'standard' });
             });
         }
 
-        // 2. Custom Protocol
+        // Add custom protocol
         if (data.custom_protocol) {
-            const header = document.createElement('h4');
-            header.textContent = 'Custom Protocol Suggestions';
-            header.style.marginTop = '16px';
-            resultsContainer.appendChild(header);
+            allProtocols.push({ ...data.custom_protocol, type: 'custom' });
+        }
 
-            const custom = data.custom_protocol;
+        // Limit to 3 (as requested, though backend usually only sends 3 standard + 1 custom max)
+        allProtocols.slice(0, 3).forEach(protocol => {
             const card = document.createElement('div');
             card.className = 'protocol-rec-card';
-            card.style.borderLeftColor = '#e91e63'; // Pink for custom
+
+            const isCustom = protocol.type === 'custom';
+            const badgeClass = isCustom ? 'badge-custom' : 'badge-standard';
+            const badgeLabel = isCustom ? 'Custom AI' : 'Standard';
+            const icon = isCustom ? '✨ ' : '';
+
             card.innerHTML = `
-                <div class="rec-title">✨ ${custom.title}</div>
-                <div class="rec-reasoning">${custom.description || 'Customized protocol based on specific requirements.'}</div>
-                <div style="margin-top: 8px; font-size: 0.8em; color: #e91e63;">
-                    Click to Add & Compare
-                </div>
+                <div class="rec-badge ${badgeClass}">${badgeLabel}</div>
+                <div class="rec-title">${icon}${protocol.title}</div>
+                <div class="rec-reasoning">${protocol.reasoning || protocol.description || ''}</div>
+                <div class="rec-action-hint">Click to compare →</div>
             `;
 
             card.addEventListener('click', () => {
-                addCustomProtocol(custom);
-                card.style.borderColor = 'green';
-                card.innerHTML += '<div style="color: green; font-weight: bold; margin-top: 5px;">Added to Selector!</div>';
+                if (isCustom) {
+                    addCustomProtocol(protocol);
+                } else {
+                    selectProtocol(protocol.title);
+                }
+
+                // Feedback animation
+                card.style.borderColor = 'var(--md-accent-fg-color)';
+                card.style.transform = 'scale(0.98)';
+                setTimeout(() => {
+                    card.style.borderColor = '';
+                    card.style.transform = '';
+                }, 200);
             });
 
             resultsContainer.appendChild(card);
-        }
+        });
     }
 
     function selectProtocol(title) {
@@ -128,22 +129,43 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Find match score if needed, but for now just fill next empty slot
         const selects = document.querySelectorAll('.protocol-select');
-        let filled = false;
+        let targetSelect = null;
 
-        // Strategy: Fill first empty, or overwrite the last one if both full
+        // 1. Check if already selected
+        for (let select of selects) {
+            if (select.value == index) { // Use == for string/number comparison
+                console.log('Protocol already selected');
+                document.getElementById('protocol-compare-container').scrollIntoView({ behavior: 'smooth' });
+                return;
+            }
+        }
+
+        // 2. Find first empty slot
         for (let select of selects) {
             if (select.value === "") {
-                select.value = index;
-                filled = true;
+                targetSelect = select;
                 break;
             }
         }
 
-        if (!filled && selects.length >= 2) {
-            // Overwrite the last one (usually the comparison target)
-            selects[selects.length - 1].value = index;
+        // 2. If no empty slots, add a new one
+        if (!targetSelect) {
+            if (typeof addProtocolSlot === 'function') {
+                targetSelect = addProtocolSlot();
+            } else {
+                // Fallback to overwriting last if function missing
+                targetSelect = selects[selects.length - 1];
+            }
+        }
+
+        // 3. Set value
+        if (targetSelect) {
+            targetSelect.value = index;
+            // Sync searchable UI
+            if (typeof createSearchableSelect === 'function') {
+                createSearchableSelect(targetSelect);
+            }
         }
 
         // Scroll to selectors
@@ -164,18 +186,43 @@ document.addEventListener('DOMContentLoaded', () => {
         protocolData.push(custom);
         const newIndex = protocolData.length - 1;
 
-        // Refresh dropdowns
+        // Refresh dropdowns (selection is preserved by the new populateSelectors logic)
         populateSelectors();
 
-        // Select it immediately
+        // Select it immediately using the same smart logic
         const selects = document.querySelectorAll('.protocol-select');
-        // Prefer slot 2 for custom items, or first empty
-        if (selects[1].value === "") {
-            selects[1].value = newIndex;
-        } else if (selects[0].value === "") {
-            selects[0].value = newIndex;
-        } else {
-            selects[1].value = newIndex; // Overwrite 2
+        let targetSelect = null;
+
+        // 1. Check if already selected
+        for (let select of selects) {
+            if (select.value == newIndex) {
+                document.getElementById('protocol-compare-container').scrollIntoView({ behavior: 'smooth' });
+                return;
+            }
+        }
+
+        // 2. Find first empty slot
+        for (let select of selects) {
+            if (select.value === "") {
+                targetSelect = select;
+                break;
+            }
+        }
+
+        if (!targetSelect) {
+            if (typeof addProtocolSlot === 'function') {
+                targetSelect = addProtocolSlot();
+            } else {
+                targetSelect = selects[selects.length - 1];
+            }
+        }
+
+        if (targetSelect) {
+            targetSelect.value = newIndex;
+            // Sync searchable UI
+            if (typeof createSearchableSelect === 'function') {
+                createSearchableSelect(targetSelect);
+            }
         }
 
         document.getElementById('protocol-compare-container').scrollIntoView({ behavior: 'smooth' });
