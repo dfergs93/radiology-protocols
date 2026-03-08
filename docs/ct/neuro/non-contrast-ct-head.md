@@ -69,16 +69,18 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title Non-Contrast CT Head Timeline
       dateFormat mm:ss
       axisFormat %M:%S 
       
-      section Acquisition
-      Standard scan    :done, scan1, 00:00, 10s
+      section Head
+      Non-Contrast Head    :done, scan1, 00:00, 3s
   ```
 
 

@@ -28,11 +28,10 @@
 -   __2. Patient Prep__
 
     ---
-    !!! info ""
-        **Position:** Supine feet-first.  
-        **NPO Status:** No caffeine day of exam
-    ---
-    !!! danger "**Pre-Medication:**"
+
+    - **Position:** Supine feet-first
+    - **NPO Status:** No caffeine day of exam
+    - **Pre-Medication:**
         - HR control not needed for calcium score
 
 -   __3. IV Contrast & Injection__    
@@ -74,16 +73,18 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title Calcium Score Timeline
       dateFormat mm:ss
       axisFormat %M:%S 
       
-      section Acquisition
-      Standard scan    :done, scan1, 00:00, 10s
+      section Other
+      Calcium Score    :done, scan1, 00:00, 5s
   ```
 
 

@@ -70,16 +70,18 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title CT Gout Protocol Timeline
       dateFormat mm:ss
       axisFormat %M:%S 
       
-      section Acquisition
-      Standard scan    :done, scan1, 00:00, 10s
+      section Other
+      DECT or CT    :done, scan1, 00:00, 5s
   ```
 
 

@@ -46,8 +46,9 @@
         | Flow Rate | 3-4 mL/s |
 
     ===   "Lab Requirements"
-        
-        Full dose if eGFR > 30. High volume protocol
+        Use full dose if GFR > 30
+        !!! warning "If GFR < 30"
+            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
 
 
@@ -81,8 +82,10 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title CT Chest Abdomen Pelvis with Contrast Timeline
@@ -91,8 +94,8 @@
       
       section Contrast Injection
       Contrast (1.5 mL/kg)    :active, contrast, 00:00, 32s
-      Saline (20mL)          :active, saline, after contrast, 5s
-      section Portal Venous Phase
+      Saline          :active, saline, after contrast, 5s
+      section Other
       Portal Venous Phase    :done, scan1, 01:10, 7s
   ```
 

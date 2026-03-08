@@ -46,8 +46,9 @@
         | Flow Rate | 3 mL/s |
 
     ===   "Lab Requirements"
-        
-        NC typical. Contrast for infection tumor mets
+        Use full dose if GFR > 30
+        !!! warning "If GFR < 30"
+            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
 
 
@@ -81,8 +82,10 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title CT Thoracic Spine Timeline
@@ -91,7 +94,9 @@
       
       section Contrast Injection
       Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 33s
-      Saline (20mL)          :active, saline, after contrast, 6s
+      Saline          :active, saline, after contrast, 6s
+      section Other
+      T-spine Helical    :done, scan1, 00:00, 5s
   ```
 
 

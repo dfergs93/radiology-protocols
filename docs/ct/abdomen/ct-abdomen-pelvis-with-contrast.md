@@ -46,8 +46,9 @@
         | Flow Rate | 3 mL/s |
 
     ===   "Lab Requirements"
-        
-        Full dose if eGFR > 30. Consider split bolus technique if eGFR 30-45
+        Use full dose if GFR > 30
+        !!! warning "If GFR < 30"
+            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
 
 
@@ -81,8 +82,10 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title CT Abdomen Pelvis with Contrast Timeline
@@ -91,8 +94,8 @@
       
       section Contrast Injection
       Contrast (125 mL)    :active, contrast, 00:00, 41s
-      Saline (20mL)          :active, saline, after contrast, 6s
-      section Portal Venous Phase
+      Saline          :active, saline, after contrast, 6s
+      section Other
       Portal Venous Phase    :done, scan1, 01:10, 7s
   ```
 

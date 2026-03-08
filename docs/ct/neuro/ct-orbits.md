@@ -46,8 +46,9 @@
         | Flow Rate | 3 mL/s |
 
     ===   "Lab Requirements"
-        
-        Contrast if mass/infection. NC for trauma/foreign body
+        Use full dose if GFR > 30
+        !!! warning "If GFR < 30"
+            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
 
 
@@ -81,8 +82,10 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title CT Orbits Timeline
@@ -91,7 +94,9 @@
       
       section Contrast Injection
       Contrast (75-100 mL if contrast)    :active, contrast, 00:00, 25s
-      Saline (20mL)          :active, saline, after contrast, 6s
+      Saline          :active, saline, after contrast, 6s
+      section Other
+      Axial Orbits    :done, scan1, 00:00, 5s
   ```
 
 

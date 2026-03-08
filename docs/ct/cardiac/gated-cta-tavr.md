@@ -48,8 +48,9 @@
         | Trigger (HU) | 180 HU |
 
     ===   "Lab Requirements"
-        
-        Full dose if eGFR > 30
+        Use full dose if GFR > 30
+        !!! warning "If GFR < 30"
+            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
 
 
@@ -83,8 +84,10 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title Gated CTA TAVR Timeline
@@ -93,10 +96,10 @@
       
       section Contrast Injection
       Contrast (140 mL)    :active, contrast, 00:00, 35s
-      Saline (20mL)          :active, saline, after contrast, 5s
-      section Arterial Phase
-      Gated CTA Chest    :crit, scan1, after contrast, 6s
-      section Arterial Phase
+      Saline          :active, saline, after contrast, 5s
+      section Chest
+      Gated CTA Chest    :crit, scan1, after contrast, 9.0s
+      section Abdomen/Pelvis
       Flash CTA AP    :crit, scan2, after scan1, 5s
   ```
 

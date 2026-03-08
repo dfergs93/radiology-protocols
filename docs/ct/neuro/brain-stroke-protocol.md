@@ -51,8 +51,9 @@
         | Trigger (HU) | Varies |
 
     ===   "Lab Requirements"
-        
-        Proceed emergently. Time is brain
+        Use full dose if GFR > 30
+        !!! warning "If GFR < 30"
+            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
 
 
@@ -86,8 +87,10 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title Brain Stroke Protocol Timeline
@@ -96,9 +99,13 @@
       
       section Contrast Injection
       Contrast (100 mL)    :active, contrast, 00:00, 22s
-      Saline (20mL)          :active, saline, after contrast, 4s
-      section Arterial Phase
+      Saline          :active, saline, after contrast, 4s
+      section Head
       CTA Head    :crit, scan1, after contrast, 3s
+      section Neck
+      CTA Neck    :crit, scan2, 00:00, 10s
+      section Other
+      CTP (optional)    :done, scan3, 00:00, 10s
   ```
 
 

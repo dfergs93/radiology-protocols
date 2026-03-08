@@ -21,10 +21,9 @@
 
     === "Clinical Indications"
 
-        - Coronary artery disease
-        - Chest pain
-        - Anomalous coronaries
-        - Coronary CTA
+        - Aortic Dissection
+        - Chest pain radiating to the back
+        - Follow up thoracic aortic aneurysm
 
 -   __2. Patient Prep__
 
@@ -51,8 +50,9 @@
         | Trigger (HU) | 200 HU |
 
     ===   "Lab Requirements"
-        
-        Full dose if eGFR > 30
+        Use full dose if GFR > 30
+        !!! warning "If GFR < 30"
+            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
 
 
@@ -86,8 +86,10 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title Gated CTA Chest Timeline
@@ -96,10 +98,9 @@
       
       section Contrast Injection
       Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s
-      Saline (20mL)          :active, saline, after contrast, 4s
-      section Arterial Phase
+      Saline          :active, saline, after contrast, 4s
+      section Other
       Gated CTA    :crit, scan1, after contrast, 5s
-      section Delayed Phase
       Stent delay (optional)    :done, scan2, 00:40, 5s
   ```
 

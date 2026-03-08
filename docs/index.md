@@ -22,7 +22,6 @@ title: Radiology Protocol Manager
 !!! tip "Getting Started"
     1. **Browse protocols** by body region above
     2. **Compare protocols** using the comparison tool
-    3. **Ask questions** using the AI chatbot (click the chat icon in the bottom right)
 
 ---
 
@@ -34,14 +33,6 @@ title: Radiology Protocol Manager
     <div class="update-content">
       <h4>Protocol Comparison Tool</h4>
       <p>Compare multiple protocols side-by-side with synchronized Gantt timelines</p>
-    </div>
-  </div>
-  
-  <div class="update-item">
-    <div class="update-date">Recent</div>
-    <div class="update-content">
-      <h4>AI Chatbot Integration</h4>
-      <p>RAG-powered assistant for protocol recommendations and questions</p>
     </div>
   </div>
   

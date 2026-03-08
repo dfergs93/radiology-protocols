@@ -46,8 +46,9 @@
         | Flow Rate | 2-3 mL/s |
 
     ===   "Lab Requirements"
-        
-        NC for trauma. Contrast for infection or tumor
+        Use full dose if GFR > 30
+        !!! warning "If GFR < 30"
+            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
 
 
@@ -81,8 +82,10 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title CT Pelvis MSK Timeline
@@ -91,7 +94,9 @@
       
       section Contrast Injection
       Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 40s
-      Saline (20mL)          :active, saline, after contrast, 8s
+      Saline          :active, saline, after contrast, 8s
+      section Pelvis
+      CT Pelvis    :done, scan1, 00:00, 5s
   ```
 
 

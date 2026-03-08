@@ -50,8 +50,9 @@
         | Trigger (HU) | 150 HU |
 
     ===   "Lab Requirements"
-        
-        Full dose if eGFR > 30
+        Use full dose if GFR > 30
+        !!! warning "If GFR < 30"
+            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
 
 
@@ -85,8 +86,10 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title CT Parathyroid 4D Timeline
@@ -95,12 +98,10 @@
       
       section Contrast Injection
       Contrast (75-100 mL)    :active, contrast, 00:00, 18s
-      Saline (20mL)          :active, saline, after contrast, 5s
-      section Arterial Phase
+      Saline          :active, saline, after contrast, 5s
+      section Other
       Arterial Phase    :crit, scan1, 00:25, 5s
-      section Portal Venous Phase
       Venous Phase    :done, scan2, 00:55, 5s
-      section Delayed Phase
       Delayed Phase    :done, scan3, 01:30, 5s
   ```
 

@@ -45,8 +45,9 @@
         | Flow Rate | 3 mL/s |
 
     ===   "Lab Requirements"
-        
-        NC for trauma. Contrast for mets or infection
+        Use full dose if GFR > 30
+        !!! warning "If GFR < 30"
+            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
 
 
@@ -80,8 +81,10 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title CT Complete Spine Timeline
@@ -90,7 +93,9 @@
       
       section Contrast Injection
       Contrast (If contrast: 125 mL)    :active, contrast, 00:00, 41s
-      Saline (20mL)          :active, saline, after contrast, 6s
+      Saline          :active, saline, after contrast, 6s
+      section Other
+      Complete Spine    :done, scan1, 00:00, 5s
   ```
 
 

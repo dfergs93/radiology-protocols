@@ -1,0 +1,14 @@
+{
+  "codeEditor": "auto",
+  "terminalShell": "auto",
+  "maxTokensPerMessage": 4000,
+  "autoCommit": false,
+  "hooks": {
+    "pre-commit": "npm run lint 2>/dev/null || true"
+  },
+  "ignoredPaths": [
+    "venv/**",
+    "node_modules/**",
+    ".claude/**"
+  ]
+}

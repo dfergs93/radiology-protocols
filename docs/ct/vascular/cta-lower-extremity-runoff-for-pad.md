@@ -48,8 +48,9 @@
         | Trigger (HU) | 150 HU |
 
     ===   "Lab Requirements"
-        
-        Full dose if eGFR > 30. May need larger volume for slow flow
+        Use full dose if GFR > 30
+        !!! warning "If GFR < 30"
+            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
 
 
@@ -83,8 +84,10 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title CTA Lower Extremity Runoff for PAD Timeline
@@ -93,8 +96,8 @@
       
       section Contrast Injection
       Contrast (150 mL)    :active, contrast, 00:00, 37s
-      Saline (20mL)          :active, saline, after contrast, 5s
-      section Arterial Phase
+      Saline          :active, saline, after contrast, 5s
+      section Other
       CTA Arterial    :crit, scan1, after contrast, 5s
   ```
 

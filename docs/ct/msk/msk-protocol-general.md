@@ -49,8 +49,9 @@
         | Flow Rate | 2-3 mL/s |
 
     ===   "Lab Requirements"
-        
-        Contrast for infection mass post-op. NC for trauma hardware
+        Use full dose if GFR > 30
+        !!! warning "If GFR < 30"
+            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
 
 
@@ -84,8 +85,10 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title MSK Protocol General Timeline
@@ -94,9 +97,10 @@
       
       section Contrast Injection
       Contrast (100 mL if contrast)    :active, contrast, 00:00, 40s
-      Saline (20mL)          :active, saline, after contrast, 8s
-      section Scan Phase 1
+      Saline          :active, saline, after contrast, 8s
+      section Other
       Contrast phase    :done, scan1, 01:00, 5s
+      Delayed phase    :done, scan2, 00:00, 5s
   ```
 
 

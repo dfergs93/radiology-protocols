@@ -104,7 +104,7 @@ Compare multiple CT protocols side-by-side to understand differences in contrast
 }
 .rec-title {
   font-weight: bold;
-  font-size: 1.05em;
+  font-size: 1.35em;
   color: var(--md-primary-fg-color);
   margin-bottom: 8px;
   padding-right: 60px; /* Space for badge */

@@ -82,8 +82,10 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title CT Renal Mass Protocol Timeline
@@ -92,14 +94,14 @@
       
       section First Injection
       Contrast bolus 1 (77mL)  :active, contrast1, 00:00, 19s
-      Saline flush (50mL)                  :active, saline1, after contrast1, 12s
+      Saline                  :active, saline1, after contrast1, 5s
       section First Scan Phase
       First acquisition                    :crit, scan1, 00:20, 15s
       section Wait Period
       Wait for second injection            :milestone, wait, after scan1, 05:00
       section Second Injection
       Contrast bolus 2 (28mL)  :active, contrast2, after wait, 7s
-      Saline flush (50mL)                  :active, saline2, after contrast2, 12s
+      Saline                  :active, saline2, after contrast2, 5s
       section Second Scan Phase
       Second acquisition                   :done, scan2, after saline2, 20s
   ```

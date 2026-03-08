@@ -71,16 +71,20 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title Non-Volumetric HRCT 3 Respiratory Phases Timeline
       dateFormat mm:ss
       axisFormat %M:%S 
       
-      section Acquisition
-      Standard scan    :done, scan1, 00:00, 10s
+      section Other
+      Inspiration    :done, scan1, 00:00, 5s
+      Mid-Expiration    :done, scan2, 00:00, 5s
+      Full Expiration    :done, scan3, 00:00, 5s
   ```
 
 

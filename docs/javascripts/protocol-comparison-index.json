@@ -100,7 +100,7 @@
     "filepath": "ct/abdomen/ct-biphasic-pancreas.md",
     "title": "CT Biphasic Pancreas",
     "category": "Abdomen",
-    "gantt": "```mermaid\n  ---\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Biphasic Pancreas Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Scan Phase 1\n      Pancreatic Phase    :crit, scan1, 00:40, 7s\n      section Portal Venous Phase\n      Portal Venous    :done, scan2, 01:10, 7s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n  ---\n    gantt\n      title CT Biphasic Pancreas Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s\n      Saline (20mL)          :active, saline, after contrast, 4s\n      section Scan Phase 1\n      Pancreatic Phase    :crit, scan1, 00:40, 7s\n      section Portal Venous Phase\n      Portal Venous    :done, scan2, 01:10, 7s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
       "volume": "1.5 mL/kg",

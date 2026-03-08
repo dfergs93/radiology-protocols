@@ -69,16 +69,19 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title Volumetric HRCT 2 Respiratory Phases Timeline
       dateFormat mm:ss
       axisFormat %M:%S 
       
-      section Acquisition
-      Standard scan    :done, scan1, 00:00, 10s
+      section Other
+      Volumetric Inspiration    :done, scan1, 00:00, 5s
+      Limited Expiration    :done, scan2, 00:00, 5s
   ```
 
 

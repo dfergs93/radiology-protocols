@@ -27,17 +27,12 @@
 
     ---
 
-    **Position:** Supine feet-first  
-    **NPO Status:** NPO 2-4 hours  
-    ---
-    **Pre-Medication: **Target HR < 60  
-      
-    **Metoprolol 5 mg IV PRN (max 15 mg)**
-    Contraindications: Severe asthma/COPD, Heart block (2nd/3rd degree), SBP <100 mmHg
-      
-    **Nitroglycerin 0.4 mg SL**
-    Timing: 3-5 min before scan
-    Contraindications: Recent PDE5 inhibitor (< 48hrs), severe aortic stenosis, SBP <100
+    - **Position:** Supine feet-first
+    - **NPO Status:** NPO 2-4 hours
+    - **Pre-Medication:**
+        - HR < 60 target.
+        - **Metoprolol** 5mg IV increments up to 15mg. Metoprolol contraindications include sBP < 100, 2nd/3rd degree heart block, and inhaler dependent asthma.
+        - **Nitroglycerin** 0.4mg SL 5 minutes before scan. Nitroglycerin contraindications include sBP < 100, PDE5 inhibitors within 48 hrs, severe aortic stenosis.
 
 -   __3. IV Contrast & Injection__    
 
@@ -58,6 +53,8 @@
         Use full dose if GFR > 30
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
+
+
 
 -   __4. Special Notes__
 
@@ -91,8 +88,10 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title Coronary CTA Post-CABG Timeline
@@ -101,8 +100,8 @@
       
       section Contrast Injection
       Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s
-      Saline (20mL)          :active, saline, after contrast, 4s
-      section Arterial Phase
+      Saline          :active, saline, after contrast, 4s
+      section Other
       Gated CTA    :crit, scan1, after contrast, 5s
   ```
 

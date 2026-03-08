@@ -51,8 +51,9 @@
         | Trigger (HU) | 150 HU |
 
     ===   "Lab Requirements"
-        
-        Full dose if eGFR > 30
+        Use full dose if GFR > 30
+        !!! warning "If GFR < 30"
+            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
 
 
@@ -86,8 +87,10 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title CT Triple Phase Liver Timeline
@@ -96,12 +99,10 @@
       
       section Contrast Injection
       Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s
-      Saline (20mL)          :active, saline, after contrast, 4s
-      section Arterial Phase
+      Saline          :active, saline, after contrast, 4s
+      section Other
       Late Arterial    :crit, scan1, 00:30, 7s
-      section Portal Venous Phase
       Portal Venous    :done, scan2, 01:10, 7s
-      section Delayed Phase
       Delayed Phase    :done, scan3, 05:00, 7s
   ```
 

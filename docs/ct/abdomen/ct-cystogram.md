@@ -49,8 +49,9 @@
         | Flow Rate | 3-4 mL/s |
 
     ===   "Lab Requirements"
-        
-        eGFR > 30 for IV. Bladder instillation via Foley
+        Use full dose if GFR > 30
+        !!! warning "If GFR < 30"
+            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
 
 
@@ -84,8 +85,10 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title CT Cystogram Timeline
@@ -94,14 +97,12 @@
       
       section Contrast Injection
       Contrast (100 mL)    :active, contrast, 00:00, 28s
-      Saline (20mL)          :active, saline, after contrast, 5s
-      section Portal Venous Phase
-      Portal Venous    :done, scan1, 01:10, 7s
-      section Scan Phase 2
-      Bladder Filling    :done, scan2, 01:30, 3s
-      section Scan Phase 3
+      Saline          :active, saline, after contrast, 5s
+      section Pelvis
+      Bladder Filling    :done, scan1, 01:30, 3s
+      section Other
+      Portal Venous    :done, scan2, 01:10, 7s
       Cystogram    :done, scan3, 01:40, 5s
-      section Scan Phase 4
       Post-Void    :done, scan4, after scan3, 5s
   ```
 

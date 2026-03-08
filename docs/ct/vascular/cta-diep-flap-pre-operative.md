@@ -45,8 +45,9 @@
         | Trigger (HU) | 150 HU |
 
     ===   "Lab Requirements"
-        
-        Full dose if eGFR > 30
+        Use full dose if GFR > 30
+        !!! warning "If GFR < 30"
+            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
 
 
@@ -80,8 +81,10 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title CTA DIEP Flap Pre-operative Timeline
@@ -90,8 +93,8 @@
       
       section Contrast Injection
       Contrast (100 mL)    :active, contrast, 00:00, 25s
-      Saline (20mL)          :active, saline, after contrast, 5s
-      section Arterial Phase
+      Saline          :active, saline, after contrast, 5s
+      section Other
       CTA Arterial    :crit, scan1, after contrast, 5s
   ```
 

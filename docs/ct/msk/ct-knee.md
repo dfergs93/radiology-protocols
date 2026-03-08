@@ -46,8 +46,9 @@
         | Flow Rate | 2-3 mL/s |
 
     ===   "Lab Requirements"
-        
-        NC for trauma. Contrast for infection or tumor
+        Use full dose if GFR > 30
+        !!! warning "If GFR < 30"
+            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
 
 
@@ -81,8 +82,10 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title CT Knee Timeline
@@ -91,7 +94,9 @@
       
       section Contrast Injection
       Contrast (If contrast: 75 mL)    :active, contrast, 00:00, 30s
-      Saline (20mL)          :active, saline, after contrast, 8s
+      Saline          :active, saline, after contrast, 8s
+      section Extremities
+      CT Knee    :done, scan1, 00:00, 5s
   ```
 
 

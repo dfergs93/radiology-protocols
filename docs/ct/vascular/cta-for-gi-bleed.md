@@ -50,8 +50,9 @@
         | Trigger (HU) | 150 HU |
 
     ===   "Lab Requirements"
-        
-        Can proceed with eGFR > 30 in emergency. Document medical necessity
+        Use full dose if GFR > 30
+        !!! warning "If GFR < 30"
+            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
 
 
@@ -85,8 +86,10 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title CTA for GI Bleed Timeline
@@ -95,12 +98,10 @@
       
       section Contrast Injection
       Contrast (125 mL)    :active, contrast, 00:00, 25s
-      Saline (20mL)          :active, saline, after contrast, 4s
-      section Arterial Phase
+      Saline          :active, saline, after contrast, 4s
+      section Other
       Arterial Phase    :crit, scan1, 00:25, 7s
-      section Portal Venous Phase
       Portal Venous Phase    :done, scan2, 01:10, 7s
-      section Delayed Phase
       Delayed Phase    :done, scan3, 01:30, 7s
   ```
 

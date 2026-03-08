@@ -48,8 +48,9 @@
         | Flow Rate | 3-4 mL/s |
 
     ===   "Lab Requirements"
-        
-        Full dose if eGFR > 30, If low eGFR can use low dose calculation **Maximum Contrast Dose** = [(Patient Weight in kg/75 kg) * eGFR] *2
+        Use full dose if GFR > 30
+        !!! warning "If GFR < 30"
+            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
 
 
@@ -84,8 +85,10 @@
 ### Protocol Details
   ```mermaid
   ---
+  displayMode: compact
   config:
     theme: default
+    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
       title Endocarditis/Cardiac Mass Timeline
@@ -94,10 +97,9 @@
       
       section Contrast Injection
       Contrast (1.6 mL/kg)    :active, contrast, 00:00, 34s
-      Saline (20mL)          :active, saline, after contrast, 5s
-      section Arterial Phase
+      Saline          :active, saline, after contrast, 5s
+      section Other
       Gated CTA    :crit, scan1, 00:30, 5s
-      section Delayed Phase
       Delayed phase    :done, scan2, 01:10, 5s
   ```
 
