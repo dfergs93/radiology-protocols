@@ -19,16 +19,11 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # CORS configuration
 ALLOWED_ORIGINS = [
-    "http://localhost:8000", 
-    "http://127.0.0.1:8000", 
+    "http://localhost:8000",
+    "http://127.0.0.1:8000",
     "http://127.0.0.1:8000/radiology-protocols/",
-    "http://localhost:8002",
-    "http://127.0.0.1:8002",
-    "http://localhost:8003",
-    "http://127.0.0.1:8003",
     "https://dfergs93.github.io",
     "https://dfergs93.github.io/radiology-protocols/",
-    "https://dfergs93.github.io/guidelines-manager/"
 ]
 
 app.add_middleware(
