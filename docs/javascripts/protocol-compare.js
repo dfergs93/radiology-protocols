@@ -426,15 +426,18 @@ function displaySummaryComparison(container) {
   });
   html += '</tr></thead><tbody>';
 
-  // Find max rows
-  const maxRows = Math.max(...selectedProtocols.map(p => (p.summary || []).length));
+  const filteredSummary = selectedProtocols.map(p =>
+    (p.summary || []).filter(s => !isScoutSeries(s.series))
+  );
+
+  const maxRows = Math.max(...filteredSummary.map(s => s.length));
 
   for (let i = 0; i < maxRows; i++) {
     html += '<tr>';
     html += `<td><strong>Acquisition ${i + 1}</strong></td>`;
 
-    selectedProtocols.forEach(protocol => {
-      const item = (protocol.summary || [])[i];
+    filteredSummary.forEach(summary => {
+      const item = summary[i];
       if (item) {
         html += '<td>';
         html += `<strong>${item.series}</strong><br>`;
@@ -453,8 +456,13 @@ function displaySummaryComparison(container) {
   container.innerHTML = html;
 }
 
+function isScoutSeries(name) {
+  if (!name) return false;
+  const lower = name.toLowerCase();
+  return lower.includes('scout') || lower.includes('topogram') || lower.includes('localizer');
+}
+
 function displayDetailedSeriesComparison(container) {
-  // Your existing series comparison code
   let html = '<table><thead><tr>';
   html += '<th>Phase</th>';
   selectedProtocols.forEach(protocol => {
@@ -462,20 +470,24 @@ function displayDetailedSeriesComparison(container) {
   });
   html += '</tr></thead><tbody>';
 
-  const maxSeries = Math.max(...selectedProtocols.map(p => (p.series || []).length));
+  const filteredSeries = selectedProtocols.map(p =>
+    (p.series || []).filter(s => !isScoutSeries(s.name))
+  );
+
+  const maxSeries = Math.max(...filteredSeries.map(s => s.length));
 
   for (let i = 0; i < maxSeries; i++) {
     html += '<tr>';
     html += `<td><strong>Series ${i + 1}</strong></td>`;
 
-    selectedProtocols.forEach(protocol => {
-      const series = (protocol.series || [])[i];
-      if (series) {
+    filteredSeries.forEach(series => {
+      const item = series[i];
+      if (item) {
         html += '<td>';
-        html += `<strong>${series.name}</strong><br>`;
-        html += `Coverage: ${series.coverage}<br>`;
-        html += `Delay: ${series.delay}<br>`;
-        html += `Thickness: ${series.thickness}`;
+        html += `<strong>${item.name}</strong><br>`;
+        html += `Coverage: ${item.coverage}<br>`;
+        html += `Delay: ${item.delay}<br>`;
+        html += `Thickness: ${item.thickness}`;
         html += '</td>';
       } else {
         html += '<td style="color: #999;">—</td>';

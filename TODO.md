@@ -22,7 +22,7 @@ Focus areas: **cardiac**, **vascular**, **chest**
 
 ## 2. Chatbot Improvements
 
-- [ ] Reduce response verbosity — tighten system prompt or add length constraints
+- [x] Reduce response verbosity — tighten system prompt or add length constraints
 - [ ] Improve RAG retrieval quality — reduce irrelevant protocols entering the context window (better chunking, metadata filtering, or re-ranking)
 - [ ] Improve handling of advanced/compound queries
 - [ ] Fix streaming UI/UX issues
@@ -32,7 +32,7 @@ Focus areas: **cardiac**, **vascular**, **chest**
 
 ## 3. Protocol Comparison UI
 
-- [ ] Hide/filter scout series from the acquisition comparison display
+- [x] Hide/filter scout series from the acquisition comparison display
 - [ ] Add diff/highlight view to surface differences between selected protocols
 - [ ] Add shareable comparison links (encode selected protocols in URL)
 - [ ] Add "combination" view showing how two protocols could be merged or run together
