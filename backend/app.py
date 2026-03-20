@@ -57,6 +57,11 @@ try:
 except Exception as e:
     print(f"✗ Failed to load protocol_index.json: {e}")
 
+@app.get("/api/protocols")
+async def list_protocols():
+    """Return protocol list for submission form dropdown"""
+    return PROTOCOL_INDEX
+
 class ProtocollerRequest(BaseModel):
     indication: str
 
