@@ -21,7 +21,6 @@ app = FastAPI()
 # Get absolute path to backend directory
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(BASE_DIR)
-sys.path.insert(0, os.path.join(PROJECT_ROOT, 'scripts'))
 from protocol_template import PROTOCOL_TEMPLATE
 DOCS_CT_DIR = os.path.realpath(os.path.join(PROJECT_ROOT, 'docs', 'ct'))
 
