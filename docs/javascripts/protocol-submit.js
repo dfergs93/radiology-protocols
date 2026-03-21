@@ -207,7 +207,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const currentVal = startSelect.value;
             const labels = rows.slice(0, i).map(r => r.querySelector('.gantt-label').value.trim()).filter(Boolean);
             startSelect.innerHTML = '<option value="00:00">At 00:00</option>' +
-                labels.map(l => `<option value="after:${slugify(l)}" ${currentVal === `after:${slugify(l)}` ? 'selected' : ''}>After: ${l}</option>`).join('');
+                labels.map(l => `<option value="after ${slugify(l)}" ${currentVal === `after ${slugify(l)}` ? 'selected' : ''}>After: ${l}</option>`).join('');
             if (currentVal) startSelect.value = currentVal;
         });
     }
@@ -272,11 +272,43 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── Generate & Preview ────────────────────────────────────────────────────
     let lastMarkdown = '';
 
+    function validateForm(payload) {
+        const failures = [];
+
+        const nameEl = document.getElementById('field-protocol-name');
+        if (!payload.protocol_name) {
+            failures.push('Protocol Name');
+            if (nameEl) nameEl.style.border = '2px solid #e53935';
+        } else {
+            if (nameEl) nameEl.style.border = '';
+        }
+
+        const categoryEl = document.getElementById('field-category');
+        if (!payload.category) {
+            failures.push('Category');
+            if (categoryEl) categoryEl.style.border = '2px solid #e53935';
+        } else {
+            if (categoryEl) categoryEl.style.border = '';
+        }
+
+        const indicationsEl = document.getElementById('field-indications');
+        const hasIndications = payload.clinical_indications
+            .split('\n').some(line => line.trim().length > 0);
+        if (!hasIndications) {
+            failures.push('Clinical Indications');
+            if (indicationsEl) indicationsEl.style.border = '2px solid #e53935';
+        } else {
+            if (indicationsEl) indicationsEl.style.border = '';
+        }
+
+        return failures;
+    }
+
     async function generatePreview() {
         const payload = collectFormData();
-        if (!payload.protocol_name) {
-            alert('Protocol Name is required.');
-            document.getElementById('field-protocol-name').focus();
+        const failures = validateForm(payload);
+        if (failures.length > 0) {
+            alert(`The following required fields are missing or incomplete:\n• ${failures.join('\n• ')}`);
             return;
         }
 
