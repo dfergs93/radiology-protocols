@@ -1,0 +1,1 @@
+// protocol-submit.js — placeholder
