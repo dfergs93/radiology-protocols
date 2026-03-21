@@ -12,12 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
         return text.toLowerCase().replace(/[^a-z0-9]+/g, '_').replace(/^_|_$/g, '');
     }
 
-    function secondsToMmss(seconds) {
-        const m = Math.floor(seconds / 60);
-        const s = seconds % 60;
-        return `${String(m).padStart(2, '0')}:${String(s).padStart(2, '0')}`;
-    }
-
     function getVal(id) {
         const el = document.getElementById(id);
         return el ? el.value.trim() : '';
@@ -33,7 +27,12 @@ document.addEventListener('DOMContentLoaded', () => {
     async function loadProtocolList() {
         try {
             const res = await fetch(`${API_BASE_URL}/api/protocols`);
-            if (!res.ok) return;
+            if (!res.ok) {
+                console.warn(`[protocol-submit] Failed to load protocol list: ${res.status}`);
+                const input = document.getElementById('base-off-input');
+                if (input) input.placeholder = 'Could not load protocols';
+                return;
+            }
             protocolList = await res.json();
             buildBaseOffDropdown(protocolList);
         } catch (e) {
@@ -96,8 +95,12 @@ document.addEventListener('DOMContentLoaded', () => {
         set('field-npo', data.npo_status);
         set('field-premedication', data.premedication);
         if (data.premedication) {
-            document.getElementById('toggle-premedication').checked = true;
-            document.getElementById('field-premedication').style.display = 'block';
+            const premToggle = document.getElementById('toggle-premedication');
+            if (premToggle) {
+                premToggle.checked = true;
+                const premField = document.getElementById('field-premedication');
+                if (premField) premField.style.display = 'block';
+            }
         }
         set('contrast-agent', data.contrast_agent);
         set('contrast-volume', data.contrast_volume);
@@ -178,9 +181,12 @@ document.addEventListener('DOMContentLoaded', () => {
         const row = document.createElement('div');
         row.className = 'gantt-builder-row';
 
+        const escapedLabel = (data.label || '').replace(/"/g, '&quot;');
+        const escapedDuration = (data.duration_seconds || '');
+
         row.innerHTML = `
-            <input type="text" class="gantt-label" placeholder="Label" value="${data.label || ''}">
-            <input type="number" class="gantt-duration" placeholder="Duration (s)" min="1" value="${data.duration_seconds || ''}">
+            <input type="text" class="gantt-label" placeholder="Label" value="${escapedLabel}">
+            <input type="number" class="gantt-duration" placeholder="Duration (s)" min="1" value="${escapedDuration}">
             <select class="gantt-type">
                 <option value="contrast" ${data.type === 'contrast' ? 'selected' : ''}>Contrast</option>
                 <option value="saline" ${data.type === 'saline' ? 'selected' : ''}>Saline</option>
@@ -208,7 +214,11 @@ document.addEventListener('DOMContentLoaded', () => {
             const labels = rows.slice(0, i).map(r => r.querySelector('.gantt-label').value.trim()).filter(Boolean);
             startSelect.innerHTML = '<option value="00:00">At 00:00</option>' +
                 labels.map(l => `<option value="after ${slugify(l)}" ${currentVal === `after ${slugify(l)}` ? 'selected' : ''}>After: ${l}</option>`).join('');
-            if (currentVal) startSelect.value = currentVal;
+            startSelect.value = currentVal;
+            if (startSelect.value !== currentVal) {
+                // Referenced row was removed or renamed — reset to absolute start
+                startSelect.value = '00:00';
+            }
         });
     }
 
@@ -239,33 +249,33 @@ document.addEventListener('DOMContentLoaded', () => {
             last_updated: getVal('field-last-updated'),
             category: getVal('field-category'),
             protocol_type: getVal('field-protocol-type'),
-            clinical_indications: document.getElementById('field-indications').value.trim(),
+            clinical_indications: getVal('field-indications'),
             acquisition_summary: acqRows.map(r => ({ series: r[0], phase: r[1], coverage: r[2] })),
             patient_positioning: getVal('field-position'),
             npo_status: getVal('field-npo'),
-            premedication: document.getElementById('toggle-premedication').checked ? getVal('field-premedication') : '',
+            premedication: (document.getElementById('toggle-premedication') || {}).checked ? getVal('field-premedication') : '',
             contrast_agent: getVal('contrast-agent'),
             contrast_volume: getVal('contrast-volume'),
             contrast_flow_rate: getVal('contrast-flow-rate'),
             contrast_timing_method: getVal('contrast-timing-method'),
             contrast_roi_placement: getVal('contrast-roi'),
             contrast_trigger: getVal('contrast-trigger'),
-            lab_requirements: document.getElementById('contrast-lab').value.trim(),
-            tech_notes: document.getElementById('notes-tech').value.trim(),
-            nursing_notes: document.getElementById('notes-nursing').value.trim(),
-            radiologist_notes: document.getElementById('notes-radiologist').value.trim(),
-            tips_tricks: document.getElementById('notes-tips').value.trim(),
+            lab_requirements: getVal('contrast-lab'),
+            tech_notes: getVal('notes-tech'),
+            nursing_notes: getVal('notes-nursing'),
+            radiologist_notes: getVal('notes-radiologist'),
+            tips_tricks: getVal('notes-tips'),
             safety_renal_function: getVal('safety-renal'),
             safety_allergy: getVal('safety-allergy'),
             gantt_rows: getGanttRows(),
-            gantt_raw: document.getElementById('gantt-raw').value.trim(),
+            gantt_raw: getVal('gantt-raw'),
             series: seriesRows.map(r => ({ name: r[0], start: r[1], end: r[2], delay: r[3], thickness: r[4], notes: r[5] || '' })),
             kv: getVal('tech-kv'),
             mas: getVal('tech-mas'),
             rotation_time: getVal('tech-rotation'),
             pitch: getVal('tech-pitch'),
             post_processing: postprocRows.map(r => ({ plane: r[0], acquisition: r[1], fov: r[2], thickness_increment: r[3], kernel: r[4], ir_strength: r[5], notes: r[6] || '' })),
-            additional_recons: document.getElementById('field-recons').value.trim(),
+            additional_recons: getVal('field-recons'),
         };
     }
 
@@ -362,13 +372,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.getElementById('generate-preview-btn').addEventListener('click', generatePreview);
 
-    document.getElementById('copy-markdown-btn').addEventListener('click', () => {
-        navigator.clipboard.writeText(lastMarkdown).then(() => {
-            const btn = document.getElementById('copy-markdown-btn');
-            btn.textContent = 'Copied!';
-            setTimeout(() => { btn.textContent = 'Copy Markdown'; }, 2000);
+    const copyBtn = document.getElementById('copy-markdown-btn');
+    if (copyBtn) {
+        copyBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(lastMarkdown)
+                .then(() => { copyBtn.textContent = 'Copied!'; setTimeout(() => { copyBtn.textContent = 'Copy Markdown'; }, 2000); })
+                .catch(() => { copyBtn.textContent = 'Copy failed'; setTimeout(() => { copyBtn.textContent = 'Copy Markdown'; }, 2000); });
         });
-    });
+    }
 
     document.getElementById('download-btn').addEventListener('click', () => {
         const filename = document.getElementById('download-btn').dataset.name || 'protocol.md';
