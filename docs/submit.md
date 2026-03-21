@@ -8,17 +8,6 @@ title: Submit Protocol
 
 <div class="submit-layout">
 
-<!-- Left: Form -->
-<div class="submit-form-col">
-
-<div class="submit-base-off">
-  <label class="submit-label" for="base-off-input">Base off existing protocol (optional)</label>
-  <div class="searchable-select-container" id="base-off-container">
-    <input type="text" id="base-off-input" class="searchable-input" placeholder="Search protocols..." autocomplete="off">
-    <div class="searchable-dropdown" id="base-off-dropdown" style="display:none;"></div>
-  </div>
-</div>
-
 <nav class="submit-anchor-nav" aria-label="Form sections">
   <a href="#section-metadata">Metadata</a>
   <a href="#section-clinical">Clinical Summary</a>
@@ -31,6 +20,17 @@ title: Submit Protocol
   <a href="#section-postproc">Post-Processing</a>
   <a href="#section-recons">Reconstructions</a>
 </nav>
+
+<!-- Left: Form -->
+<div class="submit-form-col">
+
+<div class="submit-base-off">
+  <label class="submit-label" for="base-off-input">Base off existing protocol (optional)</label>
+  <div class="searchable-select-container" id="base-off-container">
+    <input type="text" id="base-off-input" class="searchable-input" placeholder="Search protocols..." autocomplete="off">
+    <div class="searchable-dropdown" id="base-off-dropdown" style="display:none;"></div>
+  </div>
+</div>
 
 <form id="protocol-submit-form" novalidate>
 

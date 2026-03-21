@@ -1124,32 +1124,32 @@ html {
 }
 
 /* Also provide .form-group / .form-row aliases for JS-generated content */
-.form-row {
+.submit-layout .form-row {
   display: flex;
   gap: 1rem;
   margin-bottom: 0.75rem;
   align-items: flex-start;
 }
 
-.form-group {
+.submit-layout .form-group {
   display: flex;
   flex-direction: column;
   flex: 1;
   min-width: 0;
 }
 
-.form-group label {
+.submit-layout .form-group label {
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 0.3rem;
   color: var(--md-default-fg-color--light);
 }
 
-.form-group input[type="text"],
-.form-group input[type="date"],
-.form-group input[type="number"],
-.form-group select,
-.form-group textarea {
+.submit-layout .form-group input[type="text"],
+.submit-layout .form-group input[type="date"],
+.submit-layout .form-group input[type="number"],
+.submit-layout .form-group select,
+.submit-layout .form-group textarea {
   background: var(--md-default-bg-color);
   border: 1px solid var(--md-default-fg-color--lightest);
   border-radius: 4px;
@@ -1161,14 +1161,14 @@ html {
   transition: border-color 0.15s;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
+.submit-layout .form-group input:focus,
+.submit-layout .form-group select:focus,
+.submit-layout .form-group textarea:focus {
   outline: none;
   border-color: var(--md-accent-fg-color);
 }
 
-.form-group textarea {
+.submit-layout .form-group textarea {
   resize: vertical;
   min-height: 80px;
 }
@@ -1260,7 +1260,7 @@ html {
 }
 
 /* 5. Action buttons */
-.btn-primary {
+.submit-layout .btn-primary {
   background: var(--md-accent-fg-color);
   color: var(--md-accent-bg-color, #fff);
   border: none;
@@ -1272,16 +1272,16 @@ html {
   transition: opacity 0.15s;
 }
 
-.btn-primary:hover {
+.submit-layout .btn-primary:hover {
   opacity: 0.85;
 }
 
-.btn-primary:disabled {
+.submit-layout .btn-primary:disabled {
   opacity: 0.5;
   cursor: not-allowed;
 }
 
-.btn-secondary {
+.submit-layout .btn-secondary {
   background: none;
   border: 1px solid var(--md-default-fg-color--lightest);
   border-radius: 4px;
@@ -1292,7 +1292,7 @@ html {
   transition: border-color 0.15s, color 0.15s;
 }
 
-.btn-secondary:hover {
+.submit-layout .btn-secondary:hover {
   border-color: var(--md-accent-fg-color);
   color: var(--md-accent-fg-color);
 }
