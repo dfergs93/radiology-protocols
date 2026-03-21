@@ -2,16 +2,17 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import StreamingResponse, JSONResponse
 from starlette.exceptions import HTTPException as StarletteHTTPException
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 import chromadb
 from openai import OpenAI
 import os
 import json
 import re
+import sys
 from pathlib import Path
 from dotenv import load_dotenv
 import asyncio
-from typing import Dict, Any
+from typing import Dict, Any, Literal
 
 load_dotenv()
 
@@ -20,6 +21,8 @@ app = FastAPI()
 # Get absolute path to backend directory
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_ROOT = os.path.dirname(BASE_DIR)
+sys.path.insert(0, os.path.join(PROJECT_ROOT, 'scripts'))
+from protocol_template import PROTOCOL_TEMPLATE
 DOCS_CT_DIR = os.path.realpath(os.path.join(PROJECT_ROOT, 'docs', 'ct'))
 
 # CORS configuration
@@ -71,6 +74,71 @@ try:
     print(f"✓ Loaded {len(PROTOCOL_INDEX)} protocols for Protocoller")
 except Exception as e:
     print(f"✗ Failed to load protocol_index.json: {e}")
+
+VALID_CATEGORIES = {"Cardiac", "Vascular", "Chest", "Abdomen", "Neuro", "Msk", "Trauma"}
+
+class AcquisitionSummaryRow(BaseModel):
+    series: str
+    phase: str
+    coverage: str
+
+class GanttRow(BaseModel):
+    label: str
+    duration_seconds: int = Field(gt=0)  # spec requires duration > 0
+    type: Literal["contrast", "saline", "scan", "other"]
+    start: str  # "00:00" for absolute, "after:<slug>" for dependency
+
+class SeriesRow(BaseModel):
+    name: str
+    start: str
+    end: str
+    delay: str
+    thickness: str
+    notes: str
+
+class PostProcRow(BaseModel):
+    plane: str
+    acquisition: str
+    fov: str
+    thickness_increment: str
+    kernel: str
+    ir_strength: str
+    notes: str
+
+class ProtocolGenerateRequest(BaseModel):
+    protocol_name: str
+    author: str
+    last_updated: str
+    category: str
+    protocol_type: str
+    clinical_indications: str
+    acquisition_summary: list[AcquisitionSummaryRow]
+    patient_positioning: str
+    npo_status: str
+    premedication: str
+    contrast_agent: str
+    contrast_volume: str
+    contrast_flow_rate: str
+    contrast_timing_method: str
+    contrast_roi_placement: str
+    contrast_trigger: str
+    lab_requirements: str
+    tech_notes: str
+    nursing_notes: str
+    radiologist_notes: str
+    tips_tricks: str
+    safety_renal_function: str
+    safety_allergy: str
+    gantt_rows: list[GanttRow]
+    gantt_raw: str
+    series: list[SeriesRow]
+    kv: str
+    mas: str
+    rotation_time: str
+    pitch: str
+    post_processing: list[PostProcRow]
+    additional_recons: str
+
 
 @app.get("/api/protocols")
 async def list_protocols():
@@ -261,6 +329,147 @@ def _parse_protocol_file(content: str) -> dict:
     result['additional_recons'] = ''  # Best effort; hard to extract reliably
 
     return result
+
+
+def _slugify(text: str) -> str:
+    return re.sub(r'[^a-z0-9]+', '_', text.lower()).strip('_')
+
+def _unique_slugs(rows: list) -> list:
+    slugs = []
+    seen: dict = {}
+    for row in rows:
+        base = _slugify(row.label)
+        if base in seen:
+            seen[base] += 1
+            slugs.append(f"{base}_{seen[base]}")
+        else:
+            seen[base] = 1
+            slugs.append(base)
+    return slugs
+
+def _seconds_to_mmss(seconds: int) -> str:
+    return f"{seconds // 60:02d}:{seconds % 60:02d}"
+
+def _build_gantt_content(rows: list, gantt_raw: str) -> str:
+    if not rows:
+        return gantt_raw
+    slugs = _unique_slugs(rows)
+    type_to_class = {"contrast": "active", "saline": "active", "scan": "crit", "other": ""}
+    lines = ["section Injection"]
+    scan_section_added = False
+    for row, slug in zip(rows, slugs):
+        cls = type_to_class.get(row.type, "")
+        duration_str = _seconds_to_mmss(row.duration_seconds)
+        start_str = row.start.replace("after:", "after ") if row.start.startswith("after:") else row.start
+        cls_part = f"{cls}, " if cls else ""
+        if row.type == "scan" and not scan_section_added:
+            lines.append("    section Scan")
+            scan_section_added = True
+        lines.append(f"      {row.label} :{cls_part}{slug}, {start_str}, {duration_str}")
+    return "\n    ".join(lines)
+
+def _build_acquisition_summary_table(rows: list) -> str:
+    header = "        | Series | Phase | Coverage |\n        |:---|:---|:---|\n"
+    body = "".join(f"        | {r.series} | {r.phase} | {r.coverage} |\n" for r in rows)
+    return header + body
+
+def _build_series_table(rows: list) -> str:
+    header = "    | Series Name | Start | End | Delay | Thickness | Notes |\n    |:---|:---|:---|:---|:---|:---|\n"
+    body = "".join(
+        f"    | **{r.name}** | {r.start} | {r.end} | {r.delay} | {r.thickness} | {r.notes} |\n"
+        for r in rows
+    )
+    return header + body
+
+def _build_contrast_section(req) -> str:
+    # IMPORTANT: The template has 4 spaces before {contrast_section}.
+    # Python's .format() prepends those 4 spaces to the FIRST line only.
+    # So use 0 spaces on the first line and 4 spaces on subsequent lines.
+    lab = req.lab_requirements or "N/A"
+    return (
+        '=== "Injection Parameters"\n\n'
+        '        | Parameter | Value |\n'
+        '        |-----------|-------|\n'
+        f'        | Agent | {req.contrast_agent} |\n'
+        f'        | Volume | {req.contrast_volume} |\n'
+        f'        | Flow Rate | {req.contrast_flow_rate} |\n'
+        f'        | Timing Method | {req.contrast_timing_method} |\n'
+        f'        | ROI Placement | {req.contrast_roi_placement} |\n'
+        f'        | Trigger (HU) | {req.contrast_trigger} |\n\n'
+        '    === "Lab Requirements"\n\n'
+        f'        {lab}'
+    )
+
+def _build_postproc_table(rows: list) -> str:
+    header = "    | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |\n    |:---|:---|:---|:---|:---|:---|:---|\n"
+    body = "".join(
+        f"    | {r.plane} | {r.acquisition} | {r.fov} | {r.thickness_increment} | {r.kernel} | {r.ir_strength} | {r.notes} |\n"
+        for r in rows
+    )
+    return header + body
+
+def _format_notes(text: str, indent: str = "        ") -> str:
+    if not text:
+        return f"{indent}N/A"
+    return "\n".join(f"{indent}{line}" for line in text.split('\n'))
+
+def _format_indications(text: str) -> str:
+    if not text:
+        return "        - N/A"
+    return "\n".join(f"        - {line.strip()}" for line in text.split('\n') if line.strip())
+
+def _format_premedication(text: str) -> str:
+    if not text:
+        return ""
+    return f"    - **Premedication:** {text}"
+
+
+@app.post("/api/protocols/generate")
+async def generate_protocol(req: ProtocolGenerateRequest):
+    """Generate protocol markdown from form fields"""
+    if req.category not in VALID_CATEGORIES:
+        raise HTTPException(
+            status_code=422,
+            detail=[{"loc": ["body", "category"], "msg": f"Must be one of {sorted(VALID_CATEGORIES)}", "type": "value_error"}]
+        )
+    if not req.clinical_indications.strip():
+        raise HTTPException(
+            status_code=422,
+            detail=[{"loc": ["body", "clinical_indications"], "msg": "At least one clinical indication required", "type": "value_error"}]
+        )
+
+    gantt_content = _build_gantt_content(req.gantt_rows, req.gantt_raw)
+    additional_recons_section = req.additional_recons.strip() if req.additional_recons.strip() else ""
+
+    markdown = PROTOCOL_TEMPLATE.format(
+        protocol_name=req.protocol_name,
+        last_updated=req.last_updated,
+        author=req.author,
+        acquisition_summary_table=_build_acquisition_summary_table(req.acquisition_summary),
+        clinical_indications_formatted=_format_indications(req.clinical_indications),
+        patient_positioning=req.patient_positioning,
+        npo_status=req.npo_status,
+        premedication_section=_format_premedication(req.premedication),
+        contrast_section=_build_contrast_section(req),
+        tech_notes_formatted=_format_notes(req.tech_notes),
+        nursing_notes_formatted=_format_notes(req.nursing_notes),
+        safety_renal_function=req.safety_renal_function,
+        safety_allergy_check=req.safety_allergy,
+        radiologist_notes_formatted=_format_notes(req.radiologist_notes),
+        artifact_tip_formatted=_format_notes(req.tips_tricks),
+        gantt_content=gantt_content,
+        series_table=_build_series_table(req.series),
+        kv=req.kv,
+        mas=req.mas,
+        rotation_time=req.rotation_time,
+        pitch=req.pitch,
+        postproc_table=_build_postproc_table(req.post_processing),
+        additional_recons_section=additional_recons_section,
+        category=req.category,
+        protocol_type=req.protocol_type,
+    )
+
+    return {"markdown": markdown}
 
 
 @app.get("/api/protocols/{filepath:path}")
