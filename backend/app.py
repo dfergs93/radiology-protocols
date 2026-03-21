@@ -1,11 +1,14 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.responses import StreamingResponse
+from fastapi.responses import StreamingResponse, JSONResponse
+from starlette.exceptions import HTTPException as StarletteHTTPException
 from pydantic import BaseModel
 import chromadb
 from openai import OpenAI
 import os
 import json
+import re
+from pathlib import Path
 from dotenv import load_dotenv
 import asyncio
 from typing import Dict, Any
@@ -16,6 +19,8 @@ app = FastAPI()
 
 # Get absolute path to backend directory
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+PROJECT_ROOT = os.path.dirname(BASE_DIR)
+DOCS_CT_DIR = os.path.realpath(os.path.join(PROJECT_ROOT, 'docs', 'ct'))
 
 # CORS configuration
 ALLOWED_ORIGINS = [
@@ -33,6 +38,16 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+
+@app.exception_handler(StarletteHTTPException)
+async def http_exception_handler(request: Request, exc: StarletteHTTPException):
+    """Return 403 for requests to non-API paths (e.g. path-traversal attempts that
+    get URL-normalized outside /api/ before they reach route matching)."""
+    if exc.status_code == 404 and not request.url.path.startswith('/api/'):
+        return JSONResponse({"detail": "Access denied"}, status_code=403)
+    return JSONResponse({"detail": exc.detail}, status_code=exc.status_code)
+
 
 # Initialize clients
 openai_client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
@@ -61,6 +76,208 @@ except Exception as e:
 async def list_protocols():
     """Return protocol list for submission form dropdown"""
     return PROTOCOL_INDEX
+
+
+def _parse_protocol_file(content: str) -> dict:
+    """Parse a protocol markdown file into structured form data."""
+    result = {}
+
+    # Title
+    m = re.search(r'^#\s+(.+)$', content, re.MULTILINE)
+    result['protocol_name'] = m.group(1).strip() if m else ''
+
+    # Author and last updated
+    m = re.search(r'\*\*Author:\*\*\s*(.+)', content)
+    result['author'] = m.group(1).strip() if m else ''
+    m = re.search(r'\*\*Last Updated:\*\*\s*(.+)', content)
+    result['last_updated'] = m.group(1).strip() if m else ''
+
+    # Footer: Category and Protocol Type
+    m = re.search(r'^Category:\s*(.+)$', content, re.MULTILINE)
+    result['category'] = m.group(1).strip() if m else ''
+    m = re.search(r'^Protocol Type:\s*(.+)$', content, re.MULTILINE)
+    result['protocol_type'] = m.group(1).strip() if m else ''
+
+    # Patient prep
+    m = re.search(r'\*\*Position:\*\*\s*(.+)', content)
+    result['patient_positioning'] = m.group(1).strip() if m else ''
+    m = re.search(r'\*\*NPO Status:\*\*\s*(.+)', content)
+    result['npo_status'] = m.group(1).strip() if m else ''
+
+    # Premedication
+    m = re.search(r'\*\*Premedication[^:]*:\*\*\s*(.+?)(?=\n\s*[-*]|\n\n)', content, re.DOTALL)
+    result['premedication'] = m.group(1).strip() if m else ''
+
+    # Clinical indications tab
+    m = re.search(r'=== "Clinical Indications"\s*\n(.*?)(?====|\Z)', content, re.DOTALL)
+    if m:
+        lines = [ln.strip().lstrip('- ').strip() for ln in m.group(1).split('\n')
+                 if ln.strip() and not ln.strip().startswith('===')]
+        result['clinical_indications'] = '\n'.join(lines)
+    else:
+        result['clinical_indications'] = ''
+
+    # Acquisition summary table
+    summary = []
+    in_table = False
+    for line in content.split('\n'):
+        if '| Series | Phase | Coverage |' in line:
+            in_table = True
+            continue
+        if in_table and '|:---' in line:
+            continue
+        if in_table and line.strip() and line.strip().startswith('|'):
+            cells = [c.strip() for c in line.split('|') if c.strip()]
+            if len(cells) >= 3:
+                summary.append({'series': cells[0], 'phase': cells[1], 'coverage': cells[2]})
+        elif in_table:
+            break
+    result['acquisition_summary'] = summary
+
+    # Injection parameters table
+    contrast = {}
+    in_table = False
+    for line in content.split('\n'):
+        if '| Parameter | Value |' in line:
+            in_table = True
+            continue
+        if in_table and '|---' in line:
+            continue
+        if in_table and line.strip() and line.strip().startswith('|'):
+            cells = [c.strip() for c in line.split('|') if c.strip()]
+            if len(cells) >= 2:
+                param, value = cells[0].lower(), cells[1]
+                if 'agent' in param:
+                    contrast['agent'] = value
+                elif 'volume' in param:
+                    contrast['volume'] = value
+                elif 'flow rate' in param:
+                    contrast['flow_rate'] = value
+                elif 'timing' in param:
+                    contrast['timing_method'] = value
+                elif 'roi' in param:
+                    contrast['roi_placement'] = value
+                elif 'trigger' in param:
+                    contrast['trigger'] = value
+        elif in_table:
+            break
+    result['contrast_agent'] = contrast.get('agent', '')
+    result['contrast_volume'] = contrast.get('volume', '')
+    result['contrast_flow_rate'] = contrast.get('flow_rate', '')
+    result['contrast_timing_method'] = contrast.get('timing_method', '')
+    result['contrast_roi_placement'] = contrast.get('roi_placement', '')
+    result['contrast_trigger'] = contrast.get('trigger', '')
+
+    # Lab requirements
+    m = re.search(r'=== "Lab Requirements"\s*\n(.*?)(?====|\Z)', content, re.DOTALL)
+    result['lab_requirements'] = m.group(1).strip() if m else ''
+
+    # Special notes tabs
+    for tab_name, key in [
+        ("Technologist Notes", "tech_notes"),
+        ("Nursing Notes", "nursing_notes"),
+        ("Radiologist Notes", "radiologist_notes"),
+        ("Tips & Tricks", "tips_tricks"),
+    ]:
+        m = re.search(rf'=== "{re.escape(tab_name)}"\s*\n(.*?)(?====|\Z)', content, re.DOTALL)
+        result[key] = m.group(1).strip() if m else ''
+
+    # Safety fields
+    m = re.search(r'\*\*Renal Function:\*\*\s*(.+)', content)
+    result['safety_renal_function'] = m.group(1).strip() if m else ''
+    m = re.search(r'\*\*Allergy[^:]*:\*\*\s*(.+)', content)
+    result['safety_allergy'] = m.group(1).strip() if m else ''
+
+    # Gantt: raw mermaid content
+    m = re.search(r'```mermaid\s*\n(.*?)```', content, re.DOTALL)
+    result['gantt_raw'] = m.group(1).strip() if m else ''
+
+    # Series acquisition table
+    series = []
+    in_table = False
+    for line in content.split('\n'):
+        if '| Series Name |' in line or '| **Series Name** |' in line:
+            in_table = True
+            continue
+        if in_table and '|:---' in line:
+            continue
+        if in_table and line.strip() and line.strip().startswith('|'):
+            cells = [c.strip().replace('**', '') for c in line.split('|') if c.strip()]
+            if len(cells) >= 5:
+                series.append({
+                    'name': cells[0], 'start': cells[1], 'end': cells[2],
+                    'delay': cells[3], 'thickness': cells[4],
+                    'notes': cells[5] if len(cells) > 5 else ''
+                })
+        elif in_table:
+            in_table = False
+    result['series'] = series
+
+    # Technical parameters
+    tech = {}
+    in_table = False
+    for line in content.split('\n'):
+        if '=== "Technical Parameters"' in line:
+            in_table = True
+            continue
+        if in_table and '| Parameter | Value |' in line:
+            continue
+        if in_table and '|---' in line:
+            continue
+        if in_table and line.strip().startswith('|'):
+            cells = [c.strip() for c in line.split('|') if c.strip()]
+            if len(cells) >= 2:
+                tech[cells[0].lower()] = cells[1]
+        elif in_table and line.strip() and not line.strip().startswith('|'):
+            in_table = False
+    result['kv'] = tech.get('kv', '')
+    result['mas'] = tech.get('mas', '')
+    result['rotation_time'] = tech.get('rotation time', '').replace('s', '').strip()
+    result['pitch'] = tech.get('pitch', '')
+
+    # Post-processing table
+    post_proc = []
+    in_table = False
+    for line in content.split('\n'):
+        if '=== "Post-Processing"' in line:
+            in_table = True
+            continue
+        if in_table and '| Plane |' in line:
+            continue
+        if in_table and '|---' in line:
+            continue
+        if in_table and line.strip().startswith('|'):
+            cells = [c.strip() for c in line.split('|') if c.strip()]
+            if len(cells) >= 6:
+                post_proc.append({
+                    'plane': cells[0], 'acquisition': cells[1], 'fov': cells[2],
+                    'thickness_increment': cells[3], 'kernel': cells[4],
+                    'ir_strength': cells[5], 'notes': cells[6] if len(cells) > 6 else ''
+                })
+        elif in_table and line.strip() and not line.strip().startswith('|'):
+            in_table = False
+    result['post_processing'] = post_proc
+
+    result['additional_recons'] = ''  # Best effort; hard to extract reliably
+
+    return result
+
+
+@app.get("/api/protocols/{filepath:path}")
+async def load_protocol(filepath: str):
+    """Load and parse a protocol file for form pre-population"""
+    # Resolve and validate path is inside docs/ct/
+    candidate = os.path.realpath(os.path.join(PROJECT_ROOT, 'docs', filepath))
+    if not candidate.startswith(DOCS_CT_DIR + os.sep) and candidate != DOCS_CT_DIR:
+        raise HTTPException(status_code=403, detail="Access denied")
+    if not os.path.isfile(candidate):
+        raise HTTPException(status_code=404, detail="Protocol not found")
+
+    with open(candidate, 'r', encoding='utf-8') as f:
+        content = f.read()
+
+    return _parse_protocol_file(content)
+
 
 class ProtocollerRequest(BaseModel):
     indication: str
