@@ -985,3 +985,479 @@ html {
 [data-md-color-scheme="slate"] .mermaid .sectionTitle {
     fill: #fff !important;
 }
+
+
+/* ============================================
+   PROTOCOL SUBMISSION FORM STYLES
+   ============================================ */
+
+/* 1. Page layout: two-column side-by-side on desktop */
+.submit-layout {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* Anchor nav column */
+/* Note: HTML uses <nav class="submit-anchor-nav"> not #submit-nav */
+.submit-anchor-nav {
+  width: 180px;
+  flex-shrink: 0;
+  position: sticky;
+  top: 4rem;
+}
+
+/* Form column */
+/* Note: HTML uses <div class="submit-form-col"> not #submit-form-area */
+.submit-form-col {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Preview panel */
+/* Note: HTML uses <div class="submit-preview-col" id="preview-panel"> */
+#preview-panel {
+  width: 40%;
+  flex-shrink: 0;
+  position: sticky;
+  top: 4rem;
+  max-height: calc(100vh - 5rem);
+  overflow-y: auto;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+  padding: 1rem;
+  background: var(--md-default-bg-color);
+}
+
+/* 2. Anchor nav styling */
+/* Note: HTML uses <nav class="submit-anchor-nav"> with <a> tags directly (no ul/li) */
+.submit-anchor-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.submit-anchor-nav a {
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light);
+  text-decoration: none;
+  display: block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  transition: background 0.15s;
+}
+
+.submit-anchor-nav a:hover {
+  background: var(--md-accent-fg-color--transparent, rgba(0,0,0,0.05));
+  color: var(--md-accent-fg-color);
+}
+
+.submit-anchor-nav a.active {
+  color: var(--md-accent-fg-color);
+  font-weight: 600;
+  background: var(--md-accent-fg-color--transparent, rgba(0,0,0,0.05));
+}
+
+/* 3. Form section styling */
+.submit-section {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+}
+
+.submit-section:last-child {
+  border-bottom: none;
+}
+
+.submit-section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid var(--md-accent-fg-color);
+  color: var(--md-default-fg-color);
+}
+
+/* Note: HTML uses <div class="submit-field"> not .form-group / .form-row */
+.submit-field {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  margin-bottom: 0.75rem;
+}
+
+.submit-field label,
+.submit-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--md-default-fg-color--light);
+  display: block;
+}
+
+.submit-field input[type="text"],
+.submit-field input[type="date"],
+.submit-field input[type="number"],
+.submit-field select,
+.submit-field textarea {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.9rem;
+  color: var(--md-default-fg-color);
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.15s;
+}
+
+.submit-field input:focus,
+.submit-field select:focus,
+.submit-field textarea:focus {
+  outline: none;
+  border-color: var(--md-accent-fg-color);
+}
+
+.submit-field textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* Also provide .form-group / .form-row aliases for JS-generated content */
+.submit-layout .form-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+  align-items: flex-start;
+}
+
+.submit-layout .form-group {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.submit-layout .form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 0.3rem;
+  color: var(--md-default-fg-color--light);
+}
+
+.submit-layout .form-group input[type="text"],
+.submit-layout .form-group input[type="date"],
+.submit-layout .form-group input[type="number"],
+.submit-layout .form-group select,
+.submit-layout .form-group textarea {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.9rem;
+  color: var(--md-default-fg-color);
+  width: 100%;
+  box-sizing: border-box;
+  transition: border-color 0.15s;
+}
+
+.submit-layout .form-group input:focus,
+.submit-layout .form-group select:focus,
+.submit-layout .form-group textarea:focus {
+  outline: none;
+  border-color: var(--md-accent-fg-color);
+}
+
+.submit-layout .form-group textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+/* 4. Dynamic table styling */
+/* Note: HTML uses <table class="dynamic-table"> — matches spec */
+.dynamic-table-container {
+  overflow-x: auto;
+}
+
+.dynamic-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.dynamic-table th {
+  text-align: left;
+  font-weight: 600;
+  padding: 0.4rem 0.5rem;
+  border-bottom: 2px solid var(--md-default-fg-color--lightest);
+  font-size: 0.8rem;
+  color: var(--md-default-fg-color--light);
+  white-space: nowrap;
+}
+
+.dynamic-table td {
+  padding: 0.3rem 0.4rem;
+  border-bottom: 1px solid var(--md-default-fg-color--lightest);
+  vertical-align: middle;
+}
+
+.dynamic-table td input,
+.dynamic-table td select,
+.dynamic-table td textarea {
+  width: 100%;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  background: var(--md-default-bg-color);
+  border-radius: 3px;
+  padding: 0.3rem 0.4rem;
+  font-size: 0.85rem;
+  color: var(--md-default-fg-color);
+  box-sizing: border-box;
+}
+
+.dynamic-table td input:focus,
+.dynamic-table td select:focus {
+  outline: none;
+  border-color: var(--md-accent-fg-color);
+}
+
+/* Remove row button — .btn-remove-row (JS-generated) */
+.btn-remove-row {
+  background: none;
+  border: none;
+  color: var(--md-default-fg-color--light);
+  cursor: pointer;
+  padding: 0.2rem 0.4rem;
+  font-size: 0.85rem;
+  border-radius: 3px;
+  transition: color 0.15s, background 0.15s;
+}
+
+.btn-remove-row:hover {
+  color: #e53935;
+  background: rgba(229, 57, 53, 0.08);
+}
+
+/* Add row button */
+/* Note: HTML uses class="add-row-btn" not .btn-add-row — target both */
+.btn-add-row,
+.add-row-btn {
+  background: none;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: var(--md-default-fg-color--light);
+  margin-top: 0.4rem;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.btn-add-row:hover,
+.add-row-btn:hover {
+  border-color: var(--md-accent-fg-color);
+  color: var(--md-accent-fg-color);
+}
+
+/* 5. Action buttons */
+.submit-layout .btn-primary {
+  background: var(--md-accent-fg-color);
+  color: var(--md-accent-bg-color, #fff);
+  border: none;
+  border-radius: 4px;
+  padding: 0.6rem 1.4rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+}
+
+.submit-layout .btn-primary:hover {
+  opacity: 0.85;
+}
+
+.submit-layout .btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.submit-layout .btn-secondary {
+  background: none;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: var(--md-default-fg-color--light);
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.submit-layout .btn-secondary:hover {
+  border-color: var(--md-accent-fg-color);
+  color: var(--md-accent-fg-color);
+}
+
+/* Submit actions row */
+.submit-actions {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+/* 6. Preview panel */
+/* Note: HTML uses .preview-header (not .preview-actions) and .preview-title */
+#preview-panel h3 {
+  margin-top: 0;
+  font-size: 0.95rem;
+  color: var(--md-default-fg-color);
+}
+
+.preview-header {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+  align-items: center;
+}
+
+.preview-title {
+  font-weight: 600;
+  font-size: 0.95rem;
+  flex: 1;
+}
+
+/* .preview-actions alias for JS-generated content */
+.preview-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+
+#preview-content {
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+#preview-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 0.75rem;
+  font-size: 0.82rem;
+}
+
+#preview-content th,
+#preview-content td {
+  padding: 0.3rem 0.5rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  text-align: left;
+}
+
+#preview-content th {
+  background: var(--md-code-bg-color);
+  font-weight: 600;
+}
+
+/* 7. Base-off / protocol search styling */
+/* Note: HTML uses class="submit-base-off" and id="base-off-container" */
+.submit-base-off {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 6px;
+  background: var(--md-code-bg-color);
+}
+
+/* Also provide #base-off-wrapper alias for JS-generated content */
+#base-off-wrapper {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 6px;
+  background: var(--md-code-bg-color);
+}
+
+#base-off-wrapper label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Searchable select / autocomplete dropdown */
+.searchable-select-container {
+  position: relative;
+}
+
+.searchable-input {
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 4px;
+  padding: 0.45rem 0.6rem;
+  font-size: 0.9rem;
+  color: var(--md-default-fg-color);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.searchable-input:focus {
+  outline: none;
+  border-color: var(--md-accent-fg-color);
+}
+
+.searchable-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--md-default-bg-color);
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-top: none;
+  border-radius: 0 0 4px 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+.searchable-dropdown div {
+  padding: 0.4rem 0.6rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  color: var(--md-default-fg-color);
+}
+
+.searchable-dropdown div:hover {
+  background: var(--md-code-bg-color);
+  color: var(--md-accent-fg-color);
+}
+
+/* Submit hint text */
+.submit-hint {
+  font-size: 0.82rem;
+  color: var(--md-default-fg-color--light);
+  margin-bottom: 0.75rem;
+}
+
+/* 8. Mobile responsive */
+@media (max-width: 768px) {
+  .submit-layout {
+    flex-direction: column;
+  }
+
+  .submit-anchor-nav {
+    width: 100%;
+    position: static;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .submit-anchor-nav a {
+    display: inline-block;
+  }
+
+  #preview-panel {
+    width: 100%;
+    position: static;
+    max-height: none;
+  }
+}

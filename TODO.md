@@ -48,10 +48,10 @@ Focus areas: **cardiac**, **vascular**, **chest**
 
 ## 5. Protocol Submission Form (New Feature)
 
-- [ ] Design API endpoints for protocol creation and editing (`POST /api/protocols`, `PUT /api/protocols/:id`)
-- [ ] Build web form UI for submitting new protocols
+- [x] Design API endpoints for protocol creation and editing (`POST /api/protocols`, `PUT /api/protocols/:id`)
+- [x] Build web form UI for submitting new protocols
 - [ ] Build web form UI for editing existing protocols
-- [ ] Add server-side validation for protocol structure and required fields
+- [x] Add server-side validation for protocol structure and required fields
 - [ ] Add review/approval step (initially just for solo author; extendable to team workflow later)
 
 ---
