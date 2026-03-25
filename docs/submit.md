@@ -1,5 +1,8 @@
 ---
 title: Submit Protocol
+hide:
+  - navigation
+  - toc
 ---
 
 # Submit Protocol
