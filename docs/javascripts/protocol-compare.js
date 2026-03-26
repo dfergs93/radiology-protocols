@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
       console.log('Successfully parsed', data.length, 'protocols');
       protocolData = data;
       populateSelectors();
+      loadFromURL();
     })
     .catch(error => {
       console.error('Error loading protocols:', error);
@@ -102,6 +103,38 @@ function updateURL() {
   } else {
     const results = document.getElementById('comparison-results');
     if (results) results.style.display = 'none';
+  }
+}
+
+function loadFromURL() {
+  const filepaths = new URLSearchParams(window.location.search).getAll('p');
+  if (filepaths.length === 0) return;
+
+  // Add extra selector slots if URL has more protocols than the default 2
+  const existingSelects = document.querySelectorAll('.protocol-select');
+  const extraNeeded = filepaths.length - existingSelects.length;
+  for (let i = 0; i < extraNeeded; i++) {
+    addProtocolSlot();
+  }
+
+  const selects = document.querySelectorAll('.protocol-select');
+  filepaths.forEach((filepath, i) => {
+    const index = protocolData.findIndex(p => p.filepath.replace('.md', '') === filepath);
+    if (index === -1 || !selects[i]) return; // silently skip unrecognised protocols
+    selects[i].value = index;
+    createSearchableSelect(selects[i]); // sync the visible search input to show the title
+  });
+
+  const filled = [...document.querySelectorAll('.protocol-select')]
+    .map(s => protocolData[s.value])
+    .filter(Boolean);
+
+  const copyBtn = document.getElementById('copy-link-btn');
+  if (copyBtn && filled.length >= 2) copyBtn.style.display = '';
+
+  if (filled.length >= 2) {
+    selectedProtocols = filled;
+    displayComparison();
   }
 }
 
