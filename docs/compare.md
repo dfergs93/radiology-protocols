@@ -246,6 +246,7 @@ Compare multiple CT protocols side-by-side to understand differences in contrast
     <button id="add-protocol-btn" class="md-button">+ Add Protocol</button>
     <button id="compare-btn" class="md-button md-button--primary">Compare</button>
     <button id="clear-btn" class="md-button">Clear</button>
+    <button id="copy-link-btn" class="md-button" style="display:none;">🔗 Copy Link</button>
   </div>
 
   <div id="comparison-results" style="display: none;">
