@@ -70,7 +70,38 @@ function populateSelectors() {
 
     // 4. Transform into searchable select
     createSearchableSelect(select);
+
+    // Attach URL sync listener once per select element
+    if (!select.dataset.urlListenerAttached) {
+      select.addEventListener('change', updateURL);
+      select.dataset.urlListenerAttached = 'true';
+    }
   });
+}
+
+function updateURL() {
+  const params = new URLSearchParams();
+  const filled = [];
+
+  document.querySelectorAll('.protocol-select').forEach(select => {
+    const idx = select.value;
+    if (idx !== '' && protocolData[idx]) {
+      params.append('p', protocolData[idx].filepath.replace('.md', ''));
+      filled.push(protocolData[idx]);
+    }
+  });
+
+  history.replaceState(null, '', filled.length ? '?' + params.toString() : window.location.pathname);
+
+  const copyBtn = document.getElementById('copy-link-btn');
+  if (copyBtn) copyBtn.style.display = filled.length >= 2 ? '' : 'none';
+
+  if (filled.length >= 2) {
+    selectedProtocols = filled;
+    displayComparison();
+  } else {
+    document.getElementById('comparison-results').style.display = 'none';
+  }
 }
 
 function createSearchableSelect(select) {
@@ -259,6 +290,7 @@ document.getElementById('clear-btn')?.addEventListener('click', () => {
     createSearchableSelect(select);
   });
   document.getElementById('comparison-results').style.display = 'none';
+  updateURL();
 });
 
 function displayComparison() {
