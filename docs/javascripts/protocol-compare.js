@@ -340,7 +340,8 @@ document.getElementById('copy-link-btn')?.addEventListener('click', () => {
 });
 
 function displayComparison() {
-  document.getElementById('comparison-results').style.display = 'block';
+  const results = document.getElementById('comparison-results');
+  if (results) results.style.display = 'block';
 
   displayGanttComparison();
   displayContrastComparison();
