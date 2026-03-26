@@ -323,7 +323,8 @@ document.getElementById('clear-btn')?.addEventListener('click', () => {
     // Also sync the searchable UI
     createSearchableSelect(select);
   });
-  document.getElementById('comparison-results').style.display = 'none';
+  const results = document.getElementById('comparison-results');
+  if (results) results.style.display = 'none';
   updateURL();
 });
 
