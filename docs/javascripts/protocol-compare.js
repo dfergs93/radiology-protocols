@@ -100,7 +100,8 @@ function updateURL() {
     selectedProtocols = filled;
     displayComparison();
   } else {
-    document.getElementById('comparison-results').style.display = 'none';
+    const results = document.getElementById('comparison-results');
+    if (results) results.style.display = 'none';
   }
 }
 
