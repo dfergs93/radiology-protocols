@@ -328,6 +328,17 @@ document.getElementById('clear-btn')?.addEventListener('click', () => {
   updateURL();
 });
 
+// Copy Link button
+document.getElementById('copy-link-btn')?.addEventListener('click', () => {
+  navigator.clipboard.writeText(window.location.href).then(() => {
+    const btn = document.getElementById('copy-link-btn');
+    btn.textContent = 'Copied ✓';
+    setTimeout(() => { btn.textContent = '🔗 Copy Link'; }, 2000);
+  }).catch(() => {
+    // Clipboard API unavailable — URL is still in the address bar
+  });
+});
+
 function displayComparison() {
   document.getElementById('comparison-results').style.display = 'block';
 
