@@ -1,0 +1,42 @@
+<h2>Where should the "Copy link" affordance live?</h2>
+<p class="subtitle">The URL auto-updates as you pick protocols. These options show how/where users are made aware they can share it.</p>
+
+<div class="options">
+  <div class="option" data-choice="a" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Button in the selector toolbar</h3>
+      <p>A <strong>🔗 Copy Link</strong> button sits alongside Compare / Clear / Add Protocol. Always visible once 2+ protocols are selected. Clicking it copies the current URL to clipboard and shows a brief "Copied!" confirmation.</p>
+      <div style="margin-top:12px; padding:12px; background:#f5f5f5; border-radius:8px; font-size:0.8rem; display:flex; gap:8px; align-items:center; flex-wrap:wrap;">
+        <span style="padding:6px 14px; background:#1976d2; color:white; border-radius:20px; font-weight:600;">+ Add Protocol</span>
+        <span style="padding:6px 14px; background:#1976d2; color:white; border-radius:20px; font-weight:600;">Compare</span>
+        <span style="padding:6px 14px; border:1px solid #ccc; border-radius:20px;">Clear</span>
+        <span style="padding:6px 14px; border:1px solid #ccc; border-radius:20px;">🔗 Copy Link</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="b" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Floating button in results area</h3>
+      <p>After comparison results appear, a small <strong>🔗 Share</strong> button floats in the top-right corner of the results section. Only visible when results are shown.</p>
+      <div style="margin-top:12px; padding:12px; background:#f5f5f5; border-radius:8px; font-size:0.8rem; position:relative; min-height:60px;">
+        <div style="font-weight:600; margin-bottom:4px;">Timeline Comparison</div>
+        <div style="height:30px; background:#ddd; border-radius:4px;"></div>
+        <div style="position:absolute; top:8px; right:8px; padding:4px 10px; background:white; border:1px solid #ccc; border-radius:6px; font-size:0.75rem; display:flex; align-items:center; gap:4px; box-shadow:0 2px 6px rgba(0,0,0,0.1);">🔗 Share</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="option" data-choice="c" onclick="toggleSelect(this)">
+    <div class="letter">C</div>
+    <div class="content">
+      <h3>No button — toast notification only</h3>
+      <p>When comparison runs, a brief toast appears: <em>"Link updated — copy from address bar"</em>. No persistent button. Clean UI, but relies on users knowing to copy the address bar.</p>
+      <div style="margin-top:12px; padding:12px; background:#f5f5f5; border-radius:8px; font-size:0.8rem; display:flex; justify-content:center;">
+        <div style="padding:8px 16px; background:#333; color:white; border-radius:6px; font-size:0.8rem; opacity:0.9;">🔗 Link updated — copy from address bar</div>
+      </div>
+    </div>
+  </div>
+</div>

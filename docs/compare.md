@@ -214,7 +214,8 @@ Compare multiple CT protocols side-by-side to understand differences in contrast
 }
 </style>
 
-<!-- Sleek AI Protocolizer Search Bar -->
+<!-- Search Bar is commented out for now until backend can be hooked up>
+<!-- Sleek AI Protocolizer Search Bar
 <div class="protocoller-search-container">
   <div class="protocoller-input-wrapper">
     <svg class="search-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
@@ -226,7 +227,7 @@ Compare multiple CT protocols side-by-side to understand differences in contrast
   <div id="protocoller-loading" style="display: none; margin-top: 8px; color: var(--md-default-fg-color--light); font-size: 0.85em; text-align: center;">
   Matching clinical indications...
   </div>
-</div>
+</div> -->
 
 <details id="protocol-suggestions-wrapper" class="protocol-suggestions-container" style="display: none;">
   <summary>Protocol Suggestions</summary>

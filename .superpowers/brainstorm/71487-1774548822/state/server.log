@@ -1,0 +1,5 @@
+{"type":"server-started","port":60103,"host":"127.0.0.1","url_host":"localhost","url":"http://localhost:60103","screen_dir":"/Users/duncanferguson/Code/protocol_manager/.superpowers/brainstorm/71487-1774548822/content","state_dir":"/Users/duncanferguson/Code/protocol_manager/.superpowers/brainstorm/71487-1774548822/state"}
+{"type":"screen-added","file":"/Users/duncanferguson/Code/protocol_manager/.superpowers/brainstorm/71487-1774548822/content/copy-placement.html"}
+{"source":"user-event","type":"click","text":"A\n    \n      Button in the selector toolbar\n      A 🔗 Copy Link button sits alongside Compare / Clear / Add Protocol. Always visible once 2+ protocols are selected. Clicking it copies the current URL to clipboard and shows a brief \"Copied!\" confirmation.\n      \n        + Add Protocol\n        Compare\n        Clear\n        🔗 Copy Link","choice":"a","id":null,"timestamp":1774549401118}
+{"type":"screen-added","file":"/Users/duncanferguson/Code/protocol_manager/.superpowers/brainstorm/71487-1774548822/content/waiting.html"}
+{"type":"server-stopped","reason":"idle timeout"}
