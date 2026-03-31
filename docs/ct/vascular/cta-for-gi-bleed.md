@@ -15,9 +15,9 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
+        | Non-contrast | Non-contrast | Diaphragm to Pubic symphysis |
         | Arterial Phase | Contrast (25 sec delay) | Diaphragm to Pubic symphysis |
-        | Portal Venous Phase | Contrast (70 sec delay) | Diaphragm to Pubic symphysis |
-        | Delayed Phase | Contrast (90-180 sec delay) | Diaphragm to Pubic symphysis |
+        | Delayed Phase | Contrast (90 sec delay) | Diaphragm to Pubic symphysis |
 
     === "Clinical Indications"
 
@@ -101,7 +101,6 @@
       Saline          :active, saline, after contrast, 4s
       section Other
       Arterial Phase    :crit, scan1, 00:25, 7s
-      Portal Venous Phase    :done, scan2, 01:10, 7s
       Delayed Phase    :done, scan3, 01:30, 7s
   ```
 
@@ -112,8 +111,7 @@
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout/Topogram | Diaphragm | Pubic symphysis | N/A | N/A | AP scout |
     | Arterial Phase | Diaphragm | Pubic symphysis | 25 sec | 0.625 mm | High flow rate 5 mL/s critical |
-    | Portal Venous Phase | Diaphragm | Pubic symphysis | 70 sec | 0.625 mm | Standard portal venous timing |
-    | Delayed Phase | Diaphragm | Pubic symphysis | 90-180 sec | 0.625 mm | Extended delay to see pooling of contrast |
+    | Delayed Phase | Diaphragm | Pubic symphysis | 90 sec | 0.625 mm | Extended delay to see pooling of contrast |
 
 === "Technical Parameters"
 
@@ -129,7 +127,6 @@
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |
     |:------|:------------|:----|:--------------------|:-------|:------------|:------|
     | Axial | Arterial | Full AP | 2.5 mm/2.5 mm | Standard | 3 | Look for arterial blush/extravasation |
-    | Axial | Portal venous | Full AP | 2.5 mm/2.5 mm | Standard | 3 | Confirm bleeding and assess organs |
     | Axial | Delayed | Full AP | 2.5 mm/2.5 mm | Standard | 3 | Look for contrast pooling in bowel |
     | Coronal | All phases | Full AP | 3 mm/3 mm | Standard | 3 | MIP to track extravasation |
 

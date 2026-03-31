@@ -19,8 +19,7 @@
 
     === "Clinical Indications"
 
-        - Thoracic aortic aneurysm
-        - Aortic dissection
+        - Thoracic aortic aneurysm (not involving the aortic root)
         - Great vessel evaluation
 
 -   __2. Patient Prep__

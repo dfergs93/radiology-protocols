@@ -19,9 +19,8 @@
 
     === "Clinical Indications"
 
-        - Lung cancer screening
-        - Low risk pulmonary nodule follow-up
-        - Smoking history screening
+        - Non Contrast chest for patient's age < 60
+
 
 -   __2. Patient Prep__
 

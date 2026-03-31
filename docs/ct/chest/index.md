@@ -16,7 +16,6 @@ Protocols for thoracic imaging including lung parenchyma, mediastinum, and pulmo
 | Pulmonary embolism | Bolus tracking, PA trigger | Yes |
 | ILD/fibrosis | HRCT, 1mm slices | No |
 | Lung nodule | Thin slices, no contrast | No |
-| Oncology staging | Portal venous phase | Yes |
 
 
 ---
@@ -44,8 +43,8 @@ Protocols for thoracic imaging including lung parenchyma, mediastinum, and pulmo
 
 ### Dose Optimization
 - Use iterative reconstruction
-- Low-dose for nodule follow-up (<1 mSv)
-- Bismuth shielding when appropriate
+-  Low-dose for age < 60
+- Ultra Low-dose for nodule follow-up (<1 mSv)
 
 
 ---

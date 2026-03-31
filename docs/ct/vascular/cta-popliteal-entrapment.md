@@ -16,7 +16,9 @@
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
         | CTA Neutral Position | Arterial (bolus tracked) | Distal femur to Ankle |
+        | CTV Neutral Position | Venous (90 sec delay) | Distal femur to Ankle |
         | CTA Plantarflexion | Contrast (Immediately after delay) | Distal femur to Ankle |
+        | CTV Plantarflexion | Venous (90 sec delay) | Distal femur to Ankle |
 
     === "Clinical Indications"
 
@@ -99,7 +101,9 @@
       Saline          :active, saline, after contrast, 5s
       section Other
       CTA Neutral Position    :crit, scan1, after contrast, 3s
-      CTA Plantarflexion    :crit, scan2, after scan1, 3s
+      CTV Neutral Position    :crit, scan2, after scan1, 3s
+      CTA Plantarflexion    :crit, scan3, after scan2, 3s
+      CTV Plantarflexion    :crit, scan4, after scan3, 3s
   ```
 
 

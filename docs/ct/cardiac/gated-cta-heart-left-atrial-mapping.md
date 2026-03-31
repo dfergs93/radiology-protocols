@@ -15,7 +15,8 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Gated CTA | Arterial (bolus tracked) | Pulmonary veins to Below LA |
+        | Flash CTA | Arterial | Pulmonary veins to Below LA |
+        | Delayed | Delayed | Pulmonary veins to Below LA |
 
     === "Clinical Indications"
 
@@ -30,7 +31,7 @@
     - **Position:** Supine feet-first
     - **NPO Status:** NPO 2-4 hours
     - **Pre-Medication:**
-        - HR < 65 preferred. Metoprolol if needed. Nitro not typically required
+        - HR < 65 preferred. Premedication not required.
 
 -   __3. IV Contrast & Injection__    
 
@@ -99,6 +100,7 @@
       Saline          :active, saline, after contrast, 4s
       section Other
       Gated CTA    :crit, scan1, after contrast, 5s
+      Delayed CTA    :crit, scan2, after contrast, 40s
   ```
 
 
@@ -108,6 +110,7 @@
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout | Top of chest | Below heart | N/A | N/A | AP lateral |
     | Gated CTA | Pulmonary veins | Below LA | Bolus tracked | 0.5 mm | Retrospective - thin slices critical |
+    | Delayed CTA | Pulmonary veins | Below LA | 40s | 0.5 mm | Retrospective - thin slices critical |
 
 === "Technical Parameters"
 
@@ -125,8 +128,7 @@
     | Axial | Gated CTA | LA/PV | 0.5 mm/0.5 mm | Cardiac | 3 | Primary PV anatomy |
     | Coronal | Gated CTA | LA/PV | 0.75 mm | Cardiac | 3 | PV ostia en face |
     | Sagittal | Gated CTA | LA/PV | 0.75 mm | Cardiac | 3 | Lateral PV views |
-    | 3D VR | Gated CTA | LA/PV | 0.5 mm source | Cardiac | 3 | 3D LA and PV reconstruction for EP |
-
+    | Axial | Delayed CTA | LA/PV | 0.5 mm/0.5 mm | Cardiac | 3 | Left Atrial Appendage Thrombus |
 
 ### Additional Reconstructions
 

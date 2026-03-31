@@ -16,9 +16,8 @@
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
         | NC Head | Non-contrast | Vertex to Foramen magnum |
-        | CTA Head | Arterial (bolus tracked) | Skull base to Vertex |
-        | CTA Neck | Contrast (Continues from head delay) | Aortic arch to Skull base |
-        | CTP (optional) | Contrast (Auto-triggered delay) | Basal ganglia level to 8cm slab |
+        | CTA Arch to Vertex | Arterial (bolus tracked) | Aortic arch to Vertex |
+        | CTP (optional) | Contrast (Auto-triggered delay) | Skull base to Vertex |
 
     === "Clinical Indications"
 
@@ -100,10 +99,8 @@
       section Contrast Injection
       Contrast (100 mL)    :active, contrast, 00:00, 22s
       Saline          :active, saline, after contrast, 4s
-      section Head
-      CTA Head    :crit, scan1, after contrast, 3s
-      section Neck
-      CTA Neck    :crit, scan2, 00:00, 10s
+      section CTA Arch to Vertex
+      CTA Arch to Vertex    :crit, scan1, after contrast, 3s
       section Other
       CTP (optional)    :done, scan3, 00:00, 10s
   ```
@@ -114,10 +111,9 @@
     | Series Name | Start Location | End Location | Delay | Slice Thickness | Notes |
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout | Vertex | Aortic arch | N/A | N/A | STAT lateral |
-    | NC Head | Vertex | Foramen magnum | N/A | 5 mm | STAT no contrast |
-    | CTA Head | Skull base | Vertex | Bolus tracked aorta | 0.625 mm | Intracranial vessels |
-    | CTA Neck | Aortic arch | Skull base | Continues from head | 0.625 mm | Extracranial vessels |
-    | CTP (optional) | Basal ganglia level | 8cm slab | Auto-triggered | 5 mm dynamic | Perfusion if candidate |
+    | NC Head | Skull base | Vertex | N/A | 5 mm | STAT no contrast |
+    | CTA Arch to Vertex | Aortic arch | Vertex | Bolus tracked aorta | 0.625 mm | Intracranial vessels |
+    | CTP (optional) | Skull base | Vertex | Auto-triggered | 5 mm dynamic | Perfusion if candidate |
 
 === "Technical Parameters"
 
@@ -133,7 +129,7 @@
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |
     |:------|:------------|:----|:--------------------|:-------|:------------|:------|
     | Axial | NC head | Brain | 5 mm/5 mm | Brain | 3 | STAT hemorrhage detection |
-    | Axial | CTA head | Brain | 1 mm/1 mm | Brain | 3 | LVO detection |
+    | Axial | CTA Arch to Vertex | Head and Neck | 1 mm/1 mm | Brain | 3 | LVO detection |
     | MIP | CTA | Circle of Willis | Thick slab | Brain | N/A | Vessel overview |
     | CTP maps | CTP | Perfusion | Color maps | N/A | N/A | CBF CBV MTT Tmax maps |
 

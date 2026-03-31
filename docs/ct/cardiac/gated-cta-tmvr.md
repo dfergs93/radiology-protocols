@@ -31,7 +31,7 @@
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 4 hours
     - **Pre-Medication:**
-        - HR < 65. Metoprolol IV prn
+        - HR < 65 target. Premedication not required.
 
 -   __3. IV Contrast & Injection__    
 

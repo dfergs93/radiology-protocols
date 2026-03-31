@@ -31,7 +31,7 @@
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 4 hours
     - **Pre-Medication:**
-        - HR < 65. Metoprolol IV prn
+        - HR < 65 target. Premedication not required.
 
 -   __3. IV Contrast & Injection__    
 
@@ -52,7 +52,7 @@
         Use full dose if GFR > 30
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
-
+        There is a lower limit of 120 mL of contrast needed for the exam.
 
 
 -   __4. Special Notes__

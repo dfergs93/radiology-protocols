@@ -17,11 +17,11 @@
         |:-------|:------|:---------|
         | Non-contrast | Non-contrast | Top of heart to Below heart |
         | Gated CTA | Arterial (bolus tracked) | Top of heart to Below heart |
-        | Stent delay (optional) | Contrast (40 sec delay) | Top of heart to Below heart |
+        | Stent delay (optional) | Contrast (40 sec delay) | Stent coverage |
 
     === "Clinical Indications"
 
-        - Aortic Dissection
+        - Thoracic aortic dissection
         - Chest pain radiating to the back
         - Follow up thoracic aortic aneurysm
 
@@ -32,7 +32,7 @@
     - **Position:** Supine feet-first
     - **NPO Status:** NPO 2-4 hours
     - **Pre-Medication:**
-        - HR < 60 target. Metoprolol 5mg IV up to 15mg total. Nitro 0.4mg SL. Check BP > 100
+        - HR < 60 target. Premedication not required.
 
 -   __3. IV Contrast & Injection__    
 

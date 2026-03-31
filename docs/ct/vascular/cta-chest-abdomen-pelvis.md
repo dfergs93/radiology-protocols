@@ -16,10 +16,10 @@
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
         | CTA Arterial | Arterial (bolus tracked) | Thoracic inlet to Pubic symphysis |
+        | CT Delayed (optional) | Delayed (90 sec delay) | Thoracic inlet to Pubic symphysis |
 
     === "Clinical Indications"
 
-        - Aortic dissection
         - Aortic aneurysm
         - Vasculitis
         - Trauma pan-scan

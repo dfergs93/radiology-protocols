@@ -15,14 +15,14 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Inspiration | Contrast (Full inspiration delay) | Lung apices to Costophrenic angles |
-        | Mid-Expiration | Contrast (Mid-expiration delay) | Lung apices to Costophrenic angles |
-        | Full Expiration | Contrast (Full expiration delay) | Lung apices to Costophrenic angles |
+        | Inspiration | Non-Contrast (Full inspiration delay) | Lung apices to Costophrenic angles |
+        | Full Expiration | Non-Contrast (Full expiration delay) | Lung apices to Costophrenic angles |
+        | Prone | Non-Contrast (Full inspiration delay) | Lung apices to Costophrenic angles |
 
     === "Clinical Indications"
 
+        - Interstitial lung disease
         - Air trapping assessment
-        - Small airways disease
         - Constrictive bronchiolitis
         - Hypersensitivity pneumonitis
 
@@ -94,8 +94,8 @@
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout | Lung apices | Costophrenic angles | N/A | N/A | AP |
     | Inspiration | Lung apices | Costophrenic angles | Full inspiration | 1 mm axial at 1-2cm intervals | Sequential non-volumetric |
-    | Mid-Expiration | Lung apices | Costophrenic angles | Mid-expiration | 1 mm at intervals | Sequential |
     | Full Expiration | Lung apices | Costophrenic angles | Full expiration | 1 mm at intervals | Sequential |
+    | Prone | Lung apices | Costophrenic angles | Full inspiration | 1 mm at intervals | Sequential |
 
 === "Technical Parameters"
 

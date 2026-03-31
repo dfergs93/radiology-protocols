@@ -17,6 +17,7 @@
         |:-------|:------|:---------|
         | Gated CTA Chest | Arterial (bolus tracked) | Thoracic inlet to Diaphragm |
         | Flash CTA AP | Contrast (Immediate after chest delay) | Diaphragm to Pubic symphysis |
+        | Stent delay (optional) | Contrast (40 sec delay) | Stent coverage |
 
     === "Clinical Indications"
 
@@ -31,7 +32,7 @@
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 2-4 hours
     - **Pre-Medication:**
-        - HR < 65 target. Metoprolol 5mg IV prn. Nitro 0.4mg SL
+        - HR < 65 target. Premedication not required.
 
 -   __3. IV Contrast & Injection__    
 

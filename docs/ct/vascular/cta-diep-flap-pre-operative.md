@@ -69,7 +69,7 @@
 
     === "Radiologist Notes"
 
-        - Map perforator locations. Measure vessel caliber. Identify dominant perforators. Note relationship to rectus
+        - Map perforator locations. Measure vessel caliber. Identify dominant perforators. Note relationship to umbilicus
 
     === "Tips & Tricks"
 

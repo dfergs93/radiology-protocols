@@ -15,7 +15,8 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | CTA Arterial | Arterial (bolus tracked) | Renal arteries to Ankle |
+        | CTA Arterial | Arterial (bolus tracked) | Renal arteries to Foot |
+        | CTA Runoff | Immediately after CTA | Mid Thigh to Foot |
 
     === "Clinical Indications"
 
@@ -99,6 +100,7 @@
       Saline          :active, saline, after contrast, 5s
       section Other
       CTA Arterial    :crit, scan1, after contrast, 5s
+      CTA Runoff    :done, scan2, after CTA Arterial, 5s
   ```
 
 
@@ -108,6 +110,7 @@
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout/Topogram | Renal arteries | Feet | N/A | N/A | AP full legs |
     | CTA Arterial | Renal arteries | Ankle | Bolus tracked | 0.625 mm | May need slower table speed if severe PAD |
+    | CTA Runoff | Mid Thigh | Foot | Immediately after CTA | 0.625 mm | Runoff phase to evaluate distal vessels |
 
 === "Technical Parameters"
 

@@ -19,10 +19,8 @@
 
     === "Clinical Indications"
 
-        - Pulmonary nodule
-        - Interstitial lung disease screening
+        - Age > 60
         - Chest pain low risk
-        - Follow-up
 
 -   __2. Patient Prep__
 
