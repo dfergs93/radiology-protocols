@@ -385,6 +385,15 @@ html {
   line-height: 1.6;
 }
 
+/* Hide task text labels — Mermaid places labels outside narrow bars, causing adjacent
+   labels to overlap. Section titles and bar colors provide sufficient context. */
+.mermaid text.taskText,
+.mermaid text.taskTextOutside,
+.mermaid text[class*="taskText"],
+.mermaid text[class*="taskLabel"] {
+  display: none !important;
+}
+
 /* Gantt Timeline End Marker */
 #gantt-container .mermaid g[class*="timeend"] rect {
   width: 3px !important;

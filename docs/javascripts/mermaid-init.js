@@ -7,11 +7,11 @@ document$.subscribe(function() {
     startOnLoad: true,
     theme: isDarkMode ? 'dark' : 'default',
     gantt: {
-      barHeight: 40,
-      barGap: 10,
-      topPadding: 60,
-      leftPadding: 100,
-      fontSize: 14,
+      barHeight: 28,
+      barGap: 4,
+      topPadding: 50,
+      leftPadding: 160,
+      fontSize: 13,
       axisFormat: '%M:%S'
     }
   });
