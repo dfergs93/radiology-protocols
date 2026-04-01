@@ -997,7 +997,7 @@
     "filepath": "ct/cardiac/gated-cta-tmvr.md",
     "title": "Gated CTA TMVR",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA TMVR Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 15s\n      Saline          :active, saline, after contrast, 5s\n      section Chest\n      Gated CTA Chest    :crit, scan1, after saline, 5s\n      section CAP\n      Delayed CAP    :done, scan2, 01:40, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA TMVR Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 15s\n      Saline          :active, saline, after contrast, 5s\n      section Chest\n      Gated CTA Chest    :crit, scan1, after saline, 5s\n      section CAP\n      Delayed CAP    :done, scan2, 01:20, 5s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
       "volume": "1.1 mL/kg",
@@ -1058,7 +1058,7 @@
     "filepath": "ct/cardiac/gated-cta-ttvr.md",
     "title": "Gated CTA TTVR",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA TTVR Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (140 mL)    :active, contrast, 00:00, 40s\n      Saline          :active, saline, after contrast, 5s\n      section Chest\n      Gated CTA Chest    :crit, scan1, after saline, 5s\n      section CAP\n      Delayed CAP    :done, scan2, 02:20, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA TTVR Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (140 mL)    :active, contrast, 00:00, 40s\n      Saline          :active, saline, after contrast, 5s\n      section Chest\n      Gated CTA Chest    :crit, scan1, after saline, 5s\n      section CAP\n      Delayed CAP    :done, scan2, 02:15, 5s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
       "volume": "2.0 mL/kg",
@@ -3376,7 +3376,7 @@
     "filepath": "ct/vascular/cta-pelvis-cyclist-iliac-artery-maneuver.md",
     "title": "CTA Pelvis Cyclist Iliac Artery Maneuver",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Pelvis Cyclist Iliac Artery Maneuver Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s\n      Saline          :active, saline, after contrast, 5s\n      section Extremities\n      CTA Resting Position    :crit, scan1, after saline, 5s\n      CTA Hip Flexion    :crit, scan2, after saline2, 5s\n      section Second Injection\n      Contrast bolus 2 (1.1 mL/kg)  :active, contrast2, 01:00, 18s\n      Saline                  :active, saline2, after contrast2, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Pelvis Cyclist Iliac Artery Maneuver Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s\n      Saline          :active, saline, after contrast, 5s\n      Contrast bolus 2 (1.1 mL/kg)  :active, contrast2, 01:00, 18s\n      Saline                  :active, saline2, after contrast2, 5s\n      section Extremities\n      CTA Resting Position    :crit, scan1, after saline, 5s\n      CTA Hip Flexion    :crit, scan2, after saline2, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "Split bolus: 1st injection 1.1 mL/kg + 2nd injection 1.1 mL/kg",
@@ -3474,7 +3474,7 @@
     "filepath": "ct/vascular/cta-popliteal-entrapment.md",
     "title": "CTA Popliteal Entrapment",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Popliteal Entrapment Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 20s\n      Saline          :active, saline, after contrast, 5s\n      section Extremities\n      CTA Neutral Position    :crit, scan1, after saline, 5s\n      CTV Neutral Position    :crit, scan2, 00:45, 5s\n      CTA Plantarflexion    :crit, scan3, after saline2, 5s\n      section Second Injection\n      Contrast bolus 2 (1.1 mL/kg)  :active, contrast2, 01:15, 20s\n      Saline                  :active, saline2, after contrast2, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Popliteal Entrapment Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 20s\n      Saline          :active, saline, after contrast, 5s\n      Contrast bolus 2 (1.1 mL/kg)  :active, contrast2, 01:15, 20s\n      Saline                  :active, saline2, after contrast2, 5s\n      section Extremities\n      CTA Neutral Position    :crit, scan1, after saline, 5s\n      CTV Neutral Position    :crit, scan2, 00:45, 5s\n      CTA Plantarflexion    :crit, scan3, after saline2, 5s\n\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "Dual injection: 1.2   mL/kg + 1.2 mL/kg",
