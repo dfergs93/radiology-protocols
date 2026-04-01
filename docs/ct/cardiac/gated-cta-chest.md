@@ -100,7 +100,7 @@
       Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s
       Saline          :active, saline, after contrast, 4s
       section Other
-      Gated CTA    :crit, scan1, after contrast, 5s
+      Gated CTA    :crit, scan1, after saline, 5s
       Stent delay (optional)    :done, scan2, 00:40, 5s
   ```
 

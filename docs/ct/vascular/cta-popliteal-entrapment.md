@@ -15,10 +15,9 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | CTA Neutral Position | Arterial (bolus tracked) | Distal femur to Ankle |
-        | CTV Neutral Position | Venous (90 sec delay) | Distal femur to Ankle |
-        | CTA Plantarflexion | Contrast (Immediately after delay) | Distal femur to Ankle |
-        | CTV Plantarflexion | Venous (90 sec delay) | Distal femur to Ankle |
+        | CTA Neutral Position | Arterial (bolus tracked) | 4cm above the knees to the toes |
+        | CTV Neutral Position | Venous (90 sec delay) | 4cm above the knees to the toes |
+        | CTA Plantarflexion | Contrast (Immediately after delay) | 4cm above the knees to the toes |
 
     === "Clinical Indications"
 
@@ -43,9 +42,10 @@
         | Parameter | Value |
         |-----------|-------|
         | Agent | Isovue 370 |
-        | Volume | 100 mL |
+        | Volume | Dual injection: 1.2   mL/kg + 1.2 mL/kg |
         | Flow Rate | 4 mL/s |
-        | Timing Method | Dual position: Neutral + Plantarflexion |
+        | Duration | 18-20s + 18-20s |
+        | Timing Method | Bolus Tracking |
         | ROI Placement | Popliteal artery |
         | Trigger (HU) | 150 HU |
 
@@ -97,13 +97,15 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (100 mL)    :active, contrast, 00:00, 25s
+      Contrast (100 mL)    :active, contrast, 00:00, 20s
       Saline          :active, saline, after contrast, 5s
-      section Other
-      CTA Neutral Position    :crit, scan1, after contrast, 3s
-      CTV Neutral Position    :crit, scan2, after scan1, 3s
-      CTA Plantarflexion    :crit, scan3, after scan2, 3s
-      CTV Plantarflexion    :crit, scan4, after scan3, 3s
+      section Extremities
+      CTA Neutral Position    :crit, scan1, after saline, 5s
+      CTV Neutral Position    :crit, scan2, 00:45, 5s
+      CTA Plantarflexion    :crit, scan3, after saline2, 5s
+      section Second Injection
+      Contrast bolus 2 (1.1 mL/kg)  :active, contrast2, 01:15, 20s
+      Saline                  :active, saline2, after contrast2, 5s
   ```
 
 

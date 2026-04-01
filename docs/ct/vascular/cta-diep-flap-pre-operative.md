@@ -15,7 +15,7 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | CTA Arterial | Arterial (bolus tracked) | Xiphoid to Pubic symphysis |
+        | CTA Arterial | Arterial (bolus tracked) | Mid-Liver to Greater Trochanters |
 
     === "Clinical Indications"
 
@@ -38,8 +38,9 @@
         | Parameter | Value |
         |-----------|-------|
         | Agent | Isovue 370 |
-        | Volume | 100 mL |
-        | Flow Rate | 4 mL/s |
+        | Volume | 1.5 mL/kg |
+        | Flow Rate | 4-5 mL/s |
+        | Duration | 20s |
         | Timing Method | Bolus Tracking |
         | ROI Placement | Abdominal aorta |
         | Trigger (HU) | 150 HU |
@@ -57,7 +58,7 @@
 
     === "Technologist Notes"
 
-        - Scan from xiphoid to pubic symphysis. Focus on anterior abdominal wall perforators. Arterial phase critical
+        - Scan from mid-liver to greater trochanters. Remove tight-fitting underwear. If patient can exercise, do leg lifts on table before injection.
 
     === "Nursing Notes"
 
@@ -69,7 +70,7 @@
 
     === "Radiologist Notes"
 
-        - Map perforator locations. Measure vessel caliber. Identify dominant perforators. Note relationship to umbilicus
+        - Map perforator locations. Measure vessel caliber. Identify dominant perforators. Note relationship to umbilicus. Prefer perforators below umbilicus. 
 
     === "Tips & Tricks"
 
@@ -92,7 +93,7 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (100 mL)    :active, contrast, 00:00, 25s
+      Contrast (100 mL)    :active, contrast, 00:00, 20s
       Saline          :active, saline, after contrast, 5s
       section Other
       CTA Arterial    :crit, scan1, after contrast, 5s

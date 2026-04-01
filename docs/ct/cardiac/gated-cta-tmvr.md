@@ -17,7 +17,7 @@
         |:-------|:------|:---------|
         | Calcium Score | Non-Contrast | Apex of heart to Base of heart |
         | Gated CTA Chest | Arterial (bolus tracked) | Top of heart to Below heart |
-        | Delayed CAP | Contrast (90 sec delay) | Diaphragm to Femoral heads |
+        | Delayed CAP | Contrast (80 sec delay from CTA) | Diaphragm to Femoral heads |
 
     === "Clinical Indications"
 
@@ -43,9 +43,10 @@
         | Parameter | Value |
         |-----------|-------|
         | Agent | Omnipaque 350 |
-        | Volume | 140 mL |
-        | Flow Rate | 4 mL/s |
-        | Timing Method | Dual phase: Gated chest NO dose modulation + 90 sec delayed CAP |
+        | Volume | 1.1 mL/kg |
+        | Flow Rate | 5 mL/s |
+        | Duration | 15s |
+        | Timing Method | Bolus Tracking |
         | ROI Placement | Ascending aorta |
         | Trigger (HU) | 180 HU |
 
@@ -97,12 +98,12 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (140 mL)    :active, contrast, 00:00, 35s
+      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 15s
       Saline          :active, saline, after contrast, 5s
       section Chest
-      Gated CTA Chest    :crit, scan1, after contrast, 5s
+      Gated CTA Chest    :crit, scan1, after saline, 5s
       section CAP
-      Delayed CAP    :done, scan2, 01:30, 5s
+      Delayed CAP    :done, scan2, 01:40, 5s
   ```
 
 

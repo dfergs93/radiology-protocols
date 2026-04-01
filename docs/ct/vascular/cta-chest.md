@@ -15,7 +15,9 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | CTA Arterial Chest | Arterial (bolus tracked) | Lung apices to Adrenal glands |
+        | Non-contrast | Non-contrast | Lung apices to Costophrenic angles |
+        | CTA Arterial Chest | Arterial (bolus tracked) | Lung apices to Costophrenic angles |
+        | CT Delayed (optional) | Delayed (40 sec delay) | Lung apices to Costophrenic angles |
 
     === "Clinical Indications"
 
@@ -39,8 +41,9 @@
         | Parameter | Value |
         |-----------|-------|
         | Agent | Isovue 370 |
-        | Volume | 100 mL |
+        | Volume | 1.2 mL/kg |
         | Flow Rate | 4 mL/s |
+        | Duration | 15 - 20s |
         | Timing Method | Bolus Tracking |
         | ROI Placement | Ascending aorta or main PA |
         | Trigger (HU) | 150 HU |
@@ -93,10 +96,11 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (100 mL)    :active, contrast, 00:00, 25s
+      Contrast (100 mL)    :active, contrast, 00:00, 20s
       Saline          :active, saline, after contrast, 5s
       section Chest
-      CTA Arterial Chest    :crit, scan1, after contrast, 5s
+      CTA Arterial Chest    :crit, scan1, after saline, 5s
+      CT Delayed (optional)    :crit, scan2, 00:40, 5s
   ```
 
 

@@ -15,8 +15,8 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Flash CTA | Arterial | Pulmonary veins to Below LA |
-        | Delayed | Delayed | Pulmonary veins to Below LA |
+        | Flash CTA | Arterial | Carina to Below Heart |
+        | Delayed | Delayed (30s)| Carina to Mid Heart |
 
     === "Clinical Indications"
 
@@ -43,9 +43,10 @@
         |-----------|-------|
         | Agent | Isovue 370 |
         | Volume | 1.1 mL/kg |
-        | Flow Rate | 4-5 mL/s |
+        | Flow Rate | 5 mL/s |
+        | Duration | 15 sec |
         | Timing Method | Bolus Tracking |
-        | ROI Placement | Ascending aorta |
+        | ROI Placement | Left Atrium |
         | Trigger (HU) | 200 HU |
 
     ===   "Lab Requirements"
@@ -96,11 +97,11 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s
+      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 15s
       Saline          :active, saline, after contrast, 4s
       section Other
-      Gated CTA    :crit, scan1, after contrast, 5s
-      Delayed CTA    :crit, scan2, after contrast, 40s
+      Gated CTA    :crit, scan1, after saline, 5s
+      Delayed CTA    :crit, scan2, 00:30, 5s
   ```
 
 

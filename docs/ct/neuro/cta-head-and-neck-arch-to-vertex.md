@@ -137,6 +137,6 @@
 
 MIP and 3D VR reconstructions of vessels. Curved MPR of carotids
 
-Category: Vascular
+Category: Neuro
 
 Protocol Type: Vascular

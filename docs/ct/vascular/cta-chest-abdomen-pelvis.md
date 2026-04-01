@@ -15,8 +15,10 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
+        | Non-contrast | Non-contrast | Thoracic inlet to Pubic symphysis |
         | CTA Arterial | Arterial (bolus tracked) | Thoracic inlet to Pubic symphysis |
-        | CT Delayed (optional) | Delayed (90 sec delay) | Thoracic inlet to Pubic symphysis |
+        | Stent Delay (optional) | Delayed (40 sec delay) | 1cm above and below stent  |
+        | Vasculitis Delayed (optional) | Delayed (90 sec delay) | Thoracic inlet to Pubic symphysis |
 
     === "Clinical Indications"
 
@@ -41,8 +43,9 @@
         | Parameter | Value |
         |-----------|-------|
         | Agent | Isovue 370 |
-        | Volume | 125 mL |
+        | Volume | 1.1 mL/kg |
         | Flow Rate | 4 mL/s |
+        | Duration | 20s |
         | Timing Method | Bolus Tracking |
         | ROI Placement | Descending thoracic aorta |
         | Trigger (HU) | 150 HU |
@@ -95,10 +98,12 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (125 mL)    :active, contrast, 00:00, 31s
+      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 20s
       Saline          :active, saline, after contrast, 5s
       section Other
-      CTA Arterial    :crit, scan1, after contrast, 10s
+      CTA Arterial    :crit, scan1, after contrast, 5s
+      Stent Delay (optional)    :crit, scan2, 00:40, 5s
+      Vasculitis Delayed (optional)    :crit, scan3, 01:30, 5s
   ```
 
 

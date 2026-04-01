@@ -43,8 +43,9 @@
         | Parameter | Value |
         |-----------|-------|
         | Agent | Isovue 370 |
-        | Volume | 125 mL |
-        | Flow Rate | 5 mL/s |
+        | Volume | 1.5 mL/kg |
+        | Flow Rate | 4-5 mL/s |
+        | Duration | 20s |
         | Timing Method | Triple phase: Arterial + Portal Venous + Delayed |
         | ROI Placement | Abdominal aorta |
         | Trigger (HU) | 150 HU |
@@ -66,7 +67,7 @@
 
     === "Nursing Notes"
 
-        - Large bore IV 18-20G essential. Must achieve 5 mL/s flow rate. Verify with saline test
+        - Large bore IV 18-20G essential. Verify with saline test
 
         !!! warning "Safety First"
             - **Renal Function:** eGFR > 30 preferred but can proceed emergently
@@ -97,7 +98,7 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (125 mL)    :active, contrast, 00:00, 25s
+      Contrast (125 mL)    :active, contrast, 00:00, 20s
       Saline          :active, saline, after contrast, 4s
       section Other
       Arterial Phase    :crit, scan1, 00:25, 7s
