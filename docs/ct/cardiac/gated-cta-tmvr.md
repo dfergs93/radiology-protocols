@@ -15,6 +15,7 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
+        | Calcium Score | Non-Contrast | Apex of heart to Base of heart |
         | Gated CTA Chest | Arterial (bolus tracked) | Top of heart to Below heart |
         | Delayed CAP | Contrast (90 sec delay) | Diaphragm to Femoral heads |
 
@@ -110,6 +111,7 @@
     | Series Name | Start Location | End Location | Delay | Slice Thickness | Notes |
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout | Thoracic inlet | Femoral heads | N/A | N/A | AP lateral |
+    | Calcium Score | Apex of heart to Base of heart | Non-Contrast | N/A | 2.5 mm/2.5 mm | Cardiac | 3 | Calcium scoring |
     | Gated CTA Chest | Top of heart | Below heart | Bolus tracked | 0.5 mm | NO DOSE PULSING - retrospective all phases |
     | Delayed CAP | Diaphragm | Femoral heads | 90 sec | 0.625 mm | Access planning and coronaries |
 
@@ -126,6 +128,7 @@
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |
     |:------|:------------|:----|:--------------------|:-------|:------------|:------|
+    | Axial | Calcium Score | Apex of heart to Base of heart | 2.5 mm/2.5 mm | Cardiac | 3 | Calcium scoring |
     | Axial | Gated chest | Heart | 0.5 mm/0.5 mm | Cardiac | 3 | Mitral valve measurements |
     | Axial | Delayed CAP | AP | 2 mm/2 mm | Vascular | 3 | Access vessels |
     | Double oblique | Gated chest | Mitral valve | 0.5 mm | Cardiac | 3 | En face mitral annulus |

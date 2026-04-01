@@ -22,7 +22,6 @@
         - Oncology staging
         - Infection source
         - Abdominal pain
-        - Trauma
 
 -   __2. Patient Prep__
 
