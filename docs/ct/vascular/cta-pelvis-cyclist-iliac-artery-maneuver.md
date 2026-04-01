@@ -97,12 +97,11 @@
       section Contrast Injection
       Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s
       Saline          :active, saline, after contrast, 5s
+      Contrast bolus 2 (1.1 mL/kg)  :active, contrast2, 01:00, 18s
+      Saline                  :active, saline2, after contrast2, 5s
       section Extremities
       CTA Resting Position    :crit, scan1, after saline, 5s
       CTA Hip Flexion    :crit, scan2, after saline2, 5s
-      section Second Injection
-      Contrast bolus 2 (1.1 mL/kg)  :active, contrast2, 01:00, 18s
-      Saline                  :active, saline2, after contrast2, 5s
   ```
 
 

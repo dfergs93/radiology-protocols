@@ -99,13 +99,13 @@
       section Contrast Injection
       Contrast (100 mL)    :active, contrast, 00:00, 20s
       Saline          :active, saline, after contrast, 5s
+      Contrast bolus 2 (1.1 mL/kg)  :active, contrast2, 01:15, 20s
+      Saline                  :active, saline2, after contrast2, 5s
       section Extremities
       CTA Neutral Position    :crit, scan1, after saline, 5s
       CTV Neutral Position    :crit, scan2, 00:45, 5s
       CTA Plantarflexion    :crit, scan3, after saline2, 5s
-      section Second Injection
-      Contrast bolus 2 (1.1 mL/kg)  :active, contrast2, 01:15, 20s
-      Saline                  :active, saline2, after contrast2, 5s
+
   ```
 
 

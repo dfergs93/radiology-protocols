@@ -103,7 +103,7 @@
       section Chest
       Gated CTA Chest    :crit, scan1, after saline, 5s
       section CAP
-      Delayed CAP    :done, scan2, 01:40, 5s
+      Delayed CAP    :done, scan2, 01:20, 5s
   ```
 
 
