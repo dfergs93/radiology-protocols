@@ -516,7 +516,7 @@
     "filepath": "ct/cardiac/coronary-cta.md",
     "title": "Coronary CTA",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Coronary CTA Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s\n      Saline          :active, saline, after contrast, 4s\n      section Other\n      Gated CTA    :crit, scan1, after contrast, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Coronary CTA Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 20s\n      Saline          :active, saline, after contrast, 5s\n      section Other\n      Gated CTA    :crit, scan1, after saline, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "1.1 mL/kg",
@@ -563,7 +563,7 @@
     "filepath": "ct/cardiac/coronary-cta-post-cabg.md",
     "title": "Coronary CTA Post-CABG",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Coronary CTA Post-CABG Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s\n      Saline          :active, saline, after contrast, 4s\n      section Other\n      Gated CTA    :crit, scan1, after contrast, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Coronary CTA Post-CABG Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 20s\n      Saline          :active, saline, after contrast, 5s\n      section Other\n      Gated CTA    :crit, scan1, after saline, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "1.1 mL/kg",
@@ -610,7 +610,7 @@
     "filepath": "ct/cardiac/endocarditiscardiac-mass.md",
     "title": "Endocarditis/Cardiac Mass",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Endocarditis/Cardiac Mass Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.6 mL/kg)    :active, contrast, 00:00, 34s\n      Saline          :active, saline, after contrast, 5s\n      section Other\n      Gated CTA    :crit, scan1, 00:30, 5s\n      Delayed phase    :done, scan2, 01:10, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Endocarditis/Cardiac Mass Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.6 mL/kg)    :active, contrast, 00:00, 35s\n      Saline          :active, saline, after contrast, 5s\n      section Other\n      Gated CTA    :crit, scan1, 00:30, 5s\n      Delayed phase    :done, scan2, 01:10, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "1.6 mL/kg",
@@ -638,12 +638,12 @@
       },
       {
         "name": "Delayed phase",
-        "start": "Top of heart",
-        "end": "Below heart",
+        "start": "Lung Apices",
+        "end": "Diaphragm",
         "delay": "70 sec",
         "thickness": "1 mm",
         "notes": "To detect for abscess, vegetation, masses",
-        "coverage": "Top of heart \u2192 Below heart"
+        "coverage": "Lung Apices \u2192 Diaphragm"
       }
     ],
     "summary": [
@@ -660,7 +660,7 @@
       {
         "series": "Delayed phase",
         "phase": "Contrast (70 sec delay)",
-        "coverage": "Top of heart to Below heart"
+        "coverage": "Lung Apices to Diaphragm"
       }
     ]
   },
@@ -668,17 +668,26 @@
     "filepath": "ct/cardiac/gated-cta-cap.md",
     "title": "Gated CTA CAP",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA CAP Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (140 mL)    :active, contrast, 00:00, 35s\n      Saline          :active, saline, after contrast, 5s\n      section Chest\n      Gated CTA Chest    :crit, scan1, after contrast, 9.0s\n      section Abdomen/Pelvis\n      Flash CTA AP    :crit, scan2, after scan1, 7s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA CAP Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.6 mL/kg)    :active, contrast, 00:00, 24s\n      Saline          :active, saline, after contrast, 5s\n      section Chest\n      Gated CTA Chest    :crit, scan1, after saline, 5s\n      section Abdomen/Pelvis\n      Flash CTA AP    :crit, scan2, after scan1, 5s\n      section Stent Delay\n      Stent Delay    :crit, scan3, 00:40, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
-      "volume": "140 mL",
+      "volume": "1.6 mL/kg",
       "flow_rate": "4 mL/s",
-      "timing": "Dual phase: Gated chest + Flash AP",
+      "timing": "Bolus Tracking",
       "roi": "Ascending aorta",
       "trigger": "180 HU",
       "type": "IV Contrast"
     },
     "series": [
+      {
+        "name": "Flash Non-contrast",
+        "start": "Thoracic inlet",
+        "end": "Pubic symphysis",
+        "delay": "N/A",
+        "thickness": "0.625 mm",
+        "notes": "Non-contrast",
+        "coverage": "Thoracic inlet \u2192 Pubic symphysis"
+      },
       {
         "name": "Gated CTA Chest",
         "start": "Thoracic inlet",
@@ -696,9 +705,23 @@
         "thickness": "0.625 mm",
         "notes": "High pitch helical - no gating",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
+      },
+      {
+        "name": "Stent Delay (optional)",
+        "start": "Diaphragm",
+        "end": "Pubic symphysis",
+        "delay": "40 sec",
+        "thickness": "0.625 mm",
+        "notes": "Stent coverage",
+        "coverage": "Diaphragm \u2192 Pubic symphysis"
       }
     ],
     "summary": [
+      {
+        "series": "Flash Non-contrast",
+        "phase": "Non-contrast",
+        "coverage": "Thoracic inlet to Pubic symphysis"
+      },
       {
         "series": "Gated CTA Chest",
         "phase": "Arterial (bolus tracked)",
@@ -720,12 +743,12 @@
     "filepath": "ct/cardiac/gated-cta-cap-sternotomy-revision.md",
     "title": "Gated CTA CAP Sternotomy Revision",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA CAP Sternotomy Revision Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (150 mL)    :active, contrast, 00:00, 37s\n      Saline          :active, saline, after contrast, 5s\n      section Chest\n      Gated CTA Chest    :crit, scan1, after contrast, 9.0s\n      Venogram Chest    :done, scan2, 01:00, 6s\n      section Abdomen/Pelvis\n      Flash AP    :crit, scan3, after scan2, 7s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA CAP Sternotomy Revision Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.2 mL/kg)    :active, contrast, 00:00, 15s\n      Saline          :active, saline, after contrast, 5s\n      section Chest\n      Gated CTA Chest    :crit, scan1, after saline, 5s\n      Venogram Chest    :done, scan2, 01:00, 6s\n      section Abdomen/Pelvis\n      Flash AP    :crit, scan3, after scan1, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
-      "volume": "150 mL",
-      "flow_rate": "4 mL/s",
-      "timing": "Triple phase: Gated chest + AP arterial + Chest venous",
+      "volume": "1.2 mL/kg",
+      "flow_rate": "5 mL/s",
+      "timing": "Bolus Tracking",
       "roi": "Ascending aorta",
       "trigger": "180 HU",
       "type": "IV Contrast"
@@ -781,7 +804,7 @@
     "filepath": "ct/cardiac/gated-cta-chest.md",
     "title": "Gated CTA Chest",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA Chest Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s\n      Saline          :active, saline, after contrast, 4s\n      section Other\n      Gated CTA    :crit, scan1, after contrast, 5s\n      Stent delay (optional)    :done, scan2, 00:40, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA Chest Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s\n      Saline          :active, saline, after contrast, 4s\n      section Other\n      Gated CTA    :crit, scan1, after saline, 5s\n      Stent delay (optional)    :done, scan2, 00:40, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "1.1 mL/kg",
@@ -842,7 +865,7 @@
     "filepath": "ct/cardiac/gated-cta-chest-post-op-cardiac-valve.md",
     "title": "Gated CTA Chest Post-op Cardiac Valve",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA Chest Post-op Cardiac Valve Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.3 mL/kg)    :active, contrast, 00:00, 21s\n      Saline          :active, saline, after contrast, 4s\n      section Other\n      Gated CTA    :crit, scan1, after contrast, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA Chest Post-op Cardiac Valve Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.3 mL/kg)    :active, contrast, 00:00, 15s\n      Saline          :active, saline, after contrast, 4s\n      section Other\n      Gated CTA    :crit, scan1, after contrast, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "1.3 mL/kg",
@@ -865,6 +888,11 @@
     ],
     "summary": [
       {
+        "series": "Non-contrast",
+        "phase": "Non-contrast",
+        "coverage": "Lung Apices to Diaphragm"
+      },
+      {
         "series": "Gated CTA",
         "phase": "Arterial (bolus tracked)",
         "coverage": "Top of heart to Below heart"
@@ -875,13 +903,13 @@
     "filepath": "ct/cardiac/gated-cta-heart-left-atrial-mapping.md",
     "title": "Gated CTA Heart Left Atrial Mapping",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA Heart Left Atrial Mapping Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s\n      Saline          :active, saline, after contrast, 4s\n      section Other\n      Gated CTA    :crit, scan1, after contrast, 5s\n      Delayed CTA    :crit, scan2, after contrast, 40s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA Heart Left Atrial Mapping Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 15s\n      Saline          :active, saline, after contrast, 4s\n      section Other\n      Gated CTA    :crit, scan1, after saline, 5s\n      Delayed CTA    :crit, scan2, 00:30, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "1.1 mL/kg",
-      "flow_rate": "4-5 mL/s",
+      "flow_rate": "5 mL/s",
       "timing": "Bolus Tracking",
-      "roi": "Ascending aorta",
+      "roi": "Left Atrium",
       "trigger": "200 HU",
       "type": "IV Contrast"
     },
@@ -909,12 +937,12 @@
       {
         "series": "Flash CTA",
         "phase": "Arterial",
-        "coverage": "Pulmonary veins to Below LA"
+        "coverage": "Carina to Below Heart"
       },
       {
         "series": "Delayed",
-        "phase": "Delayed",
-        "coverage": "Pulmonary veins to Below LA"
+        "phase": "Delayed (30s)",
+        "coverage": "Carina to Mid Heart"
       }
     ]
   },
@@ -922,12 +950,12 @@
     "filepath": "ct/cardiac/gated-cta-tavr.md",
     "title": "Gated CTA TAVR",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA TAVR Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (140 mL)    :active, contrast, 00:00, 35s\n      Saline          :active, saline, after contrast, 5s\n      section Chest\n      Gated CTA Chest    :crit, scan1, after contrast, 9.0s\n      section Abdomen/Pelvis\n      Flash CTA AP    :crit, scan2, after scan1, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA TAVR Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.6 mL/kg)    :active, contrast, 00:00, 22s\n      Saline          :active, saline, after contrast, 5s\n      section Chest\n      Gated CTA Chest    :crit, scan1, after saline, 5s\n      section Abdomen/Pelvis\n      Flash CTA AP    :crit, scan2, after scan1, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
-      "volume": "140 mL",
+      "volume": "1.6 mL/kg",
       "flow_rate": "4 mL/s",
-      "timing": "Dual phase: Gated chest + Flash AP",
+      "timing": "Bolus Tracking",
       "roi": "Ascending aorta",
       "trigger": "180 HU",
       "type": "IV Contrast"
@@ -969,12 +997,12 @@
     "filepath": "ct/cardiac/gated-cta-tmvr.md",
     "title": "Gated CTA TMVR",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA TMVR Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (140 mL)    :active, contrast, 00:00, 35s\n      Saline          :active, saline, after contrast, 5s\n      section Chest\n      Gated CTA Chest    :crit, scan1, after contrast, 5s\n      section CAP\n      Delayed CAP    :done, scan2, 01:30, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA TMVR Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 15s\n      Saline          :active, saline, after contrast, 5s\n      section Chest\n      Gated CTA Chest    :crit, scan1, after saline, 5s\n      section CAP\n      Delayed CAP    :done, scan2, 01:40, 5s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
-      "volume": "140 mL",
-      "flow_rate": "4 mL/s",
-      "timing": "Dual phase: Gated chest NO dose modulation + 90 sec delayed CAP",
+      "volume": "1.1 mL/kg",
+      "flow_rate": "5 mL/s",
+      "timing": "Bolus Tracking",
       "roi": "Ascending aorta",
       "trigger": "180 HU",
       "type": "IV Contrast"
@@ -1021,7 +1049,7 @@
       },
       {
         "series": "Delayed CAP",
-        "phase": "Contrast (90 sec delay)",
+        "phase": "Contrast (80 sec delay from CTA)",
         "coverage": "Diaphragm to Femoral heads"
       }
     ]
@@ -1030,12 +1058,12 @@
     "filepath": "ct/cardiac/gated-cta-ttvr.md",
     "title": "Gated CTA TTVR",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA TTVR Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (140 mL)    :active, contrast, 00:00, 35s\n      Saline          :active, saline, after contrast, 5s\n      section Chest\n      Gated CTA Chest    :crit, scan1, after contrast, 5s\n      section CAP\n      Delayed CAP    :done, scan2, 01:30, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA TTVR Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (140 mL)    :active, contrast, 00:00, 40s\n      Saline          :active, saline, after contrast, 5s\n      section Chest\n      Gated CTA Chest    :crit, scan1, after saline, 5s\n      section CAP\n      Delayed CAP    :done, scan2, 02:20, 5s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
-      "volume": "140 mL",
-      "flow_rate": "4 mL/s",
-      "timing": "Dual phase: Gated chest NO dose modulation + 90 sec delayed CAP",
+      "volume": "2.0 mL/kg",
+      "flow_rate": "3.5 mL/s",
+      "timing": "Bolus Tracking",
       "roi": "Ascending aorta",
       "trigger": "180 HU",
       "type": "IV Contrast"
@@ -1068,7 +1096,7 @@
       },
       {
         "series": "Delayed CAP",
-        "phase": "Contrast (90 sec delay)",
+        "phase": "Contrast (90 sec delay from CTA)",
         "coverage": "Diaphragm to Femoral heads"
       }
     ]
@@ -1077,14 +1105,14 @@
     "filepath": "ct/chest/ct-pulmonary-embolism.md",
     "title": "CT Pulmonary Embolism",
     "category": "Chest",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CT Pulmonary Embolism Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 22s\n      Saline          :active, saline, after contrast, 4s\n      section Chest\n      Pulmonary Angiogram    :crit, scan1, after contrast, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CT Pulmonary Embolism Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.3 mL/kg)    :active, contrast, 00:00, 20s\n      Saline          :active, saline, after contrast, 5s\n      section Chest\n      Pulmonary Angiogram    :crit, scan1, 00:10, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
-      "volume": "100 mL",
-      "flow_rate": "4-5 mL/s",
+      "volume": "1.3 mL/kg",
+      "flow_rate": "5 mL/s",
       "timing": "Bolus Tracking",
       "roi": "Main Pulmonary Artery",
-      "trigger": "150 HU",
+      "trigger": "100 HU",
       "type": "IV Contrast"
     },
     "series": [
@@ -1111,7 +1139,7 @@
       {
         "series": "Pulmonary Angiogram",
         "phase": "Arterial (bolus tracked)",
-        "coverage": "Lung apices to Adrenal glands"
+        "coverage": "Lung apices to Costophrenic Angles"
       }
     ]
   },
@@ -2469,6 +2497,62 @@
     ]
   },
   {
+    "filepath": "ct/neuro/cta-head-and-neck-arch-to-vertex.md",
+    "title": "CTA Head and Neck (Arch to Vertex)",
+    "category": "Neuro",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Head and Neck (Arch to Vertex) Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (80-100 mL)    :active, contrast, 00:00, 17s\n      Saline          :active, saline, after contrast, 4s\n      section Head\n      CTA Head    :crit, scan1, after saline, 3s\n      section Neck\n      CTA Neck    :crit, scan2, after contrast, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "80-100 mL",
+      "flow_rate": "4-5 mL/s",
+      "timing": "Bolus Tracking",
+      "roi": "Aortic arch",
+      "trigger": "150 HU",
+      "type": "IV Contrast"
+    },
+    "series": [
+      {
+        "name": "Scout/Topogram",
+        "start": "Aortic arch",
+        "end": "Vertex",
+        "delay": "N/A",
+        "thickness": "N/A",
+        "notes": "AP and lateral",
+        "coverage": "Aortic arch \u2192 Vertex"
+      },
+      {
+        "name": "CTA Neck",
+        "start": "Aortic arch",
+        "end": "Skull base",
+        "delay": "Bolus tracked",
+        "thickness": "0.625 mm",
+        "notes": "Arterial phase - caudocranial",
+        "coverage": "Aortic arch \u2192 Skull base"
+      },
+      {
+        "name": "CTA Head",
+        "start": "Skull base",
+        "end": "Vertex",
+        "delay": "Immediate",
+        "thickness": "0.625 mm",
+        "notes": "Same bolus as neck - single acquisition",
+        "coverage": "Skull base \u2192 Vertex"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CTA Neck",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Aortic arch to Skull base"
+      },
+      {
+        "series": "CTA Head",
+        "phase": "Contrast (Immediate delay)",
+        "coverage": "Skull base to Vertex"
+      }
+    ]
+  },
+  {
     "filepath": "ct/neuro/cta-neck.md",
     "title": "CTA Neck",
     "category": "Neuro",
@@ -2911,10 +2995,10 @@
     "filepath": "ct/vascular/cta-abdomen-pelvis.md",
     "title": "CTA Abdomen Pelvis",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Abdomen Pelvis Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 31s\n      Saline          :active, saline, after contrast, 5s\n      section Other\n      CTA Arterial    :crit, scan1, after contrast, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Abdomen Pelvis Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 20s\n      Saline          :active, saline, after contrast, 5s\n      section Other\n      CTA Arterial    :crit, scan1, after saline, 5s\n      Stent Delay (optional)    :crit, scan2, 00:40, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
-      "volume": "125 mL",
+      "volume": "1.1 mL/kg",
       "flow_rate": "4 mL/s",
       "timing": "Bolus Tracking",
       "roi": "Abdominal aorta at celiac",
@@ -2943,9 +3027,19 @@
     ],
     "summary": [
       {
+        "series": "Non-contrast",
+        "phase": "Non-contrast",
+        "coverage": "Diaphragm to Lesser Trochanters"
+      },
+      {
         "series": "CTA Arterial",
         "phase": "Arterial (bolus tracked)",
-        "coverage": "Diaphragm to Femoral heads"
+        "coverage": "Diaphragm to Lesser Trochanters"
+      },
+      {
+        "series": "Stent Delay (optional)",
+        "phase": "Delay (40s)",
+        "coverage": "1cm above and below stent"
       }
     ]
   },
@@ -2953,10 +3047,10 @@
     "filepath": "ct/vascular/cta-chest.md",
     "title": "CTA Chest",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Chest Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 25s\n      Saline          :active, saline, after contrast, 5s\n      section Chest\n      CTA Arterial Chest    :crit, scan1, after contrast, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Chest Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 20s\n      Saline          :active, saline, after contrast, 5s\n      section Chest\n      CTA Arterial Chest    :crit, scan1, after saline, 5s\n      CT Delayed (optional)    :crit, scan2, 00:40, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
-      "volume": "100 mL",
+      "volume": "1.2 mL/kg",
       "flow_rate": "4 mL/s",
       "timing": "Bolus Tracking",
       "roi": "Ascending aorta or main PA",
@@ -2985,9 +3079,19 @@
     ],
     "summary": [
       {
+        "series": "Non-contrast",
+        "phase": "Non-contrast",
+        "coverage": "Lung apices to Costophrenic angles"
+      },
+      {
         "series": "CTA Arterial Chest",
         "phase": "Arterial (bolus tracked)",
-        "coverage": "Lung apices to Adrenal glands"
+        "coverage": "Lung apices to Costophrenic angles"
+      },
+      {
+        "series": "CT Delayed (optional)",
+        "phase": "Delayed (40 sec delay)",
+        "coverage": "Lung apices to Costophrenic angles"
       }
     ]
   },
@@ -2995,10 +3099,10 @@
     "filepath": "ct/vascular/cta-chest-abdomen-pelvis.md",
     "title": "CTA Chest Abdomen Pelvis",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Chest Abdomen Pelvis Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 31s\n      Saline          :active, saline, after contrast, 5s\n      section Other\n      CTA Arterial    :crit, scan1, after contrast, 10s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Chest Abdomen Pelvis Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 20s\n      Saline          :active, saline, after contrast, 5s\n      section Other\n      CTA Arterial    :crit, scan1, after contrast, 5s\n      Stent Delay (optional)    :crit, scan2, 00:40, 5s\n      Vasculitis Delayed (optional)    :crit, scan3, 01:30, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
-      "volume": "125 mL",
+      "volume": "1.1 mL/kg",
       "flow_rate": "4 mL/s",
       "timing": "Bolus Tracking",
       "roi": "Descending thoracic aorta",
@@ -3027,12 +3131,22 @@
     ],
     "summary": [
       {
+        "series": "Non-contrast",
+        "phase": "Non-contrast",
+        "coverage": "Thoracic inlet to Pubic symphysis"
+      },
+      {
         "series": "CTA Arterial",
         "phase": "Arterial (bolus tracked)",
         "coverage": "Thoracic inlet to Pubic symphysis"
       },
       {
-        "series": "CT Delayed (optional)",
+        "series": "Stent Delay (optional)",
+        "phase": "Delayed (40 sec delay)",
+        "coverage": "1cm above and below stent"
+      },
+      {
+        "series": "Vasculitis Delayed (optional)",
         "phase": "Delayed (90 sec delay)",
         "coverage": "Thoracic inlet to Pubic symphysis"
       }
@@ -3042,11 +3156,11 @@
     "filepath": "ct/vascular/cta-diep-flap-pre-operative.md",
     "title": "CTA DIEP Flap Pre-operative",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA DIEP Flap Pre-operative Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 25s\n      Saline          :active, saline, after contrast, 5s\n      section Other\n      CTA Arterial    :crit, scan1, after contrast, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA DIEP Flap Pre-operative Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 20s\n      Saline          :active, saline, after contrast, 5s\n      section Other\n      CTA Arterial    :crit, scan1, after contrast, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
-      "volume": "100 mL",
-      "flow_rate": "4 mL/s",
+      "volume": "1.5 mL/kg",
+      "flow_rate": "4-5 mL/s",
       "timing": "Bolus Tracking",
       "roi": "Abdominal aorta",
       "trigger": "150 HU",
@@ -3076,63 +3190,7 @@
       {
         "series": "CTA Arterial",
         "phase": "Arterial (bolus tracked)",
-        "coverage": "Xiphoid to Pubic symphysis"
-      }
-    ]
-  },
-  {
-    "filepath": "ct/vascular/cta-head-and-neck-arch-to-vertex.md",
-    "title": "CTA Head and Neck (Arch to Vertex)",
-    "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Head and Neck (Arch to Vertex) Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (80-100 mL)    :active, contrast, 00:00, 17s\n      Saline          :active, saline, after contrast, 4s\n      section Head\n      CTA Head    :crit, scan1, after saline, 3s\n      section Neck\n      CTA Neck    :crit, scan2, after contrast, 5s\n  ```",
-    "contrast": {
-      "agent": "Isovue 370",
-      "volume": "80-100 mL",
-      "flow_rate": "4-5 mL/s",
-      "timing": "Bolus Tracking",
-      "roi": "Aortic arch",
-      "trigger": "150 HU",
-      "type": "IV Contrast"
-    },
-    "series": [
-      {
-        "name": "Scout/Topogram",
-        "start": "Aortic arch",
-        "end": "Vertex",
-        "delay": "N/A",
-        "thickness": "N/A",
-        "notes": "AP and lateral",
-        "coverage": "Aortic arch \u2192 Vertex"
-      },
-      {
-        "name": "CTA Neck",
-        "start": "Aortic arch",
-        "end": "Skull base",
-        "delay": "Bolus tracked",
-        "thickness": "0.625 mm",
-        "notes": "Arterial phase - caudocranial",
-        "coverage": "Aortic arch \u2192 Skull base"
-      },
-      {
-        "name": "CTA Head",
-        "start": "Skull base",
-        "end": "Vertex",
-        "delay": "Immediate",
-        "thickness": "0.625 mm",
-        "notes": "Same bolus as neck - single acquisition",
-        "coverage": "Skull base \u2192 Vertex"
-      }
-    ],
-    "summary": [
-      {
-        "series": "CTA Neck",
-        "phase": "Arterial (bolus tracked)",
-        "coverage": "Aortic arch to Skull base"
-      },
-      {
-        "series": "CTA Head",
-        "phase": "Contrast (Immediate delay)",
-        "coverage": "Skull base to Vertex"
+        "coverage": "Mid-Liver to Greater Trochanters"
       }
     ]
   },
@@ -3140,11 +3198,11 @@
     "filepath": "ct/vascular/cta-lower-extremity-free-flap.md",
     "title": "CTA Lower Extremity Free Flap",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Lower Extremity Free Flap Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (120 mL)    :active, contrast, 00:00, 30s\n      Saline          :active, saline, after contrast, 5s\n      section Other\n      CTA Arterial    :crit, scan1, after contrast, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Lower Extremity Free Flap Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (120 mL)    :active, contrast, 00:00, 25s\n      Saline          :active, saline, after contrast, 5s\n      section Other\n      CTA Arterial    :crit, scan1, after saline, 5s\n      CTA Delayed    :crit, scan2, 01:00, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
-      "volume": "120 mL",
-      "flow_rate": "4 mL/s",
+      "volume": "1.5 mL/kg",
+      "flow_rate": "4-5 mL/s",
       "timing": "Bolus Tracking",
       "roi": "Femoral artery",
       "trigger": "150 HU",
@@ -3153,28 +3211,42 @@
     "series": [
       {
         "name": "Scout/Topogram",
-        "start": "Iliac crest",
-        "end": "Ankle",
+        "start": "Mid-Thigh",
+        "end": "Toes",
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP both legs for comparison",
-        "coverage": "Iliac crest \u2192 Ankle"
+        "coverage": "Mid-Thigh \u2192 Toes"
       },
       {
         "name": "CTA Arterial",
-        "start": "Iliac crest",
-        "end": "Ankle",
+        "start": "Mid-Thigh",
+        "end": "Toes",
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Bilateral for comparison and variants",
-        "coverage": "Iliac crest \u2192 Ankle"
+        "coverage": "Mid-Thigh \u2192 Toes"
+      },
+      {
+        "name": "CTA Delayed",
+        "start": "Mid-Thigh",
+        "end": "Toes",
+        "delay": "60s",
+        "thickness": "0.625 mm",
+        "notes": "Bilateral for comparison and variants",
+        "coverage": "Mid-Thigh \u2192 Toes"
       }
     ],
     "summary": [
       {
         "series": "CTA Arterial",
         "phase": "Arterial (bolus tracked)",
-        "coverage": "Iliac crest to Ankle"
+        "coverage": "Mid-thigh to Toes"
+      },
+      {
+        "series": "Delay",
+        "phase": "Delayed (60s)",
+        "coverage": "Mid-thigh to Toes"
       }
     ]
   },
@@ -3182,11 +3254,11 @@
     "filepath": "ct/vascular/cta-lower-extremity-runoff-for-pad.md",
     "title": "CTA Lower Extremity Runoff for PAD",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Lower Extremity Runoff for PAD Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (150 mL)    :active, contrast, 00:00, 37s\n      Saline          :active, saline, after contrast, 5s\n      section Other\n      CTA Arterial    :crit, scan1, after contrast, 5s\n      CTA Runoff    :done, scan2, after CTA Arterial, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Lower Extremity Runoff for PAD Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (150 mL)    :active, contrast, 00:00, 35s\n      Saline          :active, saline, after contrast, 5s\n      section Other\n      CTA Arterial    :crit, scan1, after saline, 10s\n      CTA Runoff    :done, scan2, 00:55, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
-      "volume": "150 mL",
-      "flow_rate": "4 mL/s",
+      "volume": "1.9 mL/kg",
+      "flow_rate": "3-4 mL/s",
       "timing": "Bolus Tracking",
       "roi": "Abdominal aorta",
       "trigger": "150 HU",
@@ -3223,14 +3295,19 @@
     ],
     "summary": [
       {
+        "series": "Non-contrast",
+        "phase": "Non-contrast",
+        "coverage": "Diaphragm to Toes"
+      },
+      {
         "series": "CTA Arterial",
         "phase": "Arterial (bolus tracked)",
-        "coverage": "Renal arteries to Foot"
+        "coverage": "Above the diaphragm to Toes"
       },
       {
         "series": "CTA Runoff",
         "phase": "Immediately after CTA",
-        "coverage": "Mid Thigh to Foot"
+        "coverage": "Knees to Toes"
       }
     ]
   },
@@ -3238,10 +3315,10 @@
     "filepath": "ct/vascular/cta-mesenteric-ischemia.md",
     "title": "CTA Mesenteric Ischemia",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Mesenteric Ischemia Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 25s\n      Saline          :active, saline, after contrast, 4s\n      section Other\n      Arterial Phase    :crit, scan1, 00:25, 7s\n      Portal Venous    :done, scan2, 01:10, 7s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Mesenteric Ischemia Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s\n      Saline          :active, saline, after contrast, 5s\n      section Other\n      Arterial Phase    :crit, scan1, after saline, 5s\n      Portal Venous    :done, scan2, 01:10, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
-      "volume": "125 mL",
+      "volume": "1.5 mL/kg",
       "flow_rate": "5 mL/s",
       "timing": "Dual phase: Arterial + Portal Venous",
       "roi": "Abdominal aorta at celiac",
@@ -3279,14 +3356,19 @@
     ],
     "summary": [
       {
+        "series": "Non-contrast",
+        "phase": "N/A",
+        "coverage": "Diaphragm to Lesser Trochanters"
+      },
+      {
         "series": "Arterial Phase",
         "phase": "Contrast (25 sec delay)",
-        "coverage": "Diaphragm to Iliac crests"
+        "coverage": "Diaphragm to Lesser Trochanters"
       },
       {
         "series": "Portal Venous",
         "phase": "Contrast (70 sec delay)",
-        "coverage": "Diaphragm to Pubic symphysis"
+        "coverage": "Diaphragm to Lesser Trochanters"
       }
     ]
   },
@@ -3294,10 +3376,10 @@
     "filepath": "ct/vascular/cta-pelvis-cyclist-iliac-artery-maneuver.md",
     "title": "CTA Pelvis Cyclist Iliac Artery Maneuver",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Pelvis Cyclist Iliac Artery Maneuver Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 25s\n      Saline          :active, saline, after contrast, 5s\n      section Extremities\n      CTA Hip Flexion    :crit, scan1, after saline, 5s\n      section Other\n      CTA Resting Position    :crit, scan2, after contrast, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Pelvis Cyclist Iliac Artery Maneuver Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s\n      Saline          :active, saline, after contrast, 5s\n      section Extremities\n      CTA Resting Position    :crit, scan1, after saline, 5s\n      CTA Hip Flexion    :crit, scan2, after saline2, 5s\n      section Second Injection\n      Contrast bolus 2 (1.1 mL/kg)  :active, contrast2, 01:00, 18s\n      Saline                  :active, saline2, after contrast2, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
-      "volume": "100 mL",
+      "volume": "Split bolus: 1st injection 1.1 mL/kg + 2nd injection 1.1 mL/kg",
       "flow_rate": "4 mL/s",
       "timing": "Dual position: Resting + Hip flexion cycling position",
       "roi": "External iliac artery",
@@ -3337,12 +3419,12 @@
       {
         "series": "CTA Resting Position",
         "phase": "Arterial (bolus tracked)",
-        "coverage": "L3 to Mid femur"
+        "coverage": "Mid-liver to 3cm below greater trochanter"
       },
       {
         "series": "CTA Hip Flexion",
         "phase": "Contrast (Immediately after delay)",
-        "coverage": "L3 to Mid femur"
+        "coverage": "Mid-liver to 3cm below greater trochanter"
       }
     ]
   },
@@ -3350,10 +3432,10 @@
     "filepath": "ct/vascular/cta-pelvis-prostate-artery-embolization.md",
     "title": "CTA Pelvis Prostate Artery Embolization",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Pelvis Prostate Artery Embolization Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 28s\n      Saline          :active, saline, after contrast, 5s\n      section Other\n      CTA Arterial    :crit, scan1, after contrast, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Pelvis Prostate Artery Embolization Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.2 mL/kg)    :active, contrast, 00:00, 20s\n      Saline          :active, saline, after contrast, 5s\n      section Other\n      CTA Arterial    :crit, scan1, after saline, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
-      "volume": "100 mL",
+      "volume": "1.2 mL/kg",
       "flow_rate": "3-4 mL/s",
       "timing": "Bolus Tracking",
       "roi": "Common iliac artery",
@@ -3363,28 +3445,28 @@
     "series": [
       {
         "name": "Scout/Topogram",
-        "start": "L3",
-        "end": "Proximal femur",
+        "start": "Iliac crest",
+        "end": "Lesser trochanters",
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP pelvis",
-        "coverage": "L3 \u2192 Proximal femur"
+        "coverage": "Iliac crest \u2192 Lesser trochanters"
       },
       {
         "name": "CTA Arterial",
-        "start": "L3",
-        "end": "Proximal femur",
+        "start": "Iliac crest",
+        "end": "Lesser trochanters",
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Focus on internal iliac branches",
-        "coverage": "L3 \u2192 Proximal femur"
+        "coverage": "Iliac crest \u2192 Lesser trochanters"
       }
     ],
     "summary": [
       {
         "series": "CTA Arterial",
         "phase": "Arterial (bolus tracked)",
-        "coverage": "L3 to Proximal femur"
+        "coverage": "Iliac crest to Lesser trochanters"
       }
     ]
   },
@@ -3392,12 +3474,12 @@
     "filepath": "ct/vascular/cta-popliteal-entrapment.md",
     "title": "CTA Popliteal Entrapment",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Popliteal Entrapment Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 25s\n      Saline          :active, saline, after contrast, 5s\n      section Other\n      CTA Neutral Position    :crit, scan1, after contrast, 3s\n      CTV Neutral Position    :crit, scan2, after scan1, 3s\n      CTA Plantarflexion    :crit, scan3, after scan2, 3s\n      CTV Plantarflexion    :crit, scan4, after scan3, 3s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Popliteal Entrapment Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 20s\n      Saline          :active, saline, after contrast, 5s\n      section Extremities\n      CTA Neutral Position    :crit, scan1, after saline, 5s\n      CTV Neutral Position    :crit, scan2, 00:45, 5s\n      CTA Plantarflexion    :crit, scan3, after saline2, 5s\n      section Second Injection\n      Contrast bolus 2 (1.1 mL/kg)  :active, contrast2, 01:15, 20s\n      Saline                  :active, saline2, after contrast2, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
-      "volume": "100 mL",
+      "volume": "Dual injection: 1.2   mL/kg + 1.2 mL/kg",
       "flow_rate": "4 mL/s",
-      "timing": "Dual position: Neutral + Plantarflexion",
+      "timing": "Bolus Tracking",
       "roi": "Popliteal artery",
       "trigger": "150 HU",
       "type": "IV Contrast"
@@ -3435,22 +3517,17 @@
       {
         "series": "CTA Neutral Position",
         "phase": "Arterial (bolus tracked)",
-        "coverage": "Distal femur to Ankle"
+        "coverage": "4cm above the knees to the toes"
       },
       {
         "series": "CTV Neutral Position",
         "phase": "Venous (90 sec delay)",
-        "coverage": "Distal femur to Ankle"
+        "coverage": "4cm above the knees to the toes"
       },
       {
         "series": "CTA Plantarflexion",
         "phase": "Contrast (Immediately after delay)",
-        "coverage": "Distal femur to Ankle"
-      },
-      {
-        "series": "CTV Plantarflexion",
-        "phase": "Venous (90 sec delay)",
-        "coverage": "Distal femur to Ankle"
+        "coverage": "4cm above the knees to the toes"
       }
     ]
   },
@@ -3458,7 +3535,7 @@
     "filepath": "ct/vascular/cta-scadfmd-protocol.md",
     "title": "CTA SCAD/FMD Protocol",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA SCAD/FMD Protocol Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (150 mL total)    :active, contrast, 00:00, 37s\n      Saline          :active, saline, after contrast, 5s\n      section Head\n      Post-contrast Head    :done, scan1, 02:00, 3s\n      section Neck\n      CTA Neck    :crit, scan2, after contrast, 8s\n      section CAP\n      CTA CAP    :crit, scan3, 00:45, 7s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA SCAD/FMD Protocol Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (150 mL total)    :active, contrast, 00:00, 37s\n      Saline          :active, saline, after contrast, 5s\n      section Neck\n      CTA Neck    :crit, scan2, after contrast, 8s\n      section CAP\n      CTA CAP    :crit, scan3, 00:45, 7s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "150 mL total",
@@ -3575,11 +3652,11 @@
     "filepath": "ct/vascular/cta-for-gi-bleed.md",
     "title": "CTA for GI Bleed",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA for GI Bleed Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 25s\n      Saline          :active, saline, after contrast, 4s\n      section Other\n      Arterial Phase    :crit, scan1, 00:25, 7s\n      Delayed Phase    :done, scan3, 01:30, 7s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA for GI Bleed Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 20s\n      Saline          :active, saline, after contrast, 4s\n      section Other\n      Arterial Phase    :crit, scan1, 00:25, 7s\n      Delayed Phase    :done, scan3, 01:30, 7s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
-      "volume": "125 mL",
-      "flow_rate": "5 mL/s",
+      "volume": "1.5 mL/kg",
+      "flow_rate": "4-5 mL/s",
       "timing": "Triple phase: Arterial + Portal Venous + Delayed",
       "roi": "Abdominal aorta",
       "trigger": "150 HU",
@@ -3636,11 +3713,12 @@
     "filepath": "ct/vascular/ctv-abdomen-pelvis.md",
     "title": "CTV Abdomen Pelvis",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTV Abdomen Pelvis Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 41s\n      Saline          :active, saline, after contrast, 6s\n      section Other\n      CTV Venous Phase    :done, scan1, 03:00, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTV Abdomen Pelvis Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (2.0 mL/kg)    :active, contrast, 00:00, 40s\n      Saline          :active, saline, after contrast, 6s\n      section Other\n      CTV Venous Phase    :done, scan1, 1:50, 5s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
-      "volume": "125 mL",
+      "volume": "2.0 mL/kg",
       "flow_rate": "3 mL/s",
+      "timing": "Fixed Delay (110s)",
       "type": "IV Contrast"
     },
     "series": [
@@ -3666,7 +3744,7 @@
     "summary": [
       {
         "series": "CTV Venous Phase",
-        "phase": "Contrast (180 sec delay)",
+        "phase": "Contrast (110 sec delay)",
         "coverage": "Diaphragm to Proximal femur"
       }
     ]
@@ -3675,11 +3753,12 @@
     "filepath": "ct/vascular/ctv-chest-abdomen-pelvis.md",
     "title": "CTV Chest Abdomen Pelvis",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTV Chest Abdomen Pelvis Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 41s\n      Saline          :active, saline, after contrast, 6s\n      section Other\n      CTV Venous Phase    :done, scan1, 03:00, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTV Chest Abdomen Pelvis Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (2.0 mL/kg)    :active, contrast, 00:00, 40s\n      Saline          :active, saline, after contrast, 6s\n      section Other\n      CTV Venous Phase    :done, scan1, 1:50, 8s\n  ```",
     "contrast": {
       "agent": "Isovue 370",
-      "volume": "125 mL",
+      "volume": "2.0 mL/kg",
       "flow_rate": "3 mL/s",
+      "timing": "Fixed Delay (180s)",
       "type": "IV Contrast"
     },
     "series": [
@@ -3705,7 +3784,7 @@
     "summary": [
       {
         "series": "CTV Venous Phase",
-        "phase": "Contrast (180 sec delay)",
+        "phase": "Contrast (110 sec delay)",
         "coverage": "Thoracic inlet to Proximal femur"
       }
     ]
