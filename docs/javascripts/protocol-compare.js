@@ -357,7 +357,51 @@ function displayGanttComparison() {
   grid.style.flexDirection = 'column';
   grid.style.gap = '30px';
 
-  selectedProtocols.forEach(function(protocol) {
+  // Build all data objects first so we can compute a shared time axis
+  const protocolDataList = selectedProtocols.map(function(protocol) {
+    const isNC = !protocol.contrast || protocol.contrast.type === 'Non-contrast' || protocol.contrast.agent === 'N/A';
+    const contrastDurationSeconds = isNC ? 0 : (parseInt(protocol.contrast.duration) || 30);
+
+    return {
+      protocol: protocol,
+      data: {
+        contrast: isNC ? null : {
+          volume: protocol.contrast.volume || '',
+          flowRate: protocol.contrast.flow_rate || '',
+          durationSeconds: contrastDurationSeconds
+        },
+        saline: null,
+        phases: (protocol.series || []).map(function(s) {
+          return {
+            name: s.name || '',
+            range: s.coverage || ((s.start || '') + ' \u2192 ' + (s.end || '')),
+            delaySeconds: typeof s.delay_seconds === 'number' ? s.delay_seconds : 0,
+            durationSeconds: 5,
+            type: s.phase_type || 'other'
+          };
+        })
+      }
+    };
+  });
+
+  // Compute shared time extents so all diagrams use the same axis
+  var sharedMin = Infinity;
+  var sharedMax = -Infinity;
+  if (typeof window.computeTimeExtents === 'function') {
+    protocolDataList.forEach(function(item) {
+      var ext = window.computeTimeExtents(item.data);
+      if (ext.minTime < sharedMin) sharedMin = ext.minTime;
+      if (ext.maxTime > sharedMax) sharedMax = ext.maxTime;
+    });
+  }
+  var sharedExtents = (sharedMin !== Infinity)
+    ? { minTime: sharedMin, maxTime: sharedMax }
+    : null;
+
+  protocolDataList.forEach(function(item) {
+    const protocol = item.protocol;
+    const data = item.data;
+
     const col = document.createElement('div');
 
     // Title with link
@@ -373,34 +417,12 @@ function displayGanttComparison() {
     title.appendChild(link);
     col.appendChild(title);
 
-    // Build data object for renderer
-    const isNC = !protocol.contrast || protocol.contrast.type === 'Non-contrast' || protocol.contrast.agent === 'N/A';
-    const contrastDurationSeconds = isNC ? 0 : (parseInt(protocol.contrast.duration) || 30);
-
-    const data = {
-      contrast: isNC ? null : {
-        volume: protocol.contrast.volume || '',
-        flowRate: protocol.contrast.flow_rate || '',
-        durationSeconds: contrastDurationSeconds
-      },
-      saline: null,
-      phases: (protocol.series || []).map(function(s) {
-        return {
-          name: s.name || '',
-          range: s.coverage || ((s.start || '') + ' \u2192 ' + (s.end || '')),
-          delaySeconds: typeof s.delay_seconds === 'number' ? s.delay_seconds : 0,
-          durationSeconds: 5,
-          type: s.phase_type || 'other'
-        };
-      })
-    };
-
-    // Render diagram
+    // Render diagram with shared time axis
     const diagramContainer = document.createElement('div');
     col.appendChild(diagramContainer);
 
     if (typeof window.renderAcquisitionDiagram === 'function') {
-      window.renderAcquisitionDiagram(diagramContainer, data);
+      window.renderAcquisitionDiagram(diagramContainer, data, sharedExtents);
     } else {
       diagramContainer.textContent = 'Diagram renderer not available';
       diagramContainer.style.fontStyle = 'italic';

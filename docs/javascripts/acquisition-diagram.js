@@ -323,12 +323,45 @@
   }
 
   /**
+   * Compute the natural time extents for a protocol data object.
+   * Returns { minTime, maxTime } in seconds.
+   *
+   * @param {{ contrast: object|null, saline: object|null, phases: object[] }} data
+   * @returns {{ minTime: number, maxTime: number }}
+   */
+  function computeTimeExtents(data) {
+    const { contrast, saline, phases } = data;
+    const ncOnly = contrast === null;
+    let minTime, maxTime;
+
+    if (ncOnly) {
+      minTime = 0;
+      maxTime = 30;
+      for (const ph of (phases || [])) {
+        maxTime = Math.max(maxTime, ph.delaySeconds + ph.durationSeconds);
+      }
+    } else {
+      const hasNC = (phases || []).some(p => p.type === 'non-contrast');
+      minTime = hasNC ? -20 : 0;
+      maxTime = contrast.durationSeconds + (saline ? saline.durationSeconds : 0) + 10;
+      for (const ph of (phases || [])) {
+        if (ph.type !== 'non-contrast') {
+          maxTime = Math.max(maxTime, ph.delaySeconds + ph.durationSeconds);
+        }
+      }
+    }
+
+    return { minTime, maxTime: maxTime + 20 };
+  }
+
+  /**
    * Render an SVG acquisition diagram into `container`.
    *
    * @param {Element} container
    * @param {{ contrast: object|null, saline: object|null, phases: object[] }} data
+   * @param {{ minTime?: number, maxTime?: number }} [options]  - override time axis extents
    */
-  function renderAcquisitionDiagram(container, data) {
+  function renderAcquisitionDiagram(container, data, options) {
     // Clear container
     while (container.firstChild) container.removeChild(container.firstChild);
 
@@ -362,28 +395,9 @@
     const totalRows = injectionRowCount + phaseRowCount;
 
     // ── Time extents ────────────────────────────────────────────────────────
-    let minTime, maxTime;
-
-    if (ncOnly) {
-      minTime = 0;
-      maxTime = 30; // default minimum
-      for (const ph of phases) {
-        maxTime = Math.max(maxTime, ph.delaySeconds + ph.durationSeconds);
-      }
-      maxTime += 20; // buffer
-    } else {
-      const hasNC = phases.some(p => p.type === 'non-contrast');
-      minTime = hasNC ? -20 : 0;
-
-      // Also consider injection starts at 0
-      maxTime = contrast.durationSeconds + (saline ? saline.durationSeconds : 0) + 10;
-      for (const ph of phases) {
-        if (ph.type !== 'non-contrast') {
-          maxTime = Math.max(maxTime, ph.delaySeconds + ph.durationSeconds);
-        }
-      }
-      maxTime += 20; // buffer
-    }
+    const natural = computeTimeExtents(data);
+    const minTime = (options && options.minTime != null) ? options.minTime : natural.minTime;
+    const maxTime = (options && options.maxTime != null) ? options.maxTime : natural.maxTime;
 
     const timeRange = maxTime - minTime;
     const svgContentWidth = SVG_TOTAL_WIDTH - LEFT_PAD - LABEL_WIDTH - RIGHT_PAD;
@@ -517,7 +531,7 @@
     svg.appendChild(axisLine);
 
     // Tick interval
-    const tickInterval = timeRange > 300 ? 60 : 30;
+    const tickInterval = 10;
 
     // Ticks and labels
     const firstTick = Math.ceil(minTime / tickInterval) * tickInterval;
@@ -582,9 +596,10 @@
 
   // ─── Expose globals ───────────────────────────────────────────────────────────
 
-  window.parseDelaySeconds       = parseDelaySeconds;
-  window.inferPhaseType          = inferPhaseType;
-  window.parseProtocolFromDOM    = parseProtocolFromDOM;
+  window.parseDelaySeconds        = parseDelaySeconds;
+  window.inferPhaseType           = inferPhaseType;
+  window.parseProtocolFromDOM     = parseProtocolFromDOM;
+  window.computeTimeExtents       = computeTimeExtents;
   window.renderAcquisitionDiagram = renderAcquisitionDiagram;
 
 })();
