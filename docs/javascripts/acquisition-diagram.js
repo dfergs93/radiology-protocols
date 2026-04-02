@@ -24,7 +24,7 @@
     const s = delayStr.trim();
 
     // Bolus track
-    if (/bolus[\s-]?track/i.test(s)) {
+    if (/bolus[\s-]track/i.test(s)) {
       const dur = injectionDurationSeconds && injectionDurationSeconds > 0
         ? injectionDurationSeconds
         : 30;
@@ -170,6 +170,7 @@
       const volume = getVal('Volume');
       const flowRate = getVal('Flow Rate');
       const durationRaw = getVal('Duration');
+      const timingMethod = getVal('timing method') || getVal('timing');
 
       // Parse duration seconds from e.g. "40s", "40 sec", "40 seconds"
       let durationSeconds = 0;
@@ -177,7 +178,7 @@
       if (durMatch) durationSeconds = parseFloat(durMatch[1]);
 
       if (agent && !/^n\/a$/i.test(agent.trim())) {
-        contrast = { volume, flowRate, durationSeconds };
+        contrast = { volume, flowRate, durationSeconds, timingMethod };
       }
 
       // Saline
