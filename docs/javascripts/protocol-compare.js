@@ -386,8 +386,8 @@ function displayGanttComparison() {
       saline: null,
       phases: (protocol.series || []).map(function(s) {
         return {
-          name: s.name,
-          range: s.coverage || (s.start + ' \u2192 ' + s.end),
+          name: s.name || '',
+          range: s.coverage || ((s.start || '') + ' \u2192 ' + (s.end || '')),
           delaySeconds: typeof s.delay_seconds === 'number' ? s.delay_seconds : 0,
           durationSeconds: 30,
           type: s.phase_type || 'other'
