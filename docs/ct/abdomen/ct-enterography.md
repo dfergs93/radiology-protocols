@@ -110,7 +110,7 @@
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout | Diaphragm | Pubic symphysis | N/A | N/A | AP |
     | Enteric Phase | Diaphragm | Pubic symphysis | 45 sec | 0.625 mm | Optimal small bowel enhancement |
-    | Renal Delay | 1-2cm above and below kidneys | 300 sec | 0.625 mm | Renal Delay series |
+    | Renal Delay | 1-2cm above kidneys | 1-2cm below kidneys | 300 sec | 0.625 mm | Renal Delay series |
 
 === "Technical Parameters"
 

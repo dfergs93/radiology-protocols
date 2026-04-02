@@ -109,7 +109,7 @@
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout/Topogram | Thoracic inlet | Pubic symphysis | N/A | N/A | AP and lateral |
     | Portal Venous Phase | Lung bases or diaphragm | Pubic symphysis | 70 sec | 0.625 mm | Single portal venous phase |
-    | Renal Delay | 1-2cm above and below kidneys | 300 sec | 0.625 mm | Renal Delay series |
+    | Renal Delay | 1-2cm above kidneys | 1-2cm below kidneys | 300 sec | 0.625 mm | Renal Delay series |
 
 === "Technical Parameters"
 

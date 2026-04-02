@@ -109,8 +109,8 @@
     | Series Name | Start Location | End Location | Delay | Slice Thickness | Notes |
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout/Topogram | Diaphragm | Pubic symphysis | N/A | N/A | AP and lateral |
-    | Portal Venous Phase | Diaphragm | Pubic symphysis | 70 sec | 0.625 mm | Standard portal venous timing |
-    | Renal Delay | 1-2cm above and below kidneys | 300 sec | 0.625 mm | Renal Delay series |
+    | Portal Venous Phase | Diaphragm | Lesser trochanters | 70 sec | 0.625 mm | Standard portal venous timing |
+    | Renal Delay | 1-2cm above kidneys | 1-2cm below kidneys | 300 sec | 0.625 mm | Renal Delay series |
 
 === "Technical Parameters"
 
