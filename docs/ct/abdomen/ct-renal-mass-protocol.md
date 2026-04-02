@@ -41,9 +41,10 @@
         
         | Parameter | Value |
         |-----------|-------|
-        | Agent | Omnipaque 350 |
+        | Agent | Isovue 370 |
         | Volume | Split bolus: 1st injection 1.1 mL/kg + 2nd injection 0.4 mL/kg |
-        | Flow Rate | 4 mL/s |
+        | Flow Rate | 3-4 mL/s |
+        | Duration | 18-22s + 20-30s |
         | Timing | Split bolus technique |
 
     ===   "Lab Requirements"
@@ -92,18 +93,16 @@
       dateFormat mm:ss
       axisFormat %M:%S 
       
-      section First Injection
+      section Contrast Injection
       Contrast bolus 1 (77mL)  :active, contrast1, 00:00, 19s
       Saline                  :active, saline1, after contrast1, 5s
+      Contrast bolus 2 (28mL)  :active, contrast2, 05:00, 7s
+      Saline                  :active, saline2, after contrast2, 5s
       section First Scan Phase
       First acquisition                    :crit, scan1, 00:20, 15s
       section Wait Period
-      Wait for second injection            :milestone, wait, after scan1, 05:00
-      section Second Injection
-      Contrast bolus 2 (28mL)  :active, contrast2, after wait, 7s
-      Saline                  :active, saline2, after contrast2, 5s
       section Second Scan Phase
-      Second acquisition                   :done, scan2, after saline2, 20s
+      Second acquisition                   :done, scan2, 07:00, 20s
   ```
 
 <div class="acquisition-diagram"></div>

@@ -21,7 +21,6 @@
 
         - Pulmonary nodule follow-up
         - Known nodule surveillance
-        - Post-treatment monitoring
 
 -   __2. Patient Prep__
 

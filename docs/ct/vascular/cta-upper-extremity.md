@@ -61,6 +61,7 @@
     === "Technologist Notes"
 
         - Scan from aortic arch to fingertips. May need bilateral for comparison. Position arm to demonstrate pathology
+        - Inject into contralateral arm
 
     === "Nursing Notes"
 

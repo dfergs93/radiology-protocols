@@ -16,6 +16,7 @@
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
         | Portal Venous Phase | Contrast (70 sec delay) | Diaphragm to Pubic symphysis |
+        | Renal Delay | Contrast (300 sec delay) | 1-2cm above and below kidneys |
 
     === "Clinical Indications"
 
@@ -41,9 +42,11 @@
         
         | Parameter | Value |
         |-----------|-------|
-        | Agent | Omnipaque 350 |
-        | Volume | 125 mL |
+        | Agent | Isovue 370 |
+        | Volume | 1.5 mL/kg |
         | Flow Rate | 3 mL/s |
+        | Duration | 40s |
+        | Timing Method | Empiric Delay (70s) |
 
     ===   "Lab Requirements"
         Use full dose if GFR > 30
@@ -62,7 +65,7 @@
 
     === "Nursing Notes"
 
-        - 18-20G IV required. Verify patent IV. May give rectal contrast for distal colon/rectal evaluation. Oral contrast 900mL given 2 hrs before
+        - 20-22G IV required. Verify patent IV. Oral contrast 250-500mL water before scan.
 
         !!! warning "Safety First"
             - **Renal Function:** Verify eGFR > 30
@@ -93,10 +96,11 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (125 mL)    :active, contrast, 00:00, 41s
+      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 40s
       Saline          :active, saline, after contrast, 6s
       section Other
       Portal Venous Phase    :done, scan1, 01:10, 7s
+      Renal Delay    :done, scan2, 04:00, 7s
   ```
 
 <div class="acquisition-diagram"></div>
@@ -107,6 +111,7 @@
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout/Topogram | Diaphragm | Pubic symphysis | N/A | N/A | AP and lateral |
     | Portal Venous Phase | Diaphragm | Pubic symphysis | 70 sec | 0.625 mm | Standard portal venous timing |
+    | Renal Delay | 1-2cm above and below kidneys | 300 sec | 0.625 mm | Renal Delay series |
 
 === "Technical Parameters"
 
@@ -122,7 +127,7 @@
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |
     |:------|:------------|:----|:--------------------|:-------|:------------|:------|
     | Axial | Portal venous | Abdomen | 3 mm/3 mm | Standard | 3 | Primary diagnostic series |
-    | Axial | Portal venous | Pelvis | 3 mm/3 mm | Standard | 3 | Pelvis diagnostic series |
+    | Axial | Renal Delay | Abdomen | 3 mm/3 mm | Standard | 3 | Renal Delay series |
     | Coronal | Portal venous | Full AP | 3 mm/3 mm | Standard | 3 | Coronal reformats for overview |
     | Sagittal | Portal venous | Full AP | 3 mm/3 mm | Standard | 3 | Sagittal reformats for bowel loops |
 

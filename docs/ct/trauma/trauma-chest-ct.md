@@ -16,6 +16,7 @@
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
         | NC Chest | Non-contrast | Lung apices to Costophrenic angles |
+        | CTA Chest | Arterial (bolus tracked) | Lung apices to Costophrenic angles |
 
     === "Clinical Indications"
 
@@ -91,6 +92,7 @@
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout | Lung apices | Costophrenic angles | N/A | N/A | AP and lateral |
     | NC Chest | Lung apices | Costophrenic angles | N/A | 0.625-1 mm | Submillimeter for ribs |
+    | CTA Chest | Arterial (bolus tracked) | Lung apices to Costophrenic angles | Bolus tracked | 0.625 mm | Evaluate for aortic injury |
 
 === "Technical Parameters"
 
@@ -107,6 +109,7 @@
     |:------|:------------|:----|:--------------------|:-------|:------------|:------|
     | Axial | Chest | Chest | 2.5 mm/2.5 mm | Standard | 3 | Mediastinal window |
     | Axial | Chest | Chest | 2.5 mm/2.5 mm | Lung | 3 | Lung window |
+    | Axial | CTA Chest | Chest | 2.5 mm/2.5 mm | Standard | 3 | Evaluate for aortic injury |
     | Coronal | Chest | Chest | 2.5 mm/2.5 mm | Bone | N/A | Rib overview |
     | Oblique sagittal | Chest | Ribs | 2 mm/2 mm | Bone | N/A | Rib reformats all ribs |
 

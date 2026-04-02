@@ -174,7 +174,8 @@
       if (durMatch) durationSeconds = parseFloat(durMatch[1]);
 
       if (agent && !/^n\/a$/i.test(agent.trim())) {
-        contrast = { volume, flowRate, durationSeconds, timingMethod };
+        // Default to 30s if Duration row is missing from the protocol
+        contrast = { volume, flowRate, durationSeconds: durationSeconds || 30, timingMethod };
       }
 
       // Saline

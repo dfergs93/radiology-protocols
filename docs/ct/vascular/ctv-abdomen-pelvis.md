@@ -15,7 +15,7 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | CTV Venous Phase | Contrast (180 sec delay) | Diaphragm to Proximal femur |
+        | CTV Venous Phase | Contrast (110 sec delay) | Diaphragm to Proximal femur |
 
     === "Clinical Indications"
 
@@ -42,8 +42,10 @@
         | Parameter | Value |
         |-----------|-------|
         | Agent | Isovue 370 |
-        | Volume | 125 mL |
+        | Volume | 2.0 mL/kg |
         | Flow Rate | 3 mL/s |
+        | Duration | 40s |
+        | Timing Method | Fixed Delay (110s) |
 
     ===   "Lab Requirements"
         Use full dose if GFR > 30
@@ -93,10 +95,10 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (125 mL)    :active, contrast, 00:00, 41s
+      Contrast (2.0 mL/kg)    :active, contrast, 00:00, 40s
       Saline          :active, saline, after contrast, 6s
       section Other
-      CTV Venous Phase    :done, scan1, 03:00, 5s
+      CTV Venous Phase    :done, scan1, 1:50, 5s
   ```
 
 <div class="acquisition-diagram"></div>

@@ -15,8 +15,9 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
+        | Calcium Score | Non-Contrast | Apex of heart to Base of heart |
         | Gated CTA Chest | Arterial (bolus tracked) | Top of heart to Below heart |
-        | Delayed CAP | Contrast (90 sec delay) | Diaphragm to Femoral heads |
+        | Delayed CAP | Contrast (80 sec delay from CTA) | Diaphragm to Femoral heads |
 
     === "Clinical Indications"
 
@@ -31,7 +32,7 @@
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 4 hours
     - **Pre-Medication:**
-        - HR < 65. Metoprolol IV prn
+        - HR < 65 target. Premedication not required.
 
 -   __3. IV Contrast & Injection__    
 
@@ -41,10 +42,11 @@
         
         | Parameter | Value |
         |-----------|-------|
-        | Agent | Omnipaque 350 |
-        | Volume | 140 mL |
-        | Flow Rate | 4 mL/s |
-        | Timing Method | Dual phase: Gated chest NO dose modulation + 90 sec delayed CAP |
+        | Agent | IsoVue 370 |
+        | Volume | 1.1 mL/kg |
+        | Flow Rate | 5 mL/s |
+        | Duration | 15s |
+        | Timing Method | Bolus Tracking |
         | ROI Placement | Ascending aorta |
         | Trigger (HU) | 180 HU |
 
@@ -96,12 +98,12 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (140 mL)    :active, contrast, 00:00, 35s
+      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 15s
       Saline          :active, saline, after contrast, 5s
       section Chest
-      Gated CTA Chest    :crit, scan1, after contrast, 5s
+      Gated CTA Chest    :crit, scan1, after saline, 5s
       section CAP
-      Delayed CAP    :done, scan2, 01:30, 5s
+      Delayed CAP    :done, scan2, 01:40, 5s
   ```
 
 <div class="acquisition-diagram"></div>
@@ -111,6 +113,7 @@
     | Series Name | Start Location | End Location | Delay | Slice Thickness | Notes |
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout | Thoracic inlet | Femoral heads | N/A | N/A | AP lateral |
+    | Calcium Score | Apex of heart to Base of heart | Non-Contrast | N/A | 2.5 mm/2.5 mm | Cardiac | 3 | Calcium scoring |
     | Gated CTA Chest | Top of heart | Below heart | Bolus tracked | 0.5 mm | NO DOSE PULSING - retrospective all phases |
     | Delayed CAP | Diaphragm | Femoral heads | 90 sec | 0.625 mm | Access planning and coronaries |
 
@@ -127,6 +130,7 @@
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |
     |:------|:------------|:----|:--------------------|:-------|:------------|:------|
+    | Axial | Calcium Score | Apex of heart to Base of heart | 2.5 mm/2.5 mm | Cardiac | 3 | Calcium scoring |
     | Axial | Gated chest | Heart | 0.5 mm/0.5 mm | Cardiac | 3 | Mitral valve measurements |
     | Axial | Delayed CAP | AP | 2 mm/2 mm | Vascular | 3 | Access vessels |
     | Double oblique | Gated chest | Mitral valve | 0.5 mm | Cardiac | 3 | En face mitral annulus |

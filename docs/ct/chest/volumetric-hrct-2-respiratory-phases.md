@@ -20,7 +20,7 @@
 
     === "Clinical Indications"
 
-        - Interstitial lung disease initial evaluation
+        - Interstitial lung disease without prone imaging
         - ILD diagnosis
         - Diffuse lung disease
 

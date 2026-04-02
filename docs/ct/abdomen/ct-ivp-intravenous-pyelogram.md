@@ -16,8 +16,8 @@
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
         | Non-Contrast (optional) | Non-contrast | Top kidneys to Pubic symphysis |
-        | Early Portal Venous | Contrast (60 sec from 1st delay) | Top kidneys to Iliac crests |
-        | Excretory Phase | Contrast (90-120 sec from 2nd delay) | Top kidneys to Pubic symphysis |
+        | Early Portal Venous | Contrast (60 sec from 1st injection) | Top kidneys to Iliac crests |
+        | Excretory Phase | Contrast (90-120 sec from 2nd injection) | Top kidneys to Pubic symphysis |
 
     === "Clinical Indications"
 
@@ -42,7 +42,7 @@
         
         | Parameter | Value |
         |-----------|-------|
-        | Agent | Omnipaque 350 |
+        | Agent | Isovue 370 |
         | Volume | Split bolus: 1st injection 1.1 mL/kg + 2nd injection 0.4 mL/kg |
         | Flow Rate | 4 mL/s |
         | Timing | Split bolus technique |
@@ -93,18 +93,15 @@
       dateFormat mm:ss
       axisFormat %M:%S 
       
-      section First Injection
-      Contrast bolus 1 (77mL)  :active, contrast1, 00:00, 19s
+      section Contrast Injection
+      Contrast bolus 1 (1.1mL/kg)  :active, contrast1, 00:00, 19s
       Saline                  :active, saline1, after contrast1, 5s
-      section First Scan Phase
-      First acquisition                    :crit, scan1, 00:20, 15s
-      section Wait Period
-      Wait for second injection            :milestone, wait, after scan1, 05:00
-      section Second Injection
-      Contrast bolus 2 (28mL)  :active, contrast2, after wait, 7s
+      Contrast bolus 2 (0.4mL/kg)  :active, contrast2, 07:00, 7s
       Saline                  :active, saline2, after contrast2, 5s
+      section First Scan Phase
+      First acquisition                    :crit, scan1, 00:20, 10s
       section Second Scan Phase
-      Second acquisition                   :done, scan2, after saline2, 20s
+      Second acquisition                   :done, scan2, 09:00, 10s
   ```
 
 <div class="acquisition-diagram"></div>

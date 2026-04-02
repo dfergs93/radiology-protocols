@@ -15,7 +15,8 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | CTA Arterial | Arterial (bolus tracked) | Iliac crest to Ankle |
+        | CTA Arterial | Arterial (bolus tracked) | Mid-thigh to Toes |
+        | Delay | Delayed (60s) | Mid-thigh to Toes |
 
     === "Clinical Indications"
 
@@ -38,8 +39,9 @@
         | Parameter | Value |
         |-----------|-------|
         | Agent | Isovue 370 |
-        | Volume | 120 mL |
-        | Flow Rate | 4 mL/s |
+        | Volume | 1.5 mL/kg |
+        | Flow Rate | 4-5 mL/s |
+        | Duration | 25s |
         | Timing Method | Bolus Tracking |
         | ROI Placement | Femoral artery |
         | Trigger (HU) | 150 HU |
@@ -92,10 +94,11 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (120 mL)    :active, contrast, 00:00, 30s
+      Contrast (120 mL)    :active, contrast, 00:00, 25s
       Saline          :active, saline, after contrast, 5s
       section Other
-      CTA Arterial    :crit, scan1, after contrast, 5s
+      CTA Arterial    :crit, scan1, after saline, 5s
+      CTA Delayed    :crit, scan2, 01:00, 5s
   ```
 
 <div class="acquisition-diagram"></div>
@@ -104,8 +107,9 @@
 
     | Series Name | Start Location | End Location | Delay | Slice Thickness | Notes |
     |:------------|:---------------|:-------------|:------|:----------------|:------|
-    | Scout/Topogram | Iliac crest | Ankle | N/A | N/A | AP both legs for comparison |
-    | CTA Arterial | Iliac crest | Ankle | Bolus tracked | 0.625 mm | Bilateral for comparison and variants |
+    | Scout/Topogram | Mid-Thigh | Toes | N/A | N/A | AP both legs for comparison |
+    | CTA Arterial | Mid-Thigh | Toes | Bolus tracked | 0.625 mm | Bilateral for comparison and variants |
+    | CTA Delayed | Mid-Thigh | Toes | 60s | 0.625 mm | Bilateral for comparison and variants |
 
 === "Technical Parameters"
 
@@ -123,12 +127,11 @@
     | Axial | Arterial | Thighs/Legs | 1 mm/1 mm | Vascular | 3 | Thin slice for perforator identification |
     | Coronal | Arterial | Full legs | 1.5 mm/1.5 mm | Vascular | 3 | MIP to show perforator course |
     | Sagittal | Arterial | Full legs | 2 mm/2 mm | Vascular | 3 | Lateral perforator views |
-    | 3D VR | Arterial | Region of interest | 0.75 mm source | Vascular | 3 | Color-coded perforator map for surgery |
 
 
 ### Additional Reconstructions
 
-3D VR perforator map. Curved MPR of main vessels. Measure perforator locations from bony landmarks
+Curved MPR of main vessels. Measure perforator locations from bony landmarks
 
 Category: Vascular
 

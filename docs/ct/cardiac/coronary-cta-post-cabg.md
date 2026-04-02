@@ -99,10 +99,10 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s
-      Saline          :active, saline, after contrast, 4s
+      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 20s
+      Saline          :active, saline, after contrast, 5s
       section Other
-      Gated CTA    :crit, scan1, after contrast, 5s
+      Gated CTA    :crit, scan1, after saline, 5s
   ```
 
 <div class="acquisition-diagram"></div>

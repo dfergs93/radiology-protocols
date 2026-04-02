@@ -15,7 +15,9 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | CTA Arterial | Arterial (bolus tracked) | Renal arteries to Ankle |
+        | Non-contrast | Non-contrast | Diaphragm to Toes |
+        | CTA Arterial | Arterial (bolus tracked) | Above the diaphragm to Toes |
+        | CTA Runoff | Immediately after CTA | Knees to Toes |
 
     === "Clinical Indications"
 
@@ -41,8 +43,9 @@
         | Parameter | Value |
         |-----------|-------|
         | Agent | Isovue 370 |
-        | Volume | 150 mL |
-        | Flow Rate | 4 mL/s |
+        | Volume | 1.9 mL/kg |
+        | Flow Rate | 3-4 mL/s |
+        | Duration | 35s (5s fast 5-6mL/s then 30 s slow 3-4mL/s) |
         | Timing Method | Bolus Tracking |
         | ROI Placement | Abdominal aorta |
         | Trigger (HU) | 150 HU |
@@ -60,11 +63,11 @@
 
     === "Technologist Notes"
 
-        - Scan from renal arteries to feet. Use automatic bolus tracking. Extend delay if known severe PAD. Cover tibial vessels to ankle
+        - Scan from diaphragm to toes. Tape feet together. Use automatic bolus tracking. Extend delay if known severe PAD. Cover tibial vessels to ankle
 
     === "Nursing Notes"
 
-        - 18-20G IV antecubital
+        - 18-20G IV antecubital, flow rate up to 6 mL/s
 
         !!! warning "Safety First"
             - **Renal Function:** Verify eGFR > 30
@@ -95,10 +98,11 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (150 mL)    :active, contrast, 00:00, 37s
+      Contrast (150 mL)    :active, contrast, 00:00, 35s
       Saline          :active, saline, after contrast, 5s
       section Other
-      CTA Arterial    :crit, scan1, after contrast, 5s
+      CTA Arterial    :crit, scan1, after saline, 10s
+      CTA Runoff    :done, scan2, 00:55, 5s
   ```
 
 <div class="acquisition-diagram"></div>
@@ -109,6 +113,7 @@
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout/Topogram | Renal arteries | Feet | N/A | N/A | AP full legs |
     | CTA Arterial | Renal arteries | Ankle | Bolus tracked | 0.625 mm | May need slower table speed if severe PAD |
+    | CTA Runoff | Mid Thigh | Foot | Immediately after CTA | 0.625 mm | Runoff phase to evaluate distal vessels |
 
 === "Technical Parameters"
 

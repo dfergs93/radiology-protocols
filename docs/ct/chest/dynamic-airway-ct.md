@@ -17,12 +17,10 @@
         |:-------|:------|:---------|
         | Inspiration | Contrast (Full inspiration delay) | Thoracic inlet to Carina+10cm |
         | Mid-Expiration | Contrast (Forced mid-expiration delay) | Thoracic inlet to Carina+10cm |
-        | Cine (optional) | Contrast (Continuous breathing delay) | Carina level to Single slice |
 
     === "Clinical Indications"
 
-        - Tracheomalacia
-        - Bronchomalacia
+        - Tracheobronchomalacia
         - Expiratory central airway collapse
         - EDAC
 

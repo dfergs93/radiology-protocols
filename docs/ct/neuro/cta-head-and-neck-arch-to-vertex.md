@@ -105,6 +105,7 @@
       CTA Neck    :crit, scan2, after contrast, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 
