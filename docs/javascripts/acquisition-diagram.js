@@ -106,10 +106,6 @@
       const tabSet = input.closest('.tabbed-set');
       if (!tabSet) return null;
 
-      // Find 0-based index of this input among its siblings
-      const allInputs = Array.from(tabSet.querySelectorAll(':scope > .tabbed-set > input, input'))
-        .filter(inp => inp.closest('.tabbed-set') === tabSet);
-
       // More reliable: get all inputs that are direct-ish children in order
       const tabSetInputs = Array.from(tabSet.children).filter(el => el.tagName === 'INPUT');
       const idx = tabSetInputs.indexOf(input);
@@ -226,7 +222,7 @@
         const type = inferPhaseType(seriesName);
         let delaySeconds = parseDelaySeconds(delay, injDur);
 
-        if (type === 'non-contrast') {
+        if (type === 'non-contrast' && contrast !== null) {
           delaySeconds = -20;
         }
 
