@@ -346,110 +346,70 @@ function displayComparison() {
   displayGanttComparison();
   displayContrastComparison();
   displaySeriesComparison();
-
-  // Reinitialize Mermaid for new diagrams
-  if (typeof mermaid !== 'undefined') {
-    mermaid.init(undefined, '.mermaid');
-  }
 }
 
 function displayGanttComparison() {
   const container = document.getElementById('gantt-container');
   container.innerHTML = '';
 
-  // Find the maximum duration across all protocols
-  const maxDuration = findMaxProtocolDuration();
-  console.log('Max protocol duration:', maxDuration);
-
   const grid = document.createElement('div');
   grid.style.display = 'flex';
   grid.style.flexDirection = 'column';
   grid.style.gap = '30px';
 
-  selectedProtocols.forEach(protocol => {
+  selectedProtocols.forEach(function(protocol) {
     const col = document.createElement('div');
 
+    // Title with link
     const title = document.createElement('h4');
     const link = document.createElement('a');
-
-    let url = protocol.filepath.replace('.md', '/');
-    link.href = `/radiology-protocols/${url}`;  // Leading slash makes it absolute
-
+    const url = protocol.filepath.replace('.md', '/');
+    link.href = '/radiology-protocols/' + url;
     link.textContent = protocol.title;
     link.style.textDecoration = 'none';
     link.style.color = 'inherit';
-    link.addEventListener('mouseenter', () => {
-      link.style.textDecoration = 'underline';
-    });
-    link.addEventListener('mouseleave', () => {
-      link.style.textDecoration = 'none';
-    });
+    link.addEventListener('mouseenter', function() { link.style.textDecoration = 'underline'; });
+    link.addEventListener('mouseleave', function() { link.style.textDecoration = 'none'; });
     title.appendChild(link);
     col.appendChild(title);
 
-    if (protocol.gantt) {
-      const ganttDiv = document.createElement('div');
-      ganttDiv.className = 'mermaid';
+    // Build data object for renderer
+    const isNC = !protocol.contrast || protocol.contrast.type === 'Non-contrast' || protocol.contrast.agent === 'N/A';
+    const contrastDurationSeconds = isNC ? 0 : (parseInt(protocol.contrast.duration) || 30);
 
-      // Normalize the gantt diagram
-      let ganttContent = protocol.gantt.replace(/```mermaid\n?/, '').replace(/```$/, '');
-      ganttContent = normalizeGanttTimeline(ganttContent, maxDuration);
+    const data = {
+      contrast: isNC ? null : {
+        volume: protocol.contrast.volume || '',
+        flowRate: protocol.contrast.flow_rate || '',
+        durationSeconds: contrastDurationSeconds
+      },
+      saline: null,
+      phases: (protocol.series || []).map(function(s) {
+        return {
+          name: s.name,
+          range: s.coverage || (s.start + ' \u2192 ' + s.end),
+          delaySeconds: typeof s.delay_seconds === 'number' ? s.delay_seconds : 0,
+          durationSeconds: 30,
+          type: s.phase_type || 'other'
+        };
+      })
+    };
 
-      ganttDiv.textContent = ganttContent;
-      col.appendChild(ganttDiv);
+    // Render diagram
+    const diagramContainer = document.createElement('div');
+    col.appendChild(diagramContainer);
+
+    if (typeof window.renderAcquisitionDiagram === 'function') {
+      window.renderAcquisitionDiagram(diagramContainer, data);
     } else {
-      const noGantt = document.createElement('p');
-      noGantt.textContent = 'No timeline available';
-      noGantt.style.fontStyle = 'italic';
-      col.appendChild(noGantt);
+      diagramContainer.textContent = 'Diagram renderer not available';
+      diagramContainer.style.fontStyle = 'italic';
     }
 
     grid.appendChild(col);
   });
 
   container.appendChild(grid);
-}
-
-function findMaxProtocolDuration() {
-  let maxSeconds = 0;
-
-  selectedProtocols.forEach(protocol => {
-    if (!protocol.gantt) return;
-
-    // Extract all time values (mm:ss)
-    const timePattern = /(\d{1,2}):(\d{2})/g;
-    let match;
-
-    while ((match = timePattern.exec(protocol.gantt)) !== null) {
-      const minutes = parseInt(match[1]);
-      const seconds = parseInt(match[2]);
-      const totalSeconds = minutes * 60 + seconds;
-      maxSeconds = Math.max(maxSeconds, totalSeconds);
-    }
-  });
-
-  // Add small buffer (20 seconds) and convert to minutes, rounding up
-  const totalSeconds = maxSeconds + 20;
-  return Math.ceil(totalSeconds / 60);
-}
-
-function normalizeGanttTimeline(ganttContent, maxDuration) {
-  // Add a transparent spacer task at the end to extend timeline
-  const lines = ganttContent.split('\n');
-
-  // Find where to insert (before the closing, after last section)
-  const lastSectionIndex = lines.findLastIndex(line => line.trim().startsWith('section'));
-
-  if (lastSectionIndex !== -1) {
-    // Insert after the last task in the last section
-    const formattedTime = `${maxDuration.toString().padStart(2, '0')}:00`;
-    const spacerLine = `      Timeline end    :milestone, end, ${formattedTime}, 0s`;
-
-    // Find the end of gantt content (before closing)
-    lines.push(spacerLine);
-  }
-
-  return lines.join('\n');
 }
 
 function displayContrastComparison() {
