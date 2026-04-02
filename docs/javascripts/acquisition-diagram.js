@@ -84,6 +84,39 @@
   // ─── 3. parseProtocolFromDOM ─────────────────────────────────────────────────
 
   /**
+   * Parse contrast and saline durations from the Mermaid Gantt source on the page.
+   * Must be called before mermaid.js renders (which replaces the source text with SVG).
+   *
+   * @param {Document|Element} root
+   * @returns {{ contrastDuration: number, salineDuration: number }}
+   */
+  function parseMermaidSource(root) {
+    const el = root.querySelector('code.mermaid, div.mermaid, pre.mermaid, code.language-mermaid');
+    if (!el) return { contrastDuration: 0, salineDuration: 0 };
+
+    const lines = (el.textContent || '').split('\n');
+    let contrastDuration = 0;
+    let salineDuration = 0;
+
+    for (const line of lines) {
+      const trimmed = line.trim();
+      // Only process gantt task lines ending with Ns (e.g. ", 40s")
+      const durMatch = trimmed.match(/,\s*(\d+(?:\.\d+)?)s\s*$/i);
+      if (!durMatch) continue;
+      const dur = parseFloat(durMatch[1]);
+
+      if (/^contrast\b/i.test(trimmed) && trimmed.includes(':')) {
+        contrastDuration = dur;
+      }
+      if (/\bsaline\b/i.test(trimmed) && trimmed.includes(':')) {
+        salineDuration = dur;
+      }
+    }
+
+    return { contrastDuration, salineDuration };
+  }
+
+  /**
    * Parse injection and series data from the rendered MkDocs page DOM.
    *
    * @param {Document|Element} pageRoot
@@ -91,6 +124,10 @@
    */
   function parseProtocolFromDOM(pageRoot) {
     const root = pageRoot || document;
+
+    // Read Mermaid gantt source BEFORE mermaid.js renders it to SVG.
+    // This is the authoritative source for contrast duration and saline flush duration.
+    const gantt = parseMermaidSource(root);
 
     function findTabContent(labelText) {
       const labels = Array.from(root.querySelectorAll('label'));
@@ -174,19 +211,16 @@
       if (durMatch) durationSeconds = parseFloat(durMatch[1]);
 
       if (agent && !/^n\/a$/i.test(agent.trim())) {
-        // Default to 30s if Duration row is missing from the protocol
-        contrast = { volume, flowRate, durationSeconds: durationSeconds || 30, timingMethod };
-      }
+        // Prefer injection table Duration; fall back to Mermaid Gantt; then 30s default
+        contrast = {
+          volume, flowRate,
+          durationSeconds: durationSeconds || gantt.contrastDuration || 30,
+          timingMethod,
+        };
 
-      // Saline
-      for (const row of rows) {
-        const paramKey = (row.parameter || row.key || '').toLowerCase();
-        if (paramKey.includes('saline')) {
-          const salineRaw = row.value || '';
-          const salineMatch = salineRaw.match(/(\d+(?:\.\d+)?)/);
-          const salineDuration = salineMatch ? parseFloat(salineMatch[1]) : 0;
-          saline = { durationSeconds: salineDuration };
-          break;
+        // Saline: always from Mermaid Gantt (not present in injection table)
+        if (gantt.salineDuration > 0) {
+          saline = { durationSeconds: gantt.salineDuration };
         }
       }
     }
