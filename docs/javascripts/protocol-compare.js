@@ -472,7 +472,7 @@ function displayContrastComparison() {
     html += `<td>${contrast.type || 'N/A'}</td>`;
     html += `<td>${contrast.agent || 'N/A'}</td>`;
     html += `<td>${contrast.volume || 'N/A'}</td>`;
-    html += `<td>${contrast.flow_rate || 'N/A'}</td>`;
+    html += `<td>${contrast.duration || 'N/A'}</td>`;
     html += `<td>${contrast.timing || 'N/A'}</td>`;
     html += `<td>${contrast.trigger || 'N/A'}</td>`;
     html += '</tr>';

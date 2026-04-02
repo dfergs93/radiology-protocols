@@ -16,6 +16,7 @@
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
         | Portal Venous Phase | Contrast (70 sec delay) | Lung bases or diaphragm to Pubic symphysis |
+        | Renal Delay | 1-2cm above and below kidneys | 300 sec | 0.625 mm | Renal Delay series |
 
     === "Clinical Indications"
 
@@ -40,9 +41,11 @@
         
         | Parameter | Value |
         |-----------|-------|
-        | Agent | Omnipaque 350 |
+        | Agent | Isovue 370 |
         | Volume | 1.5 mL/kg |
-        | Flow Rate | 3-4 mL/s |
+        | Flow Rate | 3 mL/s |
+        | Duration | 40s |
+        | Timing Method | Empiric Delay (70s) |
 
     ===   "Lab Requirements"
         Use full dose if GFR > 30
@@ -57,11 +60,11 @@
 
     === "Technologist Notes"
 
-        - Single phase portal venous. Oral contrast for bowel opacification. 40 second injection. 70 second scan delay from start of injection
+        - Single phase portal venous. 40 second injection. 70 second scan delay from start of injection
 
     === "Nursing Notes"
 
-        - 18-20G IV. Adequate oral contrast intake. Verify renal function
+        - 20-22G IV. Verify renal function
 
         !!! warning "Safety First"
             - **Renal Function:** Verify eGFR > 30
@@ -96,6 +99,7 @@
       Saline          :active, saline, after contrast, 5s
       section Other
       Portal Venous Phase    :done, scan1, 01:10, 7s
+      Renal Delay    :done, scan2, 04:00, 7s
   ```
 
 
@@ -105,6 +109,7 @@
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout/Topogram | Thoracic inlet | Pubic symphysis | N/A | N/A | AP and lateral |
     | Portal Venous Phase | Lung bases or diaphragm | Pubic symphysis | 70 sec | 0.625 mm | Single portal venous phase |
+    | Renal Delay | 1-2cm above and below kidneys | 300 sec | 0.625 mm | Renal Delay series |
 
 === "Technical Parameters"
 
@@ -119,9 +124,8 @@
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |
     |:------|:------------|:----|:--------------------|:-------|:------------|:------|
-    | Axial | Portal venous | Chest | 2.5 mm/2.5 mm | Standard | 3 | Chest diagnostic |
-    | Axial | Portal venous | Abdomen | 2.5 mm/2.5 mm | Standard | 3 | Abdomen diagnostic |
-    | Axial | Portal venous | Pelvis | 3 mm/3 mm | Standard | 3 | Pelvis diagnostic |
+    | Axial | Portal venous | CAP | 2.5 mm/2.5 mm | Standard | 3 | Chest diagnostic |
+    | Axial | Renal Delay | Abdomen | 2.5 mm/2.5 mm | Standard | 3 | Renal diagnostic |
     | Coronal | Portal venous | Full CAP | 3 mm/3 mm | Standard | 3 | Coronal overview |
 
 

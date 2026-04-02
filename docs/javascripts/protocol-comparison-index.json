@@ -3,11 +3,12 @@
     "filepath": "ct/abdomen/ct-abdomen-pelvis-with-contrast.md",
     "title": "CT Abdomen Pelvis with Contrast",
     "category": "Abdomen",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CT Abdomen Pelvis with Contrast Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (125 mL)    :active, contrast, 00:00, 41s\n      Saline          :active, saline, after contrast, 6s\n      section Other\n      Portal Venous Phase    :done, scan1, 01:10, 7s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CT Abdomen Pelvis with Contrast Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 40s\n      Saline          :active, saline, after contrast, 6s\n      section Other\n      Portal Venous Phase    :done, scan1, 01:10, 7s\n      Renal Delay    :done, scan2, 04:00, 7s\n  ```",
     "contrast": {
-      "agent": "Omnipaque 350",
-      "volume": "125 mL",
+      "agent": "Isovue 370",
+      "volume": "1.5 mL/kg",
       "flow_rate": "3 mL/s",
+      "timing": "Empiric Delay (70s)",
       "type": "IV Contrast"
     },
     "series": [
@@ -28,6 +29,15 @@
         "thickness": "0.625 mm",
         "notes": "Standard portal venous timing",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
+      },
+      {
+        "name": "Renal Delay",
+        "start": "1-2cm above and below kidneys",
+        "end": "300 sec",
+        "delay": "0.625 mm",
+        "thickness": "Renal Delay series",
+        "notes": "",
+        "coverage": "1-2cm above and below kidneys \u2192 300 sec"
       }
     ],
     "summary": [
@@ -35,6 +45,11 @@
         "series": "Portal Venous Phase",
         "phase": "Contrast (70 sec delay)",
         "coverage": "Diaphragm to Pubic symphysis"
+      },
+      {
+        "series": "Renal Delay",
+        "phase": "Contrast (300 sec delay)",
+        "coverage": "1-2cm above and below kidneys"
       }
     ]
   },
@@ -42,11 +57,12 @@
     "filepath": "ct/abdomen/ct-adrenal-mass-protocol.md",
     "title": "CT Adrenal Mass Protocol",
     "category": "Abdomen",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CT Adrenal Mass Protocol Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 32s\n      Saline          :active, saline, after contrast, 5s\n      section Other\n      Portal Venous    :done, scan1, 01:10, 5s\n      15 Minute Delay    :done, scan2, 15:00, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CT Adrenal Mass Protocol Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 40s\n      Saline          :active, saline, after contrast, 6s\n      section Other\n      Portal Venous    :done, scan1, 01:10, 5s\n      15 Minute Delay    :done, scan2, 15:00, 5s\n  ```",
     "contrast": {
-      "agent": "Omnipaque 350",
+      "agent": "Isovue 370",
       "volume": "1.5 mL/kg",
-      "flow_rate": "3-4 mL/s",
+      "flow_rate": "3 mL/s",
+      "timing": "Empiric Delay (70s)",
       "type": "IV Contrast"
     },
     "series": [
@@ -100,9 +116,9 @@
     "filepath": "ct/abdomen/ct-biphasic-pancreas.md",
     "title": "CT Biphasic Pancreas",
     "category": "Abdomen",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CT Biphasic Pancreas Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s\n      Saline          :active, saline, after contrast, 4s\n      section Other\n      Pancreatic Phase    :crit, scan1, 00:40, 7s\n      Portal Venous    :done, scan2, 01:10, 7s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CT Biphasic Pancreas Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s\n      Saline          :active, saline, after contrast, 4s\n      section Other\n      Pancreatic Phase    :crit, scan1, 00:40, 7s\n      Portal Venous    :done, scan2, 01:10, 7s\n      Delayed Phase    :done, scan3, 05:00, 7s\n  ```",
     "contrast": {
-      "agent": "Omnipaque 350",
+      "agent": "Isovue 370",
       "volume": "1.5 mL/kg",
       "flow_rate": "4-5 mL/s",
       "timing": "Dual phase: Pancreatic arterial + Portal venous",
@@ -133,12 +149,17 @@
     "summary": [
       {
         "series": "Pancreatic Phase",
-        "phase": "Arterial (bolus tracked)",
+        "phase": "Delayed Arterial (bolus tracked+16s scan delay)",
         "coverage": "Diaphragm to Iliac crests"
       },
       {
         "series": "Portal Venous",
         "phase": "Contrast (70 sec delay)",
+        "coverage": "Diaphragm to Lesser trochanters"
+      },
+      {
+        "series": "Delayed Phase",
+        "phase": "Contrast (300 sec delay)",
         "coverage": "Diaphragm to Iliac crests"
       }
     ]
@@ -147,11 +168,12 @@
     "filepath": "ct/abdomen/ct-chest-abdomen-pelvis-with-contrast.md",
     "title": "CT Chest Abdomen Pelvis with Contrast",
     "category": "Abdomen",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CT Chest Abdomen Pelvis with Contrast Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 32s\n      Saline          :active, saline, after contrast, 5s\n      section Other\n      Portal Venous Phase    :done, scan1, 01:10, 7s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CT Chest Abdomen Pelvis with Contrast Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 32s\n      Saline          :active, saline, after contrast, 5s\n      section Other\n      Portal Venous Phase    :done, scan1, 01:10, 7s\n      Renal Delay    :done, scan2, 04:00, 7s\n  ```",
     "contrast": {
-      "agent": "Omnipaque 350",
+      "agent": "Isovue 370",
       "volume": "1.5 mL/kg",
-      "flow_rate": "3-4 mL/s",
+      "flow_rate": "3 mL/s",
+      "timing": "Empiric Delay (70s)",
       "type": "IV Contrast"
     },
     "series": [
@@ -172,6 +194,15 @@
         "thickness": "0.625 mm",
         "notes": "Single portal venous phase",
         "coverage": "Lung bases or diaphragm \u2192 Pubic symphysis"
+      },
+      {
+        "name": "Renal Delay",
+        "start": "1-2cm above and below kidneys",
+        "end": "300 sec",
+        "delay": "0.625 mm",
+        "thickness": "Renal Delay series",
+        "notes": "",
+        "coverage": "1-2cm above and below kidneys \u2192 300 sec"
       }
     ],
     "summary": [
@@ -179,6 +210,11 @@
         "series": "Portal Venous Phase",
         "phase": "Contrast (70 sec delay)",
         "coverage": "Lung bases or diaphragm to Pubic symphysis"
+      },
+      {
+        "series": "Renal Delay",
+        "phase": "1-2cm above and below kidneys",
+        "coverage": "300 sec"
       }
     ]
   },
@@ -239,11 +275,12 @@
     "filepath": "ct/abdomen/ct-enterography.md",
     "title": "CT Enterography",
     "category": "Abdomen",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CT Enterography Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s\n      Saline          :active, saline, after contrast, 4s\n      section Other\n      Enteric Phase    :done, scan1, 00:45, 7s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CT Enterography Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s\n      Saline          :active, saline, after contrast, 4s\n      section Other\n      Enteric Phase    :done, scan1, 00:45, 7s\n      Renal Delay    :done, scan2, 04:00, 7s\n  ```",
     "contrast": {
-      "agent": "Omnipaque 350",
+      "agent": "Isovue 370",
       "volume": "1.5 mL/kg",
       "flow_rate": "4-5 mL/s",
+      "timing": "Empiric Delay (45s)",
       "type": "IV Contrast"
     },
     "series": [
@@ -255,13 +292,27 @@
         "thickness": "0.625 mm",
         "notes": "Optimal small bowel enhancement",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
+      },
+      {
+        "name": "Renal Delay",
+        "start": "1-2cm above and below kidneys",
+        "end": "300 sec",
+        "delay": "0.625 mm",
+        "thickness": "Renal Delay series",
+        "notes": "",
+        "coverage": "1-2cm above and below kidneys \u2192 300 sec"
       }
     ],
     "summary": [
       {
-        "series": "Enteric Phase",
+        "series": "Delayed Arterial",
         "phase": "Contrast (45 sec delay)",
         "coverage": "Diaphragm to Pubic symphysis"
+      },
+      {
+        "series": "Renal Delay",
+        "phase": "300 sec",
+        "coverage": "1-2cm above and below kidneys"
       }
     ]
   },
@@ -269,7 +320,7 @@
     "filepath": "ct/abdomen/ct-ivp-intravenous-pyelogram.md",
     "title": "CT IVP (Intravenous Pyelogram)",
     "category": "Abdomen",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CT IVP (Intravenous Pyelogram) Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section First Injection\n      Contrast bolus 1 (77mL)  :active, contrast1, 00:00, 19s\n      Saline                  :active, saline1, after contrast1, 5s\n      section First Scan Phase\n      First acquisition                    :crit, scan1, 00:20, 15s\n      section Wait Period\n      Wait for second injection            :milestone, wait, after scan1, 05:00\n      section Second Injection\n      Contrast bolus 2 (28mL)  :active, contrast2, after wait, 7s\n      Saline                  :active, saline2, after contrast2, 5s\n      section Second Scan Phase\n      Second acquisition                   :done, scan2, after saline2, 20s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CT IVP (Intravenous Pyelogram) Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast bolus 1 (1.1mL/kg)  :active, contrast1, 00:00, 19s\n      Saline                  :active, saline1, after contrast1, 5s\n      Contrast bolus 2 (0.4mL/kg)  :active, contrast2, 07:00, 7s\n      Saline                  :active, saline2, after contrast2, 5s\n      section First Scan Phase\n      First acquisition                    :crit, scan1, 00:20, 10s\n      section Second Scan Phase\n      Second acquisition                   :done, scan2, 09:00, 10s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
       "volume": "Split bolus: 1st injection 1.1 mL/kg + 2nd injection 0.4 mL/kg",
@@ -314,12 +365,12 @@
       },
       {
         "series": "Early Portal Venous",
-        "phase": "Contrast (60 sec from 1st delay)",
+        "phase": "Contrast (60 sec from 1st injection)",
         "coverage": "Top kidneys to Iliac crests"
       },
       {
         "series": "Excretory Phase",
-        "phase": "Contrast (90-120 sec from 2nd delay)",
+        "phase": "Contrast (90-120 sec from 2nd injection)",
         "coverage": "Top kidneys to Pubic symphysis"
       }
     ]
@@ -355,11 +406,11 @@
     "filepath": "ct/abdomen/ct-renal-mass-protocol.md",
     "title": "CT Renal Mass Protocol",
     "category": "Abdomen",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CT Renal Mass Protocol Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section First Injection\n      Contrast bolus 1 (77mL)  :active, contrast1, 00:00, 19s\n      Saline                  :active, saline1, after contrast1, 5s\n      section First Scan Phase\n      First acquisition                    :crit, scan1, 00:20, 15s\n      section Wait Period\n      Wait for second injection            :milestone, wait, after scan1, 05:00\n      section Second Injection\n      Contrast bolus 2 (28mL)  :active, contrast2, after wait, 7s\n      Saline                  :active, saline2, after contrast2, 5s\n      section Second Scan Phase\n      Second acquisition                   :done, scan2, after saline2, 20s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CT Renal Mass Protocol Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast bolus 1 (77mL)  :active, contrast1, 00:00, 19s\n      Saline                  :active, saline1, after contrast1, 5s\n      Contrast bolus 2 (28mL)  :active, contrast2, 05:00, 7s\n      Saline                  :active, saline2, after contrast2, 5s\n      section First Scan Phase\n      First acquisition                    :crit, scan1, 00:20, 15s\n      section Wait Period\n      section Second Scan Phase\n      Second acquisition                   :done, scan2, 07:00, 20s\n  ```",
     "contrast": {
-      "agent": "Omnipaque 350",
+      "agent": "Isovue 370",
       "volume": "Split bolus: 1st injection 1.1 mL/kg + 2nd injection 0.4 mL/kg",
-      "flow_rate": "4 mL/s",
+      "flow_rate": "3-4 mL/s",
       "timing": "Split bolus technique",
       "type": "IV Contrast"
     },
@@ -414,9 +465,9 @@
     "filepath": "ct/abdomen/ct-triple-phase-liver.md",
     "title": "CT Triple Phase Liver",
     "category": "Abdomen",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CT Triple Phase Liver Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s\n      Saline          :active, saline, after contrast, 4s\n      section Other\n      Late Arterial    :crit, scan1, 00:30, 7s\n      Portal Venous    :done, scan2, 01:10, 7s\n      Delayed Phase    :done, scan3, 05:00, 7s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CT Triple Phase Liver Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s\n      Saline          :active, saline, after contrast, 4s\n      section Other\n      Late Arterial    :crit, scan1, 00:35, 7s\n      Portal Venous    :done, scan2, 01:10, 7s\n      Delayed Phase    :done, scan3, 04:00, 7s\n  ```",
     "contrast": {
-      "agent": "Omnipaque 350",
+      "agent": "Isovue 370",
       "volume": "1.5 mL/kg",
       "flow_rate": "4-5 mL/s",
       "timing": "Triple phase: NC + Arterial + Portal Venous + Delayed",
@@ -464,19 +515,19 @@
     ],
     "summary": [
       {
-        "series": "Non-Contrast",
+        "series": "Non-Contrast (optional)",
         "phase": "Non-contrast",
         "coverage": "Diaphragm to Iliac crests"
       },
       {
         "series": "Late Arterial",
-        "phase": "Arterial (bolus tracked)",
+        "phase": "Arterial (16 sec delay)",
         "coverage": "Diaphragm to Iliac crests"
       },
       {
         "series": "Portal Venous",
         "phase": "Contrast (70 sec delay)",
-        "coverage": "Diaphragm to Pubic symphysis"
+        "coverage": "Diaphragm to Lesser trochanters"
       },
       {
         "series": "Delayed Phase",
@@ -997,7 +1048,7 @@
     "filepath": "ct/cardiac/gated-cta-tmvr.md",
     "title": "Gated CTA TMVR",
     "category": "Cardiac",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA TMVR Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 15s\n      Saline          :active, saline, after contrast, 5s\n      section Chest\n      Gated CTA Chest    :crit, scan1, after saline, 5s\n      section CAP\n      Delayed CAP    :done, scan2, 01:20, 5s\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA TMVR Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 15s\n      Saline          :active, saline, after contrast, 5s\n      section Chest\n      Gated CTA Chest    :crit, scan1, after saline, 5s\n      section CAP\n      Delayed CAP    :done, scan2, 01:40, 5s\n  ```",
     "contrast": {
       "agent": "Omnipaque 350",
       "volume": "1.1 mL/kg",
@@ -1060,7 +1111,7 @@
     "category": "Cardiac",
     "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title Gated CTA TTVR Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (140 mL)    :active, contrast, 00:00, 40s\n      Saline          :active, saline, after contrast, 5s\n      section Chest\n      Gated CTA Chest    :crit, scan1, after saline, 5s\n      section CAP\n      Delayed CAP    :done, scan2, 02:15, 5s\n  ```",
     "contrast": {
-      "agent": "Omnipaque 350",
+      "agent": "IsoVue 370",
       "volume": "2.0 mL/kg",
       "flow_rate": "3.5 mL/s",
       "timing": "Bolus Tracking",
@@ -3474,7 +3525,7 @@
     "filepath": "ct/vascular/cta-popliteal-entrapment.md",
     "title": "CTA Popliteal Entrapment",
     "category": "Vascular",
-    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Popliteal Entrapment Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (100 mL)    :active, contrast, 00:00, 20s\n      Saline          :active, saline, after contrast, 5s\n      Contrast bolus 2 (1.1 mL/kg)  :active, contrast2, 01:15, 20s\n      Saline                  :active, saline2, after contrast2, 5s\n      section Extremities\n      CTA Neutral Position    :crit, scan1, after saline, 5s\n      CTV Neutral Position    :crit, scan2, 00:45, 5s\n      CTA Plantarflexion    :crit, scan3, after saline2, 5s\n\n  ```",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Popliteal Entrapment Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (1.2 mL/kg)    :active, contrast, 00:00, 20s\n      Saline          :active, saline, after contrast, 5s\n      Contrast bolus 2 (1.2 mL/kg)  :active, contrast2, 01:15, 20s\n      Saline                  :active, saline2, after contrast2, 5s\n      section Extremities\n      CTA Neutral Position    :crit, scan1, after saline, 5s\n      CTA Delayed Neutral Position    :crit, scan2, 00:40, 5s\n      CTA Plantarflexion    :crit, scan3, after saline2, 5s\n\n  ```",
     "contrast": {
       "agent": "Isovue 370",
       "volume": "Dual injection: 1.2   mL/kg + 1.2 mL/kg",
@@ -3520,8 +3571,8 @@
         "coverage": "4cm above the knees to the toes"
       },
       {
-        "series": "CTV Neutral Position",
-        "phase": "Venous (90 sec delay)",
+        "series": "CTA Delayed Neutral Position",
+        "phase": "Delayed Arterial (40 sec delay)",
         "coverage": "4cm above the knees to the toes"
       },
       {

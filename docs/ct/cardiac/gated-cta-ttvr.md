@@ -41,7 +41,7 @@
         
         | Parameter | Value |
         |-----------|-------|
-        | Agent | Omnipaque 350 |
+        | Agent | IsoVue 370 |
         | Volume | 2.0 mL/kg |
         | Flow Rate | 3.5 mL/s |
         | Duration | 30-50s |

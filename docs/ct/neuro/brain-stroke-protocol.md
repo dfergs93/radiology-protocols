@@ -42,7 +42,7 @@
         
         | Parameter | Value |
         |-----------|-------|
-        | Agent | Omnipaque 350 for CTA/CTP |
+        | Agent | IsoVue 370 for CTA/CTP |
         | Volume | 100 mL |
         | Flow Rate | 4-5 mL/s |
         | Timing Method | Multi-phase stroke protocol |

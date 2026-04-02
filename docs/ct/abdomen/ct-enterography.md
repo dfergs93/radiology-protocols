@@ -15,7 +15,8 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Enteric Phase | Contrast (45 sec delay) | Diaphragm to Pubic symphysis |
+        | Delayed Arterial | Contrast (45 sec delay) | Diaphragm to Pubic symphysis |
+        | Renal Delay | 300 sec | 1-2cm above and below kidneys |
 
     === "Clinical Indications"
 
@@ -41,9 +42,11 @@
         
         | Parameter | Value |
         |-----------|-------|
-        | Agent | Omnipaque 350 |
+        | Agent | Isovue 370 |
         | Volume | 1.5 mL/kg |
         | Flow Rate | 4-5 mL/s |
+        | Duration | 25s |
+        | Timing Method | Empiric Delay (45s) |
 
     ===   "Lab Requirements"
         Use full dose if GFR > 30
@@ -97,6 +100,7 @@
       Saline          :active, saline, after contrast, 4s
       section Other
       Enteric Phase    :done, scan1, 00:45, 7s
+      Renal Delay    :done, scan2, 04:00, 7s
   ```
 
 
@@ -106,6 +110,7 @@
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout | Diaphragm | Pubic symphysis | N/A | N/A | AP |
     | Enteric Phase | Diaphragm | Pubic symphysis | 45 sec | 0.625 mm | Optimal small bowel enhancement |
+    | Renal Delay | 1-2cm above and below kidneys | 300 sec | 0.625 mm | Renal Delay series |
 
 === "Technical Parameters"
 

@@ -42,7 +42,7 @@
         
         | Parameter | Value |
         |-----------|-------|
-        | Agent | Omnipaque 350 |
+        | Agent | IsoVue 370 |
         | Volume | 1.1 mL/kg |
         | Flow Rate | 5 mL/s |
         | Duration | 15s |
@@ -103,7 +103,7 @@
       section Chest
       Gated CTA Chest    :crit, scan1, after saline, 5s
       section CAP
-      Delayed CAP    :done, scan2, 01:20, 5s
+      Delayed CAP    :done, scan2, 01:40, 5s
   ```
 
 
