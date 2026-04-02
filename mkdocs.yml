@@ -37,6 +37,8 @@ extra_css:
 
 extra_javascript:
   - https://unpkg.com/mermaid@10/dist/mermaid.min.js
+  - javascripts/acquisition-diagram.js
+  - javascripts/acquisition-diagram-init.js
   - javascripts/mermaid-init.js
   - https://cdn.jsdelivr.net/npm/marked/marked.min.js
   - javascripts/protocol-compare.js
