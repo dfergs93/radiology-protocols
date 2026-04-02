@@ -460,7 +460,7 @@ function displayContrastComparison() {
   html += '<th>Type</th>';
   html += '<th>Agent</th>';
   html += '<th>Volume</th>';
-  html += '<th>Flow Rate</th>';
+  html += '<th>Duration</th>';
   html += '<th>Timing Method</th>';
   html += '<th>Trigger</th>';
   html += '</tr></thead><tbody>';
