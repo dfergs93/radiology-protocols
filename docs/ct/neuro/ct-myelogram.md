@@ -96,6 +96,7 @@
       Standard scan    :done, scan1, 00:00, 10s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

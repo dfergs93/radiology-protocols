@@ -19,8 +19,9 @@
 
     === "Clinical Indications"
 
-        - Non Contrast chest for patient's age < 60
-
+        - Lung cancer screening
+        - Low risk pulmonary nodule follow-up
+        - Smoking history screening
 
 -   __2. Patient Prep__
 
@@ -81,6 +82,7 @@
       Low Dose Chest    :done, scan1, 00:00, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

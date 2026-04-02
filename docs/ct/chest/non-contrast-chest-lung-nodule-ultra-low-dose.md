@@ -21,6 +21,7 @@
 
         - Pulmonary nodule follow-up
         - Known nodule surveillance
+        - Post-treatment monitoring
 
 -   __2. Patient Prep__
 
@@ -81,6 +82,7 @@
       Ultra Low Dose Chest    :done, scan1, 00:00, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

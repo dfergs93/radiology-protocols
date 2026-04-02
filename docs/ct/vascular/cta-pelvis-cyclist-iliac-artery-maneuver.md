@@ -15,8 +15,8 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | CTA Resting Position | Arterial (bolus tracked) | Mid-liver to 3cm below greater trochanter |
-        | CTA Hip Flexion | Contrast (Immediately after delay) | Mid-liver to 3cm below greater trochanter |
+        | CTA Resting Position | Arterial (bolus tracked) | L3 to Mid femur |
+        | CTA Hip Flexion | Contrast (Immediately after delay) | L3 to Mid femur |
 
     === "Clinical Indications"
 
@@ -40,9 +40,8 @@
         | Parameter | Value |
         |-----------|-------|
         | Agent | Isovue 370 |
-        | Volume | Split bolus: 1st injection 1.1 mL/kg + 2nd injection 1.1 mL/kg |
+        | Volume | 100 mL |
         | Flow Rate | 4 mL/s |
-        | Duration | 1st injection 18s + 2nd injection 18s |
         | Timing Method | Dual position: Resting + Hip flexion cycling position |
         | ROI Placement | External iliac artery |
         | Trigger (HU) | 150 HU |
@@ -95,15 +94,15 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s
+      Contrast (100 mL)    :active, contrast, 00:00, 25s
       Saline          :active, saline, after contrast, 5s
-      Contrast bolus 2 (1.1 mL/kg)  :active, contrast2, 01:00, 18s
-      Saline                  :active, saline2, after contrast2, 5s
       section Extremities
-      CTA Resting Position    :crit, scan1, after saline, 5s
-      CTA Hip Flexion    :crit, scan2, after saline2, 5s
+      CTA Hip Flexion    :crit, scan1, after saline, 5s
+      section Other
+      CTA Resting Position    :crit, scan2, after contrast, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

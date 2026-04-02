@@ -15,9 +15,9 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Non-Contrast (optional) | Non-contrast | Diaphragm to Iliac crests |
-        | Late Arterial | Arterial (16 sec delay) | Diaphragm to Iliac crests |
-        | Portal Venous | Contrast (70 sec delay) | Diaphragm to Lesser trochanters |
+        | Non-Contrast | Non-contrast | Diaphragm to Iliac crests |
+        | Late Arterial | Arterial (bolus tracked) | Diaphragm to Iliac crests |
+        | Portal Venous | Contrast (70 sec delay) | Diaphragm to Pubic symphysis |
         | Delayed Phase | Contrast (300 sec delay) | Diaphragm to Iliac crests |
 
     === "Clinical Indications"
@@ -43,10 +43,9 @@
         
         | Parameter | Value |
         |-----------|-------|
-        | Agent | Isovue 370 |
+        | Agent | Omnipaque 350 |
         | Volume | 1.5 mL/kg |
         | Flow Rate | 4-5 mL/s |
-        | Duration | 25s |
         | Timing Method | Triple phase: NC + Arterial + Portal Venous + Delayed |
         | ROI Placement | Abdominal aorta |
         | Trigger (HU) | 150 HU |
@@ -65,11 +64,10 @@
     === "Technologist Notes"
 
         - FOUR acquisitions: 1) NC abdomen 2) Late arterial (bolus track or 30-35s) 3) Portal venous 70s 4) Delayed 5 min. FOV: Abdomen for NC/Art/Delay. Full AP for PV
-        - Injection duration is fixed at 25 s
 
     === "Nursing Notes"
 
-        - 20-22G IV. High flow rate critical
+        - 18-20G IV. High flow rate critical
 
         !!! warning "Safety First"
             - **Renal Function:** Verify eGFR > 30
@@ -103,11 +101,12 @@
       Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s
       Saline          :active, saline, after contrast, 4s
       section Other
-      Late Arterial    :crit, scan1, 00:35, 7s
+      Late Arterial    :crit, scan1, 00:30, 7s
       Portal Venous    :done, scan2, 01:10, 7s
-      Delayed Phase    :done, scan3, 04:00, 7s
+      Delayed Phase    :done, scan3, 05:00, 7s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

@@ -15,9 +15,7 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Non-contrast | Non-contrast | Diaphragm to Lesser Trochanters |
-        | CTA Arterial | Arterial (bolus tracked) | Diaphragm to Lesser Trochanters |
-        | Stent Delay (optional) | Delay (40s) | 1cm above and below stent |
+        | CTA Arterial | Arterial (bolus tracked) | Diaphragm to Femoral heads |
 
     === "Clinical Indications"
 
@@ -44,9 +42,8 @@
         | Parameter | Value |
         |-----------|-------|
         | Agent | Isovue 370 |
-        | Volume | 1.1 mL/kg |
+        | Volume | 125 mL |
         | Flow Rate | 4 mL/s |
-        | Duration | 20s |
         | Timing Method | Bolus Tracking |
         | ROI Placement | Abdominal aorta at celiac |
         | Trigger (HU) | 150 HU |
@@ -99,13 +96,13 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 20s
+      Contrast (125 mL)    :active, contrast, 00:00, 31s
       Saline          :active, saline, after contrast, 5s
       section Other
-      CTA Arterial    :crit, scan1, after saline, 5s
-      Stent Delay (optional)    :crit, scan2, 00:40, 5s
+      CTA Arterial    :crit, scan1, after contrast, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

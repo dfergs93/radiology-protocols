@@ -15,9 +15,9 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Non-contrast | Non-contrast | Diaphragm to Pubic symphysis |
         | Arterial Phase | Contrast (25 sec delay) | Diaphragm to Pubic symphysis |
-        | Delayed Phase | Contrast (90 sec delay) | Diaphragm to Pubic symphysis |
+        | Portal Venous Phase | Contrast (70 sec delay) | Diaphragm to Pubic symphysis |
+        | Delayed Phase | Contrast (90-180 sec delay) | Diaphragm to Pubic symphysis |
 
     === "Clinical Indications"
 
@@ -43,9 +43,8 @@
         | Parameter | Value |
         |-----------|-------|
         | Agent | Isovue 370 |
-        | Volume | 1.5 mL/kg |
-        | Flow Rate | 4-5 mL/s |
-        | Duration | 20s |
+        | Volume | 125 mL |
+        | Flow Rate | 5 mL/s |
         | Timing Method | Triple phase: Arterial + Portal Venous + Delayed |
         | ROI Placement | Abdominal aorta |
         | Trigger (HU) | 150 HU |
@@ -67,7 +66,7 @@
 
     === "Nursing Notes"
 
-        - Large bore IV 18-20G essential. Verify with saline test
+        - Large bore IV 18-20G essential. Must achieve 5 mL/s flow rate. Verify with saline test
 
         !!! warning "Safety First"
             - **Renal Function:** eGFR > 30 preferred but can proceed emergently
@@ -98,13 +97,15 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (125 mL)    :active, contrast, 00:00, 20s
+      Contrast (125 mL)    :active, contrast, 00:00, 25s
       Saline          :active, saline, after contrast, 4s
       section Other
       Arterial Phase    :crit, scan1, 00:25, 7s
+      Portal Venous Phase    :done, scan2, 01:10, 7s
       Delayed Phase    :done, scan3, 01:30, 7s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 
@@ -112,7 +113,8 @@
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout/Topogram | Diaphragm | Pubic symphysis | N/A | N/A | AP scout |
     | Arterial Phase | Diaphragm | Pubic symphysis | 25 sec | 0.625 mm | High flow rate 5 mL/s critical |
-    | Delayed Phase | Diaphragm | Pubic symphysis | 90 sec | 0.625 mm | Extended delay to see pooling of contrast |
+    | Portal Venous Phase | Diaphragm | Pubic symphysis | 70 sec | 0.625 mm | Standard portal venous timing |
+    | Delayed Phase | Diaphragm | Pubic symphysis | 90-180 sec | 0.625 mm | Extended delay to see pooling of contrast |
 
 === "Technical Parameters"
 
@@ -128,6 +130,7 @@
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |
     |:------|:------------|:----|:--------------------|:-------|:------------|:------|
     | Axial | Arterial | Full AP | 2.5 mm/2.5 mm | Standard | 3 | Look for arterial blush/extravasation |
+    | Axial | Portal venous | Full AP | 2.5 mm/2.5 mm | Standard | 3 | Confirm bleeding and assess organs |
     | Axial | Delayed | Full AP | 2.5 mm/2.5 mm | Standard | 3 | Look for contrast pooling in bowel |
     | Coronal | All phases | Full AP | 3 mm/3 mm | Standard | 3 | MIP to track extravasation |
 

@@ -15,9 +15,8 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Non-contrast | N/A | Diaphragm to Lesser Trochanters |
-        | Arterial Phase | Contrast (25 sec delay) | Diaphragm to Lesser Trochanters |
-        | Portal Venous | Contrast (70 sec delay) | Diaphragm to Lesser Trochanters |
+        | Arterial Phase | Contrast (25 sec delay) | Diaphragm to Iliac crests |
+        | Portal Venous | Contrast (70 sec delay) | Diaphragm to Pubic symphysis |
 
     === "Clinical Indications"
 
@@ -43,9 +42,8 @@
         | Parameter | Value |
         |-----------|-------|
         | Agent | Isovue 370 |
-        | Volume | 1.5 mL/kg |
+        | Volume | 125 mL |
         | Flow Rate | 5 mL/s |
-        | Duration | 20s |
         | Timing Method | Dual phase: Arterial + Portal Venous |
         | ROI Placement | Abdominal aorta at celiac |
         | Trigger (HU) | 150 HU |
@@ -67,7 +65,7 @@
 
     === "Nursing Notes"
 
-        - 18-20G IV required for 5 mL/s flow. Must be patent
+        - 18G IV required for 5 mL/s flow. Must be patent
 
         !!! warning "Safety First"
             - **Renal Function:** eGFR > 30 preferred
@@ -98,13 +96,14 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s
-      Saline          :active, saline, after contrast, 5s
+      Contrast (125 mL)    :active, contrast, 00:00, 25s
+      Saline          :active, saline, after contrast, 4s
       section Other
-      Arterial Phase    :crit, scan1, after saline, 5s
-      Portal Venous    :done, scan2, 01:10, 5s
+      Arterial Phase    :crit, scan1, 00:25, 7s
+      Portal Venous    :done, scan2, 01:10, 7s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

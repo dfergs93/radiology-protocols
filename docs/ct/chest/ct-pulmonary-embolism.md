@@ -15,7 +15,7 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Pulmonary Angiogram | Arterial (bolus tracked) | Lung apices to Costophrenic Angles |
+        | Pulmonary Angiogram | Arterial (bolus tracked) | Lung apices to Adrenal glands |
 
     === "Clinical Indications"
 
@@ -41,12 +41,11 @@
         | Parameter | Value |
         |-----------|-------|
         | Agent | Isovue 370 |
-        | Volume | 1.3 mL/kg |
-        | Flow Rate | 5 mL/s |
-        | Duration | 15 - 20s |
+        | Volume | 100 mL |
+        | Flow Rate | 4-5 mL/s |
         | Timing Method | Bolus Tracking |
         | ROI Placement | Main Pulmonary Artery |
-        | Trigger (HU) | 100 HU |
+        | Trigger (HU) | 150 HU |
 
     ===   "Lab Requirements"
         Use full dose if GFR > 30
@@ -96,12 +95,13 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (1.3 mL/kg)    :active, contrast, 00:00, 20s
-      Saline          :active, saline, after contrast, 5s
+      Contrast (100 mL)    :active, contrast, 00:00, 22s
+      Saline          :active, saline, after contrast, 4s
       section Chest
-      Pulmonary Angiogram    :crit, scan1, 00:10, 5s
+      Pulmonary Angiogram    :crit, scan1, after contrast, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

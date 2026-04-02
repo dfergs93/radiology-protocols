@@ -19,8 +19,10 @@
 
     === "Clinical Indications"
 
-        - Age > 60
+        - Pulmonary nodule
+        - Interstitial lung disease screening
         - Chest pain low risk
+        - Follow-up
 
 -   __2. Patient Prep__
 
@@ -81,6 +83,7 @@
       NC Chest    :done, scan1, 00:00, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

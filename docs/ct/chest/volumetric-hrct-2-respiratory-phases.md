@@ -20,7 +20,7 @@
 
     === "Clinical Indications"
 
-        - Interstitial lung disease without prone imaging
+        - Interstitial lung disease initial evaluation
         - ILD diagnosis
         - Diffuse lung disease
 
@@ -84,6 +84,7 @@
       Limited Expiration    :done, scan2, 00:00, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

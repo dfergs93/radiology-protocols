@@ -83,6 +83,7 @@
       Non-Contrast Head    :done, scan1, 00:00, 3s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

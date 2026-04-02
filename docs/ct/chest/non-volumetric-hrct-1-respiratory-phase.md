@@ -15,7 +15,7 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | HRCT Inspiration | Non-Contrast (Full inspiration delay) | Lung apices to Costophrenic angles |
+        | HRCT Inspiration | Contrast (Full inspiration delay) | Lung apices to Costophrenic angles |
 
     === "Clinical Indications"
 
@@ -82,6 +82,7 @@
       HRCT Inspiration    :done, scan1, 00:00, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

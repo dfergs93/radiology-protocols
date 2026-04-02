@@ -15,7 +15,6 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Non-contrast | Non-contrast | Lung Apices to Diaphragm |
         | Gated CTA | Arterial (bolus tracked) | Top of heart to Below heart |
 
     === "Clinical Indications"
@@ -44,7 +43,6 @@
         | Agent | Isovue 370 |
         | Volume | 1.3 mL/kg |
         | Flow Rate | 4-5 mL/s |
-        | Duration | 15 sec |
         | Timing Method | Bolus Tracking |
         | ROI Placement | Ascending aorta |
         | Trigger (HU) | 200 HU |
@@ -75,7 +73,6 @@
     === "Radiologist Notes"
 
         - Assess prosthetic valve function. Look for paravalvular leak. Evaluate perivalvular complications. Metal artifact reduction critical
-        - Increased kVP and increased contrast volume with thinner cuts help with seeing through metallic artifact to evaluate for thrombus.
 
     === "Tips & Tricks"
 
@@ -98,12 +95,13 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (1.3 mL/kg)    :active, contrast, 00:00, 15s
+      Contrast (1.3 mL/kg)    :active, contrast, 00:00, 21s
       Saline          :active, saline, after contrast, 4s
       section Other
       Gated CTA    :crit, scan1, after contrast, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

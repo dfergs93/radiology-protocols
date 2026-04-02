@@ -41,11 +41,9 @@
         
         | Parameter | Value |
         |-----------|-------|
-        | Agent | Isovue 370 |
+        | Agent | Omnipaque 350 |
         | Volume | 1.5 mL/kg |
-        | Flow Rate | 3 mL/s |
-        | Duration | 40s |
-        | Timing Method | Empiric Delay (70s) |
+        | Flow Rate | 3-4 mL/s |
 
     ===   "Lab Requirements"
         Use full dose if GFR > 30
@@ -64,7 +62,7 @@
 
     === "Nursing Notes"
 
-        - 20-22G IV. Patient must wait 15 min for delayed phase
+        - 18-20G IV. Patient must wait 15 min for delayed phase
 
         !!! warning "Safety First"
             - **Renal Function:** Verify eGFR > 30
@@ -95,13 +93,14 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 40s
-      Saline          :active, saline, after contrast, 6s
+      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 32s
+      Saline          :active, saline, after contrast, 5s
       section Other
       Portal Venous    :done, scan1, 01:10, 5s
       15 Minute Delay    :done, scan2, 15:00, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

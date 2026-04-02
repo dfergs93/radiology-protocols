@@ -1,7 +1,7 @@
-# CTA Neck
+# CTA Head and Neck (Arch to Vertex)
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Kim
+**Last Updated:** 2026-01-04  
+**Author:** 
 
 ---
 
@@ -16,21 +16,23 @@
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
         | CTA Neck | Arterial (bolus tracked) | Aortic arch to Skull base |
+        | CTA Head | Contrast (Immediate delay) | Skull base to Vertex |
 
     === "Clinical Indications"
 
+        - Stroke workup
         - Carotid stenosis
         - Vertebral artery dissection
-        - Neck vessel assessment
-        - Pre-CEA planning
+        - Aneurysm screening
 
 -   __2. Patient Prep__
 
     ---
 
-    - **Position:** Supine head-first
+    - **Position:** Supine head-first with arms at sides
     - **NPO Status:** NPO 2 hours
-    
+    - **Pre-Medication:**
+        - None typically. Consider anxiolytic if severe claustrophobia
 
 -   __3. IV Contrast & Injection__    
 
@@ -40,8 +42,8 @@
         
         | Parameter | Value |
         |-----------|-------|
-        | Agent | Omnipaque 350 |
-        | Volume | 90-100 mL |
+        | Agent | Isovue 370 |
+        | Volume | 80-100 mL |
         | Flow Rate | 4-5 mL/s |
         | Timing Method | Bolus Tracking |
         | ROI Placement | Aortic arch |
@@ -60,23 +62,23 @@
 
     === "Technologist Notes"
 
-        - Aortic arch to skull base. Bolus tracking in arch. Submillimeter. Minimize swallowing during scan
+        - Scan from aortic arch through vertex. Use bolus tracking in arch. Minimize dental artifact with gantry angulation
 
     === "Nursing Notes"
 
-        - 20G IV antecubital preferred
+        - Good antecubital IV access required - 20G minimum. Verify injection site for extravasation risk
 
         !!! warning "Safety First"
             - **Renal Function:** Verify eGFR > 30
-            - **Allergy:** Check allergy history
+            - **Allergy:** Check allergy history and renal function
 
     === "Radiologist Notes"
 
-        - Assess carotid bifurcations. Stenosis grading. Vertebral arteries. Dissection. Plaque morphology
+        - Evaluate complete circle of Willis. Assess carotid bifurcations. Look for dissection. Check aneurysms
 
     === "Tips & Tricks"
 
-        - Minimize swallowing. Submillimeter acquisition
+        - Remove dentures. Minimize swallowing during neck acquisition
 
 </div>
 
@@ -90,15 +92,17 @@
     themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
   ---
     gantt
-      title CTA Neck Timeline
+      title CTA Head and Neck (Arch to Vertex) Timeline
       dateFormat mm:ss
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (90-100 mL)    :active, contrast, 00:00, 20s
+      Contrast (80-100 mL)    :active, contrast, 00:00, 17s
       Saline          :active, saline, after contrast, 4s
+      section Head
+      CTA Head    :crit, scan1, after saline, 3s
       section Neck
-      CTA Neck    :crit, scan1, after contrast, 5s
+      CTA Neck    :crit, scan2, after contrast, 5s
   ```
 
 <div class="acquisition-diagram"></div>
@@ -107,15 +111,16 @@
 
     | Series Name | Start Location | End Location | Delay | Slice Thickness | Notes |
     |:------------|:---------------|:-------------|:------|:----------------|:------|
-    | Scout | Aortic arch | Skull base | N/A | N/A | AP lateral |
-    | CTA Neck | Aortic arch | Skull base | Bolus tracked | 0.625 mm | Caudocranial |
+    | Scout/Topogram | Aortic arch | Vertex | N/A | N/A | AP and lateral |
+    | CTA Neck | Aortic arch | Skull base | Bolus tracked | 0.625 mm | Arterial phase - caudocranial |
+    | CTA Head | Skull base | Vertex | Immediate | 0.625 mm | Same bolus as neck - single acquisition |
 
 === "Technical Parameters"
 
     | Parameter | Value |
     |-----------|-------|
     | kV | 100-120 |
-    | mAs | Auto (reference 200) |
+    | mAs | Auto (reference 250) |
     | Rotation Time | 0.5s |
     | Pitch | 0.9 |
 
@@ -123,16 +128,16 @@
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |
     |:------|:------------|:----|:--------------------|:-------|:------------|:------|
-    | Axial | CTA | Neck | 1 mm/1 mm | Vascular | 3 | Source images |
-    | Coronal | CTA | Neck | 1.5 mm | Vascular | 3 | Vessel overview |
-    | Sagittal | CTA | Carotids | 1.5 mm | Vascular | 3 | Vertebral arteries |
-    | Curved MPR | CTA | Carotid bifurcations | 1 mm | Vascular | 3 | Stenosis measurement |
+    | Axial | CTA | Neck | 1 mm/1 mm | Vascular | 3 | Submillimeter for carotid assessment |
+    | Axial | CTA | Head | 1 mm/1 mm | Vascular | 3 | Submillimeter for circle of Willis |
+    | Coronal | CTA | Neck | 2 mm/2 mm | Vascular | 3 | MIP for carotid overview |
+    | Sagittal | CTA | Full | 2 mm/2 mm | Vascular | 3 | MIP for vertebral arteries |
 
 
 ### Additional Reconstructions
 
-Curved MPR both carotid bifurcations. Measure stenosis (NASCET). 3D VR. MIP
+MIP and 3D VR reconstructions of vessels. Curved MPR of carotids
 
-Category: Neuro
+Category: Vascular
 
 Protocol Type: Vascular

@@ -102,6 +102,7 @@
       CTA Head    :crit, scan1, after contrast, 3s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

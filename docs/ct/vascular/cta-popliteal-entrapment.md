@@ -15,9 +15,8 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | CTA Neutral Position | Arterial (bolus tracked) | 4cm above the knees to the toes |
-        | CTA Delayed Neutral Position | Delayed Arterial (40 sec delay) | 4cm above the knees to the toes |
-        | CTA Plantarflexion | Contrast (Immediately after delay) | 4cm above the knees to the toes |
+        | CTA Neutral Position | Arterial (bolus tracked) | Distal femur to Ankle |
+        | CTA Plantarflexion | Contrast (Immediately after delay) | Distal femur to Ankle |
 
     === "Clinical Indications"
 
@@ -42,10 +41,9 @@
         | Parameter | Value |
         |-----------|-------|
         | Agent | Isovue 370 |
-        | Volume | Dual injection: 1.2   mL/kg + 1.2 mL/kg |
+        | Volume | 100 mL |
         | Flow Rate | 4 mL/s |
-        | Duration | 18-20s + 18-20s |
-        | Timing Method | Bolus Tracking |
+        | Timing Method | Dual position: Neutral + Plantarflexion |
         | ROI Placement | Popliteal artery |
         | Trigger (HU) | 150 HU |
 
@@ -97,17 +95,14 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (1.2 mL/kg)    :active, contrast, 00:00, 20s
+      Contrast (100 mL)    :active, contrast, 00:00, 25s
       Saline          :active, saline, after contrast, 5s
-      Contrast bolus 2 (1.2 mL/kg)  :active, contrast2, 01:15, 20s
-      Saline                  :active, saline2, after contrast2, 5s
-      section Extremities
-      CTA Neutral Position    :crit, scan1, after saline, 5s
-      CTA Delayed Neutral Position    :crit, scan2, 00:40, 5s
-      CTA Plantarflexion    :crit, scan3, after saline2, 5s
-
+      section Other
+      CTA Neutral Position    :crit, scan1, after contrast, 3s
+      CTA Plantarflexion    :crit, scan2, after scan1, 3s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

@@ -15,7 +15,7 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | CTA Arterial | Arterial (bolus tracked) | Iliac crest to Lesser trochanters |
+        | CTA Arterial | Arterial (bolus tracked) | L3 to Proximal femur |
 
     === "Clinical Indications"
 
@@ -28,10 +28,8 @@
 
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 2-4 hours
-    - **Pre-medication:** 
-        - Nitroglycerin 0.8 mg SL if systolic BP > 110
-        - Nitroglycerin 0.4 mg SL if systolic BP > 100
     
+
 -   __3. IV Contrast & Injection__    
 
     ---
@@ -41,9 +39,8 @@
         | Parameter | Value |
         |-----------|-------|
         | Agent | Isovue 370 |
-        | Volume | 1.2 mL/kg |
+        | Volume | 100 mL |
         | Flow Rate | 3-4 mL/s |
-        | Duration | 18-22s |
         | Timing Method | Bolus Tracking |
         | ROI Placement | Common iliac artery |
         | Trigger (HU) | 150 HU |
@@ -66,7 +63,6 @@
     === "Nursing Notes"
 
         - 18-20G IV
-        - Chcek BP for nitroglycerin administration, check for contraindications
 
         !!! warning "Safety First"
             - **Renal Function:** Verify eGFR > 30
@@ -97,19 +93,20 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (1.2 mL/kg)    :active, contrast, 00:00, 20s
+      Contrast (100 mL)    :active, contrast, 00:00, 28s
       Saline          :active, saline, after contrast, 5s
       section Other
-      CTA Arterial    :crit, scan1, after saline, 5s
+      CTA Arterial    :crit, scan1, after contrast, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 
     | Series Name | Start Location | End Location | Delay | Slice Thickness | Notes |
     |:------------|:---------------|:-------------|:------|:----------------|:------|
-    | Scout/Topogram | Iliac crest | Lesser trochanters | N/A | N/A | AP pelvis |
-    | CTA Arterial | Iliac crest | Lesser trochanters | Bolus tracked | 0.625 mm | Focus on internal iliac branches |
+    | Scout/Topogram | L3 | Proximal femur | N/A | N/A | AP pelvis |
+    | CTA Arterial | L3 | Proximal femur | Bolus tracked | 0.625 mm | Focus on internal iliac branches |
 
 === "Technical Parameters"
 

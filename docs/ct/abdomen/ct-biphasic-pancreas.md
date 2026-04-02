@@ -15,9 +15,8 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Pancreatic Phase | Delayed Arterial (bolus tracked+16s scan delay) | Diaphragm to Iliac crests |
-        | Portal Venous | Contrast (70 sec delay) | Diaphragm to Lesser trochanters |
-        | Delayed Phase | Contrast (300 sec delay) | Diaphragm to Iliac crests |
+        | Pancreatic Phase | Arterial (bolus tracked) | Diaphragm to Iliac crests |
+        | Portal Venous | Contrast (70 sec delay) | Diaphragm to Iliac crests |
 
     === "Clinical Indications"
 
@@ -42,10 +41,9 @@
         
         | Parameter | Value |
         |-----------|-------|
-        | Agent | Isovue 370 |
+        | Agent | Omnipaque 350 |
         | Volume | 1.5 mL/kg |
         | Flow Rate | 4-5 mL/s |
-        | Duration | 25s |
         | Timing Method | Dual phase: Pancreatic arterial + Portal venous |
         | ROI Placement | Abdominal aorta |
         | Trigger (HU) | 150 HU |
@@ -103,9 +101,9 @@
       section Other
       Pancreatic Phase    :crit, scan1, 00:40, 7s
       Portal Venous    :done, scan2, 01:10, 7s
-      Delayed Phase    :done, scan3, 05:00, 7s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

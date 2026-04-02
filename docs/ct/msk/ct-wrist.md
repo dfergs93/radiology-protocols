@@ -99,6 +99,7 @@
       CT Wrist    :done, scan1, after saline, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

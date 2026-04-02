@@ -99,12 +99,15 @@
       section Contrast Injection
       Contrast (150 mL total)    :active, contrast, 00:00, 37s
       Saline          :active, saline, after contrast, 5s
+      section Head
+      Post-contrast Head    :done, scan1, 00:00, 3s
       section Neck
       CTA Neck    :crit, scan2, after contrast, 8s
       section CAP
-      CTA CAP    :crit, scan3, 00:45, 7s
+      CTA CAP    :crit, scan3, 00:35, 7s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

@@ -15,14 +15,17 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Non-Contrast | Non-Contrast | Diaphragm to Pubic symphysis |
-        | Cystogram | Contrast (100 sec delay) | Diaphragm to Pubic symphysis |
+        | Portal Venous | Contrast (70 sec delay) | Diaphragm to Pubic symphysis |
+        | Bladder Filling | Contrast (90 sec delay) | Standard coverage |
+        | Cystogram | Contrast (100 sec delay) | Iliac crests to Below bladder |
+        | Post-Void | Contrast (Immediate delay) | Iliac crests to Below bladder |
 
     === "Clinical Indications"
 
         - Bladder rupture
         - Bladder injury
         - Post-operative bladder assessment
+        - Hematuria with bladder concern
 
 -   __2. Patient Prep__
 
@@ -58,19 +61,19 @@
 
     === "Technologist Notes"
 
-        - TWO components: 1) Non-contrast CT 2) Bladder filling via Foley with dilute contrast 3) Scan distended bladder. Coordinate with nursing
+        - TWO components: 1) CT with IV contrast portal venous 2) Bladder filling via Foley with dilute contrast 3) Scan distended bladder 4) Post-void scan. Coordinate with nursing
 
     === "Nursing Notes"
 
         - Foley catheter required. Dilute contrast preparation (30mL in 350mL saline). Gravity fill bladder. Patient signals fullness
 
         !!! warning "Safety First"
-            - **Renal Function:** eGFR doesn't matter, contrast not excreted
+            - **Renal Function:** Verify eGFR > 30
             - **Allergy:** Foley placement. Prepare dilute contrast
 
     === "Radiologist Notes"
 
-        - Cystogram: bladder integrity extravasation
+        - Portal venous: solid organs. Cystogram: bladder integrity extravasation. Post-void: small leaks
 
     === "Tips & Tricks"
 
@@ -92,21 +95,28 @@
       dateFormat mm:ss
       axisFormat %M:%S 
       
+      section Contrast Injection
+      Contrast (100 mL)    :active, contrast, 00:00, 28s
+      Saline          :active, saline, after contrast, 5s
       section Pelvis
-      Non-Contrast    :done, scan2, 00:00, 7s
-      Bladder Filling    :done, scan1, 00:10, 20s
-      Cystogram    :done, scan3, 00:35, 5s
+      Bladder Filling    :done, scan1, 01:30, 3s
+      section Other
+      Portal Venous    :done, scan2, 01:10, 7s
+      Cystogram    :done, scan3, 01:40, 5s
+      Post-Void    :done, scan4, after scan3, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 
     | Series Name | Start Location | End Location | Delay | Slice Thickness | Notes |
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout | Diaphragm | Pubic symphysis | N/A | N/A | AP |
-    | Non-Contrast | Diaphragm | Pubic symphysis | 70 sec | 2.5 mm | Standard IV contrast |
+    | Portal Venous | Diaphragm | Pubic symphysis | 70 sec | 2.5 mm | Standard IV contrast |
     | Bladder Filling | N/A | N/A | 90 sec | N/A | Fill via Foley - not scanned |
     | Cystogram | Iliac crests | Below bladder | 100 sec | 2 mm | Scan distended bladder |
+    | Post-Void | Iliac crests | Below bladder | Immediate | 2 mm | Scan after drainage |
 
 === "Technical Parameters"
 
@@ -121,15 +131,15 @@
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |
     |:------|:------------|:----|:--------------------|:-------|:------------|:------|
-    | Axial | Non-Contrast | Pelvis | 2 mm/2 mm | Standard | 3 | Pre-contrast |
     | Axial | Cystogram | Pelvis | 2 mm/2 mm | Standard | 3 | Distended bladder assessment |
+    | Axial | Post-void | Pelvis | 2 mm/2 mm | Standard | 3 | Look for extravasation |
     | Coronal | Cystogram | Pelvis | 2.5 mm/2.5 mm | Standard | 3 | Bladder overview |
     | Sagittal | Cystogram | Pelvis | 2.5 mm/2.5 mm | Standard | 3 | Bladder dome and base |
 
 
 ### Additional Reconstructions
 
-Compare distended vs non-contrast. Document extravasation location. 3D reformation if complex injury
+Compare distended vs post-void. Document extravasation location. 3D reformation if complex injury
 
 Category: Abdomen
 

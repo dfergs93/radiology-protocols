@@ -17,7 +17,7 @@
         |:-------|:------|:---------|
         | Non-contrast | Non-contrast | Top of heart to Below heart |
         | Gated CTA | Contrast (30 sec delay) | Top of heart to Below heart |
-        | Delayed phase | Contrast (70 sec delay) | Lung Apices to Diaphragm |
+        | Delayed phase | Contrast (70 sec delay) | Top of heart to Below heart |
 
     === "Clinical Indications"
 
@@ -46,7 +46,6 @@
         | Agent | Isovue 370 |
         | Volume | 1.6 mL/kg |
         | Flow Rate | 3-4 mL/s |
-        | Duration | 35 sec |
 
     ===   "Lab Requirements"
         Use full dose if GFR > 30
@@ -97,13 +96,14 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (1.6 mL/kg)    :active, contrast, 00:00, 35s
+      Contrast (1.6 mL/kg)    :active, contrast, 00:00, 34s
       Saline          :active, saline, after contrast, 5s
       section Other
       Gated CTA    :crit, scan1, 00:30, 5s
       Delayed phase    :done, scan2, 01:10, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 
@@ -112,7 +112,7 @@
     | Scout | Top of chest | Diaphragm | N/A | N/A | AP lateral |
     | Non-contrast | Top of heart | Below heart | N/A | 3 mm | Flash Non-contrast |
     | Gated CTA | Top of heart | Below heart | 30 sec | 0.5-0.625 mm | Retrospective ECG gating |
-    | Delayed phase | Lung Apices | Diaphragm | 70 sec | 1 mm | To detect for abscess, vegetation, masses |
+    | Delayed phase | Top of heart | Below heart | 70 sec | 1 mm | To detect for abscess, vegetation, masses |
 
 === "Technical Parameters"
 

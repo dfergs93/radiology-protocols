@@ -16,7 +16,7 @@
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
         | Gated CTA Chest | Arterial (bolus tracked) | Top of heart to Below heart |
-        | Delayed CAP | Contrast (90 sec delay from CTA) | Diaphragm to Femoral heads |
+        | Delayed CAP | Contrast (90 sec delay) | Diaphragm to Femoral heads |
 
     === "Clinical Indications"
 
@@ -31,7 +31,7 @@
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 4 hours
     - **Pre-Medication:**
-        - HR < 65 target. Premedication not required.
+        - HR < 65. Metoprolol IV prn
 
 -   __3. IV Contrast & Injection__    
 
@@ -41,11 +41,10 @@
         
         | Parameter | Value |
         |-----------|-------|
-        | Agent | IsoVue 370 |
-        | Volume | 2.0 mL/kg |
-        | Flow Rate | 3.5 mL/s |
-        | Duration | 30-50s |
-        | Timing Method | Bolus Tracking |
+        | Agent | Omnipaque 350 |
+        | Volume | 140 mL |
+        | Flow Rate | 4 mL/s |
+        | Timing Method | Dual phase: Gated chest NO dose modulation + 90 sec delayed CAP |
         | ROI Placement | Ascending aorta |
         | Trigger (HU) | 180 HU |
 
@@ -53,7 +52,7 @@
         Use full dose if GFR > 30
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
-        There is a lower limit of 120 mL of contrast needed for the exam.
+
 
 
 -   __4. Special Notes__
@@ -97,14 +96,15 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (140 mL)    :active, contrast, 00:00, 40s
+      Contrast (140 mL)    :active, contrast, 00:00, 35s
       Saline          :active, saline, after contrast, 5s
       section Chest
-      Gated CTA Chest    :crit, scan1, after saline, 5s
+      Gated CTA Chest    :crit, scan1, after contrast, 5s
       section CAP
-      Delayed CAP    :done, scan2, 02:15, 5s
+      Delayed CAP    :done, scan2, 01:30, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

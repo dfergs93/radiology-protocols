@@ -15,10 +15,8 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Flash Non-contrast | Non-contrast | Thoracic inlet to Pubic symphysis |
         | Gated CTA Chest | Arterial (bolus tracked) | Thoracic inlet to Diaphragm |
         | Flash CTA AP | Contrast (Immediate after chest delay) | Diaphragm to Pubic symphysis |
-        | Stent delay (optional) | Contrast (40 sec delay) | Stent coverage |
 
     === "Clinical Indications"
 
@@ -33,7 +31,7 @@
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 2-4 hours
     - **Pre-Medication:**
-        - HR < 65 target. Premedication not required.
+        - HR < 65 target. Metoprolol 5mg IV prn. Nitro 0.4mg SL
 
 -   __3. IV Contrast & Injection__    
 
@@ -44,10 +42,9 @@
         | Parameter | Value |
         |-----------|-------|
         | Agent | Isovue 370 |
-        | Volume | 1.6 mL/kg |
+        | Volume | 140 mL |
         | Flow Rate | 4 mL/s |
-        | Duration | 20-24s |
-        | Timing Method | Bolus Tracking |
+        | Timing Method | Dual phase: Gated chest + Flash AP |
         | ROI Placement | Ascending aorta |
         | Trigger (HU) | 180 HU |
 
@@ -99,26 +96,23 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (1.6 mL/kg)    :active, contrast, 00:00, 24s
+      Contrast (140 mL)    :active, contrast, 00:00, 35s
       Saline          :active, saline, after contrast, 5s
       section Chest
-      Gated CTA Chest    :crit, scan1, after saline, 5s
+      Gated CTA Chest    :crit, scan1, after contrast, 9.0s
       section Abdomen/Pelvis
-      Flash CTA AP    :crit, scan2, after scan1, 5s
-      section Stent Delay
-      Stent Delay    :crit, scan3, 00:40, 5s
+      Flash CTA AP    :crit, scan2, after scan1, 7s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 
     | Series Name | Start Location | End Location | Delay | Slice Thickness | Notes |
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout | Thoracic inlet | Pubic symphysis | N/A | N/A | Full AP lateral |
-    | Flash Non-contrast | Thoracic inlet | Pubic symphysis | N/A | 0.625 mm | Non-contrast |
     | Gated CTA Chest | Thoracic inlet | Diaphragm | Bolus tracked | 0.5-0.625 mm | Retrospective gating chest |
     | Flash CTA AP | Diaphragm | Pubic symphysis | Immediate after chest | 0.625 mm | High pitch helical - no gating |
-    | Stent Delay (optional) | Diaphragm | Pubic symphysis | 40 sec | 0.625 mm | Stent coverage |
 
 === "Technical Parameters"
 

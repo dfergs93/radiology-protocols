@@ -61,7 +61,6 @@
     === "Technologist Notes"
 
         - Scan from aortic arch to fingertips. May need bilateral for comparison. Position arm to demonstrate pathology
-        - Inject into contralateral arm
 
     === "Nursing Notes"
 
@@ -102,6 +101,7 @@
       CTA Arterial    :crit, scan1, after contrast, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

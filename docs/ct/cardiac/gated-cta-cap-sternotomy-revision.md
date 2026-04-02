@@ -31,7 +31,7 @@
     - **Position:** Supine with arms raised
     - **NPO Status:** NPO 4 hours
     - **Pre-Medication:**
-        - HR < 65 target. Premedication not required.
+        - HR < 65. Metoprolol IV prn. Nitro 0.4mg SL
 
 -   __3. IV Contrast & Injection__    
 
@@ -42,10 +42,9 @@
         | Parameter | Value |
         |-----------|-------|
         | Agent | Isovue 370 |
-        | Volume | 1.2 mL/kg |
-        | Flow Rate | 5 mL/s |
-        | Duration | 15s |
-        | Timing Method | Bolus Tracking |
+        | Volume | 150 mL |
+        | Flow Rate | 4 mL/s |
+        | Timing Method | Triple phase: Gated chest + AP arterial + Chest venous |
         | ROI Placement | Ascending aorta |
         | Trigger (HU) | 180 HU |
 
@@ -97,15 +96,16 @@
       axisFormat %M:%S 
       
       section Contrast Injection
-      Contrast (1.2 mL/kg)    :active, contrast, 00:00, 15s
+      Contrast (150 mL)    :active, contrast, 00:00, 37s
       Saline          :active, saline, after contrast, 5s
       section Chest
-      Gated CTA Chest    :crit, scan1, after saline, 5s
+      Gated CTA Chest    :crit, scan1, after contrast, 9.0s
       Venogram Chest    :done, scan2, 01:00, 6s
       section Abdomen/Pelvis
-      Flash AP    :crit, scan3, after scan1, 5s
+      Flash AP    :crit, scan3, after scan2, 7s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

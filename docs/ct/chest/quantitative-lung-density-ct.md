@@ -20,9 +20,10 @@
 
     === "Clinical Indications"
 
-        - Bronchiolitis Obliterans Syndrome
         - Emphysema quantification
         - COPD assessment
+        - Alpha-1 antitrypsin deficiency
+        - Pre-LVRS
 
 -   __2. Patient Prep__
 
@@ -84,6 +85,7 @@
       Volumetric Expiration    :done, scan2, 00:00, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 
