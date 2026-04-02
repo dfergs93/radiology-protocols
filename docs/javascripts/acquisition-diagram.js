@@ -24,7 +24,7 @@
     const s = delayStr.trim();
 
     // Bolus track
-    if (/bolus[\s-]track/i.test(s)) {
+    if (/bolus[\s-]*track(ed)?/i.test(s)) {
       const dur = injectionDurationSeconds && injectionDurationSeconds > 0
         ? injectionDurationSeconds
         : 30;
@@ -197,6 +197,8 @@
 
     if (seriesBlock) {
       const rows = parseTable(seriesBlock);
+      const injDur = contrast ? contrast.durationSeconds : 0;
+      let lastPhaseEndTime = 0;
 
       for (const row of rows) {
         // Normalize column access (headers may vary in casing)
@@ -216,22 +218,28 @@
         const start = col(['start location', 'start']);
         const end = col(['end location', 'end']);
         const delay = col(['delay']);
-        const sliceThickness = col(['slice thickness', 'slice']);
-        const notes = col(['notes', 'note']);
 
-        const injDur = contrast ? contrast.durationSeconds : 0;
         const type = inferPhaseType(seriesName);
-        let delaySeconds = parseDelaySeconds(delay, injDur);
+        let delaySeconds;
 
         if (type === 'non-contrast' && contrast !== null) {
+          // NC phase in a contrast study: offset before injection
           delaySeconds = -20;
+        } else if (/immediate/i.test(delay.trim())) {
+          // "Immediate" means start right after the previous scan ends
+          delaySeconds = lastPhaseEndTime;
+        } else {
+          delaySeconds = parseDelaySeconds(delay, injDur);
         }
+
+        const phaseDuration = 5;
+        lastPhaseEndTime = Math.max(lastPhaseEndTime, delaySeconds + phaseDuration);
 
         phases.push({
           name: seriesName,
           range: `${start} → ${end}`,
           delaySeconds,
-          durationSeconds: 30,
+          durationSeconds: phaseDuration,
           type,
         });
       }

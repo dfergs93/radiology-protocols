@@ -389,7 +389,7 @@ function displayGanttComparison() {
           name: s.name || '',
           range: s.coverage || ((s.start || '') + ' \u2192 ' + (s.end || '')),
           delaySeconds: typeof s.delay_seconds === 'number' ? s.delay_seconds : 0,
-          durationSeconds: 30,
+          durationSeconds: 5,
           type: s.phase_type || 'other'
         };
       })
