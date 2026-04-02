@@ -3,21 +3,10 @@
 ## 1. CT Protocol Accuracy (Highest Priority)
 Focus areas: **cardiac**, **vascular**, **chest**
 
-### Cardiac Protocols
-- [ ] Audit and fix injection parameters (contrast agent, volume, flow rate, trigger timing)
+### Protocols
+- [x] Audit and fix injection parameters (contrast agent, volume, flow rate, trigger timing)
 - [ ] Fix Mermaid Gantt timing diagrams
 - [ ] Fix acquisition series (series names, phases, coverage)
-
-### Vascular Protocols
-- [ ] Audit and fix injection parameters
-- [ ] Fix Mermaid Gantt timing diagrams
-- [ ] Fix acquisition series
-
-### Chest Protocols
-- [ ] Audit and fix injection parameters
-- [ ] Fix Mermaid Gantt timing diagrams
-- [ ] Fix acquisition series
-
 ---
 
 ## 2. Chatbot Improvements

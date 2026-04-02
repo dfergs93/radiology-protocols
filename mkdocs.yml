@@ -13,6 +13,14 @@ theme:
     - content.tabs.link
     - toc.integrate
   palette:
+    # Dark mode
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
     # Light mode
     - scheme: default
       primary: indigo
@@ -21,13 +29,6 @@ theme:
         icon: material/brightness-7
         name: Switch to dark mode
     
-    # Dark mode
-    - scheme: slate
-      primary: indigo
-      accent: indigo
-      toggle:
-        icon: material/brightness-4
-        name: Switch to light mode
 plugins:
   - search
   - awesome-pages
