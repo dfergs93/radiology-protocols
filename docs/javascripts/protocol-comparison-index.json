@@ -20,6 +20,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP and lateral",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       },
       {
@@ -29,6 +31,8 @@
         "delay": "70 sec",
         "thickness": "0.625 mm",
         "notes": "Standard portal venous timing",
+        "delay_seconds": 70,
+        "phase_type": "portal",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       },
       {
@@ -38,6 +42,8 @@
         "delay": "0.625 mm",
         "thickness": "Renal Delay series",
         "notes": "",
+        "delay_seconds": 0,
+        "phase_type": "delayed",
         "coverage": "1-2cm above and below kidneys \u2192 300 sec"
       }
     ],
@@ -75,6 +81,8 @@
         "delay": "N/A",
         "thickness": "2.5 mm",
         "notes": "Measure absolute HU in mass",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Diaphragm \u2192 Kidneys"
       },
       {
@@ -84,6 +92,8 @@
         "delay": "70 sec",
         "thickness": "2.5 mm",
         "notes": "Enhanced HU measurement",
+        "delay_seconds": 70,
+        "phase_type": "portal",
         "coverage": "Diaphragm \u2192 Kidneys"
       },
       {
@@ -93,6 +103,8 @@
         "delay": "900 sec",
         "thickness": "2.5 mm",
         "notes": "Delayed HU for washout calculation",
+        "delay_seconds": 900,
+        "phase_type": "delayed",
         "coverage": "Diaphragm \u2192 Kidneys"
       }
     ],
@@ -137,6 +149,8 @@
         "delay": "40-45 sec or bolus track",
         "thickness": "1-1.25 mm",
         "notes": "Thin slices for small lesions",
+        "delay_seconds": 25,
+        "phase_type": "other",
         "coverage": "Diaphragm \u2192 Iliac crests"
       },
       {
@@ -146,6 +160,8 @@
         "delay": "70 sec",
         "thickness": "2.5 mm",
         "notes": "Standard PV phase",
+        "delay_seconds": 70,
+        "phase_type": "portal",
         "coverage": "Diaphragm \u2192 Iliac crests"
       }
     ],
@@ -188,6 +204,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP and lateral",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Thoracic inlet \u2192 Pubic symphysis"
       },
       {
@@ -197,6 +215,8 @@
         "delay": "70 sec",
         "thickness": "0.625 mm",
         "notes": "Single portal venous phase",
+        "delay_seconds": 70,
+        "phase_type": "portal",
         "coverage": "Lung bases or diaphragm \u2192 Pubic symphysis"
       },
       {
@@ -206,6 +226,8 @@
         "delay": "0.625 mm",
         "thickness": "Renal Delay series",
         "notes": "",
+        "delay_seconds": 0,
+        "phase_type": "delayed",
         "coverage": "1-2cm above and below kidneys \u2192 300 sec"
       }
     ],
@@ -241,6 +263,8 @@
         "delay": "70 sec",
         "thickness": "2.5 mm",
         "notes": "Standard IV contrast",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       },
       {
@@ -250,6 +274,8 @@
         "delay": "90 sec",
         "thickness": "N/A",
         "notes": "Fill via Foley - not scanned",
+        "delay_seconds": 90,
+        "phase_type": "other",
         "coverage": "N/A \u2192 N/A"
       },
       {
@@ -259,6 +285,8 @@
         "delay": "100 sec",
         "thickness": "2 mm",
         "notes": "Scan distended bladder",
+        "delay_seconds": 100,
+        "phase_type": "other",
         "coverage": "Iliac crests \u2192 Below bladder"
       }
     ],
@@ -296,6 +324,8 @@
         "delay": "45 sec",
         "thickness": "0.625 mm",
         "notes": "Optimal small bowel enhancement",
+        "delay_seconds": 45,
+        "phase_type": "other",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       },
       {
@@ -305,6 +335,8 @@
         "delay": "0.625 mm",
         "thickness": "Renal Delay series",
         "notes": "",
+        "delay_seconds": 0,
+        "phase_type": "delayed",
         "coverage": "1-2cm above and below kidneys \u2192 300 sec"
       }
     ],
@@ -341,6 +373,8 @@
         "delay": "N/A",
         "thickness": "2 mm",
         "notes": "Optional stone detection",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Top kidneys \u2192 Pubic symphysis"
       },
       {
@@ -350,6 +384,8 @@
         "delay": "60 sec from 1st",
         "thickness": "2.5 mm",
         "notes": "Nephrographic phase",
+        "delay_seconds": 60,
+        "phase_type": "portal",
         "coverage": "Top kidneys \u2192 Iliac crests"
       },
       {
@@ -359,6 +395,8 @@
         "delay": "90-120 sec from 2nd",
         "thickness": "1.25 mm",
         "notes": "Collecting system opacification",
+        "delay_seconds": 90,
+        "phase_type": "delayed",
         "coverage": "Top kidneys \u2192 Pubic symphysis"
       }
     ],
@@ -396,6 +434,8 @@
         "delay": "N/A",
         "thickness": "1-2 mm",
         "notes": "Low dose technique",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Top of kidneys \u2192 Pubic symphysis"
       }
     ],
@@ -428,6 +468,8 @@
         "delay": "N/A",
         "thickness": "2.5 mm",
         "notes": "Baseline - detect fat/calcium",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Top kidneys \u2192 Iliac crests"
       },
       {
@@ -437,6 +479,8 @@
         "delay": "20 sec",
         "thickness": "1.25 mm",
         "notes": "Arterial/nephrographic",
+        "delay_seconds": 20,
+        "phase_type": "other",
         "coverage": "Top kidneys \u2192 Iliac crests"
       },
       {
@@ -446,6 +490,8 @@
         "delay": "90-120 sec from 2nd injection",
         "thickness": "1.25 mm",
         "notes": "Delayed enhancement + collecting system",
+        "delay_seconds": 90,
+        "phase_type": "delayed",
         "coverage": "Top kidneys \u2192 Pubic symphysis"
       }
     ],
@@ -490,6 +536,8 @@
         "delay": "N/A",
         "thickness": "2.5 mm",
         "notes": "Liver FOV",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Diaphragm \u2192 Iliac crests"
       },
       {
@@ -499,6 +547,8 @@
         "delay": "30-35 sec or bolus track",
         "thickness": "1.25 mm",
         "notes": "Liver FOV - hypervascular lesions",
+        "delay_seconds": 25,
+        "phase_type": "arterial",
         "coverage": "Diaphragm \u2192 Iliac crests"
       },
       {
@@ -508,6 +558,8 @@
         "delay": "70 sec",
         "thickness": "2.5 mm",
         "notes": "Full AP FOV",
+        "delay_seconds": 70,
+        "phase_type": "portal",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       },
       {
@@ -517,6 +569,8 @@
         "delay": "300 sec",
         "thickness": "2.5 mm",
         "notes": "Liver FOV - washout assessment",
+        "delay_seconds": 300,
+        "phase_type": "delayed",
         "coverage": "Diaphragm \u2192 Iliac crests"
       }
     ],
@@ -559,6 +613,8 @@
         "delay": "N/A",
         "thickness": "1.5 mm",
         "notes": "Sequential axial gated acquisition",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Carina \u2192 Below heart"
       }
     ],
@@ -592,6 +648,8 @@
         "delay": "N/A",
         "thickness": "3 mm",
         "notes": "Calcium score",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Carina \u2192 Below heart"
       },
       {
@@ -601,6 +659,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.5-0.625 mm",
         "notes": "Retrospective gating",
+        "delay_seconds": 30,
+        "phase_type": "other",
         "coverage": "2cm above LAD \u2192 2cm below heart apex"
       }
     ],
@@ -639,6 +699,8 @@
         "delay": "N/A",
         "thickness": "1.5 mm",
         "notes": "Calcium score",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Lung apices \u2192 Diaphragm"
       },
       {
@@ -648,6 +710,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.5-0.625 mm",
         "notes": "Retrospective gating - full chest FOV",
+        "delay_seconds": 30,
+        "phase_type": "other",
         "coverage": "Lung apices \u2192 2cm below heart apex"
       }
     ],
@@ -684,6 +748,8 @@
         "delay": "N/A",
         "thickness": "3 mm",
         "notes": "Flash Non-contrast",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Top of heart \u2192 Below heart"
       },
       {
@@ -693,6 +759,8 @@
         "delay": "30 sec",
         "thickness": "0.5-0.625 mm",
         "notes": "Retrospective ECG gating",
+        "delay_seconds": 30,
+        "phase_type": "other",
         "coverage": "Top of heart \u2192 Below heart"
       },
       {
@@ -702,6 +770,8 @@
         "delay": "70 sec",
         "thickness": "1 mm",
         "notes": "To detect for abscess, vegetation, masses",
+        "delay_seconds": 70,
+        "phase_type": "delayed",
         "coverage": "Lung Apices \u2192 Diaphragm"
       }
     ],
@@ -746,6 +816,8 @@
         "delay": "N/A",
         "thickness": "0.625 mm",
         "notes": "Non-contrast",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Thoracic inlet \u2192 Pubic symphysis"
       },
       {
@@ -755,6 +827,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.5-0.625 mm",
         "notes": "Retrospective gating chest",
+        "delay_seconds": 20,
+        "phase_type": "other",
         "coverage": "Thoracic inlet \u2192 Diaphragm"
       },
       {
@@ -764,6 +838,8 @@
         "delay": "Immediate after chest",
         "thickness": "0.625 mm",
         "notes": "High pitch helical - no gating",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       },
       {
@@ -773,6 +849,8 @@
         "delay": "40 sec",
         "thickness": "0.625 mm",
         "notes": "Stent coverage",
+        "delay_seconds": 40,
+        "phase_type": "delayed",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       }
     ],
@@ -822,6 +900,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.5-0.625 mm",
         "notes": "Retrospective gating",
+        "delay_seconds": 15,
+        "phase_type": "other",
         "coverage": "Thoracic inlet \u2192 Diaphragm"
       },
       {
@@ -831,6 +911,8 @@
         "delay": "Immediate",
         "thickness": "0.625 mm",
         "notes": "Arterial phase AP",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       },
       {
@@ -840,6 +922,8 @@
         "delay": "60 sec",
         "thickness": "1 mm",
         "notes": "Retrosternal venous structures",
+        "delay_seconds": 60,
+        "phase_type": "other",
         "coverage": "Thoracic inlet \u2192 Diaphragm"
       }
     ],
@@ -883,6 +967,8 @@
         "delay": "N/A",
         "thickness": "3 mm",
         "notes": "Calcium score",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Top of heart \u2192 Below heart"
       },
       {
@@ -892,6 +978,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.5-0.625 mm",
         "notes": "Retrospective ECG gating",
+        "delay_seconds": 30,
+        "phase_type": "other",
         "coverage": "Top of heart \u2192 Below heart"
       },
       {
@@ -901,6 +989,8 @@
         "delay": "40 sec",
         "thickness": "0.5-0.625 mm",
         "notes": "Optional for stent assessment",
+        "delay_seconds": 40,
+        "phase_type": "delayed",
         "coverage": "Top of heart \u2192 Below heart"
       }
     ],
@@ -945,6 +1035,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.5-0.625 mm",
         "notes": "Retrospective gating HIGH kV",
+        "delay_seconds": 15,
+        "phase_type": "other",
         "coverage": "Top of heart \u2192 Below heart"
       }
     ],
@@ -984,6 +1076,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.5 mm",
         "notes": "Retrospective - thin slices critical",
+        "delay_seconds": 15,
+        "phase_type": "other",
         "coverage": "Pulmonary veins \u2192 Below LA"
       },
       {
@@ -993,6 +1087,8 @@
         "delay": "40s",
         "thickness": "0.5 mm",
         "notes": "Retrospective - thin slices critical",
+        "delay_seconds": 40,
+        "phase_type": "delayed",
         "coverage": "Pulmonary veins \u2192 Below LA"
       }
     ],
@@ -1032,6 +1128,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.5 mm",
         "notes": "Retrospective gating for valve",
+        "delay_seconds": 22,
+        "phase_type": "other",
         "coverage": "Thoracic inlet \u2192 Diaphragm"
       },
       {
@@ -1041,6 +1139,8 @@
         "delay": "Immediate",
         "thickness": "0.625 mm",
         "notes": "Iliofemoral access planning",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Diaphragm \u2192 Femoral heads"
       }
     ],
@@ -1080,6 +1180,8 @@
         "delay": "N/A",
         "thickness": "2.5 mm/2.5 mm",
         "notes": "Cardiac",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Apex of heart to Base of heart \u2192 Non-Contrast"
       },
       {
@@ -1089,6 +1191,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.5 mm",
         "notes": "NO DOSE PULSING - retrospective all phases",
+        "delay_seconds": 15,
+        "phase_type": "other",
         "coverage": "Top of heart \u2192 Below heart"
       },
       {
@@ -1098,6 +1202,8 @@
         "delay": "90 sec",
         "thickness": "0.625 mm",
         "notes": "Access planning and coronaries",
+        "delay_seconds": 90,
+        "phase_type": "delayed",
         "coverage": "Diaphragm \u2192 Femoral heads"
       }
     ],
@@ -1142,6 +1248,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.5 mm",
         "notes": "NO DOSE PULSING - all phases",
+        "delay_seconds": 30,
+        "phase_type": "other",
         "coverage": "Top of heart \u2192 Below heart"
       },
       {
@@ -1151,6 +1259,8 @@
         "delay": "90 sec",
         "thickness": "0.625 mm",
         "notes": "Access planning",
+        "delay_seconds": 90,
+        "phase_type": "delayed",
         "coverage": "Diaphragm \u2192 Femoral heads"
       }
     ],
@@ -1190,6 +1300,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP and lateral",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Lung apices \u2192 Adrenal glands"
       },
       {
@@ -1199,6 +1311,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Caudocranial direction from diaphragm to apices",
+        "delay_seconds": 15,
+        "phase_type": "other",
         "coverage": "Lung apices \u2192 Adrenal glands"
       }
     ],
@@ -1226,6 +1340,8 @@
         "delay": "Full inspiration",
         "thickness": "0.625-1 mm",
         "notes": "Thin for 3D",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Thoracic inlet \u2192 Carina+10cm"
       },
       {
@@ -1235,6 +1351,8 @@
         "delay": "Forced mid-expiration",
         "thickness": "0.625-1 mm",
         "notes": "Same level as inspiration",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Thoracic inlet \u2192 Carina+10cm"
       },
       {
@@ -1244,6 +1362,8 @@
         "delay": "Continuous breathing",
         "thickness": "Cine mode",
         "notes": "Dynamic collapse",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Carina level \u2192 Single slice"
       }
     ],
@@ -1276,6 +1396,8 @@
         "delay": "N/A",
         "thickness": "1-1.25 mm",
         "notes": "Low dose helical",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Lung apices \u2192 Costophrenic angles"
       }
     ],
@@ -1303,6 +1425,8 @@
         "delay": "N/A",
         "thickness": "1-1.25 mm",
         "notes": "Standard dose helical",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Lung apices \u2192 Costophrenic angles"
       }
     ],
@@ -1330,6 +1454,8 @@
         "delay": "N/A",
         "thickness": "1-1.25 mm",
         "notes": "Ultra low dose helical",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Lung apices \u2192 Costophrenic angles"
       }
     ],
@@ -1357,6 +1483,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "Lateral",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Lung apices \u2192 Costophrenic angles"
       },
       {
@@ -1366,6 +1494,8 @@
         "delay": "Full inspiration",
         "thickness": "1 mm at 1-2cm intervals",
         "notes": "Sequential prone",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Lung apices \u2192 Costophrenic angles"
       }
     ],
@@ -1393,6 +1523,8 @@
         "delay": "Full inspiration",
         "thickness": "1 mm at 1-2cm intervals",
         "notes": "Sequential slices",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Lung apices \u2192 Costophrenic angles"
       }
     ],
@@ -1420,6 +1552,8 @@
         "delay": "Full inspiration",
         "thickness": "1 mm axial at 1-2cm intervals",
         "notes": "Sequential non-volumetric",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Lung apices \u2192 Costophrenic angles"
       },
       {
@@ -1429,6 +1563,8 @@
         "delay": "Full expiration",
         "thickness": "1 mm at intervals",
         "notes": "Sequential",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Lung apices \u2192 Costophrenic angles"
       },
       {
@@ -1438,6 +1574,8 @@
         "delay": "Full inspiration",
         "thickness": "1 mm at intervals",
         "notes": "Sequential",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Lung apices \u2192 Costophrenic angles"
       }
     ],
@@ -1475,6 +1613,8 @@
         "delay": "Full inspiration (TLC)",
         "thickness": "0.625-1 mm",
         "notes": "Contiguous for quantification",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Lung apices \u2192 Costophrenic angles"
       },
       {
@@ -1484,6 +1624,8 @@
         "delay": "Full expiration (RV)",
         "thickness": "0.625-1 mm",
         "notes": "Contiguous complete exhalation",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Lung apices \u2192 Costophrenic angles"
       }
     ],
@@ -1516,6 +1658,8 @@
         "delay": "Full inspiration",
         "thickness": "1 mm",
         "notes": "Contiguous 1mm slices",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Lung apices \u2192 Costophrenic angles"
       },
       {
@@ -1525,6 +1669,8 @@
         "delay": "Full expiration",
         "thickness": "1 mm",
         "notes": "Limited coverage expiration",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Carina \u2192 Costophrenic angles"
       }
     ],
@@ -1560,6 +1706,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP for positioning",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Bilateral ankles \u2192 Feet"
       },
       {
@@ -1569,6 +1717,8 @@
         "delay": "N/A or 60s if contrast",
         "thickness": "0.625 mm",
         "notes": "Submillimeter",
+        "delay_seconds": 60,
+        "phase_type": "other",
         "coverage": "Distal tib/fib \u2192 Hindfoot"
       }
     ],
@@ -1599,6 +1749,8 @@
         "delay": "Immediate post-injection",
         "thickness": "0.625 mm",
         "notes": "Submillimeter for labrum",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Acromion \u2192 Proximal humerus"
       }
     ],
@@ -1629,6 +1781,8 @@
         "delay": "N/A or 60s if contrast",
         "thickness": "0.625 mm",
         "notes": "Submillimeter",
+        "delay_seconds": 60,
+        "phase_type": "other",
         "coverage": "Distal humerus \u2192 Proximal radius/ulna"
       }
     ],
@@ -1659,6 +1813,8 @@
         "delay": "N/A or 60s if contrast",
         "thickness": "0.625 mm",
         "notes": "Submillimeter",
+        "delay_seconds": 60,
+        "phase_type": "other",
         "coverage": "Calcaneus \u2192 Toes"
       }
     ],
@@ -1686,6 +1842,8 @@
         "delay": "N/A",
         "thickness": "0.625-1 mm",
         "notes": "Dual energy if available",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Joint region \u2192 Extended coverage"
       }
     ],
@@ -1716,6 +1874,8 @@
         "delay": "N/A or 60s if contrast",
         "thickness": "0.625 mm",
         "notes": "Submillimeter",
+        "delay_seconds": 60,
+        "phase_type": "other",
         "coverage": "Distal radius/ulna \u2192 Fingertips"
       }
     ],
@@ -1746,6 +1906,8 @@
         "delay": "N/A or 60s if contrast",
         "thickness": "0.625 mm",
         "notes": "Submillimeter for 3D",
+        "delay_seconds": 60,
+        "phase_type": "other",
         "coverage": "Iliac crests \u2192 Proximal femurs"
       }
     ],
@@ -1776,6 +1938,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP for alignment",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Bilateral knees \u2192 Extended"
       },
       {
@@ -1785,6 +1949,8 @@
         "delay": "N/A or 60s if contrast",
         "thickness": "0.625 mm",
         "notes": "Submillimeter",
+        "delay_seconds": 60,
+        "phase_type": "other",
         "coverage": "Distal femur \u2192 Proximal tib/fib"
       }
     ],
@@ -1815,6 +1981,8 @@
         "delay": "N/A or 60s if contrast",
         "thickness": "0.625-1 mm",
         "notes": "Submillimeter",
+        "delay_seconds": 60,
+        "phase_type": "other",
         "coverage": "Proximal to injury \u2192 Distal to injury"
       }
     ],
@@ -1845,6 +2013,8 @@
         "delay": "N/A or 60s if contrast",
         "thickness": "0.625 mm",
         "notes": "Submillimeter for 3D",
+        "delay_seconds": 60,
+        "phase_type": "other",
         "coverage": "Iliac crests \u2192 Proximal femurs"
       }
     ],
@@ -1875,6 +2045,8 @@
         "delay": "N/A or 60s if contrast",
         "thickness": "0.625 mm",
         "notes": "Submillimeter",
+        "delay_seconds": 60,
+        "phase_type": "other",
         "coverage": "Entire scapula \u2192 Proximal humerus"
       }
     ],
@@ -1905,6 +2077,8 @@
         "delay": "N/A or 60s if contrast",
         "thickness": "0.625-1 mm",
         "notes": "Submillimeter",
+        "delay_seconds": 60,
+        "phase_type": "other",
         "coverage": "Proximal to injury \u2192 Distal to injury"
       }
     ],
@@ -1935,6 +2109,8 @@
         "delay": "N/A or immediate if arthrogram",
         "thickness": "0.625 mm",
         "notes": "Submillimeter",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Distal radius/ulna \u2192 Mid-carpus"
       }
     ],
@@ -1965,6 +2141,8 @@
         "delay": "N/A",
         "thickness": "0.625-1 mm",
         "notes": "Baseline if done",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Region \u2192 Region"
       },
       {
@@ -1974,6 +2152,8 @@
         "delay": "60-90 sec if done",
         "thickness": "0.625-1 mm",
         "notes": "Standard if done",
+        "delay_seconds": 60,
+        "phase_type": "other",
         "coverage": "Region \u2192 Region"
       },
       {
@@ -1983,6 +2163,8 @@
         "delay": "5-10 min if done",
         "thickness": "1-2 mm",
         "notes": "For infection/tumor",
+        "delay_seconds": 5,
+        "phase_type": "delayed",
         "coverage": "Region \u2192 Region"
       }
     ],
@@ -2026,6 +2208,8 @@
         "delay": "N/A",
         "thickness": "5 mm",
         "notes": "STAT no contrast",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Skull base \u2192 Vertex"
       },
       {
@@ -2035,6 +2219,8 @@
         "delay": "Bolus tracked aorta",
         "thickness": "0.625 mm",
         "notes": "Intracranial vessels",
+        "delay_seconds": 30,
+        "phase_type": "other",
         "coverage": "Aortic arch \u2192 Vertex"
       },
       {
@@ -2044,6 +2230,8 @@
         "delay": "Auto-triggered",
         "thickness": "5 mm dynamic",
         "notes": "Perfusion if candidate",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Skull base \u2192 Vertex"
       }
     ],
@@ -2084,6 +2272,8 @@
         "delay": "N/A or 60s if contrast",
         "thickness": "0.625 mm",
         "notes": "Submillimeter acquisition",
+        "delay_seconds": 60,
+        "phase_type": "other",
         "coverage": "Skull base \u2192 T1"
       }
     ],
@@ -2114,6 +2304,8 @@
         "delay": "N/A or 60s if contrast",
         "thickness": "0.625-1 mm",
         "notes": "Submillimeter entire spine",
+        "delay_seconds": 60,
+        "phase_type": "other",
         "coverage": "Skull base \u2192 Sacrum"
       }
     ],
@@ -2141,6 +2333,8 @@
         "delay": "N/A",
         "thickness": "0.625 mm",
         "notes": "Submillimeter for 3D",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Frontal sinus \u2192 Mandible"
       }
     ],
@@ -2171,6 +2365,8 @@
         "delay": "N/A (or 60-90s if contrast)",
         "thickness": "0.5-0.625 mm",
         "notes": "Isotropic submillimeter",
+        "delay_seconds": 60,
+        "phase_type": "other",
         "coverage": "Vertex \u2192 Skull base"
       }
     ],
@@ -2201,6 +2397,8 @@
         "delay": "N/A or 60s if contrast",
         "thickness": "0.625 mm",
         "notes": "Submillimeter",
+        "delay_seconds": 60,
+        "phase_type": "other",
         "coverage": "T12 \u2192 Sacrum"
       }
     ],
@@ -2231,6 +2429,8 @@
         "delay": "N/A",
         "thickness": "0.625 mm",
         "notes": "Submillimeter for detail",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Region of interest \u2192 Extended coverage"
       }
     ],
@@ -2261,6 +2461,8 @@
         "delay": "N/A or 60s if contrast",
         "thickness": "1-1.5 mm",
         "notes": "Parallel to optic nerves",
+        "delay_seconds": 60,
+        "phase_type": "other",
         "coverage": "Superior orbital rim \u2192 Maxillary sinus"
       }
     ],
@@ -2294,6 +2496,8 @@
         "delay": "N/A",
         "thickness": "2.5 mm",
         "notes": "Baseline",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Skull base \u2192 Carina"
       },
       {
@@ -2303,6 +2507,8 @@
         "delay": "25 sec",
         "thickness": "2 mm",
         "notes": "Parathyroid enhancement",
+        "delay_seconds": 25,
+        "phase_type": "arterial",
         "coverage": "Skull base \u2192 Carina"
       },
       {
@@ -2312,6 +2518,8 @@
         "delay": "55 sec",
         "thickness": "2 mm",
         "notes": "Thyroid enhancement",
+        "delay_seconds": 55,
+        "phase_type": "portal",
         "coverage": "Skull base \u2192 Carina"
       },
       {
@@ -2321,6 +2529,8 @@
         "delay": "90 sec",
         "thickness": "2.5 mm",
         "notes": "Washout phase",
+        "delay_seconds": 90,
+        "phase_type": "delayed",
         "coverage": "Skull base \u2192 Carina"
       }
     ],
@@ -2363,6 +2573,8 @@
         "delay": "N/A",
         "thickness": "0.625 mm",
         "notes": "Direct coronal if possible",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Frontal sinus \u2192 Maxillary sinus"
       },
       {
@@ -2372,6 +2584,8 @@
         "delay": "From coronal",
         "thickness": "0.625 mm",
         "notes": "Reformatted from coronal",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Frontal \u2192 Maxillary"
       }
     ],
@@ -2404,6 +2618,8 @@
         "delay": "N/A",
         "thickness": "0.625 mm",
         "notes": "Isotropic submillimeter",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Frontal sinus \u2192 Hard palate"
       }
     ],
@@ -2434,6 +2650,8 @@
         "delay": "60-70 sec",
         "thickness": "1-2 mm",
         "notes": "Venous phase",
+        "delay_seconds": 60,
+        "phase_type": "other",
         "coverage": "Skull base \u2192 Thoracic inlet"
       }
     ],
@@ -2461,6 +2679,8 @@
         "delay": "N/A",
         "thickness": "0.5-0.625 mm",
         "notes": "Parallel to lateral SCC",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "EAC \u2192 Petrous apex"
       },
       {
@@ -2470,6 +2690,8 @@
         "delay": "N/A",
         "thickness": "0.5-0.625 mm",
         "notes": "Perpendicular to petrous ridge",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "EAC \u2192 IAC"
       }
     ],
@@ -2505,6 +2727,8 @@
         "delay": "N/A or 60s if contrast",
         "thickness": "0.625-1 mm",
         "notes": "Submillimeter",
+        "delay_seconds": 60,
+        "phase_type": "other",
         "coverage": "C7 \u2192 L1"
       }
     ],
@@ -2538,6 +2762,8 @@
         "delay": "N/A",
         "thickness": "5 mm",
         "notes": "Baseline if SAH",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Vertex \u2192 Foramen magnum"
       },
       {
@@ -2547,6 +2773,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.5-0.625 mm",
         "notes": "Submillimeter for 3D",
+        "delay_seconds": 30,
+        "phase_type": "other",
         "coverage": "Skull base \u2192 Vertex"
       }
     ],
@@ -2585,6 +2813,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP and lateral",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Aortic arch \u2192 Vertex"
       },
       {
@@ -2594,6 +2824,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Arterial phase - caudocranial",
+        "delay_seconds": 30,
+        "phase_type": "other",
         "coverage": "Aortic arch \u2192 Skull base"
       },
       {
@@ -2603,6 +2835,8 @@
         "delay": "Immediate",
         "thickness": "0.625 mm",
         "notes": "Same bolus as neck - single acquisition",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Skull base \u2192 Vertex"
       }
     ],
@@ -2641,6 +2875,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Caudocranial",
+        "delay_seconds": 30,
+        "phase_type": "other",
         "coverage": "Aortic arch \u2192 Skull base"
       }
     ],
@@ -2671,6 +2907,8 @@
         "delay": "N/A",
         "thickness": "5 mm",
         "notes": "Baseline",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Vertex \u2192 Foramen magnum"
       },
       {
@@ -2680,6 +2918,8 @@
         "delay": "60-90 sec delay",
         "thickness": "0.625-1 mm",
         "notes": "Venous phase",
+        "delay_seconds": 60,
+        "phase_type": "other",
         "coverage": "Skull base \u2192 Vertex"
       }
     ],
@@ -2712,6 +2952,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "Lateral scout",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Vertex \u2192 C1"
       },
       {
@@ -2721,6 +2963,8 @@
         "delay": "N/A",
         "thickness": "5 mm",
         "notes": "Angle parallel to hard palate",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Vertex \u2192 Foramen magnum"
       }
     ],
@@ -2751,6 +2995,8 @@
         "delay": "70 sec",
         "thickness": "2.5 mm",
         "notes": "Single phase minimize radiation",
+        "delay_seconds": 70,
+        "phase_type": "portal",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       }
     ],
@@ -2784,6 +3030,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Arterial phase",
+        "delay_seconds": 30,
+        "phase_type": "other",
         "coverage": "Lung apices \u2192 Diaphragm"
       },
       {
@@ -2793,6 +3041,8 @@
         "delay": "70 sec from start",
         "thickness": "0.625 mm",
         "notes": "Portal venous phase",
+        "delay_seconds": 70,
+        "phase_type": "portal",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       }
     ],
@@ -2825,6 +3075,8 @@
         "delay": "N/A",
         "thickness": "0.625-1 mm",
         "notes": "Submillimeter for ribs",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Lung apices \u2192 Costophrenic angles"
       },
       {
@@ -2834,6 +3086,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Evaluate for aortic injury",
+        "delay_seconds": 30,
+        "phase_type": "other",
         "coverage": "Arterial (bolus tracked) \u2192 Lung apices to Costophrenic angles"
       }
     ],
@@ -2872,6 +3126,8 @@
         "delay": "N/A",
         "thickness": "2.5 mm",
         "notes": "RAPID - hematoma",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       },
       {
@@ -2881,6 +3137,8 @@
         "delay": "25-30 sec",
         "thickness": "0.625 mm",
         "notes": "Active bleeding + aneurysm",
+        "delay_seconds": 25,
+        "phase_type": "arterial",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       },
       {
@@ -2890,6 +3148,8 @@
         "delay": "70 sec",
         "thickness": "2.5 mm",
         "notes": "Organs and venous",
+        "delay_seconds": 70,
+        "phase_type": "portal",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       }
     ],
@@ -2927,6 +3187,8 @@
         "delay": "N/A",
         "thickness": "5 mm",
         "notes": "Standard head",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Vertex \u2192 Foramen magnum"
       },
       {
@@ -2936,6 +3198,8 @@
         "delay": "N/A",
         "thickness": "0.625 mm",
         "notes": "Submillimeter",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Skull base \u2192 T1"
       },
       {
@@ -2945,6 +3209,8 @@
         "delay": "N/A",
         "thickness": "0.625 mm",
         "notes": "Submillimeter for 3D",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Frontal sinus \u2192 Mandible"
       }
     ],
@@ -2982,6 +3248,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "Lateral",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Vertex \u2192 C1"
       },
       {
@@ -2991,6 +3259,8 @@
         "delay": "N/A",
         "thickness": "5 mm",
         "notes": "Parallel to hard palate",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Vertex \u2192 Foramen magnum"
       },
       {
@@ -3000,6 +3270,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP and lateral",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Skull base \u2192 T1"
       },
       {
@@ -3009,6 +3281,8 @@
         "delay": "N/A",
         "thickness": "0.625 mm",
         "notes": "Helical submillimeter",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Skull base \u2192 T1"
       }
     ],
@@ -3047,6 +3321,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Arterial phase runoff",
+        "delay_seconds": 30,
+        "phase_type": "arterial",
         "coverage": "Coverage as needed \u2192 Distal to injury"
       }
     ],
@@ -3081,6 +3357,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP lateral",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Diaphragm \u2192 Femoral heads"
       },
       {
@@ -3090,6 +3368,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Caudocranial direction",
+        "delay_seconds": 20,
+        "phase_type": "arterial",
         "coverage": "Diaphragm \u2192 Femoral heads"
       }
     ],
@@ -3134,6 +3414,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP and lateral",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Lung apices \u2192 Adrenal glands"
       },
       {
@@ -3143,6 +3425,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Caudocranial direction",
+        "delay_seconds": 15,
+        "phase_type": "arterial",
         "coverage": "Lung apices \u2192 Adrenal glands"
       }
     ],
@@ -3187,6 +3471,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP and lateral",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Thoracic inlet \u2192 Pubic symphysis"
       },
       {
@@ -3196,6 +3482,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Caudocranial from feet to head",
+        "delay_seconds": 20,
+        "phase_type": "arterial",
         "coverage": "Thoracic inlet \u2192 Pubic symphysis"
       }
     ],
@@ -3245,6 +3533,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Xiphoid \u2192 Pubic symphysis"
       },
       {
@@ -3254,6 +3544,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Focus on abdominal wall",
+        "delay_seconds": 20,
+        "phase_type": "arterial",
         "coverage": "Xiphoid \u2192 Pubic symphysis"
       }
     ],
@@ -3288,6 +3580,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP both legs for comparison",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Mid-Thigh \u2192 Toes"
       },
       {
@@ -3297,6 +3591,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Bilateral for comparison and variants",
+        "delay_seconds": 25,
+        "phase_type": "arterial",
         "coverage": "Mid-Thigh \u2192 Toes"
       },
       {
@@ -3306,6 +3602,8 @@
         "delay": "60s",
         "thickness": "0.625 mm",
         "notes": "Bilateral for comparison and variants",
+        "delay_seconds": 60,
+        "phase_type": "delayed",
         "coverage": "Mid-Thigh \u2192 Toes"
       }
     ],
@@ -3345,6 +3643,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP full legs",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Renal arteries \u2192 Feet"
       },
       {
@@ -3354,6 +3654,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "May need slower table speed if severe PAD",
+        "delay_seconds": 35,
+        "phase_type": "arterial",
         "coverage": "Renal arteries \u2192 Ankle"
       },
       {
@@ -3363,6 +3665,8 @@
         "delay": "Immediately after CTA",
         "thickness": "0.625 mm",
         "notes": "Runoff phase to evaluate distal vessels",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Mid Thigh \u2192 Foot"
       }
     ],
@@ -3407,6 +3711,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       },
       {
@@ -3416,6 +3722,8 @@
         "delay": "25 sec",
         "thickness": "0.625 mm",
         "notes": "Focus on celiac SMA IMA",
+        "delay_seconds": 25,
+        "phase_type": "arterial",
         "coverage": "Diaphragm \u2192 Iliac crests"
       },
       {
@@ -3425,6 +3733,8 @@
         "delay": "70 sec",
         "thickness": "0.625 mm",
         "notes": "Assess bowel wall enhancement",
+        "delay_seconds": 70,
+        "phase_type": "portal",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       }
     ],
@@ -3469,6 +3779,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP pelvis",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "L3 \u2192 Proximal femur"
       },
       {
@@ -3478,6 +3790,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Supine resting position",
+        "delay_seconds": 1,
+        "phase_type": "other",
         "coverage": "L3 \u2192 Mid femur"
       },
       {
@@ -3487,6 +3801,8 @@
         "delay": "Immediately after",
         "thickness": "0.625 mm",
         "notes": "Hips flexed 90 degrees - cycling position",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "L3 \u2192 Mid femur"
       }
     ],
@@ -3526,6 +3842,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP pelvis",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Iliac crest \u2192 Lesser trochanters"
       },
       {
@@ -3535,6 +3853,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Focus on internal iliac branches",
+        "delay_seconds": 18,
+        "phase_type": "arterial",
         "coverage": "Iliac crest \u2192 Lesser trochanters"
       }
     ],
@@ -3569,6 +3889,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP both legs",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Distal femur \u2192 Ankle"
       },
       {
@@ -3578,6 +3900,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Both legs neutral resting position",
+        "delay_seconds": 18,
+        "phase_type": "other",
         "coverage": "Distal femur \u2192 Ankle"
       },
       {
@@ -3587,6 +3911,8 @@
         "delay": "Immediately after",
         "thickness": "0.625 mm",
         "notes": "Patient actively plantarflexes both feet - point toes",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Distal femur \u2192 Ankle"
       }
     ],
@@ -3630,6 +3956,8 @@
         "delay": "N/A",
         "thickness": "5 mm",
         "notes": "Arms down - baseline",
+        "delay_seconds": -20,
+        "phase_type": "non-contrast",
         "coverage": "Vertex \u2192 Foramen magnum"
       },
       {
@@ -3639,6 +3967,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Arms down - carotid/vertebral",
+        "delay_seconds": 30,
+        "phase_type": "other",
         "coverage": "Aortic arch \u2192 Vertex"
       },
       {
@@ -3648,6 +3978,8 @@
         "delay": "35 sec after neck",
         "thickness": "0.625 mm",
         "notes": "Arms UP - renal and mesenteric",
+        "delay_seconds": 35,
+        "phase_type": "other",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       },
       {
@@ -3657,6 +3989,8 @@
         "delay": "After CAP",
         "thickness": "1.25 mm",
         "notes": "Arms DOWN - intracranial vessels",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Vertex \u2192 Foramen magnum"
       }
     ],
@@ -3705,6 +4039,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP of arm",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Aortic arch \u2192 Fingertips"
       },
       {
@@ -3714,6 +4050,8 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Include arch through hand",
+        "delay_seconds": 30,
+        "phase_type": "arterial",
         "coverage": "Aortic arch \u2192 Fingertips"
       }
     ],
@@ -3748,6 +4086,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP scout",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       },
       {
@@ -3757,6 +4097,8 @@
         "delay": "25 sec",
         "thickness": "0.625 mm",
         "notes": "High flow rate 5 mL/s critical",
+        "delay_seconds": 25,
+        "phase_type": "arterial",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       },
       {
@@ -3766,6 +4108,8 @@
         "delay": "90 sec",
         "thickness": "0.625 mm",
         "notes": "Extended delay to see pooling of contrast",
+        "delay_seconds": 90,
+        "phase_type": "delayed",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       }
     ],
@@ -3808,6 +4152,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Diaphragm \u2192 Proximal femur"
       },
       {
@@ -3817,6 +4163,8 @@
         "delay": "180 sec",
         "thickness": "0.625 mm",
         "notes": "Extended delay for venous opacification",
+        "delay_seconds": 180,
+        "phase_type": "portal",
         "coverage": "Diaphragm \u2192 Proximal femur"
       }
     ],
@@ -3849,6 +4197,8 @@
         "delay": "N/A",
         "thickness": "N/A",
         "notes": "AP full body",
+        "delay_seconds": 0,
+        "phase_type": "other",
         "coverage": "Thoracic inlet \u2192 Proximal femur"
       },
       {
@@ -3858,6 +4208,8 @@
         "delay": "180 sec",
         "thickness": "0.625 mm",
         "notes": "Extended venous phase",
+        "delay_seconds": 180,
+        "phase_type": "portal",
         "coverage": "Thoracic inlet \u2192 Proximal femur"
       }
     ],
