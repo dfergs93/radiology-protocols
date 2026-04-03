@@ -108,6 +108,7 @@
       Delayed Phase    :done, scan3, 04:00, 7s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

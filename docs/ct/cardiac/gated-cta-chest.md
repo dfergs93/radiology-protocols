@@ -45,6 +45,7 @@
         | Agent | Isovue 370 |
         | Volume | 1.1 mL/kg |
         | Flow Rate | 4-5 mL/s |
+        | Duration | 20s |
         | Timing Method | Bolus Tracking |
         | ROI Placement | Ascending aorta |
         | Trigger (HU) | 200 HU |
@@ -104,6 +105,7 @@
       Stent delay (optional)    :done, scan2, 00:40, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

@@ -105,6 +105,7 @@
       CTP (optional)    :done, scan3, 00:00, 10s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

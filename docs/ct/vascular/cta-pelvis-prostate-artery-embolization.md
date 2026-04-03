@@ -103,6 +103,7 @@
       CTA Arterial    :crit, scan1, after saline, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

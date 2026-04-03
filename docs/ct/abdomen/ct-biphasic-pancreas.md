@@ -17,7 +17,6 @@
         |:-------|:------|:---------|
         | Pancreatic Phase | Delayed Arterial (bolus tracked+16s scan delay) | Diaphragm to Iliac crests |
         | Portal Venous | Contrast (70 sec delay) | Diaphragm to Lesser trochanters |
-        | Delayed Phase | Contrast (300 sec delay) | Diaphragm to Iliac crests |
 
     === "Clinical Indications"
 
@@ -106,6 +105,7 @@
       Delayed Phase    :done, scan3, 05:00, 7s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 
@@ -113,7 +113,7 @@
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout | Diaphragm | Iliac crests | N/A | N/A | AP |
     | Pancreatic Phase | Diaphragm | Iliac crests | 40-45 sec or bolus track | 1-1.25 mm | Thin slices for small lesions |
-    | Portal Venous | Diaphragm | Iliac crests | 70 sec | 2.5 mm | Standard PV phase |
+    | Portal Venous | Diaphragm | Lesser Trochanter | 70 sec | 2.5 mm | Standard PV phase |
 
 === "Technical Parameters"
 

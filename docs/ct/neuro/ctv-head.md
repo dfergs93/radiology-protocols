@@ -99,6 +99,7 @@
       CTV Head    :done, scan1, 01:00, 3s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

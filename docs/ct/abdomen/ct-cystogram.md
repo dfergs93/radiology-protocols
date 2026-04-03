@@ -98,6 +98,7 @@
       Cystogram    :done, scan3, 00:35, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

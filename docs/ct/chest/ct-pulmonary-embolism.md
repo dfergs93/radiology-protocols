@@ -102,6 +102,7 @@
       Pulmonary Angiogram    :crit, scan1, 00:10, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

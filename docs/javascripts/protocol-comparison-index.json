@@ -26,14 +26,14 @@
       },
       {
         "name": "Renal Delay",
-        "start": "1-2cm above and below kidneys",
-        "end": "300 sec",
-        "delay": "0.625 mm",
-        "thickness": "Renal Delay series",
-        "notes": "",
-        "delay_seconds": 0,
+        "start": "1-2cm above kidneys",
+        "end": "1-2cm below kidneys",
+        "delay": "300 sec",
+        "thickness": "0.625 mm",
+        "notes": "Renal Delay series",
+        "delay_seconds": 300,
         "phase_type": "delayed",
-        "coverage": "1-2cm above and below kidneys \u2192 300 sec"
+        "coverage": "1-2cm above kidneys \u2192 1-2cm below kidneys"
       }
     ],
     "summary": [
@@ -70,7 +70,7 @@
         "delay": "N/A",
         "thickness": "2.5 mm",
         "notes": "Measure absolute HU in mass",
-        "delay_seconds": -20,
+        "delay_seconds": -10,
         "phase_type": "non-contrast",
         "coverage": "Diaphragm \u2192 Kidneys"
       },
@@ -138,20 +138,20 @@
         "delay": "40-45 sec or bolus track",
         "thickness": "1-1.25 mm",
         "notes": "Thin slices for small lesions",
-        "delay_seconds": 25,
+        "delay_seconds": 29.0,
         "phase_type": "other",
         "coverage": "Diaphragm \u2192 Iliac crests"
       },
       {
         "name": "Portal Venous",
         "start": "Diaphragm",
-        "end": "Iliac crests",
+        "end": "Lesser Trochanter",
         "delay": "70 sec",
         "thickness": "2.5 mm",
         "notes": "Standard PV phase",
         "delay_seconds": 70,
         "phase_type": "portal",
-        "coverage": "Diaphragm \u2192 Iliac crests"
+        "coverage": "Diaphragm \u2192 Lesser Trochanter"
       }
     ],
     "summary": [
@@ -164,11 +164,6 @@
         "series": "Portal Venous",
         "phase": "Contrast (70 sec delay)",
         "coverage": "Diaphragm to Lesser trochanters"
-      },
-      {
-        "series": "Delayed Phase",
-        "phase": "Contrast (300 sec delay)",
-        "coverage": "Diaphragm to Iliac crests"
       }
     ]
   },
@@ -241,7 +236,7 @@
         "delay": "70 sec",
         "thickness": "2.5 mm",
         "notes": "Standard IV contrast",
-        "delay_seconds": -20,
+        "delay_seconds": -10,
         "phase_type": "non-contrast",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       },
@@ -341,7 +336,8 @@
       "volume": "Split bolus: 1st injection 1.1 mL/kg + 2nd injection 0.4 mL/kg",
       "flow_rate": "4 mL/s",
       "timing": "Split bolus technique",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 7.0
     },
     "series": [
       {
@@ -351,7 +347,7 @@
         "delay": "N/A",
         "thickness": "2 mm",
         "notes": "Optional stone detection",
-        "delay_seconds": -20,
+        "delay_seconds": -10,
         "phase_type": "non-contrast",
         "coverage": "Top kidneys \u2192 Pubic symphysis"
       },
@@ -412,7 +408,7 @@
         "delay": "N/A",
         "thickness": "1-2 mm",
         "notes": "Low dose technique",
-        "delay_seconds": -20,
+        "delay_seconds": 0,
         "phase_type": "non-contrast",
         "coverage": "Top of kidneys \u2192 Pubic symphysis"
       }
@@ -446,7 +442,7 @@
         "delay": "N/A",
         "thickness": "2.5 mm",
         "notes": "Baseline - detect fat/calcium",
-        "delay_seconds": -20,
+        "delay_seconds": -10,
         "phase_type": "non-contrast",
         "coverage": "Top kidneys \u2192 Iliac crests"
       },
@@ -514,7 +510,7 @@
         "delay": "N/A",
         "thickness": "2.5 mm",
         "notes": "Liver FOV",
-        "delay_seconds": -20,
+        "delay_seconds": -10,
         "phase_type": "non-contrast",
         "coverage": "Diaphragm \u2192 Iliac crests"
       },
@@ -525,7 +521,7 @@
         "delay": "30-35 sec or bolus track",
         "thickness": "1.25 mm",
         "notes": "Liver FOV - hypervascular lesions",
-        "delay_seconds": 25,
+        "delay_seconds": 29.0,
         "phase_type": "arterial",
         "coverage": "Diaphragm \u2192 Iliac crests"
       },
@@ -613,6 +609,7 @@
       "agent": "Isovue 370",
       "volume": "1.1 mL/kg",
       "flow_rate": "4-5 mL/s",
+      "duration": "18s",
       "timing": "Bolus Tracking",
       "roi": "Ascending aorta",
       "trigger": "200 HU",
@@ -637,7 +634,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.5-0.625 mm",
         "notes": "Retrospective gating",
-        "delay_seconds": 30,
+        "delay_seconds": 23.0,
         "phase_type": "other",
         "coverage": "2cm above LAD \u2192 2cm below heart apex"
       }
@@ -664,6 +661,7 @@
       "agent": "Isovue 370",
       "volume": "1.1 mL/kg",
       "flow_rate": "4-5 mL/s",
+      "duration": "18s",
       "timing": "Bolus Tracking",
       "roi": "Ascending aorta",
       "trigger": "200 HU",
@@ -688,7 +686,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.5-0.625 mm",
         "notes": "Retrospective gating - full chest FOV",
-        "delay_seconds": 30,
+        "delay_seconds": 23.0,
         "phase_type": "other",
         "coverage": "Lung apices \u2192 2cm below heart apex"
       }
@@ -726,7 +724,7 @@
         "delay": "N/A",
         "thickness": "3 mm",
         "notes": "Flash Non-contrast",
-        "delay_seconds": -20,
+        "delay_seconds": -10,
         "phase_type": "non-contrast",
         "coverage": "Top of heart \u2192 Below heart"
       },
@@ -794,7 +792,7 @@
         "delay": "N/A",
         "thickness": "0.625 mm",
         "notes": "Non-contrast",
-        "delay_seconds": -20,
+        "delay_seconds": -10,
         "phase_type": "non-contrast",
         "coverage": "Thoracic inlet \u2192 Pubic symphysis"
       },
@@ -805,7 +803,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.5-0.625 mm",
         "notes": "Retrospective gating chest",
-        "delay_seconds": 20,
+        "delay_seconds": 25.0,
         "phase_type": "other",
         "coverage": "Thoracic inlet \u2192 Diaphragm"
       },
@@ -816,7 +814,7 @@
         "delay": "Immediate after chest",
         "thickness": "0.625 mm",
         "notes": "High pitch helical - no gating",
-        "delay_seconds": 0,
+        "delay_seconds": 30.0,
         "phase_type": "other",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       },
@@ -878,7 +876,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.5-0.625 mm",
         "notes": "Retrospective gating",
-        "delay_seconds": 15,
+        "delay_seconds": 20.0,
         "phase_type": "other",
         "coverage": "Thoracic inlet \u2192 Diaphragm"
       },
@@ -889,7 +887,7 @@
         "delay": "Immediate",
         "thickness": "0.625 mm",
         "notes": "Arterial phase AP",
-        "delay_seconds": 0,
+        "delay_seconds": 25.0,
         "phase_type": "other",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       },
@@ -932,6 +930,7 @@
       "agent": "Isovue 370",
       "volume": "1.1 mL/kg",
       "flow_rate": "4-5 mL/s",
+      "duration": "20s",
       "timing": "Bolus Tracking",
       "roi": "Ascending aorta",
       "trigger": "200 HU",
@@ -945,7 +944,7 @@
         "delay": "N/A",
         "thickness": "3 mm",
         "notes": "Calcium score",
-        "delay_seconds": -20,
+        "delay_seconds": -10,
         "phase_type": "non-contrast",
         "coverage": "Top of heart \u2192 Below heart"
       },
@@ -956,7 +955,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.5-0.625 mm",
         "notes": "Retrospective ECG gating",
-        "delay_seconds": 30,
+        "delay_seconds": 25.0,
         "phase_type": "other",
         "coverage": "Top of heart \u2192 Below heart"
       },
@@ -1013,7 +1012,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.5-0.625 mm",
         "notes": "Retrospective gating HIGH kV",
-        "delay_seconds": 15,
+        "delay_seconds": 19.0,
         "phase_type": "other",
         "coverage": "Top of heart \u2192 Below heart"
       }
@@ -1054,7 +1053,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.5 mm",
         "notes": "Retrospective - thin slices critical",
-        "delay_seconds": 15,
+        "delay_seconds": 20.0,
         "phase_type": "other",
         "coverage": "Pulmonary veins \u2192 Below LA"
       },
@@ -1106,7 +1105,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.5 mm",
         "notes": "Retrospective gating for valve",
-        "delay_seconds": 22,
+        "delay_seconds": 27.0,
         "phase_type": "other",
         "coverage": "Thoracic inlet \u2192 Diaphragm"
       },
@@ -1117,7 +1116,7 @@
         "delay": "Immediate",
         "thickness": "0.625 mm",
         "notes": "Iliofemoral access planning",
-        "delay_seconds": 0,
+        "delay_seconds": 32.0,
         "phase_type": "other",
         "coverage": "Diaphragm \u2192 Femoral heads"
       }
@@ -1169,7 +1168,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.5 mm",
         "notes": "NO DOSE PULSING - retrospective all phases",
-        "delay_seconds": 15,
+        "delay_seconds": 20.0,
         "phase_type": "other",
         "coverage": "Top of heart \u2192 Below heart"
       },
@@ -1226,7 +1225,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.5 mm",
         "notes": "NO DOSE PULSING - all phases",
-        "delay_seconds": 30,
+        "delay_seconds": 35.0,
         "phase_type": "other",
         "coverage": "Top of heart \u2192 Below heart"
       },
@@ -1278,7 +1277,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Caudocranial direction from diaphragm to apices",
-        "delay_seconds": 15,
+        "delay_seconds": 20.0,
         "phase_type": "other",
         "coverage": "Lung apices \u2192 Adrenal glands"
       }
@@ -1392,7 +1391,7 @@
         "delay": "N/A",
         "thickness": "1-1.25 mm",
         "notes": "Standard dose helical",
-        "delay_seconds": -20,
+        "delay_seconds": 0,
         "phase_type": "non-contrast",
         "coverage": "Lung apices \u2192 Costophrenic angles"
       }
@@ -1652,7 +1651,8 @@
       "agent": "None typically. Contrast if infection/mass",
       "volume": "If contrast: 75 mL",
       "flow_rate": "2-3 mL/s",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 30.0
     },
     "series": [
       {
@@ -1716,7 +1716,8 @@
       "agent": "None typically. Contrast if infection",
       "volume": "If contrast: 75 mL",
       "flow_rate": "2-3 mL/s",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 30.0
     },
     "series": [
       {
@@ -1748,7 +1749,8 @@
       "agent": "None typically. Contrast if infection",
       "volume": "If contrast: 75 mL",
       "flow_rate": "2-3 mL/s",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 30.0
     },
     "series": [
       {
@@ -1809,7 +1811,8 @@
       "agent": "None typically. Contrast if infection",
       "volume": "If contrast: 50 mL",
       "flow_rate": "2 mL/s",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 25.0
     },
     "series": [
       {
@@ -1841,7 +1844,8 @@
       "agent": "None typically. Contrast if infection/mass",
       "volume": "If contrast: 100 mL",
       "flow_rate": "2-3 mL/s",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 40.0
     },
     "series": [
       {
@@ -1873,7 +1877,8 @@
       "agent": "None typically. Contrast if infection/mass",
       "volume": "If contrast: 75 mL",
       "flow_rate": "2-3 mL/s",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 30.0
     },
     "series": [
       {
@@ -1905,7 +1910,8 @@
       "agent": "None typically. Contrast if infection",
       "volume": "If contrast: 100 mL",
       "flow_rate": "2-3 mL/s",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 40.0
     },
     "series": [
       {
@@ -1937,7 +1943,8 @@
       "agent": "None typically. Contrast if infection",
       "volume": "If contrast: 100 mL",
       "flow_rate": "2-3 mL/s",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 40.0
     },
     "series": [
       {
@@ -1969,7 +1976,8 @@
       "agent": "None typically. Contrast if infection/mass",
       "volume": "If contrast: 75 mL",
       "flow_rate": "2-3 mL/s",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 30.0
     },
     "series": [
       {
@@ -2001,7 +2009,8 @@
       "agent": "None typically. Contrast if infection",
       "volume": "If contrast: 75 mL",
       "flow_rate": "2-3 mL/s",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 30.0
     },
     "series": [
       {
@@ -2033,7 +2042,8 @@
       "agent": "None typically. Contrast if infection",
       "volume": "If contrast: 50 mL",
       "flow_rate": "2 mL/s",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 25.0
     },
     "series": [
       {
@@ -2065,7 +2075,8 @@
       "agent": "Omnipaque 350 if contrast",
       "volume": "100 mL if contrast",
       "flow_rate": "2-3 mL/s",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 5.0
     },
     "series": [
       {
@@ -2075,7 +2086,7 @@
         "delay": "N/A",
         "thickness": "0.625-1 mm",
         "notes": "Baseline if done",
-        "delay_seconds": -20,
+        "delay_seconds": -10,
         "phase_type": "non-contrast",
         "coverage": "Region \u2192 Region"
       },
@@ -2132,7 +2143,8 @@
       "timing": "Multi-phase stroke protocol",
       "roi": "Multiple ROIs",
       "trigger": "Varies",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 22.0
     },
     "series": [
       {
@@ -2142,7 +2154,7 @@
         "delay": "N/A",
         "thickness": "5 mm",
         "notes": "STAT no contrast",
-        "delay_seconds": -20,
+        "delay_seconds": -10,
         "phase_type": "non-contrast",
         "coverage": "Skull base \u2192 Vertex"
       },
@@ -2153,7 +2165,7 @@
         "delay": "Bolus tracked aorta",
         "thickness": "0.625 mm",
         "notes": "Intracranial vessels",
-        "delay_seconds": 30,
+        "delay_seconds": 26.0,
         "phase_type": "other",
         "coverage": "Aortic arch \u2192 Vertex"
       },
@@ -2196,7 +2208,8 @@
       "agent": "None typically. Contrast if infection/tumor",
       "volume": "If contrast: 100 mL",
       "flow_rate": "3 mL/s",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 33.0
     },
     "series": [
       {
@@ -2228,7 +2241,8 @@
       "agent": "None typically. Contrast if infection/mets",
       "volume": "If contrast: 125 mL",
       "flow_rate": "3 mL/s",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 41.0
     },
     "series": [
       {
@@ -2289,7 +2303,8 @@
       "agent": "None typically. Contrast optional",
       "volume": "If contrast: 100 mL",
       "flow_rate": "3 mL/s",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 33.0
     },
     "series": [
       {
@@ -2321,7 +2336,8 @@
       "agent": "None typically. Contrast if infection/tumor/post-op",
       "volume": "If contrast: 100 mL",
       "flow_rate": "3 mL/s",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 33.0
     },
     "series": [
       {
@@ -2385,7 +2401,8 @@
       "agent": "Omnipaque 350 if contrast",
       "volume": "75-100 mL if contrast",
       "flow_rate": "3 mL/s",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 25.0
     },
     "series": [
       {
@@ -2420,7 +2437,8 @@
       "timing": "4D multi-phase",
       "roi": "Carotid artery",
       "trigger": "150 HU",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 18.0
     },
     "series": [
       {
@@ -2430,7 +2448,7 @@
         "delay": "N/A",
         "thickness": "2.5 mm",
         "notes": "Baseline",
-        "delay_seconds": -20,
+        "delay_seconds": -10,
         "phase_type": "non-contrast",
         "coverage": "Skull base \u2192 Carina"
       },
@@ -2574,7 +2592,8 @@
       "agent": "Omnipaque 350",
       "volume": "100 mL",
       "flow_rate": "3 mL/s",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 5.0
     },
     "series": [
       {
@@ -2651,7 +2670,8 @@
       "agent": "None typically. Contrast if infection/tumor",
       "volume": "If contrast: 100 mL",
       "flow_rate": "3 mL/s",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 33.0
     },
     "series": [
       {
@@ -2686,7 +2706,8 @@
       "timing": "Bolus Tracking",
       "roi": "Aortic arch or carotid",
       "trigger": "150 HU",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 16.0
     },
     "series": [
       {
@@ -2696,7 +2717,7 @@
         "delay": "N/A",
         "thickness": "5 mm",
         "notes": "Baseline if SAH",
-        "delay_seconds": -20,
+        "delay_seconds": -10,
         "phase_type": "non-contrast",
         "coverage": "Vertex \u2192 Foramen magnum"
       },
@@ -2707,7 +2728,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.5-0.625 mm",
         "notes": "Submillimeter for 3D",
-        "delay_seconds": 30,
+        "delay_seconds": 20.0,
         "phase_type": "other",
         "coverage": "Skull base \u2192 Vertex"
       }
@@ -2737,7 +2758,8 @@
       "timing": "Bolus Tracking",
       "roi": "Aortic arch",
       "trigger": "150 HU",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 17.0
     },
     "series": [
       {
@@ -2747,7 +2769,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Arterial phase - caudocranial",
-        "delay_seconds": 30,
+        "delay_seconds": 20.0,
         "phase_type": "other",
         "coverage": "Aortic arch \u2192 Skull base"
       },
@@ -2758,7 +2780,7 @@
         "delay": "Immediate",
         "thickness": "0.625 mm",
         "notes": "Same bolus as neck - single acquisition",
-        "delay_seconds": 0,
+        "delay_seconds": 25.0,
         "phase_type": "other",
         "coverage": "Skull base \u2192 Vertex"
       }
@@ -2788,7 +2810,8 @@
       "timing": "Bolus Tracking",
       "roi": "Aortic arch",
       "trigger": "150 HU",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 20.0
     },
     "series": [
       {
@@ -2798,7 +2821,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Caudocranial",
-        "delay_seconds": 30,
+        "delay_seconds": 24.0,
         "phase_type": "other",
         "coverage": "Aortic arch \u2192 Skull base"
       }
@@ -2820,7 +2843,8 @@
       "agent": "Omnipaque 350",
       "volume": "75-100 mL",
       "flow_rate": "3-4 mL/s",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 21.0
     },
     "series": [
       {
@@ -2830,7 +2854,7 @@
         "delay": "N/A",
         "thickness": "5 mm",
         "notes": "Baseline",
-        "delay_seconds": -20,
+        "delay_seconds": -10,
         "phase_type": "non-contrast",
         "coverage": "Vertex \u2192 Foramen magnum"
       },
@@ -2875,7 +2899,7 @@
         "delay": "N/A",
         "thickness": "5 mm",
         "notes": "Angle parallel to hard palate",
-        "delay_seconds": -20,
+        "delay_seconds": 0,
         "phase_type": "non-contrast",
         "coverage": "Vertex \u2192 Foramen magnum"
       }
@@ -2897,7 +2921,8 @@
       "agent": "Omnipaque 350",
       "volume": "125 mL",
       "flow_rate": "3 mL/s",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 41.0
     },
     "series": [
       {
@@ -2932,7 +2957,8 @@
       "timing": "Dual phase: CTA Chest arterial + Portal venous AP",
       "roi": "Descending aorta",
       "trigger": "150 HU",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 31.0
     },
     "series": [
       {
@@ -2942,7 +2968,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Arterial phase",
-        "delay_seconds": 30,
+        "delay_seconds": 36.0,
         "phase_type": "other",
         "coverage": "Lung apices \u2192 Diaphragm"
       },
@@ -2987,7 +3013,7 @@
         "delay": "N/A",
         "thickness": "0.625-1 mm",
         "notes": "Submillimeter for ribs",
-        "delay_seconds": -20,
+        "delay_seconds": 0,
         "phase_type": "non-contrast",
         "coverage": "Lung apices \u2192 Costophrenic angles"
       },
@@ -3028,7 +3054,8 @@
       "timing": "Triple phase: NC + Arterial + Portal venous",
       "roi": "Abdominal aorta",
       "trigger": "150 HU",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 27.0
     },
     "series": [
       {
@@ -3038,7 +3065,7 @@
         "delay": "N/A",
         "thickness": "2.5 mm",
         "notes": "RAPID - hematoma",
-        "delay_seconds": -20,
+        "delay_seconds": -10,
         "phase_type": "non-contrast",
         "coverage": "Diaphragm \u2192 Pubic symphysis"
       },
@@ -3099,7 +3126,7 @@
         "delay": "N/A",
         "thickness": "5 mm",
         "notes": "Standard head",
-        "delay_seconds": -20,
+        "delay_seconds": 0,
         "phase_type": "non-contrast",
         "coverage": "Vertex \u2192 Foramen magnum"
       },
@@ -3110,7 +3137,7 @@
         "delay": "N/A",
         "thickness": "0.625 mm",
         "notes": "Submillimeter",
-        "delay_seconds": -20,
+        "delay_seconds": 0,
         "phase_type": "non-contrast",
         "coverage": "Skull base \u2192 T1"
       },
@@ -3121,7 +3148,7 @@
         "delay": "N/A",
         "thickness": "0.625 mm",
         "notes": "Submillimeter for 3D",
-        "delay_seconds": -20,
+        "delay_seconds": 0,
         "phase_type": "non-contrast",
         "coverage": "Frontal sinus \u2192 Mandible"
       }
@@ -3160,7 +3187,7 @@
         "delay": "N/A",
         "thickness": "5 mm",
         "notes": "Parallel to hard palate",
-        "delay_seconds": -20,
+        "delay_seconds": 0,
         "phase_type": "non-contrast",
         "coverage": "Vertex \u2192 Foramen magnum"
       },
@@ -3171,7 +3198,7 @@
         "delay": "N/A",
         "thickness": "0.625 mm",
         "notes": "Helical submillimeter",
-        "delay_seconds": -20,
+        "delay_seconds": 0,
         "phase_type": "non-contrast",
         "coverage": "Skull base \u2192 T1"
       }
@@ -3201,7 +3228,8 @@
       "timing": "Bolus Tracking",
       "roi": "Abdominal aorta or proximal to injury",
       "trigger": "150 HU",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 27.0
     },
     "series": [
       {
@@ -3211,7 +3239,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Arterial phase runoff",
-        "delay_seconds": 30,
+        "delay_seconds": 31.0,
         "phase_type": "arterial",
         "coverage": "Coverage as needed \u2192 Distal to injury"
       }
@@ -3247,7 +3275,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Caudocranial direction",
-        "delay_seconds": 20,
+        "delay_seconds": 25.0,
         "phase_type": "arterial",
         "coverage": "Diaphragm \u2192 Femoral heads"
       }
@@ -3293,7 +3321,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Caudocranial direction",
-        "delay_seconds": 15,
+        "delay_seconds": 20.0,
         "phase_type": "arterial",
         "coverage": "Lung apices \u2192 Adrenal glands"
       }
@@ -3339,7 +3367,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Caudocranial from feet to head",
-        "delay_seconds": 20,
+        "delay_seconds": 25.0,
         "phase_type": "arterial",
         "coverage": "Thoracic inlet \u2192 Pubic symphysis"
       }
@@ -3390,7 +3418,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Focus on abdominal wall",
-        "delay_seconds": 20,
+        "delay_seconds": 25.0,
         "phase_type": "arterial",
         "coverage": "Xiphoid \u2192 Pubic symphysis"
       }
@@ -3400,6 +3428,58 @@
         "series": "CTA Arterial",
         "phase": "Arterial (bolus tracked)",
         "coverage": "Mid-Liver to Greater Trochanters"
+      }
+    ]
+  },
+  {
+    "filepath": "ct/vascular/cta-head-and-neck-arch-to-vertex.md",
+    "title": "CTA Head and Neck (Arch to Vertex)",
+    "category": "Vascular",
+    "gantt": "```mermaid\n  ---\n  displayMode: compact\n  config:\n    theme: default\n    themeCSS: \" #Saline{ fill: #4ed5ff; stroke: #2094f3; } \"\n  ---\n    gantt\n      title CTA Head and Neck (Arch to Vertex) Timeline\n      dateFormat mm:ss\n      axisFormat %M:%S \n      \n      section Contrast Injection\n      Contrast (80-100 mL)    :active, contrast, 00:00, 17s\n      Saline          :active, saline, after contrast, 4s\n      section Head\n      CTA Head    :crit, scan1, after saline, 3s\n      section Neck\n      CTA Neck    :crit, scan2, after contrast, 5s\n  ```",
+    "contrast": {
+      "agent": "Isovue 370",
+      "volume": "80-100 mL",
+      "flow_rate": "4-5 mL/s",
+      "timing": "Bolus Tracking",
+      "roi": "Aortic arch",
+      "trigger": "150 HU",
+      "type": "IV Contrast",
+      "gantt_duration": 17.0
+    },
+    "series": [
+      {
+        "name": "CTA Neck",
+        "start": "Aortic arch",
+        "end": "Skull base",
+        "delay": "Bolus tracked",
+        "thickness": "0.625 mm",
+        "notes": "Arterial phase - caudocranial",
+        "delay_seconds": 20.0,
+        "phase_type": "other",
+        "coverage": "Aortic arch \u2192 Skull base"
+      },
+      {
+        "name": "CTA Head",
+        "start": "Skull base",
+        "end": "Vertex",
+        "delay": "Immediate",
+        "thickness": "0.625 mm",
+        "notes": "Same bolus as neck - single acquisition",
+        "delay_seconds": 25.0,
+        "phase_type": "other",
+        "coverage": "Skull base \u2192 Vertex"
+      }
+    ],
+    "summary": [
+      {
+        "series": "CTA Neck",
+        "phase": "Arterial (bolus tracked)",
+        "coverage": "Aortic arch to Skull base"
+      },
+      {
+        "series": "CTA Head",
+        "phase": "Contrast (Immediate delay)",
+        "coverage": "Skull base to Vertex"
       }
     ]
   },
@@ -3426,7 +3506,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Bilateral for comparison and variants",
-        "delay_seconds": 25,
+        "delay_seconds": 30.0,
         "phase_type": "arterial",
         "coverage": "Mid-Thigh \u2192 Toes"
       },
@@ -3478,7 +3558,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "May need slower table speed if severe PAD",
-        "delay_seconds": 35,
+        "delay_seconds": 45.0,
         "phase_type": "arterial",
         "coverage": "Renal arteries \u2192 Ankle"
       },
@@ -3489,7 +3569,7 @@
         "delay": "Immediately after CTA",
         "thickness": "0.625 mm",
         "notes": "Runoff phase to evaluate distal vessels",
-        "delay_seconds": 0,
+        "delay_seconds": 50.0,
         "phase_type": "other",
         "coverage": "Mid Thigh \u2192 Foot"
       }
@@ -3592,7 +3672,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Supine resting position",
-        "delay_seconds": 1,
+        "delay_seconds": 6.0,
         "phase_type": "other",
         "coverage": "L3 \u2192 Mid femur"
       },
@@ -3603,7 +3683,7 @@
         "delay": "Immediately after",
         "thickness": "0.625 mm",
         "notes": "Hips flexed 90 degrees - cycling position",
-        "delay_seconds": 0,
+        "delay_seconds": 11.0,
         "phase_type": "other",
         "coverage": "L3 \u2192 Mid femur"
       }
@@ -3644,7 +3724,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Focus on internal iliac branches",
-        "delay_seconds": 18,
+        "delay_seconds": 23.0,
         "phase_type": "arterial",
         "coverage": "Iliac crest \u2192 Lesser trochanters"
       }
@@ -3680,7 +3760,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Both legs neutral resting position",
-        "delay_seconds": 18,
+        "delay_seconds": 23.0,
         "phase_type": "other",
         "coverage": "Distal femur \u2192 Ankle"
       },
@@ -3691,7 +3771,7 @@
         "delay": "Immediately after",
         "thickness": "0.625 mm",
         "notes": "Patient actively plantarflexes both feet - point toes",
-        "delay_seconds": 0,
+        "delay_seconds": 28.0,
         "phase_type": "other",
         "coverage": "Distal femur \u2192 Ankle"
       }
@@ -3726,7 +3806,8 @@
       "timing": "Multi-phase: NC Head + CTA Neck + CTA CAP arms up + Post-contrast Head arms down",
       "roi": "Multiple ROIs",
       "trigger": "150 HU",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 37.0
     },
     "series": [
       {
@@ -3736,7 +3817,7 @@
         "delay": "N/A",
         "thickness": "5 mm",
         "notes": "Arms down - baseline",
-        "delay_seconds": -20,
+        "delay_seconds": -10,
         "phase_type": "non-contrast",
         "coverage": "Vertex \u2192 Foramen magnum"
       },
@@ -3747,7 +3828,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Arms down - carotid/vertebral",
-        "delay_seconds": 30,
+        "delay_seconds": 42.0,
         "phase_type": "other",
         "coverage": "Aortic arch \u2192 Vertex"
       },
@@ -3809,7 +3890,8 @@
       "timing": "Bolus Tracking",
       "roi": "Subclavian artery",
       "trigger": "150 HU",
-      "type": "IV Contrast"
+      "type": "IV Contrast",
+      "gantt_duration": 25.0
     },
     "series": [
       {
@@ -3819,7 +3901,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.625 mm",
         "notes": "Include arch through hand",
-        "delay_seconds": 30,
+        "delay_seconds": 30.0,
         "phase_type": "arterial",
         "coverage": "Aortic arch \u2192 Fingertips"
       }

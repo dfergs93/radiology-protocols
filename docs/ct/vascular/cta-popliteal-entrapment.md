@@ -108,6 +108,7 @@
 
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

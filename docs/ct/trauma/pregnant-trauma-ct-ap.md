@@ -97,6 +97,7 @@
       Portal Venous AP    :done, scan1, 01:10, 7s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

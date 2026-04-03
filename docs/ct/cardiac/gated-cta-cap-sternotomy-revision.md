@@ -106,6 +106,7 @@
       Flash AP    :crit, scan3, after scan1, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

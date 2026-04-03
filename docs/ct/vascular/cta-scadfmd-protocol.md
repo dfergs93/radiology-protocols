@@ -105,6 +105,7 @@
       CTA CAP    :crit, scan3, 00:45, 7s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

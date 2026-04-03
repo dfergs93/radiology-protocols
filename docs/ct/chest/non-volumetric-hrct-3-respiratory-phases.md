@@ -87,6 +87,7 @@
       Full Expiration    :done, scan3, 00:00, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

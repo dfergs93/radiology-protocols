@@ -99,6 +99,7 @@
       Contrast Neck    :done, scan1, 01:00, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

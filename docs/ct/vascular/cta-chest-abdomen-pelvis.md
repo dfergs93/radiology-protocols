@@ -106,6 +106,7 @@
       Vasculitis Delayed (optional)    :crit, scan3, 01:30, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

@@ -104,6 +104,7 @@
       Delayed CTA    :crit, scan2, 00:30, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

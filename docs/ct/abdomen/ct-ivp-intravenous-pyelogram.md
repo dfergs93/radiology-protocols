@@ -104,6 +104,7 @@
       Second acquisition                   :done, scan2, 09:00, 10s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

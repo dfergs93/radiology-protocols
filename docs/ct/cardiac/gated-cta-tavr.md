@@ -104,6 +104,7 @@
       Flash CTA AP    :crit, scan2, after scan1, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

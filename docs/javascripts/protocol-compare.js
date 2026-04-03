@@ -346,110 +346,139 @@ function displayComparison() {
   displayGanttComparison();
   displayContrastComparison();
   displaySeriesComparison();
-
-  // Reinitialize Mermaid for new diagrams
-  if (typeof mermaid !== 'undefined') {
-    mermaid.init(undefined, '.mermaid');
-  }
 }
 
 function displayGanttComparison() {
   const container = document.getElementById('gantt-container');
   container.innerHTML = '';
 
-  // Find the maximum duration across all protocols
-  const maxDuration = findMaxProtocolDuration();
-  console.log('Max protocol duration:', maxDuration);
-
   const grid = document.createElement('div');
   grid.style.display = 'flex';
   grid.style.flexDirection = 'column';
   grid.style.gap = '30px';
 
-  selectedProtocols.forEach(protocol => {
+  // Build all data objects — mirrors parseProtocolFromDOM() logic exactly
+  const protocolDataList = selectedProtocols.map(function (protocol) {
+    const isNC = !protocol.contrast || protocol.contrast.type === 'Non-contrast' || protocol.contrast.type === 'Calcium score' || protocol.contrast.agent === 'N/A';
+
+    // Contrast duration: from JSON injection table Duration field, fallback to 30s
+    let contrastDurationSeconds = 0;
+    if (!isNC && protocol.contrast && protocol.contrast.duration) {
+      const m = protocol.contrast.duration.match(/(\d+(?:\.\d+)?)/);
+      if (m) contrastDurationSeconds = parseFloat(m[1]);
+    }
+    if (!isNC && !contrastDurationSeconds) contrastDurationSeconds = 30;
+
+    // Saline: hardcoded 5s flush (≈ 20 mL at typical flow rate)
+    const salineDurationSeconds = 5;
+
+    const contrast = isNC ? null : {
+      volume: protocol.contrast.volume || '',
+      flowRate: protocol.contrast.flow_rate || '',
+      durationSeconds: contrastDurationSeconds,
+      timingMethod: protocol.contrast.timing || '',
+    };
+
+    const saline = isNC ? null : { durationSeconds: salineDurationSeconds };
+
+    // Build phases — mirrors parseProtocolFromDOM series loop
+    const NC_END_GAP = 5;
+    const phaseDuration = 5;
+    let lastPhaseEndTime = 0;
+
+    const phases = (protocol.series || []).map(function (s) {
+      // Skip scouts
+      if (/^scout/i.test((s.name || '').trim())) return null;
+
+      // Always infer phase type from series name (matches individual page behavior).
+      // Individual pages use inferPhaseType() exclusively — never a stored phase_type.
+      const phaseType = typeof window.inferPhaseType === 'function'
+        ? window.inferPhaseType(s.name)
+        : (s.phase_type || 'other');
+
+      let delaySeconds;
+      if (phaseType === 'non-contrast' && contrast !== null) {
+        // NC phase in a contrast study: bar ends NC_END_GAP seconds before injection
+        delaySeconds = -(phaseDuration + NC_END_GAP);
+      } else if (/immediate/i.test((s.delay || '').trim())) {
+        // "Immediate" means start right after the previous scan ends
+        delaySeconds = lastPhaseEndTime;
+      } else if (typeof window.parseDelaySeconds === 'function') {
+        delaySeconds = window.parseDelaySeconds(
+          s.delay != null ? String(s.delay) : (s.delay_seconds != null ? String(s.delay_seconds) : ''),
+          contrastDurationSeconds,
+          salineDurationSeconds
+        );
+      } else {
+        delaySeconds = (typeof s.delay_seconds === 'number' ? s.delay_seconds : 0);
+      }
+
+      lastPhaseEndTime = Math.max(lastPhaseEndTime, delaySeconds + phaseDuration);
+
+      const rawRange = s.coverage || ((s.start || '') + ' \u2192 ' + (s.end || ''));
+      return {
+        name: s.name || '',
+        range: (typeof window.inferCoverageLabel === 'function' ? window.inferCoverageLabel(rawRange) : rawRange) || rawRange,
+        delaySeconds: delaySeconds,
+        durationSeconds: phaseDuration,
+        type: phaseType,
+      };
+    }).filter(Boolean);
+
+    return {
+      protocol: protocol,
+      data: { contrast, saline, phases },
+    };
+  });
+
+  // Compute shared time extents so all diagrams use the same axis
+  var sharedMin = Infinity;
+  var sharedMax = -Infinity;
+  if (typeof window.computeTimeExtents === 'function') {
+    protocolDataList.forEach(function (item) {
+      var ext = window.computeTimeExtents(item.data);
+      if (ext.minTime < sharedMin) sharedMin = ext.minTime;
+      if (ext.maxTime > sharedMax) sharedMax = ext.maxTime;
+    });
+  }
+  var sharedExtents = (sharedMin !== Infinity)
+    ? { minTime: sharedMin, maxTime: sharedMax }
+    : null;
+
+  protocolDataList.forEach(function (item) {
+    const protocol = item.protocol;
+    const data = item.data;
+
     const col = document.createElement('div');
 
+    // Title with link
     const title = document.createElement('h4');
     const link = document.createElement('a');
-
-    let url = protocol.filepath.replace('.md', '/');
-    link.href = `/radiology-protocols/${url}`;  // Leading slash makes it absolute
-
+    const url = protocol.filepath.replace('.md', '/');
+    link.href = '/radiology-protocols/' + url;
     link.textContent = protocol.title;
     link.style.textDecoration = 'none';
     link.style.color = 'inherit';
-    link.addEventListener('mouseenter', () => {
-      link.style.textDecoration = 'underline';
-    });
-    link.addEventListener('mouseleave', () => {
-      link.style.textDecoration = 'none';
-    });
+    link.addEventListener('mouseenter', function () { link.style.textDecoration = 'underline'; });
+    link.addEventListener('mouseleave', function () { link.style.textDecoration = 'none'; });
     title.appendChild(link);
     col.appendChild(title);
 
-    if (protocol.gantt) {
-      const ganttDiv = document.createElement('div');
-      ganttDiv.className = 'mermaid';
+    // Render diagram with shared time axis
+    const diagramContainer = document.createElement('div');
+    col.appendChild(diagramContainer);
 
-      // Normalize the gantt diagram
-      let ganttContent = protocol.gantt.replace(/```mermaid\n?/, '').replace(/```$/, '');
-      ganttContent = normalizeGanttTimeline(ganttContent, maxDuration);
-
-      ganttDiv.textContent = ganttContent;
-      col.appendChild(ganttDiv);
+    if (typeof window.renderAcquisitionDiagram === 'function') {
+      window.renderAcquisitionDiagram(diagramContainer, data, sharedExtents);
     } else {
-      const noGantt = document.createElement('p');
-      noGantt.textContent = 'No timeline available';
-      noGantt.style.fontStyle = 'italic';
-      col.appendChild(noGantt);
+      diagramContainer.textContent = 'Diagram renderer not available';
+      diagramContainer.style.fontStyle = 'italic';
     }
 
     grid.appendChild(col);
   });
 
   container.appendChild(grid);
-}
-
-function findMaxProtocolDuration() {
-  let maxSeconds = 0;
-
-  selectedProtocols.forEach(protocol => {
-    if (!protocol.gantt) return;
-
-    // Extract all time values (mm:ss)
-    const timePattern = /(\d{1,2}):(\d{2})/g;
-    let match;
-
-    while ((match = timePattern.exec(protocol.gantt)) !== null) {
-      const minutes = parseInt(match[1]);
-      const seconds = parseInt(match[2]);
-      const totalSeconds = minutes * 60 + seconds;
-      maxSeconds = Math.max(maxSeconds, totalSeconds);
-    }
-  });
-
-  // Add small buffer (20 seconds) and convert to minutes, rounding up
-  const totalSeconds = maxSeconds + 20;
-  return Math.ceil(totalSeconds / 60);
-}
-
-function normalizeGanttTimeline(ganttContent, maxDuration) {
-  // Add a transparent spacer task at the end to extend timeline
-  const lines = ganttContent.split('\n');
-
-  // Find where to insert (before the closing, after last section)
-  const lastSectionIndex = lines.findLastIndex(line => line.trim().startsWith('section'));
-
-  if (lastSectionIndex !== -1) {
-    // Insert after the last task in the last section
-    const formattedTime = `${maxDuration.toString().padStart(2, '0')}:00`;
-    const spacerLine = `      Timeline end    :milestone, end, ${formattedTime}, 0s`;
-
-    // Find the end of gantt content (before closing)
-    lines.push(spacerLine);
-  }
-
-  return lines.join('\n');
 }
 
 function displayContrastComparison() {

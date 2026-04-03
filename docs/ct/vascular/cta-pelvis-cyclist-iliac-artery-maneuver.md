@@ -104,6 +104,7 @@
       CTA Hip Flexion    :crit, scan2, after saline2, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

@@ -105,6 +105,7 @@
       CTA Runoff    :done, scan2, 00:55, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

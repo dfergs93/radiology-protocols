@@ -84,6 +84,7 @@
       NC Chest    :done, scan1, 00:00, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

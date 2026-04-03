@@ -15,8 +15,8 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Calcium Score | Non-Contrast | Apex of heart to Base of heart |
-        | Gated CTA Chest | Arterial (bolus tracked) | Top of heart to Below heart |
+        | Calcium Score | Non-Contrast | Carina to Base of heart |
+        | Gated CTA Chest | Arterial (bolus tracked) |  Carina to Base of heart |
         | Delayed CAP | Contrast (80 sec delay from CTA) | Diaphragm to Femoral heads |
 
     === "Clinical Indications"
@@ -106,14 +106,15 @@
       Delayed CAP    :done, scan2, 01:40, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 
     | Series Name | Start Location | End Location | Delay | Slice Thickness | Notes |
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout | Thoracic inlet | Femoral heads | N/A | N/A | AP lateral |
-    | Calcium Score | Apex of heart to Base of heart | Non-Contrast | N/A | 2.5 mm/2.5 mm | Cardiac | 3 | Calcium scoring |
-    | Gated CTA Chest | Top of heart | Below heart | Bolus tracked | 0.5 mm | NO DOSE PULSING - retrospective all phases |
+    | Calcium Score | Carina | Base of heart | N/A | 2.5 mm | Calcium scoring |
+    | Gated CTA Chest | Carina| Base of heart | Bolus tracked | 0.5 mm | NO DOSE PULSING - retrospective all phases |
     | Delayed CAP | Diaphragm | Femoral heads | 90 sec | 0.625 mm | Access planning and coronaries |
 
 === "Technical Parameters"

@@ -102,6 +102,7 @@
       15 Minute Delay    :done, scan2, 15:00, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

@@ -99,6 +99,7 @@
       CTV Venous Phase    :done, scan1, 1:50, 8s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

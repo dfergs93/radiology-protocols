@@ -103,6 +103,7 @@
       Renal Delay    :done, scan2, 04:00, 7s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

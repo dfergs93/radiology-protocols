@@ -109,6 +109,7 @@
       Stent Delay    :crit, scan3, 00:40, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 

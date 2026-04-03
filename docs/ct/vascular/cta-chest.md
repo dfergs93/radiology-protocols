@@ -103,6 +103,7 @@
       CT Delayed (optional)    :crit, scan2, 00:40, 5s
   ```
 
+<div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
 
