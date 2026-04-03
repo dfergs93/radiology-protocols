@@ -63,13 +63,20 @@
       /non[\s-]contrast/i.test(s) ||
       /without/i.test(s) ||
       /unenhanced/i.test(s) ||
+      /calcium score/i.test(s) ||
       /\bnc\b/i.test(s) ||
       /\bpre\b/i.test(s)
     ) {
       return 'non-contrast';
     }
 
-    if (/arterial/i.test(s)) {
+    if (
+      /arterial/i.test(s) ||
+      /CTA */i.test(s) ||
+      /pancreatic/i.test(s) ||
+      /enteric/i.test(s) ||
+      /flash/i.test(s)
+    ) {
       return 'arterial';
     }
 
@@ -77,47 +84,109 @@
       return 'portal';
     }
 
-    if (/delayed|delay|nephrographic|excretory|equilibrium/i.test(s)) {
+    if (/delayed|delay|nephrographic|excretory|equilibrium|venogram/i.test(s)) {
       return 'delayed';
     }
 
     return 'other';
   }
 
-  // ─── 3. parseProtocolFromDOM ─────────────────────────────────────────────────
+  // ─── 3. inferCoverageLabel ─────────────────────────────────────────────────────
 
   /**
-   * Parse contrast and saline durations from the Mermaid Gantt source on the page.
-   * Must be called before mermaid.js renders (which replaces the source text with SVG).
+   * Map a verbose coverage string (e.g. "Diaphragm → Pubic symphysis") to a
+   * short anatomical region label (e.g. "Abdomen-Pelvis").
    *
-   * @param {Document|Element} root
-   * @returns {{ contrastDuration: number, salineDuration: number }}
+   * @param {string} range  - raw "start → end" or coverage string
+   * @returns {string}  short label
    */
-  function parseMermaidSource(root) {
-    const el = root.querySelector('code.mermaid, div.mermaid, pre.mermaid, code.language-mermaid');
-    if (!el) return { contrastDuration: 0, salineDuration: 0 };
+  function inferCoverageLabel(range) {
+    if (!range) return '';
+    const s = range.toLowerCase();
 
-    const lines = (el.textContent || '').split('\n');
-    let contrastDuration = 0;
-    let salineDuration = 0;
+    // ── Head / Brain ────────────────────────────────────────────────────────
+    if (/vertex/.test(s) && /(foramen magnum|skull base)/.test(s)) return 'Head';
+    if (/vertex/.test(s) && /skull base/.test(s)) return 'Head';
 
-    for (const line of lines) {
-      const trimmed = line.trim();
-      // Only process gantt task lines ending with Ns (e.g. ", 40s")
-      const durMatch = trimmed.match(/,\s*(\d+(?:\.\d+)?)s\s*$/i);
-      if (!durMatch) continue;
-      const dur = parseFloat(durMatch[1]);
+    // ── Face / Sinuses ──────────────────────────────────────────────────────
+    if (/frontal/.test(s) && /(maxillary|hard palate|mandible)/.test(s)) return 'Face';
+    if (/orbital/.test(s) && /maxillary/.test(s)) return 'Orbits';
 
-      if (/^contrast\b/i.test(trimmed) && trimmed.includes(':')) {
-        contrastDuration = dur;
-      }
-      if (/\bsaline\b/i.test(trimmed) && trimmed.includes(':')) {
-        salineDuration = dur;
-      }
-    }
+    // ── Temporal bone ───────────────────────────────────────────────────────
+    if (/eac/.test(s) && /(iac|petrous)/.test(s)) return 'Temporal Bone';
 
-    return { contrastDuration, salineDuration };
+    // ── Neck ────────────────────────────────────────────────────────────────
+    if (/skull base/.test(s) && /(carina|t1|thoracic inlet|sacrum)/.test(s)) return 'Neck';
+    if (/aortic arch/.test(s) && /(vertex|skull base)/.test(s)) return 'Neck';
+    if (/c7/.test(s) && /l1/.test(s)) return 'Spine';
+
+    // ── Spine ───────────────────────────────────────────────────────────────
+    if (/t12/.test(s) && /sacrum/.test(s)) return 'Spine';
+
+    // ── Heart ───────────────────────────────────────────────────────────────
+    if (/(lad|carina.*below|pulmonary vein|apex.*base|base.*apex)/.test(s)) return 'Heart';
+    if (/carina/.test(s) && /(below heart|costophrenic|mid heart)/.test(s)) return 'Heart';
+    if (/carina level/.test(s)) return 'Heart';
+
+    // ── Chest-Abdomen-Pelvis ────────────────────────────────────────────────
+    if (/(thoracic inlet|lung)/.test(s) && /(pubic|femur|trochanter|toes)/.test(s)) return 'Chest-Abdomen-Pelvis';
+    if (/diaphragm/.test(s) && /toes/.test(s)) return 'Abdomen-Pelvis-Runoff';
+    if (/above the diaphragm/.test(s) && /toes/.test(s)) return 'Chest-Abdomen-Pelvis-Runoff';
+
+    // ── Chest ───────────────────────────────────────────────────────────────
+    if (/(lung|thoracic inlet)/.test(s) && /(diaphragm|costophrenic|adrenal|carina)/.test(s)) return 'Chest';
+    if (/(lung|thoracic inlet)/.test(s) && /(below heart apex)/.test(s)) return 'Chest';
+
+    // ── Abdomen-Pelvis ──────────────────────────────────────────────────────
+    if (/diaphragm/.test(s) && /(pubic|symphysis|femur|femoral|trochanter)/.test(s)) return 'Abdomen-Pelvis';
+    if (/lung bases/.test(s) && /(pubic|symphysis)/.test(s)) return 'Abdomen-Pelvis';
+    if (/xiphoid/.test(s) && /pubic/.test(s)) return 'Abdomen-Pelvis';
+    if (/mid-liver/.test(s) && /(trochanter|femur)/.test(s)) return 'Abdomen-Pelvis';
+
+    // ── Abdomen ─────────────────────────────────────────────────────────────
+    if (/diaphragm/.test(s) && /(iliac|kidney)/.test(s)) return 'Abdomen';
+
+    // ── Renal ───────────────────────────────────────────────────────────────
+    if (/kidney/.test(s)) return 'Renal';
+    if (/renal/.test(s)) return 'Renal';
+
+    // ── Pelvis ──────────────────────────────────────────────────────────────
+    if (/iliac/.test(s) && /(bladder|femur|trochanter|proximal)/.test(s)) return 'Pelvis';
+    if (/l3/.test(s) && /femur/.test(s)) return 'Pelvis';
+
+    // ── Shoulder ────────────────────────────────────────────────────────────
+    if (/(acromion|scapula)/.test(s) && /humerus/.test(s)) return 'Shoulder';
+
+    // ── Elbow ───────────────────────────────────────────────────────────────
+    if (/humerus/.test(s) && /(radius|ulna)/.test(s)) return 'Elbow';
+
+    // ── Wrist / Hand ────────────────────────────────────────────────────────
+    if (/(radius|ulna|carpus)/.test(s) && /(finger|carpus|hand)/.test(s)) return 'Wrist/Hand';
+
+    // ── Upper extremity runoff ──────────────────────────────────────────────
+    if (/aortic arch/.test(s) && /finger/.test(s)) return 'Upper Extremity Runoff';
+
+    // ── Knee ────────────────────────────────────────────────────────────────
+    if (/femur/.test(s) && /(tib|fib|ankle)/.test(s)) return 'Knee';
+
+    // ── Ankle / Foot ────────────────────────────────────────────────────────
+    if (/(tib|fib|calcaneus|hindfoot)/.test(s) && /(toes|hindfoot|foot)/.test(s)) return 'Ankle/Foot';
+
+    // ── Lower extremity runoff ──────────────────────────────────────────────
+    if (/(thigh)/.test(s) && /(toes|foot|ankle)/.test(s)) return 'Thigh Lower Extremity Runoff';
+    if (/(knee)/.test(s) && /(toes|foot|ankle)/.test(s)) return 'Knee Lower Extremity Runoff';
+    if (/(renal arteries)/.test(s) && /(toes|foot|ankle)/.test(s)) return 'Abdominal Lower Extremity Runoff';
+
+    // ── Stent / other special ───────────────────────────────────────────────
+    if (/stent/.test(s)) return 'Stent';
+    if (/injury/.test(s) || /region/.test(s) || /joint/.test(s)) return 'Region of Interest';
+    if (/n\/a/.test(s)) return '';
+
+    // Fallback: return original
+    return range;
   }
+
+  // ─── 4. parseProtocolFromDOM ─────────────────────────────────────────────────
 
   /**
    * Parse injection and series data from the rendered MkDocs page DOM.
@@ -128,9 +197,9 @@
   function parseProtocolFromDOM(pageRoot) {
     const root = pageRoot || document;
 
-    // Read Mermaid gantt source BEFORE mermaid.js renders it to SVG.
-    // This is the authoritative source for contrast duration and saline flush duration.
-    const gantt = parseMermaidSource(root);
+    // Saline flush duration: assumed 5s (≈ 20 mL at typical 4 mL/s flow rate).
+    // No longer read from Mermaid gantt source.
+    const SALINE_DURATION_SECONDS = 5;
 
     function findTabContent(labelText) {
       const labels = Array.from(root.querySelectorAll('label'));
@@ -214,17 +283,15 @@
       if (durMatch) durationSeconds = parseFloat(durMatch[1]);
 
       if (agent && !/^n\/a$/i.test(agent.trim())) {
-        // Prefer injection table Duration; fall back to Mermaid Gantt; then 30s default
+        // Prefer injection table Duration; fall back to 30s default
         contrast = {
           volume, flowRate,
-          durationSeconds: durationSeconds || gantt.contrastDuration || 30,
+          durationSeconds: durationSeconds || 30,
           timingMethod,
         };
 
-        // Saline: always from Mermaid Gantt (not present in injection table)
-        if (gantt.salineDuration > 0) {
-          saline = { durationSeconds: gantt.salineDuration };
-        }
+        // Saline: hardcoded 5s flush (≈ 20 mL at typical flow rate)
+        saline = { durationSeconds: SALINE_DURATION_SECONDS };
       }
     }
 
@@ -275,9 +342,10 @@
 
         lastPhaseEndTime = Math.max(lastPhaseEndTime, delaySeconds + phaseDuration);
 
+        const rawRange = `${start} → ${end}`;
         phases.push({
           name: seriesName,
-          range: `${start} → ${end}`,
+          range: inferCoverageLabel(rawRange) || rawRange,
           delaySeconds,
           durationSeconds: phaseDuration,
           type,
@@ -292,22 +360,22 @@
 
   const PHASE_COLORS = {
     'non-contrast': '#9e9e9e',
-    'arterial':     '#f44336',
-    'portal':       '#2196f3',
-    'delayed':      '#1565c0',
-    'other':        '#9e9e9e',
+    'arterial': '#f44336',
+    'portal': '#2196f3',
+    'delayed': '#1565c0',
+    'other': '#9e9e9e',
   };
 
   const DARK_PHASES = new Set(['arterial', 'portal', 'delayed']);
 
-  const ROW_HEIGHT   = 28;
-  const BAR_HEIGHT   = 18;
+  const ROW_HEIGHT = 28;
+  const BAR_HEIGHT = 18;
   const BAR_Y_OFFSET = 5;
-  const LEFT_PAD     = 8;
-  const RIGHT_PAD    = 8;
-  const TOP_PAD      = 20;
-  const BOTTOM_PAD   = 30;
-  const LABEL_WIDTH  = 160;
+  const LEFT_PAD = 8;
+  const RIGHT_PAD = 8;
+  const TOP_PAD = 20;
+  const BOTTOM_PAD = 30;
+  const LABEL_WIDTH = 100;
   const SVG_TOTAL_WIDTH = 800;
 
   const SVG_NS = 'http://www.w3.org/2000/svg';
@@ -442,7 +510,7 @@
       parentEl.appendChild(rect);
 
       if (labelText) {
-        const inside = width >= 40;
+        const inside = width >= 60;
         const textX = inside ? x + width / 2 : x + width + 4;
         const textAnchor = inside ? 'middle' : 'start';
         const textFill = labelColor || '#fff';
@@ -475,9 +543,9 @@
     function renderRowLabel(parentEl, rowIndex, labelText) {
       const y = TOP_PAD + rowIndex * ROW_HEIGHT + ROW_HEIGHT / 2 + 4;
       const text = createSVGEl('text', {
-        x: LEFT_PAD + LABEL_WIDTH - 8,
+        x: LEFT_PAD,
         y,
-        'text-anchor': 'end',
+        'text-anchor': 'start',
         'font-size': 11,
         fill: 'currentColor',
         'font-family': 'inherit',
@@ -520,7 +588,7 @@
         const barX = xAtTime(ph.delaySeconds);
         const barW = ph.durationSeconds * pixelsPerSecond;
         const fill = PHASE_COLORS[ph.type] || PHASE_COLORS.other;
-        const textColor = DARK_PHASES.has(ph.type) ? '#fff' : '#333';
+        const textColor = DARK_PHASES.has(ph.type) ? '#333' : '#333';
         renderBar(svg, barX, rowY, barW, BAR_HEIGHT, fill, ph.name, textColor);
       }
 
@@ -535,7 +603,7 @@
     // Horizontal axis line
     const axisLine = createSVGEl('line', {
       x1: axisXStart, y1: axisY,
-      x2: axisXEnd,   y2: axisY,
+      x2: axisXEnd, y2: axisY,
       stroke: 'currentColor',
       'stroke-width': 1,
       opacity: 0.4,
@@ -543,7 +611,7 @@
     svg.appendChild(axisLine);
 
     // Tick interval
-    const tickInterval = 10;
+    const tickInterval = maxTime > 120 ? 30 : 10;
 
     // Ticks and labels
     const firstTick = Math.ceil(minTime / tickInterval) * tickInterval;
@@ -608,10 +676,11 @@
 
   // ─── Expose globals ───────────────────────────────────────────────────────────
 
-  window.parseDelaySeconds        = parseDelaySeconds;
-  window.inferPhaseType           = inferPhaseType;
-  window.parseProtocolFromDOM     = parseProtocolFromDOM;
-  window.computeTimeExtents       = computeTimeExtents;
+  window.parseDelaySeconds = parseDelaySeconds;
+  window.inferPhaseType = inferPhaseType;
+  window.inferCoverageLabel = inferCoverageLabel;
+  window.parseProtocolFromDOM = parseProtocolFromDOM;
+  window.computeTimeExtents = computeTimeExtents;
   window.renderAcquisitionDiagram = renderAcquisitionDiagram;
 
 })();

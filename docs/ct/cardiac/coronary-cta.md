@@ -48,6 +48,7 @@
         | Agent | Isovue 370 |
         | Volume | 1.1 mL/kg |
         | Flow Rate | 4-5 mL/s |
+        | Duration | 18s |
         | Timing Method | Bolus Tracking |
         | ROI Placement | Ascending aorta |
         | Trigger (HU) | 200 HU |

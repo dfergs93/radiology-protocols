@@ -357,35 +357,77 @@ function displayGanttComparison() {
   grid.style.flexDirection = 'column';
   grid.style.gap = '30px';
 
-  // Build all data objects first so we can compute a shared time axis
-  const protocolDataList = selectedProtocols.map(function(protocol) {
-    const isNC = !protocol.contrast || protocol.contrast.type === 'Non-contrast' || protocol.contrast.agent === 'N/A';
-    const contrastDurationSeconds = isNC ? 0 : (parseInt(protocol.contrast.duration) || 30);
+  // Build all data objects — mirrors parseProtocolFromDOM() logic exactly
+  const protocolDataList = selectedProtocols.map(function (protocol) {
+    const isNC = !protocol.contrast || protocol.contrast.type === 'Non-contrast' || protocol.contrast.type === 'Calcium score' || protocol.contrast.agent === 'N/A';
+
+    // Contrast duration: from JSON injection table Duration field, fallback to 30s
+    let contrastDurationSeconds = 0;
+    if (!isNC && protocol.contrast && protocol.contrast.duration) {
+      const m = protocol.contrast.duration.match(/(\d+(?:\.\d+)?)/);
+      if (m) contrastDurationSeconds = parseFloat(m[1]);
+    }
+    if (!isNC && !contrastDurationSeconds) contrastDurationSeconds = 30;
+
+    // Saline: hardcoded 5s flush (≈ 20 mL at typical flow rate)
+    const salineDurationSeconds = 5;
+
+    const contrast = isNC ? null : {
+      volume: protocol.contrast.volume || '',
+      flowRate: protocol.contrast.flow_rate || '',
+      durationSeconds: contrastDurationSeconds,
+      timingMethod: protocol.contrast.timing || '',
+    };
+
+    const saline = isNC ? null : { durationSeconds: salineDurationSeconds };
+
+    // Build phases — mirrors parseProtocolFromDOM series loop
+    const NC_END_GAP = 5;
+    const phaseDuration = 5;
+    let lastPhaseEndTime = 0;
+
+    const phases = (protocol.series || []).map(function (s) {
+      // Skip scouts
+      if (/^scout/i.test((s.name || '').trim())) return null;
+
+      // Always infer phase type from series name (matches individual page behavior).
+      // Individual pages use inferPhaseType() exclusively — never a stored phase_type.
+      const phaseType = typeof window.inferPhaseType === 'function'
+        ? window.inferPhaseType(s.name)
+        : (s.phase_type || 'other');
+
+      let delaySeconds;
+      if (phaseType === 'non-contrast' && contrast !== null) {
+        // NC phase in a contrast study: bar ends NC_END_GAP seconds before injection
+        delaySeconds = -(phaseDuration + NC_END_GAP);
+      } else if (/immediate/i.test((s.delay || '').trim())) {
+        // "Immediate" means start right after the previous scan ends
+        delaySeconds = lastPhaseEndTime;
+      } else if (typeof window.parseDelaySeconds === 'function') {
+        delaySeconds = window.parseDelaySeconds(
+          s.delay != null ? String(s.delay) : (s.delay_seconds != null ? String(s.delay_seconds) : ''),
+          contrastDurationSeconds,
+          salineDurationSeconds
+        );
+      } else {
+        delaySeconds = (typeof s.delay_seconds === 'number' ? s.delay_seconds : 0);
+      }
+
+      lastPhaseEndTime = Math.max(lastPhaseEndTime, delaySeconds + phaseDuration);
+
+      const rawRange = s.coverage || ((s.start || '') + ' \u2192 ' + (s.end || ''));
+      return {
+        name: s.name || '',
+        range: (typeof window.inferCoverageLabel === 'function' ? window.inferCoverageLabel(rawRange) : rawRange) || rawRange,
+        delaySeconds: delaySeconds,
+        durationSeconds: phaseDuration,
+        type: phaseType,
+      };
+    }).filter(Boolean);
 
     return {
       protocol: protocol,
-      data: {
-        contrast: isNC ? null : {
-          volume: protocol.contrast.volume || '',
-          flowRate: protocol.contrast.flow_rate || '',
-          durationSeconds: contrastDurationSeconds
-        },
-        saline: null,
-        phases: (protocol.series || []).map(function(s) {
-          const phaseType = s.phase_type || 'other';
-          // NC phases: bar ends 5s before injection (5s bar + 5s gap = -10s offset)
-          const delaySeconds = (phaseType === 'non-contrast')
-            ? -(5 + 5)
-            : (typeof s.delay_seconds === 'number' ? s.delay_seconds : 0);
-          return {
-            name: s.name || '',
-            range: s.coverage || ((s.start || '') + ' \u2192 ' + (s.end || '')),
-            delaySeconds: delaySeconds,
-            durationSeconds: 5,
-            type: phaseType
-          };
-        })
-      }
+      data: { contrast, saline, phases },
     };
   });
 
@@ -393,7 +435,7 @@ function displayGanttComparison() {
   var sharedMin = Infinity;
   var sharedMax = -Infinity;
   if (typeof window.computeTimeExtents === 'function') {
-    protocolDataList.forEach(function(item) {
+    protocolDataList.forEach(function (item) {
       var ext = window.computeTimeExtents(item.data);
       if (ext.minTime < sharedMin) sharedMin = ext.minTime;
       if (ext.maxTime > sharedMax) sharedMax = ext.maxTime;
@@ -403,7 +445,7 @@ function displayGanttComparison() {
     ? { minTime: sharedMin, maxTime: sharedMax }
     : null;
 
-  protocolDataList.forEach(function(item) {
+  protocolDataList.forEach(function (item) {
     const protocol = item.protocol;
     const data = item.data;
 
@@ -417,8 +459,8 @@ function displayGanttComparison() {
     link.textContent = protocol.title;
     link.style.textDecoration = 'none';
     link.style.color = 'inherit';
-    link.addEventListener('mouseenter', function() { link.style.textDecoration = 'underline'; });
-    link.addEventListener('mouseleave', function() { link.style.textDecoration = 'none'; });
+    link.addEventListener('mouseenter', function () { link.style.textDecoration = 'underline'; });
+    link.addEventListener('mouseleave', function () { link.style.textDecoration = 'none'; });
     title.appendChild(link);
     col.appendChild(title);
 

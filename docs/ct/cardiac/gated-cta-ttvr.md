@@ -15,7 +15,7 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Gated CTA Chest | Arterial (bolus tracked) | Top of heart to Below heart |
+        | Gated CTA Chest | Arterial (bolus tracked) | Carina to Base of heart |
         | Delayed CAP | Contrast (90 sec delay from CTA) | Diaphragm to Femoral heads |
 
     === "Clinical Indications"
@@ -112,7 +112,7 @@
     | Series Name | Start Location | End Location | Delay | Slice Thickness | Notes |
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout | Thoracic inlet | Femoral heads | N/A | N/A | AP lateral |
-    | Gated CTA Chest | Top of heart | Below heart | Bolus tracked | 0.5 mm | NO DOSE PULSING - all phases |
+    | Gated CTA Chest |  Carina | Base of heart | Bolus tracked | 0.5 mm | NO DOSE PULSING - all phases |
     | Delayed CAP | Diaphragm | Femoral heads | 90 sec | 0.625 mm | Access planning |
 
 === "Technical Parameters"
