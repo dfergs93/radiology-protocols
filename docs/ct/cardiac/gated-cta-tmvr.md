@@ -61,7 +61,7 @@
 
     === "Technologist Notes"
 
-        - Gated CHEST with NO DOSE PULSING (full dose all phases) + delayed 90 sec CAP. TMVR post-processing required
+        - Gated CHEST with NO DOSE PULSING (full dose all phases) + delayed 80 sec CAP. TMVR post-processing required
 
     === "Nursing Notes"
 
@@ -90,7 +90,7 @@
     | Scout | Thoracic inlet | Femoral heads | N/A | N/A | AP lateral |
     | Calcium Score | Carina | Base of heart | N/A | 2.5 mm | Calcium scoring |
     | Gated CTA Chest | Carina| Base of heart | Bolus tracked | 0.5 mm | NO DOSE PULSING - retrospective all phases |
-    | Delayed CAP | Diaphragm | Femoral heads | 90 sec | 0.625 mm | Access planning and coronaries |
+    | Delayed CAP | Diaphragm | Femoral heads | 80 sec | 0.625 mm | Access planning and coronaries |
 
 === "Technical Parameters"
 

@@ -125,7 +125,7 @@
 
     // ── Heart ───────────────────────────────────────────────────────────────
     if (/(lad|carina.*below|pulmonary vein|apex.*base|base.*apex)/.test(s)) return 'Heart';
-    if (/carina/.test(s) && /(below heart|costophrenic|mid heart)/.test(s)) return 'Heart';
+    if (/carina/.test(s) && /(below heart|base of heart|costophrenic|mid heart)/.test(s)) return 'Heart';
     if (/carina level/.test(s)) return 'Heart';
 
     // ── Chest-Abdomen-Pelvis ────────────────────────────────────────────────
@@ -510,10 +510,11 @@
       parentEl.appendChild(rect);
 
       if (labelText) {
-        const inside = width >= 60;
+        const inside = width >= 70;
         const textX = inside ? x + width / 2 : x + width + 4;
         const textAnchor = inside ? 'middle' : 'start';
-        const textFill = labelColor || '#fff';
+        // Use currentColor when outside the bar so it adapts to light/dark mode
+        const textFill = inside ? (labelColor || '#fff') : 'currentColor';
 
         const text = createSVGEl('text', {
           x: textX,
@@ -588,7 +589,7 @@
         const barX = xAtTime(ph.delaySeconds);
         const barW = ph.durationSeconds * pixelsPerSecond;
         const fill = PHASE_COLORS[ph.type] || PHASE_COLORS.other;
-        const textColor = DARK_PHASES.has(ph.type) ? '#333' : '#333';
+        const textColor = DARK_PHASES.has(ph.type) ? '#fff' : '#333';
         renderBar(svg, barX, rowY, barW, BAR_HEIGHT, fill, ph.name, textColor);
       }
 
