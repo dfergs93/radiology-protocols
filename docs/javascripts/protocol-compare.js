@@ -372,12 +372,17 @@ function displayGanttComparison() {
         },
         saline: null,
         phases: (protocol.series || []).map(function(s) {
+          const phaseType = s.phase_type || 'other';
+          // NC phases: bar ends 5s before injection (5s bar + 5s gap = -10s offset)
+          const delaySeconds = (phaseType === 'non-contrast')
+            ? -(5 + 5)
+            : (typeof s.delay_seconds === 'number' ? s.delay_seconds : 0);
           return {
             name: s.name || '',
             range: s.coverage || ((s.start || '') + ' \u2192 ' + (s.end || '')),
-            delaySeconds: typeof s.delay_seconds === 'number' ? s.delay_seconds : 0,
+            delaySeconds: delaySeconds,
             durationSeconds: 5,
-            type: s.phase_type || 'other'
+            type: phaseType
           };
         })
       }

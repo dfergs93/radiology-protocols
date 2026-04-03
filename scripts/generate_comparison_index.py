@@ -123,20 +123,45 @@ def infer_phase_type(series_name):
     return 'other'
 
 
-def compute_delay_seconds(delay_str, series_name, contrast):
+def extract_gantt_durations(content):
+    """Extract contrast and saline durations (seconds) from the mermaid gantt source.
+    Returns (contrast_seconds, saline_seconds).
+    """
+    gantt_match = re.search(r'```mermaid(.*?)```', content, re.DOTALL)
+    if not gantt_match:
+        return 0, 0
+    contrast_secs = 0
+    saline_secs = 0
+    for line in gantt_match.group(1).split('\n'):
+        stripped = line.strip()
+        if ':' not in stripped:
+            continue
+        m = re.search(r',\s*(\d+(?:\.\d+)?)s\s*$', stripped, re.IGNORECASE)
+        if not m:
+            continue
+        dur = float(m.group(1))
+        if re.match(r'contrast\b', stripped, re.IGNORECASE):
+            contrast_secs = dur
+        elif 'saline' in stripped.lower():
+            saline_secs = dur
+    return contrast_secs, saline_secs
+
+
+def compute_delay_seconds(delay_str, series_name, contrast, saline_seconds=0, last_phase_end=0):
     """Compute delay_seconds for a series entry.
 
-    NC phases get -20 (visual offset) only if protocol has contrast.
-    Bolus track → injection duration seconds (fallback 30).
-    Immediate → 0.
+    NC phases in contrast protocols: bar ends 5s before injection (offset = -(5+5) = -10).
+    Bolus track → injection duration + saline flush duration.
+    Immediate → end time of the previous phase (sequential).
     N/A or empty → 0.
-    Otherwise extract first number from delay string.
+    Otherwise extract first integer from delay string.
     """
-    # NC phases get -20 visual offset only if protocol has contrast
-    # (offset anchors NC phase relative to injection start)
+    PHASE_DURATION = 5  # assumed bar duration for sequential tracking
+    NC_END_GAP = 5      # seconds NC phase ends before injection start
+
     if is_nc_phase(series_name):
         if contrast and contrast.get('type', '').lower() != 'non-contrast' and contrast.get('agent', '').upper() not in ('N/A', 'NONE', ''):
-            return -20
+            return -(PHASE_DURATION + NC_END_GAP)
         return 0
 
     if not delay_str or delay_str.strip().upper() == 'N/A':
@@ -144,15 +169,13 @@ def compute_delay_seconds(delay_str, series_name, contrast):
 
     delay_lower = delay_str.lower()
 
-    if 'bolus track' in delay_lower or 'bolus-track' in delay_lower:
-        duration_str = contrast.get('duration', '')
-        secs = parse_duration_seconds(duration_str)
-        return secs if secs is not None else 30
+    if re.search(r'bolus[\s-]*track', delay_lower):
+        inj_dur = parse_duration_seconds(contrast.get('duration', '')) or contrast.get('gantt_duration', 0) or 30
+        return inj_dur + saline_seconds
 
     if 'immediate' in delay_lower:
-        return 0
+        return last_phase_end
 
-    # Extract first number
     m = re.search(r'(\d+)', delay_str)
     if m:
         return int(m.group(1))
@@ -160,43 +183,44 @@ def compute_delay_seconds(delay_str, series_name, contrast):
     return 0
 
 
-def extract_series_info(content, contrast):
+def extract_series_info(content, contrast, saline_seconds=0):
     """Extract acquisition series information from table"""
     series = []
-
-    # Split content into lines
     lines = content.split('\n')
-
     in_series_table = False
+    last_phase_end = 0
+    phase_duration = 5  # default bar duration for sequential timing
 
     for i, line in enumerate(lines):
-        # Look for the Series Acquisition table header
         if '| Series Name |' in line or '| **Series Name** |' in line:
             in_series_table = True
             print(f"  Found series table header at line {i}")
             continue
 
-        # Skip separator line
         if in_series_table and '|:---' in line:
             continue
 
-        # End of table (empty line or start of new section)
         if in_series_table and (not line.strip() or (line.strip() and not line.strip().startswith('|'))):
             in_series_table = False
             print(f"  End of series table at line {i}")
             break
 
-        # Process data rows
         if in_series_table and line.strip().startswith('|'):
             cells = [c.strip() for c in line.split('|')]
-            cells = [c for c in cells if c]  # Remove empty elements
+            cells = [c for c in cells if c]
 
             if len(cells) >= 5:
                 series_name = cells[0].replace('**', '').strip()
 
-                # Skip scout
-                if series_name.lower() != 'scout':
+                if not series_name.lower().startswith('scout'):
                     delay_str = cells[3]
+                    delay_secs = compute_delay_seconds(
+                        delay_str, series_name, contrast,
+                        saline_seconds=saline_seconds,
+                        last_phase_end=last_phase_end,
+                    )
+                    last_phase_end = max(last_phase_end, delay_secs + phase_duration)
+
                     series_info = {
                         'name': series_name,
                         'start': cells[1],
@@ -204,7 +228,7 @@ def extract_series_info(content, contrast):
                         'delay': delay_str,
                         'thickness': cells[4],
                         'notes': cells[5] if len(cells) > 5 else '',
-                        'delay_seconds': compute_delay_seconds(delay_str, series_name, contrast),
+                        'delay_seconds': delay_secs,
                         'phase_type': infer_phase_type(series_name),
                     }
                     series_info['coverage'] = f"{series_info['start']} → {series_info['end']}"
@@ -288,8 +312,12 @@ def generate_comparison_index():
         protocol = extract_protocol_metadata(content, md_file.relative_to('docs'))
         protocol['gantt'] = extract_gantt_diagram(content)
         contrast = extract_contrast_info(content)
+        gantt_contrast_secs, saline_seconds = extract_gantt_durations(content)
+        # Supplement injection table duration with gantt value if table row is absent
+        if gantt_contrast_secs and not contrast.get('duration'):
+            contrast['gantt_duration'] = gantt_contrast_secs
         protocol['contrast'] = contrast
-        protocol['series'] = extract_series_info(content, contrast)
+        protocol['series'] = extract_series_info(content, contrast, saline_seconds=saline_seconds)
         protocol['summary'] = extract_acquisition_summary(content)
 
         protocols.append(protocol)

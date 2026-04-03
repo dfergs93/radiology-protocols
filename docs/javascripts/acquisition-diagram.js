@@ -16,19 +16,22 @@
    * @param {number} injectionDurationSeconds  - used for bolus-track fallback
    * @returns {number}
    */
-  function parseDelaySeconds(delayStr, injectionDurationSeconds) {
+  function parseDelaySeconds(delayStr, injectionDurationSeconds, salineDurationSeconds) {
     if (delayStr == null || delayStr === '' || /^n\/a$/i.test(delayStr.trim())) {
       return 0;
     }
 
     const s = delayStr.trim();
 
-    // Bolus track
+    // Bolus track: scan starts after injection + saline flush completes
     if (/bolus[\s-]*track(ed)?/i.test(s)) {
-      const dur = injectionDurationSeconds && injectionDurationSeconds > 0
+      const injDur = injectionDurationSeconds && injectionDurationSeconds > 0
         ? injectionDurationSeconds
         : 30;
-      return dur;
+      const salDur = salineDurationSeconds && salineDurationSeconds > 0
+        ? salineDurationSeconds
+        : 0;
+      return injDur + salDur;
     }
 
     // Immediate
@@ -232,6 +235,9 @@
     if (seriesBlock) {
       const rows = parseTable(seriesBlock);
       const injDur = contrast ? contrast.durationSeconds : 0;
+      const salDur = saline ? saline.durationSeconds : 0;
+      // NC phase ends this many seconds before injection starts
+      const NC_END_GAP = 5;
       let lastPhaseEndTime = 0;
 
       for (const row of rows) {
@@ -253,20 +259,20 @@
         const end = col(['end location', 'end']);
         const delay = col(['delay']);
 
+        const phaseDuration = 5;
         const type = inferPhaseType(seriesName);
         let delaySeconds;
 
         if (type === 'non-contrast' && contrast !== null) {
-          // NC phase in a contrast study: offset before injection
-          delaySeconds = -20;
+          // NC phase in a contrast study: bar ends NC_END_GAP seconds before injection
+          delaySeconds = -(phaseDuration + NC_END_GAP);
         } else if (/immediate/i.test(delay.trim())) {
           // "Immediate" means start right after the previous scan ends
           delaySeconds = lastPhaseEndTime;
         } else {
-          delaySeconds = parseDelaySeconds(delay, injDur);
+          delaySeconds = parseDelaySeconds(delay, injDur, salDur);
         }
 
-        const phaseDuration = 5;
         lastPhaseEndTime = Math.max(lastPhaseEndTime, delaySeconds + phaseDuration);
 
         phases.push({
@@ -341,8 +347,14 @@
         maxTime = Math.max(maxTime, ph.delaySeconds + ph.durationSeconds);
       }
     } else {
-      const hasNC = (phases || []).some(p => p.type === 'non-contrast');
-      minTime = hasNC ? -20 : 0;
+      // Derive minTime from actual NC phase start positions (with 5s visual margin)
+      const ncPhases = (phases || []).filter(p => p.type === 'non-contrast');
+      if (ncPhases.length > 0) {
+        const earliestNC = Math.min(...ncPhases.map(p => p.delaySeconds));
+        minTime = earliestNC - 5;
+      } else {
+        minTime = 0;
+      }
       maxTime = contrast.durationSeconds + (saline ? saline.durationSeconds : 0) + 10;
       for (const ph of (phases || [])) {
         if (ph.type !== 'non-contrast') {

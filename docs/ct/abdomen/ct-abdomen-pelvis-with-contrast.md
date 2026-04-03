@@ -111,7 +111,7 @@
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout/Topogram | Diaphragm | Pubic symphysis | N/A | N/A | AP and lateral |
     | Portal Venous Phase | Diaphragm | Pubic symphysis | 70 sec | 0.625 mm | Standard portal venous timing |
-    | Renal Delay | 1-2cm above and below kidneys | 300 sec | 0.625 mm | Renal Delay series |
+    | Renal Delay | 1-2cm above and below kidneys | 1-2cm above and below kidneys | 300 sec | 0.625 mm | Renal Delay series |
 
 === "Technical Parameters"
 
