@@ -53,8 +53,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -80,28 +78,6 @@
         - Arms fully raised
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CTA Chest Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (100 mL)    :active, contrast, 00:00, 20s
-      Saline          :active, saline, after contrast, 5s
-      section Chest
-      CTA Arterial Chest    :crit, scan1, after saline, 5s
-      CT Delayed (optional)    :crit, scan2, 00:40, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -129,7 +105,6 @@
     | Axial | Arterial | Chest | 2.5 mm/2.5 mm | Lung | 3 | Lung window for parenchyma |
     | Coronal | Arterial | Chest | 2.5 mm/2.5 mm | Vascular | 3 | MIP coronal great vessels |
     | Sagittal | Arterial | Chest | 2.5 mm/2.5 mm | Vascular | 3 | MIP sagittal aortic arch |
-
 
 ### Additional Reconstructions
 

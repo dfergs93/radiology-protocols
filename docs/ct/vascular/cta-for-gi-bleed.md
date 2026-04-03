@@ -55,8 +55,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -82,28 +80,6 @@
         - Arms raised to avoid artifacts. Fast table speed to cover area quickly in arterial phase
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CTA for GI Bleed Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (125 mL)    :active, contrast, 00:00, 20s
-      Saline          :active, saline, after contrast, 4s
-      section Other
-      Arterial Phase    :crit, scan1, 00:25, 7s
-      Delayed Phase    :done, scan3, 01:30, 7s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -131,7 +107,6 @@
     | Axial | Arterial | Full AP | 2.5 mm/2.5 mm | Standard | 3 | Look for arterial blush/extravasation |
     | Axial | Delayed | Full AP | 2.5 mm/2.5 mm | Standard | 3 | Look for contrast pooling in bowel |
     | Coronal | All phases | Full AP | 3 mm/3 mm | Standard | 3 | MIP to track extravasation |
-
 
 ### Additional Reconstructions
 

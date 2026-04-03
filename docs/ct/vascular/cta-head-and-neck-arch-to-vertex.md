@@ -54,8 +54,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -81,29 +79,6 @@
         - Remove dentures. Minimize swallowing during neck acquisition
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CTA Head and Neck (Arch to Vertex) Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (80-100 mL)    :active, contrast, 00:00, 17s
-      Saline          :active, saline, after contrast, 4s
-      section Head
-      CTA Head    :crit, scan1, after saline, 3s
-      section Neck
-      CTA Neck    :crit, scan2, after contrast, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -132,7 +107,6 @@
     | Axial | CTA | Head | 1 mm/1 mm | Vascular | 3 | Submillimeter for circle of Willis |
     | Coronal | CTA | Neck | 2 mm/2 mm | Vascular | 3 | MIP for carotid overview |
     | Sagittal | CTA | Full | 2 mm/2 mm | Vascular | 3 | MIP for vertebral arteries |
-
 
 ### Additional Reconstructions
 

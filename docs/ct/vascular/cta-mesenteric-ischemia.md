@@ -55,8 +55,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -82,28 +80,6 @@
         - Fast scan. High flow rate essential
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CTA Mesenteric Ischemia Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s
-      Saline          :active, saline, after contrast, 5s
-      section Other
-      Arterial Phase    :crit, scan1, after saline, 5s
-      Portal Venous    :done, scan2, 01:10, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -132,7 +108,6 @@
     | Axial | Portal venous | Full AP | 2.5 mm/2.5 mm | Standard | 3 | Bowel wall assessment |
     | Coronal | Arterial | Abdomen | 2.5 mm/2.5 mm | Vascular | 3 | MIP of mesenteric vessels |
     | Sagittal | Arterial | Abdomen | 2.5 mm/2.5 mm | Vascular | 3 | Curved MPR SMA from origin |
-
 
 ### Additional Reconstructions
 

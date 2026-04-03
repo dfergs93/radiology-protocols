@@ -54,8 +54,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -81,29 +79,6 @@
         - Water distension of duodenum helpful. Thin slices for pancreas
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CT Biphasic Pancreas Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s
-      Saline          :active, saline, after contrast, 4s
-      section Other
-      Pancreatic Phase    :crit, scan1, 00:40, 7s
-      Portal Venous    :done, scan2, 01:10, 7s
-      Delayed Phase    :done, scan3, 05:00, 7s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -132,7 +107,6 @@
     | Axial | Portal venous | Abdomen | 2.5 mm/2.5 mm | Standard | 3 | Liver and vessels |
     | Coronal | Both phases | Abdomen | 2.5 mm/2.5 mm | Standard | 3 | Pancreatic and peripancreatic |
     | Curved MPR | Pancreatic | Pancreatic duct | 1.5 mm | Standard | 3 | Duct evaluation |
-
 
 ### Additional Reconstructions
 

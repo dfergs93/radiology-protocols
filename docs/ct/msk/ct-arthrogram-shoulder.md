@@ -50,8 +50,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -77,24 +75,6 @@
         - Scan immediately after injection. Thin slices for labrum
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CT Arthrogram Shoulder Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Other
-      CT Arthrogram    :done, scan1, after saline, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -122,7 +102,6 @@
     | Coronal | Arthrogram | Shoulder | 1.5 mm/1 mm | Standard | 3 | Coronal oblique shoulder |
     | Sagittal | Arthrogram | Shoulder | 1.5 mm/1 mm | Standard | 3 | Sagittal oblique |
     | Abduction ABER | Arthrogram | Shoulder | 1.5 mm | Standard | 3 | ABER position if done |
-
 
 ### Additional Reconstructions
 

@@ -55,7 +55,6 @@
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
         There is a lower limit of 120 mL of contrast needed for the exam.
 
-
 -   __4. Special Notes__
 
     ---
@@ -81,29 +80,6 @@
         - NO dose modulation. Full dose all cardiac phases
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Gated CTA TTVR Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (140 mL)    :active, contrast, 00:00, 40s
-      Saline          :active, saline, after contrast, 5s
-      section Chest
-      Gated CTA Chest    :crit, scan1, after saline, 5s
-      section CAP
-      Delayed CAP    :done, scan2, 02:15, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -132,7 +108,6 @@
     | Axial | Delayed CAP | AP | 2 mm/2 mm | Vascular | 3 | Access assessment |
     | Double oblique | Gated chest | Tricuspid valve | 0.5 mm | Cardiac | 3 | En face tricuspid annulus |
     | 3D VR | Delayed CAP | Iliofemoral | 1.5 mm | Vascular | 3 | Access planning |
-
 
 ### Additional Reconstructions
 

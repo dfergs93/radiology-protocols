@@ -52,8 +52,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -79,30 +77,6 @@
         - Position patient with knees bent and hips flexed to simulate cycling. May need positioning aids
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CTA Pelvis Cyclist Iliac Artery Maneuver Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s
-      Saline          :active, saline, after contrast, 5s
-      Contrast bolus 2 (1.1 mL/kg)  :active, contrast2, 01:00, 18s
-      Saline                  :active, saline2, after contrast2, 5s
-      section Extremities
-      CTA Resting Position    :crit, scan1, after saline, 5s
-      CTA Hip Flexion    :crit, scan2, after saline2, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -131,7 +105,6 @@
     | Axial | Flexion | Pelvis | 1.5 mm/1.5 mm | Vascular | 3 | Assess for kinking with flexion |
     | Coronal | Both phases | Pelvis | 2 mm/2 mm | Vascular | 3 | MIP comparison rest vs flexion |
     | Sagittal | Both phases | Pelvis | 2 mm/2 mm | Vascular | 3 | Lateral view iliac course |
-
 
 ### Additional Reconstructions
 

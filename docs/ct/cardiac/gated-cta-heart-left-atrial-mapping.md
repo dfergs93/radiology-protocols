@@ -54,8 +54,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -81,28 +79,6 @@
         - Thin slices essential. Complete PV coverage. Document variants
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Gated CTA Heart Left Atrial Mapping Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 15s
-      Saline          :active, saline, after contrast, 4s
-      section Other
-      Gated CTA    :crit, scan1, after saline, 5s
-      Delayed CTA    :crit, scan2, 00:30, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 

@@ -36,7 +36,6 @@
     !!! info "No Intravenous Contrast"
     This protocol does not require IV contrast administration.
 
-
 -   __4. Special Notes__
 
     ---
@@ -63,24 +62,6 @@
 
 </div>
 
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Non-Contrast Chest Lung Nodule Ultra Low Dose Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Chest
-      Ultra Low Dose Chest    :done, scan1, 00:00, 5s
-  ```
-
 <div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
@@ -106,7 +87,6 @@
     | Axial | Chest | Chest | 1.25 mm/1.25 mm | Lung | Maximum IR 5 | Nodule follow-up |
     | Axial | Chest | Chest | 2.5 mm/2.5 mm | Standard | High IR | Mediastinal |
     | Coronal | Chest | Chest | 2 mm/2 mm | Lung | Maximum IR | Coronal |
-
 
 Category: Chest
 

@@ -55,8 +55,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -82,29 +80,6 @@
         - NO dose modulation for gated chest. Full radiation all phases for valve assessment
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Gated CTA TMVR Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 15s
-      Saline          :active, saline, after contrast, 5s
-      section Chest
-      Gated CTA Chest    :crit, scan1, after saline, 5s
-      section CAP
-      Delayed CAP    :done, scan2, 01:40, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -135,7 +110,6 @@
     | Axial | Delayed CAP | AP | 2 mm/2 mm | Vascular | 3 | Access vessels |
     | Double oblique | Gated chest | Mitral valve | 0.5 mm | Cardiac | 3 | En face mitral annulus |
     | 3D VR | Delayed CAP | Iliofemoral | 1.5 mm | Vascular | 3 | Access planning |
-
 
 ### Additional Reconstructions
 

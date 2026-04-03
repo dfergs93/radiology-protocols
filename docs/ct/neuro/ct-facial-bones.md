@@ -39,7 +39,6 @@
     !!! info "No Intravenous Contrast"
     This protocol does not require IV contrast administration.
 
-
 -   __4. Special Notes__
 
     ---
@@ -65,24 +64,6 @@
         - Remove dentures and facial metal
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CT Facial Bones Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Other
-      Facial Bones    :done, scan1, 00:00, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -110,7 +91,6 @@
     | Coronal | Face | Face | 1.25 mm/1 mm | Bone | N/A | Coronal face |
     | Sagittal | Face | Midface | 2 mm/1.5 mm | Bone | N/A | Sagittal midline |
     | 3D | Face | Facial bones | 0.625 mm source | Bone | N/A | 3D surface rendering |
-
 
 ### Additional Reconstructions
 

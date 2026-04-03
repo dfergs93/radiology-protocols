@@ -53,8 +53,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -80,29 +78,6 @@
         - Trauma indication. Fast scan. Good IV essential
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Trauma CTA Chest with PV CT AP Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (125 mL)    :active, contrast, 00:00, 31s
-      Saline          :active, saline, after contrast, 5s
-      section Chest
-      CTA Chest    :crit, scan1, after contrast, 6s
-      section Abdomen/Pelvis
-      Portal Venous AP    :done, scan2, 01:10, 7s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -131,7 +106,6 @@
     | Axial | PV AP | Abdomen/Pelvis | 2.5 mm/2.5 mm | Standard | 3 | Solid organs |
     | Coronal | CTA chest | Chest | 2 mm/2 mm | Vascular | 3 | Aorta overview |
     | Sagittal | CTA chest | Aorta | 2 mm/2 mm | Vascular | 3 | Sagittal aorta |
-
 
 ### Additional Reconstructions
 

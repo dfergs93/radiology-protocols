@@ -39,7 +39,6 @@
     !!! info "No Intravenous Contrast"
     This protocol does not require IV contrast administration.
 
-
 -   __4. Special Notes__
 
     ---
@@ -65,25 +64,6 @@
         - Direct coronal preferred. Submillimeter for anatomy
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CT Sinus Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Other
-      Coronal Sinus    :done, scan1, 00:00, 5s
-      Axial reformat    :done, scan2, 00:00, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -112,7 +92,6 @@
     | Coronal | Sinus | Sinuses | 3 mm/2 mm | Standard | 3 | Soft tissue |
     | Axial | Sinus | Sinuses | 2 mm/2 mm | Bone | N/A | Axial bone |
     | Sagittal | Sinus | Sinuses | 2 mm/2 mm | Bone | N/A | Midline and lateral |
-
 
 ### Additional Reconstructions
 

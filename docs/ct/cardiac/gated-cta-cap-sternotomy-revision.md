@@ -54,8 +54,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -81,30 +79,6 @@
         - Venous phase critical for surgical planning. Map all retrosternal structures
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Gated CTA CAP Sternotomy Revision Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (1.2 mL/kg)    :active, contrast, 00:00, 15s
-      Saline          :active, saline, after contrast, 5s
-      section Chest
-      Gated CTA Chest    :crit, scan1, after saline, 5s
-      Venogram Chest    :done, scan2, 01:00, 6s
-      section Abdomen/Pelvis
-      Flash AP    :crit, scan3, after scan1, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -134,7 +108,6 @@
     | Axial | Venogram | Chest | 1.25 mm/1.25 mm | Standard | 3 | Critical for retrosternal structures |
     | Coronal | All phases | Chest | 2 mm/2 mm | Standard | 3 | Anterior chest wall structures |
     | 3D VR | Venogram | Chest | 1 mm source | Standard | 3 | 3D map retrosternal vessels for surgery |
-
 
 ### Additional Reconstructions
 

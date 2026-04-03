@@ -54,8 +54,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -81,29 +79,6 @@
         - STAT protocol. Minimize delays. LVO detection critical
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Brain Stroke Protocol Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (100 mL)    :active, contrast, 00:00, 22s
-      Saline          :active, saline, after contrast, 4s
-      section CTA Arch to Vertex
-      CTA Arch to Vertex    :crit, scan1, after contrast, 3s
-      section Other
-      CTP (optional)    :done, scan3, 00:00, 10s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -133,7 +108,6 @@
     | Axial | CTA Arch to Vertex | Head and Neck | 1 mm/1 mm | Brain | 3 | LVO detection |
     | MIP | CTA | Circle of Willis | Thick slab | Brain | N/A | Vessel overview |
     | CTP maps | CTP | Perfusion | Color maps | N/A | N/A | CBF CBV MTT Tmax maps |
-
 
 ### Additional Reconstructions
 

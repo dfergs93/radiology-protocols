@@ -38,7 +38,6 @@
     !!! info "No Intravenous Contrast"
     This protocol does not require IV contrast administration.
 
-
 -   __4. Special Notes__
 
     ---
@@ -64,24 +63,6 @@
         - Low dose protocol. Reduced mAs. Image quality adequate for stones
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CT KUB Non-Contrast Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Other
-      Non-Contrast KUB    :done, scan1, 00:00, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -109,7 +90,6 @@
     | Axial | Non-contrast | KUB | 2.5 mm/2.5 mm | Bone | N/A | Bone window for stones |
     | Coronal | Non-contrast | KUB | 3 mm/3 mm | Standard | 3 | Coronal stone overview |
     | MIP | Non-contrast | Kidneys/ureters | 5 mm slab | Standard | N/A | Stone localization |
-
 
 ### Additional Reconstructions
 

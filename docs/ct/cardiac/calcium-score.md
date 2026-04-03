@@ -40,7 +40,6 @@
     !!! info "No Intravenous Contrast"
     This protocol does not require IV contrast administration.
 
-
 -   __4. Special Notes__
 
     ---
@@ -69,24 +68,6 @@
 
 </div>
 
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Calcium Score Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Other
-      Calcium Score    :done, scan1, 00:00, 5s
-  ```
-
 <div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
@@ -111,7 +92,6 @@
     |:------|:------------|:----|:--------------------|:-------|:------------|:------|
     | Axial | Calcium score | Heart | 3 mm/3 mm | Standard | 3 | For Agatston score calculation |
     | Axial | Calcium score | Chest | 1.5 mm/1.5 mm | Lung | 3 | Lung FOV for Extracardiac findings |
-
 
 ### Additional Reconstructions
 

@@ -53,8 +53,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -80,27 +78,6 @@
         - Minimize motion. Thin slices for small aneurysms
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CTA Head Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (75-100 mL)    :active, contrast, 00:00, 16s
-      Saline          :active, saline, after contrast, 4s
-      section Head
-      CTA Head    :crit, scan1, after contrast, 3s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -129,7 +106,6 @@
     | MIP | CTA | Circle of Willis | Thick slab | Brain | N/A | Vessel overview |
     | 3D VR | CTA | Intracranial vessels | 0.5 mm source | Brain | N/A | 3D angiogram |
     | Curved MPR | CTA | Individual vessels | 0.75 mm | Brain | 3 | Vessel-specific views |
-
 
 ### Additional Reconstructions
 

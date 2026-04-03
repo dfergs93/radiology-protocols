@@ -38,7 +38,6 @@
     !!! info "No Intravenous Contrast"
     This protocol does not require IV contrast administration.
 
-
 -   __4. Special Notes__
 
     ---
@@ -64,26 +63,6 @@
         - Keep C-collar on. Minimize patient movement
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Trauma Head and C-Spine Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Head
-      NC Head    :done, scan1, 00:00, 3s
-      section Other
-      NC C-spine    :done, scan2, 00:00, 10s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -113,7 +92,6 @@
     | Sagittal | C-spine | C-spine | 2 mm/2 mm | Bone | 3 | Midline and parasagittal |
     | Coronal | C-spine | C-spine | 2 mm/2 mm | Bone | 3 | Coronal alignment |
     | Axial | C-spine | C-spine | 2 mm/2 mm | Bone | 3 | Axial bone windows |
-
 
 ### Additional Reconstructions
 

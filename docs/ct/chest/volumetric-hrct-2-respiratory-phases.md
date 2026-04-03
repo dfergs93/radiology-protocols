@@ -38,7 +38,6 @@
     !!! info "No Intravenous Contrast"
     This protocol does not require IV contrast administration.
 
-
 -   __4. Special Notes__
 
     ---
@@ -64,25 +63,6 @@
         - Volumetric contiguous slices. Coach breathing carefully
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Volumetric HRCT 2 Respiratory Phases Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Other
-      Volumetric Inspiration    :done, scan1, 00:00, 5s
-      Limited Expiration    :done, scan2, 00:00, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -111,7 +91,6 @@
     | Axial | Expiration | Lower lungs | 1 mm/1 mm | Lung | 3 | Air trapping assessment |
     | Coronal | Inspiration | Chest | 1.5 mm | Lung | 3 | ILD distribution |
     | Sagittal | Inspiration | Chest | 2 mm | Lung | 3 | Craniocaudal distribution |
-
 
 ### Additional Reconstructions
 

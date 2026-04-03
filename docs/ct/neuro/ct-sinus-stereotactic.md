@@ -37,7 +37,6 @@
     !!! info "No Intravenous Contrast"
     This protocol does not require IV contrast administration.
 
-
 -   __4. Special Notes__
 
     ---
@@ -63,24 +62,6 @@
         - Isotropic voxels essential. DICOM for navigation
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CT Sinus Stereotactic Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Other
-      Stereotactic Sinus    :done, scan1, 00:00, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -108,7 +89,6 @@
     | Coronal | Stereo | Sinuses | 0.625 mm/0.625 mm | Bone | N/A | Isotropic coronal |
     | Sagittal | Stereo | Sinuses | 0.625 mm/0.625 mm | Bone | N/A | Isotropic sagittal |
     | 3D surface | Stereo | Sinuses | 0.625 mm source | Bone | N/A | Surface rendering for navigation |
-
 
 ### Additional Reconstructions
 

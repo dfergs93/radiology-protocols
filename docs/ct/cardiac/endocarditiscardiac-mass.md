@@ -53,8 +53,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -81,28 +79,6 @@
         - Multiple cardiac phases helpful for valve motion. Thin slices for vegetations
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Endocarditis/Cardiac Mass Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (1.6 mL/kg)    :active, contrast, 00:00, 35s
-      Saline          :active, saline, after contrast, 5s
-      section Other
-      Gated CTA    :crit, scan1, 00:30, 5s
-      Delayed phase    :done, scan2, 01:10, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -132,7 +108,6 @@
     | Axial | Gated CTA | Heart | 0.75 mm/0.5 mm | Cardiac | 3 | Reformatted at best cardiac phase |
     | Axial | Gated CTA | Heart | 1 mm/1 mm | Standard | 3 | Functional series for valve assessment |
     | Axial | Delayed | Chest | 1 mm/1 mm | Standard | 3 | Mass, vegetations |
-
 
 ### Additional Reconstructions
 

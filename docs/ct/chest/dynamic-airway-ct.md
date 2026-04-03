@@ -38,7 +38,6 @@
     !!! info "No Intravenous Contrast"
     This protocol does not require IV contrast administration.
 
-
 -   __4. Special Notes__
 
     ---
@@ -64,26 +63,6 @@
         - Coach forced expiration. Exact same level both phases
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Dynamic Airway CT Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Other
-      Inspiration    :done, scan1, 00:00, 5s
-      Mid-Expiration    :done, scan2, 00:00, 5s
-      Cine (optional)    :done, scan3, 00:00, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -113,7 +92,6 @@
     | Coronal | Both phases | Airway | 1.5 mm | Lung | 3 | Coronal airway |
     | Sagittal | Both phases | Airway | 1.5 mm | Lung | 3 | Sagittal airway |
     | 3D VR | Both phases | Airway | 0.625-1 mm source | Lung | N/A | 3D airway reconstruction |
-
 
 ### Additional Reconstructions
 

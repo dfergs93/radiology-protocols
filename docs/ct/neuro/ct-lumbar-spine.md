@@ -50,8 +50,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -77,27 +75,6 @@
         - Bone algorithm. Sagittal and coronal reconstructions
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CT Lumbar Spine Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 33s
-      Saline          :active, saline, after contrast, 6s
-      section Other
-      L-spine Helical    :done, scan1, 00:00, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -125,7 +102,6 @@
     | Sagittal | L-spine | L-spine | 2 mm/1.5 mm | Bone | 3 | Midline and parasagittal |
     | Coronal | L-spine | L-spine | 2.5 mm/2 mm | Bone | 3 | Coronal overview |
     | Oblique sagittal | L-spine | Neural foramina | 2 mm | Bone | 3 | Foraminal assessment |
-
 
 ### Additional Reconstructions
 

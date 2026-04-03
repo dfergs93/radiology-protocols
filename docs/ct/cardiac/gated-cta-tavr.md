@@ -53,8 +53,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -80,29 +78,6 @@
         - TAVR-specific measurements protocol. Thin slices critical
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Gated CTA TAVR Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (1.6 mL/kg)    :active, contrast, 00:00, 22s
-      Saline          :active, saline, after contrast, 5s
-      section Chest
-      Gated CTA Chest    :crit, scan1, after saline, 5s
-      section Abdomen/Pelvis
-      Flash CTA AP    :crit, scan2, after scan1, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -131,7 +106,6 @@
     | Axial | Flash AP | AP | 2 mm/2 mm | Vascular | 3 | Access vessel assessment |
     | Double oblique | Gated chest | Aortic valve | 0.5 mm | Cardiac | 3 | En face aortic annulus for sizing |
     | 3D VR | Flash AP | Iliofemoral | 1.5 mm source | Vascular | 3 | 3D access planning |
-
 
 ### Additional Reconstructions
 

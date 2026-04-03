@@ -51,8 +51,6 @@
 
         Full dose if eGFR > 30. Split bolus for combined nephrographic and excretory phases
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -78,31 +76,6 @@
         - Split bolus critical for opacification. Lasix may help. Prone imaging optional for ureters
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CT IVP (Intravenous Pyelogram) Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast bolus 1 (1.1mL/kg)  :active, contrast1, 00:00, 19s
-      Saline                  :active, saline1, after contrast1, 5s
-      Contrast bolus 2 (0.4mL/kg)  :active, contrast2, 07:00, 7s
-      Saline                  :active, saline2, after contrast2, 5s
-      section First Scan Phase
-      First acquisition                    :crit, scan1, 00:20, 10s
-      section Second Scan Phase
-      Second acquisition                   :done, scan2, 09:00, 10s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -132,7 +105,6 @@
     | Axial | Portal venous | Kidneys | 2.5 mm/2.5 mm | Standard | 3 | Renal parenchyma |
     | Axial | Excretory | Full urinary tract | 2 mm/2 mm | Standard | 3 | Urothelial surfaces |
     | Coronal | Excretory | Full urinary tract | 2.5 mm/2.5 mm | Standard | 3 | MIP urogram |
-
 
 ### Additional Reconstructions
 

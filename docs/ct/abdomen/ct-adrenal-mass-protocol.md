@@ -52,8 +52,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -79,28 +77,6 @@
         - Patient wait time 15 min. Measure HU carefully with ROI in same location
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CT Adrenal Mass Protocol Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 40s
-      Saline          :active, saline, after contrast, 6s
-      section Other
-      Portal Venous    :done, scan1, 01:10, 5s
-      15 Minute Delay    :done, scan2, 15:00, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -129,7 +105,6 @@
     | Axial | All phases | Adrenals | 2.5 mm/2.5 mm | Standard | 3 | ROI measurements in mass |
     | Axial | All phases | Adrenals | 2.5 mm/2.5 mm | Standard | 3 | Compare enhancement |
     | Coronal | Portal venous | Adrenals | 3 mm/3 mm | Standard | 3 | Anatomic overview |
-
 
 ### Additional Reconstructions
 

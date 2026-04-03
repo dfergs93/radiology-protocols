@@ -50,8 +50,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -77,27 +75,6 @@
         - Bilateral coverage. Submillimeter for acetabular 3D
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CT Hip Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 40s
-      Saline          :active, saline, after contrast, 8s
-      section Pelvis
-      CT Pelvis/Hips    :done, scan1, 00:00, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -125,7 +102,6 @@
     | Coronal | Hips | Pelvis/hips | 2 mm/2 mm | Bone | N/A | Coronal hips |
     | Sagittal | Hips | Each hip | 2 mm/2 mm | Bone | N/A | Sagittal hips |
     | Judet views | Hips | Acetabulum | 2 mm oblique | Bone | N/A | Obturator and iliac obliques |
-
 
 ### Additional Reconstructions
 

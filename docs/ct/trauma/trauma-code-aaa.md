@@ -53,8 +53,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -80,28 +78,6 @@
         - STAT protocol. Minimize delays. Notify vascular surgery
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Trauma Code AAA Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (125 mL)    :active, contrast, 00:00, 27s
-      Saline          :active, saline, after contrast, 4s
-      section CAP
-      Arterial CAP    :crit, scan1, 00:25, 7s
-      Portal Venous CAP    :done, scan2, 01:10, 7s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -131,7 +107,6 @@
     | Coronal | Arterial | CAP | 2.5 mm/2.5 mm | Vascular | 3 | Aorta and bleeding |
     | Sagittal | Arterial | Aorta | 2 mm/2 mm | Vascular | 3 | Aorta extent |
     | 3D VR | Arterial | Aorta | 1.5 mm | Vascular | 3 | STAT 3D for EVAR planning |
-
 
 ### Additional Reconstructions
 

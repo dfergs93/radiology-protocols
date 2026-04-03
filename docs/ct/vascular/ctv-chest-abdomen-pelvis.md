@@ -50,8 +50,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -77,27 +75,6 @@
         - Arms raised. For SVC consider bilateral arm injection
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CTV Chest Abdomen Pelvis Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (2.0 mL/kg)    :active, contrast, 00:00, 40s
-      Saline          :active, saline, after contrast, 6s
-      section Other
-      CTV Venous Phase    :done, scan1, 1:50, 8s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -125,7 +102,6 @@
     | Axial | Venous | Abdomen/Pelvis | 2.5 mm/2.5 mm | Standard | 3 | IVC and tributaries |
     | Coronal | Venous | Full CAP | 3 mm/3 mm | Standard | 3 | MIP full venous system |
     | Sagittal | Venous | Full CAP | 3 mm/3 mm | Standard | 3 | Sagittal venogram |
-
 
 ### Additional Reconstructions
 

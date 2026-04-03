@@ -54,8 +54,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -81,29 +79,6 @@
         - Coach patient on arm repositioning. Multiple phases require good IV. Plan scan sequence carefully
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CTA SCAD/FMD Protocol Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (150 mL total)    :active, contrast, 00:00, 37s
-      Saline          :active, saline, after contrast, 5s
-      section Neck
-      CTA Neck    :crit, scan2, after contrast, 8s
-      section CAP
-      CTA CAP    :crit, scan3, 00:45, 7s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -133,7 +108,6 @@
     | Coronal | CTA phases | Full body | 2-3 mm/2-3 mm | Vascular | 3 | MIP of all arterial territories |
     | Sagittal | CTA phases | Full body | 2-3 mm/2-3 mm | Vascular | 3 | Lateral views all vessels |
     | 3D VR | CTA phases | Full body | 1 mm source | Vascular | 3 | 3D reconstruction multi-territory |
-
 
 ### Additional Reconstructions
 

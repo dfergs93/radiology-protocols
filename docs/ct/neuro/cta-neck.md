@@ -52,8 +52,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -79,27 +77,6 @@
         - Minimize swallowing. Submillimeter acquisition
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CTA Neck Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (90-100 mL)    :active, contrast, 00:00, 20s
-      Saline          :active, saline, after contrast, 4s
-      section Neck
-      CTA Neck    :crit, scan1, after contrast, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -127,7 +104,6 @@
     | Coronal | CTA | Neck | 1.5 mm | Vascular | 3 | Vessel overview |
     | Sagittal | CTA | Carotids | 1.5 mm | Vascular | 3 | Vertebral arteries |
     | Curved MPR | CTA | Carotid bifurcations | 1 mm | Vascular | 3 | Stenosis measurement |
-
 
 ### Additional Reconstructions
 

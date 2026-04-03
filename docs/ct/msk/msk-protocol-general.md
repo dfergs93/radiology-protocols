@@ -53,8 +53,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -80,28 +78,6 @@
         - Tailor protocol to clinical question. Bilateral for comparison
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title MSK Protocol General Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (100 mL if contrast)    :active, contrast, 00:00, 40s
-      Saline          :active, saline, after contrast, 8s
-      section Other
-      Contrast phase    :done, scan1, 01:00, 5s
-      Delayed phase    :done, scan2, 00:00, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -131,7 +107,6 @@
     | Coronal | Region | Region | 2 mm/2 mm | Bone and Standard | 3 | Coronal reformats |
     | Sagittal | Region | Region | 2 mm/2 mm | Bone and Standard | 3 | Sagittal reformats |
     | 3D if needed | Region | Bones | 0.625-1 mm source | Bone | N/A | 3D for surgical planning |
-
 
 ### Additional Reconstructions
 

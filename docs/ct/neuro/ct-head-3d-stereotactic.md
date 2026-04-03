@@ -50,8 +50,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -77,27 +75,6 @@
         - Isotropic voxels critical. Export DICOM to surgical planning
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CT Head 3D Stereotactic Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 33s
-      Saline          :active, saline, after contrast, 6s
-      section Head
-      Stereotactic Head    :done, scan1, 00:00, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -125,7 +102,6 @@
     | Coronal | Stereo | Brain | 0.5 mm/0.5 mm | Brain | 3 | Isotropic coronal |
     | Sagittal | Stereo | Brain | 0.5 mm/0.5 mm | Brain | 3 | Isotropic sagittal midline |
     | 3D surface | Stereo | Brain | 0.5 mm source | Brain | 3 | Surface for navigation |
-
 
 ### Additional Reconstructions
 

@@ -39,7 +39,6 @@
     !!! info "No Intravenous Contrast"
     This protocol does not require IV contrast administration.
 
-
 -   __4. Special Notes__
 
     ---
@@ -65,24 +64,6 @@
         - Dual energy preferred for urate detection
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CT Gout Protocol Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Other
-      DECT or CT    :done, scan1, 00:00, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -110,7 +91,6 @@
     | DECT urate | Gout | Joints | Color overlay | Urate algorithm | N/A | Urate crystal map |
     | 3D volume | Gout | Urate burden | Volumetric | Urate | N/A | Quantify total urate |
     | Coronal | Gout | Joints | 1.5 mm | Bone | N/A | Joint erosions |
-
 
 ### Additional Reconstructions
 

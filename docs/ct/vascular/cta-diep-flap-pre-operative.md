@@ -50,8 +50,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -77,27 +75,6 @@
         - Arms positioned to not obscure anterior abdominal wall
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CTA DIEP Flap Pre-operative Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (100 mL)    :active, contrast, 00:00, 20s
-      Saline          :active, saline, after contrast, 5s
-      section Other
-      CTA Arterial    :crit, scan1, after contrast, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -125,7 +102,6 @@
     | Coronal | Arterial | Abdomen | 1.5 mm/1.5 mm | Vascular | 3 | MIP to show perforator course |
     | Sagittal | Arterial | Abdomen | 2 mm/2 mm | Vascular | 3 | Lateral views of perforators |
     | 3D VR | Arterial | Anterior abd wall | 1 mm source | Vascular | 3 | 3D reconstruction for surgical planning |
-
 
 ### Additional Reconstructions
 

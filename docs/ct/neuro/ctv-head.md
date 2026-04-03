@@ -50,8 +50,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -77,27 +75,6 @@
         - Delayed timing 60-90 sec. Look for filling defects
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CTV Head Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (75-100 mL)    :active, contrast, 00:00, 21s
-      Saline          :active, saline, after contrast, 5s
-      section Head
-      CTV Head    :done, scan1, 01:00, 3s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -126,7 +103,6 @@
     | MIP | CTV | Sinuses | Thick slab | Brain | N/A | Venogram overview |
     | 3D VR | CTV | Venous system | 1 mm source | Brain | N/A | 3D venogram |
     | Sagittal | CTV | Midline | 1.5 mm | Brain | 3 | Sagittal sinus |
-
 
 ### Additional Reconstructions
 

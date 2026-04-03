@@ -37,7 +37,6 @@
     !!! info "No Intravenous Contrast"
     This protocol does not require IV contrast administration.
 
-
 -   __4. Special Notes__
 
     ---
@@ -64,24 +63,6 @@
 
 </div>
 
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Non-Volumetric HRCT 1 Phase Prone Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Other
-      HRCT Prone    :done, scan1, 00:00, 5s
-  ```
-
 <div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
@@ -107,7 +88,6 @@
     | Axial | HRCT prone | Chest | 1 mm display | Lung | 3 | Prone images |
     | Coronal | HRCT prone | Chest | 2 mm | Lung | 3 | Coronal prone |
     | Compare | Supine vs prone | Posterior lungs | 1 mm | Lung | 3 | Dependent changes |
-
 
 ### Additional Reconstructions
 

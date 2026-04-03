@@ -49,8 +49,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -76,27 +74,6 @@
         - Extended coverage for alignment measurements
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CT Lower Extremity Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (If contrast: 100 mL)    :active, contrast, 00:00, 40s
-      Saline          :active, saline, after contrast, 8s
-      section Extremities
-      CT Lower Extremity    :done, scan1, 00:00, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -124,7 +101,6 @@
     | Coronal | Lower extremity | Region | 2 mm/2 mm | Bone | N/A | Coronal |
     | Sagittal | Lower extremity | Region | 2 mm/2 mm | Bone | N/A | Sagittal |
     | 3D surface | Lower extremity | Bones | 0.625 mm source | Bone | N/A | 3D reconstruction |
-
 
 ### Additional Reconstructions
 

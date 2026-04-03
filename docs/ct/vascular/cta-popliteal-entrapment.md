@@ -54,8 +54,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -81,32 +79,6 @@
         - Coach patient on maintaining plantarflexion during second acquisition. Use foot straps if needed
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CTA Popliteal Entrapment Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (1.2 mL/kg)    :active, contrast, 00:00, 20s
-      Saline          :active, saline, after contrast, 5s
-      Contrast bolus 2 (1.2 mL/kg)  :active, contrast2, 01:15, 20s
-      Saline                  :active, saline2, after contrast2, 5s
-      section Extremities
-      CTA Neutral Position    :crit, scan1, after saline, 5s
-      CTA Delayed Neutral Position    :crit, scan2, 00:40, 5s
-      CTA Plantarflexion    :crit, scan3, after saline2, 5s
-
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -135,7 +107,6 @@
     | Axial | Plantarflexion | Both legs | 1.5 mm/1.5 mm | Vascular | 3 | Assess for compression with maneuver |
     | Coronal | Both phases | Both legs | 2 mm/2 mm | Vascular | 3 | MIP comparison neutral vs flexion |
     | Sagittal | Both phases | Both legs | 2 mm/2 mm | Vascular | 3 | Lateral view popliteal fossa |
-
 
 ### Additional Reconstructions
 

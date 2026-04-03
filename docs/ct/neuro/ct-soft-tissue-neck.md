@@ -50,8 +50,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -78,27 +76,6 @@
 
 </div>
 
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CT Soft Tissue Neck Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (100 mL)    :active, contrast, 00:00, 33s
-      Saline          :active, saline, after contrast, 6s
-      section Neck
-      Contrast Neck    :done, scan1, 01:00, 5s
-  ```
-
 <div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
@@ -124,7 +101,6 @@
     | Axial | Neck | Neck | 2.5 mm/2 mm | Standard | 3 | Soft tissue neck |
     | Coronal | Neck | Neck | 3 mm/2.5 mm | Standard | 3 | Coronal neck spaces |
     | Sagittal | Neck | Midline | 3 mm/2.5 mm | Standard | 3 | Airway and retropharyngeal |
-
 
 ### Additional Reconstructions
 

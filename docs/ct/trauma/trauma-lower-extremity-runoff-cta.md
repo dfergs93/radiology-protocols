@@ -52,8 +52,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -79,27 +77,6 @@
         - Tailor coverage to injury. Fast acquisition
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Trauma Lower Extremity Runoff CTA Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (125 mL)    :active, contrast, 00:00, 27s
-      Saline          :active, saline, after contrast, 4s
-      section Other
-      CTA Arterial    :crit, scan1, after contrast, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -127,7 +104,6 @@
     | Coronal | Arterial | Legs | 2 mm/2 mm | Vascular | 3 | MIP overview |
     | Sagittal | Arterial | Injured area | 2 mm/2 mm | Vascular | 3 | Vessel-bone relationship |
     | 3D VR | Arterial | Vessels | 1 mm source | Vascular | 3 | 3D vascular anatomy |
-
 
 ### Additional Reconstructions
 

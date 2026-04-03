@@ -53,8 +53,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -80,28 +78,6 @@
         - Adequate oral contrast distension critical. High injection rate
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CT Enterography Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s
-      Saline          :active, saline, after contrast, 4s
-      section Other
-      Enteric Phase    :done, scan1, 00:45, 7s
-      Renal Delay    :done, scan2, 04:00, 7s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -130,7 +106,6 @@
     | Coronal | Enteric | Full AP | 3 mm/3 mm | Standard | 3 | Bowel loop assessment |
     | Sagittal | Enteric | Full AP | 3 mm/3 mm | Standard | 3 | Mesenteric evaluation |
     | MIP | Enteric | Mesenteric vessels | 5 mm slab | Vascular | 3 | Vascular assessment |
-
 
 ### Additional Reconstructions
 

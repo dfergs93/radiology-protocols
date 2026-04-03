@@ -54,8 +54,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -81,29 +79,6 @@
         - Four phase critical. Look for early enhancement and washout
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CT Parathyroid 4D Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (75-100 mL)    :active, contrast, 00:00, 18s
-      Saline          :active, saline, after contrast, 5s
-      section Other
-      Arterial Phase    :crit, scan1, 00:25, 5s
-      Venous Phase    :done, scan2, 00:55, 5s
-      Delayed Phase    :done, scan3, 01:30, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -134,7 +109,6 @@
     | Axial | Arterial | Neck | 2 mm/2 mm | Standard | 3 | Peak parathyroid enhancement |
     | Subtraction | Arterial - NC | Neck | 2 mm | Standard | 3 | Enhance parathyroid conspicuity |
     | Coronal | Arterial | Neck | 2.5 mm | Standard | 3 | Ectopic adenoma search |
-
 
 ### Additional Reconstructions
 

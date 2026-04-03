@@ -38,7 +38,6 @@
     !!! info "No Intravenous Contrast"
     This protocol does not require IV contrast administration.
 
-
 -   __4. Special Notes__
 
     ---
@@ -64,24 +63,6 @@
         - Remove dentures and hearing aids. Secure head in holder
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Non-Contrast CT Head Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Head
-      Non-Contrast Head    :done, scan1, 00:00, 3s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -109,7 +90,6 @@
     | Axial | Non-contrast | Brain | 5 mm/5 mm | Bone | N/A | Bone window for fractures |
     | Coronal | Non-contrast | Brain | 3 mm/3 mm | Brain | 3 | Optional - for skull base evaluation |
     | Sagittal | Non-contrast | Brain | 3 mm/3 mm | Brain | 3 | Optional - for midline structures |
-
 
 ### Additional Reconstructions
 

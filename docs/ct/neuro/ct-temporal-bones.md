@@ -40,7 +40,6 @@
     !!! info "No Intravenous Contrast"
     This protocol does not require IV contrast administration.
 
-
 -   __4. Special Notes__
 
     ---
@@ -66,25 +65,6 @@
         - Submillimeter critical. Sharp bone kernel. Remove all metal
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CT Temporal Bones Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Other
-      Axial Temporal    :done, scan1, 00:00, 5s
-      Coronal Temporal    :done, scan2, 00:00, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -113,7 +93,6 @@
     | Coronal | Temporal | Bilateral | 0.5 mm/0.5 mm | Bone sharp | N/A | Coronal bone |
     | Oblique sagittal | Temporal | Ossicles | 0.5 mm | Bone | N/A | Ossicular chain |
     | Pöschl/Stenvers | Temporal | IAC | 0.75 mm | Bone | N/A | IAC oriented views |
-
 
 ### Additional Reconstructions
 

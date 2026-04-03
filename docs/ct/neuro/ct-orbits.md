@@ -50,8 +50,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -77,27 +75,6 @@
         - Angle axial parallel to optic nerves. Thin slices
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CT Orbits Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (75-100 mL if contrast)    :active, contrast, 00:00, 25s
-      Saline          :active, saline, after contrast, 6s
-      section Other
-      Axial Orbits    :done, scan1, 00:00, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -125,7 +102,6 @@
     | Coronal | Orbits | Orbits | 1.5 mm/1 mm | Bone and Standard | 3 | Coronal orbits |
     | Sagittal | Orbits | Optic nerve | 2 mm/1.5 mm | Standard | 3 | Optic nerve canal |
     | 3D if trauma | Orbits | Orbital bones | 1 mm source | Bone | N/A | 3D if complex fracture |
-
 
 ### Additional Reconstructions
 

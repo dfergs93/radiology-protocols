@@ -38,7 +38,6 @@
     !!! info "No Intravenous Contrast"
     This protocol does not require IV contrast administration.
 
-
 -   __4. Special Notes__
 
     ---
@@ -64,25 +63,6 @@
         - Complete exhalation critical for RV. Volumetric contiguous
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Quantitative Lung Density CT Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Other
-      Volumetric Inspiration    :done, scan1, 00:00, 5s
-      Volumetric Expiration    :done, scan2, 00:00, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -111,7 +91,6 @@
     | Axial | Expiration | Chest | 1 mm/1 mm | Lung | 3 | Quantitative expiration |
     | Density map | Inspiration | Lungs | Color coded | Lung | N/A | Emphysema distribution map |
     | Density map | Expiration | Lungs | Color coded | Lung | N/A | Air trapping map |
-
 
 ### Additional Reconstructions
 

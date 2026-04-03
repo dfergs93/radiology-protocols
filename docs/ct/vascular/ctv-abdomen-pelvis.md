@@ -52,8 +52,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -79,27 +77,6 @@
         - Arms raised. May add leg veins if DVT suspected
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CTV Abdomen Pelvis Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (2.0 mL/kg)    :active, contrast, 00:00, 40s
-      Saline          :active, saline, after contrast, 6s
-      section Other
-      CTV Venous Phase    :done, scan1, 1:50, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -127,7 +104,6 @@
     | Coronal | Venous | Full AP | 3 mm/3 mm | Standard | 3 | MIP of venous system |
     | Sagittal | Venous | Full AP | 3 mm/3 mm | Standard | 3 | IVC and iliac veins |
     | 3D VR | Venous | Full AP | 2 mm source | Standard | 3 | 3D venous anatomy |
-
 
 ### Additional Reconstructions
 

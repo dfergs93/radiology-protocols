@@ -50,8 +50,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -77,26 +75,6 @@
         - Adequate bladder distension critical. Gravity fill slowly. Clamp Foley during scan
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CT Cystogram Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Pelvis
-      Non-Contrast    :done, scan2, 00:00, 7s
-      Bladder Filling    :done, scan1, 00:10, 20s
-      Cystogram    :done, scan3, 00:35, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -126,7 +104,6 @@
     | Axial | Cystogram | Pelvis | 2 mm/2 mm | Standard | 3 | Distended bladder assessment |
     | Coronal | Cystogram | Pelvis | 2.5 mm/2.5 mm | Standard | 3 | Bladder overview |
     | Sagittal | Cystogram | Pelvis | 2.5 mm/2.5 mm | Standard | 3 | Bladder dome and base |
-
 
 ### Additional Reconstructions
 

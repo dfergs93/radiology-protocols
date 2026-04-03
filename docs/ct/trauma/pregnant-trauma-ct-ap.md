@@ -48,8 +48,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -76,27 +74,6 @@
 
 </div>
 
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Pregnant Trauma CT AP Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (125 mL)    :active, contrast, 00:00, 41s
-      Saline          :active, saline, after contrast, 6s
-      section Abdomen/Pelvis
-      Portal Venous AP    :done, scan1, 01:10, 7s
-  ```
-
 <div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
@@ -122,7 +99,6 @@
     | Axial | Portal venous | AP | 2.5 mm/2.5 mm | Standard | 3 | Maternal organs |
     | Coronal | Portal venous | AP | 3 mm/3 mm | Standard | 3 | Overview |
     | Sagittal | Portal venous | Pelvis | 3 mm/3 mm | Standard | 3 | Uterus and placenta |
-
 
 Category: Trauma
 

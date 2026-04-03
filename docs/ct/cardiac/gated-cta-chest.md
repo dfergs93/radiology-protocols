@@ -55,8 +55,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -82,28 +80,6 @@
         - HR control essential. Coach breathing. Gating quality check
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Gated CTA Chest Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 18s
-      Saline          :active, saline, after contrast, 4s
-      section Other
-      Gated CTA    :crit, scan1, after saline, 5s
-      Stent delay (optional)    :done, scan2, 00:40, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -133,7 +109,6 @@
     | Curved MPR | Gated CTA | Each coronary | 0.75 mm | Cardiac | 3 | Vessel-specific reconstructions |
     | Axial | Non-contrast | Heart | 3 mm/3 mm | Standard | 3 | Calcium scoring |
     | Short/long axis | Gated CTA | Heart | Multi-phase | Cardiac | 3 | Functional assessment |
-
 
 ### Additional Reconstructions
 

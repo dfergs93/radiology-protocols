@@ -56,8 +56,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -83,28 +81,6 @@
         - Arms raised. No oral contrast for pure vascular study
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CTA Abdomen Pelvis Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 20s
-      Saline          :active, saline, after contrast, 5s
-      section Other
-      CTA Arterial    :crit, scan1, after saline, 5s
-      Stent Delay (optional)    :crit, scan2, 00:40, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -132,7 +108,6 @@
     | Axial | Arterial | Pelvis | 2.5 mm/2.5 mm | Vascular | 3 | Iliac vessels |
     | Coronal | Arterial | Full AP | 3 mm/3 mm | Vascular | 3 | MIP coronal aorta and branches |
     | Sagittal | Arterial | Full AP | 3 mm/3 mm | Vascular | 3 | Curved MPR of aorta |
-
 
 ### Additional Reconstructions
 

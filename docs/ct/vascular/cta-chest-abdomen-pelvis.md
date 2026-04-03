@@ -55,8 +55,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -82,29 +80,6 @@
         - Arms completely raised. ECG monitoring if known dissection
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CTA Chest Abdomen Pelvis Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (1.1 mL/kg)    :active, contrast, 00:00, 20s
-      Saline          :active, saline, after contrast, 5s
-      section Other
-      CTA Arterial    :crit, scan1, after contrast, 5s
-      Stent Delay (optional)    :crit, scan2, 00:40, 5s
-      Vasculitis Delayed (optional)    :crit, scan3, 01:30, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -132,7 +107,6 @@
     | Axial | Arterial | Abdomen/Pelvis | 2.5 mm/2.5 mm | Vascular | 3 | Abdominal aorta and branches |
     | Coronal | Arterial | Full CAP | 3 mm/3 mm | Vascular | 3 | MIP full aorta overview |
     | Sagittal | Arterial | Full CAP | 3 mm/3 mm | Vascular | 3 | Sagittal MIP and curved MPR of aorta |
-
 
 ### Additional Reconstructions
 

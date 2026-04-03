@@ -39,7 +39,6 @@
     !!! info "No Intravenous Contrast"
     This protocol does not require IV contrast administration.
 
-
 -   __4. Special Notes__
 
     ---
@@ -65,24 +64,6 @@
         - Submillimeter acquisition critical for rib detail
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Trauma Chest CT Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Chest
-      NC Chest    :done, scan1, 00:00, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -112,7 +93,6 @@
     | Axial | CTA Chest | Chest | 2.5 mm/2.5 mm | Standard | 3 | Evaluate for aortic injury |
     | Coronal | Chest | Chest | 2.5 mm/2.5 mm | Bone | N/A | Rib overview |
     | Oblique sagittal | Chest | Ribs | 2 mm/2 mm | Bone | N/A | Rib reformats all ribs |
-
 
 ### Additional Reconstructions
 

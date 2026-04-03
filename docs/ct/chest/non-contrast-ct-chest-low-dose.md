@@ -21,7 +21,6 @@
 
         - Non Contrast chest for patient's age < 60
 
-
 -   __2. Patient Prep__
 
     ---
@@ -35,7 +34,6 @@
     ---
     !!! info "No Intravenous Contrast"
     This protocol does not require IV contrast administration.
-
 
 -   __4. Special Notes__
 
@@ -63,24 +61,6 @@
 
 </div>
 
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Non-Contrast CT Chest Low Dose Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Chest
-      Low Dose Chest    :done, scan1, 00:00, 5s
-  ```
-
 <div class="acquisition-diagram"></div>
 
 === "Series Acquisition"
@@ -107,7 +87,6 @@
     | Axial | Chest | Chest | 2.5 mm/2.5 mm | Standard | 3 | Mediastinal window |
     | Coronal | Chest | Chest | 2 mm/2 mm | Lung | High IR | Coronal overview |
     | MIP | Chest | Lungs | 5 mm slab | Lung | N/A | Nodule detection |
-
 
 ### Additional Reconstructions
 

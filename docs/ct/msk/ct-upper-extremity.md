@@ -50,8 +50,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -77,27 +75,6 @@
         - Position for patient comfort and diagnostic quality
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CT Upper Extremity Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (If contrast: 75 mL)    :active, contrast, 00:00, 30s
-      Saline          :active, saline, after contrast, 8s
-      section Extremities
-      CT Upper Extremity    :done, scan1, 00:00, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -125,7 +102,6 @@
     | Coronal | Upper extremity | Region | 2 mm/2 mm | Bone | N/A | Coronal |
     | Sagittal | Upper extremity | Region | 2 mm/2 mm | Bone | N/A | Sagittal |
     | 3D surface | Upper extremity | Bones | 0.625 mm source | Bone | N/A | 3D if complex |
-
 
 ### Additional Reconstructions
 

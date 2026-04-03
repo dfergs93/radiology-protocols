@@ -40,7 +40,6 @@
     !!! info "No Intravenous Contrast"
     This protocol does not require IV contrast administration.
 
-
 -   __4. Special Notes__
 
     ---
@@ -66,26 +65,6 @@
         - Coach three distinct breath holds. Non-volumetric lower dose
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Non-Volumetric HRCT 3 Respiratory Phases Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Other
-      Inspiration    :done, scan1, 00:00, 5s
-      Mid-Expiration    :done, scan2, 00:00, 5s
-      Full Expiration    :done, scan3, 00:00, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -114,7 +93,6 @@
     | Axial | All phases | Chest | 1 mm display | Lung | 3 | Compare three phases |
     | Coronal reformat | Inspiration | Chest | 2 mm | Lung | 3 | Inspiration overview |
     | Mosaic MIP | All phases | Lungs | 5 mm | Lung | N/A | Air trapping visualization |
-
 
 ### Additional Reconstructions
 

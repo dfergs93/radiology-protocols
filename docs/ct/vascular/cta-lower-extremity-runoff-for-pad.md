@@ -55,8 +55,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -82,28 +80,6 @@
         - Ensure legs are straight and not rotated. Remove shoes and metal
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CTA Lower Extremity Runoff for PAD Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (150 mL)    :active, contrast, 00:00, 35s
-      Saline          :active, saline, after contrast, 5s
-      section Other
-      CTA Arterial    :crit, scan1, after saline, 10s
-      CTA Runoff    :done, scan2, 00:55, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -132,7 +108,6 @@
     | Coronal | Arterial | Full legs | 3 mm/3 mm | Vascular | 3 | MIP full arterial tree |
     | Sagittal | Arterial | Full legs | 3 mm/3 mm | Vascular | 3 | Lateral views of vessels |
     | 3D VR | Arterial | Full legs | 1.5 mm source | Vascular | 3 | 3D for surgical planning |
-
 
 ### Additional Reconstructions
 

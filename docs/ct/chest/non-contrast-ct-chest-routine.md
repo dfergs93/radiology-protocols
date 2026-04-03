@@ -36,7 +36,6 @@
     !!! info "No Intravenous Contrast"
     This protocol does not require IV contrast administration.
 
-
 -   __4. Special Notes__
 
     ---
@@ -62,24 +61,6 @@
         - Full inspiration breath hold
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Non-Contrast CT Chest Routine Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Chest
-      NC Chest    :done, scan1, 00:00, 5s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -107,7 +88,6 @@
     | Axial | Chest | Chest | 2.5 mm/2.5 mm | Lung | 3 | Lung window |
     | Coronal | Chest | Chest | 3 mm/3 mm | Lung | 3 | Coronal lung |
     | Sagittal | Chest | Chest | 3 mm/3 mm | Standard | 3 | Optional mediastinum |
-
 
 ### Additional Reconstructions
 

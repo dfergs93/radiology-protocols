@@ -39,7 +39,6 @@
     !!! info "No Intravenous Contrast"
     This protocol does not require IV contrast administration.
 
-
 -   __4. Special Notes__
 
     ---
@@ -65,27 +64,6 @@
         - C-collar on. Remove dentures if safe
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title Trauma Head C-Spine and Facial Bones Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Head
-      NC Head    :done, scan1, 00:00, 3s
-      section Other
-      NC C-spine    :done, scan2, 00:00, 10s
-      NC Facial Bones    :done, scan3, 00:00, 10s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -115,7 +93,6 @@
     | Sagittal | C-spine | C-spine | 2 mm/2 mm | Bone | 3 | C-spine alignment |
     | Axial | Face | Face | 1.25 mm/1 mm | Bone | N/A | Facial bones |
     | Coronal | Face | Face | 1.25 mm/1 mm | Bone | N/A | Facial coronal |
-
 
 ### Additional Reconstructions
 

@@ -51,8 +51,6 @@
 
         Full dose if eGFR > 30. Split bolus technique
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -78,32 +76,6 @@
         - Split bolus timing critical. 5-7 min wait between injections
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CT Renal Mass Protocol Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast bolus 1 (77mL)  :active, contrast1, 00:00, 19s
-      Saline                  :active, saline1, after contrast1, 5s
-      Contrast bolus 2 (28mL)  :active, contrast2, 05:00, 7s
-      Saline                  :active, saline2, after contrast2, 5s
-      section First Scan Phase
-      First acquisition                    :crit, scan1, 00:20, 15s
-      section Wait Period
-      section Second Scan Phase
-      Second acquisition                   :done, scan2, 07:00, 20s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -133,7 +105,6 @@
     | Axial | Corticomedullary | Kidneys | 1.5 mm/1.5 mm | Standard | 3 | Vascular and cortical enhancement |
     | Axial | Nephrographic | Kidneys to pelvis | 2 mm/2 mm | Standard | 3 | Mass enhancement + urinary opacification |
     | Coronal | All phases | Kidneys | 2.5 mm/2.5 mm | Standard | 3 | Compare enhancement phases |
-
 
 ### Additional Reconstructions
 

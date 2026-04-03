@@ -56,8 +56,6 @@
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
 
-
-
 -   __4. Special Notes__
 
     ---
@@ -84,29 +82,6 @@
         - High flow rate. Extended 5 min delay. Breath hold coaching
 
 </div>
-
-
-### Protocol Details
-  ```mermaid
-  ---
-  displayMode: compact
-  config:
-    theme: default
-    themeCSS: " #Saline{ fill: #4ed5ff; stroke: #2094f3; } "
-  ---
-    gantt
-      title CT Triple Phase Liver Timeline
-      dateFormat mm:ss
-      axisFormat %M:%S 
-      
-      section Contrast Injection
-      Contrast (1.5 mL/kg)    :active, contrast, 00:00, 25s
-      Saline          :active, saline, after contrast, 4s
-      section Other
-      Late Arterial    :crit, scan1, 00:35, 7s
-      Portal Venous    :done, scan2, 01:10, 7s
-      Delayed Phase    :done, scan3, 04:00, 7s
-  ```
 
 <div class="acquisition-diagram"></div>
 
@@ -137,7 +112,6 @@
     | Axial | Portal venous | Full AP | 2.5 mm/2.5 mm | Standard | 3 | Full abdomen pelvis PV |
     | Coronal | All phases | Liver | 3 mm/3 mm | Standard | 3 | Coronal comparison |
     | Subtraction | Arterial - NC | Liver | 2.5 mm | Standard | 3 | Enhance lesion conspicuity |
-
 
 Category: Abdomen
 
