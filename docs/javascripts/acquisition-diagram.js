@@ -48,6 +48,27 @@
     return 0;
   }
 
+  // Minimum gap (seconds) shown between last injection-1 phase and injection-2 bar.
+  // This is a visual constant; actual clinical wait may differ.
+  const SPLIT_BOLUS_GAP = 60;
+
+  /**
+   * Parse the delay string and extract both the delay in seconds and which
+   * injection the phase is relative to (0-based index).
+   *
+   * injectionIndex is 1 only when the delay string explicitly says "from 2nd".
+   *
+   * @param {string|null} delayStr
+   * @param {number} injectionDurationSeconds
+   * @param {number} salineDurationSeconds
+   * @returns {{ seconds: number, injectionIndex: number }}
+   */
+  function parseDelayInfo(delayStr, injectionDurationSeconds, salineDurationSeconds) {
+    const injectionIndex = /\bfrom\s+(?:the\s+)?2nd\b/i.test((delayStr || '').trim()) ? 1 : 0;
+    const seconds = parseDelaySeconds(delayStr, injectionDurationSeconds, salineDurationSeconds);
+    return { seconds, injectionIndex };
+  }
+
   // ─── 2. inferPhaseType ───────────────────────────────────────────────────────
 
   /**
@@ -277,21 +298,34 @@
       const durationRaw = getVal('Duration');
       const timingMethod = getVal('timing method') || getVal('timing');
 
-      // Parse duration seconds from e.g. "40s", "40 sec", "40 seconds"
-      let durationSeconds = 0;
-      const durMatch = durationRaw.match(/(\d+(?:\.\d+)?)/);
-      if (durMatch) durationSeconds = parseFloat(durMatch[1]);
+      // Parse duration — may be split bolus: "18-20s + 5-10s"
+      // Split on "+", extract first integer from each part.
+      const durationParts = durationRaw.split('+').map(p => p.trim());
+      const parsedDurations = durationParts.map(part => {
+        const m = part.match(/(\d+(?:\.\d+)?)/);
+        return m ? parseFloat(m[1]) : 0;
+      });
 
       if (agent && !/^n\/a$/i.test(agent.trim())) {
-        // Prefer injection table Duration; fall back to 30s default
+        // Build a contrasts array (one entry per injection bolus).
+        // contrast = first injection (backward compat).
         contrast = {
           volume, flowRate,
-          durationSeconds: durationSeconds || 30,
+          durationSeconds: parsedDurations[0] || 30,
           timingMethod,
         };
 
+        const contrasts = parsedDurations.map(dur => ({
+          volume, flowRate,
+          durationSeconds: dur || 30,
+          timingMethod,
+        }));
+
         // Saline: hardcoded 5s flush (≈ 20 mL at typical flow rate)
         saline = { durationSeconds: SALINE_DURATION_SECONDS };
+
+        // Attach contrasts array to contrast for downstream use
+        contrast._contrasts = contrasts;
       }
     }
 
@@ -305,7 +339,11 @@
       const salDur = saline ? saline.durationSeconds : 0;
       // NC phase ends this many seconds before injection starts
       const NC_END_GAP = 5;
-      let lastPhaseEndTime = 0;
+
+      // ── Pass 1: parse relative delays and injection index ─────────────────
+      // lastPhaseEndTimes[i] tracks the latest phase end for injection i (relative to that injection's t=0).
+      const lastPhaseEndTimes = [0, 0];
+      const rawPhases = [];
 
       for (const row of rows) {
         // Normalize column access (headers may vary in casing)
@@ -328,28 +366,71 @@
 
         const phaseDuration = 5;
         const type = inferPhaseType(seriesName);
-        let delaySeconds;
+        let relativeDelay;
+        let injectionIndex = 0;
 
         if (type === 'non-contrast' && contrast !== null) {
-          // NC phase in a contrast study: bar ends NC_END_GAP seconds before injection
-          delaySeconds = -(phaseDuration + NC_END_GAP);
+          // NC phase in a contrast study: bar ends NC_END_GAP seconds before injection 1
+          relativeDelay = -(phaseDuration + NC_END_GAP);
+          injectionIndex = 0;
         } else if (/immediate/i.test(delay.trim())) {
-          // "Immediate" means start right after the previous scan ends
-          delaySeconds = lastPhaseEndTime;
+          // "Immediate" = right after previous scan for this injection
+          injectionIndex = 0; // immediate phases always relative to injection 1
+          relativeDelay = lastPhaseEndTimes[0];
         } else {
-          delaySeconds = parseDelaySeconds(delay, injDur, salDur);
+          const info = parseDelayInfo(delay, injDur, salDur);
+          relativeDelay = info.seconds;
+          injectionIndex = info.injectionIndex;
         }
 
-        lastPhaseEndTime = Math.max(lastPhaseEndTime, delaySeconds + phaseDuration);
+        lastPhaseEndTimes[injectionIndex] = Math.max(
+          lastPhaseEndTimes[injectionIndex],
+          relativeDelay + phaseDuration
+        );
 
         const rawRange = `${start} → ${end}`;
-        phases.push({
+        rawPhases.push({
           name: seriesName,
           range: inferCoverageLabel(rawRange) || rawRange,
-          delaySeconds,
+          relativeDelay,
           durationSeconds: phaseDuration,
           type,
+          injectionIndex,
         });
+      }
+
+      // ── Pass 2: compute injection2StartTime and absolute delays ───────────
+      const contrasts = (contrast && contrast._contrasts) || (contrast ? [contrast] : []);
+      const isSplitBolus = contrasts.length > 1;
+      const hasInj2Phases = rawPhases.some(p => p.injectionIndex === 1);
+
+      let injection2StartTime = null;
+      if (isSplitBolus && hasInj2Phases) {
+        // injection 2 starts after the last injection-1 (non-NC) phase ends + gap
+        const inj1End = rawPhases
+          .filter(p => p.injectionIndex === 0 && p.type !== 'non-contrast')
+          .reduce((max, p) => Math.max(max, p.relativeDelay + p.durationSeconds), 0);
+        injection2StartTime = inj1End + SPLIT_BOLUS_GAP;
+      }
+
+      for (const ph of rawPhases) {
+        const absDelay = (ph.injectionIndex === 1 && injection2StartTime != null)
+          ? injection2StartTime + ph.relativeDelay
+          : ph.relativeDelay;
+        phases.push({
+          name: ph.name,
+          range: ph.range,
+          delaySeconds: absDelay,
+          durationSeconds: ph.durationSeconds,
+          type: ph.type,
+          injectionIndex: ph.injectionIndex,
+        });
+      }
+
+      // Attach split-bolus metadata to contrast for renderAcquisitionDiagram
+      if (contrast) {
+        contrast._contrasts = contrasts;
+        contrast._injection2StartTime = injection2StartTime;
       }
     }
 
@@ -423,7 +504,14 @@
       } else {
         minTime = 0;
       }
+      // Base maxTime on first injection, then extend for second injection if present
       maxTime = contrast.durationSeconds + (saline ? saline.durationSeconds : 0) + 10;
+      const inj2Start = contrast._injection2StartTime;
+      const contrasts = contrast._contrasts || [contrast];
+      if (inj2Start != null && contrasts.length > 1) {
+        const inj2End = inj2Start + contrasts[1].durationSeconds + (saline ? saline.durationSeconds : 0);
+        maxTime = Math.max(maxTime, inj2End + 10);
+      }
       for (const ph of (phases || [])) {
         if (ph.type !== 'non-contrast') {
           maxTime = Math.max(maxTime, ph.delaySeconds + ph.durationSeconds);
@@ -499,7 +587,7 @@
     });
 
     // ── Helper: render a bar with optional label ────────────────────────────
-    function renderBar(parentEl, x, y, width, height, fill, labelText, labelColor) {
+    function renderBar(parentEl, x, y, width, height, fill, labelText, labelColor, forceInside = false) {
       if (width <= 0) return;
 
       const rect = createSVGEl('rect', {
@@ -510,9 +598,21 @@
       parentEl.appendChild(rect);
 
       if (labelText) {
-        const inside = width >= 70;
-        const textX = inside ? x + width / 2 : x + width + 4;
-        const textAnchor = inside ? 'middle' : 'start';
+        const inside = forceInside || width >= 70;
+
+        let textAnchor = 'middle';
+        let textX = x + width / 2;
+
+        if (inside && width < 70) {
+          // If cramped inside, align left so we read the start of the word
+          textAnchor = 'middle';
+          textX = x + (width / 2);
+        } else if (!inside) {
+          // If outside, put it to the right
+          textAnchor = 'start';
+          textX = x + width + 4;
+        }
+
         // Use currentColor when outside the bar so it adapts to light/dark mode
         const textFill = inside ? (labelColor || '#fff') : 'currentColor';
 
@@ -524,7 +624,17 @@
           fill: textFill,
           'font-family': 'inherit',
         });
-        text.textContent = truncate(labelText, 20);
+
+        // Smart abbreviation for tiny boxes
+        let displayLabel = labelText;
+        if (inside && width < 50) {
+          if (labelText.toLowerCase() === 'contrast') displayLabel = 'Con';
+          else if (labelText.toLowerCase() === 'saline') displayLabel = 'S';
+          else displayLabel = labelText.substring(0, 3) + '\u2026';
+        } else {
+          displayLabel = truncate(labelText, 20);
+        }
+        text.textContent = displayLabel;
 
         // Clip text to bar if inside
         if (inside) {
@@ -562,17 +672,36 @@
       renderRowLabel(svg, currentRow, 'Injection');
 
       const rowY = TOP_PAD + currentRow * ROW_HEIGHT + BAR_Y_OFFSET;
+      const splitContrasts = (contrast._contrasts && contrast._contrasts.length > 1) ? contrast._contrasts : null;
+      const inj2Start = contrast._injection2StartTime;
 
-      // Contrast bar
+      // First injection bar
+      const c1Dur = (splitContrasts ? splitContrasts[0] : contrast).durationSeconds;
       const contrastStart = xAtTime(0);
-      const contrastWidth = contrast.durationSeconds * pixelsPerSecond;
-      renderBar(svg, contrastStart, rowY, contrastWidth, BAR_HEIGHT, '#4caf50', 'Contrast', '#fff');
+      const contrastWidth = c1Dur * pixelsPerSecond;
+      const c1Label = splitContrasts ? 'Contrast 1' : 'Contrast';
+      renderBar(svg, contrastStart, rowY, contrastWidth, BAR_HEIGHT, '#4caf50', c1Label, '#fff', true);
 
-      // Saline bar
+      // Saline after first injection
       if (saline && saline.durationSeconds > 0) {
-        const salineStart = xAtTime(contrast.durationSeconds);
+        const salineStart = xAtTime(c1Dur);
         const salineWidth = saline.durationSeconds * pixelsPerSecond;
-        renderBar(svg, salineStart, rowY, salineWidth, BAR_HEIGHT, '#4ed5ff', 'Saline', '#333');
+        renderBar(svg, salineStart, rowY, salineWidth, BAR_HEIGHT, '#4ed5ff', 'Saline', '#333', true);
+      }
+
+      // Second injection bar (only when phases explicitly reference injection 2)
+      if (splitContrasts && inj2Start != null) {
+        const c2Dur = splitContrasts[1].durationSeconds;
+        const c2BarX = xAtTime(inj2Start);
+        const c2Width = c2Dur * pixelsPerSecond;
+        renderBar(svg, c2BarX, rowY, c2Width, BAR_HEIGHT, '#4caf50', 'Contrast 2', '#fff', true);
+
+        // Saline after second injection
+        if (saline && saline.durationSeconds > 0) {
+          const saline2Start = xAtTime(inj2Start + c2Dur);
+          const salineWidth = saline.durationSeconds * pixelsPerSecond;
+          renderBar(svg, saline2Start, rowY, salineWidth, BAR_HEIGHT, '#4ed5ff', 'Saline', '#333', true);
+        }
       }
 
       currentRow++;
@@ -678,6 +807,7 @@
   // ─── Expose globals ───────────────────────────────────────────────────────────
 
   window.parseDelaySeconds = parseDelaySeconds;
+  window.parseDelayInfo = parseDelayInfo;
   window.inferPhaseType = inferPhaseType;
   window.inferCoverageLabel = inferCoverageLabel;
   window.parseProtocolFromDOM = parseProtocolFromDOM;

@@ -15,9 +15,9 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | CTA Neutral Position | Arterial (bolus tracked) | 4cm above the knees to the toes |
-        | CTA Delayed Neutral Position | Delayed Arterial (40 sec delay) | 4cm above the knees to the toes |
-        | CTA Plantarflexion | Contrast (Immediately after delay) | 4cm above the knees to the toes |
+        | CTA Neutral Position | Arterial (bolus tracked from 1st injection) | 4cm above the knees to the toes |
+        | CTA Delayed Neutral Position | Delayed Arterial (40 sec delay from 1st injection) | 4cm above the knees to the toes |
+        | CTA Plantarflexion | Arterial (bolus tracked from 2nd injection) | 4cm above the knees to the toes |
 
     === "Clinical Indications"
 
@@ -42,7 +42,7 @@
         | Parameter | Value |
         |-----------|-------|
         | Agent | Isovue 370 |
-        | Volume | Dual injection: 1.2   mL/kg + 1.2 mL/kg |
+        | Volume | Dual injection: 1.2 mL/kg + 1.2 mL/kg |
         | Flow Rate | 4 mL/s |
         | Duration | 18-20s + 18-20s |
         | Timing Method | Bolus Tracking |
@@ -87,8 +87,9 @@
     | Series Name | Start Location | End Location | Delay | Slice Thickness | Notes |
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout/Topogram | Distal femur | Ankle | N/A | N/A | AP both legs |
-    | CTA Neutral Position | Distal femur | Ankle | Bolus tracked | 0.625 mm | Both legs neutral resting position |
-    | CTA Plantarflexion | Distal femur | Ankle | Immediately after | 0.625 mm | Patient actively plantarflexes both feet - point toes |
+    | CTA Neutral Position | Distal femur | Ankle | Bolus tracked from 1st injection | 0.625 mm | Both legs neutral resting position |
+    | CTA Delayed Neutral Position | Distal femur | Ankle | 40 sec delay from 1st injection | 0.625 mm | Both legs neutral resting position |
+    | CTA Plantarflexion | Distal femur | Ankle | Bolus tracked from 2nd injection | 0.625 mm | Patient actively plantarflexes both feet - point toes |
 
 === "Technical Parameters"
 

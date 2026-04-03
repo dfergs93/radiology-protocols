@@ -16,7 +16,7 @@
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
         | Calcium Score | Non-contrast | Lung apices to Diaphragm |
-        | Gated CTA | Arterial (bolus tracked) | Lung apices to 2cm below heart apex |
+        | Gated CTA | Arterial (bolus tracked) | Lung apices to Diaphragm |
 
     === "Clinical Indications"
 
@@ -91,7 +91,7 @@
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout | Thoracic inlet | Below heart | N/A | N/A | AP lateral |
     | Calcium Score | Lung apices | Diaphragm | N/A | 1.5 mm | Calcium score |
-    | Gated CTA | Lung apices | 2cm below heart apex | Bolus tracked | 0.5-0.625 mm | Retrospective gating - full chest FOV |
+    | Gated CTA | Lung apices | Diaphragm | Bolus tracked | 0.5-0.625 mm | Retrospective gating - full chest FOV |
 
 === "Technical Parameters"
 

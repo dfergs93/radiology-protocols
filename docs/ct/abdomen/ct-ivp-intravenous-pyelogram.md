@@ -45,6 +45,7 @@
         | Agent | Isovue 370 |
         | Volume | Split bolus: 1st injection 1.1 mL/kg + 2nd injection 0.4 mL/kg |
         | Flow Rate | 4 mL/s |
+        | Duration | 18-20s + 5-10s |
         | Timing | Split bolus technique |
 
     ===   "Lab Requirements"

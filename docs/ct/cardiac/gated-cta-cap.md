@@ -92,7 +92,7 @@
     | Flash Non-contrast | Thoracic inlet | Pubic symphysis | N/A | 0.625 mm | Non-contrast |
     | Gated CTA Chest | Thoracic inlet | Diaphragm | Bolus tracked | 0.5-0.625 mm | Retrospective gating chest |
     | Flash CTA AP | Diaphragm | Pubic symphysis | Immediate after chest | 0.625 mm | High pitch helical - no gating |
-    | Stent Delay (optional) | Diaphragm | Pubic symphysis | 40 sec | 0.625 mm | Stent coverage |
+    | Stent Delay (optional) | Top of Stent | Bottom of Stent | 40 sec | 0.625 mm | Stent coverage |
 
 === "Technical Parameters"
 

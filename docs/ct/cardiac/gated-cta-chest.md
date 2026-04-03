@@ -15,8 +15,8 @@
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Non-contrast | Non-contrast | Top of heart to Below heart |
-        | Gated CTA | Arterial (bolus tracked) | Top of heart to Below heart |
+        | Non-contrast | Non-contrast | Lung Apices to Diaphragm |
+        | Gated CTA | Arterial (bolus tracked) | Lung Apices to Diaphragm |
         | Stent delay (optional) | Contrast (40 sec delay) | Stent coverage |
 
     === "Clinical Indications"
@@ -88,9 +88,9 @@
     | Series Name | Start Location | End Location | Delay | Slice Thickness | Notes |
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout | Top of chest | Diaphragm | N/A | N/A | AP lateral |
-    | Non-contrast | Top of heart | Below heart | N/A | 3 mm | Calcium score |
-    | Gated CTA | Top of heart | Below heart | Bolus tracked | 0.5-0.625 mm | Retrospective ECG gating |
-    | Stent delay (optional) | Top of heart | Below heart | 40 sec | 0.5-0.625 mm | Optional for stent assessment |
+    | Non-contrast | Lung apices | Diaphragm | N/A | 3 mm | Calcium score |
+    | Gated CTA | Lung apices | Diaphragm | Bolus tracked | 0.5-0.625 mm | Retrospective ECG gating |
+    | Stent delay (optional) | Start of Stent | End of Stent | 40 sec | 0.5-0.625 mm | Optional for stent assessment |
 
 === "Technical Parameters"
 

@@ -90,6 +90,7 @@
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout/Topogram | Diaphragm | Femoral heads | N/A | N/A | AP lateral |
     | CTA Arterial | Diaphragm | Femoral heads | Bolus tracked | 0.625 mm | Caudocranial direction |
+    | Stent Delay (optional) | Top of Stent | Bottom of Stent | 40 sec | 0.625 mm | Stent coverage |
 
 === "Technical Parameters"
 

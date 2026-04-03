@@ -89,6 +89,8 @@
     |:------------|:---------------|:-------------|:------|:----------------|:------|
     | Scout/Topogram | Thoracic inlet | Pubic symphysis | N/A | N/A | AP and lateral |
     | CTA Arterial | Thoracic inlet | Pubic symphysis | Bolus tracked | 0.625 mm | Caudocranial from feet to head |
+    | Stent Delay (optional) | Top of Stent | Bottom of Stent | 40 sec | 0.625 mm | Stent coverage |
+    | Vasculitis Delayed (optional) | Thoracic inlet | Pubic symphysis | 90 sec | 0.625 mm | Wall enhancement/thickening |
 
 === "Technical Parameters"
 
