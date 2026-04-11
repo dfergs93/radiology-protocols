@@ -1,5 +1,23 @@
+# Data files (managed locally, not in repo)
 csv/
+
+# Secrets
 .env
+
+# Python build artifacts
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+venv/
+
+# OS artifacts
+.DS_Store
+
+# Tool state
+.superpowers/
+.worktrees/
+
 # Ignore legacy scripts but track the new data-layer scripts
 # Note: must use scripts/* (not scripts/) for negation to work
 scripts/*
@@ -8,5 +26,8 @@ scripts/*
 !scripts/generate_comparison_index.py
 !scripts/generate_sitemap.py
 !scripts/scripts_summary.md
+
+# Removed subsystems (prevent re-adding)
+backend/
+chroma_db/
 mri/
-.worktrees/
