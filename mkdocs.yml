@@ -37,14 +37,10 @@ extra_css:
   - custom_css/extra.css
 
 extra_javascript:
-  - https://unpkg.com/mermaid@10/dist/mermaid.min.js
   - javascripts/acquisition-diagram.js
   - javascripts/acquisition-diagram-init.js
-  - javascripts/mermaid-init.js
   - https://cdn.jsdelivr.net/npm/marked/marked.min.js
   - javascripts/protocol-compare.js
-  - javascripts/protocoller.js
-  - javascripts/protocol-submit.js
   - javascripts/protocol-comparison-index.json  # Pre-generated JSON data for comparison index
   - javascripts/mathjax.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
@@ -60,10 +56,6 @@ markdown_extensions:
   - pymdownx.emoji:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  - pymdownx.superfences:
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.superfences
   - pymdownx.arithmatex:
       generic: true
