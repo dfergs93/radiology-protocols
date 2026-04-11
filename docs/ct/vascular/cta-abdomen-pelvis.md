@@ -147,6 +147,7 @@ safety:
     === "Technologist Notes"
 
         - Caudocranial scan direction. Include renal arteries to femoral bifurcation minimum
+        - Additional Recons: 3D VR and curved MPR. Measure AAA in 3 planes
 
     === "Nursing Notes"
 
@@ -193,11 +194,3 @@ safety:
     | Axial | Arterial | Pelvis | 2.5 mm/2.5 mm | Vascular | 3 | Iliac vessels |
     | Coronal | Arterial | Full AP | 3 mm/3 mm | Vascular | 3 | MIP coronal aorta and branches |
     | Sagittal | Arterial | Full AP | 3 mm/3 mm | Vascular | 3 | Curved MPR of aorta |
-
-### Additional Reconstructions
-
-3D VR and curved MPR. Measure AAA in 3 planes
-
-Category: Vascular
-
-Protocol Type: Vascular

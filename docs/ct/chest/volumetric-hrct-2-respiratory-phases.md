@@ -124,6 +124,7 @@ safety:
     === "Technologist Notes"
 
         - TWO acquisitions: 1) Full INSPIRATION 2) Limited EXPIRATION (carina to bases). Volumetric (contiguous thin slice). Coach breathing
+        - Additional Recons: Thin slice for ILD detail. Compare inspiration vs expiration. Quantitative analysis if available
 
     === "Nursing Notes"
 
@@ -170,11 +171,3 @@ safety:
     | Axial | Expiration | Lower lungs | 1 mm/1 mm | Lung | 3 | Air trapping assessment |
     | Coronal | Inspiration | Chest | 1.5 mm | Lung | 3 | ILD distribution |
     | Sagittal | Inspiration | Chest | 2 mm | Lung | 3 | Craniocaudal distribution |
-
-### Additional Reconstructions
-
-Thin slice for ILD detail. Compare inspiration vs expiration. Quantitative analysis if available
-
-Category: Chest
-
-Protocol Type: Chest/Pulmonary

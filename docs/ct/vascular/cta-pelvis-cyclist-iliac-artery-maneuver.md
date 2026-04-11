@@ -143,6 +143,7 @@ safety:
     === "Technologist Notes"
 
         - TWO acquisitions: 1) Resting supine 2) Hip flexion simulating cycling position. Bilateral imaging for comparison
+        - Additional Recons: Side-by-side MIP of rest vs flexion. Measure degree of stenosis. 3D VR
 
     === "Nursing Notes"
 
@@ -189,11 +190,3 @@ safety:
     | Axial | Flexion | Pelvis | 1.5 mm/1.5 mm | Vascular | 3 | Assess for kinking with flexion |
     | Coronal | Both phases | Pelvis | 2 mm/2 mm | Vascular | 3 | MIP comparison rest vs flexion |
     | Sagittal | Both phases | Pelvis | 2 mm/2 mm | Vascular | 3 | Lateral view iliac course |
-
-### Additional Reconstructions
-
-Side-by-side MIP of rest vs flexion. Measure degree of stenosis. 3D VR
-
-Category: Vascular
-
-Protocol Type: Vascular

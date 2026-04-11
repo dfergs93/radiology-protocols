@@ -150,6 +150,7 @@ safety:
 
         - Non-valsalva breathing technique, cardiac breathing instruction.
         - Injection duration is fixed 35 sec fixed 30 sec scan delay. Retrospective gating trigger at 30-70% (End sys - end dia).  Reconstruct  at 5% intervals.
+        - Additional Recons: Multi-phase reconstructions. 4-chamber 2-chamber views. Valve-specific reformats
 
     === "Nursing Notes"
 
@@ -197,11 +198,3 @@ safety:
     | Axial | Gated CTA | Heart | 0.75 mm/0.5 mm | Cardiac | 3 | Reformatted at best cardiac phase |
     | Axial | Gated CTA | Heart | 1 mm/1 mm | Standard | 3 | Functional series for valve assessment |
     | Axial | Delayed | Chest | 1 mm/1 mm | Standard | 3 | Mass, vegetations |
-
-### Additional Reconstructions
-
-Multi-phase reconstructions. 4-chamber 2-chamber views. Valve-specific reformats
-
-Category: Cardiac
-
-Protocol Type: Cardiac Gated

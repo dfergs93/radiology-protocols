@@ -138,6 +138,7 @@ safety:
     === "Technologist Notes"
 
         - NC Head then delayed venous CTV (60-90 sec). Skull base to vertex. Assess venous sinuses
+        - Additional Recons: 3D VR venogram. MIP maximum intensity projection. Document filling defects
 
     === "Nursing Notes"
 
@@ -184,11 +185,3 @@ safety:
     | MIP | CTV | Sinuses | Thick slab | Brain | N/A | Venogram overview |
     | 3D VR | CTV | Venous system | 1 mm source | Brain | N/A | 3D venogram |
     | Sagittal | CTV | Midline | 1.5 mm | Brain | 3 | Sagittal sinus |
-
-### Additional Reconstructions
-
-3D VR venogram. MIP maximum intensity projection. Document filling defects
-
-Category: Neuro
-
-Protocol Type: Vascular

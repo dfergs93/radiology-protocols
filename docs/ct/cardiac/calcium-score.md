@@ -111,6 +111,7 @@ safety:
         - Prospective ECG gating.
         - Suspended Respiration breathing instructions.
         - For single source CT: Target End Diastole if HR < 63BPM, else target End diastole and end systole. For dual source CT: Target End diastole if HR <79, else target end systole. Ensure ECG leads well connected, Goal: <= 60 BPM, regular (+/- 5).
+        - Additional Recons: Agatston score calculation. Percentile reporting
 
     === "Nursing Notes"
 
@@ -154,11 +155,3 @@ safety:
     |:------|:------------|:----|:--------------------|:-------|:------------|:------|
     | Axial | Calcium score | Heart | 3 mm/3 mm | Standard | 3 | For Agatston score calculation |
     | Axial | Calcium score | Chest | 1.5 mm/1.5 mm | Lung | 3 | Lung FOV for Extracardiac findings |
-
-### Additional Reconstructions
-
-Agatston score calculation. Percentile reporting
-
-Category: Cardiac
-
-Protocol Type: Non-Contrast

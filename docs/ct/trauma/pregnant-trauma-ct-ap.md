@@ -166,7 +166,3 @@ safety:
     | Axial | Portal venous | AP | 2.5 mm/2.5 mm | Standard | 3 | Maternal organs |
     | Coronal | Portal venous | AP | 3 mm/3 mm | Standard | 3 | Overview |
     | Sagittal | Portal venous | Pelvis | 3 mm/3 mm | Standard | 3 | Uterus and placenta |
-
-Category: Trauma
-
-Protocol Type: Trauma

@@ -132,6 +132,7 @@ safety:
     === "Technologist Notes"
 
         - Distal radius/ulna through carpus. Submillimeter for carpal detail. Extended for forearm if needed
+        - Additional Recons: Scaphoid views. Carpal alignment. 3D if complex fracture
 
     === "Nursing Notes"
 
@@ -177,11 +178,3 @@ safety:
     | Coronal | Wrist | Wrist | 1 mm/0.75 mm | Bone | N/A | Coronal wrist |
     | Sagittal | Wrist | Wrist | 1 mm/0.75 mm | Bone | N/A | Sagittal wrist |
     | Oblique sagittal | Wrist | Scaphoid | 1 mm | Bone | N/A | Scaphoid long axis |
-
-### Additional Reconstructions
-
-Scaphoid views. Carpal alignment. 3D if complex fracture
-
-Category: Msk
-
-Protocol Type: Musculoskeletal

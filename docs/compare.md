@@ -1,3 +1,9 @@
+---
+title: CT Comparison Tool
+hide:
+  - navigation
+  - toc
+---
 # CT Comparison Tool
 
 Compare multiple CT protocols side-by-side to understand differences in contrast strategies, timing, and acquisition parameters.

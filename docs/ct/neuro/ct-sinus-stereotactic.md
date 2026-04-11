@@ -116,6 +116,7 @@ safety:
     === "Technologist Notes"
 
         - Submillimeter isotropic acquisition. DICOM for surgical navigation system. May need fiducial markers. Entire sinus anatomy
+        - Additional Recons: Export DICOM to surgical navigation system. Isotropic 0.625mm
 
     === "Nursing Notes"
 
@@ -161,11 +162,3 @@ safety:
     | Coronal | Stereo | Sinuses | 0.625 mm/0.625 mm | Bone | N/A | Isotropic coronal |
     | Sagittal | Stereo | Sinuses | 0.625 mm/0.625 mm | Bone | N/A | Isotropic sagittal |
     | 3D surface | Stereo | Sinuses | 0.625 mm source | Bone | N/A | Surface rendering for navigation |
-
-### Additional Reconstructions
-
-Export DICOM to surgical navigation system. Isotropic 0.625mm
-
-Category: Neuro
-
-Protocol Type: Neuroradiology

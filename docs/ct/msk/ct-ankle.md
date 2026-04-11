@@ -132,6 +132,7 @@ safety:
     === "Technologist Notes"
 
         - Include distal tibia/fibula through hindfoot. Submillimeter for 3D. Bilateral scout for positioning. May scan bilateral for comparison
+        - Additional Recons: 3D reconstruction for surgical planning. Document fracture fragments
 
     === "Nursing Notes"
 
@@ -177,11 +178,3 @@ safety:
     | Coronal | Ankle | Ankle | 1.5 mm/1 mm | Bone | N/A | Coronal ankle |
     | Sagittal | Ankle | Ankle | 1.5 mm/1 mm | Bone | N/A | Sagittal ankle |
     | 3D surface | Ankle | Bones | 0.625 mm source | Bone | N/A | 3D for complex fractures |
-
-### Additional Reconstructions
-
-3D reconstruction for surgical planning. Document fracture fragments
-
-Category: Msk
-
-Protocol Type: Musculoskeletal

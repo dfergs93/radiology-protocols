@@ -159,6 +159,7 @@ safety:
         - Non-valsalva breathing technique, cardiac breathing instruction. Put in study notes if patient unable to follow breathing instructions.
         - If high HR variability, can trigger by millisecond (200ms - 450 ms pulse range). Revolution CT is better for Afib.
         - Target End diastole if HR < 65bpm. Target End systole if HR > 86bpm. Target End diastole to End systole if HR 66 - 75 bpm
+        - Additional Recons: Curved MPR of all coronaries.
 
     === "Nursing Notes"
 
@@ -205,11 +206,3 @@ safety:
     | Axial | Calcium score | Chest | 1.5 mm/1.5 mm | Lung | 3 | Lung FOV for Extracardiac findings |
     | Axial | Gated CTA | Heart | 0.625 mm/0.625 mm | Cardiac | 3 | Native coronary assessment |
     | 3D VR | Gated CTA | Heart | 0.5 mm source | Cardiac | 3 | MPRs by 3D lab |
-
-### Additional Reconstructions
-
-Curved MPR of all coronaries.
-
-Category: Cardiac
-
-Protocol Type: Vascular

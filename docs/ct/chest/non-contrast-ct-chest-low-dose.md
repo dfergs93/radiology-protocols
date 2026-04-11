@@ -112,6 +112,7 @@ safety:
     === "Technologist Notes"
 
         - LOW DOSE technique. Reduced mAs 30-50% of standard. Helical acquisition. High IR strength
+        - Additional Recons: CAD nodule detection. Measure all nodules ≥3mm. Lung-RADS reporting
 
     === "Nursing Notes"
 
@@ -157,11 +158,3 @@ safety:
     | Axial | Chest | Chest | 2.5 mm/2.5 mm | Standard | 3 | Mediastinal window |
     | Coronal | Chest | Chest | 2 mm/2 mm | Lung | High IR | Coronal overview |
     | MIP | Chest | Lungs | 5 mm slab | Lung | N/A | Nodule detection |
-
-### Additional Reconstructions
-
-CAD nodule detection. Measure all nodules ≥3mm. Lung-RADS reporting
-
-Category: Chest
-
-Protocol Type: Non-Contrast

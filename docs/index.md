@@ -1,5 +1,8 @@
 ---
 title: CT Protocol Reference
+hide:
+  - navigation
+  - toc
 ---
 
 # CT Protocol Reference
@@ -21,31 +24,24 @@ Contrast-enhanced CT protocols for all major body regions. Each protocol include
 
 <div class="body-parts-grid">
   <a href="/radiology-protocols/ct/chest/" class="body-part-card">
-    <span class="body-part-icon">🫁</span>
     <h3>Chest</h3>
   </a>
   <a href="/radiology-protocols/ct/abdomen/" class="body-part-card">
-    <span class="body-part-icon">🫃</span>
     <h3>Abdomen</h3>
   </a>
   <a href="/radiology-protocols/ct/cardiac/" class="body-part-card">
-    <span class="body-part-icon">❤️</span>
     <h3>Cardiac</h3>
   </a>
   <a href="/radiology-protocols/ct/neuro/" class="body-part-card">
-    <span class="body-part-icon">🧠</span>
     <h3>Neuro</h3>
   </a>
   <a href="/radiology-protocols/ct/msk/" class="body-part-card">
-    <span class="body-part-icon">🦴</span>
     <h3>MSK</h3>
   </a>
   <a href="/radiology-protocols/ct/vascular/" class="body-part-card">
-    <span class="body-part-icon">🩸</span>
     <h3>Vascular</h3>
   </a>
-  <a href="/radiology-protocols/ct/trauma/" class="body-part-card last">
-    <span class="body-part-icon">🚑</span>
+  <a href="/radiology-protocols/ct/trauma/" class="body-part-card">
     <h3>Trauma</h3>
   </a>
 </div>

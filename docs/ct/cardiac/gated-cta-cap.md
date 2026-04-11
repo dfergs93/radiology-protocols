@@ -158,6 +158,7 @@ safety:
     === "Technologist Notes"
 
         - TWO acquisitions: 1) Gated retrospective CHEST 2) Flash helical ABDOMEN/PELVIS. Chest gated for aortic root. AP flash arterial
+        - Additional Recons: Curved MPR full aorta. Aortic valve reformats. 3D VR
 
     === "Nursing Notes"
 
@@ -206,11 +207,3 @@ safety:
     | Axial | Flash AP | Abdomen/Pelvis | 2 mm/2 mm | Vascular | 3 | Abdominal aorta and branches |
     | Coronal | Both | Full CAP | 2.5 mm/2.5 mm | Vascular | 3 | MIP full aorta |
     | Sagittal | Both | Full CAP | 2.5 mm/2.5 mm | Vascular | 3 | Curved MPR entire aorta |
-
-### Additional Reconstructions
-
-Curved MPR full aorta. Aortic valve reformats. 3D VR
-
-Category: Cardiac
-
-Protocol Type: Cardiac Gated

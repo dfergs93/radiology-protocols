@@ -132,6 +132,7 @@ safety:
     === "Technologist Notes"
 
         - Post-arthrogram CT. Inject glenohumeral joint. Immediate CT after injection. Thin slices for labrum
+        - Additional Recons: Oblique coronal and sagittal. Assess labrum rotator cuff capsule. Document contrast extravasation
 
     === "Nursing Notes"
 
@@ -177,11 +178,3 @@ safety:
     | Coronal | Arthrogram | Shoulder | 1.5 mm/1 mm | Standard | 3 | Coronal oblique shoulder |
     | Sagittal | Arthrogram | Shoulder | 1.5 mm/1 mm | Standard | 3 | Sagittal oblique |
     | Abduction ABER | Arthrogram | Shoulder | 1.5 mm | Standard | 3 | ABER position if done |
-
-### Additional Reconstructions
-
-Oblique coronal and sagittal. Assess labrum rotator cuff capsule. Document contrast extravasation
-
-Category: Msk
-
-Protocol Type: Musculoskeletal

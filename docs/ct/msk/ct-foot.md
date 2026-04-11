@@ -132,6 +132,7 @@ safety:
     === "Technologist Notes"
 
         - Calcaneus through toes. Submillimeter. Weight-bearing position if able. Bilateral for comparison
+        - Additional Recons: Document Lisfranc alignment. Calcaneal angles. 3D if complex
 
     === "Nursing Notes"
 
@@ -177,11 +178,3 @@ safety:
     | Coronal | Foot | Foot | 1.5 mm/1 mm | Bone | N/A | Coronal foot |
     | Sagittal | Foot | Foot | 1.5 mm/1 mm | Bone | N/A | Sagittal foot |
     | Oblique | Foot | Lisfranc | 1.5 mm | Bone | N/A | Lisfranc joint |
-
-### Additional Reconstructions
-
-Document Lisfranc alignment. Calcaneal angles. 3D if complex
-
-Category: Msk
-
-Protocol Type: Musculoskeletal

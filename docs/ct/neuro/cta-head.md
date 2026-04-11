@@ -143,6 +143,7 @@ safety:
     === "Technologist Notes"
 
         - NC Head optional then CTA skull base to vertex. Bolus tracking. Submillimeter for 3D reconstruction
+        - Additional Recons: 3D VR and MIP. Measure aneurysm if present. Assess A1 A2 dominance
 
     === "Nursing Notes"
 
@@ -189,11 +190,3 @@ safety:
     | MIP | CTA | Circle of Willis | Thick slab | Brain | N/A | Vessel overview |
     | 3D VR | CTA | Intracranial vessels | 0.5 mm source | Brain | N/A | 3D angiogram |
     | Curved MPR | CTA | Individual vessels | 0.75 mm | Brain | 3 | Vessel-specific views |
-
-### Additional Reconstructions
-
-3D VR and MIP. Measure aneurysm if present. Assess A1 A2 dominance
-
-Category: Neuro
-
-Protocol Type: Vascular

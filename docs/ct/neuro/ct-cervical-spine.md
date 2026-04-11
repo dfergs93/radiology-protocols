@@ -132,6 +132,7 @@ safety:
     === "Technologist Notes"
 
         - Skull base to T1. Submillimeter helical. Sagittal and coronal reformats required. Bone algorithm
+        - Additional Recons: Sagittal and coronal bone reconstructions. Oblique for foramina
 
     === "Nursing Notes"
 
@@ -177,11 +178,3 @@ safety:
     | Sagittal | C-spine | C-spine | 2 mm/1.5 mm | Bone | 3 | Midline and parasagittal |
     | Coronal | C-spine | C-spine | 2 mm/2 mm | Bone | 3 | Coronal alignment |
     | Oblique sagittal | C-spine | Neural foramina | 2 mm | Bone | 3 | Foraminal narrowing |
-
-### Additional Reconstructions
-
-Sagittal and coronal bone reconstructions. Oblique for foramina
-
-Category: Neuro
-
-Protocol Type: Spine

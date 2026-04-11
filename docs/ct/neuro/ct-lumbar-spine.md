@@ -132,6 +132,7 @@ safety:
     === "Technologist Notes"
 
         - T12 to sacrum. Submillimeter helical. Sagittal and coronal reformats. Oblique for foramina
+        - Additional Recons: Oblique sagittal for foramina. Measure spinal canal. Grade stenosis
 
     === "Nursing Notes"
 
@@ -177,11 +178,3 @@ safety:
     | Sagittal | L-spine | L-spine | 2 mm/1.5 mm | Bone | 3 | Midline and parasagittal |
     | Coronal | L-spine | L-spine | 2.5 mm/2 mm | Bone | 3 | Coronal overview |
     | Oblique sagittal | L-spine | Neural foramina | 2 mm | Bone | 3 | Foraminal assessment |
-
-### Additional Reconstructions
-
-Oblique sagittal for foramina. Measure spinal canal. Grade stenosis
-
-Category: Neuro
-
-Protocol Type: Spine

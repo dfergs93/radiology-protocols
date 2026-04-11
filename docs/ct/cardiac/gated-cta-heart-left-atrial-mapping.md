@@ -145,6 +145,7 @@ safety:
     === "Technologist Notes"
 
         - Retrospective gating. Focus on left atrium and pulmonary veins. Thin slices critical. Extended coverage for all PV ostia
+        - Additional Recons: 3D LA reconstruction. PV ostia measurements (diameter area). LAA morphology. Esophageal position
 
     === "Nursing Notes"
 
@@ -191,11 +192,3 @@ safety:
     | Coronal | Gated CTA | LA/PV | 0.75 mm | Cardiac | 3 | PV ostia en face |
     | Sagittal | Gated CTA | LA/PV | 0.75 mm | Cardiac | 3 | Lateral PV views |
     | Axial | Delayed CTA | LA/PV | 0.5 mm/0.5 mm | Cardiac | 3 | Left Atrial Appendage Thrombus |
-
-### Additional Reconstructions
-
-3D LA reconstruction. PV ostia measurements (diameter area). LAA morphology. Esophageal position
-
-Category: Cardiac
-
-Protocol Type: Cardiac Gated

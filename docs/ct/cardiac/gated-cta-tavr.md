@@ -143,6 +143,7 @@ safety:
     === "Technologist Notes"
 
         - Gated CHEST retrospective + Flash AP. Gated for valve measurements. AP for access planning. TAVR post-processing required
+        - Additional Recons: TAVR measurements: annulus area perimeter diameters. Coronary heights. Sinus of Valsalva. STJ. Ascending aorta. Access vessels
 
     === "Nursing Notes"
 
@@ -189,11 +190,3 @@ safety:
     | Axial | Flash AP | AP | 2 mm/2 mm | Vascular | 3 | Access vessel assessment |
     | Double oblique | Gated chest | Aortic valve | 0.5 mm | Cardiac | 3 | En face aortic annulus for sizing |
     | 3D VR | Flash AP | Iliofemoral | 1.5 mm source | Vascular | 3 | 3D access planning |
-
-### Additional Reconstructions
-
-TAVR measurements: annulus area perimeter diameters. Coronary heights. Sinus of Valsalva. STJ. Ascending aorta. Access vessels
-
-Category: Cardiac
-
-Protocol Type: Cardiac Gated

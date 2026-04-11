@@ -146,6 +146,7 @@ safety:
     === "Technologist Notes"
 
         - COMPLEX protocol: 1) NC 2) 1st contrast injection 3) Arterial 20s after 1st 4) WAIT 5-7 min 5) 2nd injection + saline 6) IVP/nephrographic 90-120s after 2nd
+        - Additional Recons: Compare NC vs arterial vs nephrographic. Measure HU in mass. MIP urogram
 
     === "Nursing Notes"
 
@@ -193,11 +194,3 @@ safety:
     | Axial | Corticomedullary | Kidneys | 1.5 mm/1.5 mm | Standard | 3 | Vascular and cortical enhancement |
     | Axial | Nephrographic | Kidneys to pelvis | 2 mm/2 mm | Standard | 3 | Mass enhancement + urinary opacification |
     | Coronal | All phases | Kidneys | 2.5 mm/2.5 mm | Standard | 3 | Compare enhancement phases |
-
-### Additional Reconstructions
-
-Compare NC vs arterial vs nephrographic. Measure HU in mass. MIP urogram
-
-Category: Abdomen
-
-Protocol Type: Contrast-Enhanced

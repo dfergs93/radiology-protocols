@@ -124,6 +124,7 @@ safety:
     === "Technologist Notes"
 
         - THREE acquisitions: 1) INSPIRATION 2) MID-EXPIRATION 3) FULL EXPIRATION. Non-volumetric (1-2cm intervals). Lower dose than volumetric
+        - Additional Recons: Side-by-side comparison of three phases. Quantify air trapping
 
     === "Nursing Notes"
 
@@ -170,11 +171,3 @@ safety:
     | Axial | All phases | Chest | 1 mm display | Lung | 3 | Compare three phases |
     | Coronal reformat | Inspiration | Chest | 2 mm | Lung | 3 | Inspiration overview |
     | Mosaic MIP | All phases | Lungs | 5 mm | Lung | N/A | Air trapping visualization |
-
-### Additional Reconstructions
-
-Side-by-side comparison of three phases. Quantify air trapping
-
-Category: Chest
-
-Protocol Type: Chest/Pulmonary

@@ -158,6 +158,7 @@ safety:
     === "Technologist Notes"
 
         - FOUR acquisitions: 1) NC Head arms down 2) CTA Neck bolus track 3) CTA CAP arms up 4) Post Head arms down. Patient repositions arms between scans
+        - Additional Recons: Comprehensive MIP and 3D VR of all vascular beds. Measure vessel diameters. Document FMD findings
 
     === "Nursing Notes"
 
@@ -205,11 +206,3 @@ safety:
     | Coronal | CTA phases | Full body | 2-3 mm/2-3 mm | Vascular | 3 | MIP of all arterial territories |
     | Sagittal | CTA phases | Full body | 2-3 mm/2-3 mm | Vascular | 3 | Lateral views all vessels |
     | 3D VR | CTA phases | Full body | 1 mm source | Vascular | 3 | 3D reconstruction multi-territory |
-
-### Additional Reconstructions
-
-Comprehensive MIP and 3D VR of all vascular beds. Measure vessel diameters. Document FMD findings
-
-Category: Vascular
-
-Protocol Type: Vascular

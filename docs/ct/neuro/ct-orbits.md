@@ -133,6 +133,7 @@ safety:
     === "Technologist Notes"
 
         - Orbits: superior orbital rim to maxillary sinus. Axial 1-2mm. Coronal reformats. NC for trauma. Contrast for masses/inflammation
+        - Additional Recons: Assess optic nerve canal. Measure EOMs if thyroid eye disease. Document foreign body
 
     === "Nursing Notes"
 
@@ -178,11 +179,3 @@ safety:
     | Coronal | Orbits | Orbits | 1.5 mm/1 mm | Bone and Standard | 3 | Coronal orbits |
     | Sagittal | Orbits | Optic nerve | 2 mm/1.5 mm | Standard | 3 | Optic nerve canal |
     | 3D if trauma | Orbits | Orbital bones | 1 mm source | Bone | N/A | 3D if complex fracture |
-
-### Additional Reconstructions
-
-Assess optic nerve canal. Measure EOMs if thyroid eye disease. Document foreign body
-
-Category: Neuro
-
-Protocol Type: Contrast-Enhanced

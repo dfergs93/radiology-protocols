@@ -151,6 +151,7 @@ safety:
     === "Technologist Notes"
 
         - STAT protocol: 1) NC Head 2) CTA Head/Neck (aortic arch to vertex) 3) CTP (optional). Minimize door-to-scan time
+        - Additional Recons: CTA MIP and 3D. CTP perfusion maps if done. ASPECTS score. LVO documentation
 
     === "Nursing Notes"
 
@@ -198,11 +199,3 @@ safety:
     | Axial | CTA Arch to Vertex | Head and Neck | 1 mm/1 mm | Brain | 3 | LVO detection |
     | MIP | CTA | Circle of Willis | Thick slab | Brain | N/A | Vessel overview |
     | CTP maps | CTP | Perfusion | Color maps | N/A | N/A | CBF CBV MTT Tmax maps |
-
-### Additional Reconstructions
-
-CTA MIP and 3D. CTP perfusion maps if done. ASPECTS score. LVO documentation
-
-Category: Neuro
-
-Protocol Type: Neuroradiology

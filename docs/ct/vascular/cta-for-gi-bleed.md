@@ -140,6 +140,7 @@ safety:
     === "Technologist Notes"
 
         - High flow rate critical for arterial phase. Scan arterial at 25 sec then portal at 70 sec then delayed at 90-180 sec. Look for active extravasation
+        - Additional Recons: MIP of all three phases side-by-side for comparison
 
     === "Nursing Notes"
 
@@ -185,11 +186,3 @@ safety:
     | Axial | Arterial | Full AP | 2.5 mm/2.5 mm | Standard | 3 | Look for arterial blush/extravasation |
     | Axial | Delayed | Full AP | 2.5 mm/2.5 mm | Standard | 3 | Look for contrast pooling in bowel |
     | Coronal | All phases | Full AP | 3 mm/3 mm | Standard | 3 | MIP to track extravasation |
-
-### Additional Reconstructions
-
-MIP of all three phases side-by-side for comparison
-
-Category: Vascular
-
-Protocol Type: Vascular

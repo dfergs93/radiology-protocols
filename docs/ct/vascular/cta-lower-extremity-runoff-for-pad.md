@@ -147,6 +147,7 @@ safety:
     === "Technologist Notes"
 
         - Scan from diaphragm to toes. Tape feet together. Use automatic bolus tracking. Extend delay if known severe PAD. Cover tibial vessels to ankle
+        - Additional Recons: MIP and 3D VR. Curved MPR of each arterial segment. Bone subtraction for vessels.
 
     === "Nursing Notes"
 
@@ -193,11 +194,3 @@ safety:
     | Coronal | Arterial | Full legs | 3 mm/3 mm | Vascular | 3 | MIP full arterial tree |
     | Sagittal | Arterial | Full legs | 3 mm/3 mm | Vascular | 3 | Lateral views of vessels |
     | 3D VR | Arterial | Full legs | 1.5 mm source | Vascular | 3 | 3D for surgical planning |
-
-### Additional Reconstructions
-
-MIP and 3D VR. Curved MPR of each arterial segment. Bone subtraction for vessels.
-
-Category: Vascular
-
-Protocol Type: Vascular

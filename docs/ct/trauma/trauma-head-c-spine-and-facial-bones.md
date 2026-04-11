@@ -131,6 +131,7 @@ safety:
     === "Technologist Notes"
 
         - THREE acquisitions: 1) Head 2) C-spine 3) Facial bones. Face: submillimeter helical for 3D. C-collar remains
+        - Additional Recons: 3D face reconstruction. Le Fort classification. Orbital floor assessment
 
     === "Nursing Notes"
 
@@ -178,11 +179,3 @@ safety:
     | Sagittal | C-spine | C-spine | 2 mm/2 mm | Bone | 3 | C-spine alignment |
     | Axial | Face | Face | 1.25 mm/1 mm | Bone | N/A | Facial bones |
     | Coronal | Face | Face | 1.25 mm/1 mm | Bone | N/A | Facial coronal |
-
-### Additional Reconstructions
-
-3D face reconstruction. Le Fort classification. Orbital floor assessment
-
-Category: Trauma
-
-Protocol Type: Trauma

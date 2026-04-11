@@ -109,6 +109,7 @@ safety:
     === "Technologist Notes"
 
         - Single INSPIRATION. PRONE position. Non-volumetric (1-2cm intervals). Distinguish atelectasis from fibrosis
+        - Additional Recons: Compare prone to supine to differentiate atelectasis from fibrosis
 
     === "Nursing Notes"
 
@@ -153,11 +154,3 @@ safety:
     | Axial | HRCT prone | Chest | 1 mm display | Lung | 3 | Prone images |
     | Coronal | HRCT prone | Chest | 2 mm | Lung | 3 | Coronal prone |
     | Compare | Supine vs prone | Posterior lungs | 1 mm | Lung | 3 | Dependent changes |
-
-### Additional Reconstructions
-
-Compare prone to supine to differentiate atelectasis from fibrosis
-
-Category: Chest
-
-Protocol Type: Chest/Pulmonary

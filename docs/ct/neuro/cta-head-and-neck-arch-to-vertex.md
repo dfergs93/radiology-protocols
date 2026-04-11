@@ -145,6 +145,7 @@ safety:
     === "Technologist Notes"
 
         - Scan from aortic arch through vertex. Use bolus tracking in arch. Minimize dental artifact with gantry angulation
+        - Additional Recons: MIP and 3D VR reconstructions of vessels. Curved MPR of carotids
 
     === "Nursing Notes"
 
@@ -191,11 +192,3 @@ safety:
     | Axial | CTA | Head | 1 mm/1 mm | Vascular | 3 | Submillimeter for circle of Willis |
     | Coronal | CTA | Neck | 2 mm/2 mm | Vascular | 3 | MIP for carotid overview |
     | Sagittal | CTA | Full | 2 mm/2 mm | Vascular | 3 | MIP for vertebral arteries |
-
-### Additional Reconstructions
-
-MIP and 3D VR reconstructions of vessels. Curved MPR of carotids
-
-Category: Neuro
-
-Protocol Type: Vascular

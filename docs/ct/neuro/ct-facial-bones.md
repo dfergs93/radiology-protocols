@@ -121,6 +121,7 @@ safety:
     === "Technologist Notes"
 
         - Frontal sinus to mandible. Submillimeter for 3D. Axial acquisition with multiplanar reformats. Remove dentures
+        - Additional Recons: 3D surface rendering. Document Le Fort if present. Orbital floor assessment
 
     === "Nursing Notes"
 
@@ -166,11 +167,3 @@ safety:
     | Coronal | Face | Face | 1.25 mm/1 mm | Bone | N/A | Coronal face |
     | Sagittal | Face | Midface | 2 mm/1.5 mm | Bone | N/A | Sagittal midline |
     | 3D | Face | Facial bones | 0.625 mm source | Bone | N/A | 3D surface rendering |
-
-### Additional Reconstructions
-
-3D surface rendering. Document Le Fort if present. Orbital floor assessment
-
-Category: Neuro
-
-Protocol Type: Non-Contrast

@@ -150,7 +150,3 @@ safety:
     | Axial | Chest | Chest | 1.25 mm/1.25 mm | Lung | Maximum IR 5 | Nodule follow-up |
     | Axial | Chest | Chest | 2.5 mm/2.5 mm | Standard | High IR | Mediastinal |
     | Coronal | Chest | Chest | 2 mm/2 mm | Lung | Maximum IR | Coronal |
-
-Category: Chest
-
-Protocol Type: Chest/Pulmonary

@@ -133,6 +133,7 @@ safety:
     === "Technologist Notes"
 
         - Distal femur through proximal tibia/fibula. Submillimeter. Extended FOV for alignment. Bilateral scout
+        - Additional Recons: Schatzker classification if tibial plateau. Measure alignment. 3D reconstruction
 
     === "Nursing Notes"
 
@@ -178,11 +179,3 @@ safety:
     | Coronal | Knee | Knee | 1.5 mm/1 mm | Bone | N/A | Coronal knee |
     | Sagittal | Knee | Knee | 1.5 mm/1 mm | Bone | N/A | Sagittal knee |
     | 3D surface | Knee | Bones | 0.625 mm source | Bone | N/A | 3D for surgical planning |
-
-### Additional Reconstructions
-
-Schatzker classification if tibial plateau. Measure alignment. 3D reconstruction
-
-Category: Msk
-
-Protocol Type: Musculoskeletal

@@ -149,6 +149,7 @@ safety:
     === "Technologist Notes"
 
         - RAPID triple phase: 1) NC CAP (hematoma) 2) Arterial CAP (active bleed bolus track 25-30s) 3) Portal venous CAP (70s). STAT protocol
+        - Additional Recons: Measure aneurysm. Identify bleeding site. EVAR measurements if stable
 
     === "Nursing Notes"
 
@@ -196,11 +197,3 @@ safety:
     | Coronal | Arterial | CAP | 2.5 mm/2.5 mm | Vascular | 3 | Aorta and bleeding |
     | Sagittal | Arterial | Aorta | 2 mm/2 mm | Vascular | 3 | Aorta extent |
     | 3D VR | Arterial | Aorta | 1.5 mm | Vascular | 3 | STAT 3D for EVAR planning |
-
-### Additional Reconstructions
-
-Measure aneurysm. Identify bleeding site. EVAR measurements if stable
-
-Category: Trauma
-
-Protocol Type: Trauma

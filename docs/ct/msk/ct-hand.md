@@ -133,6 +133,7 @@ safety:
     === "Technologist Notes"
 
         - Distal radius/ulna through fingertips. Submillimeter. Position hand flat. Bilateral scout for comparison
+        - Additional Recons: Scaphoid-specific views. 3D if complex. Document foreign body location
 
     === "Nursing Notes"
 
@@ -178,11 +179,3 @@ safety:
     | Coronal | Hand | Hand | 1 mm/0.75 mm | Bone | N/A | Coronal hand |
     | Sagittal | Hand | Hand | 1 mm/0.75 mm | Bone | N/A | Sagittal hand |
     | Oblique sagittal | Hand | Scaphoid | 1 mm | Bone | N/A | Scaphoid long axis |
-
-### Additional Reconstructions
-
-Scaphoid-specific views. 3D if complex. Document foreign body location
-
-Category: Msk
-
-Protocol Type: Musculoskeletal

@@ -141,6 +141,7 @@ safety:
     === "Technologist Notes"
 
         - Retrospective gating. INCREASED kV to 130-140 for metal artifact reduction. Increased contrast 1.3 mL/kg. Extended reconstruction phases
+        - Additional Recons: Multi-phase reconstructions. Valve-specific views. Paravalvular assessment
 
     === "Nursing Notes"
 
@@ -187,11 +188,3 @@ safety:
     | Axial | Gated CTA | Heart | Multi-phase | Cardiac | 3 | Multiple cardiac phases for motion |
     | Short axis | Gated CTA | Valve level | 1 mm | Cardiac | 3 | En face valve views |
     | Long axis | Gated CTA | Heart | Multi-phase | Cardiac | 3 | Valve motion assessment |
-
-### Additional Reconstructions
-
-Multi-phase reconstructions. Valve-specific views. Paravalvular assessment
-
-Category: Cardiac
-
-Protocol Type: Cardiac Gated

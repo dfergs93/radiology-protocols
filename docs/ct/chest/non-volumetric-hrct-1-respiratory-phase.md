@@ -108,6 +108,7 @@ safety:
     === "Technologist Notes"
 
         - Single INSPIRATION phase. Non-volumetric (1-2cm intervals). Lower dose for follow-up
+        - Additional Recons: Target slices through abnormality. Compare to prior
 
     === "Nursing Notes"
 
@@ -152,11 +153,3 @@ safety:
     | Axial | HRCT | Chest | 1 mm display | Lung | 3 | HRCT images |
     | Coronal | HRCT | Chest | 2 mm | Lung | 3 | Coronal overview |
     | Targeted | HRCT | Area of interest | 1 mm | Lung | 3 | Focus on abnormality |
-
-### Additional Reconstructions
-
-Target slices through abnormality. Compare to prior
-
-Category: Chest
-
-Protocol Type: Chest/Pulmonary

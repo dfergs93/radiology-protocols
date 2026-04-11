@@ -140,6 +140,7 @@ safety:
     === "Technologist Notes"
 
         - THREE phases: 1) Non-contrast for absolute HU 2) Portal venous 70s 3) 15 MINUTE delayed for washout. All phases cover adrenals
+        - Additional Recons: Calculate absolute washout: (Enhanced HU - Delayed HU)/(Enhanced HU - NC HU) x 100. >60% suggests adenoma. Measure HU in all phases
 
     === "Nursing Notes"
 
@@ -186,11 +187,3 @@ safety:
     | Axial | All phases | Adrenals | 2.5 mm/2.5 mm | Standard | 3 | ROI measurements in mass |
     | Axial | All phases | Adrenals | 2.5 mm/2.5 mm | Standard | 3 | Compare enhancement |
     | Coronal | Portal venous | Adrenals | 3 mm/3 mm | Standard | 3 | Anatomic overview |
-
-### Additional Reconstructions
-
-Calculate absolute washout: (Enhanced HU - Delayed HU)/(Enhanced HU - NC HU) x 100. >60% suggests adenoma. Measure HU in all phases
-
-Category: Abdomen
-
-Protocol Type: Contrast-Enhanced

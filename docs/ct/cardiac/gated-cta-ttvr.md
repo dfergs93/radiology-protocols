@@ -146,6 +146,7 @@ safety:
     === "Technologist Notes"
 
         - Gated CHEST with NO DOSE PULSING + delayed 90 sec CAP. TTVR post-processing required
+        - Additional Recons: TTVR measurements: annulus dimensions area perimeter. RA volume. RV function. Coronary proximity. Access vessels
 
     === "Nursing Notes"
 
@@ -192,11 +193,3 @@ safety:
     | Axial | Delayed CAP | AP | 2 mm/2 mm | Vascular | 3 | Access assessment |
     | Double oblique | Gated chest | Tricuspid valve | 0.5 mm | Cardiac | 3 | En face tricuspid annulus |
     | 3D VR | Delayed CAP | Iliofemoral | 1.5 mm | Vascular | 3 | Access planning |
-
-### Additional Reconstructions
-
-TTVR measurements: annulus dimensions area perimeter. RA volume. RV function. Coronary proximity. Access vessels
-
-Category: Cardiac
-
-Protocol Type: Cardiac Gated

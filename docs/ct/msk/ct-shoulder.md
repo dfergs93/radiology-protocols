@@ -133,6 +133,7 @@ safety:
     === "Technologist Notes"
 
         - Include entire scapula and proximal humerus. Submillimeter for glenoid detail. Y-views for scapula
+        - Additional Recons: 3D reconstruction. Neer classification if proximal humerus. Glenoid version measurements
 
     === "Nursing Notes"
 
@@ -178,11 +179,3 @@ safety:
     | Coronal | Shoulder | Shoulder | 2 mm/1.5 mm | Bone | N/A | Coronal shoulder |
     | Sagittal | Shoulder | Shoulder | 2 mm/1.5 mm | Bone | N/A | Sagittal shoulder |
     | Oblique | Shoulder | Glenoid | 1.5 mm | Bone | N/A | Glenoid en face |
-
-### Additional Reconstructions
-
-3D reconstruction. Neer classification if proximal humerus. Glenoid version measurements
-
-Category: Msk
-
-Protocol Type: Musculoskeletal

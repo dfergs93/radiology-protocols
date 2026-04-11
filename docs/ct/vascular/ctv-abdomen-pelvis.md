@@ -135,6 +135,7 @@ safety:
     === "Technologist Notes"
 
         - Scan at 180 seconds for venous phase. Slower injection rate OK for venous imaging. Scan from diaphragm to femoral veins
+        - Additional Recons: MIP venograms. 3D VR of venous system
 
     === "Nursing Notes"
 
@@ -180,11 +181,3 @@ safety:
     | Coronal | Venous | Full AP | 3 mm/3 mm | Standard | 3 | MIP of venous system |
     | Sagittal | Venous | Full AP | 3 mm/3 mm | Standard | 3 | IVC and iliac veins |
     | 3D VR | Venous | Full AP | 2 mm source | Standard | 3 | 3D venous anatomy |
-
-### Additional Reconstructions
-
-MIP venograms. 3D VR of venous system
-
-Category: Vascular
-
-Protocol Type: Vascular

@@ -136,6 +136,7 @@ safety:
     === "Technologist Notes"
 
         - Extend coverage based on injury. Aorta to ankles if bilateral. May do unilateral focused study. Arterial phase
+        - Additional Recons: MIP and 3D VR. Document vascular injury. Measure vessel caliber
 
     === "Nursing Notes"
 
@@ -181,11 +182,3 @@ safety:
     | Coronal | Arterial | Legs | 2 mm/2 mm | Vascular | 3 | MIP overview |
     | Sagittal | Arterial | Injured area | 2 mm/2 mm | Vascular | 3 | Vessel-bone relationship |
     | 3D VR | Arterial | Vessels | 1 mm source | Vascular | 3 | 3D vascular anatomy |
-
-### Additional Reconstructions
-
-MIP and 3D VR. Document vascular injury. Measure vessel caliber
-
-Category: Trauma
-
-Protocol Type: Vascular

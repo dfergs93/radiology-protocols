@@ -124,6 +124,7 @@ safety:
     === "Technologist Notes"
 
         - TWO acquisitions: 1) Head vertex to C1 2) C-spine skull base to T1. Head: 5mm axial. C-spine: 0.625mm with reformats. Minimize movement
+        - Additional Recons: C-spine: Sagittal and coronal bone reformats. 3D if complex fracture
 
     === "Nursing Notes"
 
@@ -171,11 +172,3 @@ safety:
     | Sagittal | C-spine | C-spine | 2 mm/2 mm | Bone | 3 | Midline and parasagittal |
     | Coronal | C-spine | C-spine | 2 mm/2 mm | Bone | 3 | Coronal alignment |
     | Axial | C-spine | C-spine | 2 mm/2 mm | Bone | 3 | Axial bone windows |
-
-### Additional Reconstructions
-
-C-spine: Sagittal and coronal bone reformats. 3D if complex fracture
-
-Category: Trauma
-
-Protocol Type: Trauma

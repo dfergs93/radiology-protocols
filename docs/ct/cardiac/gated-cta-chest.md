@@ -152,6 +152,7 @@ safety:
     === "Technologist Notes"
 
         - Retrospective ECG gating. Cover heart. Bolus tracking in ascending aorta. Optional stent protocol: add 40 sec delayed phase
+        - Additional Recons: Curved MPR all coronaries. Short/long axis. Multi-phase for function. Calcium score
 
     === "Nursing Notes"
 
@@ -199,11 +200,3 @@ safety:
     | Curved MPR | Gated CTA | Each coronary | 0.75 mm | Cardiac | 3 | Vessel-specific reconstructions |
     | Axial | Non-contrast | Heart | 3 mm/3 mm | Standard | 3 | Calcium scoring |
     | Short/long axis | Gated CTA | Heart | Multi-phase | Cardiac | 3 | Functional assessment |
-
-### Additional Reconstructions
-
-Curved MPR all coronaries. Short/long axis. Multi-phase for function. Calcium score
-
-Category: Cardiac
-
-Protocol Type: Cardiac Gated

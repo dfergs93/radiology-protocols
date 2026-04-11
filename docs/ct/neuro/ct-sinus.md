@@ -126,6 +126,7 @@ safety:
     === "Technologist Notes"
 
         - Coronal acquisition skull base through maxillary sinuses. Submillimeter for anatomy. Bone and soft tissue windows
+        - Additional Recons: Document anatomic variants (Haller cells concha bullosa). OMC assessment
 
     === "Nursing Notes"
 
@@ -172,11 +173,3 @@ safety:
     | Coronal | Sinus | Sinuses | 3 mm/2 mm | Standard | 3 | Soft tissue |
     | Axial | Sinus | Sinuses | 2 mm/2 mm | Bone | N/A | Axial bone |
     | Sagittal | Sinus | Sinuses | 2 mm/2 mm | Bone | N/A | Midline and lateral |
-
-### Additional Reconstructions
-
-Document anatomic variants (Haller cells concha bullosa). OMC assessment
-
-Category: Neuro
-
-Protocol Type: Neuroradiology

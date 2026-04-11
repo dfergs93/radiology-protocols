@@ -137,6 +137,7 @@ safety:
     === "Technologist Notes"
 
         - Aortic arch to skull base. Bolus tracking in arch. Submillimeter. Minimize swallowing during scan
+        - Additional Recons: Curved MPR both carotid bifurcations. Measure stenosis (NASCET). 3D VR. MIP
 
     === "Nursing Notes"
 
@@ -182,11 +183,3 @@ safety:
     | Coronal | CTA | Neck | 1.5 mm | Vascular | 3 | Vessel overview |
     | Sagittal | CTA | Carotids | 1.5 mm | Vascular | 3 | Vertebral arteries |
     | Curved MPR | CTA | Carotid bifurcations | 1 mm | Vascular | 3 | Stenosis measurement |
-
-### Additional Reconstructions
-
-Curved MPR both carotid bifurcations. Measure stenosis (NASCET). 3D VR. MIP
-
-Category: Neuro
-
-Protocol Type: Vascular

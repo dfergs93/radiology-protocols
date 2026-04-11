@@ -133,6 +133,7 @@ safety:
     === "Technologist Notes"
 
         - Scan from iliac crest to ankle. Focus on perforators in region of interest. Arterial phase critical for mapping
+        - Additional Recons: Curved MPR of main vessels. Measure perforator locations from bony landmarks
 
     === "Nursing Notes"
 
@@ -178,11 +179,3 @@ safety:
     | Axial | Arterial | Thighs/Legs | 1 mm/1 mm | Vascular | 3 | Thin slice for perforator identification |
     | Coronal | Arterial | Full legs | 1.5 mm/1.5 mm | Vascular | 3 | MIP to show perforator course |
     | Sagittal | Arterial | Full legs | 2 mm/2 mm | Vascular | 3 | Lateral perforator views |
-
-### Additional Reconstructions
-
-Curved MPR of main vessels. Measure perforator locations from bony landmarks
-
-Category: Vascular
-
-Protocol Type: Vascular

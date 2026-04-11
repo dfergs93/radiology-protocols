@@ -133,6 +133,7 @@ safety:
     === "Technologist Notes"
 
         - Submillimeter ISOTROPIC acquisition. Vertex to skull base. DICOM for surgical planning. Frame or fiducials if required
+        - Additional Recons: Export to surgical navigation. Isotropic 0.5mm. Coordinates for targeting
 
     === "Nursing Notes"
 
@@ -178,11 +179,3 @@ safety:
     | Coronal | Stereo | Brain | 0.5 mm/0.5 mm | Brain | 3 | Isotropic coronal |
     | Sagittal | Stereo | Brain | 0.5 mm/0.5 mm | Brain | 3 | Isotropic sagittal midline |
     | 3D surface | Stereo | Brain | 0.5 mm source | Brain | 3 | Surface for navigation |
-
-### Additional Reconstructions
-
-Export to surgical navigation. Isotropic 0.5mm. Coordinates for targeting
-
-Category: Neuro
-
-Protocol Type: Neuroradiology

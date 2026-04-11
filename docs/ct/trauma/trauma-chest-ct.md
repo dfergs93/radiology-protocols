@@ -133,6 +133,7 @@ safety:
     === "Technologist Notes"
 
         - Single acquisition lung apices to costophrenic angles. RIB REFORMATS required. Submillimeter acquisition
+        - Additional Recons: Dedicated rib reformats (oblique sagittal each rib). Count fractures. 3D chest wall
 
     === "Nursing Notes"
 
@@ -180,11 +181,3 @@ safety:
     | Axial | CTA Chest | Chest | 2.5 mm/2.5 mm | Standard | 3 | Evaluate for aortic injury |
     | Coronal | Chest | Chest | 2.5 mm/2.5 mm | Bone | N/A | Rib overview |
     | Oblique sagittal | Chest | Ribs | 2 mm/2 mm | Bone | N/A | Rib reformats all ribs |
-
-### Additional Reconstructions
-
-Dedicated rib reformats (oblique sagittal each rib). Count fractures. 3D chest wall
-
-Category: Trauma
-
-Protocol Type: Trauma

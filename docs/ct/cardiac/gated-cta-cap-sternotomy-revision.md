@@ -150,6 +150,7 @@ safety:
     === "Technologist Notes"
 
         - THREE acquisitions: 1) Gated CHEST 2) Flash AP arterial 3) CHEST venogram 60 sec delay. Venous for retrosternal structures
+        - Additional Recons: 3D VR venogram highlighting retrosternal veins. Distance measurements sternum to heart
 
     === "Nursing Notes"
 
@@ -197,11 +198,3 @@ safety:
     | Axial | Venogram | Chest | 1.25 mm/1.25 mm | Standard | 3 | Critical for retrosternal structures |
     | Coronal | All phases | Chest | 2 mm/2 mm | Standard | 3 | Anterior chest wall structures |
     | 3D VR | Venogram | Chest | 1 mm source | Standard | 3 | 3D map retrosternal vessels for surgery |
-
-### Additional Reconstructions
-
-3D VR venogram highlighting retrosternal veins. Distance measurements sternum to heart
-
-Category: Cardiac
-
-Protocol Type: Cardiac Gated

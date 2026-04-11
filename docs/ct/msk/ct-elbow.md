@@ -133,6 +133,7 @@ safety:
     === "Technologist Notes"
 
         - Distal humerus through proximal radius/ulna. Submillimeter. Position extended if possible. Bilateral for comparison
+        - Additional Recons: Document terrible triad if present. Radial head-capitellum alignment. 3D reconstruction
 
     === "Nursing Notes"
 
@@ -178,11 +179,3 @@ safety:
     | Coronal | Elbow | Elbow | 1.5 mm/1 mm | Bone | N/A | Coronal elbow |
     | Sagittal | Elbow | Elbow | 1.5 mm/1 mm | Bone | N/A | Sagittal elbow |
     | 3D surface | Elbow | Bones | 0.625 mm source | Bone | N/A | 3D for complex fractures |
-
-### Additional Reconstructions
-
-Document terrible triad if present. Radial head-capitellum alignment. 3D reconstruction
-
-Category: Msk
-
-Protocol Type: Musculoskeletal

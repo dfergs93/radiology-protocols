@@ -133,6 +133,7 @@ safety:
     === "Technologist Notes"
 
         - FOV based on region: shoulder to hand. Submillimeter for fracture detail. Position for comfort and coverage
+        - Additional Recons: Document fracture location alignment. Soft tissue windows if contrast
 
     === "Nursing Notes"
 
@@ -178,11 +179,3 @@ safety:
     | Coronal | Upper extremity | Region | 2 mm/2 mm | Bone | N/A | Coronal |
     | Sagittal | Upper extremity | Region | 2 mm/2 mm | Bone | N/A | Sagittal |
     | 3D surface | Upper extremity | Bones | 0.625 mm source | Bone | N/A | 3D if complex |
-
-### Additional Reconstructions
-
-Document fracture location alignment. Soft tissue windows if contrast
-
-Category: Msk
-
-Protocol Type: Contrast-Enhanced

@@ -144,6 +144,7 @@ safety:
     === "Technologist Notes"
 
         - Ensure adequate oral contrast opacification. Scan from diaphragm through pubic symphysis. 70 second delay typical
+        - Additional Recons: Thin slice 1mm for 3D if mass identified
 
     === "Nursing Notes"
 
@@ -190,11 +191,3 @@ safety:
     | Axial | Renal Delay | Abdomen | 3 mm/3 mm | Standard | 3 | Renal Delay series |
     | Coronal | Portal venous | Full AP | 3 mm/3 mm | Standard | 3 | Coronal reformats for overview |
     | Sagittal | Portal venous | Full AP | 3 mm/3 mm | Standard | 3 | Sagittal reformats for bowel loops |
-
-### Additional Reconstructions
-
-Thin slice 1mm for 3D if mass identified
-
-Category: Abdomen
-
-Protocol Type: Contrast-Enhanced

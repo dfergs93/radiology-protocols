@@ -138,6 +138,7 @@ safety:
     === "Technologist Notes"
 
         - Scan from L3 to proximal femur. Arterial phase essential. Focus on internal iliac branches and prostate supply
+        - Additional Recons: 3D VR with prostate vessels highlighted. Curved MPR of internal iliac branches. Measure vessel diameters
 
     === "Nursing Notes"
 
@@ -184,11 +185,3 @@ safety:
     | Coronal | Arterial | Pelvis | 1.5 mm/1.5 mm | Vascular | 3 | MIP of iliac vessels |
     | Sagittal | Arterial | Pelvis | 1.5 mm/1.5 mm | Vascular | 3 | Lateral view pelvic vessels |
     | 3D VR | Arterial | Pelvis | 0.75 mm source | Vascular | 3 | 3D roadmap for interventional radiologist |
-
-### Additional Reconstructions
-
-3D VR with prostate vessels highlighted. Curved MPR of internal iliac branches. Measure vessel diameters
-
-Category: Vascular
-
-Protocol Type: Vascular

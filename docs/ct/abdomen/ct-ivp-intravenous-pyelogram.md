@@ -150,6 +150,7 @@ safety:
     === "Technologist Notes"
 
         - COMPLEX protocol: 1) NC (optional stone protocol) 2) 1st contrast injection 3) Early PV 60s after 1st 4) WAIT 5-7 min 5) 2nd injection + saline 6) Excretory/IVP 90-120s after 2nd
+        - Additional Recons: MIP urogram coronal and sagittal. Curved MPR of ureters. 3D urogram
 
     === "Nursing Notes"
 
@@ -197,11 +198,3 @@ safety:
     | Axial | Portal venous | Kidneys | 2.5 mm/2.5 mm | Standard | 3 | Renal parenchyma |
     | Axial | Excretory | Full urinary tract | 2 mm/2 mm | Standard | 3 | Urothelial surfaces |
     | Coronal | Excretory | Full urinary tract | 2.5 mm/2.5 mm | Standard | 3 | MIP urogram |
-
-### Additional Reconstructions
-
-MIP urogram coronal and sagittal. Curved MPR of ureters. 3D urogram
-
-Category: Abdomen
-
-Protocol Type: Contrast-Enhanced

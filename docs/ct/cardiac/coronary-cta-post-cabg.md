@@ -153,6 +153,7 @@ safety:
         - Non-valsalva breathing technique, cardiac breathing instruction. Put in study notes if patient unable to follow breathing instructions.
         - If high HR variability, can trigger by millisecond (200ms - 450 ms pulse range). Revolution CT is better for Afib.
         - Target End diastole if HR < 65bpm. Target End systole if HR > 86bpm. Target End diastole to End systole if HR 66 - 75 bpm
+        - Additional Recons: Curved MPR of all grafts. Label LIMA RIMA SVG.
 
     === "Nursing Notes"
 
@@ -199,11 +200,3 @@ safety:
     | Axial | Gated CTA | Full chest | 0.6 mm/0.6 mm | Cardiac | 3 | Thin slice for grafts and native vessels |
     | Sagittal | Gated CTA | Chest | 2 mm/2 mm | Standard | 3 | Extracardiac assessment |
     | 3D VR | Gated CTA | Heart/grafts | 0.5 mm source | Cardiac | 3 | MPRs by 3D lab |
-
-### Additional Reconstructions
-
-Curved MPR of all grafts. Label LIMA RIMA SVG.
-
-Category: Cardiac
-
-Protocol Type: Vascular

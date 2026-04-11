@@ -208,7 +208,3 @@ safety:
     | Axial | Portal venous | Full AP | 2.5 mm/2.5 mm | Standard | 3 | Full abdomen pelvis PV |
     | Coronal | All phases | Liver | 3 mm/3 mm | Standard | 3 | Coronal comparison |
     | Subtraction | Arterial - NC | Liver | 2.5 mm | Standard | 3 | Enhance lesion conspicuity |
-
-Category: Abdomen
-
-Protocol Type: Contrast-Enhanced

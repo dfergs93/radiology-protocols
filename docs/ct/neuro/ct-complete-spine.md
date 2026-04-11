@@ -123,6 +123,7 @@ safety:
     === "Technologist Notes"
 
         - Skull base to sacrum. LONG COVERAGE. Submillimeter. Sagittal and coronal entire spine. May do in segments
+        - Additional Recons: Sagittal and coronal bone reconstructions. Oblique for foramina
 
     === "Nursing Notes"
 
@@ -167,11 +168,3 @@ safety:
     | Axial | Spine | Full spine | 2 mm/2 mm | Bone | 3 | Axial entire spine |
     | Sagittal | Spine | Full spine | 2 mm/1.5 mm | Bone | 3 | Sagittal full spine |
     | Coronal | Spine | Full spine | 2.5 mm/2 mm | Bone | 3 | Coronal full spine |
-
-### Additional Reconstructions
-
-Sagittal and coronal bone reconstructions. Oblique for foramina
-
-Category: Neuro
-
-Protocol Type: Spine

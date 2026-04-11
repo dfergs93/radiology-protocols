@@ -114,6 +114,7 @@ safety:
     === "Technologist Notes"
 
         - Standard dose helical chest. Lung apices to costophrenic angles. Routine lung and mediastinal windows
+        - Additional Recons: Thin slice 1mm for nodule detection and measurement
 
     === "Nursing Notes"
 
@@ -159,11 +160,3 @@ safety:
     | Axial | Chest | Chest | 2.5 mm/2.5 mm | Lung | 3 | Lung window |
     | Coronal | Chest | Chest | 3 mm/3 mm | Lung | 3 | Coronal lung |
     | Sagittal | Chest | Chest | 3 mm/3 mm | Standard | 3 | Optional mediastinum |
-
-### Additional Reconstructions
-
-Thin slice 1mm for nodule detection and measurement
-
-Category: Chest
-
-Protocol Type: Non-Contrast

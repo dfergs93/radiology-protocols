@@ -143,6 +143,7 @@ safety:
     === "Technologist Notes"
 
         - TWO acquisitions: 1) CTA CHEST arterial (bolus track) 2) Portal venous ABDOMEN/PELVIS 70s. Chest arterial for aorta/vessels
+        - Additional Recons: 3D aorta and great vessels. Curved MPR aorta. Grade aortic injury
 
     === "Nursing Notes"
 
@@ -189,11 +190,3 @@ safety:
     | Axial | PV AP | Abdomen/Pelvis | 2.5 mm/2.5 mm | Standard | 3 | Solid organs |
     | Coronal | CTA chest | Chest | 2 mm/2 mm | Vascular | 3 | Aorta overview |
     | Sagittal | CTA chest | Aorta | 2 mm/2 mm | Vascular | 3 | Sagittal aorta |
-
-### Additional Reconstructions
-
-3D aorta and great vessels. Curved MPR aorta. Grade aortic injury
-
-Category: Trauma
-
-Protocol Type: Vascular

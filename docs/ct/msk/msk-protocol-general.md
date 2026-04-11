@@ -149,6 +149,7 @@ safety:
     === "Technologist Notes"
 
         - Field of view specific to region. Submillimeter if 3D needed. NC and/or contrast based on indication. Delayed phase (5-10 min) for infection/tumor
+        - Additional Recons: Compare to contralateral side. Measure lesions. Bone and soft tissue windows
 
     === "Nursing Notes"
 
@@ -196,11 +197,3 @@ safety:
     | Coronal | Region | Region | 2 mm/2 mm | Bone and Standard | 3 | Coronal reformats |
     | Sagittal | Region | Region | 2 mm/2 mm | Bone and Standard | 3 | Sagittal reformats |
     | 3D if needed | Region | Bones | 0.625-1 mm source | Bone | N/A | 3D for surgical planning |
-
-### Additional Reconstructions
-
-Compare to contralateral side. Measure lesions. Bone and soft tissue windows
-
-Category: Msk
-
-Protocol Type: Contrast-Enhanced

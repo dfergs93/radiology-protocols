@@ -156,6 +156,7 @@ safety:
     === "Technologist Notes"
 
         - FOUR phases: 1) NC 2) Arterial 25s 3) Venous 55s 4) Delayed/washout 90s. Skull base to mediastinum. Parathyroid enhances early washes out
+        - Additional Recons: Subtraction images. Compare all phases. Document location for surgeon. Measure size
 
     === "Nursing Notes"
 
@@ -204,11 +205,3 @@ safety:
     | Axial | Arterial | Neck | 2 mm/2 mm | Standard | 3 | Peak parathyroid enhancement |
     | Subtraction | Arterial - NC | Neck | 2 mm | Standard | 3 | Enhance parathyroid conspicuity |
     | Coronal | Arterial | Neck | 2.5 mm | Standard | 3 | Ectopic adenoma search |
-
-### Additional Reconstructions
-
-Subtraction images. Compare all phases. Document location for surgeon. Measure size
-
-Category: Neuro
-
-Protocol Type: Contrast-Enhanced

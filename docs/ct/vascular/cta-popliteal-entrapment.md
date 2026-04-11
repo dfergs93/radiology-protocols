@@ -152,6 +152,7 @@ safety:
     === "Technologist Notes"
 
         - TWO acquisitions required: 1) Neutral position 2) Active plantarflexion. Both legs scanned for comparison. Coach patient on plantarflexion technique
+        - Additional Recons: Side-by-side comparison of neutral vs plantarflexion. 3D VR showing muscle-vessel relationship
 
     === "Nursing Notes"
 
@@ -199,11 +200,3 @@ safety:
     | Axial | Plantarflexion | Both legs | 1.5 mm/1.5 mm | Vascular | 3 | Assess for compression with maneuver |
     | Coronal | Both phases | Both legs | 2 mm/2 mm | Vascular | 3 | MIP comparison neutral vs flexion |
     | Sagittal | Both phases | Both legs | 2 mm/2 mm | Vascular | 3 | Lateral view popliteal fossa |
-
-### Additional Reconstructions
-
-Side-by-side comparison of neutral vs plantarflexion. 3D VR showing muscle-vessel relationship
-
-Category: Vascular
-
-Protocol Type: Vascular

@@ -159,6 +159,7 @@ safety:
     === "Technologist Notes"
 
         - Gated CHEST with NO DOSE PULSING (full dose all phases) + delayed 80 sec CAP. TMVR post-processing required
+        - Additional Recons: TMVR measurements: annulus dimensions. LVOT area. Coronary heights. LA volume. Access vessels
 
     === "Nursing Notes"
 
@@ -207,11 +208,3 @@ safety:
     | Axial | Delayed CAP | AP | 2 mm/2 mm | Vascular | 3 | Access vessels |
     | Double oblique | Gated chest | Mitral valve | 0.5 mm | Cardiac | 3 | En face mitral annulus |
     | 3D VR | Delayed CAP | Iliofemoral | 1.5 mm | Vascular | 3 | Access planning |
-
-### Additional Reconstructions
-
-TMVR measurements: annulus dimensions. LVOT area. Coronary heights. LA volume. Access vessels
-
-Category: Cardiac
-
-Protocol Type: Cardiac Gated

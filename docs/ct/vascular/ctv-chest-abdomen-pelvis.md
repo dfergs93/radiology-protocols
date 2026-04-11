@@ -132,6 +132,7 @@ safety:
     === "Technologist Notes"
 
         - Scan at 180 seconds. Include SVC through femoral veins. May need arm injection for SVC assessment
+        - Additional Recons: 3D venogram MIP. Curved MPR of SVC and IVC
 
     === "Nursing Notes"
 
@@ -177,11 +178,3 @@ safety:
     | Axial | Venous | Abdomen/Pelvis | 2.5 mm/2.5 mm | Standard | 3 | IVC and tributaries |
     | Coronal | Venous | Full CAP | 3 mm/3 mm | Standard | 3 | MIP full venous system |
     | Sagittal | Venous | Full CAP | 3 mm/3 mm | Standard | 3 | Sagittal venogram |
-
-### Additional Reconstructions
-
-3D venogram MIP. Curved MPR of SVC and IVC
-
-Category: Vascular
-
-Protocol Type: Vascular

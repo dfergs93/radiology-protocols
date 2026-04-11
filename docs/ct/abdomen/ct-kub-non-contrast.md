@@ -118,6 +118,7 @@ safety:
     === "Technologist Notes"
 
         - LOW DOSE protocol. Reduced mAs. Cover kidneys to pubic symphysis. Stone protocol settings
+        - Additional Recons: Thin slice 1mm for small stones. Stone size measurements
 
     === "Nursing Notes"
 
@@ -163,11 +164,3 @@ safety:
     | Axial | Non-contrast | KUB | 2.5 mm/2.5 mm | Bone | N/A | Bone window for stones |
     | Coronal | Non-contrast | KUB | 3 mm/3 mm | Standard | 3 | Coronal stone overview |
     | MIP | Non-contrast | Kidneys/ureters | 5 mm slab | Standard | N/A | Stone localization |
-
-### Additional Reconstructions
-
-Thin slice 1mm for small stones. Stone size measurements
-
-Category: Abdomen
-
-Protocol Type: Non-Contrast

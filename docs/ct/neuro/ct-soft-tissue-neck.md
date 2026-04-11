@@ -126,6 +126,7 @@ safety:
     === "Technologist Notes"
 
         - Skull base to thoracic inlet. 60-70 sec delay for venous phase. Arms down. Minimize swallowing. May need NC if calcium assessment
+        - Additional Recons: Assess all neck spaces. Measure lymph nodes. Airway diameter if concern
 
     === "Nursing Notes"
 
@@ -170,11 +171,3 @@ safety:
     | Axial | Neck | Neck | 2.5 mm/2 mm | Standard | 3 | Soft tissue neck |
     | Coronal | Neck | Neck | 3 mm/2.5 mm | Standard | 3 | Coronal neck spaces |
     | Sagittal | Neck | Midline | 3 mm/2.5 mm | Standard | 3 | Airway and retropharyngeal |
-
-### Additional Reconstructions
-
-Assess all neck spaces. Measure lymph nodes. Airway diameter if concern
-
-Category: Neuro
-
-Protocol Type: Contrast-Enhanced

@@ -120,6 +120,7 @@ safety:
     === "Technologist Notes"
 
         - Dual energy CT if available for urate detection. Single energy if not. Cover affected joint(s). Extended FOV if polyarticular
+        - Additional Recons: Urate volume quantification. Color overlay. Document tophi locations
 
     === "Nursing Notes"
 
@@ -165,11 +166,3 @@ safety:
     | DECT urate | Gout | Joints | Color overlay | Urate algorithm | N/A | Urate crystal map |
     | 3D volume | Gout | Urate burden | Volumetric | Urate | N/A | Quantify total urate |
     | Coronal | Gout | Joints | 1.5 mm | Bone | N/A | Joint erosions |
-
-### Additional Reconstructions
-
-Urate volume quantification. Color overlay. Document tophi locations
-
-Category: Msk
-
-Protocol Type: Non-Contrast

@@ -133,6 +133,7 @@ safety:
     === "Technologist Notes"
 
         - Iliac crests through proximal femurs. Bilateral for comparison. Submillimeter for 3D acetabular reconstructions
+        - Additional Recons: 3D pelvis. Judet oblique views. Letournel classification. FAI measurements (alpha angle)
 
     === "Nursing Notes"
 
@@ -178,11 +179,3 @@ safety:
     | Coronal | Hips | Pelvis/hips | 2 mm/2 mm | Bone | N/A | Coronal hips |
     | Sagittal | Hips | Each hip | 2 mm/2 mm | Bone | N/A | Sagittal hips |
     | Judet views | Hips | Acetabulum | 2 mm oblique | Bone | N/A | Obturator and iliac obliques |
-
-### Additional Reconstructions
-
-3D pelvis. Judet oblique views. Letournel classification. FAI measurements (alpha angle)
-
-Category: Msk
-
-Protocol Type: Musculoskeletal

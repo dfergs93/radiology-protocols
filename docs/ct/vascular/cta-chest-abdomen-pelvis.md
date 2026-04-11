@@ -151,6 +151,7 @@ safety:
     === "Technologist Notes"
 
         - Single acquisition from thoracic inlet to pubic symphysis. Caudocranial direction. Bolus track in descending aorta
+        - Additional Recons: 3D VR and curved MPR of entire aorta
 
     === "Nursing Notes"
 
@@ -198,11 +199,3 @@ safety:
     | Axial | Arterial | Abdomen/Pelvis | 2.5 mm/2.5 mm | Vascular | 3 | Abdominal aorta and branches |
     | Coronal | Arterial | Full CAP | 3 mm/3 mm | Vascular | 3 | MIP full aorta overview |
     | Sagittal | Arterial | Full CAP | 3 mm/3 mm | Vascular | 3 | Sagittal MIP and curved MPR of aorta |
-
-### Additional Reconstructions
-
-3D VR and curved MPR of entire aorta
-
-Category: Vascular
-
-Protocol Type: Vascular

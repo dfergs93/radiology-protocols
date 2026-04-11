@@ -142,6 +142,7 @@ safety:
     === "Technologist Notes"
 
         - Choose ROI based on indication - ascending aorta for aortic pathology or main PA for PE
+        - Additional Recons: 3D VR of thoracic vasculature
 
     === "Nursing Notes"
 
@@ -188,11 +189,3 @@ safety:
     | Axial | Arterial | Chest | 2.5 mm/2.5 mm | Lung | 3 | Lung window for parenchyma |
     | Coronal | Arterial | Chest | 2.5 mm/2.5 mm | Vascular | 3 | MIP coronal great vessels |
     | Sagittal | Arterial | Chest | 2.5 mm/2.5 mm | Vascular | 3 | MIP sagittal aortic arch |
-
-### Additional Reconstructions
-
-3D VR of thoracic vasculature
-
-Category: Vascular
-
-Protocol Type: Vascular

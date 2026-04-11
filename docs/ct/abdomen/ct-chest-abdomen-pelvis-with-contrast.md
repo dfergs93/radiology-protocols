@@ -134,6 +134,7 @@ safety:
     === "Technologist Notes"
 
         - Single phase portal venous. 40 second injection. 70 second scan delay from start of injection
+        - Additional Recons: Sagittal reformats optional
 
     === "Nursing Notes"
 
@@ -179,11 +180,3 @@ safety:
     | Axial | Portal venous | CAP | 2.5 mm/2.5 mm | Standard | 3 | Chest diagnostic |
     | Axial | Renal Delay | Abdomen | 2.5 mm/2.5 mm | Standard | 3 | Renal diagnostic |
     | Coronal | Portal venous | Full CAP | 3 mm/3 mm | Standard | 3 | Coronal overview |
-
-### Additional Reconstructions
-
-Sagittal reformats optional
-
-Category: Abdomen
-
-Protocol Type: Contrast-Enhanced

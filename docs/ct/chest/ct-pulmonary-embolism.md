@@ -137,6 +137,7 @@ safety:
     === "Technologist Notes"
 
         - Caudocranial scan direction. Coach breath hold. ROI in main PA at level of bifurcation
+        - Additional Recons: MIP reconstructions of pulmonary arteries
 
     === "Nursing Notes"
 
@@ -182,11 +183,3 @@ safety:
     | Axial | Angiogram | Chest | 2.5 mm/2.5 mm | Lung | 3 | Lung window for parenchymal assessment |
     | Coronal | Angiogram | Chest | 3 mm/3 mm | Standard | 3 | Overview of pulmonary vasculature |
     | Sagittal | Angiogram | Chest | 3 mm/3 mm | Standard | 3 | Optional for clinical correlation |
-
-### Additional Reconstructions
-
-MIP reconstructions of pulmonary arteries
-
-Category: Chest
-
-Protocol Type: Contrast-Enhanced

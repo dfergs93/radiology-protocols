@@ -130,6 +130,7 @@ safety:
     === "Technologist Notes"
 
         - FOV based on region: hip to ankle. Submillimeter for fracture. Extended coverage for alignment
+        - Additional Recons: Alignment measurements. Hardware position. 3D for surgical planning
 
     === "Nursing Notes"
 
@@ -175,11 +176,3 @@ safety:
     | Coronal | Lower extremity | Region | 2 mm/2 mm | Bone | N/A | Coronal |
     | Sagittal | Lower extremity | Region | 2 mm/2 mm | Bone | N/A | Sagittal |
     | 3D surface | Lower extremity | Bones | 0.625 mm source | Bone | N/A | 3D reconstruction |
-
-### Additional Reconstructions
-
-Alignment measurements. Hardware position. 3D for surgical planning
-
-Category: Msk
-
-Protocol Type: Contrast-Enhanced

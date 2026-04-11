@@ -169,7 +169,3 @@ safety:
     | Axial | T-spine | T-spine | 2 mm/2 mm | Bone | 3 | Bone and soft tissue |
     | Sagittal | T-spine | T-spine | 2 mm/1.5 mm | Bone | 3 | Midline and parasagittal |
     | Coronal | T-spine | T-spine | 2.5 mm/2 mm | Bone | 3 | Coronal overview |
-
-Category: Neuro
-
-Protocol Type: Spine

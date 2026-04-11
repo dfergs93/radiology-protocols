@@ -132,6 +132,7 @@ safety:
     === "Technologist Notes"
 
         - Scan from mid-liver to greater trochanters. Remove tight-fitting underwear. If patient can exercise, do leg lifts on table before injection.
+        - Additional Recons: 3D VR color-coded perforator map. Measure distances from umbilicus
 
     === "Nursing Notes"
 
@@ -177,11 +178,3 @@ safety:
     | Coronal | Arterial | Abdomen | 1.5 mm/1.5 mm | Vascular | 3 | MIP to show perforator course |
     | Sagittal | Arterial | Abdomen | 2 mm/2 mm | Vascular | 3 | Lateral views of perforators |
     | 3D VR | Arterial | Anterior abd wall | 1 mm source | Vascular | 3 | 3D reconstruction for surgical planning |
-
-### Additional Reconstructions
-
-3D VR color-coded perforator map. Measure distances from umbilicus
-
-Category: Vascular
-
-Protocol Type: Vascular

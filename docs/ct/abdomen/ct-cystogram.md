@@ -145,6 +145,7 @@ safety:
     === "Technologist Notes"
 
         - TWO components: 1) Non-contrast CT 2) Bladder filling via Foley with dilute contrast 3) Scan distended bladder. Coordinate with nursing
+        - Additional Recons: Compare distended vs non-contrast. Document extravasation location. 3D reformation if complex injury
 
     === "Nursing Notes"
 
@@ -192,11 +193,3 @@ safety:
     | Axial | Cystogram | Pelvis | 2 mm/2 mm | Standard | 3 | Distended bladder assessment |
     | Coronal | Cystogram | Pelvis | 2.5 mm/2.5 mm | Standard | 3 | Bladder overview |
     | Sagittal | Cystogram | Pelvis | 2.5 mm/2.5 mm | Standard | 3 | Bladder dome and base |
-
-### Additional Reconstructions
-
-Compare distended vs non-contrast. Document extravasation location. 3D reformation if complex injury
-
-Category: Abdomen
-
-Protocol Type: Contrast-Enhanced

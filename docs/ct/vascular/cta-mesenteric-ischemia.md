@@ -145,6 +145,7 @@ safety:
     === "Technologist Notes"
 
         - Arterial phase at 25 sec for vessel assessment. Portal venous at 70 sec for bowel perfusion. High flow rate critical
+        - Additional Recons: MIP and 3D VR of celiac and SMA. Curved MPR of vessels
 
     === "Nursing Notes"
 
@@ -191,11 +192,3 @@ safety:
     | Axial | Portal venous | Full AP | 2.5 mm/2.5 mm | Standard | 3 | Bowel wall assessment |
     | Coronal | Arterial | Abdomen | 2.5 mm/2.5 mm | Vascular | 3 | MIP of mesenteric vessels |
     | Sagittal | Arterial | Abdomen | 2.5 mm/2.5 mm | Vascular | 3 | Curved MPR SMA from origin |
-
-### Additional Reconstructions
-
-MIP and 3D VR of celiac and SMA. Curved MPR of vessels
-
-Category: Vascular
-
-Protocol Type: Vascular

@@ -130,6 +130,7 @@ safety:
     === "Technologist Notes"
 
         - TWO acquisitions: 1) INSPIRATION carina to carina+10cm 2) MID-EXPIRATION same level. Cine if available. Airway reconstructions required
+        - Additional Recons: Measure tracheal AP diameter inspiration vs expiration. Calculate collapse percentage. 3D airway
 
     === "Nursing Notes"
 
@@ -177,11 +178,3 @@ safety:
     | Coronal | Both phases | Airway | 1.5 mm | Lung | 3 | Coronal airway |
     | Sagittal | Both phases | Airway | 1.5 mm | Lung | 3 | Sagittal airway |
     | 3D VR | Both phases | Airway | 0.625-1 mm source | Lung | N/A | 3D airway reconstruction |
-
-### Additional Reconstructions
-
-Measure tracheal AP diameter inspiration vs expiration. Calculate collapse percentage. 3D airway
-
-Category: Chest
-
-Protocol Type: Non-Contrast

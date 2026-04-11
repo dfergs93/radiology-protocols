@@ -132,6 +132,7 @@ safety:
     === "Technologist Notes"
 
         - Post-LP CT. Usually lumbar region. Thin slices. Axial and sagittal reformats. Assess nerve root sleeves and thecal sac
+        - Additional Recons: Oblique reformats for nerve roots. Document stenosis level and severity
 
     === "Nursing Notes"
 
@@ -177,11 +178,3 @@ safety:
     | Sagittal | Myelogram | Spine | 1.5 mm/1 mm | Standard | 3 | Thecal sac and compression |
     | Coronal | Myelogram | Spine | 2 mm/1.5 mm | Standard | 3 | Coronal nerve roots |
     | Oblique sagittal | Myelogram | Neural foramina | 1.5 mm | Standard | 3 | Foraminal nerve roots |
-
-### Additional Reconstructions
-
-Oblique reformats for nerve roots. Document stenosis level and severity
-
-Category: Neuro
-
-Protocol Type: Spine

@@ -145,6 +145,7 @@ safety:
     === "Technologist Notes"
 
         - Enterographic phase (45 sec). High volume neutral oral for bowel distension. 25 second injection. Scan 45 sec from start
+        - Additional Recons: Curved MPR of bowel segments. Mesenteric vascular assessment
 
     === "Nursing Notes"
 
@@ -191,11 +192,3 @@ safety:
     | Coronal | Enteric | Full AP | 3 mm/3 mm | Standard | 3 | Bowel loop assessment |
     | Sagittal | Enteric | Full AP | 3 mm/3 mm | Standard | 3 | Mesenteric evaluation |
     | MIP | Enteric | Mesenteric vessels | 5 mm slab | Vascular | 3 | Vascular assessment |
-
-### Additional Reconstructions
-
-Curved MPR of bowel segments. Mesenteric vascular assessment
-
-Category: Abdomen
-
-Protocol Type: Contrast-Enhanced

@@ -145,6 +145,7 @@ safety:
     === "Technologist Notes"
 
         - TWO phases: Pancreatic phase (40-45s or bolus track) + Portal venous (70s). Water for negative contrast
+        - Additional Recons: Curved MPR pancreatic duct. MIP pancreatic vasculature
 
     === "Nursing Notes"
 
@@ -191,11 +192,3 @@ safety:
     | Axial | Portal venous | Abdomen | 2.5 mm/2.5 mm | Standard | 3 | Liver and vessels |
     | Coronal | Both phases | Abdomen | 2.5 mm/2.5 mm | Standard | 3 | Pancreatic and peripancreatic |
     | Curved MPR | Pancreatic | Pancreatic duct | 1.5 mm | Standard | 3 | Duct evaluation |
-
-### Additional Reconstructions
-
-Curved MPR pancreatic duct. MIP pancreatic vasculature
-
-Category: Abdomen
-
-Protocol Type: Contrast-Enhanced

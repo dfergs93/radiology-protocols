@@ -138,6 +138,7 @@ safety:
 
         - Scan from aortic arch to fingertips. May need bilateral for comparison. Position arm to demonstrate pathology
         - Inject into contralateral arm
+        - Additional Recons: MIP and 3D VR. Subtract bones for vessel visualization
 
     === "Nursing Notes"
 
@@ -183,11 +184,3 @@ safety:
     | Coronal | Arterial | Full arm | 2 mm/2 mm | Vascular | 3 | MIP full vessel course |
     | Sagittal | Arterial | Full arm | 2 mm/2 mm | Vascular | 3 | Lateral MIP |
     | 3D VR | Arterial | Full arm | 1 mm source | Vascular | 3 | 3D reconstruction |
-
-### Additional Reconstructions
-
-MIP and 3D VR. Subtract bones for vessel visualization
-
-Category: Vascular
-
-Protocol Type: Vascular

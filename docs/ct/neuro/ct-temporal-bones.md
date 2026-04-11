@@ -128,6 +128,7 @@ safety:
     === "Technologist Notes"
 
         - Temporal bones: external auditory canal to petrous apex. SUBMILLIMETER <0.625mm. Direct axial and direct coronal if possible. Ultra high resolution
+        - Additional Recons: Pöschl and Stenvers oblique reformats for IAC. Measure vestibular aqueduct
 
     === "Nursing Notes"
 
@@ -174,11 +175,3 @@ safety:
     | Coronal | Temporal | Bilateral | 0.5 mm/0.5 mm | Bone sharp | N/A | Coronal bone |
     | Oblique sagittal | Temporal | Ossicles | 0.5 mm | Bone | N/A | Ossicular chain |
     | Pöschl/Stenvers | Temporal | IAC | 0.75 mm | Bone | N/A | IAC oriented views |
-
-### Additional Reconstructions
-
-Pöschl and Stenvers oblique reformats for IAC. Measure vestibular aqueduct
-
-Category: Neuro
-
-Protocol Type: Neuroradiology

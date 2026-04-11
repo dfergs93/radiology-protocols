@@ -133,6 +133,7 @@ safety:
     === "Technologist Notes"
 
         - Iliac crests to proximal femurs. Submillimeter for 3D. Assess pelvic ring integrity. Inlet and outlet views
+        - Additional Recons: 3D pelvis. Inlet and outlet views. Young-Burgess classification. Measure displacement
 
     === "Nursing Notes"
 
@@ -178,11 +179,3 @@ safety:
     | Coronal | Pelvis | Pelvis | 2 mm/2 mm | Bone | N/A | Coronal pelvis |
     | Sagittal | Pelvis | Pelvis | 2 mm/2 mm | Bone | N/A | Sagittal sacrum |
     | Inlet/Outlet | Pelvis | Pelvic ring | 2-3 mm oblique | Bone | N/A | Pelvic ring views |
-
-### Additional Reconstructions
-
-3D pelvis. Inlet and outlet views. Young-Burgess classification. Measure displacement
-
-Category: Msk
-
-Protocol Type: Contrast-Enhanced

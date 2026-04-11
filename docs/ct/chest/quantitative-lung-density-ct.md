@@ -124,6 +124,7 @@ safety:
     === "Technologist Notes"
 
         - TWO VOLUMETRIC acquisitions: 1) Full INSPIRATION 2) FULL EXPIRATION (complete exhalation). Contiguous thin slices. Quantitative software
+        - Additional Recons: Quantitative emphysema analysis. Report % lung <-950 HU. Air trapping metrics. Upper/lower lobe distribution
 
     === "Nursing Notes"
 
@@ -170,11 +171,3 @@ safety:
     | Axial | Expiration | Chest | 1 mm/1 mm | Lung | 3 | Quantitative expiration |
     | Density map | Inspiration | Lungs | Color coded | Lung | N/A | Emphysema distribution map |
     | Density map | Expiration | Lungs | Color coded | Lung | N/A | Air trapping map |
-
-### Additional Reconstructions
-
-Quantitative emphysema analysis. Report % lung <-950 HU. Air trapping metrics. Upper/lower lobe distribution
-
-Category: Chest
-
-Protocol Type: Chest/Pulmonary

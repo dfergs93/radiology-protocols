@@ -118,6 +118,7 @@ safety:
     === "Technologist Notes"
 
         - Minimize patient motion. Gantry angle parallel to skull base to reduce orbital dose. Ensure head straight
+        - Additional Recons: Thin slice 1.25mm if subtle fracture suspected
 
     === "Nursing Notes"
 
@@ -163,11 +164,3 @@ safety:
     | Axial | Non-contrast | Brain | 5 mm/5 mm | Bone | N/A | Bone window for fractures |
     | Coronal | Non-contrast | Brain | 3 mm/3 mm | Brain | 3 | Optional - for skull base evaluation |
     | Sagittal | Non-contrast | Brain | 3 mm/3 mm | Brain | 3 | Optional - for midline structures |
-
-### Additional Reconstructions
-
-Thin slice 1.25mm if subtle fracture suspected
-
-Category: Neuro
-
-Protocol Type: Neuroradiology

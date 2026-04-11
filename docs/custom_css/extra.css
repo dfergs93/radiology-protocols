@@ -38,6 +38,7 @@
 
 .hero-btn.primary:hover {
   background: var(--md-accent-fg-color);
+  color: white;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
@@ -110,13 +111,9 @@
 /* Body Parts Grid */
 .body-parts-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1rem;
   margin: 1.5rem 0;
-}
-
-.body-parts-grid .body-part-card.last {
-  grid-column: 2;
 }
 
 .body-parts-section-heading {
@@ -130,38 +127,29 @@
 
 .body-part-card {
   background: var(--md-default-bg-color);
-  border: 2px solid var(--md-default-fg-color--lightest);
-  border-radius: 12px;
-  padding: 1.5rem;
+  border: 1px solid var(--md-default-fg-color--lightest);
+  border-radius: 8px;
+  padding: 1rem;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   text-align: center;
+  min-height: 80px;
 }
 
 .body-part-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   border-color: var(--md-primary-fg-color);
 }
 
-.body-part-icon {
-  font-size: 3rem;
-  margin-bottom: 0.75rem;
-  filter: grayscale(30%);
-  transition: filter 0.3s ease;
-}
-
-.body-part-card:hover .body-part-icon {
-  filter: grayscale(0%);
-}
-
 .body-part-card h3 {
-  margin: 0.5rem 0;
+  margin: 0;
   color: var(--md-primary-fg-color);
-  font-size: 1.25rem;
+  font-size: 1.05rem;
 }
 
 .protocol-count {
@@ -970,42 +958,44 @@ html {
 .md-typeset .admonition,
 .md-typeset details {
   font-size: 13px
-}/* ============================================
+}
+
+/* ============================================
    MERMAID GANTT STYLING
    ============================================ */
 .mermaid g.grid rect.active {
-    fill: #2094f3 !important;
-    /* Theme blue for contrast */
-    stroke: #1a73e8 !important;
+  fill: #2094f3 !important;
+  /* Theme blue for contrast */
+  stroke: #1a73e8 !important;
 }
 
 .mermaid g.grid rect.saline {
-    fill: #4ed5ff !important;
-    /* Sky blue for saline */
-    stroke: #2094f3 !important;
+  fill: #4ed5ff !important;
+  /* Sky blue for saline */
+  stroke: #2094f3 !important;
 }
 
 /* Mermaid Dark Mode Overrides */
 [data-md-color-scheme="slate"] .mermaid svg {
-    filter: invert(0.9) hue-rotate(180deg);
+  filter: invert(0.9) hue-rotate(180deg);
 }
 
 [data-md-color-scheme="slate"] .mermaid .label,
 [data-md-color-scheme="slate"] .mermaid .tick text {
-    fill: #eee !important;
+  fill: #eee !important;
 }
 
 [data-md-color-scheme="slate"] .mermaid .grid line {
-    stroke: #444 !important;
+  stroke: #444 !important;
 }
 
 [data-md-color-scheme="slate"] .mermaid rect.section {
-    fill: #333 !important;
-    stroke: #555 !important;
+  fill: #333 !important;
+  stroke: #555 !important;
 }
 
 [data-md-color-scheme="slate"] .mermaid .sectionTitle {
-    fill: #fff !important;
+  fill: #fff !important;
 }
 
 
@@ -1070,14 +1060,14 @@ html {
 }
 
 .submit-anchor-nav a:hover {
-  background: var(--md-accent-fg-color--transparent, rgba(0,0,0,0.05));
+  background: var(--md-accent-fg-color--transparent, rgba(0, 0, 0, 0.05));
   color: var(--md-accent-fg-color);
 }
 
 .submit-anchor-nav a.active {
   color: var(--md-accent-fg-color);
   font-weight: 600;
-  background: var(--md-accent-fg-color--transparent, rgba(0,0,0,0.05));
+  background: var(--md-accent-fg-color--transparent, rgba(0, 0, 0, 0.05));
 }
 
 /* 3. Form section styling */
