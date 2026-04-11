@@ -1,3 +1,81 @@
+---
+title: CTA for GI Bleed
+slug: cta-for-gi-bleed
+category: vascular
+protocol_type: vascular
+last_updated: '2026-01-05'
+author: ''
+synonyms: []
+clinical_indications:
+- Active GI bleeding
+- Hematemesis
+- Melena with hemodynamic instability
+- Hematochezia
+position: Supine with arms raised
+npo: NPO if possible (emergent study)
+premedication: ''
+contrast:
+  agent: Isovue 370
+  volume: 1.5 mL/kg
+  flow_rate: 4-5 mL/s
+  duration: 20s
+  timing: 'Triple phase: Arterial + Portal Venous + Delayed'
+  roi: Abdominal aorta
+  trigger: 150 HU
+tech_params:
+  kv: 100-120
+  mas: Auto (reference 300)
+  rotation_time: 0.5s
+  pitch: '1.375'
+series:
+- name: Arterial Phase
+  start: Diaphragm
+  end: Pubic symphysis
+  delay: 25 sec
+  thickness: 0.625 mm
+  notes: High flow rate 5 mL/s critical
+- name: Delayed Phase
+  start: Diaphragm
+  end: Pubic symphysis
+  delay: 90 sec
+  thickness: 0.625 mm
+  notes: Extended delay to see pooling of contrast
+recons:
+- plane: Axial
+  acquisition: Arterial
+  fov: Full AP
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Look for arterial blush/extravasation
+- plane: Axial
+  acquisition: Delayed
+  fov: Full AP
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Look for contrast pooling in bowel
+- plane: Coronal
+  acquisition: All phases
+  fov: Full AP
+  thickness_increment: 3 mm/3 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: MIP to track extravasation
+notes:
+  tech: High flow rate critical for arterial phase. Scan arterial at 25 sec then portal
+    at 70 sec then delayed at 90-180 sec. Look for active extravasation
+  nursing: Large bore IV 18-20G essential. Verify with saline test
+  rad: Look for arterial extravasation (early) and pooling (delayed). Note location
+    and potential source vessel
+  tips: Arms raised to avoid artifacts. Fast table speed to cover area quickly in
+    arterial phase
+  additional_recons: MIP of all three phases side-by-side for comparison
+safety:
+  renal: eGFR > 30 preferred but can proceed emergently
+  allergy: Document allergy history. Emergency indication overrides mild allergy
+---
+
 # CTA for GI Bleed
 
 **Last Updated:** 2026-01-05  

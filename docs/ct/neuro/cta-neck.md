@@ -1,3 +1,81 @@
+---
+title: CTA Neck
+slug: cta-neck
+category: neuro
+protocol_type: vascular
+last_updated: '2024-01-15'
+author: Dr. Kim
+synonyms: []
+clinical_indications:
+- Carotid stenosis
+- Vertebral artery dissection
+- Neck vessel assessment
+- Pre-CEA planning
+position: Supine head-first
+npo: NPO 2 hours
+premedication: ''
+contrast:
+  agent: Omnipaque 350
+  volume: 90-100 mL
+  flow_rate: 4-5 mL/s
+  timing: Bolus Tracking
+  roi: Aortic arch
+  trigger: 150 HU
+tech_params:
+  kv: 100-120
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: '0.9'
+series:
+- name: CTA Neck
+  start: Aortic arch
+  end: Skull base
+  delay: Bolus tracked
+  thickness: 0.625 mm
+  notes: Caudocranial
+recons:
+- plane: Axial
+  acquisition: CTA
+  fov: Neck
+  thickness_increment: 1 mm/1 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Source images
+- plane: Coronal
+  acquisition: CTA
+  fov: Neck
+  thickness_increment: 1.5 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Vessel overview
+- plane: Sagittal
+  acquisition: CTA
+  fov: Carotids
+  thickness_increment: 1.5 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Vertebral arteries
+- plane: Curved MPR
+  acquisition: CTA
+  fov: Carotid bifurcations
+  thickness_increment: 1 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Stenosis measurement
+notes:
+  tech: Aortic arch to skull base. Bolus tracking in arch. Submillimeter. Minimize
+    swallowing during scan
+  nursing: 20G IV antecubital preferred
+  rad: Assess carotid bifurcations. Stenosis grading. Vertebral arteries. Dissection.
+    Plaque morphology
+  tips: Minimize swallowing. Submillimeter acquisition
+  additional_recons: Curved MPR both carotid bifurcations. Measure stenosis (NASCET).
+    3D VR. MIP
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history
+---
+
 # CTA Neck
 
 **Last Updated:** 2024-01-15  

@@ -1,3 +1,79 @@
+---
+title: CT Head 3D Stereotactic
+slug: ct-head-3d-stereotactic
+category: neuro
+protocol_type: neuroradiology
+last_updated: '2024-01-15'
+author: Dr. Lee
+synonyms: []
+clinical_indications:
+- Stereotactic surgery planning
+- DBS planning
+- Biopsy planning
+- Surgical navigation
+- Gamma knife
+position: Supine in surgical position. Head in frame if required
+npo: N/A
+premedication: ''
+contrast:
+  agent: None typically. Contrast optional
+  volume: 'If contrast: 100 mL'
+  flow_rate: 3 mL/s
+tech_params:
+  kv: '120'
+  mas: Auto (reference 300)
+  rotation_time: Helicals
+  pitch: Pitch for isotropic
+series:
+- name: Stereotactic Head
+  start: Vertex
+  end: Skull base
+  delay: N/A (or 60-90s if contrast)
+  thickness: 0.5-0.625 mm
+  notes: Isotropic submillimeter
+recons:
+- plane: Axial
+  acquisition: Stereo
+  fov: Brain
+  thickness_increment: 0.5 mm/0.5 mm
+  kernel: Brain (Bone if needed)
+  ir_strength: '3'
+  notes: Isotropic axial
+- plane: Coronal
+  acquisition: Stereo
+  fov: Brain
+  thickness_increment: 0.5 mm/0.5 mm
+  kernel: Brain
+  ir_strength: '3'
+  notes: Isotropic coronal
+- plane: Sagittal
+  acquisition: Stereo
+  fov: Brain
+  thickness_increment: 0.5 mm/0.5 mm
+  kernel: Brain
+  ir_strength: '3'
+  notes: Isotropic sagittal midline
+- plane: 3D surface
+  acquisition: Stereo
+  fov: Brain
+  thickness_increment: 0.5 mm source
+  kernel: Brain
+  ir_strength: '3'
+  notes: Surface for navigation
+notes:
+  tech: Submillimeter ISOTROPIC acquisition. Vertex to skull base. DICOM for surgical
+    planning. Frame or fiducials if required
+  nursing: Position exactly as for surgery. Frame placement if required
+  rad: Isotropic high-resolution for surgical targeting. Anatomic landmarks. Tumor
+    if contrast
+  tips: Isotropic voxels critical. Export DICOM to surgical planning
+  additional_recons: Export to surgical navigation. Isotropic 0.5mm. Coordinates for
+    targeting
+safety:
+  renal: N/A or verify eGFR
+  allergy: N/A or check allergy
+---
+
 # CT Head 3D Stereotactic
 
 **Last Updated:** 2024-01-15  

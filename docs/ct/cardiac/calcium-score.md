@@ -1,3 +1,65 @@
+---
+title: Calcium Score
+slug: calcium-score
+category: cardiac
+protocol_type: non-contrast
+last_updated: '2026-02-02'
+author: ''
+synonyms: []
+clinical_indications:
+- Cardiovascular risk assessment
+- Chest pain low-intermediate risk
+- Asymptomatic screening
+- Elevated HLD
+- Significant cardiovascular risk factors
+position: Supine feet-first
+npo: No caffeine day of exam
+premedication: HR control not needed for calcium score
+contrast:
+  agent: N/A
+  type: non-contrast
+tech_params:
+  kv: '120'
+  mas: Auto (low dose)
+  rotation_time: 0.28-0.35s
+  pitch: 1.0-1.2
+series:
+- name: Calcium Score
+  start: Carina
+  end: Below heart
+  delay: N/A
+  thickness: 1.5 mm
+  notes: Sequential axial gated acquisition
+recons:
+- plane: Axial
+  acquisition: Calcium score
+  fov: Heart
+  thickness_increment: 3 mm/3 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: For Agatston score calculation
+- plane: Axial
+  acquisition: Calcium score
+  fov: Chest
+  thickness_increment: 1.5 mm/1.5 mm
+  kernel: Lung
+  ir_strength: '3'
+  notes: Lung FOV for Extracardiac findings
+notes:
+  tech: 'Prospective ECG gating. | Suspended Respiration breathing instructions. |
+    For single source CT: Target End Diastole if HR < 63BPM, else target End diastole
+    and end systole. For dual source CT: Target End diastole if HR <79, else target
+    end systole. Ensure ECG leads well connected, Goal: <= 60 BPM, regular (+/- 5).'
+  nursing: No IV needed.
+  rad: Check breathing motion on lung FOV. Calculate Agatston score. Report percentile
+    for age/sex. Document coronary calcification distribution
+  tips: Good ECG tracing essential. Patient breath hold coaching
+  additional_recons: Agatston score calculation. Percentile reporting
+safety:
+  renal: N/A
+  allergy: N/A
+---
+
 # Calcium Score
 
 **Last Updated:** 2026-02-02  

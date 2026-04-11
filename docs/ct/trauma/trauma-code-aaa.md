@@ -1,3 +1,92 @@
+---
+title: Trauma Code AAA
+slug: trauma-code-aaa
+category: trauma
+protocol_type: trauma
+last_updated: '2024-01-15'
+author: Dr. Davis
+synonyms: []
+clinical_indications:
+- Ruptured AAA
+- Aortic emergency
+- Hemodynamic instability with abdominal pain
+position: Supine with arms raised
+npo: None - emergency
+premedication: ''
+contrast:
+  agent: Omnipaque 350
+  volume: 125 mL
+  flow_rate: 4-5 mL/s
+  timing: 'Triple phase: NC + Arterial + Portal venous'
+  roi: Abdominal aorta
+  trigger: 150 HU
+tech_params:
+  kv: 100-120
+  mas: High mAs (300 reference)
+  rotation_time: 0.5s
+  pitch: 1.0-1.375
+series:
+- name: Non-Contrast CAP
+  start: Diaphragm
+  end: Pubic symphysis
+  delay: N/A
+  thickness: 2.5 mm
+  notes: RAPID - hematoma
+- name: Arterial CAP
+  start: Diaphragm
+  end: Pubic symphysis
+  delay: 25-30 sec
+  thickness: 0.625 mm
+  notes: Active bleeding + aneurysm
+- name: Portal Venous CAP
+  start: Diaphragm
+  end: Pubic symphysis
+  delay: 70 sec
+  thickness: 2.5 mm
+  notes: Organs and venous
+recons:
+- plane: Axial
+  acquisition: All phases
+  fov: CAP
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Vascular/Standard
+  ir_strength: '3'
+  notes: Compare phases
+- plane: Coronal
+  acquisition: Arterial
+  fov: CAP
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Aorta and bleeding
+- plane: Sagittal
+  acquisition: Arterial
+  fov: Aorta
+  thickness_increment: 2 mm/2 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Aorta extent
+- plane: 3D VR
+  acquisition: Arterial
+  fov: Aorta
+  thickness_increment: 1.5 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: STAT 3D for EVAR planning
+notes:
+  tech: 'RAPID triple phase: 1) NC CAP (hematoma) 2) Arterial CAP (active bleed bolus
+    track 25-30s) 3) Portal venous CAP (70s). STAT protocol'
+  nursing: Large bore IV 18G minimum. Blood products ready
+  rad: 'NC: retroperitoneal hematoma. Arterial: active extravasation aneurysm morphology.
+    Portal: solid organs'
+  tips: STAT protocol. Minimize delays. Notify vascular surgery
+  additional_recons: Measure aneurysm. Identify bleeding site. EVAR measurements if
+    stable
+safety:
+  renal: Emergent - proceed
+  allergy: Document emergency
+---
+
 # Trauma Code AAA
 
 **Last Updated:** 2024-01-15  

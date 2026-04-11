@@ -1,3 +1,79 @@
+---
+title: CT Hip
+slug: ct-hip
+category: msk
+protocol_type: musculoskeletal
+last_updated: '2024-01-15'
+author: Dr. Anderson
+synonyms: []
+clinical_indications:
+- Hip fracture
+- Acetabular fracture
+- Femoral neck
+- Pre-operative planning
+- FAI assessment
+position: Supine
+npo: N/A
+premedication: ''
+contrast:
+  agent: None typically. Contrast if infection/mass
+  volume: 'If contrast: 100 mL'
+  flow_rate: 2-3 mL/s
+tech_params:
+  kv: '120'
+  mas: Auto (reference 250)
+  rotation_time: 0.5s
+  pitch: Helical
+series:
+- name: CT Pelvis/Hips
+  start: Iliac crests
+  end: Proximal femurs
+  delay: N/A or 60s if contrast
+  thickness: 0.625 mm
+  notes: Submillimeter for 3D
+recons:
+- plane: Axial
+  acquisition: Hips
+  fov: Pelvis/hips
+  thickness_increment: 2 mm/2 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Axial bone
+- plane: Coronal
+  acquisition: Hips
+  fov: Pelvis/hips
+  thickness_increment: 2 mm/2 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Coronal hips
+- plane: Sagittal
+  acquisition: Hips
+  fov: Each hip
+  thickness_increment: 2 mm/2 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Sagittal hips
+- plane: Judet views
+  acquisition: Hips
+  fov: Acetabulum
+  thickness_increment: 2 mm oblique
+  kernel: Bone
+  ir_strength: N/A
+  notes: Obturator and iliac obliques
+notes:
+  tech: Iliac crests through proximal femurs. Bilateral for comparison. Submillimeter
+    for 3D acetabular reconstructions
+  nursing: No IV unless contrast indicated
+  rad: Femoral neck fractures. Acetabular fractures (Judet/Letournel). Hip dislocation.
+    FAI morphology. AVN
+  tips: Bilateral coverage. Submillimeter for acetabular 3D
+  additional_recons: 3D pelvis. Judet oblique views. Letournel classification. FAI
+    measurements (alpha angle)
+safety:
+  renal: N/A or eGFR > 30
+  allergy: N/A or check allergy
+---
+
 # CT Hip
 
 **Last Updated:** 2024-01-15  

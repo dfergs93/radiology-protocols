@@ -1,3 +1,86 @@
+---
+title: CTA Head
+slug: cta-head
+category: neuro
+protocol_type: vascular
+last_updated: '2024-01-15'
+author: Dr. Thompson
+synonyms: []
+clinical_indications:
+- Aneurysm screening
+- Subarachnoid hemorrhage
+- Vascular malformation
+- Intracranial stenosis
+position: Supine head-first
+npo: NPO 2 hours
+premedication: ''
+contrast:
+  agent: Omnipaque 350
+  volume: 75-100 mL
+  flow_rate: 4-5 mL/s
+  timing: Bolus Tracking
+  roi: Aortic arch or carotid
+  trigger: 150 HU
+tech_params:
+  kv: 100-120
+  mas: Auto (reference 250)
+  rotation_time: 0.5-0.6s
+  pitch: Helical
+series:
+- name: NC Head (optional)
+  start: Vertex
+  end: Foramen magnum
+  delay: N/A
+  thickness: 5 mm
+  notes: Baseline if SAH
+- name: CTA Head
+  start: Skull base
+  end: Vertex
+  delay: Bolus tracked
+  thickness: 0.5-0.625 mm
+  notes: Submillimeter for 3D
+recons:
+- plane: Axial
+  acquisition: CTA
+  fov: Head
+  thickness_increment: 0.75 mm/0.75 mm
+  kernel: Brain
+  ir_strength: '3'
+  notes: Source images
+- plane: MIP
+  acquisition: CTA
+  fov: Circle of Willis
+  thickness_increment: Thick slab
+  kernel: Brain
+  ir_strength: N/A
+  notes: Vessel overview
+- plane: 3D VR
+  acquisition: CTA
+  fov: Intracranial vessels
+  thickness_increment: 0.5 mm source
+  kernel: Brain
+  ir_strength: N/A
+  notes: 3D angiogram
+- plane: Curved MPR
+  acquisition: CTA
+  fov: Individual vessels
+  thickness_increment: 0.75 mm
+  kernel: Brain
+  ir_strength: '3'
+  notes: Vessel-specific views
+notes:
+  tech: NC Head optional then CTA skull base to vertex. Bolus tracking. Submillimeter
+    for 3D reconstruction
+  nursing: 20G IV minimum. Good bolus essential
+  rad: Assess circle of Willis. Aneurysms. Stenosis. Vascular malformations. Anatomic
+    variants
+  tips: Minimize motion. Thin slices for small aneurysms
+  additional_recons: 3D VR and MIP. Measure aneurysm if present. Assess A1 A2 dominance
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history
+---
+
 # CTA Head
 
 **Last Updated:** 2024-01-15  

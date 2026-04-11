@@ -1,3 +1,88 @@
+---
+title: CTA Lower Extremity Runoff for PAD
+slug: cta-lower-extremity-runoff-for-pad
+category: vascular
+protocol_type: vascular
+last_updated: '2024-01-15'
+author: Dr. Anderson
+synonyms: []
+clinical_indications:
+- Peripheral arterial disease
+- Claudication
+- Critical limb ischemia
+- Pre-operative bypass planning
+position: Supine with arms raised. Legs straight
+npo: NPO 2-4 hours
+premedication: ''
+contrast:
+  agent: Isovue 370
+  volume: 1.9 mL/kg
+  flow_rate: 3-4 mL/s
+  duration: 35s (5s fast 5-6mL/s then 30 s slow 3-4mL/s)
+  timing: Bolus Tracking
+  roi: Abdominal aorta
+  trigger: 150 HU
+tech_params:
+  kv: 100-120
+  mas: Auto (reference 250)
+  rotation_time: 0.5s
+  pitch: 1.2-1.5
+series:
+- name: CTA Arterial
+  start: Renal arteries
+  end: Ankle
+  delay: Bolus tracked
+  thickness: 0.625 mm
+  notes: May need slower table speed if severe PAD
+- name: CTA Runoff
+  start: Mid Thigh
+  end: Foot
+  delay: Immediately after CTA
+  thickness: 0.625 mm
+  notes: Runoff phase to evaluate distal vessels
+recons:
+- plane: Axial
+  acquisition: Arterial
+  fov: Pelvis/Legs
+  thickness_increment: 2 mm/2 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Assess all vessel segments
+- plane: Coronal
+  acquisition: Arterial
+  fov: Full legs
+  thickness_increment: 3 mm/3 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: MIP full arterial tree
+- plane: Sagittal
+  acquisition: Arterial
+  fov: Full legs
+  thickness_increment: 3 mm/3 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Lateral views of vessels
+- plane: 3D VR
+  acquisition: Arterial
+  fov: Full legs
+  thickness_increment: 1.5 mm source
+  kernel: Vascular
+  ir_strength: '3'
+  notes: 3D for surgical planning
+notes:
+  tech: Scan from diaphragm to toes. Tape feet together. Use automatic bolus tracking.
+    Extend delay if known severe PAD. Cover tibial vessels to ankle
+  nursing: 18-20G IV antecubital, flow rate up to 6 mL/s
+  rad: Assess aortoiliac femoral popliteal and tibial vessels. Grade stenoses. Identify
+    occlusions. Assess runoff vessels
+  tips: Ensure legs are straight and not rotated. Remove shoes and metal
+  additional_recons: MIP and 3D VR. Curved MPR of each arterial segment. Bone subtraction
+    for vessels.
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history
+---
+
 # CTA Lower Extremity Runoff for PAD
 
 **Last Updated:** 2024-01-15  

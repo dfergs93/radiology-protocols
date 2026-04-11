@@ -1,3 +1,88 @@
+---
+title: Dynamic Airway CT
+slug: dynamic-airway-ct
+category: chest
+protocol_type: non-contrast
+last_updated: '2024-01-15'
+author: Dr. Lee
+synonyms: []
+clinical_indications:
+- Tracheobronchomalacia
+- Expiratory central airway collapse
+- EDAC
+position: Supine with arms raised
+npo: N/A
+premedication: ''
+contrast:
+  agent: N/A
+  type: non-contrast
+tech_params:
+  kv: '120'
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: Helical
+series:
+- name: Inspiration
+  start: Thoracic inlet
+  end: Carina+10cm
+  delay: Full inspiration
+  thickness: 0.625-1 mm
+  notes: Thin for 3D
+- name: Mid-Expiration
+  start: Thoracic inlet
+  end: Carina+10cm
+  delay: Forced mid-expiration
+  thickness: 0.625-1 mm
+  notes: Same level as inspiration
+- name: Cine (optional)
+  start: Carina level
+  end: Single slice
+  delay: Continuous breathing
+  thickness: Cine mode
+  notes: Dynamic collapse
+recons:
+- plane: Axial
+  acquisition: Both phases
+  fov: Airway
+  thickness_increment: 1-2 mm/1 mm
+  kernel: Lung
+  ir_strength: '3'
+  notes: Axial airway
+- plane: Coronal
+  acquisition: Both phases
+  fov: Airway
+  thickness_increment: 1.5 mm
+  kernel: Lung
+  ir_strength: '3'
+  notes: Coronal airway
+- plane: Sagittal
+  acquisition: Both phases
+  fov: Airway
+  thickness_increment: 1.5 mm
+  kernel: Lung
+  ir_strength: '3'
+  notes: Sagittal airway
+- plane: 3D VR
+  acquisition: Both phases
+  fov: Airway
+  thickness_increment: 0.625-1 mm source
+  kernel: Lung
+  ir_strength: N/A
+  notes: 3D airway reconstruction
+notes:
+  tech: 'TWO acquisitions: 1) INSPIRATION carina to carina+10cm 2) MID-EXPIRATION
+    same level. Cine if available. Airway reconstructions required'
+  nursing: No IV. Coach dynamic breathing. May need forced expiration
+  rad: Measure tracheal collapse percentage. >50% collapse suggests tracheomalacia.
+    Assess bronchi
+  tips: Coach forced expiration. Exact same level both phases
+  additional_recons: Measure tracheal AP diameter inspiration vs expiration. Calculate
+    collapse percentage. 3D airway
+safety:
+  renal: N/A
+  allergy: N/A
+---
+
 # Dynamic Airway CT
 
 **Last Updated:** 2024-01-15  

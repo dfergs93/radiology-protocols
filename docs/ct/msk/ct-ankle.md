@@ -1,3 +1,78 @@
+---
+title: CT Ankle
+slug: ct-ankle
+category: msk
+protocol_type: musculoskeletal
+last_updated: '2024-01-15'
+author: Dr. Patel
+synonyms: []
+clinical_indications:
+- Ankle fracture
+- Ligament injury
+- Pilon fracture
+- Pre-operative planning
+- Hardware assessment
+position: Supine feet first
+npo: N/A
+premedication: ''
+contrast:
+  agent: None typically. Contrast if infection/mass
+  volume: 'If contrast: 75 mL'
+  flow_rate: 2-3 mL/s
+tech_params:
+  kv: '120'
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: Helical
+series:
+- name: CT Ankle
+  start: Distal tib/fib
+  end: Hindfoot
+  delay: N/A or 60s if contrast
+  thickness: 0.625 mm
+  notes: Submillimeter
+recons:
+- plane: Axial
+  acquisition: Ankle
+  fov: Ankle
+  thickness_increment: 1 mm/1 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Bone algorithm
+- plane: Coronal
+  acquisition: Ankle
+  fov: Ankle
+  thickness_increment: 1.5 mm/1 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Coronal ankle
+- plane: Sagittal
+  acquisition: Ankle
+  fov: Ankle
+  thickness_increment: 1.5 mm/1 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Sagittal ankle
+- plane: 3D surface
+  acquisition: Ankle
+  fov: Bones
+  thickness_increment: 0.625 mm source
+  kernel: Bone
+  ir_strength: N/A
+  notes: 3D for complex fractures
+notes:
+  tech: Include distal tibia/fibula through hindfoot. Submillimeter for 3D. Bilateral
+    scout for positioning. May scan bilateral for comparison
+  nursing: No IV unless contrast needed
+  rad: Malleolar fractures. Tibial plafond. Talus. Calcaneus. Syndesmosis. Ligaments
+    on contrast
+  tips: Bilateral scout for symmetry. Submillimeter for 3D
+  additional_recons: 3D reconstruction for surgical planning. Document fracture fragments
+safety:
+  renal: N/A or eGFR > 30
+  allergy: N/A or check allergy
+---
+
 # CT Ankle
 
 **Last Updated:** 2024-01-15  

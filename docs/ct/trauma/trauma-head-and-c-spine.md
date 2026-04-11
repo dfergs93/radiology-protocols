@@ -1,3 +1,82 @@
+---
+title: Trauma Head and C-Spine
+slug: trauma-head-and-c-spine
+category: trauma
+protocol_type: trauma
+last_updated: '2024-01-15'
+author: Dr. Smith
+synonyms: []
+clinical_indications:
+- Trauma head injury
+- C-spine clearance
+- Multi-trauma assessment
+position: Supine head-first. Cervical collar in place
+npo: None - trauma
+premedication: ''
+contrast:
+  agent: N/A
+  type: non-contrast
+tech_params:
+  kv: '120'
+  mas: Auto (300 head / 250 spine)
+  rotation_time: 1.0 head / 0.5 spines
+  pitch: '0.5'
+series:
+- name: NC Head
+  start: Vertex
+  end: Foramen magnum
+  delay: N/A
+  thickness: 5 mm
+  notes: Parallel to hard palate
+- name: NC C-spine
+  start: Skull base
+  end: T1
+  delay: N/A
+  thickness: 0.625 mm
+  notes: Helical submillimeter
+recons:
+- plane: Axial
+  acquisition: Head
+  fov: Brain
+  thickness_increment: 5 mm/5 mm
+  kernel: Brain
+  ir_strength: '3'
+  notes: Brain and bone windows
+- plane: Sagittal
+  acquisition: C-spine
+  fov: C-spine
+  thickness_increment: 2 mm/2 mm
+  kernel: Bone
+  ir_strength: '3'
+  notes: Midline and parasagittal
+- plane: Coronal
+  acquisition: C-spine
+  fov: C-spine
+  thickness_increment: 2 mm/2 mm
+  kernel: Bone
+  ir_strength: '3'
+  notes: Coronal alignment
+- plane: Axial
+  acquisition: C-spine
+  fov: C-spine
+  thickness_increment: 2 mm/2 mm
+  kernel: Bone
+  ir_strength: '3'
+  notes: Axial bone windows
+notes:
+  tech: 'TWO acquisitions: 1) Head vertex to C1 2) C-spine skull base to T1. Head:
+    5mm axial. C-spine: 0.625mm with reformats. Minimize movement'
+  nursing: Maintain cervical precautions. C-collar remains on. Document GCS
+  rad: 'Head: acute hemorrhage skull fractures. C-spine: fractures alignment ligamentous
+    injury'
+  tips: Keep C-collar on. Minimize patient movement
+  additional_recons: 'C-spine: Sagittal and coronal bone reformats. 3D if complex
+    fracture'
+safety:
+  renal: N/A
+  allergy: N/A
+---
+
 # Trauma Head and C-Spine
 
 **Last Updated:** 2024-01-15  

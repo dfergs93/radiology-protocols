@@ -1,3 +1,90 @@
+---
+title: Trauma Chest CT
+slug: trauma-chest-ct
+category: trauma
+protocol_type: trauma
+last_updated: '2024-01-15'
+author: Dr. Martinez
+synonyms: []
+clinical_indications:
+- Blunt chest trauma
+- Rib fractures
+- Pneumothorax
+- Hemothorax
+position: Supine with arms raised if possible
+npo: None - trauma
+premedication: ''
+contrast:
+  agent: N/A
+  type: non-contrast
+tech_params:
+  kv: '120'
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: 1.0-1.2
+series:
+- name: NC Chest
+  start: Lung apices
+  end: Costophrenic angles
+  delay: N/A
+  thickness: 0.625-1 mm
+  notes: Submillimeter for ribs
+- name: CTA Chest
+  start: Arterial (bolus tracked)
+  end: Lung apices to Costophrenic angles
+  delay: Bolus tracked
+  thickness: 0.625 mm
+  notes: Evaluate for aortic injury
+recons:
+- plane: Axial
+  acquisition: Chest
+  fov: Chest
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Mediastinal window
+- plane: Axial
+  acquisition: Chest
+  fov: Chest
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Lung
+  ir_strength: '3'
+  notes: Lung window
+- plane: Axial
+  acquisition: CTA Chest
+  fov: Chest
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Evaluate for aortic injury
+- plane: Coronal
+  acquisition: Chest
+  fov: Chest
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Rib overview
+- plane: Oblique sagittal
+  acquisition: Chest
+  fov: Ribs
+  thickness_increment: 2 mm/2 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Rib reformats all ribs
+notes:
+  tech: Single acquisition lung apices to costophrenic angles. RIB REFORMATS required.
+    Submillimeter acquisition
+  nursing: Trauma precautions. Arms up if able
+  rad: Pneumothorax hemothorax. Rib fractures (count and location). Pulmonary contusion.
+    Aortic injury. Sternal/scapular fractures
+  tips: Submillimeter acquisition critical for rib detail
+  additional_recons: Dedicated rib reformats (oblique sagittal each rib). Count fractures.
+    3D chest wall
+safety:
+  renal: N/A
+  allergy: N/A
+---
+
 # Trauma Chest CT
 
 **Last Updated:** 2024-01-15  

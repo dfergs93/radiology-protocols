@@ -1,3 +1,79 @@
+---
+title: CT Knee
+slug: ct-knee
+category: msk
+protocol_type: musculoskeletal
+last_updated: '2024-01-15'
+author: Dr. Thompson
+synonyms: []
+clinical_indications:
+- Knee fracture
+- Tibial plateau
+- Patellar fracture
+- Pre-operative planning
+- Hardware evaluation
+position: Supine feet first
+npo: N/A
+premedication: ''
+contrast:
+  agent: None typically. Contrast if infection/mass
+  volume: 'If contrast: 75 mL'
+  flow_rate: 2-3 mL/s
+tech_params:
+  kv: '120'
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: Helical
+series:
+- name: CT Knee
+  start: Distal femur
+  end: Proximal tib/fib
+  delay: N/A or 60s if contrast
+  thickness: 0.625 mm
+  notes: Submillimeter
+recons:
+- plane: Axial
+  acquisition: Knee
+  fov: Knee
+  thickness_increment: 1.5 mm/1 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Bone algorithm
+- plane: Coronal
+  acquisition: Knee
+  fov: Knee
+  thickness_increment: 1.5 mm/1 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Coronal knee
+- plane: Sagittal
+  acquisition: Knee
+  fov: Knee
+  thickness_increment: 1.5 mm/1 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Sagittal knee
+- plane: 3D surface
+  acquisition: Knee
+  fov: Bones
+  thickness_increment: 0.625 mm source
+  kernel: Bone
+  ir_strength: N/A
+  notes: 3D for surgical planning
+notes:
+  tech: Distal femur through proximal tibia/fibula. Submillimeter. Extended FOV for
+    alignment. Bilateral scout
+  nursing: No IV unless contrast indicated
+  rad: Tibial plateau fractures (Schatzker). Femoral condyles. Patella. Fibula. Cruciate
+    ligaments on contrast. Menisci
+  tips: Bilateral scout for alignment assessment
+  additional_recons: Schatzker classification if tibial plateau. Measure alignment.
+    3D reconstruction
+safety:
+  renal: N/A or eGFR > 30
+  allergy: N/A or check allergy
+---
+
 # CT Knee
 
 **Last Updated:** 2024-01-15  

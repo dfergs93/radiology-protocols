@@ -1,3 +1,73 @@
+---
+title: Non-Contrast CT Chest Low Dose
+slug: non-contrast-ct-chest-low-dose
+category: chest
+protocol_type: non-contrast
+last_updated: '2024-01-15'
+author: Dr. Kim
+synonyms: []
+clinical_indications:
+- Non Contrast chest for patient's age < 60
+position: Supine with arms raised
+npo: N/A
+premedication: ''
+contrast:
+  agent: N/A
+  type: non-contrast
+tech_params:
+  kv: 100-120
+  mas: Low dose (40-60 reference)
+  rotation_time: 0.5s
+  pitch: 1.0-1.2
+series:
+- name: Low Dose Chest
+  start: Lung apices
+  end: Costophrenic angles
+  delay: N/A
+  thickness: 1-1.25 mm
+  notes: Low dose helical
+recons:
+- plane: Axial
+  acquisition: Chest
+  fov: Chest
+  thickness_increment: 1.25 mm/1.25 mm
+  kernel: Lung
+  ir_strength: High IR 4-5
+  notes: Thin slice nodule detection
+- plane: Axial
+  acquisition: Chest
+  fov: Chest
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Mediastinal window
+- plane: Coronal
+  acquisition: Chest
+  fov: Chest
+  thickness_increment: 2 mm/2 mm
+  kernel: Lung
+  ir_strength: High IR
+  notes: Coronal overview
+- plane: MIP
+  acquisition: Chest
+  fov: Lungs
+  thickness_increment: 5 mm slab
+  kernel: Lung
+  ir_strength: N/A
+  notes: Nodule detection
+notes:
+  tech: LOW DOSE technique. Reduced mAs 30-50% of standard. Helical acquisition. High
+    IR strength
+  nursing: No IV. Explain screening purpose and low radiation
+  rad: Lung nodule detection. Measure nodules. Lung-RADS classification. Emphysema
+    assessment
+  tips: Low dose protocol. High iterative reconstruction. Nodule measurement software
+  additional_recons: CAD nodule detection. Measure all nodules ≥3mm. Lung-RADS reporting
+safety:
+  renal: N/A
+  allergy: N/A
+---
+
 # Non-Contrast CT Chest Low Dose
 
 **Last Updated:** 2024-01-15  

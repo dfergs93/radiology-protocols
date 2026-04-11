@@ -1,3 +1,75 @@
+---
+title: CT Sinus Stereotactic
+slug: ct-sinus-stereotactic
+category: neuro
+protocol_type: neuroradiology
+last_updated: '2024-01-15'
+author: Dr. Chen
+synonyms: []
+clinical_indications:
+- Pre-operative sinus surgery planning
+- Image-guided surgery
+- ENT surgical navigation
+position: Supine head-first. Surgical planning position
+npo: N/A
+premedication: ''
+contrast:
+  agent: N/A
+  type: non-contrast
+tech_params:
+  kv: '120'
+  mas: Auto (reference 200)
+  rotation_time: Helicals
+  pitch: Pitch for isotropic
+series:
+- name: Stereotactic Sinus
+  start: Frontal sinus
+  end: Hard palate
+  delay: N/A
+  thickness: 0.625 mm
+  notes: Isotropic submillimeter
+recons:
+- plane: Axial
+  acquisition: Stereo
+  fov: Sinuses
+  thickness_increment: 0.625 mm/0.625 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Isotropic bone
+- plane: Coronal
+  acquisition: Stereo
+  fov: Sinuses
+  thickness_increment: 0.625 mm/0.625 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Isotropic coronal
+- plane: Sagittal
+  acquisition: Stereo
+  fov: Sinuses
+  thickness_increment: 0.625 mm/0.625 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Isotropic sagittal
+- plane: 3D surface
+  acquisition: Stereo
+  fov: Sinuses
+  thickness_increment: 0.625 mm source
+  kernel: Bone
+  ir_strength: N/A
+  notes: Surface rendering for navigation
+notes:
+  tech: Submillimeter isotropic acquisition. DICOM for surgical navigation system.
+    May need fiducial markers. Entire sinus anatomy
+  nursing: Position as for surgery. Fiducials if required
+  rad: Complete sinus anatomy for surgical navigation. Ostiomeatal complex. Skull
+    base. Lamina papyracea
+  tips: Isotropic voxels essential. DICOM for navigation
+  additional_recons: Export DICOM to surgical navigation system. Isotropic 0.625mm
+safety:
+  renal: N/A
+  allergy: N/A
+---
+
 # CT Sinus Stereotactic
 
 **Last Updated:** 2024-01-15  

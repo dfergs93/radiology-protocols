@@ -1,3 +1,77 @@
+---
+title: CT Gout Protocol
+slug: ct-gout-protocol
+category: msk
+protocol_type: non-contrast
+last_updated: '2024-01-15'
+author: Dr. Johnson
+synonyms: []
+clinical_indications:
+- Gout
+- Tophi
+- Urate deposition
+- CPPD
+- Crystal arthropathy
+position: Variable - affected joint
+npo: N/A
+premedication: ''
+contrast:
+  agent: N/A
+  type: non-contrast
+tech_params:
+  kv: Dual energy 80/140Sn or equivalent
+  mas: Auto
+  rotation_time: 0.5s
+  pitch: Helical
+series:
+- name: DECT or CT
+  start: Joint region
+  end: Extended coverage
+  delay: N/A
+  thickness: 0.625-1 mm
+  notes: Dual energy if available
+recons:
+- plane: Axial
+  acquisition: Gout
+  fov: Joints
+  thickness_increment: 1 mm/1 mm
+  kernel: Bone and Standard
+  ir_strength: '3'
+  notes: Standard images
+- plane: DECT urate
+  acquisition: Gout
+  fov: Joints
+  thickness_increment: Color overlay
+  kernel: Urate algorithm
+  ir_strength: N/A
+  notes: Urate crystal map
+- plane: 3D volume
+  acquisition: Gout
+  fov: Urate burden
+  thickness_increment: Volumetric
+  kernel: Urate
+  ir_strength: N/A
+  notes: Quantify total urate
+- plane: Coronal
+  acquisition: Gout
+  fov: Joints
+  thickness_increment: 1.5 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Joint erosions
+notes:
+  tech: Dual energy CT if available for urate detection. Single energy if not. Cover
+    affected joint(s). Extended FOV if polyarticular
+  nursing: No IV. Document affected joints
+  rad: Urate crystals color-coded on DECT. Tophi. Joint erosions. Soft tissue deposits.
+    Quantify urate burden
+  tips: Dual energy preferred for urate detection
+  additional_recons: Urate volume quantification. Color overlay. Document tophi locations
+safety:
+  renal: N/A
+  allergy: N/A
+---
+
 # CT Gout Protocol
 
 **Last Updated:** 2024-01-15  

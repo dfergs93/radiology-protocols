@@ -1,3 +1,83 @@
+---
+title: Gated CTA Chest Post-op Cardiac Valve
+slug: gated-cta-chest-post-op-cardiac-valve
+category: cardiac
+protocol_type: cardiac gated
+last_updated: '2024-01-15'
+author: Dr. Thompson
+synonyms: []
+clinical_indications:
+- Post-operative valve assessment
+- Prosthetic valve evaluation
+- Post-surgical complications
+position: Supine feet-first
+npo: NPO 2-4 hours
+premedication: HR < 65 preferred. Metoprolol if needed
+contrast:
+  agent: Isovue 370
+  volume: 1.3 mL/kg
+  flow_rate: 4-5 mL/s
+  duration: 15 sec
+  timing: Bolus Tracking
+  roi: Ascending aorta
+  trigger: 200 HU
+tech_params:
+  kv: 130-140
+  mas: Auto ECG modulation
+  rotation_time: 0.28s
+  pitch: 0.2-0.24
+series:
+- name: Gated CTA
+  start: Top of heart
+  end: Below heart
+  delay: Bolus tracked
+  thickness: 0.5-0.625 mm
+  notes: Retrospective gating HIGH kV
+recons:
+- plane: Axial
+  acquisition: Gated CTA
+  fov: Heart
+  thickness_increment: 0.75 mm/0.75 mm
+  kernel: Cardiac
+  ir_strength: '3'
+  notes: Prosthetic valve assessment
+- plane: Axial
+  acquisition: Gated CTA
+  fov: Heart
+  thickness_increment: Multi-phase
+  kernel: Cardiac
+  ir_strength: '3'
+  notes: Multiple cardiac phases for motion
+- plane: Short axis
+  acquisition: Gated CTA
+  fov: Valve level
+  thickness_increment: 1 mm
+  kernel: Cardiac
+  ir_strength: '3'
+  notes: En face valve views
+- plane: Long axis
+  acquisition: Gated CTA
+  fov: Heart
+  thickness_increment: Multi-phase
+  kernel: Cardiac
+  ir_strength: '3'
+  notes: Valve motion assessment
+notes:
+  tech: Retrospective gating. INCREASED kV to 130-140 for metal artifact reduction.
+    Increased contrast 1.3 mL/kg. Extended reconstruction phases
+  nursing: 20G IV minimum
+  rad: Assess prosthetic valve function. Look for paravalvular leak. Evaluate perivalvular
+    complications. Metal artifact reduction critical | Increased kVP and increased
+    contrast volume with thinner cuts help with seeing through metallic artifact to
+    evaluate for thrombus.
+  tips: High kV (130-140) critical for metal artifact. Increased contrast volume
+  additional_recons: Multi-phase reconstructions. Valve-specific views. Paravalvular
+    assessment
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history
+---
+
 # Gated CTA Chest Post-op Cardiac Valve
 
 **Last Updated:** 2024-01-15  

@@ -1,3 +1,78 @@
+---
+title: CTA DIEP Flap Pre-operative
+slug: cta-diep-flap-pre-operative
+category: vascular
+protocol_type: vascular
+last_updated: '2024-01-15'
+author: Dr. Williams
+synonyms: []
+clinical_indications:
+- Pre-operative planning for DIEP flap breast reconstruction
+position: Supine with arms at sides or on chest
+npo: NPO 2-4 hours
+premedication: ''
+contrast:
+  agent: Isovue 370
+  volume: 1.5 mL/kg
+  flow_rate: 4-5 mL/s
+  duration: 20s
+  timing: Bolus Tracking
+  roi: Abdominal aorta
+  trigger: 150 HU
+tech_params:
+  kv: '100'
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: '0.9'
+series:
+- name: CTA Arterial
+  start: Xiphoid
+  end: Pubic symphysis
+  delay: Bolus tracked
+  thickness: 0.625 mm
+  notes: Focus on abdominal wall
+recons:
+- plane: Axial
+  acquisition: Arterial
+  fov: Abdomen
+  thickness_increment: 1 mm/1 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Thin slice for perforator mapping
+- plane: Coronal
+  acquisition: Arterial
+  fov: Abdomen
+  thickness_increment: 1.5 mm/1.5 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: MIP to show perforator course
+- plane: Sagittal
+  acquisition: Arterial
+  fov: Abdomen
+  thickness_increment: 2 mm/2 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Lateral views of perforators
+- plane: 3D VR
+  acquisition: Arterial
+  fov: Anterior abd wall
+  thickness_increment: 1 mm source
+  kernel: Vascular
+  ir_strength: '3'
+  notes: 3D reconstruction for surgical planning
+notes:
+  tech: Scan from mid-liver to greater trochanters. Remove tight-fitting underwear.
+    If patient can exercise, do leg lifts on table before injection.
+  nursing: 18-20G IV
+  rad: Map perforator locations. Measure vessel caliber. Identify dominant perforators.
+    Note relationship to umbilicus. Prefer perforators below umbilicus.
+  tips: Arms positioned to not obscure anterior abdominal wall
+  additional_recons: 3D VR color-coded perforator map. Measure distances from umbilicus
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history
+---
+
 # CTA DIEP Flap Pre-operative
 
 **Last Updated:** 2024-01-15  

@@ -1,3 +1,83 @@
+---
+title: CT Sinus
+slug: ct-sinus
+category: neuro
+protocol_type: neuroradiology
+last_updated: '2024-01-15'
+author: Dr. Hayes
+synonyms: []
+clinical_indications:
+- Sinusitis
+- Sinus disease
+- Pre-operative sinus surgery
+- Nasal obstruction
+position: Supine head-first
+npo: N/A
+premedication: ''
+contrast:
+  agent: N/A
+  type: non-contrast
+tech_params:
+  kv: '120'
+  mas: Auto (reference 200)
+  rotation_time: Axial or coronals
+  pitch: N/A
+series:
+- name: Coronal Sinus
+  start: Frontal sinus
+  end: Maxillary sinus
+  delay: N/A
+  thickness: 0.625 mm
+  notes: Direct coronal if possible
+- name: Axial reformat
+  start: Frontal
+  end: Maxillary
+  delay: From coronal
+  thickness: 0.625 mm
+  notes: Reformatted from coronal
+recons:
+- plane: Coronal
+  acquisition: Sinus
+  fov: Sinuses
+  thickness_increment: 1.25 mm/0.75 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Bone window
+- plane: Coronal
+  acquisition: Sinus
+  fov: Sinuses
+  thickness_increment: 3 mm/2 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Soft tissue
+- plane: Axial
+  acquisition: Sinus
+  fov: Sinuses
+  thickness_increment: 2 mm/2 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Axial bone
+- plane: Sagittal
+  acquisition: Sinus
+  fov: Sinuses
+  thickness_increment: 2 mm/2 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Midline and lateral
+notes:
+  tech: Coronal acquisition skull base through maxillary sinuses. Submillimeter for
+    anatomy. Bone and soft tissue windows
+  nursing: No IV. Remove dentures and metal
+  rad: Assess all sinuses. Ostiomeatal complex. Anatomic variants. Mucosal thickening.
+    Polyps. Bony anatomy
+  tips: Direct coronal preferred. Submillimeter for anatomy
+  additional_recons: Document anatomic variants (Haller cells concha bullosa). OMC
+    assessment
+safety:
+  renal: N/A
+  allergy: N/A
+---
+
 # CT Sinus
 
 **Last Updated:** 2024-01-15  

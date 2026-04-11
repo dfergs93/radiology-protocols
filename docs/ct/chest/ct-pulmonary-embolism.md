@@ -1,3 +1,80 @@
+---
+title: CT Pulmonary Embolism
+slug: ct-pulmonary-embolism
+category: chest
+protocol_type: contrast-enhanced
+last_updated: '2026-01-01'
+author: ''
+synonyms: []
+clinical_indications:
+- Suspected pulmonary embolism
+- Acute dyspnea
+- Chest pain with elevated D-dimer
+position: Supine feet-first with arms raised
+npo: NPO 2 hours recommended
+premedication: None required
+contrast:
+  agent: Isovue 370
+  volume: 1.3 mL/kg
+  flow_rate: 5 mL/s
+  duration: 15 - 20s
+  timing: Bolus Tracking
+  roi: Main Pulmonary Artery
+  trigger: 100 HU
+tech_params:
+  kv: '100'
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: 1.0-1.2
+series:
+- name: Pulmonary Angiogram
+  start: Lung apices
+  end: Adrenal glands
+  delay: Bolus tracked
+  thickness: 0.625 mm
+  notes: Caudocranial direction from diaphragm to apices
+recons:
+- plane: Axial
+  acquisition: Angiogram
+  fov: Chest
+  thickness_increment: 1.25 mm/1.25 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Mediastinal window for PE assessment
+- plane: Axial
+  acquisition: Angiogram
+  fov: Chest
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Lung
+  ir_strength: '3'
+  notes: Lung window for parenchymal assessment
+- plane: Coronal
+  acquisition: Angiogram
+  fov: Chest
+  thickness_increment: 3 mm/3 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Overview of pulmonary vasculature
+- plane: Sagittal
+  acquisition: Angiogram
+  fov: Chest
+  thickness_increment: 3 mm/3 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Optional for clinical correlation
+notes:
+  tech: Caudocranial scan direction. Coach breath hold. ROI in main PA at level of
+    bifurcation
+  nursing: 20G or larger IV in antecubital preferred. Verify good flow before injection
+  rad: Assess RV/LV ratio. Look for signs of right heart strain. Check for DVT in
+    leg veins if imaged
+  tips: Arms fully raised to reduce beam hardening
+  additional_recons: MIP reconstructions of pulmonary arteries
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check iodine allergy history and prior reactions
+---
+
 # CT Pulmonary Embolism
 
 **Last Updated:** 2026-01-01  

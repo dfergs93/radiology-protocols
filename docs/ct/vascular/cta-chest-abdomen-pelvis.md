@@ -1,3 +1,92 @@
+---
+title: CTA Chest Abdomen Pelvis
+slug: cta-chest-abdomen-pelvis
+category: vascular
+protocol_type: vascular
+last_updated: '2024-01-15'
+author: Dr. Smith
+synonyms: []
+clinical_indications:
+- Aortic aneurysm
+- Vasculitis
+- Trauma pan-scan
+position: Supine with arms raised above head
+npo: NPO 2-4 hours
+premedication: ''
+contrast:
+  agent: Isovue 370
+  volume: 1.1 mL/kg
+  flow_rate: 4 mL/s
+  duration: 20s
+  timing: Bolus Tracking
+  roi: Descending thoracic aorta
+  trigger: 150 HU
+tech_params:
+  kv: '100'
+  mas: Auto (reference 250)
+  rotation_time: 0.5s
+  pitch: 1.0-1.2
+series:
+- name: CTA Arterial
+  start: Thoracic inlet
+  end: Pubic symphysis
+  delay: Bolus tracked
+  thickness: 0.625 mm
+  notes: Caudocranial from feet to head
+- name: Stent Delay (optional)
+  start: Top of Stent
+  end: Bottom of Stent
+  delay: 40 sec
+  thickness: 0.625 mm
+  notes: Stent coverage
+- name: Vasculitis Delayed (optional)
+  start: Thoracic inlet
+  end: Pubic symphysis
+  delay: 90 sec
+  thickness: 0.625 mm
+  notes: Wall enhancement/thickening
+recons:
+- plane: Axial
+  acquisition: Arterial
+  fov: Chest
+  thickness_increment: 2 mm/2 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Thoracic aorta evaluation
+- plane: Axial
+  acquisition: Arterial
+  fov: Abdomen/Pelvis
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Abdominal aorta and branches
+- plane: Coronal
+  acquisition: Arterial
+  fov: Full CAP
+  thickness_increment: 3 mm/3 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: MIP full aorta overview
+- plane: Sagittal
+  acquisition: Arterial
+  fov: Full CAP
+  thickness_increment: 3 mm/3 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Sagittal MIP and curved MPR of aorta
+notes:
+  tech: Single acquisition from thoracic inlet to pubic symphysis. Caudocranial direction.
+    Bolus track in descending aorta
+  nursing: 20G IV minimum. Antecubital or proximal forearm preferred
+  rad: Assess entire aorta for dissection/aneurysm. Measure aortic dimensions. Check
+    branch vessels
+  tips: Arms completely raised. ECG monitoring if known dissection
+  additional_recons: 3D VR and curved MPR of entire aorta
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history
+---
+
 # CTA Chest Abdomen Pelvis
 
 **Last Updated:** 2024-01-15  

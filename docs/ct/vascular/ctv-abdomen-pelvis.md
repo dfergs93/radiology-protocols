@@ -1,3 +1,79 @@
+---
+title: CTV Abdomen Pelvis
+slug: ctv-abdomen-pelvis
+category: vascular
+protocol_type: vascular
+last_updated: '2024-01-15'
+author: Dr. Chen
+synonyms: []
+clinical_indications:
+- Deep vein thrombosis
+- May-Thurner syndrome
+- IVC filter placement planning
+- Venous malformation
+position: Supine with arms raised
+npo: NPO 2-4 hours
+premedication: Oral contrast optional
+contrast:
+  agent: Isovue 370
+  volume: 2.0 mL/kg
+  flow_rate: 3 mL/s
+  duration: 40s
+  timing: Fixed Delay (110s)
+tech_params:
+  kv: '120'
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: 1.0-1.375
+series:
+- name: CTV Venous Phase
+  start: Diaphragm
+  end: Proximal femur
+  delay: 180 sec
+  thickness: 0.625 mm
+  notes: Extended delay for venous opacification
+recons:
+- plane: Axial
+  acquisition: Venous
+  fov: Full AP
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Assess for filling defects
+- plane: Coronal
+  acquisition: Venous
+  fov: Full AP
+  thickness_increment: 3 mm/3 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: MIP of venous system
+- plane: Sagittal
+  acquisition: Venous
+  fov: Full AP
+  thickness_increment: 3 mm/3 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: IVC and iliac veins
+- plane: 3D VR
+  acquisition: Venous
+  fov: Full AP
+  thickness_increment: 2 mm source
+  kernel: Standard
+  ir_strength: '3'
+  notes: 3D venous anatomy
+notes:
+  tech: Scan at 180 seconds for venous phase. Slower injection rate OK for venous
+    imaging. Scan from diaphragm to femoral veins
+  nursing: 18-20G IV
+  rad: Assess IVC iliac femoral veins for thrombosis. Look for compression (May-Thurner).
+    Measure vessel caliber for filter sizing
+  tips: Arms raised. May add leg veins if DVT suspected
+  additional_recons: MIP venograms. 3D VR of venous system
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history
+---
+
 # CTV Abdomen Pelvis
 
 **Last Updated:** 2024-01-15  

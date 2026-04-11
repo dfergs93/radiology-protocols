@@ -1,3 +1,92 @@
+---
+title: MSK Protocol General
+slug: msk-protocol-general
+category: msk
+protocol_type: contrast-enhanced
+last_updated: '2024-01-15'
+author: Dr. Lee
+synonyms: []
+clinical_indications:
+- Pre-operative planning
+- Post-operative assessment
+- Infection
+- Mass
+- Soft tissue tumor
+- Abscess
+position: Depends on body part
+npo: NPO 2-4 hours if contrast
+premedication: ''
+contrast:
+  agent: Omnipaque 350 if contrast
+  volume: 100 mL if contrast
+  flow_rate: 2-3 mL/s
+tech_params:
+  kv: '120'
+  mas: Auto (reference 200-250)
+  rotation_time: 0.5s
+  pitch: Helical
+series:
+- name: Non-contrast
+  start: Region
+  end: Region
+  delay: N/A
+  thickness: 0.625-1 mm
+  notes: Baseline if done
+- name: Contrast phase
+  start: Region
+  end: Region
+  delay: 60-90 sec if done
+  thickness: 0.625-1 mm
+  notes: Standard if done
+- name: Delayed phase
+  start: Region
+  end: Region
+  delay: 5-10 min if done
+  thickness: 1-2 mm
+  notes: For infection/tumor
+recons:
+- plane: Axial
+  acquisition: Acquisition
+  fov: Region
+  thickness_increment: 1-2 mm/1-2 mm
+  kernel: Bone and Standard
+  ir_strength: '3'
+  notes: Primary images
+- plane: Coronal
+  acquisition: Region
+  fov: Region
+  thickness_increment: 2 mm/2 mm
+  kernel: Bone and Standard
+  ir_strength: '3'
+  notes: Coronal reformats
+- plane: Sagittal
+  acquisition: Region
+  fov: Region
+  thickness_increment: 2 mm/2 mm
+  kernel: Bone and Standard
+  ir_strength: '3'
+  notes: Sagittal reformats
+- plane: 3D if needed
+  acquisition: Region
+  fov: Bones
+  thickness_increment: 0.625-1 mm source
+  kernel: Bone
+  ir_strength: N/A
+  notes: 3D for surgical planning
+notes:
+  tech: Field of view specific to region. Submillimeter if 3D needed. NC and/or contrast
+    based on indication. Delayed phase (5-10 min) for infection/tumor
+  nursing: IV for contrast studies. Document indication
+  rad: 'NC: baseline bone soft tissue. Contrast: enhancement pattern. Delayed: washout
+    or persistent enhancement. 3D for surgical planning'
+  tips: Tailor protocol to clinical question. Bilateral for comparison
+  additional_recons: Compare to contralateral side. Measure lesions. Bone and soft
+    tissue windows
+safety:
+  renal: N/A or eGFR > 30
+  allergy: N/A or check allergy
+---
+
 # MSK Protocol General
 
 **Last Updated:** 2024-01-15  

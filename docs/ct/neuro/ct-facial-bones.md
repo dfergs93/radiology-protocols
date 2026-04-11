@@ -1,3 +1,78 @@
+---
+title: CT Facial Bones
+slug: ct-facial-bones
+category: neuro
+protocol_type: non-contrast
+last_updated: '2024-01-15'
+author: Dr. Martinez
+synonyms: []
+clinical_indications:
+- Facial trauma
+- Orbital fractures
+- Zygoma fractures
+- Nasal fractures
+- Mandible fractures
+position: Supine head-first
+npo: N/A
+premedication: ''
+contrast:
+  agent: N/A
+  type: non-contrast
+tech_params:
+  kv: '120'
+  mas: Auto (reference 250)
+  rotation_time: 0.5s
+  pitch: Helical
+series:
+- name: Facial Bones
+  start: Frontal sinus
+  end: Mandible
+  delay: N/A
+  thickness: 0.625 mm
+  notes: Submillimeter for 3D
+recons:
+- plane: Axial
+  acquisition: Face
+  fov: Face
+  thickness_increment: 1.25 mm/1 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Axial bone windows
+- plane: Coronal
+  acquisition: Face
+  fov: Face
+  thickness_increment: 1.25 mm/1 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Coronal face
+- plane: Sagittal
+  acquisition: Face
+  fov: Midface
+  thickness_increment: 2 mm/1.5 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Sagittal midline
+- plane: 3D
+  acquisition: Face
+  fov: Facial bones
+  thickness_increment: 0.625 mm source
+  kernel: Bone
+  ir_strength: N/A
+  notes: 3D surface rendering
+notes:
+  tech: Frontal sinus to mandible. Submillimeter for 3D. Axial acquisition with multiplanar
+    reformats. Remove dentures
+  nursing: Remove all facial metal. Dentures out
+  rad: Le Fort classification. Orbital floor. Zygoma. Nasal bones. Mandible. NOE complex.
+    3D for surgical planning
+  tips: Remove dentures and facial metal
+  additional_recons: 3D surface rendering. Document Le Fort if present. Orbital floor
+    assessment
+safety:
+  renal: N/A
+  allergy: N/A
+---
+
 # CT Facial Bones
 
 **Last Updated:** 2024-01-15  

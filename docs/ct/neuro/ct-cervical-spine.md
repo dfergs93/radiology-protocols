@@ -1,3 +1,78 @@
+---
+title: CT Cervical Spine
+slug: ct-cervical-spine
+category: neuro
+protocol_type: spine
+last_updated: '2024-01-15'
+author: Dr. Rodriguez
+synonyms: []
+clinical_indications:
+- Cervical spine trauma
+- Degenerative disease
+- Neck pain
+- Radiculopathy
+- Myelopathy
+position: Supine head-first
+npo: N/A
+premedication: ''
+contrast:
+  agent: None typically. Contrast if infection/tumor
+  volume: 'If contrast: 100 mL'
+  flow_rate: 3 mL/s
+tech_params:
+  kv: '120'
+  mas: Auto (reference 250)
+  rotation_time: 0.5s
+  pitch: Helical
+series:
+- name: C-spine Helical
+  start: Skull base
+  end: T1
+  delay: N/A or 60s if contrast
+  thickness: 0.625 mm
+  notes: Submillimeter acquisition
+recons:
+- plane: Axial
+  acquisition: C-spine
+  fov: C-spine
+  thickness_increment: 2 mm/2 mm
+  kernel: Bone
+  ir_strength: '3'
+  notes: Bone and soft tissue
+- plane: Sagittal
+  acquisition: C-spine
+  fov: C-spine
+  thickness_increment: 2 mm/1.5 mm
+  kernel: Bone
+  ir_strength: '3'
+  notes: Midline and parasagittal
+- plane: Coronal
+  acquisition: C-spine
+  fov: C-spine
+  thickness_increment: 2 mm/2 mm
+  kernel: Bone
+  ir_strength: '3'
+  notes: Coronal alignment
+- plane: Oblique sagittal
+  acquisition: C-spine
+  fov: Neural foramina
+  thickness_increment: 2 mm
+  kernel: Bone
+  ir_strength: '3'
+  notes: Foraminal narrowing
+notes:
+  tech: Skull base to T1. Submillimeter helical. Sagittal and coronal reformats required.
+    Bone algorithm
+  nursing: No IV unless contrast needed. Cervical precautions if trauma
+  rad: Alignment. Fractures. Disc spaces. Neural foramina. Spinal canal. Facet joints.
+    Degenerative changes
+  tips: Minimize motion. C-collar if trauma
+  additional_recons: Sagittal and coronal bone reconstructions. Oblique for foramina
+safety:
+  renal: N/A or verify eGFR
+  allergy: N/A or check allergy
+---
+
 # CT Cervical Spine
 
 **Last Updated:** 2024-01-15  

@@ -1,3 +1,87 @@
+---
+title: CTA Head and Neck (Arch to Vertex)
+slug: cta-head-and-neck-arch-to-vertex
+category: neuro
+protocol_type: vascular
+last_updated: '2026-01-04'
+author: ''
+synonyms: []
+clinical_indications:
+- Stroke workup
+- Carotid stenosis
+- Vertebral artery dissection
+- Aneurysm screening
+position: Supine head-first with arms at sides
+npo: NPO 2 hours
+premedication: None typically. Consider anxiolytic if severe claustrophobia
+contrast:
+  agent: Isovue 370
+  volume: 80-100 mL
+  flow_rate: 4-5 mL/s
+  timing: Bolus Tracking
+  roi: Aortic arch
+  trigger: 150 HU
+tech_params:
+  kv: 100-120
+  mas: Auto (reference 250)
+  rotation_time: 0.5s
+  pitch: '0.9'
+series:
+- name: CTA Neck
+  start: Aortic arch
+  end: Skull base
+  delay: Bolus tracked
+  thickness: 0.625 mm
+  notes: Arterial phase - caudocranial
+- name: CTA Head
+  start: Skull base
+  end: Vertex
+  delay: Immediate
+  thickness: 0.625 mm
+  notes: Same bolus as neck - single acquisition
+recons:
+- plane: Axial
+  acquisition: CTA
+  fov: Neck
+  thickness_increment: 1 mm/1 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Submillimeter for carotid assessment
+- plane: Axial
+  acquisition: CTA
+  fov: Head
+  thickness_increment: 1 mm/1 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Submillimeter for circle of Willis
+- plane: Coronal
+  acquisition: CTA
+  fov: Neck
+  thickness_increment: 2 mm/2 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: MIP for carotid overview
+- plane: Sagittal
+  acquisition: CTA
+  fov: Full
+  thickness_increment: 2 mm/2 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: MIP for vertebral arteries
+notes:
+  tech: Scan from aortic arch through vertex. Use bolus tracking in arch. Minimize
+    dental artifact with gantry angulation
+  nursing: Good antecubital IV access required - 20G minimum. Verify injection site
+    for extravasation risk
+  rad: Evaluate complete circle of Willis. Assess carotid bifurcations. Look for dissection.
+    Check aneurysms
+  tips: Remove dentures. Minimize swallowing during neck acquisition
+  additional_recons: MIP and 3D VR reconstructions of vessels. Curved MPR of carotids
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history and renal function
+---
+
 # CTA Head and Neck (Arch to Vertex)
 
 **Last Updated:** 2026-01-04  

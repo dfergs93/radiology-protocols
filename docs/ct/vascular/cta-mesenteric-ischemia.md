@@ -1,3 +1,86 @@
+---
+title: CTA Mesenteric Ischemia
+slug: cta-mesenteric-ischemia
+category: vascular
+protocol_type: vascular
+last_updated: '2024-01-15'
+author: Dr. Lee
+synonyms: []
+clinical_indications:
+- Acute mesenteric ischemia
+- Chronic mesenteric ischemia
+- Bowel infarction
+position: Supine with arms raised
+npo: NPO (emergent - as patient presents)
+premedication: None - emergent study
+contrast:
+  agent: Isovue 370
+  volume: 1.5 mL/kg
+  flow_rate: 5 mL/s
+  duration: 20s
+  timing: 'Dual phase: Arterial + Portal Venous'
+  roi: Abdominal aorta at celiac
+  trigger: 150 HU
+tech_params:
+  kv: '100'
+  mas: Auto (reference 300)
+  rotation_time: 0.5s
+  pitch: '1.375'
+series:
+- name: Arterial Phase
+  start: Diaphragm
+  end: Iliac crests
+  delay: 25 sec
+  thickness: 0.625 mm
+  notes: Focus on celiac SMA IMA
+- name: Portal Venous
+  start: Diaphragm
+  end: Pubic symphysis
+  delay: 70 sec
+  thickness: 0.625 mm
+  notes: Assess bowel wall enhancement
+recons:
+- plane: Axial
+  acquisition: Arterial
+  fov: Abdomen
+  thickness_increment: 2 mm/2 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Mesenteric vessel origins
+- plane: Axial
+  acquisition: Portal venous
+  fov: Full AP
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Bowel wall assessment
+- plane: Coronal
+  acquisition: Arterial
+  fov: Abdomen
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: MIP of mesenteric vessels
+- plane: Sagittal
+  acquisition: Arterial
+  fov: Abdomen
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Curved MPR SMA from origin
+notes:
+  tech: Arterial phase at 25 sec for vessel assessment. Portal venous at 70 sec for
+    bowel perfusion. High flow rate critical
+  nursing: 18-20G IV required for 5 mL/s flow. Must be patent
+  rad: 'Arterial: assess celiac SMA IMA origins. Portal: look for bowel wall enhancement.
+    Check for pneumatosis'
+  tips: Fast scan. High flow rate essential
+  additional_recons: MIP and 3D VR of celiac and SMA. Curved MPR of vessels
+safety:
+  renal: eGFR > 30 preferred
+  allergy: Emergency study - document indication
+---
+
 # CTA Mesenteric Ischemia
 
 **Last Updated:** 2024-01-15  

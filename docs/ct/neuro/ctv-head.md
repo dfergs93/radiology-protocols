@@ -1,3 +1,84 @@
+---
+title: CTV Head
+slug: ctv-head
+category: neuro
+protocol_type: vascular
+last_updated: '2024-01-15'
+author: Dr. Rodriguez
+synonyms: []
+clinical_indications:
+- Venous sinus thrombosis
+- Dural sinus thrombosis
+- Intracranial hypertension
+- Venous malformation
+position: Supine head-first
+npo: NPO 2 hours
+premedication: ''
+contrast:
+  agent: Omnipaque 350
+  volume: 75-100 mL
+  flow_rate: 3-4 mL/s
+tech_params:
+  kv: '120'
+  mas: Auto (reference 250)
+  rotation_time: 0.5-0.6s
+  pitch: Helical
+series:
+- name: NC Head
+  start: Vertex
+  end: Foramen magnum
+  delay: N/A
+  thickness: 5 mm
+  notes: Baseline
+- name: CTV Head
+  start: Skull base
+  end: Vertex
+  delay: 60-90 sec delay
+  thickness: 0.625-1 mm
+  notes: Venous phase
+recons:
+- plane: Axial
+  acquisition: CTV
+  fov: Head
+  thickness_increment: 1 mm/1 mm
+  kernel: Brain
+  ir_strength: '3'
+  notes: Venous sinuses
+- plane: MIP
+  acquisition: CTV
+  fov: Sinuses
+  thickness_increment: Thick slab
+  kernel: Brain
+  ir_strength: N/A
+  notes: Venogram overview
+- plane: 3D VR
+  acquisition: CTV
+  fov: Venous system
+  thickness_increment: 1 mm source
+  kernel: Brain
+  ir_strength: N/A
+  notes: 3D venogram
+- plane: Sagittal
+  acquisition: CTV
+  fov: Midline
+  thickness_increment: 1.5 mm
+  kernel: Brain
+  ir_strength: '3'
+  notes: Sagittal sinus
+notes:
+  tech: NC Head then delayed venous CTV (60-90 sec). Skull base to vertex. Assess
+    venous sinuses
+  nursing: 18-20G IV
+  rad: 'NC: hemorrhage. CTV: filling defects in sinuses. Venous thrombosis. Cortical
+    vein thrombosis'
+  tips: Delayed timing 60-90 sec. Look for filling defects
+  additional_recons: 3D VR venogram. MIP maximum intensity projection. Document filling
+    defects
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history
+---
+
 # CTV Head
 
 **Last Updated:** 2024-01-15  

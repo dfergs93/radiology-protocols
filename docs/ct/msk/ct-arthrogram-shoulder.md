@@ -1,3 +1,78 @@
+---
+title: CT Arthrogram Shoulder
+slug: ct-arthrogram-shoulder
+category: msk
+protocol_type: musculoskeletal
+last_updated: '2024-01-15'
+author: Dr. Patel
+synonyms: []
+clinical_indications:
+- Labral tear
+- Rotator cuff tear
+- Capsular injury
+- Shoulder instability
+position: Supine with arm at side
+npo: N/A
+premedication: Intra-articular contrast injection by radiologist
+contrast:
+  agent: Omnipaque 240 or 300 diluted
+  volume: 12-15 mL intra-articular
+  flow_rate: N/A
+tech_params:
+  kv: '120'
+  mas: Auto (reference 150-200)
+  rotation_time: 0.5s
+  pitch: Helical
+series:
+- name: CT Arthrogram
+  start: Acromion
+  end: Proximal humerus
+  delay: Immediate post-injection
+  thickness: 0.625 mm
+  notes: Submillimeter for labrum
+recons:
+- plane: Axial
+  acquisition: Arthrogram
+  fov: Shoulder
+  thickness_increment: 1 mm/0.75 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Thin for labral detail
+- plane: Coronal
+  acquisition: Arthrogram
+  fov: Shoulder
+  thickness_increment: 1.5 mm/1 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Coronal oblique shoulder
+- plane: Sagittal
+  acquisition: Arthrogram
+  fov: Shoulder
+  thickness_increment: 1.5 mm/1 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Sagittal oblique
+- plane: Abduction ABER
+  acquisition: Arthrogram
+  fov: Shoulder
+  thickness_increment: 1.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: ABER position if done
+notes:
+  tech: Post-arthrogram CT. Inject glenohumeral joint. Immediate CT after injection.
+    Thin slices for labrum
+  nursing: Radiologist performs injection. Patient to CT immediately after
+  rad: Labral tears. Rotator cuff tears. Capsular tears. Glenohumeral ligaments. Paralabral
+    cysts
+  tips: Scan immediately after injection. Thin slices for labrum
+  additional_recons: Oblique coronal and sagittal. Assess labrum rotator cuff capsule.
+    Document contrast extravasation
+safety:
+  renal: N/A
+  allergy: Contrast reaction history
+---
+
 # CT Arthrogram Shoulder
 
 **Last Updated:** 2024-01-15  

@@ -1,3 +1,79 @@
+---
+title: CT Pelvis MSK
+slug: ct-pelvis-msk
+category: msk
+protocol_type: contrast-enhanced
+last_updated: '2024-01-15'
+author: Dr. Kim
+synonyms: []
+clinical_indications:
+- Pelvic fracture
+- Sacral fracture
+- SI joint
+- Pelvic ring injury
+- Pre-operative planning
+position: Supine
+npo: N/A
+premedication: ''
+contrast:
+  agent: None typically. Contrast if infection
+  volume: 'If contrast: 100 mL'
+  flow_rate: 2-3 mL/s
+tech_params:
+  kv: '120'
+  mas: Auto (reference 250)
+  rotation_time: 0.5s
+  pitch: Helical
+series:
+- name: CT Pelvis
+  start: Iliac crests
+  end: Proximal femurs
+  delay: N/A or 60s if contrast
+  thickness: 0.625 mm
+  notes: Submillimeter for 3D
+recons:
+- plane: Axial
+  acquisition: Pelvis
+  fov: Pelvis
+  thickness_increment: 2 mm/2 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Axial bone
+- plane: Coronal
+  acquisition: Pelvis
+  fov: Pelvis
+  thickness_increment: 2 mm/2 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Coronal pelvis
+- plane: Sagittal
+  acquisition: Pelvis
+  fov: Pelvis
+  thickness_increment: 2 mm/2 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Sagittal sacrum
+- plane: Inlet/Outlet
+  acquisition: Pelvis
+  fov: Pelvic ring
+  thickness_increment: 2-3 mm oblique
+  kernel: Bone
+  ir_strength: N/A
+  notes: Pelvic ring views
+notes:
+  tech: Iliac crests to proximal femurs. Submillimeter for 3D. Assess pelvic ring
+    integrity. Inlet and outlet views
+  nursing: No IV unless contrast indicated
+  rad: Pelvic ring fractures (Young-Burgess). Sacral fractures (Denis). Acetabulum.
+    SI joints. Symphysis pubis
+  tips: Submillimeter for 3D pelvic reconstruction
+  additional_recons: 3D pelvis. Inlet and outlet views. Young-Burgess classification.
+    Measure displacement
+safety:
+  renal: N/A or eGFR > 30
+  allergy: N/A or check allergy
+---
+
 # CT Pelvis MSK
 
 **Last Updated:** 2024-01-15  

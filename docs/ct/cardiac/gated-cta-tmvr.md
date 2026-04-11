@@ -1,3 +1,100 @@
+---
+title: Gated CTA TMVR
+slug: gated-cta-tmvr
+category: cardiac
+protocol_type: cardiac gated
+last_updated: '2024-01-15'
+author: Dr. Rodriguez
+synonyms: []
+clinical_indications:
+- Pre-TMVR planning
+- Mitral valve replacement planning
+- Mitral regurgitation
+position: Supine with arms raised
+npo: NPO 4 hours
+premedication: HR < 65 target. Premedication not required.
+contrast:
+  agent: IsoVue 370
+  volume: 1.1 mL/kg
+  flow_rate: 5 mL/s
+  duration: 15s
+  timing: Bolus Tracking
+  roi: Ascending aorta
+  trigger: 180 HU
+tech_params:
+  kv: '100'
+  mas: NO ECG MODULATION chest / Auto AP
+  rotation_time: 0.28 / 0.5s
+  pitch: 0.2-0.24 / 1.2-1.5
+series:
+- name: Calcium Score
+  start: Carina
+  end: Base of heart
+  delay: N/A
+  thickness: 2.5 mm
+  notes: Calcium scoring
+- name: Gated CTA Chest
+  start: Carina
+  end: Base of heart
+  delay: Bolus tracked
+  thickness: 0.5 mm
+  notes: NO DOSE PULSING - retrospective all phases
+- name: Delayed CAP
+  start: Diaphragm
+  end: Femoral heads
+  delay: 80 sec
+  thickness: 0.625 mm
+  notes: Access planning and coronaries
+recons:
+- plane: Axial
+  acquisition: Calcium Score
+  fov: Apex of heart to Base of heart
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Cardiac
+  ir_strength: '3'
+  notes: Calcium scoring
+- plane: Axial
+  acquisition: Gated chest
+  fov: Heart
+  thickness_increment: 0.5 mm/0.5 mm
+  kernel: Cardiac
+  ir_strength: '3'
+  notes: Mitral valve measurements
+- plane: Axial
+  acquisition: Delayed CAP
+  fov: AP
+  thickness_increment: 2 mm/2 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Access vessels
+- plane: Double oblique
+  acquisition: Gated chest
+  fov: Mitral valve
+  thickness_increment: 0.5 mm
+  kernel: Cardiac
+  ir_strength: '3'
+  notes: En face mitral annulus
+- plane: 3D VR
+  acquisition: Delayed CAP
+  fov: Iliofemoral
+  thickness_increment: 1.5 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Access planning
+notes:
+  tech: Gated CHEST with NO DOSE PULSING (full dose all phases) + delayed 80 sec CAP.
+    TMVR post-processing required
+  nursing: 20G IV
+  rad: Measure mitral annulus. LA size. LVOT assessment. Coronary proximity. Access
+    vessels. TMVR-specific measurements
+  tips: NO dose modulation for gated chest. Full radiation all phases for valve assessment
+  additional_recons: 'TMVR measurements: annulus dimensions. LVOT area. Coronary heights.
+    LA volume. Access vessels'
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history
+---
+
 # Gated CTA TMVR
 
 **Last Updated:** 2024-01-15  

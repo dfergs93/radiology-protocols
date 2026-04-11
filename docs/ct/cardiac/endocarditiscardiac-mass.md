@@ -1,3 +1,92 @@
+---
+title: Endocarditis/Cardiac Mass
+slug: endocarditiscardiac-mass
+category: cardiac
+protocol_type: cardiac gated
+last_updated: '2026-02-02'
+author: ''
+synonyms: []
+clinical_indications:
+- Endocarditis
+- Cardiac mass
+- Valve vegetation
+- Intracardiac thrombus
+position: Supine feet-first
+npo: NPO 2-4 hours
+premedication: HR < 65 preferred. No premedication typically given.
+contrast:
+  agent: Isovue 370
+  volume: 1.6 mL/kg
+  flow_rate: 3-4 mL/s
+  duration: 35 sec
+tech_params:
+  kv: 100-120
+  mas: Auto ECG modulation
+  rotation_time: 0.28s
+  pitch: 0.2-0.24
+series:
+- name: Non-contrast
+  start: Top of heart
+  end: Below heart
+  delay: N/A
+  thickness: 3 mm
+  notes: Flash Non-contrast
+- name: Gated CTA
+  start: Top of heart
+  end: Below heart
+  delay: 30 sec
+  thickness: 0.5-0.625 mm
+  notes: Retrospective ECG gating
+- name: Delayed phase
+  start: Lung Apices
+  end: Diaphragm
+  delay: 70 sec
+  thickness: 1 mm
+  notes: To detect for abscess, vegetation, masses
+recons:
+- plane: Axial
+  acquisition: Non-contrast
+  fov: Heart
+  thickness_increment: 3 mm/3 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: For dense material or calcifications
+- plane: Axial
+  acquisition: Gated CTA
+  fov: Heart
+  thickness_increment: 0.75 mm/0.5 mm
+  kernel: Cardiac
+  ir_strength: '3'
+  notes: Reformatted at best cardiac phase
+- plane: Axial
+  acquisition: Gated CTA
+  fov: Heart
+  thickness_increment: 1 mm/1 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Functional series for valve assessment
+- plane: Axial
+  acquisition: Delayed
+  fov: Chest
+  thickness_increment: 1 mm/1 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Mass, vegetations
+notes:
+  tech: Non-valsalva breathing technique, cardiac breathing instruction. | Injection
+    duration is fixed 35 sec fixed 30 sec scan delay. Retrospective gating trigger
+    at 30-70% (End sys - end dia).  Reconstruct  at 5% intervals.
+  nursing: 18-20G IV. HR control helpful but not critical
+  rad: Assess all valves for vegetations. Evaluate myocardium for abscess. Look for
+    intracardiac masses. Check for complications
+  tips: Multiple cardiac phases helpful for valve motion. Thin slices for vegetations
+  additional_recons: Multi-phase reconstructions. 4-chamber 2-chamber views. Valve-specific
+    reformats
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history
+---
+
 # Endocarditis/Cardiac Mass
 
 **Last Updated:** 2026-02-02  

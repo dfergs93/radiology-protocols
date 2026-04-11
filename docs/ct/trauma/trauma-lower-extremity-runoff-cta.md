@@ -1,3 +1,80 @@
+---
+title: Trauma Lower Extremity Runoff CTA
+slug: trauma-lower-extremity-runoff-cta
+category: trauma
+protocol_type: vascular
+last_updated: '2024-01-15'
+author: Dr. Williams
+synonyms: []
+clinical_indications:
+- Extremity vascular injury
+- Penetrating trauma
+- Fracture with vascular concern
+- Pulseless extremity
+position: Supine legs extended
+npo: None - trauma
+premedication: ''
+contrast:
+  agent: Omnipaque 350
+  volume: 125 mL
+  flow_rate: 4-5 mL/s
+  timing: Bolus Tracking
+  roi: Abdominal aorta or proximal to injury
+  trigger: 150 HU
+tech_params:
+  kv: 100-120
+  mas: Auto (reference 250)
+  rotation_time: 0.5s
+  pitch: 1.2-1.5
+series:
+- name: CTA Arterial
+  start: Coverage as needed
+  end: Distal to injury
+  delay: Bolus tracked
+  thickness: 0.625 mm
+  notes: Arterial phase runoff
+recons:
+- plane: Axial
+  acquisition: Arterial
+  fov: Legs
+  thickness_increment: 1.5 mm/1.5 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Assess vessels
+- plane: Coronal
+  acquisition: Arterial
+  fov: Legs
+  thickness_increment: 2 mm/2 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: MIP overview
+- plane: Sagittal
+  acquisition: Arterial
+  fov: Injured area
+  thickness_increment: 2 mm/2 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Vessel-bone relationship
+- plane: 3D VR
+  acquisition: Arterial
+  fov: Vessels
+  thickness_increment: 1 mm source
+  kernel: Vascular
+  ir_strength: '3'
+  notes: 3D vascular anatomy
+notes:
+  tech: Extend coverage based on injury. Aorta to ankles if bilateral. May do unilateral
+    focused study. Arterial phase
+  nursing: 18-20G IV. May need proximal IV if arm injury
+  rad: 'Assess arterial injury: transection pseudoaneurysm occlusion extravasation.
+    Evaluate fracture relationship to vessels'
+  tips: Tailor coverage to injury. Fast acquisition
+  additional_recons: MIP and 3D VR. Document vascular injury. Measure vessel caliber
+safety:
+  renal: Check if available
+  allergy: Trauma indication
+---
+
 # Trauma Lower Extremity Runoff CTA
 
 **Last Updated:** 2024-01-15  

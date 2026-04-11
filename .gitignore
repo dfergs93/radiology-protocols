@@ -1,5 +1,12 @@
 csv/
 .env
-scripts/
+# Ignore legacy scripts but track the new data-layer scripts
+# Note: must use scripts/* (not scripts/) for negation to work
+scripts/*
+!scripts/extract_to_frontmatter.py
+!scripts/build_from_csv.py
+!scripts/generate_comparison_index.py
+!scripts/generate_sitemap.py
+!scripts/scripts_summary.md
 mri/
 .worktrees/

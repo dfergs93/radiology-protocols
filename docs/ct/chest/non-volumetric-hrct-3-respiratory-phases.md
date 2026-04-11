@@ -1,3 +1,80 @@
+---
+title: Non-Volumetric HRCT 3 Respiratory Phases
+slug: non-volumetric-hrct-3-respiratory-phases
+category: chest
+protocol_type: chest/pulmonary
+last_updated: '2024-01-15'
+author: Dr. Hayes
+synonyms: []
+clinical_indications:
+- Interstitial lung disease
+- Air trapping assessment
+- Constrictive bronchiolitis
+- Hypersensitivity pneumonitis
+position: Supine with arms raised
+npo: N/A
+premedication: ''
+contrast:
+  agent: N/A
+  type: non-contrast
+tech_params:
+  kv: '120'
+  mas: Reduced (100-150 reference)
+  rotation_time: Sequentials
+  pitch: N/A
+series:
+- name: Inspiration
+  start: Lung apices
+  end: Costophrenic angles
+  delay: Full inspiration
+  thickness: 1 mm axial at 1-2cm intervals
+  notes: Sequential non-volumetric
+- name: Full Expiration
+  start: Lung apices
+  end: Costophrenic angles
+  delay: Full expiration
+  thickness: 1 mm at intervals
+  notes: Sequential
+- name: Prone
+  start: Lung apices
+  end: Costophrenic angles
+  delay: Full inspiration
+  thickness: 1 mm at intervals
+  notes: Sequential
+recons:
+- plane: Axial
+  acquisition: All phases
+  fov: Chest
+  thickness_increment: 1 mm display
+  kernel: Lung
+  ir_strength: '3'
+  notes: Compare three phases
+- plane: Coronal reformat
+  acquisition: Inspiration
+  fov: Chest
+  thickness_increment: 2 mm
+  kernel: Lung
+  ir_strength: '3'
+  notes: Inspiration overview
+- plane: Mosaic MIP
+  acquisition: All phases
+  fov: Lungs
+  thickness_increment: 5 mm
+  kernel: Lung
+  ir_strength: N/A
+  notes: Air trapping visualization
+notes:
+  tech: 'THREE acquisitions: 1) INSPIRATION 2) MID-EXPIRATION 3) FULL EXPIRATION.
+    Non-volumetric (1-2cm intervals). Lower dose than volumetric'
+  nursing: No IV. Coach three breathing phases carefully
+  rad: Mosaic attenuation. Air trapping. Small airways disease. Compare three phases
+  tips: Coach three distinct breath holds. Non-volumetric lower dose
+  additional_recons: Side-by-side comparison of three phases. Quantify air trapping
+safety:
+  renal: N/A
+  allergy: N/A
+---
+
 # Non-Volumetric HRCT 3 Respiratory Phases
 
 **Last Updated:** 2024-01-15  

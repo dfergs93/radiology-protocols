@@ -1,3 +1,93 @@
+---
+title: Gated CTA Chest
+slug: gated-cta-chest
+category: cardiac
+protocol_type: cardiac gated
+last_updated: '2024-01-15'
+author: Dr. Anderson
+synonyms: []
+clinical_indications:
+- Thoracic aortic dissection
+- Chest pain radiating to the back
+- Follow up thoracic aortic aneurysm
+position: Supine feet-first
+npo: NPO 2-4 hours
+premedication: HR < 60 target. Premedication not required.
+contrast:
+  agent: Isovue 370
+  volume: 1.1 mL/kg
+  flow_rate: 4-5 mL/s
+  duration: 20s
+  timing: Bolus Tracking
+  roi: Ascending aorta
+  trigger: 200 HU
+tech_params:
+  kv: '100'
+  mas: Auto ECG modulation
+  rotation_time: 0.28s
+  pitch: 0.2-0.24
+series:
+- name: Non-contrast
+  start: Lung apices
+  end: Diaphragm
+  delay: N/A
+  thickness: 3 mm
+  notes: Calcium score
+- name: Gated CTA
+  start: Lung apices
+  end: Diaphragm
+  delay: Bolus tracked
+  thickness: 0.5-0.625 mm
+  notes: Retrospective ECG gating
+- name: Stent delay (optional)
+  start: Start of Stent
+  end: End of Stent
+  delay: 40 sec
+  thickness: 0.5-0.625 mm
+  notes: Optional for stent assessment
+recons:
+- plane: Axial
+  acquisition: Gated CTA
+  fov: Heart
+  thickness_increment: 0.75 mm/0.5 mm
+  kernel: Cardiac
+  ir_strength: '3'
+  notes: Primary coronary assessment
+- plane: Curved MPR
+  acquisition: Gated CTA
+  fov: Each coronary
+  thickness_increment: 0.75 mm
+  kernel: Cardiac
+  ir_strength: '3'
+  notes: Vessel-specific reconstructions
+- plane: Axial
+  acquisition: Non-contrast
+  fov: Heart
+  thickness_increment: 3 mm/3 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Calcium scoring
+- plane: Short/long axis
+  acquisition: Gated CTA
+  fov: Heart
+  thickness_increment: Multi-phase
+  kernel: Cardiac
+  ir_strength: '3'
+  notes: Functional assessment
+notes:
+  tech: 'Retrospective ECG gating. Cover heart. Bolus tracking in ascending aorta.
+    Optional stent protocol: add 40 sec delayed phase'
+  nursing: 20G IV minimum. HR control critical. Nitro administration. Monitor BP
+  rad: Assess coronaries for stenosis plaque. Evaluate anomalous anatomy. Stent patency
+    if applicable. Cardiac function from multi-phase
+  tips: HR control essential. Coach breathing. Gating quality check
+  additional_recons: Curved MPR all coronaries. Short/long axis. Multi-phase for function.
+    Calcium score
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check metoprolol contraindications
+---
+
 # Gated CTA Chest
 
 **Last Updated:** 2024-01-15  

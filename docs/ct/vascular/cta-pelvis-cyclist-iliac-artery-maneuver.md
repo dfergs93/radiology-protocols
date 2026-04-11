@@ -1,3 +1,87 @@
+---
+title: CTA Pelvis Cyclist Iliac Artery Maneuver
+slug: cta-pelvis-cyclist-iliac-artery-maneuver
+category: vascular
+protocol_type: vascular
+last_updated: '2024-01-15'
+author: Dr. Rodriguez
+synonyms: []
+clinical_indications:
+- External iliac artery endofibrosis
+- Cyclist with exercise-induced leg symptoms
+position: Supine initially then with hip flexion
+npo: NPO 2-4 hours
+premedication: ''
+contrast:
+  agent: Isovue 370
+  volume: 'Split bolus: 1st injection 1.1 mL/kg + 2nd injection 1.1 mL/kg'
+  flow_rate: 4 mL/s
+  duration: 1st injection 18s + 2nd injection 18s
+  timing: 'Dual position: Resting + Hip flexion cycling position'
+  roi: External iliac artery
+  trigger: 150 HU
+tech_params:
+  kv: '100'
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: '0.9'
+series:
+- name: CTA Resting Position
+  start: L3
+  end: Mid femur
+  delay: Bolus tracked
+  thickness: 0.625 mm
+  notes: Supine resting position
+- name: CTA Hip Flexion
+  start: L3
+  end: Mid femur
+  delay: Immediately after
+  thickness: 0.625 mm
+  notes: Hips flexed 90 degrees - cycling position
+recons:
+- plane: Axial
+  acquisition: Resting
+  fov: Pelvis
+  thickness_increment: 1.5 mm/1.5 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Baseline iliac artery anatomy
+- plane: Axial
+  acquisition: Flexion
+  fov: Pelvis
+  thickness_increment: 1.5 mm/1.5 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Assess for kinking with flexion
+- plane: Coronal
+  acquisition: Both phases
+  fov: Pelvis
+  thickness_increment: 2 mm/2 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: MIP comparison rest vs flexion
+- plane: Sagittal
+  acquisition: Both phases
+  fov: Pelvis
+  thickness_increment: 2 mm/2 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Lateral view iliac course
+notes:
+  tech: 'TWO acquisitions: 1) Resting supine 2) Hip flexion simulating cycling position.
+    Bilateral imaging for comparison'
+  nursing: 18-20G IV
+  rad: Compare resting vs flexed position. Look for iliac artery kinking stenosis
+    or occlusion with hip flexion. Common in competitive cyclists
+  tips: Position patient with knees bent and hips flexed to simulate cycling. May
+    need positioning aids
+  additional_recons: Side-by-side MIP of rest vs flexion. Measure degree of stenosis.
+    3D VR
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history. Explain hip flexion positioning
+---
+
 # CTA Pelvis Cyclist Iliac Artery Maneuver
 
 **Last Updated:** 2024-01-15  

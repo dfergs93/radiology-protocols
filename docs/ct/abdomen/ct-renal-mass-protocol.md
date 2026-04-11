@@ -1,3 +1,91 @@
+---
+title: CT Renal Mass Protocol
+slug: ct-renal-mass-protocol
+category: abdomen
+protocol_type: contrast-enhanced
+last_updated: '2024-01-15'
+author: Dr. Davis
+synonyms: []
+clinical_indications:
+- Renal mass characterization
+- Renal cell carcinoma staging
+- Complex cyst evaluation
+position: Supine with arms raised
+npo: NPO 4 hours
+premedication: ''
+contrast:
+  agent: Isovue 370
+  volume: 'Split bolus: 1st injection 1.1 mL/kg + 2nd injection 0.4 mL/kg'
+  flow_rate: 3-4 mL/s
+  duration: 18-22s + 20-30s
+  timing: Split bolus technique
+tech_params:
+  kv: 100-120
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: '1'
+series:
+- name: Non-Contrast
+  start: Top kidneys
+  end: Iliac crests
+  delay: N/A
+  thickness: 2.5 mm
+  notes: Baseline - detect fat/calcium
+- name: Corticomedullary
+  start: Top kidneys
+  end: Iliac crests
+  delay: 20 sec
+  thickness: 1.25 mm
+  notes: Arterial/nephrographic
+- name: Nephrographic/IVP
+  start: Top kidneys
+  end: Pubic symphysis
+  delay: 90-120 sec from 2nd injection
+  thickness: 1.25 mm
+  notes: Delayed enhancement + collecting system
+recons:
+- plane: Axial
+  acquisition: Non-contrast
+  fov: Kidneys
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Characterize mass
+- plane: Axial
+  acquisition: Corticomedullary
+  fov: Kidneys
+  thickness_increment: 1.5 mm/1.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Vascular and cortical enhancement
+- plane: Axial
+  acquisition: Nephrographic
+  fov: Kidneys to pelvis
+  thickness_increment: 2 mm/2 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Mass enhancement + urinary opacification
+- plane: Coronal
+  acquisition: All phases
+  fov: Kidneys
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Compare enhancement phases
+notes:
+  tech: 'COMPLEX protocol: 1) NC 2) 1st contrast injection 3) Arterial 20s after 1st
+    4) WAIT 5-7 min 5) 2nd injection + saline 6) IVP/nephrographic 90-120s after 2nd'
+  nursing: 18-20G IV. Explain split bolus technique and delay
+  rad: 'NC: fat/calcification. Arterial: vascular anatomy and hypervascular masses.
+    Nephrographic/IVP: delayed enhancement and collecting system'
+  tips: Split bolus timing critical. 5-7 min wait between injections
+  additional_recons: Compare NC vs arterial vs nephrographic. Measure HU in mass.
+    MIP urogram
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history
+---
+
 # CT Renal Mass Protocol
 
 **Last Updated:** 2024-01-15  

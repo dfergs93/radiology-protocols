@@ -1,3 +1,87 @@
+---
+title: CT Biphasic Pancreas
+slug: ct-biphasic-pancreas
+category: abdomen
+protocol_type: contrast-enhanced
+last_updated: '2024-01-15'
+author: Dr. Williams
+synonyms: []
+clinical_indications:
+- Pancreatic mass
+- Pancreatitis
+- Pancreatic cyst characterization
+position: Supine with arms raised
+npo: NPO 4 hours
+premedication: 'Water PO: 900 mL water orally 15-30 min before scan for gastric/duodenal
+  distension'
+contrast:
+  agent: Isovue 370
+  volume: 1.5 mL/kg
+  flow_rate: 4-5 mL/s
+  duration: 25s
+  timing: 'Dual phase: Pancreatic arterial + Portal venous'
+  roi: Abdominal aorta
+  trigger: 150 HU
+tech_params:
+  kv: '100'
+  mas: Auto (reference 200-250)
+  rotation_time: 0.5s
+  pitch: 0.9-1.0
+series:
+- name: Pancreatic Phase
+  start: Diaphragm
+  end: Iliac crests
+  delay: 40-45 sec or bolus track
+  thickness: 1-1.25 mm
+  notes: Thin slices for small lesions
+- name: Portal Venous
+  start: Diaphragm
+  end: Lesser Trochanter
+  delay: 70 sec
+  thickness: 2.5 mm
+  notes: Standard PV phase
+recons:
+- plane: Axial
+  acquisition: Pancreatic
+  fov: Pancreas
+  thickness_increment: 1.5 mm/1.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Thin slice pancreas
+- plane: Axial
+  acquisition: Portal venous
+  fov: Abdomen
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Liver and vessels
+- plane: Coronal
+  acquisition: Both phases
+  fov: Abdomen
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Pancreatic and peripancreatic
+- plane: Curved MPR
+  acquisition: Pancreatic
+  fov: Pancreatic duct
+  thickness_increment: 1.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Duct evaluation
+notes:
+  tech: 'TWO phases: Pancreatic phase (40-45s or bolus track) + Portal venous (70s).
+    Water for negative contrast'
+  nursing: 18-20G IV. Ensure water intake for duodenal distension
+  rad: 'Pancreatic phase: optimal pancreatic enhancement and small lesions. Portal
+    venous: liver and venous structures'
+  tips: Water distension of duodenum helpful. Thin slices for pancreas
+  additional_recons: Curved MPR pancreatic duct. MIP pancreatic vasculature
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history. Coordinate water intake
+---
+
 # CT Biphasic Pancreas
 
 **Last Updated:** 2024-01-15  

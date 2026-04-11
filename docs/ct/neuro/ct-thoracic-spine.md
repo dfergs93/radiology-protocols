@@ -1,3 +1,71 @@
+---
+title: CT Thoracic Spine
+slug: ct-thoracic-spine
+category: neuro
+protocol_type: spine
+last_updated: '2024-01-15'
+author: Dr. White
+synonyms: []
+clinical_indications:
+- Thoracic spine trauma
+- Compression fracture
+- Back pain
+- Tumor
+- Infection
+position: Supine
+npo: N/A
+premedication: ''
+contrast:
+  agent: None typically. Contrast if infection/tumor
+  volume: 'If contrast: 100 mL'
+  flow_rate: 3 mL/s
+tech_params:
+  kv: '120'
+  mas: Auto (reference 250)
+  rotation_time: 0.5s
+  pitch: Helical
+series:
+- name: T-spine Helical
+  start: C7
+  end: L1
+  delay: N/A or 60s if contrast
+  thickness: 0.625-1 mm
+  notes: Submillimeter
+recons:
+- plane: Axial
+  acquisition: T-spine
+  fov: T-spine
+  thickness_increment: 2 mm/2 mm
+  kernel: Bone
+  ir_strength: '3'
+  notes: Bone and soft tissue
+- plane: Sagittal
+  acquisition: T-spine
+  fov: T-spine
+  thickness_increment: 2 mm/1.5 mm
+  kernel: Bone
+  ir_strength: '3'
+  notes: Midline and parasagittal
+- plane: Coronal
+  acquisition: T-spine
+  fov: T-spine
+  thickness_increment: 2.5 mm/2 mm
+  kernel: Bone
+  ir_strength: '3'
+  notes: Coronal overview
+notes:
+  tech: C7 to L1. Submillimeter helical. Sagittal and coronal reformats. Arms up if
+    possible
+  nursing: No IV unless contrast indicated. Arms up to reduce artifact
+  rad: Alignment. Compression fractures. Pedicles. Spinal canal. Disc spaces. Paraspinal
+    soft tissues
+  tips: Arms up reduces artifact. Bone algorithm
+  additional_recons: ''
+safety:
+  renal: N/A or verify eGFR
+  allergy: N/A or check allergy
+---
+
 # CT Thoracic Spine
 
 **Last Updated:** 2024-01-15  

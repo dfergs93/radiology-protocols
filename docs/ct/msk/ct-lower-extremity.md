@@ -1,3 +1,77 @@
+---
+title: CT Lower Extremity
+slug: ct-lower-extremity
+category: msk
+protocol_type: contrast-enhanced
+last_updated: '2024-01-15'
+author: Dr. Rodriguez
+synonyms: []
+clinical_indications:
+- Lower extremity fracture
+- Tibia/fibula
+- Femur
+- Post-operative hardware assessment
+position: Supine
+npo: N/A
+premedication: ''
+contrast:
+  agent: None typically. Contrast if infection
+  volume: 'If contrast: 100 mL'
+  flow_rate: 2-3 mL/s
+tech_params:
+  kv: '120'
+  mas: Auto (reference 200-250)
+  rotation_time: 0.5s
+  pitch: Helical
+series:
+- name: CT Lower Extremity
+  start: Proximal to injury
+  end: Distal to injury
+  delay: N/A or 60s if contrast
+  thickness: 0.625-1 mm
+  notes: Submillimeter
+recons:
+- plane: Axial
+  acquisition: Lower extremity
+  fov: Region
+  thickness_increment: 2 mm/2 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Bone windows
+- plane: Coronal
+  acquisition: Lower extremity
+  fov: Region
+  thickness_increment: 2 mm/2 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Coronal
+- plane: Sagittal
+  acquisition: Lower extremity
+  fov: Region
+  thickness_increment: 2 mm/2 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Sagittal
+- plane: 3D surface
+  acquisition: Lower extremity
+  fov: Bones
+  thickness_increment: 0.625 mm source
+  kernel: Bone
+  ir_strength: N/A
+  notes: 3D reconstruction
+notes:
+  tech: 'FOV based on region: hip to ankle. Submillimeter for fracture. Extended coverage
+    for alignment'
+  nursing: No IV unless contrast needed
+  rad: Fractures. Alignment. Comminution. Intra-articular extension. Hardware position.
+    Infection on contrast
+  tips: Extended coverage for alignment measurements
+  additional_recons: Alignment measurements. Hardware position. 3D for surgical planning
+safety:
+  renal: N/A or eGFR > 30
+  allergy: N/A or check allergy
+---
+
 # CT Lower Extremity
 
 **Last Updated:** 2024-01-15  

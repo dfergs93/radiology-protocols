@@ -1,3 +1,100 @@
+---
+title: CTA SCAD/FMD Protocol
+slug: cta-scadfmd-protocol
+category: vascular
+protocol_type: vascular
+last_updated: '2024-01-15'
+author: Dr. Hayes
+synonyms: []
+clinical_indications:
+- Spontaneous coronary artery dissection screening
+- Fibromuscular dysplasia screening
+- Multi-vessel arterial assessment
+position: Supine with arms initially UP then DOWN
+npo: NPO 4 hours
+premedication: ''
+contrast:
+  agent: Isovue 370
+  volume: 150 mL total
+  flow_rate: 4 mL/s
+  timing: 'Multi-phase: NC Head + CTA Neck + CTA CAP arms up + Post-contrast Head
+    arms down'
+  roi: Multiple ROIs
+  trigger: 150 HU
+tech_params:
+  kv: 100-120
+  mas: Auto (reference 200-250)
+  rotation_time: 0.5s
+  pitch: 0.9-1.2
+series:
+- name: Non-contrast Head
+  start: Vertex
+  end: Foramen magnum
+  delay: N/A
+  thickness: 5 mm
+  notes: Arms down - baseline
+- name: CTA Neck
+  start: Aortic arch
+  end: Vertex
+  delay: Bolus tracked
+  thickness: 0.625 mm
+  notes: Arms down - carotid/vertebral
+- name: CTA CAP
+  start: Diaphragm
+  end: Pubic symphysis
+  delay: 35 sec after neck
+  thickness: 0.625 mm
+  notes: Arms UP - renal and mesenteric
+- name: Post-contrast Head
+  start: Vertex
+  end: Foramen magnum
+  delay: After CAP
+  thickness: 1.25 mm
+  notes: Arms DOWN - intracranial vessels
+recons:
+- plane: Axial
+  acquisition: All phases
+  fov: Respective FOV
+  thickness_increment: Phase-specific
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Comprehensive arterial assessment
+- plane: Coronal
+  acquisition: CTA phases
+  fov: Full body
+  thickness_increment: 2-3 mm/2-3 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: MIP of all arterial territories
+- plane: Sagittal
+  acquisition: CTA phases
+  fov: Full body
+  thickness_increment: 2-3 mm/2-3 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Lateral views all vessels
+- plane: 3D VR
+  acquisition: CTA phases
+  fov: Full body
+  thickness_increment: 1 mm source
+  kernel: Vascular
+  ir_strength: '3'
+  notes: 3D reconstruction multi-territory
+notes:
+  tech: 'FOUR acquisitions: 1) NC Head arms down 2) CTA Neck bolus track 3) CTA CAP
+    arms up 4) Post Head arms down. Patient repositions arms between scans'
+  nursing: 20G IV minimum. Verify good flow for multiple phases
+  rad: Screen all vascular beds for FMD. Look for beading stenosis aneurysm dissection.
+    Assess renal carotid vertebral intracranial arteries
+  tips: Coach patient on arm repositioning. Multiple phases require good IV. Plan
+    scan sequence carefully
+  additional_recons: Comprehensive MIP and 3D VR of all vascular beds. Measure vessel
+    diameters. Document FMD findings
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history. Explain arm repositioning
+---
+
 # CTA SCAD/FMD Protocol
 
 **Last Updated:** 2024-01-15  

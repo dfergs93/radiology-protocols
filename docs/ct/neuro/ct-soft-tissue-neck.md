@@ -1,3 +1,72 @@
+---
+title: CT Soft Tissue Neck
+slug: ct-soft-tissue-neck
+category: neuro
+protocol_type: contrast-enhanced
+last_updated: '2024-01-15'
+author: Dr. Thompson
+synonyms: []
+clinical_indications:
+- Neck mass
+- Deep neck infection
+- Abscess
+- Airway assessment
+- Lymphadenopathy
+position: Supine head-first
+npo: NPO 2 hours
+premedication: ''
+contrast:
+  agent: Omnipaque 350
+  volume: 100 mL
+  flow_rate: 3 mL/s
+tech_params:
+  kv: '120'
+  mas: Auto (reference 200-250)
+  rotation_time: 0.5s
+  pitch: '1'
+series:
+- name: Contrast Neck
+  start: Skull base
+  end: Thoracic inlet
+  delay: 60-70 sec
+  thickness: 1-2 mm
+  notes: Venous phase
+recons:
+- plane: Axial
+  acquisition: Neck
+  fov: Neck
+  thickness_increment: 2.5 mm/2 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Soft tissue neck
+- plane: Coronal
+  acquisition: Neck
+  fov: Neck
+  thickness_increment: 3 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Coronal neck spaces
+- plane: Sagittal
+  acquisition: Neck
+  fov: Midline
+  thickness_increment: 3 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Airway and retropharyngeal
+notes:
+  tech: Skull base to thoracic inlet. 60-70 sec delay for venous phase. Arms down.
+    Minimize swallowing. May need NC if calcium assessment
+  nursing: 18-20G IV. Coach no swallowing during scan
+  rad: Assess neck spaces. Retropharyngeal. Parapharyngeal. Masticator. Parotid. Submandibular.
+    Thyroid. Lymph nodes. Abscess vs phlegmon
+  tips: Arms down. Minimize swallowing. Quiet breathing
+  additional_recons: Assess all neck spaces. Measure lymph nodes. Airway diameter
+    if concern
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history
+---
+
 # CT Soft Tissue Neck
 
 **Last Updated:** 2024-01-15  

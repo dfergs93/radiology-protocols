@@ -1,3 +1,87 @@
+---
+title: CT Abdomen Pelvis with Contrast
+slug: ct-abdomen-pelvis-with-contrast
+category: abdomen
+protocol_type: contrast-enhanced
+last_updated: '2026-01-02'
+author: ''
+synonyms: []
+clinical_indications:
+- Abdominal pain
+- Oncology staging
+- Infection source
+- Post-operative complications
+position: Supine with arms raised
+npo: NPO 4 hours for solids
+premedication: 'Oral contrast: 900 mL Readi-Cat 2 over 90 minutes. Last cup 30 min
+  before scan'
+contrast:
+  agent: Isovue 370
+  volume: 1.5 mL/kg
+  flow_rate: 3 mL/s
+  duration: 40s
+  timing: Empiric Delay (70s)
+tech_params:
+  kv: '120'
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: 1.0-1.375
+series:
+- name: Portal Venous Phase
+  start: Diaphragm
+  end: Lesser trochanters
+  delay: 70 sec
+  thickness: 0.625 mm
+  notes: Standard portal venous timing
+- name: Renal Delay
+  start: 1-2cm above kidneys
+  end: 1-2cm below kidneys
+  delay: 300 sec
+  thickness: 0.625 mm
+  notes: Renal Delay series
+recons:
+- plane: Axial
+  acquisition: Portal venous
+  fov: Abdomen
+  thickness_increment: 3 mm/3 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Primary diagnostic series
+- plane: Axial
+  acquisition: Renal Delay
+  fov: Abdomen
+  thickness_increment: 3 mm/3 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Renal Delay series
+- plane: Coronal
+  acquisition: Portal venous
+  fov: Full AP
+  thickness_increment: 3 mm/3 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Coronal reformats for overview
+- plane: Sagittal
+  acquisition: Portal venous
+  fov: Full AP
+  thickness_increment: 3 mm/3 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Sagittal reformats for bowel loops
+notes:
+  tech: Ensure adequate oral contrast opacification. Scan from diaphragm through pubic
+    symphysis. 70 second delay typical
+  nursing: 20-22G IV required. Verify patent IV. Oral contrast 250-500mL water before
+    scan.
+  rad: Systematic review of all solid organs. Check for free fluid/air. Assess bowel
+    enhancement pattern
+  tips: Arms raised completely. Remove all metal objects from scan range
+  additional_recons: Thin slice 1mm for 3D if mass identified
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history. Pre-medicate if prior reaction
+---
+
 # CT Abdomen Pelvis with Contrast
 
 **Last Updated:** 2026-01-02  

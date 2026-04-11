@@ -1,3 +1,84 @@
+---
+title: CT Adrenal Mass Protocol
+slug: ct-adrenal-mass-protocol
+category: abdomen
+protocol_type: contrast-enhanced
+last_updated: '2024-01-15'
+author: Dr. Thompson
+synonyms: []
+clinical_indications:
+- Adrenal mass characterization
+- Adenoma vs metastasis
+- Incidentaloma workup
+position: Supine with arms raised
+npo: NPO 4 hours
+premedication: ''
+contrast:
+  agent: Isovue 370
+  volume: 1.5 mL/kg
+  flow_rate: 3 mL/s
+  duration: 40s
+  timing: Empiric Delay (70s)
+tech_params:
+  kv: '120'
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: '1'
+series:
+- name: Non-Contrast
+  start: Diaphragm
+  end: Kidneys
+  delay: N/A
+  thickness: 2.5 mm
+  notes: Measure absolute HU in mass
+- name: Portal Venous
+  start: Diaphragm
+  end: Kidneys
+  delay: 70 sec
+  thickness: 2.5 mm
+  notes: Enhanced HU measurement
+- name: 15 Minute Delay
+  start: Diaphragm
+  end: Kidneys
+  delay: 900 sec
+  thickness: 2.5 mm
+  notes: Delayed HU for washout calculation
+recons:
+- plane: Axial
+  acquisition: All phases
+  fov: Adrenals
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: ROI measurements in mass
+- plane: Axial
+  acquisition: All phases
+  fov: Adrenals
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Compare enhancement
+- plane: Coronal
+  acquisition: Portal venous
+  fov: Adrenals
+  thickness_increment: 3 mm/3 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Anatomic overview
+notes:
+  tech: 'THREE phases: 1) Non-contrast for absolute HU 2) Portal venous 70s 3) 15
+    MINUTE delayed for washout. All phases cover adrenals'
+  nursing: 20-22G IV. Patient must wait 15 min for delayed phase
+  rad: 'NC: lipid-rich adenoma < 10 HU. Portal venous: enhancement. 15 min delay:
+    calculate washout (adenoma shows washout)'
+  tips: Patient wait time 15 min. Measure HU carefully with ROI in same location
+  additional_recons: 'Calculate absolute washout: (Enhanced HU - Delayed HU)/(Enhanced
+    HU - NC HU) x 100. >60% suggests adenoma. Measure HU in all phases'
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history. Explain 15 min delay
+---
+
 # CT Adrenal Mass Protocol
 
 **Last Updated:** 2024-01-15  

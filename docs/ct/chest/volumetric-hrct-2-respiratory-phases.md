@@ -1,3 +1,82 @@
+---
+title: Volumetric HRCT 2 Respiratory Phases
+slug: volumetric-hrct-2-respiratory-phases
+category: chest
+protocol_type: chest/pulmonary
+last_updated: '2024-01-15'
+author: Dr. White
+synonyms: []
+clinical_indications:
+- Interstitial lung disease without prone imaging
+- ILD diagnosis
+- Diffuse lung disease
+position: Supine with arms raised
+npo: N/A
+premedication: ''
+contrast:
+  agent: N/A
+  type: non-contrast
+tech_params:
+  kv: '120'
+  mas: Auto (reference 150-200)
+  rotation_time: 0.5s
+  pitch: '1'
+series:
+- name: Volumetric Inspiration
+  start: Lung apices
+  end: Costophrenic angles
+  delay: Full inspiration
+  thickness: 1 mm
+  notes: Contiguous 1mm slices
+- name: Limited Expiration
+  start: Carina
+  end: Costophrenic angles
+  delay: Full expiration
+  thickness: 1 mm
+  notes: Limited coverage expiration
+recons:
+- plane: Axial
+  acquisition: Inspiration
+  fov: Chest
+  thickness_increment: 1 mm/1 mm
+  kernel: Lung
+  ir_strength: '3'
+  notes: Thin slice ILD assessment
+- plane: Axial
+  acquisition: Expiration
+  fov: Lower lungs
+  thickness_increment: 1 mm/1 mm
+  kernel: Lung
+  ir_strength: '3'
+  notes: Air trapping assessment
+- plane: Coronal
+  acquisition: Inspiration
+  fov: Chest
+  thickness_increment: 1.5 mm
+  kernel: Lung
+  ir_strength: '3'
+  notes: ILD distribution
+- plane: Sagittal
+  acquisition: Inspiration
+  fov: Chest
+  thickness_increment: 2 mm
+  kernel: Lung
+  ir_strength: '3'
+  notes: Craniocaudal distribution
+notes:
+  tech: 'TWO acquisitions: 1) Full INSPIRATION 2) Limited EXPIRATION (carina to bases).
+    Volumetric (contiguous thin slice). Coach breathing'
+  nursing: No IV. Careful breath hold coaching. Inspiration and expiration
+  rad: ILD pattern recognition. Honeycombing. Ground glass. Reticular. Mosaic attenuation
+    on expiration
+  tips: Volumetric contiguous slices. Coach breathing carefully
+  additional_recons: Thin slice for ILD detail. Compare inspiration vs expiration.
+    Quantitative analysis if available
+safety:
+  renal: N/A
+  allergy: N/A
+---
+
 # Volumetric HRCT 2 Respiratory Phases
 
 **Last Updated:** 2024-01-15  

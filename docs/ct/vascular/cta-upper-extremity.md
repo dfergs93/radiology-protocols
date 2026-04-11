@@ -1,3 +1,81 @@
+---
+title: CTA Upper Extremity
+slug: cta-upper-extremity
+category: vascular
+protocol_type: vascular
+last_updated: '2024-01-15'
+author: Dr. Davis
+synonyms: []
+clinical_indications:
+- Upper extremity arterial insufficiency
+- Trauma
+- Dialysis access planning
+- Thoracic outlet syndrome
+position: Supine with affected arm raised above head or at side depending on indication
+npo: NPO 2 hours
+premedication: ''
+contrast:
+  agent: Isovue 370
+  volume: 100 mL
+  flow_rate: 4 mL/s
+  timing: Bolus Tracking
+  roi: Subclavian artery
+  trigger: 150 HU
+tech_params:
+  kv: '100'
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: '0.9'
+series:
+- name: CTA Arterial
+  start: Aortic arch
+  end: Fingertips
+  delay: Bolus tracked
+  thickness: 0.625 mm
+  notes: Include arch through hand
+recons:
+- plane: Axial
+  acquisition: Arterial
+  fov: Full arm
+  thickness_increment: 1.5 mm/1.5 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Primary diagnostic
+- plane: Coronal
+  acquisition: Arterial
+  fov: Full arm
+  thickness_increment: 2 mm/2 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: MIP full vessel course
+- plane: Sagittal
+  acquisition: Arterial
+  fov: Full arm
+  thickness_increment: 2 mm/2 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Lateral MIP
+- plane: 3D VR
+  acquisition: Arterial
+  fov: Full arm
+  thickness_increment: 1 mm source
+  kernel: Vascular
+  ir_strength: '3'
+  notes: 3D reconstruction
+notes:
+  tech: Scan from aortic arch to fingertips. May need bilateral for comparison. Position
+    arm to demonstrate pathology | Inject into contralateral arm
+  nursing: 20G IV in contralateral arm
+  rad: Assess subclavian axillary brachial radial ulnar arteries. Look for stenosis
+    occlusion or injury
+  tips: Position arm to avoid overlap with torso. May need special positioning for
+    TOS
+  additional_recons: MIP and 3D VR. Subtract bones for vessel visualization
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history. IV in opposite arm
+---
+
 # CTA Upper Extremity
 
 **Last Updated:** 2024-01-15  

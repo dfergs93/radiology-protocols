@@ -1,3 +1,78 @@
+---
+title: CTA Lower Extremity Free Flap
+slug: cta-lower-extremity-free-flap
+category: vascular
+protocol_type: vascular
+last_updated: '2024-01-15'
+author: Dr. Kim
+synonyms: []
+clinical_indications:
+- Pre-operative planning for free flap harvest (fibula ALT anterolateral thigh)
+position: Supine with legs extended
+npo: NPO 2-4 hours
+premedication: ''
+contrast:
+  agent: Isovue 370
+  volume: 1.5 mL/kg
+  flow_rate: 4-5 mL/s
+  duration: 25s
+  timing: Bolus Tracking
+  roi: Femoral artery
+  trigger: 150 HU
+tech_params:
+  kv: '100'
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: '0.9'
+series:
+- name: CTA Arterial
+  start: Mid-Thigh
+  end: Toes
+  delay: Bolus tracked
+  thickness: 0.625 mm
+  notes: Bilateral for comparison and variants
+- name: CTA Delayed
+  start: Mid-Thigh
+  end: Toes
+  delay: 60s
+  thickness: 0.625 mm
+  notes: Bilateral for comparison and variants
+recons:
+- plane: Axial
+  acquisition: Arterial
+  fov: Thighs/Legs
+  thickness_increment: 1 mm/1 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Thin slice for perforator identification
+- plane: Coronal
+  acquisition: Arterial
+  fov: Full legs
+  thickness_increment: 1.5 mm/1.5 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: MIP to show perforator course
+- plane: Sagittal
+  acquisition: Arterial
+  fov: Full legs
+  thickness_increment: 2 mm/2 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Lateral perforator views
+notes:
+  tech: Scan from iliac crest to ankle. Focus on perforators in region of interest.
+    Arterial phase critical for mapping
+  nursing: 18-20G IV
+  rad: Map perforator vessels. Measure vessel caliber and length. Identify dominant
+    pedicle. Note anatomic variants
+  tips: Legs straight and not rotated. Mark skin over region of interest if possible
+  additional_recons: Curved MPR of main vessels. Measure perforator locations from
+    bony landmarks
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history
+---
+
 # CTA Lower Extremity Free Flap
 
 **Last Updated:** 2024-01-15  

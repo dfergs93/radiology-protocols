@@ -1,3 +1,85 @@
+---
+title: CTA Chest
+slug: cta-chest
+category: vascular
+protocol_type: vascular
+last_updated: '2024-01-15'
+author: Dr. Johnson
+synonyms: []
+clinical_indications:
+- Thoracic aortic aneurysm (not involving the aortic root)
+- Great vessel evaluation
+position: Supine with arms raised
+npo: NPO 2 hours
+premedication: ''
+contrast:
+  agent: Isovue 370
+  volume: 1.2 mL/kg
+  flow_rate: 4 mL/s
+  duration: 15 - 20s
+  timing: Bolus Tracking
+  roi: Ascending aorta or main PA
+  trigger: 150 HU
+tech_params:
+  kv: '100'
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: 1.0-1.2
+series:
+- name: CTA Arterial Chest
+  start: Lung apices
+  end: Adrenal glands
+  delay: Bolus tracked
+  thickness: 0.625 mm
+  notes: Caudocranial direction
+- name: Stent Delay (optional)
+  start: Top of Stent
+  end: Bottom of Stent
+  delay: 40 sec
+  thickness: 0.625 mm
+  notes: Stent coverage
+recons:
+- plane: Axial
+  acquisition: Arterial
+  fov: Chest
+  thickness_increment: 1.25 mm/1.25 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Primary diagnostic series
+- plane: Axial
+  acquisition: Arterial
+  fov: Chest
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Lung
+  ir_strength: '3'
+  notes: Lung window for parenchyma
+- plane: Coronal
+  acquisition: Arterial
+  fov: Chest
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: MIP coronal great vessels
+- plane: Sagittal
+  acquisition: Arterial
+  fov: Chest
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: MIP sagittal aortic arch
+notes:
+  tech: Choose ROI based on indication - ascending aorta for aortic pathology or main
+    PA for PE
+  nursing: 20G IV minimum
+  rad: Assess aorta and great vessels. Measure aneurysm if present. Look for dissection
+    flap
+  tips: Arms fully raised
+  additional_recons: 3D VR of thoracic vasculature
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history
+---
+
 # CTA Chest
 
 **Last Updated:** 2024-01-15  

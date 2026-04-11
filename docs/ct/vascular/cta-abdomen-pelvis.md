@@ -1,3 +1,87 @@
+---
+title: CTA Abdomen Pelvis
+slug: cta-abdomen-pelvis
+category: vascular
+protocol_type: vascular
+last_updated: '2024-01-15'
+author: Dr. Martinez
+synonyms: []
+clinical_indications:
+- Abdominal aortic aneurysm
+- Mesenteric ischemia
+- Renal artery stenosis
+- Pre-EVAR planning
+position: Supine with arms raised
+npo: NPO 4 hours
+premedication: Oral contrast optional - omit for vascular indication
+contrast:
+  agent: Isovue 370
+  volume: 1.1 mL/kg
+  flow_rate: 4 mL/s
+  duration: 20s
+  timing: Bolus Tracking
+  roi: Abdominal aorta at celiac
+  trigger: 150 HU
+tech_params:
+  kv: '100'
+  mas: Auto (reference 250)
+  rotation_time: 0.5s
+  pitch: 1.0-1.375
+series:
+- name: CTA Arterial
+  start: Diaphragm
+  end: Femoral heads
+  delay: Bolus tracked
+  thickness: 0.625 mm
+  notes: Caudocranial direction
+- name: Stent Delay (optional)
+  start: Top of Stent
+  end: Bottom of Stent
+  delay: 40 sec
+  thickness: 0.625 mm
+  notes: Stent coverage
+recons:
+- plane: Axial
+  acquisition: Arterial
+  fov: Abdomen
+  thickness_increment: 2 mm/2 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Abdominal aorta and visceral branches
+- plane: Axial
+  acquisition: Arterial
+  fov: Pelvis
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Iliac vessels
+- plane: Coronal
+  acquisition: Arterial
+  fov: Full AP
+  thickness_increment: 3 mm/3 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: MIP coronal aorta and branches
+- plane: Sagittal
+  acquisition: Arterial
+  fov: Full AP
+  thickness_increment: 3 mm/3 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Curved MPR of aorta
+notes:
+  tech: Caudocranial scan direction. Include renal arteries to femoral bifurcation
+    minimum
+  nursing: 18-20G IV antecubital
+  rad: Measure AAA if present. Assess renal and mesenteric arteries. Evaluate iliac
+    vessels
+  tips: Arms raised. No oral contrast for pure vascular study
+  additional_recons: 3D VR and curved MPR. Measure AAA in 3 planes
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history
+---
+
 # CTA Abdomen Pelvis
 
 **Last Updated:** 2024-01-15  

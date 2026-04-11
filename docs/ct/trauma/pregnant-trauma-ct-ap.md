@@ -1,3 +1,70 @@
+---
+title: Pregnant Trauma CT AP
+slug: pregnant-trauma-ct-ap
+category: trauma
+protocol_type: trauma
+last_updated: '2024-01-15'
+author: Dr. Anderson
+synonyms: []
+clinical_indications:
+- Pregnant trauma patient
+- Multi-trauma pregnancy
+- Maternal injury assessment
+position: Supine with left lateral tilt if possible
+npo: None - trauma
+premedication: ''
+contrast:
+  agent: Omnipaque 350
+  volume: 125 mL
+  flow_rate: 3 mL/s
+tech_params:
+  kv: '100'
+  mas: Reduced mAs if possible
+  rotation_time: 0.5s
+  pitch: '1.375'
+series:
+- name: Portal Venous AP
+  start: Diaphragm
+  end: Pubic symphysis
+  delay: 70 sec
+  thickness: 2.5 mm
+  notes: Single phase minimize radiation
+recons:
+- plane: Axial
+  acquisition: Portal venous
+  fov: AP
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Maternal organs
+- plane: Coronal
+  acquisition: Portal venous
+  fov: AP
+  thickness_increment: 3 mm/3 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Overview
+- plane: Sagittal
+  acquisition: Portal venous
+  fov: Pelvis
+  thickness_increment: 3 mm/3 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Uterus and placenta
+notes:
+  tech: Portal venous phase 70s. SINGLE PHASE to minimize fetal radiation. Shield
+    uterus if injury distant. Document weeks gestation
+  nursing: Pregnancy documented. Fetal heart tones if equipment available. Shield
+    if possible
+  rad: Assess maternal injuries. Minimize fetal radiation exposure. Document placental
+    injury if visible
+  tips: Document gestational age. Shield fetus if possible. Minimize radiation
+  additional_recons: ''
+safety:
+  renal: Check if known
+  allergy: Trauma indication documented
+---
+
 # Pregnant Trauma CT AP
 
 **Last Updated:** 2024-01-15  

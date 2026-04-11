@@ -1,3 +1,78 @@
+---
+title: CT Foot
+slug: ct-foot
+category: msk
+protocol_type: musculoskeletal
+last_updated: '2024-01-15'
+author: Dr. Davis
+synonyms: []
+clinical_indications:
+- Foot fracture
+- Lisfranc injury
+- Tarsal fractures
+- Foreign body
+- Pre-operative planning
+position: Supine feet first
+npo: N/A
+premedication: ''
+contrast:
+  agent: None typically. Contrast if infection
+  volume: 'If contrast: 75 mL'
+  flow_rate: 2-3 mL/s
+tech_params:
+  kv: '120'
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: Helical
+series:
+- name: CT Foot
+  start: Calcaneus
+  end: Toes
+  delay: N/A or 60s if contrast
+  thickness: 0.625 mm
+  notes: Submillimeter
+recons:
+- plane: Axial
+  acquisition: Foot
+  fov: Foot
+  thickness_increment: 1 mm/1 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Axial bone
+- plane: Coronal
+  acquisition: Foot
+  fov: Foot
+  thickness_increment: 1.5 mm/1 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Coronal foot
+- plane: Sagittal
+  acquisition: Foot
+  fov: Foot
+  thickness_increment: 1.5 mm/1 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Sagittal foot
+- plane: Oblique
+  acquisition: Foot
+  fov: Lisfranc
+  thickness_increment: 1.5 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Lisfranc joint
+notes:
+  tech: Calcaneus through toes. Submillimeter. Weight-bearing position if able. Bilateral
+    for comparison
+  nursing: No IV unless infection suspected
+  rad: Calcaneus. Talus. Navicular. Cuneiforms. Metatarsals. Phalanges. Lisfranc ligament.
+    Plantar fascia
+  tips: Weight-bearing if possible. Bilateral comparison helpful
+  additional_recons: Document Lisfranc alignment. Calcaneal angles. 3D if complex
+safety:
+  renal: N/A or eGFR > 30
+  allergy: N/A or check allergy
+---
+
 # CT Foot
 
 **Last Updated:** 2024-01-15  

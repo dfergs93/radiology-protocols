@@ -1,3 +1,88 @@
+---
+title: CT Enterography
+slug: ct-enterography
+category: abdomen
+protocol_type: contrast-enhanced
+last_updated: '2024-01-15'
+author: Dr. Martinez
+synonyms: []
+clinical_indications:
+- Crohn disease
+- Small bowel obstruction
+- Obscure GI bleeding
+- Small bowel mass
+position: Supine with arms raised
+npo: NPO 4 hours solids
+premedication: 'Neutral oral contrast (VoLumen): 1st bottle (450mL) at 90 min. 2nd
+  bottle (450mL) at 60 min. Half bottle (225mL) at 30 min. Other half (225mL) at 5
+  min before scan'
+contrast:
+  agent: Isovue 370
+  volume: 1.5 mL/kg
+  flow_rate: 4-5 mL/s
+  duration: 25s
+  timing: Empiric Delay (45s)
+tech_params:
+  kv: '100'
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: 1.0-1.375
+series:
+- name: Enteric Phase
+  start: Diaphragm
+  end: Pubic symphysis
+  delay: 45 sec
+  thickness: 0.625 mm
+  notes: Optimal small bowel enhancement
+- name: Renal Delay
+  start: 1-2cm above kidneys
+  end: 1-2cm below kidneys
+  delay: 300 sec
+  thickness: 0.625 mm
+  notes: Renal Delay series
+recons:
+- plane: Axial
+  acquisition: Enteric
+  fov: Full AP
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Primary diagnostic
+- plane: Coronal
+  acquisition: Enteric
+  fov: Full AP
+  thickness_increment: 3 mm/3 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Bowel loop assessment
+- plane: Sagittal
+  acquisition: Enteric
+  fov: Full AP
+  thickness_increment: 3 mm/3 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Mesenteric evaluation
+- plane: MIP
+  acquisition: Enteric
+  fov: Mesenteric vessels
+  thickness_increment: 5 mm slab
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Vascular assessment
+notes:
+  tech: Enterographic phase (45 sec). High volume neutral oral for bowel distension.
+    25 second injection. Scan 45 sec from start
+  nursing: 18-20G IV. Ensure adequate oral contrast intake (total ~1350mL). May need
+    anti-peristaltic agent
+  rad: Assess bowel wall enhancement and thickness. Look for strictures fistulas abscesses.
+    Mesenteric vascularity
+  tips: Adequate oral contrast distension critical. High injection rate
+  additional_recons: Curved MPR of bowel segments. Mesenteric vascular assessment
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history. Coordinate oral contrast timing
+---
+
 # CT Enterography
 
 **Last Updated:** 2024-01-15  

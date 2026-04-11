@@ -1,3 +1,94 @@
+---
+title: CT IVP (Intravenous Pyelogram)
+slug: ct-ivp-intravenous-pyelogram
+category: abdomen
+protocol_type: contrast-enhanced
+last_updated: '2024-01-15'
+author: Dr. Anderson
+synonyms: []
+clinical_indications:
+- Hematuria
+- Urothelial carcinoma
+- Collecting system evaluation
+- Hydronephrosis
+position: Supine with arms raised
+npo: NPO 4 hours
+premedication: ''
+contrast:
+  agent: Isovue 370
+  volume: 'Split bolus: 1st injection 1.1 mL/kg + 2nd injection 0.4 mL/kg'
+  flow_rate: 4 mL/s
+  duration: 18-20s + 5-10s
+  timing: Split bolus technique
+tech_params:
+  kv: 100-120
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: 1.0-1.375
+series:
+- name: Non-Contrast (optional)
+  start: Top kidneys
+  end: Pubic symphysis
+  delay: N/A
+  thickness: 2 mm
+  notes: Optional stone detection
+- name: Early Portal Venous
+  start: Top kidneys
+  end: Iliac crests
+  delay: 60 sec from 1st
+  thickness: 2.5 mm
+  notes: Nephrographic phase
+- name: Excretory Phase
+  start: Top kidneys
+  end: Pubic symphysis
+  delay: 90-120 sec from 2nd
+  thickness: 1.25 mm
+  notes: Collecting system opacification
+recons:
+- plane: Axial
+  acquisition: Non-contrast
+  fov: KUB
+  thickness_increment: 2 mm/2 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Stone detection if done
+- plane: Axial
+  acquisition: Portal venous
+  fov: Kidneys
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Renal parenchyma
+- plane: Axial
+  acquisition: Excretory
+  fov: Full urinary tract
+  thickness_increment: 2 mm/2 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Urothelial surfaces
+- plane: Coronal
+  acquisition: Excretory
+  fov: Full urinary tract
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: MIP urogram
+notes:
+  tech: 'COMPLEX protocol: 1) NC (optional stone protocol) 2) 1st contrast injection
+    3) Early PV 60s after 1st 4) WAIT 5-7 min 5) 2nd injection + saline 6) Excretory/IVP
+    90-120s after 2nd'
+  nursing: 18-20G IV. Split bolus technique. May give Lasix 10-20mg IV for better
+    opacification
+  rad: 'NC optional: detect stones. Early PV: renal parenchyma. Excretory: collecting
+    system ureters bladder for urothelial lesions'
+  tips: Split bolus critical for opacification. Lasix may help. Prone imaging optional
+    for ureters
+  additional_recons: MIP urogram coronal and sagittal. Curved MPR of ureters. 3D urogram
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history
+---
+
 # CT IVP (Intravenous Pyelogram)
 
 **Last Updated:** 2024-01-15  

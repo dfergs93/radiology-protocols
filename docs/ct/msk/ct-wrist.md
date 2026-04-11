@@ -1,3 +1,78 @@
+---
+title: CT Wrist
+slug: ct-wrist
+category: msk
+protocol_type: musculoskeletal
+last_updated: '2024-01-15'
+author: Dr. Hayes
+synonyms: []
+clinical_indications:
+- Wrist fracture
+- Distal radius fracture
+- Carpal fracture
+- DRUJ
+- Scapholunate ligament
+position: Prone with wrist extended (superman) or positioned for comfort
+npo: N/A
+premedication: ''
+contrast:
+  agent: None typically. Contrast if infection
+  volume: 'If contrast: 50 mL'
+  flow_rate: 2 mL/s
+tech_params:
+  kv: '120'
+  mas: Auto (reference 150-200)
+  rotation_time: 0.5s
+  pitch: Helical
+series:
+- name: CT Wrist
+  start: Distal radius/ulna
+  end: Mid-carpus
+  delay: N/A or immediate if arthrogram
+  thickness: 0.625 mm
+  notes: Submillimeter
+recons:
+- plane: Axial
+  acquisition: Wrist
+  fov: Wrist
+  thickness_increment: 1 mm/0.75 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Axial bone
+- plane: Coronal
+  acquisition: Wrist
+  fov: Wrist
+  thickness_increment: 1 mm/0.75 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Coronal wrist
+- plane: Sagittal
+  acquisition: Wrist
+  fov: Wrist
+  thickness_increment: 1 mm/0.75 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Sagittal wrist
+- plane: Oblique sagittal
+  acquisition: Wrist
+  fov: Scaphoid
+  thickness_increment: 1 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Scaphoid long axis
+notes:
+  tech: Distal radius/ulna through carpus. Submillimeter for carpal detail. Extended
+    for forearm if needed
+  nursing: No IV unless contrast or arthrogram needed
+  rad: Distal radius fractures. Carpal fractures (scaphoid). DRUJ. Carpal alignment.
+    Ligaments on arthrogram
+  tips: Position for comfort. Submillimeter for carpal bones
+  additional_recons: Scaphoid views. Carpal alignment. 3D if complex fracture
+safety:
+  renal: N/A or eGFR > 30
+  allergy: N/A or check allergy
+---
+
 # CT Wrist
 
 **Last Updated:** 2024-01-15  

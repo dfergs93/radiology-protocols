@@ -1,3 +1,98 @@
+---
+title: Gated CTA CAP
+slug: gated-cta-cap
+category: cardiac
+protocol_type: cardiac gated
+last_updated: '2024-01-15'
+author: Dr. Lee
+synonyms: []
+clinical_indications:
+- Aortic dissection
+- Aortic aneurysm with cardiac involvement
+- Combined cardiac and aortic pathology
+position: Supine with arms raised
+npo: NPO 2-4 hours
+premedication: HR < 65 target. Premedication not required.
+contrast:
+  agent: Isovue 370
+  volume: 1.6 mL/kg
+  flow_rate: 4 mL/s
+  duration: 20-24s
+  timing: Bolus Tracking
+  roi: Ascending aorta
+  trigger: 180 HU
+tech_params:
+  kv: '100'
+  mas: Auto ECG chest / High mAs AP
+  rotation_time: 0.28 chest / 0.5 APs
+  pitch: 0.2-0.24 chest / 1.2-1.5 AP
+series:
+- name: Flash Non-contrast
+  start: Thoracic inlet
+  end: Pubic symphysis
+  delay: N/A
+  thickness: 0.625 mm
+  notes: Non-contrast
+- name: Gated CTA Chest
+  start: Thoracic inlet
+  end: Diaphragm
+  delay: Bolus tracked
+  thickness: 0.5-0.625 mm
+  notes: Retrospective gating chest
+- name: Flash CTA AP
+  start: Diaphragm
+  end: Pubic symphysis
+  delay: Immediate after chest
+  thickness: 0.625 mm
+  notes: High pitch helical - no gating
+- name: Stent Delay (optional)
+  start: Top of Stent
+  end: Bottom of Stent
+  delay: 40 sec
+  thickness: 0.625 mm
+  notes: Stent coverage
+recons:
+- plane: Axial
+  acquisition: Gated chest
+  fov: Chest
+  thickness_increment: 0.75 mm/0.75 mm
+  kernel: Cardiac
+  ir_strength: '3'
+  notes: Aortic root and valve
+- plane: Axial
+  acquisition: Flash AP
+  fov: Abdomen/Pelvis
+  thickness_increment: 2 mm/2 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Abdominal aorta and branches
+- plane: Coronal
+  acquisition: Both
+  fov: Full CAP
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: MIP full aorta
+- plane: Sagittal
+  acquisition: Both
+  fov: Full CAP
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Curved MPR entire aorta
+notes:
+  tech: 'TWO acquisitions: 1) Gated retrospective CHEST 2) Flash helical ABDOMEN/PELVIS.
+    Chest gated for aortic root. AP flash arterial'
+  nursing: 20G IV minimum
+  rad: 'Gated chest: assess aortic root valve coronaries. Flash AP: assess aorta and
+    branches. Combined cardiac and vascular'
+  tips: Arms up. Careful timing between gated and flash acquisitions
+  additional_recons: Curved MPR full aorta. Aortic valve reformats. 3D VR
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history
+---
+
 # Gated CTA CAP
 
 **Last Updated:** 2024-01-15  

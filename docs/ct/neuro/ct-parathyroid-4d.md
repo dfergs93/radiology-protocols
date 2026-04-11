@@ -1,3 +1,98 @@
+---
+title: CT Parathyroid 4D
+slug: ct-parathyroid-4d
+category: neuro
+protocol_type: contrast-enhanced
+last_updated: '2024-01-15'
+author: Dr. Kim
+synonyms: []
+clinical_indications:
+- Hyperparathyroidism
+- Parathyroid adenoma localization
+- Pre-operative parathyroid planning
+position: Supine head-first with arms down
+npo: NPO 4 hours
+premedication: ''
+contrast:
+  agent: Omnipaque 350
+  volume: 75-100 mL
+  flow_rate: 4 mL/s
+  timing: 4D multi-phase
+  roi: Carotid artery
+  trigger: 150 HU
+tech_params:
+  kv: '120'
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: '1'
+series:
+- name: Non-Contrast
+  start: Skull base
+  end: Carina
+  delay: N/A
+  thickness: 2.5 mm
+  notes: Baseline
+- name: Arterial Phase
+  start: Skull base
+  end: Carina
+  delay: 25 sec
+  thickness: 2 mm
+  notes: Parathyroid enhancement
+- name: Venous Phase
+  start: Skull base
+  end: Carina
+  delay: 55 sec
+  thickness: 2 mm
+  notes: Thyroid enhancement
+- name: Delayed Phase
+  start: Skull base
+  end: Carina
+  delay: 90 sec
+  thickness: 2.5 mm
+  notes: Washout phase
+recons:
+- plane: Axial
+  acquisition: All phases
+  fov: Neck
+  thickness_increment: 2 mm/2 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Compare all four phases
+- plane: Axial
+  acquisition: Arterial
+  fov: Neck
+  thickness_increment: 2 mm/2 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Peak parathyroid enhancement
+- plane: Subtraction
+  acquisition: Arterial - NC
+  fov: Neck
+  thickness_increment: 2 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Enhance parathyroid conspicuity
+- plane: Coronal
+  acquisition: Arterial
+  fov: Neck
+  thickness_increment: 2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Ectopic adenoma search
+notes:
+  tech: 'FOUR phases: 1) NC 2) Arterial 25s 3) Venous 55s 4) Delayed/washout 90s.
+    Skull base to mediastinum. Parathyroid enhances early washes out'
+  nursing: 18-20G IV. High flow rate for arterial
+  rad: 'NC: baseline. Arterial: parathyroid lights up. Venous: thyroid enhances. Delayed:
+    parathyroid washes out faster than thyroid'
+  tips: Four phase critical. Look for early enhancement and washout
+  additional_recons: Subtraction images. Compare all phases. Document location for
+    surgeon. Measure size
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history
+---
+
 # CT Parathyroid 4D
 
 **Last Updated:** 2024-01-15  

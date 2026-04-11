@@ -1,3 +1,78 @@
+---
+title: CT Chest Abdomen Pelvis with Contrast
+slug: ct-chest-abdomen-pelvis-with-contrast
+category: abdomen
+protocol_type: contrast-enhanced
+last_updated: '2024-01-15'
+author: Dr. Smith
+synonyms: []
+clinical_indications:
+- Oncology staging
+- Infection source
+- Abdominal pain
+position: Supine with arms raised
+npo: NPO 4 hours solids. Clear liquids OK up to 2 hours
+premedication: 'Oral contrast: 250-500 mL neutral (Volumen or water). Give 60-90 min
+  before scan'
+contrast:
+  agent: Isovue 370
+  volume: 1.5 mL/kg
+  flow_rate: 3 mL/s
+  duration: 40s
+  timing: Empiric Delay (70s)
+tech_params:
+  kv: '120'
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: 1.0-1.375
+series:
+- name: Portal Venous Phase
+  start: Lung bases or diaphragm
+  end: Pubic symphysis
+  delay: 70 sec
+  thickness: 0.625 mm
+  notes: Single portal venous phase
+- name: Renal Delay
+  start: 1-2cm above kidneys
+  end: 1-2cm below kidneys
+  delay: 300 sec
+  thickness: 0.625 mm
+  notes: Renal Delay series
+recons:
+- plane: Axial
+  acquisition: Portal venous
+  fov: CAP
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Chest diagnostic
+- plane: Axial
+  acquisition: Renal Delay
+  fov: Abdomen
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Renal diagnostic
+- plane: Coronal
+  acquisition: Portal venous
+  fov: Full CAP
+  thickness_increment: 3 mm/3 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Coronal overview
+notes:
+  tech: Single phase portal venous. 40 second injection. 70 second scan delay from
+    start of injection
+  nursing: 20-22G IV. Verify renal function
+  rad: Portal venous phase optimal for solid organ and bowel assessment. Systematic
+    review all organs
+  tips: Arms fully raised. Neutral oral contrast preferred over positive
+  additional_recons: Sagittal reformats optional
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history
+---
+
 # CT Chest Abdomen Pelvis with Contrast
 
 **Last Updated:** 2024-01-15  

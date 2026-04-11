@@ -1,3 +1,86 @@
+---
+title: Gated CTA TAVR
+slug: gated-cta-tavr
+category: cardiac
+protocol_type: cardiac gated
+last_updated: '2024-01-15'
+author: Dr. Davis
+synonyms: []
+clinical_indications:
+- Pre-TAVR planning
+- Aortic stenosis valve replacement planning
+position: Supine with arms raised
+npo: NPO 4 hours
+premedication: HR < 65 target. Premedication not required.
+contrast:
+  agent: Isovue 370
+  volume: 1.6 mL/kg
+  flow_rate: 4 mL/s
+  duration: 22s
+  timing: Bolus Tracking
+  roi: Ascending aorta
+  trigger: 180 HU
+tech_params:
+  kv: '100'
+  mas: Auto ECG chest / High mAs AP
+  rotation_time: 0.28 / 0.5s
+  pitch: 0.2-0.24 / 1.2-1.5
+series:
+- name: Gated CTA Chest
+  start: Thoracic inlet
+  end: Diaphragm
+  delay: Bolus tracked
+  thickness: 0.5 mm
+  notes: Retrospective gating for valve
+- name: Flash CTA AP
+  start: Diaphragm
+  end: Femoral heads
+  delay: Immediate
+  thickness: 0.625 mm
+  notes: Iliofemoral access planning
+recons:
+- plane: Axial
+  acquisition: Gated chest
+  fov: Heart
+  thickness_increment: 0.5 mm/0.5 mm
+  kernel: Cardiac
+  ir_strength: '3'
+  notes: Aortic valve and root measurements
+- plane: Axial
+  acquisition: Flash AP
+  fov: AP
+  thickness_increment: 2 mm/2 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Access vessel assessment
+- plane: Double oblique
+  acquisition: Gated chest
+  fov: Aortic valve
+  thickness_increment: 0.5 mm
+  kernel: Cardiac
+  ir_strength: '3'
+  notes: En face aortic annulus for sizing
+- plane: 3D VR
+  acquisition: Flash AP
+  fov: Iliofemoral
+  thickness_increment: 1.5 mm source
+  kernel: Vascular
+  ir_strength: '3'
+  notes: 3D access planning
+notes:
+  tech: Gated CHEST retrospective + Flash AP. Gated for valve measurements. AP for
+    access planning. TAVR post-processing required
+  nursing: 20G IV antecubital
+  rad: Measure aortic annulus (3 diameters). Coronary heights. Access vessels (iliofemoral).
+    Valve calcium. Comprehensive TAVR measurements
+  tips: TAVR-specific measurements protocol. Thin slices critical
+  additional_recons: 'TAVR measurements: annulus area perimeter diameters. Coronary
+    heights. Sinus of Valsalva. STJ. Ascending aorta. Access vessels'
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history
+---
+
 # Gated CTA TAVR
 
 **Last Updated:** 2024-01-15  

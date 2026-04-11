@@ -1,3 +1,91 @@
+---
+title: CT Cystogram
+slug: ct-cystogram
+category: abdomen
+protocol_type: contrast-enhanced
+last_updated: '2024-01-15'
+author: Dr. Kim
+synonyms: []
+clinical_indications:
+- Bladder rupture
+- Bladder injury
+- Post-operative bladder assessment
+position: Supine
+npo: NPO 2-4 hours
+premedication: 'Bladder contrast: 350-400 mL dilute contrast (30 mL contrast in 350
+  mL saline)'
+contrast:
+  agent: Isovue 370
+  volume: 100 mL
+  flow_rate: 3-4 mL/s
+tech_params:
+  kv: '120'
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: '1'
+series:
+- name: Non-Contrast
+  start: Diaphragm
+  end: Pubic symphysis
+  delay: 70 sec
+  thickness: 2.5 mm
+  notes: Standard IV contrast
+- name: Bladder Filling
+  start: N/A
+  end: N/A
+  delay: 90 sec
+  thickness: N/A
+  notes: Fill via Foley - not scanned
+- name: Cystogram
+  start: Iliac crests
+  end: Below bladder
+  delay: 100 sec
+  thickness: 2 mm
+  notes: Scan distended bladder
+recons:
+- plane: Axial
+  acquisition: Non-Contrast
+  fov: Pelvis
+  thickness_increment: 2 mm/2 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Pre-contrast
+- plane: Axial
+  acquisition: Cystogram
+  fov: Pelvis
+  thickness_increment: 2 mm/2 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Distended bladder assessment
+- plane: Coronal
+  acquisition: Cystogram
+  fov: Pelvis
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Bladder overview
+- plane: Sagittal
+  acquisition: Cystogram
+  fov: Pelvis
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Bladder dome and base
+notes:
+  tech: 'TWO components: 1) Non-contrast CT 2) Bladder filling via Foley with dilute
+    contrast 3) Scan distended bladder. Coordinate with nursing'
+  nursing: Foley catheter required. Dilute contrast preparation (30mL in 350mL saline).
+    Gravity fill bladder. Patient signals fullness
+  rad: 'Cystogram: bladder integrity extravasation'
+  tips: Adequate bladder distension critical. Gravity fill slowly. Clamp Foley during
+    scan
+  additional_recons: Compare distended vs non-contrast. Document extravasation location.
+    3D reformation if complex injury
+safety:
+  renal: eGFR doesn't matter, contrast not excreted
+  allergy: Foley placement. Prepare dilute contrast
+---
+
 # CT Cystogram
 
 **Last Updated:** 2024-01-15  

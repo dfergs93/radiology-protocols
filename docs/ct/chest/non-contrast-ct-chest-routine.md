@@ -1,3 +1,74 @@
+---
+title: Non-Contrast CT Chest Routine
+slug: non-contrast-ct-chest-routine
+category: chest
+protocol_type: non-contrast
+last_updated: '2024-01-15'
+author: Dr. Thompson
+synonyms: []
+clinical_indications:
+- Age > 60
+- Chest pain low risk
+position: Supine with arms raised
+npo: N/A
+premedication: ''
+contrast:
+  agent: N/A
+  type: non-contrast
+tech_params:
+  kv: '120'
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: 1.0-1.2
+series:
+- name: NC Chest
+  start: Lung apices
+  end: Costophrenic angles
+  delay: N/A
+  thickness: 1-1.25 mm
+  notes: Standard dose helical
+recons:
+- plane: Axial
+  acquisition: Chest
+  fov: Chest
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Mediastinal window
+- plane: Axial
+  acquisition: Chest
+  fov: Chest
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Lung
+  ir_strength: '3'
+  notes: Lung window
+- plane: Coronal
+  acquisition: Chest
+  fov: Chest
+  thickness_increment: 3 mm/3 mm
+  kernel: Lung
+  ir_strength: '3'
+  notes: Coronal lung
+- plane: Sagittal
+  acquisition: Chest
+  fov: Chest
+  thickness_increment: 3 mm/3 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Optional mediastinum
+notes:
+  tech: Standard dose helical chest. Lung apices to costophrenic angles. Routine lung
+    and mediastinal windows
+  nursing: No IV needed. Breath hold coaching
+  rad: Assess lung parenchyma nodules masses. Mediastinal lymph nodes. Pleura. Incidental
+    findings
+  tips: Full inspiration breath hold
+  additional_recons: Thin slice 1mm for nodule detection and measurement
+safety:
+  renal: N/A
+  allergy: N/A
+---
+
 # Non-Contrast CT Chest Routine
 
 **Last Updated:** 2024-01-15  

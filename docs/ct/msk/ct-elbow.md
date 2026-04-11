@@ -1,3 +1,79 @@
+---
+title: CT Elbow
+slug: ct-elbow
+category: msk
+protocol_type: musculoskeletal
+last_updated: '2024-01-15'
+author: Dr. Martinez
+synonyms: []
+clinical_indications:
+- Elbow fracture
+- Radial head fracture
+- Olecranon fracture
+- Coronoid
+- Terrible triad
+position: Supine with elbow extended if possible or positioned for comfort
+npo: N/A
+premedication: ''
+contrast:
+  agent: None typically. Contrast if infection
+  volume: 'If contrast: 75 mL'
+  flow_rate: 2-3 mL/s
+tech_params:
+  kv: '120'
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: Helical
+series:
+- name: CT Elbow
+  start: Distal humerus
+  end: Proximal radius/ulna
+  delay: N/A or 60s if contrast
+  thickness: 0.625 mm
+  notes: Submillimeter
+recons:
+- plane: Axial
+  acquisition: Elbow
+  fov: Elbow
+  thickness_increment: 1.5 mm/1 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Axial bone
+- plane: Coronal
+  acquisition: Elbow
+  fov: Elbow
+  thickness_increment: 1.5 mm/1 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Coronal elbow
+- plane: Sagittal
+  acquisition: Elbow
+  fov: Elbow
+  thickness_increment: 1.5 mm/1 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Sagittal elbow
+- plane: 3D surface
+  acquisition: Elbow
+  fov: Bones
+  thickness_increment: 0.625 mm source
+  kernel: Bone
+  ir_strength: N/A
+  notes: 3D for complex fractures
+notes:
+  tech: Distal humerus through proximal radius/ulna. Submillimeter. Position extended
+    if possible. Bilateral for comparison
+  nursing: No IV unless contrast needed
+  rad: Distal humerus fractures. Radial head. Olecranon. Coronoid. Elbow dislocation.
+    Terrible triad
+  tips: Position extended if possible. Submillimeter for detail
+  additional_recons: Document terrible triad if present. Radial head-capitellum alignment.
+    3D reconstruction
+safety:
+  renal: N/A or eGFR > 30
+  allergy: N/A or check allergy
+---
+
 # CT Elbow
 
 **Last Updated:** 2024-01-15  

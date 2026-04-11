@@ -1,0 +1,494 @@
+slug,row_type,order,series_name,start_location,end_location,delay,slice_thickness,plane,acquisition,fov,thickness_increment,kernel,ir_strength,notes
+ct-abdomen-pelvis-with-contrast,acquisition,1,Portal Venous Phase,Diaphragm,Lesser trochanters,70 sec,0.625 mm,,,,,,,Standard portal venous timing
+ct-abdomen-pelvis-with-contrast,acquisition,2,Renal Delay,1-2cm above kidneys,1-2cm below kidneys,300 sec,0.625 mm,,,,,,,Renal Delay series
+ct-abdomen-pelvis-with-contrast,recon,1,,,,,,Axial,Portal venous,Abdomen,3 mm/3 mm,Standard,3,Primary diagnostic series
+ct-abdomen-pelvis-with-contrast,recon,2,,,,,,Axial,Renal Delay,Abdomen,3 mm/3 mm,Standard,3,Renal Delay series
+ct-abdomen-pelvis-with-contrast,recon,3,,,,,,Coronal,Portal venous,Full AP,3 mm/3 mm,Standard,3,Coronal reformats for overview
+ct-abdomen-pelvis-with-contrast,recon,4,,,,,,Sagittal,Portal venous,Full AP,3 mm/3 mm,Standard,3,Sagittal reformats for bowel loops
+ct-adrenal-mass-protocol,acquisition,1,Non-Contrast,Diaphragm,Kidneys,N/A,2.5 mm,,,,,,,Measure absolute HU in mass
+ct-adrenal-mass-protocol,acquisition,2,Portal Venous,Diaphragm,Kidneys,70 sec,2.5 mm,,,,,,,Enhanced HU measurement
+ct-adrenal-mass-protocol,acquisition,3,15 Minute Delay,Diaphragm,Kidneys,900 sec,2.5 mm,,,,,,,Delayed HU for washout calculation
+ct-adrenal-mass-protocol,recon,1,,,,,,Axial,All phases,Adrenals,2.5 mm/2.5 mm,Standard,3,ROI measurements in mass
+ct-adrenal-mass-protocol,recon,2,,,,,,Axial,All phases,Adrenals,2.5 mm/2.5 mm,Standard,3,Compare enhancement
+ct-adrenal-mass-protocol,recon,3,,,,,,Coronal,Portal venous,Adrenals,3 mm/3 mm,Standard,3,Anatomic overview
+ct-biphasic-pancreas,acquisition,1,Pancreatic Phase,Diaphragm,Iliac crests,40-45 sec or bolus track,1-1.25 mm,,,,,,,Thin slices for small lesions
+ct-biphasic-pancreas,acquisition,2,Portal Venous,Diaphragm,Lesser Trochanter,70 sec,2.5 mm,,,,,,,Standard PV phase
+ct-biphasic-pancreas,recon,1,,,,,,Axial,Pancreatic,Pancreas,1.5 mm/1.5 mm,Standard,3,Thin slice pancreas
+ct-biphasic-pancreas,recon,2,,,,,,Axial,Portal venous,Abdomen,2.5 mm/2.5 mm,Standard,3,Liver and vessels
+ct-biphasic-pancreas,recon,3,,,,,,Coronal,Both phases,Abdomen,2.5 mm/2.5 mm,Standard,3,Pancreatic and peripancreatic
+ct-biphasic-pancreas,recon,4,,,,,,Curved MPR,Pancreatic,Pancreatic duct,1.5 mm,Standard,3,Duct evaluation
+ct-chest-abdomen-pelvis-with-contrast,acquisition,1,Portal Venous Phase,Lung bases or diaphragm,Pubic symphysis,70 sec,0.625 mm,,,,,,,Single portal venous phase
+ct-chest-abdomen-pelvis-with-contrast,acquisition,2,Renal Delay,1-2cm above kidneys,1-2cm below kidneys,300 sec,0.625 mm,,,,,,,Renal Delay series
+ct-chest-abdomen-pelvis-with-contrast,recon,1,,,,,,Axial,Portal venous,CAP,2.5 mm/2.5 mm,Standard,3,Chest diagnostic
+ct-chest-abdomen-pelvis-with-contrast,recon,2,,,,,,Axial,Renal Delay,Abdomen,2.5 mm/2.5 mm,Standard,3,Renal diagnostic
+ct-chest-abdomen-pelvis-with-contrast,recon,3,,,,,,Coronal,Portal venous,Full CAP,3 mm/3 mm,Standard,3,Coronal overview
+ct-cystogram,acquisition,1,Non-Contrast,Diaphragm,Pubic symphysis,70 sec,2.5 mm,,,,,,,Standard IV contrast
+ct-cystogram,acquisition,2,Bladder Filling,N/A,N/A,90 sec,N/A,,,,,,,Fill via Foley - not scanned
+ct-cystogram,acquisition,3,Cystogram,Iliac crests,Below bladder,100 sec,2 mm,,,,,,,Scan distended bladder
+ct-cystogram,recon,1,,,,,,Axial,Non-Contrast,Pelvis,2 mm/2 mm,Standard,3,Pre-contrast
+ct-cystogram,recon,2,,,,,,Axial,Cystogram,Pelvis,2 mm/2 mm,Standard,3,Distended bladder assessment
+ct-cystogram,recon,3,,,,,,Coronal,Cystogram,Pelvis,2.5 mm/2.5 mm,Standard,3,Bladder overview
+ct-cystogram,recon,4,,,,,,Sagittal,Cystogram,Pelvis,2.5 mm/2.5 mm,Standard,3,Bladder dome and base
+ct-enterography,acquisition,1,Enteric Phase,Diaphragm,Pubic symphysis,45 sec,0.625 mm,,,,,,,Optimal small bowel enhancement
+ct-enterography,acquisition,2,Renal Delay,1-2cm above kidneys,1-2cm below kidneys,300 sec,0.625 mm,,,,,,,Renal Delay series
+ct-enterography,recon,1,,,,,,Axial,Enteric,Full AP,2.5 mm/2.5 mm,Standard,3,Primary diagnostic
+ct-enterography,recon,2,,,,,,Coronal,Enteric,Full AP,3 mm/3 mm,Standard,3,Bowel loop assessment
+ct-enterography,recon,3,,,,,,Sagittal,Enteric,Full AP,3 mm/3 mm,Standard,3,Mesenteric evaluation
+ct-enterography,recon,4,,,,,,MIP,Enteric,Mesenteric vessels,5 mm slab,Vascular,3,Vascular assessment
+ct-ivp-intravenous-pyelogram,acquisition,1,Non-Contrast (optional),Top kidneys,Pubic symphysis,N/A,2 mm,,,,,,,Optional stone detection
+ct-ivp-intravenous-pyelogram,acquisition,2,Early Portal Venous,Top kidneys,Iliac crests,60 sec from 1st,2.5 mm,,,,,,,Nephrographic phase
+ct-ivp-intravenous-pyelogram,acquisition,3,Excretory Phase,Top kidneys,Pubic symphysis,90-120 sec from 2nd,1.25 mm,,,,,,,Collecting system opacification
+ct-ivp-intravenous-pyelogram,recon,1,,,,,,Axial,Non-contrast,KUB,2 mm/2 mm,Standard,3,Stone detection if done
+ct-ivp-intravenous-pyelogram,recon,2,,,,,,Axial,Portal venous,Kidneys,2.5 mm/2.5 mm,Standard,3,Renal parenchyma
+ct-ivp-intravenous-pyelogram,recon,3,,,,,,Axial,Excretory,Full urinary tract,2 mm/2 mm,Standard,3,Urothelial surfaces
+ct-ivp-intravenous-pyelogram,recon,4,,,,,,Coronal,Excretory,Full urinary tract,2.5 mm/2.5 mm,Standard,3,MIP urogram
+ct-kub-non-contrast,acquisition,1,Non-Contrast KUB,Top of kidneys,Pubic symphysis,N/A,1-2 mm,,,,,,,Low dose technique
+ct-kub-non-contrast,recon,1,,,,,,Axial,Non-contrast,KUB,2.5 mm/2.5 mm,Standard,3,Stone detection
+ct-kub-non-contrast,recon,2,,,,,,Axial,Non-contrast,KUB,2.5 mm/2.5 mm,Bone,N/A,Bone window for stones
+ct-kub-non-contrast,recon,3,,,,,,Coronal,Non-contrast,KUB,3 mm/3 mm,Standard,3,Coronal stone overview
+ct-kub-non-contrast,recon,4,,,,,,MIP,Non-contrast,Kidneys/ureters,5 mm slab,Standard,N/A,Stone localization
+ct-renal-mass-protocol,acquisition,1,Non-Contrast,Top kidneys,Iliac crests,N/A,2.5 mm,,,,,,,Baseline - detect fat/calcium
+ct-renal-mass-protocol,acquisition,2,Corticomedullary,Top kidneys,Iliac crests,20 sec,1.25 mm,,,,,,,Arterial/nephrographic
+ct-renal-mass-protocol,acquisition,3,Nephrographic/IVP,Top kidneys,Pubic symphysis,90-120 sec from 2nd injection,1.25 mm,,,,,,,Delayed enhancement + collecting system
+ct-renal-mass-protocol,recon,1,,,,,,Axial,Non-contrast,Kidneys,2.5 mm/2.5 mm,Standard,3,Characterize mass
+ct-renal-mass-protocol,recon,2,,,,,,Axial,Corticomedullary,Kidneys,1.5 mm/1.5 mm,Standard,3,Vascular and cortical enhancement
+ct-renal-mass-protocol,recon,3,,,,,,Axial,Nephrographic,Kidneys to pelvis,2 mm/2 mm,Standard,3,Mass enhancement + urinary opacification
+ct-renal-mass-protocol,recon,4,,,,,,Coronal,All phases,Kidneys,2.5 mm/2.5 mm,Standard,3,Compare enhancement phases
+ct-triple-phase-liver,acquisition,1,Non-Contrast,Diaphragm,Iliac crests,N/A,2.5 mm,,,,,,,Liver FOV
+ct-triple-phase-liver,acquisition,2,Late Arterial,Diaphragm,Iliac crests,30-35 sec or bolus track,1.25 mm,,,,,,,Liver FOV - hypervascular lesions
+ct-triple-phase-liver,acquisition,3,Portal Venous,Diaphragm,Pubic symphysis,70 sec,2.5 mm,,,,,,,Full AP FOV
+ct-triple-phase-liver,acquisition,4,Delayed Phase,Diaphragm,Iliac crests,300 sec,2.5 mm,,,,,,,Liver FOV - washout assessment
+ct-triple-phase-liver,recon,1,,,,,,Axial,All phases,Liver,2.5 mm/2.5 mm,Standard,3,Compare all phases
+ct-triple-phase-liver,recon,2,,,,,,Axial,Portal venous,Full AP,2.5 mm/2.5 mm,Standard,3,Full abdomen pelvis PV
+ct-triple-phase-liver,recon,3,,,,,,Coronal,All phases,Liver,3 mm/3 mm,Standard,3,Coronal comparison
+ct-triple-phase-liver,recon,4,,,,,,Subtraction,Arterial - NC,Liver,2.5 mm,Standard,3,Enhance lesion conspicuity
+calcium-score,acquisition,1,Calcium Score,Carina,Below heart,N/A,1.5 mm,,,,,,,Sequential axial gated acquisition
+calcium-score,recon,1,,,,,,Axial,Calcium score,Heart,3 mm/3 mm,Standard,3,For Agatston score calculation
+calcium-score,recon,2,,,,,,Axial,Calcium score,Chest,1.5 mm/1.5 mm,Lung,3,Lung FOV for Extracardiac findings
+coronary-cta-post-cabg,acquisition,1,Calcium Score,Lung apices,Diaphragm,N/A,1.5 mm,,,,,,,Calcium score
+coronary-cta-post-cabg,acquisition,2,Gated CTA,Lung apices,Diaphragm,Bolus tracked,0.5-0.625 mm,,,,,,,Retrospective gating - full chest FOV
+coronary-cta-post-cabg,recon,1,,,,,,Axial,Calcium score,Chest,3 mm/3 mm,Standard,3,For Agatston score calculation
+coronary-cta-post-cabg,recon,2,,,,,,Axial,Gated CTA,Full chest,0.6 mm/0.6 mm,Cardiac,3,Thin slice for grafts and native vessels
+coronary-cta-post-cabg,recon,3,,,,,,Sagittal,Gated CTA,Chest,2 mm/2 mm,Standard,3,Extracardiac assessment
+coronary-cta-post-cabg,recon,4,,,,,,3D VR,Gated CTA,Heart/grafts,0.5 mm source,Cardiac,3,MPRs by 3D lab
+coronary-cta,acquisition,1,Calcium Score,Carina,Below heart,N/A,3 mm,,,,,,,Calcium score
+coronary-cta,acquisition,2,Gated CTA,2cm above LAD,2cm below heart apex,Bolus tracked,0.5-0.625 mm,,,,,,,Retrospective gating
+coronary-cta,recon,1,,,,,,Axial,Calcium score,Heart,3 mm/3 mm,Standard,3,For Agatston score calculation
+coronary-cta,recon,2,,,,,,Axial,Calcium score,Chest,1.5 mm/1.5 mm,Lung,3,Lung FOV for Extracardiac findings
+coronary-cta,recon,3,,,,,,Axial,Gated CTA,Heart,0.625 mm/0.625 mm,Cardiac,3,Native coronary assessment
+coronary-cta,recon,4,,,,,,3D VR,Gated CTA,Heart,0.5 mm source,Cardiac,3,MPRs by 3D lab
+endocarditiscardiac-mass,acquisition,1,Non-contrast,Top of heart,Below heart,N/A,3 mm,,,,,,,Flash Non-contrast
+endocarditiscardiac-mass,acquisition,2,Gated CTA,Top of heart,Below heart,30 sec,0.5-0.625 mm,,,,,,,Retrospective ECG gating
+endocarditiscardiac-mass,acquisition,3,Delayed phase,Lung Apices,Diaphragm,70 sec,1 mm,,,,,,,"To detect for abscess, vegetation, masses"
+endocarditiscardiac-mass,recon,1,,,,,,Axial,Non-contrast,Heart,3 mm/3 mm,Standard,3,For dense material or calcifications
+endocarditiscardiac-mass,recon,2,,,,,,Axial,Gated CTA,Heart,0.75 mm/0.5 mm,Cardiac,3,Reformatted at best cardiac phase
+endocarditiscardiac-mass,recon,3,,,,,,Axial,Gated CTA,Heart,1 mm/1 mm,Standard,3,Functional series for valve assessment
+endocarditiscardiac-mass,recon,4,,,,,,Axial,Delayed,Chest,1 mm/1 mm,Standard,3,"Mass, vegetations"
+gated-cta-cap-sternotomy-revision,acquisition,1,Gated CTA Chest,Thoracic inlet,Diaphragm,Bolus tracked,0.5-0.625 mm,,,,,,,Retrospective gating
+gated-cta-cap-sternotomy-revision,acquisition,2,Flash AP,Diaphragm,Pubic symphysis,Immediate,0.625 mm,,,,,,,Arterial phase AP
+gated-cta-cap-sternotomy-revision,acquisition,3,Venogram Chest,Thoracic inlet,Diaphragm,60 sec,1 mm,,,,,,,Retrosternal venous structures
+gated-cta-cap-sternotomy-revision,recon,1,,,,,,Axial,Gated chest,Chest,0.75 mm/0.75 mm,Cardiac,3,Cardiac and coronary anatomy
+gated-cta-cap-sternotomy-revision,recon,2,,,,,,Axial,Venogram,Chest,1.25 mm/1.25 mm,Standard,3,Critical for retrosternal structures
+gated-cta-cap-sternotomy-revision,recon,3,,,,,,Coronal,All phases,Chest,2 mm/2 mm,Standard,3,Anterior chest wall structures
+gated-cta-cap-sternotomy-revision,recon,4,,,,,,3D VR,Venogram,Chest,1 mm source,Standard,3,3D map retrosternal vessels for surgery
+gated-cta-cap,acquisition,1,Flash Non-contrast,Thoracic inlet,Pubic symphysis,N/A,0.625 mm,,,,,,,Non-contrast
+gated-cta-cap,acquisition,2,Gated CTA Chest,Thoracic inlet,Diaphragm,Bolus tracked,0.5-0.625 mm,,,,,,,Retrospective gating chest
+gated-cta-cap,acquisition,3,Flash CTA AP,Diaphragm,Pubic symphysis,Immediate after chest,0.625 mm,,,,,,,High pitch helical - no gating
+gated-cta-cap,acquisition,4,Stent Delay (optional),Top of Stent,Bottom of Stent,40 sec,0.625 mm,,,,,,,Stent coverage
+gated-cta-cap,recon,1,,,,,,Axial,Gated chest,Chest,0.75 mm/0.75 mm,Cardiac,3,Aortic root and valve
+gated-cta-cap,recon,2,,,,,,Axial,Flash AP,Abdomen/Pelvis,2 mm/2 mm,Vascular,3,Abdominal aorta and branches
+gated-cta-cap,recon,3,,,,,,Coronal,Both,Full CAP,2.5 mm/2.5 mm,Vascular,3,MIP full aorta
+gated-cta-cap,recon,4,,,,,,Sagittal,Both,Full CAP,2.5 mm/2.5 mm,Vascular,3,Curved MPR entire aorta
+gated-cta-chest-post-op-cardiac-valve,acquisition,1,Gated CTA,Top of heart,Below heart,Bolus tracked,0.5-0.625 mm,,,,,,,Retrospective gating HIGH kV
+gated-cta-chest-post-op-cardiac-valve,recon,1,,,,,,Axial,Gated CTA,Heart,0.75 mm/0.75 mm,Cardiac,3,Prosthetic valve assessment
+gated-cta-chest-post-op-cardiac-valve,recon,2,,,,,,Axial,Gated CTA,Heart,Multi-phase,Cardiac,3,Multiple cardiac phases for motion
+gated-cta-chest-post-op-cardiac-valve,recon,3,,,,,,Short axis,Gated CTA,Valve level,1 mm,Cardiac,3,En face valve views
+gated-cta-chest-post-op-cardiac-valve,recon,4,,,,,,Long axis,Gated CTA,Heart,Multi-phase,Cardiac,3,Valve motion assessment
+gated-cta-chest,acquisition,1,Non-contrast,Lung apices,Diaphragm,N/A,3 mm,,,,,,,Calcium score
+gated-cta-chest,acquisition,2,Gated CTA,Lung apices,Diaphragm,Bolus tracked,0.5-0.625 mm,,,,,,,Retrospective ECG gating
+gated-cta-chest,acquisition,3,Stent delay (optional),Start of Stent,End of Stent,40 sec,0.5-0.625 mm,,,,,,,Optional for stent assessment
+gated-cta-chest,recon,1,,,,,,Axial,Gated CTA,Heart,0.75 mm/0.5 mm,Cardiac,3,Primary coronary assessment
+gated-cta-chest,recon,2,,,,,,Curved MPR,Gated CTA,Each coronary,0.75 mm,Cardiac,3,Vessel-specific reconstructions
+gated-cta-chest,recon,3,,,,,,Axial,Non-contrast,Heart,3 mm/3 mm,Standard,3,Calcium scoring
+gated-cta-chest,recon,4,,,,,,Short/long axis,Gated CTA,Heart,Multi-phase,Cardiac,3,Functional assessment
+gated-cta-heart-left-atrial-mapping,acquisition,1,Gated CTA,Pulmonary veins,Below LA,Bolus tracked,0.5 mm,,,,,,,Retrospective - thin slices critical
+gated-cta-heart-left-atrial-mapping,acquisition,2,Delayed CTA,Pulmonary veins,Below LA,40s,0.5 mm,,,,,,,Retrospective - thin slices critical
+gated-cta-heart-left-atrial-mapping,recon,1,,,,,,Axial,Gated CTA,LA/PV,0.5 mm/0.5 mm,Cardiac,3,Primary PV anatomy
+gated-cta-heart-left-atrial-mapping,recon,2,,,,,,Coronal,Gated CTA,LA/PV,0.75 mm,Cardiac,3,PV ostia en face
+gated-cta-heart-left-atrial-mapping,recon,3,,,,,,Sagittal,Gated CTA,LA/PV,0.75 mm,Cardiac,3,Lateral PV views
+gated-cta-heart-left-atrial-mapping,recon,4,,,,,,Axial,Delayed CTA,LA/PV,0.5 mm/0.5 mm,Cardiac,3,Left Atrial Appendage Thrombus
+gated-cta-tavr,acquisition,1,Gated CTA Chest,Thoracic inlet,Diaphragm,Bolus tracked,0.5 mm,,,,,,,Retrospective gating for valve
+gated-cta-tavr,acquisition,2,Flash CTA AP,Diaphragm,Femoral heads,Immediate,0.625 mm,,,,,,,Iliofemoral access planning
+gated-cta-tavr,recon,1,,,,,,Axial,Gated chest,Heart,0.5 mm/0.5 mm,Cardiac,3,Aortic valve and root measurements
+gated-cta-tavr,recon,2,,,,,,Axial,Flash AP,AP,2 mm/2 mm,Vascular,3,Access vessel assessment
+gated-cta-tavr,recon,3,,,,,,Double oblique,Gated chest,Aortic valve,0.5 mm,Cardiac,3,En face aortic annulus for sizing
+gated-cta-tavr,recon,4,,,,,,3D VR,Flash AP,Iliofemoral,1.5 mm source,Vascular,3,3D access planning
+gated-cta-tmvr,acquisition,1,Calcium Score,Carina,Base of heart,N/A,2.5 mm,,,,,,,Calcium scoring
+gated-cta-tmvr,acquisition,2,Gated CTA Chest,Carina,Base of heart,Bolus tracked,0.5 mm,,,,,,,NO DOSE PULSING - retrospective all phases
+gated-cta-tmvr,acquisition,3,Delayed CAP,Diaphragm,Femoral heads,80 sec,0.625 mm,,,,,,,Access planning and coronaries
+gated-cta-tmvr,recon,1,,,,,,Axial,Calcium Score,Apex of heart to Base of heart,2.5 mm/2.5 mm,Cardiac,3,Calcium scoring
+gated-cta-tmvr,recon,2,,,,,,Axial,Gated chest,Heart,0.5 mm/0.5 mm,Cardiac,3,Mitral valve measurements
+gated-cta-tmvr,recon,3,,,,,,Axial,Delayed CAP,AP,2 mm/2 mm,Vascular,3,Access vessels
+gated-cta-tmvr,recon,4,,,,,,Double oblique,Gated chest,Mitral valve,0.5 mm,Cardiac,3,En face mitral annulus
+gated-cta-tmvr,recon,5,,,,,,3D VR,Delayed CAP,Iliofemoral,1.5 mm,Vascular,3,Access planning
+gated-cta-ttvr,acquisition,1,Gated CTA Chest,Carina,Base of heart,Bolus tracked,0.5 mm,,,,,,,NO DOSE PULSING - all phases
+gated-cta-ttvr,acquisition,2,Delayed CAP,Diaphragm,Femoral heads,90 sec,0.625 mm,,,,,,,Access planning
+gated-cta-ttvr,recon,1,,,,,,Axial,Gated chest,Heart,0.5 mm/0.5 mm,Cardiac,3,Tricuspid valve measurements
+gated-cta-ttvr,recon,2,,,,,,Axial,Delayed CAP,AP,2 mm/2 mm,Vascular,3,Access assessment
+gated-cta-ttvr,recon,3,,,,,,Double oblique,Gated chest,Tricuspid valve,0.5 mm,Cardiac,3,En face tricuspid annulus
+gated-cta-ttvr,recon,4,,,,,,3D VR,Delayed CAP,Iliofemoral,1.5 mm,Vascular,3,Access planning
+ct-pulmonary-embolism,acquisition,1,Pulmonary Angiogram,Lung apices,Adrenal glands,Bolus tracked,0.625 mm,,,,,,,Caudocranial direction from diaphragm to apices
+ct-pulmonary-embolism,recon,1,,,,,,Axial,Angiogram,Chest,1.25 mm/1.25 mm,Standard,3,Mediastinal window for PE assessment
+ct-pulmonary-embolism,recon,2,,,,,,Axial,Angiogram,Chest,2.5 mm/2.5 mm,Lung,3,Lung window for parenchymal assessment
+ct-pulmonary-embolism,recon,3,,,,,,Coronal,Angiogram,Chest,3 mm/3 mm,Standard,3,Overview of pulmonary vasculature
+ct-pulmonary-embolism,recon,4,,,,,,Sagittal,Angiogram,Chest,3 mm/3 mm,Standard,3,Optional for clinical correlation
+dynamic-airway-ct,acquisition,1,Inspiration,Thoracic inlet,Carina+10cm,Full inspiration,0.625-1 mm,,,,,,,Thin for 3D
+dynamic-airway-ct,acquisition,2,Mid-Expiration,Thoracic inlet,Carina+10cm,Forced mid-expiration,0.625-1 mm,,,,,,,Same level as inspiration
+dynamic-airway-ct,acquisition,3,Cine (optional),Carina level,Single slice,Continuous breathing,Cine mode,,,,,,,Dynamic collapse
+dynamic-airway-ct,recon,1,,,,,,Axial,Both phases,Airway,1-2 mm/1 mm,Lung,3,Axial airway
+dynamic-airway-ct,recon,2,,,,,,Coronal,Both phases,Airway,1.5 mm,Lung,3,Coronal airway
+dynamic-airway-ct,recon,3,,,,,,Sagittal,Both phases,Airway,1.5 mm,Lung,3,Sagittal airway
+dynamic-airway-ct,recon,4,,,,,,3D VR,Both phases,Airway,0.625-1 mm source,Lung,N/A,3D airway reconstruction
+non-contrast-chest-lung-nodule-ultra-low-dose,acquisition,1,Ultra Low Dose Chest,Lung apices,Costophrenic angles,N/A,1-1.25 mm,,,,,,,Ultra low dose helical
+non-contrast-chest-lung-nodule-ultra-low-dose,recon,1,,,,,,Axial,Chest,Chest,1.25 mm/1.25 mm,Lung,Maximum IR 5,Nodule follow-up
+non-contrast-chest-lung-nodule-ultra-low-dose,recon,2,,,,,,Axial,Chest,Chest,2.5 mm/2.5 mm,Standard,High IR,Mediastinal
+non-contrast-chest-lung-nodule-ultra-low-dose,recon,3,,,,,,Coronal,Chest,Chest,2 mm/2 mm,Lung,Maximum IR,Coronal
+non-contrast-ct-chest-low-dose,acquisition,1,Low Dose Chest,Lung apices,Costophrenic angles,N/A,1-1.25 mm,,,,,,,Low dose helical
+non-contrast-ct-chest-low-dose,recon,1,,,,,,Axial,Chest,Chest,1.25 mm/1.25 mm,Lung,High IR 4-5,Thin slice nodule detection
+non-contrast-ct-chest-low-dose,recon,2,,,,,,Axial,Chest,Chest,2.5 mm/2.5 mm,Standard,3,Mediastinal window
+non-contrast-ct-chest-low-dose,recon,3,,,,,,Coronal,Chest,Chest,2 mm/2 mm,Lung,High IR,Coronal overview
+non-contrast-ct-chest-low-dose,recon,4,,,,,,MIP,Chest,Lungs,5 mm slab,Lung,N/A,Nodule detection
+non-contrast-ct-chest-routine,acquisition,1,NC Chest,Lung apices,Costophrenic angles,N/A,1-1.25 mm,,,,,,,Standard dose helical
+non-contrast-ct-chest-routine,recon,1,,,,,,Axial,Chest,Chest,2.5 mm/2.5 mm,Standard,3,Mediastinal window
+non-contrast-ct-chest-routine,recon,2,,,,,,Axial,Chest,Chest,2.5 mm/2.5 mm,Lung,3,Lung window
+non-contrast-ct-chest-routine,recon,3,,,,,,Coronal,Chest,Chest,3 mm/3 mm,Lung,3,Coronal lung
+non-contrast-ct-chest-routine,recon,4,,,,,,Sagittal,Chest,Chest,3 mm/3 mm,Standard,3,Optional mediastinum
+non-volumetric-hrct-1-phase-prone,acquisition,1,HRCT Prone,Lung apices,Costophrenic angles,Full inspiration,1 mm at 1-2cm intervals,,,,,,,Sequential prone
+non-volumetric-hrct-1-phase-prone,recon,1,,,,,,Axial,HRCT prone,Chest,1 mm display,Lung,3,Prone images
+non-volumetric-hrct-1-phase-prone,recon,2,,,,,,Coronal,HRCT prone,Chest,2 mm,Lung,3,Coronal prone
+non-volumetric-hrct-1-phase-prone,recon,3,,,,,,Compare,Supine vs prone,Posterior lungs,1 mm,Lung,3,Dependent changes
+non-volumetric-hrct-1-respiratory-phase,acquisition,1,HRCT Inspiration,Lung apices,Costophrenic angles,Full inspiration,1 mm at 1-2cm intervals,,,,,,,Sequential slices
+non-volumetric-hrct-1-respiratory-phase,recon,1,,,,,,Axial,HRCT,Chest,1 mm display,Lung,3,HRCT images
+non-volumetric-hrct-1-respiratory-phase,recon,2,,,,,,Coronal,HRCT,Chest,2 mm,Lung,3,Coronal overview
+non-volumetric-hrct-1-respiratory-phase,recon,3,,,,,,Targeted,HRCT,Area of interest,1 mm,Lung,3,Focus on abnormality
+non-volumetric-hrct-3-respiratory-phases,acquisition,1,Inspiration,Lung apices,Costophrenic angles,Full inspiration,1 mm axial at 1-2cm intervals,,,,,,,Sequential non-volumetric
+non-volumetric-hrct-3-respiratory-phases,acquisition,2,Full Expiration,Lung apices,Costophrenic angles,Full expiration,1 mm at intervals,,,,,,,Sequential
+non-volumetric-hrct-3-respiratory-phases,acquisition,3,Prone,Lung apices,Costophrenic angles,Full inspiration,1 mm at intervals,,,,,,,Sequential
+non-volumetric-hrct-3-respiratory-phases,recon,1,,,,,,Axial,All phases,Chest,1 mm display,Lung,3,Compare three phases
+non-volumetric-hrct-3-respiratory-phases,recon,2,,,,,,Coronal reformat,Inspiration,Chest,2 mm,Lung,3,Inspiration overview
+non-volumetric-hrct-3-respiratory-phases,recon,3,,,,,,Mosaic MIP,All phases,Lungs,5 mm,Lung,N/A,Air trapping visualization
+quantitative-lung-density-ct,acquisition,1,Volumetric Inspiration,Lung apices,Costophrenic angles,Full inspiration (TLC),0.625-1 mm,,,,,,,Contiguous for quantification
+quantitative-lung-density-ct,acquisition,2,Volumetric Expiration,Lung apices,Costophrenic angles,Full expiration (RV),0.625-1 mm,,,,,,,Contiguous complete exhalation
+quantitative-lung-density-ct,recon,1,,,,,,Axial,Inspiration,Chest,1 mm/1 mm,Lung,3,Quantitative inspiration
+quantitative-lung-density-ct,recon,2,,,,,,Axial,Expiration,Chest,1 mm/1 mm,Lung,3,Quantitative expiration
+quantitative-lung-density-ct,recon,3,,,,,,Density map,Inspiration,Lungs,Color coded,Lung,N/A,Emphysema distribution map
+quantitative-lung-density-ct,recon,4,,,,,,Density map,Expiration,Lungs,Color coded,Lung,N/A,Air trapping map
+volumetric-hrct-2-respiratory-phases,acquisition,1,Volumetric Inspiration,Lung apices,Costophrenic angles,Full inspiration,1 mm,,,,,,,Contiguous 1mm slices
+volumetric-hrct-2-respiratory-phases,acquisition,2,Limited Expiration,Carina,Costophrenic angles,Full expiration,1 mm,,,,,,,Limited coverage expiration
+volumetric-hrct-2-respiratory-phases,recon,1,,,,,,Axial,Inspiration,Chest,1 mm/1 mm,Lung,3,Thin slice ILD assessment
+volumetric-hrct-2-respiratory-phases,recon,2,,,,,,Axial,Expiration,Lower lungs,1 mm/1 mm,Lung,3,Air trapping assessment
+volumetric-hrct-2-respiratory-phases,recon,3,,,,,,Coronal,Inspiration,Chest,1.5 mm,Lung,3,ILD distribution
+volumetric-hrct-2-respiratory-phases,recon,4,,,,,,Sagittal,Inspiration,Chest,2 mm,Lung,3,Craniocaudal distribution
+ct-ankle,acquisition,1,CT Ankle,Distal tib/fib,Hindfoot,N/A or 60s if contrast,0.625 mm,,,,,,,Submillimeter
+ct-ankle,recon,1,,,,,,Axial,Ankle,Ankle,1 mm/1 mm,Bone,N/A,Bone algorithm
+ct-ankle,recon,2,,,,,,Coronal,Ankle,Ankle,1.5 mm/1 mm,Bone,N/A,Coronal ankle
+ct-ankle,recon,3,,,,,,Sagittal,Ankle,Ankle,1.5 mm/1 mm,Bone,N/A,Sagittal ankle
+ct-ankle,recon,4,,,,,,3D surface,Ankle,Bones,0.625 mm source,Bone,N/A,3D for complex fractures
+ct-arthrogram-shoulder,acquisition,1,CT Arthrogram,Acromion,Proximal humerus,Immediate post-injection,0.625 mm,,,,,,,Submillimeter for labrum
+ct-arthrogram-shoulder,recon,1,,,,,,Axial,Arthrogram,Shoulder,1 mm/0.75 mm,Standard,3,Thin for labral detail
+ct-arthrogram-shoulder,recon,2,,,,,,Coronal,Arthrogram,Shoulder,1.5 mm/1 mm,Standard,3,Coronal oblique shoulder
+ct-arthrogram-shoulder,recon,3,,,,,,Sagittal,Arthrogram,Shoulder,1.5 mm/1 mm,Standard,3,Sagittal oblique
+ct-arthrogram-shoulder,recon,4,,,,,,Abduction ABER,Arthrogram,Shoulder,1.5 mm,Standard,3,ABER position if done
+ct-elbow,acquisition,1,CT Elbow,Distal humerus,Proximal radius/ulna,N/A or 60s if contrast,0.625 mm,,,,,,,Submillimeter
+ct-elbow,recon,1,,,,,,Axial,Elbow,Elbow,1.5 mm/1 mm,Bone,N/A,Axial bone
+ct-elbow,recon,2,,,,,,Coronal,Elbow,Elbow,1.5 mm/1 mm,Bone,N/A,Coronal elbow
+ct-elbow,recon,3,,,,,,Sagittal,Elbow,Elbow,1.5 mm/1 mm,Bone,N/A,Sagittal elbow
+ct-elbow,recon,4,,,,,,3D surface,Elbow,Bones,0.625 mm source,Bone,N/A,3D for complex fractures
+ct-foot,acquisition,1,CT Foot,Calcaneus,Toes,N/A or 60s if contrast,0.625 mm,,,,,,,Submillimeter
+ct-foot,recon,1,,,,,,Axial,Foot,Foot,1 mm/1 mm,Bone,N/A,Axial bone
+ct-foot,recon,2,,,,,,Coronal,Foot,Foot,1.5 mm/1 mm,Bone,N/A,Coronal foot
+ct-foot,recon,3,,,,,,Sagittal,Foot,Foot,1.5 mm/1 mm,Bone,N/A,Sagittal foot
+ct-foot,recon,4,,,,,,Oblique,Foot,Lisfranc,1.5 mm,Bone,N/A,Lisfranc joint
+ct-gout-protocol,acquisition,1,DECT or CT,Joint region,Extended coverage,N/A,0.625-1 mm,,,,,,,Dual energy if available
+ct-gout-protocol,recon,1,,,,,,Axial,Gout,Joints,1 mm/1 mm,Bone and Standard,3,Standard images
+ct-gout-protocol,recon,2,,,,,,DECT urate,Gout,Joints,Color overlay,Urate algorithm,N/A,Urate crystal map
+ct-gout-protocol,recon,3,,,,,,3D volume,Gout,Urate burden,Volumetric,Urate,N/A,Quantify total urate
+ct-gout-protocol,recon,4,,,,,,Coronal,Gout,Joints,1.5 mm,Bone,N/A,Joint erosions
+ct-hand,acquisition,1,CT Hand,Distal radius/ulna,Fingertips,N/A or 60s if contrast,0.625 mm,,,,,,,Submillimeter
+ct-hand,recon,1,,,,,,Axial,Hand,Hand,1 mm/0.75 mm,Bone,N/A,Thin axial
+ct-hand,recon,2,,,,,,Coronal,Hand,Hand,1 mm/0.75 mm,Bone,N/A,Coronal hand
+ct-hand,recon,3,,,,,,Sagittal,Hand,Hand,1 mm/0.75 mm,Bone,N/A,Sagittal hand
+ct-hand,recon,4,,,,,,Oblique sagittal,Hand,Scaphoid,1 mm,Bone,N/A,Scaphoid long axis
+ct-hip,acquisition,1,CT Pelvis/Hips,Iliac crests,Proximal femurs,N/A or 60s if contrast,0.625 mm,,,,,,,Submillimeter for 3D
+ct-hip,recon,1,,,,,,Axial,Hips,Pelvis/hips,2 mm/2 mm,Bone,N/A,Axial bone
+ct-hip,recon,2,,,,,,Coronal,Hips,Pelvis/hips,2 mm/2 mm,Bone,N/A,Coronal hips
+ct-hip,recon,3,,,,,,Sagittal,Hips,Each hip,2 mm/2 mm,Bone,N/A,Sagittal hips
+ct-hip,recon,4,,,,,,Judet views,Hips,Acetabulum,2 mm oblique,Bone,N/A,Obturator and iliac obliques
+ct-knee,acquisition,1,CT Knee,Distal femur,Proximal tib/fib,N/A or 60s if contrast,0.625 mm,,,,,,,Submillimeter
+ct-knee,recon,1,,,,,,Axial,Knee,Knee,1.5 mm/1 mm,Bone,N/A,Bone algorithm
+ct-knee,recon,2,,,,,,Coronal,Knee,Knee,1.5 mm/1 mm,Bone,N/A,Coronal knee
+ct-knee,recon,3,,,,,,Sagittal,Knee,Knee,1.5 mm/1 mm,Bone,N/A,Sagittal knee
+ct-knee,recon,4,,,,,,3D surface,Knee,Bones,0.625 mm source,Bone,N/A,3D for surgical planning
+ct-lower-extremity,acquisition,1,CT Lower Extremity,Proximal to injury,Distal to injury,N/A or 60s if contrast,0.625-1 mm,,,,,,,Submillimeter
+ct-lower-extremity,recon,1,,,,,,Axial,Lower extremity,Region,2 mm/2 mm,Bone,N/A,Bone windows
+ct-lower-extremity,recon,2,,,,,,Coronal,Lower extremity,Region,2 mm/2 mm,Bone,N/A,Coronal
+ct-lower-extremity,recon,3,,,,,,Sagittal,Lower extremity,Region,2 mm/2 mm,Bone,N/A,Sagittal
+ct-lower-extremity,recon,4,,,,,,3D surface,Lower extremity,Bones,0.625 mm source,Bone,N/A,3D reconstruction
+ct-pelvis-msk,acquisition,1,CT Pelvis,Iliac crests,Proximal femurs,N/A or 60s if contrast,0.625 mm,,,,,,,Submillimeter for 3D
+ct-pelvis-msk,recon,1,,,,,,Axial,Pelvis,Pelvis,2 mm/2 mm,Bone,N/A,Axial bone
+ct-pelvis-msk,recon,2,,,,,,Coronal,Pelvis,Pelvis,2 mm/2 mm,Bone,N/A,Coronal pelvis
+ct-pelvis-msk,recon,3,,,,,,Sagittal,Pelvis,Pelvis,2 mm/2 mm,Bone,N/A,Sagittal sacrum
+ct-pelvis-msk,recon,4,,,,,,Inlet/Outlet,Pelvis,Pelvic ring,2-3 mm oblique,Bone,N/A,Pelvic ring views
+ct-shoulder,acquisition,1,CT Shoulder,Entire scapula,Proximal humerus,N/A or 60s if contrast,0.625 mm,,,,,,,Submillimeter
+ct-shoulder,recon,1,,,,,,Axial,Shoulder,Shoulder,1.5 mm/1 mm,Bone,N/A,Axial bone
+ct-shoulder,recon,2,,,,,,Coronal,Shoulder,Shoulder,2 mm/1.5 mm,Bone,N/A,Coronal shoulder
+ct-shoulder,recon,3,,,,,,Sagittal,Shoulder,Shoulder,2 mm/1.5 mm,Bone,N/A,Sagittal shoulder
+ct-shoulder,recon,4,,,,,,Oblique,Shoulder,Glenoid,1.5 mm,Bone,N/A,Glenoid en face
+ct-upper-extremity,acquisition,1,CT Upper Extremity,Proximal to injury,Distal to injury,N/A or 60s if contrast,0.625-1 mm,,,,,,,Submillimeter
+ct-upper-extremity,recon,1,,,,,,Axial,Upper extremity,Region,1-2 mm/1-2 mm,Bone,N/A,Bone windows
+ct-upper-extremity,recon,2,,,,,,Coronal,Upper extremity,Region,2 mm/2 mm,Bone,N/A,Coronal
+ct-upper-extremity,recon,3,,,,,,Sagittal,Upper extremity,Region,2 mm/2 mm,Bone,N/A,Sagittal
+ct-upper-extremity,recon,4,,,,,,3D surface,Upper extremity,Bones,0.625 mm source,Bone,N/A,3D if complex
+ct-wrist,acquisition,1,CT Wrist,Distal radius/ulna,Mid-carpus,N/A or immediate if arthrogram,0.625 mm,,,,,,,Submillimeter
+ct-wrist,recon,1,,,,,,Axial,Wrist,Wrist,1 mm/0.75 mm,Bone,N/A,Axial bone
+ct-wrist,recon,2,,,,,,Coronal,Wrist,Wrist,1 mm/0.75 mm,Bone,N/A,Coronal wrist
+ct-wrist,recon,3,,,,,,Sagittal,Wrist,Wrist,1 mm/0.75 mm,Bone,N/A,Sagittal wrist
+ct-wrist,recon,4,,,,,,Oblique sagittal,Wrist,Scaphoid,1 mm,Bone,N/A,Scaphoid long axis
+msk-protocol-general,acquisition,1,Non-contrast,Region,Region,N/A,0.625-1 mm,,,,,,,Baseline if done
+msk-protocol-general,acquisition,2,Contrast phase,Region,Region,60-90 sec if done,0.625-1 mm,,,,,,,Standard if done
+msk-protocol-general,acquisition,3,Delayed phase,Region,Region,5-10 min if done,1-2 mm,,,,,,,For infection/tumor
+msk-protocol-general,recon,1,,,,,,Axial,Acquisition,Region,1-2 mm/1-2 mm,Bone and Standard,3,Primary images
+msk-protocol-general,recon,2,,,,,,Coronal,Region,Region,2 mm/2 mm,Bone and Standard,3,Coronal reformats
+msk-protocol-general,recon,3,,,,,,Sagittal,Region,Region,2 mm/2 mm,Bone and Standard,3,Sagittal reformats
+msk-protocol-general,recon,4,,,,,,3D if needed,Region,Bones,0.625-1 mm source,Bone,N/A,3D for surgical planning
+brain-stroke-protocol,acquisition,1,NC Head,Skull base,Vertex,N/A,5 mm,,,,,,,STAT no contrast
+brain-stroke-protocol,acquisition,2,CTA Arch to Vertex,Aortic arch,Vertex,Bolus tracked aorta,0.625 mm,,,,,,,Intracranial vessels
+brain-stroke-protocol,acquisition,3,CTP (optional),Skull base,Vertex,Auto-triggered,5 mm dynamic,,,,,,,Perfusion if candidate
+brain-stroke-protocol,recon,1,,,,,,Axial,NC head,Brain,5 mm/5 mm,Brain,3,STAT hemorrhage detection
+brain-stroke-protocol,recon,2,,,,,,Axial,CTA Arch to Vertex,Head and Neck,1 mm/1 mm,Brain,3,LVO detection
+brain-stroke-protocol,recon,3,,,,,,MIP,CTA,Circle of Willis,Thick slab,Brain,N/A,Vessel overview
+brain-stroke-protocol,recon,4,,,,,,CTP maps,CTP,Perfusion,Color maps,N/A,N/A,CBF CBV MTT Tmax maps
+ct-cervical-spine,acquisition,1,C-spine Helical,Skull base,T1,N/A or 60s if contrast,0.625 mm,,,,,,,Submillimeter acquisition
+ct-cervical-spine,recon,1,,,,,,Axial,C-spine,C-spine,2 mm/2 mm,Bone,3,Bone and soft tissue
+ct-cervical-spine,recon,2,,,,,,Sagittal,C-spine,C-spine,2 mm/1.5 mm,Bone,3,Midline and parasagittal
+ct-cervical-spine,recon,3,,,,,,Coronal,C-spine,C-spine,2 mm/2 mm,Bone,3,Coronal alignment
+ct-cervical-spine,recon,4,,,,,,Oblique sagittal,C-spine,Neural foramina,2 mm,Bone,3,Foraminal narrowing
+ct-complete-spine,acquisition,1,Complete Spine,Skull base,Sacrum,N/A or 60s if contrast,0.625-1 mm,,,,,,,Submillimeter entire spine
+ct-complete-spine,recon,1,,,,,,Axial,Spine,Full spine,2 mm/2 mm,Bone,3,Axial entire spine
+ct-complete-spine,recon,2,,,,,,Sagittal,Spine,Full spine,2 mm/1.5 mm,Bone,3,Sagittal full spine
+ct-complete-spine,recon,3,,,,,,Coronal,Spine,Full spine,2.5 mm/2 mm,Bone,3,Coronal full spine
+ct-facial-bones,acquisition,1,Facial Bones,Frontal sinus,Mandible,N/A,0.625 mm,,,,,,,Submillimeter for 3D
+ct-facial-bones,recon,1,,,,,,Axial,Face,Face,1.25 mm/1 mm,Bone,N/A,Axial bone windows
+ct-facial-bones,recon,2,,,,,,Coronal,Face,Face,1.25 mm/1 mm,Bone,N/A,Coronal face
+ct-facial-bones,recon,3,,,,,,Sagittal,Face,Midface,2 mm/1.5 mm,Bone,N/A,Sagittal midline
+ct-facial-bones,recon,4,,,,,,3D,Face,Facial bones,0.625 mm source,Bone,N/A,3D surface rendering
+ct-head-3d-stereotactic,acquisition,1,Stereotactic Head,Vertex,Skull base,N/A (or 60-90s if contrast),0.5-0.625 mm,,,,,,,Isotropic submillimeter
+ct-head-3d-stereotactic,recon,1,,,,,,Axial,Stereo,Brain,0.5 mm/0.5 mm,Brain (Bone if needed),3,Isotropic axial
+ct-head-3d-stereotactic,recon,2,,,,,,Coronal,Stereo,Brain,0.5 mm/0.5 mm,Brain,3,Isotropic coronal
+ct-head-3d-stereotactic,recon,3,,,,,,Sagittal,Stereo,Brain,0.5 mm/0.5 mm,Brain,3,Isotropic sagittal midline
+ct-head-3d-stereotactic,recon,4,,,,,,3D surface,Stereo,Brain,0.5 mm source,Brain,3,Surface for navigation
+ct-lumbar-spine,acquisition,1,L-spine Helical,T12,Sacrum,N/A or 60s if contrast,0.625 mm,,,,,,,Submillimeter
+ct-lumbar-spine,recon,1,,,,,,Axial,L-spine,L-spine,2 mm/2 mm,Bone,3,Bone and soft tissue
+ct-lumbar-spine,recon,2,,,,,,Sagittal,L-spine,L-spine,2 mm/1.5 mm,Bone,3,Midline and parasagittal
+ct-lumbar-spine,recon,3,,,,,,Coronal,L-spine,L-spine,2.5 mm/2 mm,Bone,3,Coronal overview
+ct-lumbar-spine,recon,4,,,,,,Oblique sagittal,L-spine,Neural foramina,2 mm,Bone,3,Foraminal assessment
+ct-myelogram,acquisition,1,CT Myelogram,Region of interest,Extended coverage,N/A,0.625 mm,,,,,,,Submillimeter for detail
+ct-myelogram,recon,1,,,,,,Axial,Myelogram,Spine,1 mm/1 mm,Bone and Standard,3,Nerve roots and thecal sac
+ct-myelogram,recon,2,,,,,,Sagittal,Myelogram,Spine,1.5 mm/1 mm,Standard,3,Thecal sac and compression
+ct-myelogram,recon,3,,,,,,Coronal,Myelogram,Spine,2 mm/1.5 mm,Standard,3,Coronal nerve roots
+ct-myelogram,recon,4,,,,,,Oblique sagittal,Myelogram,Neural foramina,1.5 mm,Standard,3,Foraminal nerve roots
+ct-orbits,acquisition,1,Axial Orbits,Superior orbital rim,Maxillary sinus,N/A or 60s if contrast,1-1.5 mm,,,,,,,Parallel to optic nerves
+ct-orbits,recon,1,,,,,,Axial,Orbits,Orbits,1.5 mm/1 mm,Bone and Standard,3,Bone for fractures soft tissue for pathology
+ct-orbits,recon,2,,,,,,Coronal,Orbits,Orbits,1.5 mm/1 mm,Bone and Standard,3,Coronal orbits
+ct-orbits,recon,3,,,,,,Sagittal,Orbits,Optic nerve,2 mm/1.5 mm,Standard,3,Optic nerve canal
+ct-orbits,recon,4,,,,,,3D if trauma,Orbits,Orbital bones,1 mm source,Bone,N/A,3D if complex fracture
+ct-parathyroid-4d,acquisition,1,Non-Contrast,Skull base,Carina,N/A,2.5 mm,,,,,,,Baseline
+ct-parathyroid-4d,acquisition,2,Arterial Phase,Skull base,Carina,25 sec,2 mm,,,,,,,Parathyroid enhancement
+ct-parathyroid-4d,acquisition,3,Venous Phase,Skull base,Carina,55 sec,2 mm,,,,,,,Thyroid enhancement
+ct-parathyroid-4d,acquisition,4,Delayed Phase,Skull base,Carina,90 sec,2.5 mm,,,,,,,Washout phase
+ct-parathyroid-4d,recon,1,,,,,,Axial,All phases,Neck,2 mm/2 mm,Standard,3,Compare all four phases
+ct-parathyroid-4d,recon,2,,,,,,Axial,Arterial,Neck,2 mm/2 mm,Standard,3,Peak parathyroid enhancement
+ct-parathyroid-4d,recon,3,,,,,,Subtraction,Arterial - NC,Neck,2 mm,Standard,3,Enhance parathyroid conspicuity
+ct-parathyroid-4d,recon,4,,,,,,Coronal,Arterial,Neck,2.5 mm,Standard,3,Ectopic adenoma search
+ct-sinus-stereotactic,acquisition,1,Stereotactic Sinus,Frontal sinus,Hard palate,N/A,0.625 mm,,,,,,,Isotropic submillimeter
+ct-sinus-stereotactic,recon,1,,,,,,Axial,Stereo,Sinuses,0.625 mm/0.625 mm,Bone,N/A,Isotropic bone
+ct-sinus-stereotactic,recon,2,,,,,,Coronal,Stereo,Sinuses,0.625 mm/0.625 mm,Bone,N/A,Isotropic coronal
+ct-sinus-stereotactic,recon,3,,,,,,Sagittal,Stereo,Sinuses,0.625 mm/0.625 mm,Bone,N/A,Isotropic sagittal
+ct-sinus-stereotactic,recon,4,,,,,,3D surface,Stereo,Sinuses,0.625 mm source,Bone,N/A,Surface rendering for navigation
+ct-sinus,acquisition,1,Coronal Sinus,Frontal sinus,Maxillary sinus,N/A,0.625 mm,,,,,,,Direct coronal if possible
+ct-sinus,acquisition,2,Axial reformat,Frontal,Maxillary,From coronal,0.625 mm,,,,,,,Reformatted from coronal
+ct-sinus,recon,1,,,,,,Coronal,Sinus,Sinuses,1.25 mm/0.75 mm,Bone,N/A,Bone window
+ct-sinus,recon,2,,,,,,Coronal,Sinus,Sinuses,3 mm/2 mm,Standard,3,Soft tissue
+ct-sinus,recon,3,,,,,,Axial,Sinus,Sinuses,2 mm/2 mm,Bone,N/A,Axial bone
+ct-sinus,recon,4,,,,,,Sagittal,Sinus,Sinuses,2 mm/2 mm,Bone,N/A,Midline and lateral
+ct-soft-tissue-neck,acquisition,1,Contrast Neck,Skull base,Thoracic inlet,60-70 sec,1-2 mm,,,,,,,Venous phase
+ct-soft-tissue-neck,recon,1,,,,,,Axial,Neck,Neck,2.5 mm/2 mm,Standard,3,Soft tissue neck
+ct-soft-tissue-neck,recon,2,,,,,,Coronal,Neck,Neck,3 mm/2.5 mm,Standard,3,Coronal neck spaces
+ct-soft-tissue-neck,recon,3,,,,,,Sagittal,Neck,Midline,3 mm/2.5 mm,Standard,3,Airway and retropharyngeal
+ct-temporal-bones,acquisition,1,Axial Temporal,EAC,Petrous apex,N/A,0.5-0.625 mm,,,,,,,Parallel to lateral SCC
+ct-temporal-bones,acquisition,2,Coronal Temporal,EAC,IAC,N/A,0.5-0.625 mm,,,,,,,Perpendicular to petrous ridge
+ct-temporal-bones,recon,1,,,,,,Axial,Temporal,Bilateral,0.5 mm/0.5 mm,Bone sharp,N/A,Ultra HR bone
+ct-temporal-bones,recon,2,,,,,,Coronal,Temporal,Bilateral,0.5 mm/0.5 mm,Bone sharp,N/A,Coronal bone
+ct-temporal-bones,recon,3,,,,,,Oblique sagittal,Temporal,Ossicles,0.5 mm,Bone,N/A,Ossicular chain
+ct-temporal-bones,recon,4,,,,,,Pöschl/Stenvers,Temporal,IAC,0.75 mm,Bone,N/A,IAC oriented views
+ct-thoracic-spine,acquisition,1,T-spine Helical,C7,L1,N/A or 60s if contrast,0.625-1 mm,,,,,,,Submillimeter
+ct-thoracic-spine,recon,1,,,,,,Axial,T-spine,T-spine,2 mm/2 mm,Bone,3,Bone and soft tissue
+ct-thoracic-spine,recon,2,,,,,,Sagittal,T-spine,T-spine,2 mm/1.5 mm,Bone,3,Midline and parasagittal
+ct-thoracic-spine,recon,3,,,,,,Coronal,T-spine,T-spine,2.5 mm/2 mm,Bone,3,Coronal overview
+cta-head-and-neck-arch-to-vertex,acquisition,1,CTA Neck,Aortic arch,Skull base,Bolus tracked,0.625 mm,,,,,,,Arterial phase - caudocranial
+cta-head-and-neck-arch-to-vertex,acquisition,2,CTA Head,Skull base,Vertex,Immediate,0.625 mm,,,,,,,Same bolus as neck - single acquisition
+cta-head-and-neck-arch-to-vertex,recon,1,,,,,,Axial,CTA,Neck,1 mm/1 mm,Vascular,3,Submillimeter for carotid assessment
+cta-head-and-neck-arch-to-vertex,recon,2,,,,,,Axial,CTA,Head,1 mm/1 mm,Vascular,3,Submillimeter for circle of Willis
+cta-head-and-neck-arch-to-vertex,recon,3,,,,,,Coronal,CTA,Neck,2 mm/2 mm,Vascular,3,MIP for carotid overview
+cta-head-and-neck-arch-to-vertex,recon,4,,,,,,Sagittal,CTA,Full,2 mm/2 mm,Vascular,3,MIP for vertebral arteries
+cta-head,acquisition,1,NC Head (optional),Vertex,Foramen magnum,N/A,5 mm,,,,,,,Baseline if SAH
+cta-head,acquisition,2,CTA Head,Skull base,Vertex,Bolus tracked,0.5-0.625 mm,,,,,,,Submillimeter for 3D
+cta-head,recon,1,,,,,,Axial,CTA,Head,0.75 mm/0.75 mm,Brain,3,Source images
+cta-head,recon,2,,,,,,MIP,CTA,Circle of Willis,Thick slab,Brain,N/A,Vessel overview
+cta-head,recon,3,,,,,,3D VR,CTA,Intracranial vessels,0.5 mm source,Brain,N/A,3D angiogram
+cta-head,recon,4,,,,,,Curved MPR,CTA,Individual vessels,0.75 mm,Brain,3,Vessel-specific views
+cta-neck,acquisition,1,CTA Neck,Aortic arch,Skull base,Bolus tracked,0.625 mm,,,,,,,Caudocranial
+cta-neck,recon,1,,,,,,Axial,CTA,Neck,1 mm/1 mm,Vascular,3,Source images
+cta-neck,recon,2,,,,,,Coronal,CTA,Neck,1.5 mm,Vascular,3,Vessel overview
+cta-neck,recon,3,,,,,,Sagittal,CTA,Carotids,1.5 mm,Vascular,3,Vertebral arteries
+cta-neck,recon,4,,,,,,Curved MPR,CTA,Carotid bifurcations,1 mm,Vascular,3,Stenosis measurement
+ctv-head,acquisition,1,NC Head,Vertex,Foramen magnum,N/A,5 mm,,,,,,,Baseline
+ctv-head,acquisition,2,CTV Head,Skull base,Vertex,60-90 sec delay,0.625-1 mm,,,,,,,Venous phase
+ctv-head,recon,1,,,,,,Axial,CTV,Head,1 mm/1 mm,Brain,3,Venous sinuses
+ctv-head,recon,2,,,,,,MIP,CTV,Sinuses,Thick slab,Brain,N/A,Venogram overview
+ctv-head,recon,3,,,,,,3D VR,CTV,Venous system,1 mm source,Brain,N/A,3D venogram
+ctv-head,recon,4,,,,,,Sagittal,CTV,Midline,1.5 mm,Brain,3,Sagittal sinus
+non-contrast-ct-head,acquisition,1,Non-Contrast Head,Vertex,Foramen magnum,N/A,5 mm,,,,,,,Angle parallel to hard palate
+non-contrast-ct-head,recon,1,,,,,,Axial,Non-contrast,Brain,5 mm/5 mm,Brain,3,Primary diagnostic - brain window
+non-contrast-ct-head,recon,2,,,,,,Axial,Non-contrast,Brain,5 mm/5 mm,Bone,N/A,Bone window for fractures
+non-contrast-ct-head,recon,3,,,,,,Coronal,Non-contrast,Brain,3 mm/3 mm,Brain,3,Optional - for skull base evaluation
+non-contrast-ct-head,recon,4,,,,,,Sagittal,Non-contrast,Brain,3 mm/3 mm,Brain,3,Optional - for midline structures
+pregnant-trauma-ct-ap,acquisition,1,Portal Venous AP,Diaphragm,Pubic symphysis,70 sec,2.5 mm,,,,,,,Single phase minimize radiation
+pregnant-trauma-ct-ap,recon,1,,,,,,Axial,Portal venous,AP,2.5 mm/2.5 mm,Standard,3,Maternal organs
+pregnant-trauma-ct-ap,recon,2,,,,,,Coronal,Portal venous,AP,3 mm/3 mm,Standard,3,Overview
+pregnant-trauma-ct-ap,recon,3,,,,,,Sagittal,Portal venous,Pelvis,3 mm/3 mm,Standard,3,Uterus and placenta
+trauma-chest-ct,acquisition,1,NC Chest,Lung apices,Costophrenic angles,N/A,0.625-1 mm,,,,,,,Submillimeter for ribs
+trauma-chest-ct,acquisition,2,CTA Chest,Arterial (bolus tracked),Lung apices to Costophrenic angles,Bolus tracked,0.625 mm,,,,,,,Evaluate for aortic injury
+trauma-chest-ct,recon,1,,,,,,Axial,Chest,Chest,2.5 mm/2.5 mm,Standard,3,Mediastinal window
+trauma-chest-ct,recon,2,,,,,,Axial,Chest,Chest,2.5 mm/2.5 mm,Lung,3,Lung window
+trauma-chest-ct,recon,3,,,,,,Axial,CTA Chest,Chest,2.5 mm/2.5 mm,Standard,3,Evaluate for aortic injury
+trauma-chest-ct,recon,4,,,,,,Coronal,Chest,Chest,2.5 mm/2.5 mm,Bone,N/A,Rib overview
+trauma-chest-ct,recon,5,,,,,,Oblique sagittal,Chest,Ribs,2 mm/2 mm,Bone,N/A,Rib reformats all ribs
+trauma-code-aaa,acquisition,1,Non-Contrast CAP,Diaphragm,Pubic symphysis,N/A,2.5 mm,,,,,,,RAPID - hematoma
+trauma-code-aaa,acquisition,2,Arterial CAP,Diaphragm,Pubic symphysis,25-30 sec,0.625 mm,,,,,,,Active bleeding + aneurysm
+trauma-code-aaa,acquisition,3,Portal Venous CAP,Diaphragm,Pubic symphysis,70 sec,2.5 mm,,,,,,,Organs and venous
+trauma-code-aaa,recon,1,,,,,,Axial,All phases,CAP,2.5 mm/2.5 mm,Vascular/Standard,3,Compare phases
+trauma-code-aaa,recon,2,,,,,,Coronal,Arterial,CAP,2.5 mm/2.5 mm,Vascular,3,Aorta and bleeding
+trauma-code-aaa,recon,3,,,,,,Sagittal,Arterial,Aorta,2 mm/2 mm,Vascular,3,Aorta extent
+trauma-code-aaa,recon,4,,,,,,3D VR,Arterial,Aorta,1.5 mm,Vascular,3,STAT 3D for EVAR planning
+trauma-cta-chest-with-pv-ct-ap,acquisition,1,CTA Chest,Lung apices,Diaphragm,Bolus tracked,0.625 mm,,,,,,,Arterial phase
+trauma-cta-chest-with-pv-ct-ap,acquisition,2,Portal Venous AP,Diaphragm,Pubic symphysis,70 sec from start,0.625 mm,,,,,,,Portal venous phase
+trauma-cta-chest-with-pv-ct-ap,recon,1,,,,,,Axial,CTA chest,Chest,1.25 mm/1.25 mm,Vascular,3,Aorta and great vessels
+trauma-cta-chest-with-pv-ct-ap,recon,2,,,,,,Axial,PV AP,Abdomen/Pelvis,2.5 mm/2.5 mm,Standard,3,Solid organs
+trauma-cta-chest-with-pv-ct-ap,recon,3,,,,,,Coronal,CTA chest,Chest,2 mm/2 mm,Vascular,3,Aorta overview
+trauma-cta-chest-with-pv-ct-ap,recon,4,,,,,,Sagittal,CTA chest,Aorta,2 mm/2 mm,Vascular,3,Sagittal aorta
+trauma-head-and-c-spine,acquisition,1,NC Head,Vertex,Foramen magnum,N/A,5 mm,,,,,,,Parallel to hard palate
+trauma-head-and-c-spine,acquisition,2,NC C-spine,Skull base,T1,N/A,0.625 mm,,,,,,,Helical submillimeter
+trauma-head-and-c-spine,recon,1,,,,,,Axial,Head,Brain,5 mm/5 mm,Brain,3,Brain and bone windows
+trauma-head-and-c-spine,recon,2,,,,,,Sagittal,C-spine,C-spine,2 mm/2 mm,Bone,3,Midline and parasagittal
+trauma-head-and-c-spine,recon,3,,,,,,Coronal,C-spine,C-spine,2 mm/2 mm,Bone,3,Coronal alignment
+trauma-head-and-c-spine,recon,4,,,,,,Axial,C-spine,C-spine,2 mm/2 mm,Bone,3,Axial bone windows
+trauma-head-c-spine-and-facial-bones,acquisition,1,NC Head,Vertex,Foramen magnum,N/A,5 mm,,,,,,,Standard head
+trauma-head-c-spine-and-facial-bones,acquisition,2,NC C-spine,Skull base,T1,N/A,0.625 mm,,,,,,,Submillimeter
+trauma-head-c-spine-and-facial-bones,acquisition,3,NC Facial Bones,Frontal sinus,Mandible,N/A,0.625 mm,,,,,,,Submillimeter for 3D
+trauma-head-c-spine-and-facial-bones,recon,1,,,,,,Axial,Head,Brain,5 mm/5 mm,Brain/Bone,3,Brain and skull
+trauma-head-c-spine-and-facial-bones,recon,2,,,,,,Sagittal,C-spine,C-spine,2 mm/2 mm,Bone,3,C-spine alignment
+trauma-head-c-spine-and-facial-bones,recon,3,,,,,,Axial,Face,Face,1.25 mm/1 mm,Bone,N/A,Facial bones
+trauma-head-c-spine-and-facial-bones,recon,4,,,,,,Coronal,Face,Face,1.25 mm/1 mm,Bone,N/A,Facial coronal
+trauma-lower-extremity-runoff-cta,acquisition,1,CTA Arterial,Coverage as needed,Distal to injury,Bolus tracked,0.625 mm,,,,,,,Arterial phase runoff
+trauma-lower-extremity-runoff-cta,recon,1,,,,,,Axial,Arterial,Legs,1.5 mm/1.5 mm,Vascular,3,Assess vessels
+trauma-lower-extremity-runoff-cta,recon,2,,,,,,Coronal,Arterial,Legs,2 mm/2 mm,Vascular,3,MIP overview
+trauma-lower-extremity-runoff-cta,recon,3,,,,,,Sagittal,Arterial,Injured area,2 mm/2 mm,Vascular,3,Vessel-bone relationship
+trauma-lower-extremity-runoff-cta,recon,4,,,,,,3D VR,Arterial,Vessels,1 mm source,Vascular,3,3D vascular anatomy
+cta-abdomen-pelvis,acquisition,1,CTA Arterial,Diaphragm,Femoral heads,Bolus tracked,0.625 mm,,,,,,,Caudocranial direction
+cta-abdomen-pelvis,acquisition,2,Stent Delay (optional),Top of Stent,Bottom of Stent,40 sec,0.625 mm,,,,,,,Stent coverage
+cta-abdomen-pelvis,recon,1,,,,,,Axial,Arterial,Abdomen,2 mm/2 mm,Vascular,3,Abdominal aorta and visceral branches
+cta-abdomen-pelvis,recon,2,,,,,,Axial,Arterial,Pelvis,2.5 mm/2.5 mm,Vascular,3,Iliac vessels
+cta-abdomen-pelvis,recon,3,,,,,,Coronal,Arterial,Full AP,3 mm/3 mm,Vascular,3,MIP coronal aorta and branches
+cta-abdomen-pelvis,recon,4,,,,,,Sagittal,Arterial,Full AP,3 mm/3 mm,Vascular,3,Curved MPR of aorta
+cta-chest-abdomen-pelvis,acquisition,1,CTA Arterial,Thoracic inlet,Pubic symphysis,Bolus tracked,0.625 mm,,,,,,,Caudocranial from feet to head
+cta-chest-abdomen-pelvis,acquisition,2,Stent Delay (optional),Top of Stent,Bottom of Stent,40 sec,0.625 mm,,,,,,,Stent coverage
+cta-chest-abdomen-pelvis,acquisition,3,Vasculitis Delayed (optional),Thoracic inlet,Pubic symphysis,90 sec,0.625 mm,,,,,,,Wall enhancement/thickening
+cta-chest-abdomen-pelvis,recon,1,,,,,,Axial,Arterial,Chest,2 mm/2 mm,Vascular,3,Thoracic aorta evaluation
+cta-chest-abdomen-pelvis,recon,2,,,,,,Axial,Arterial,Abdomen/Pelvis,2.5 mm/2.5 mm,Vascular,3,Abdominal aorta and branches
+cta-chest-abdomen-pelvis,recon,3,,,,,,Coronal,Arterial,Full CAP,3 mm/3 mm,Vascular,3,MIP full aorta overview
+cta-chest-abdomen-pelvis,recon,4,,,,,,Sagittal,Arterial,Full CAP,3 mm/3 mm,Vascular,3,Sagittal MIP and curved MPR of aorta
+cta-chest,acquisition,1,CTA Arterial Chest,Lung apices,Adrenal glands,Bolus tracked,0.625 mm,,,,,,,Caudocranial direction
+cta-chest,acquisition,2,Stent Delay (optional),Top of Stent,Bottom of Stent,40 sec,0.625 mm,,,,,,,Stent coverage
+cta-chest,recon,1,,,,,,Axial,Arterial,Chest,1.25 mm/1.25 mm,Vascular,3,Primary diagnostic series
+cta-chest,recon,2,,,,,,Axial,Arterial,Chest,2.5 mm/2.5 mm,Lung,3,Lung window for parenchyma
+cta-chest,recon,3,,,,,,Coronal,Arterial,Chest,2.5 mm/2.5 mm,Vascular,3,MIP coronal great vessels
+cta-chest,recon,4,,,,,,Sagittal,Arterial,Chest,2.5 mm/2.5 mm,Vascular,3,MIP sagittal aortic arch
+cta-diep-flap-pre-operative,acquisition,1,CTA Arterial,Xiphoid,Pubic symphysis,Bolus tracked,0.625 mm,,,,,,,Focus on abdominal wall
+cta-diep-flap-pre-operative,recon,1,,,,,,Axial,Arterial,Abdomen,1 mm/1 mm,Vascular,3,Thin slice for perforator mapping
+cta-diep-flap-pre-operative,recon,2,,,,,,Coronal,Arterial,Abdomen,1.5 mm/1.5 mm,Vascular,3,MIP to show perforator course
+cta-diep-flap-pre-operative,recon,3,,,,,,Sagittal,Arterial,Abdomen,2 mm/2 mm,Vascular,3,Lateral views of perforators
+cta-diep-flap-pre-operative,recon,4,,,,,,3D VR,Arterial,Anterior abd wall,1 mm source,Vascular,3,3D reconstruction for surgical planning
+cta-for-gi-bleed,acquisition,1,Arterial Phase,Diaphragm,Pubic symphysis,25 sec,0.625 mm,,,,,,,High flow rate 5 mL/s critical
+cta-for-gi-bleed,acquisition,2,Delayed Phase,Diaphragm,Pubic symphysis,90 sec,0.625 mm,,,,,,,Extended delay to see pooling of contrast
+cta-for-gi-bleed,recon,1,,,,,,Axial,Arterial,Full AP,2.5 mm/2.5 mm,Standard,3,Look for arterial blush/extravasation
+cta-for-gi-bleed,recon,2,,,,,,Axial,Delayed,Full AP,2.5 mm/2.5 mm,Standard,3,Look for contrast pooling in bowel
+cta-for-gi-bleed,recon,3,,,,,,Coronal,All phases,Full AP,3 mm/3 mm,Standard,3,MIP to track extravasation
+cta-lower-extremity-free-flap,acquisition,1,CTA Arterial,Mid-Thigh,Toes,Bolus tracked,0.625 mm,,,,,,,Bilateral for comparison and variants
+cta-lower-extremity-free-flap,acquisition,2,CTA Delayed,Mid-Thigh,Toes,60s,0.625 mm,,,,,,,Bilateral for comparison and variants
+cta-lower-extremity-free-flap,recon,1,,,,,,Axial,Arterial,Thighs/Legs,1 mm/1 mm,Vascular,3,Thin slice for perforator identification
+cta-lower-extremity-free-flap,recon,2,,,,,,Coronal,Arterial,Full legs,1.5 mm/1.5 mm,Vascular,3,MIP to show perforator course
+cta-lower-extremity-free-flap,recon,3,,,,,,Sagittal,Arterial,Full legs,2 mm/2 mm,Vascular,3,Lateral perforator views
+cta-lower-extremity-runoff-for-pad,acquisition,1,CTA Arterial,Renal arteries,Ankle,Bolus tracked,0.625 mm,,,,,,,May need slower table speed if severe PAD
+cta-lower-extremity-runoff-for-pad,acquisition,2,CTA Runoff,Mid Thigh,Foot,Immediately after CTA,0.625 mm,,,,,,,Runoff phase to evaluate distal vessels
+cta-lower-extremity-runoff-for-pad,recon,1,,,,,,Axial,Arterial,Pelvis/Legs,2 mm/2 mm,Vascular,3,Assess all vessel segments
+cta-lower-extremity-runoff-for-pad,recon,2,,,,,,Coronal,Arterial,Full legs,3 mm/3 mm,Vascular,3,MIP full arterial tree
+cta-lower-extremity-runoff-for-pad,recon,3,,,,,,Sagittal,Arterial,Full legs,3 mm/3 mm,Vascular,3,Lateral views of vessels
+cta-lower-extremity-runoff-for-pad,recon,4,,,,,,3D VR,Arterial,Full legs,1.5 mm source,Vascular,3,3D for surgical planning
+cta-mesenteric-ischemia,acquisition,1,Arterial Phase,Diaphragm,Iliac crests,25 sec,0.625 mm,,,,,,,Focus on celiac SMA IMA
+cta-mesenteric-ischemia,acquisition,2,Portal Venous,Diaphragm,Pubic symphysis,70 sec,0.625 mm,,,,,,,Assess bowel wall enhancement
+cta-mesenteric-ischemia,recon,1,,,,,,Axial,Arterial,Abdomen,2 mm/2 mm,Vascular,3,Mesenteric vessel origins
+cta-mesenteric-ischemia,recon,2,,,,,,Axial,Portal venous,Full AP,2.5 mm/2.5 mm,Standard,3,Bowel wall assessment
+cta-mesenteric-ischemia,recon,3,,,,,,Coronal,Arterial,Abdomen,2.5 mm/2.5 mm,Vascular,3,MIP of mesenteric vessels
+cta-mesenteric-ischemia,recon,4,,,,,,Sagittal,Arterial,Abdomen,2.5 mm/2.5 mm,Vascular,3,Curved MPR SMA from origin
+cta-pelvis-cyclist-iliac-artery-maneuver,acquisition,1,CTA Resting Position,L3,Mid femur,Bolus tracked,0.625 mm,,,,,,,Supine resting position
+cta-pelvis-cyclist-iliac-artery-maneuver,acquisition,2,CTA Hip Flexion,L3,Mid femur,Immediately after,0.625 mm,,,,,,,Hips flexed 90 degrees - cycling position
+cta-pelvis-cyclist-iliac-artery-maneuver,recon,1,,,,,,Axial,Resting,Pelvis,1.5 mm/1.5 mm,Vascular,3,Baseline iliac artery anatomy
+cta-pelvis-cyclist-iliac-artery-maneuver,recon,2,,,,,,Axial,Flexion,Pelvis,1.5 mm/1.5 mm,Vascular,3,Assess for kinking with flexion
+cta-pelvis-cyclist-iliac-artery-maneuver,recon,3,,,,,,Coronal,Both phases,Pelvis,2 mm/2 mm,Vascular,3,MIP comparison rest vs flexion
+cta-pelvis-cyclist-iliac-artery-maneuver,recon,4,,,,,,Sagittal,Both phases,Pelvis,2 mm/2 mm,Vascular,3,Lateral view iliac course
+cta-pelvis-prostate-artery-embolization,acquisition,1,CTA Arterial,Iliac crest,Lesser trochanters,Bolus tracked,0.625 mm,,,,,,,Focus on internal iliac branches
+cta-pelvis-prostate-artery-embolization,recon,1,,,,,,Axial,Arterial,Pelvis,1 mm/1 mm,Vascular,3,Identify prostate artery origins
+cta-pelvis-prostate-artery-embolization,recon,2,,,,,,Coronal,Arterial,Pelvis,1.5 mm/1.5 mm,Vascular,3,MIP of iliac vessels
+cta-pelvis-prostate-artery-embolization,recon,3,,,,,,Sagittal,Arterial,Pelvis,1.5 mm/1.5 mm,Vascular,3,Lateral view pelvic vessels
+cta-pelvis-prostate-artery-embolization,recon,4,,,,,,3D VR,Arterial,Pelvis,0.75 mm source,Vascular,3,3D roadmap for interventional radiologist
+cta-popliteal-entrapment,acquisition,1,CTA Neutral Position,Distal femur,Ankle,Bolus tracked from 1st injection,0.625 mm,,,,,,,Both legs neutral resting position
+cta-popliteal-entrapment,acquisition,2,CTA Delayed Neutral Position,Distal femur,Ankle,40 sec delay from 1st injection,0.625 mm,,,,,,,Both legs neutral resting position
+cta-popliteal-entrapment,acquisition,3,CTA Plantarflexion,Distal femur,Ankle,Bolus tracked from 2nd injection,0.625 mm,,,,,,,Patient actively plantarflexes both feet - point toes
+cta-popliteal-entrapment,recon,1,,,,,,Axial,Neutral,Both legs,1.5 mm/1.5 mm,Vascular,3,Baseline popliteal artery anatomy
+cta-popliteal-entrapment,recon,2,,,,,,Axial,Plantarflexion,Both legs,1.5 mm/1.5 mm,Vascular,3,Assess for compression with maneuver
+cta-popliteal-entrapment,recon,3,,,,,,Coronal,Both phases,Both legs,2 mm/2 mm,Vascular,3,MIP comparison neutral vs flexion
+cta-popliteal-entrapment,recon,4,,,,,,Sagittal,Both phases,Both legs,2 mm/2 mm,Vascular,3,Lateral view popliteal fossa
+cta-scadfmd-protocol,acquisition,1,Non-contrast Head,Vertex,Foramen magnum,N/A,5 mm,,,,,,,Arms down - baseline
+cta-scadfmd-protocol,acquisition,2,CTA Neck,Aortic arch,Vertex,Bolus tracked,0.625 mm,,,,,,,Arms down - carotid/vertebral
+cta-scadfmd-protocol,acquisition,3,CTA CAP,Diaphragm,Pubic symphysis,35 sec after neck,0.625 mm,,,,,,,Arms UP - renal and mesenteric
+cta-scadfmd-protocol,acquisition,4,Post-contrast Head,Vertex,Foramen magnum,After CAP,1.25 mm,,,,,,,Arms DOWN - intracranial vessels
+cta-scadfmd-protocol,recon,1,,,,,,Axial,All phases,Respective FOV,Phase-specific,Vascular,3,Comprehensive arterial assessment
+cta-scadfmd-protocol,recon,2,,,,,,Coronal,CTA phases,Full body,2-3 mm/2-3 mm,Vascular,3,MIP of all arterial territories
+cta-scadfmd-protocol,recon,3,,,,,,Sagittal,CTA phases,Full body,2-3 mm/2-3 mm,Vascular,3,Lateral views all vessels
+cta-scadfmd-protocol,recon,4,,,,,,3D VR,CTA phases,Full body,1 mm source,Vascular,3,3D reconstruction multi-territory
+cta-upper-extremity,acquisition,1,CTA Arterial,Aortic arch,Fingertips,Bolus tracked,0.625 mm,,,,,,,Include arch through hand
+cta-upper-extremity,recon,1,,,,,,Axial,Arterial,Full arm,1.5 mm/1.5 mm,Vascular,3,Primary diagnostic
+cta-upper-extremity,recon,2,,,,,,Coronal,Arterial,Full arm,2 mm/2 mm,Vascular,3,MIP full vessel course
+cta-upper-extremity,recon,3,,,,,,Sagittal,Arterial,Full arm,2 mm/2 mm,Vascular,3,Lateral MIP
+cta-upper-extremity,recon,4,,,,,,3D VR,Arterial,Full arm,1 mm source,Vascular,3,3D reconstruction
+ctv-abdomen-pelvis,acquisition,1,CTV Venous Phase,Diaphragm,Proximal femur,180 sec,0.625 mm,,,,,,,Extended delay for venous opacification
+ctv-abdomen-pelvis,recon,1,,,,,,Axial,Venous,Full AP,2.5 mm/2.5 mm,Standard,3,Assess for filling defects
+ctv-abdomen-pelvis,recon,2,,,,,,Coronal,Venous,Full AP,3 mm/3 mm,Standard,3,MIP of venous system
+ctv-abdomen-pelvis,recon,3,,,,,,Sagittal,Venous,Full AP,3 mm/3 mm,Standard,3,IVC and iliac veins
+ctv-abdomen-pelvis,recon,4,,,,,,3D VR,Venous,Full AP,2 mm source,Standard,3,3D venous anatomy
+ctv-chest-abdomen-pelvis,acquisition,1,CTV Venous Phase,Thoracic inlet,Proximal femur,180 sec,0.625 mm,,,,,,,Extended venous phase
+ctv-chest-abdomen-pelvis,recon,1,,,,,,Axial,Venous,Chest,2 mm/2 mm,Standard,3,SVC and central veins
+ctv-chest-abdomen-pelvis,recon,2,,,,,,Axial,Venous,Abdomen/Pelvis,2.5 mm/2.5 mm,Standard,3,IVC and tributaries
+ctv-chest-abdomen-pelvis,recon,3,,,,,,Coronal,Venous,Full CAP,3 mm/3 mm,Standard,3,MIP full venous system
+ctv-chest-abdomen-pelvis,recon,4,,,,,,Sagittal,Venous,Full CAP,3 mm/3 mm,Standard,3,Sagittal venogram

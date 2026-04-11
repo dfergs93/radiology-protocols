@@ -1,3 +1,79 @@
+---
+title: CT Hand
+slug: ct-hand
+category: msk
+protocol_type: musculoskeletal
+last_updated: '2024-01-15'
+author: Dr. Chen
+synonyms: []
+clinical_indications:
+- Hand fracture
+- Scaphoid fracture
+- Metacarpal fracture
+- Foreign body
+- Pre-operative planning
+position: Prone with hand extended (superman position) or supine with arm at side
+npo: N/A
+premedication: ''
+contrast:
+  agent: None typically. Contrast if infection
+  volume: 'If contrast: 50 mL'
+  flow_rate: 2 mL/s
+tech_params:
+  kv: '120'
+  mas: Auto (reference 150-200)
+  rotation_time: 0.5s
+  pitch: Helical
+series:
+- name: CT Hand
+  start: Distal radius/ulna
+  end: Fingertips
+  delay: N/A or 60s if contrast
+  thickness: 0.625 mm
+  notes: Submillimeter
+recons:
+- plane: Axial
+  acquisition: Hand
+  fov: Hand
+  thickness_increment: 1 mm/0.75 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Thin axial
+- plane: Coronal
+  acquisition: Hand
+  fov: Hand
+  thickness_increment: 1 mm/0.75 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Coronal hand
+- plane: Sagittal
+  acquisition: Hand
+  fov: Hand
+  thickness_increment: 1 mm/0.75 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Sagittal hand
+- plane: Oblique sagittal
+  acquisition: Hand
+  fov: Scaphoid
+  thickness_increment: 1 mm
+  kernel: Bone
+  ir_strength: N/A
+  notes: Scaphoid long axis
+notes:
+  tech: Distal radius/ulna through fingertips. Submillimeter. Position hand flat.
+    Bilateral scout for comparison
+  nursing: No IV unless infection suspected
+  rad: Carpal fractures (scaphoid navicular lunate). Metacarpals. Phalanges. CMC joints.
+    Foreign bodies
+  tips: Superman position preferred. Submillimeter for scaphoid
+  additional_recons: Scaphoid-specific views. 3D if complex. Document foreign body
+    location
+safety:
+  renal: N/A or eGFR > 30
+  allergy: N/A or check allergy
+---
+
 # CT Hand
 
 **Last Updated:** 2024-01-15  

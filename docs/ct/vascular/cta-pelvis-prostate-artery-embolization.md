@@ -1,3 +1,81 @@
+---
+title: CTA Pelvis Prostate Artery Embolization
+slug: cta-pelvis-prostate-artery-embolization
+category: vascular
+protocol_type: vascular
+last_updated: '2024-01-15'
+author: Dr. Jackson
+synonyms: []
+clinical_indications:
+- Pre-procedural planning for prostate artery embolization
+- Benign prostatic hyperplasia
+position: Supine with arms raised
+npo: NPO 2-4 hours
+premedication: ''
+contrast:
+  agent: Isovue 370
+  volume: 1.2 mL/kg
+  flow_rate: 3-4 mL/s
+  duration: 18-22s
+  timing: Bolus Tracking
+  roi: Common iliac artery
+  trigger: 150 HU
+tech_params:
+  kv: '100'
+  mas: Auto (reference 200)
+  rotation_time: 0.5s
+  pitch: '0.9'
+series:
+- name: CTA Arterial
+  start: Iliac crest
+  end: Lesser trochanters
+  delay: Bolus tracked
+  thickness: 0.625 mm
+  notes: Focus on internal iliac branches
+recons:
+- plane: Axial
+  acquisition: Arterial
+  fov: Pelvis
+  thickness_increment: 1 mm/1 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Identify prostate artery origins
+- plane: Coronal
+  acquisition: Arterial
+  fov: Pelvis
+  thickness_increment: 1.5 mm/1.5 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: MIP of iliac vessels
+- plane: Sagittal
+  acquisition: Arterial
+  fov: Pelvis
+  thickness_increment: 1.5 mm/1.5 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Lateral view pelvic vessels
+- plane: 3D VR
+  acquisition: Arterial
+  fov: Pelvis
+  thickness_increment: 0.75 mm source
+  kernel: Vascular
+  ir_strength: '3'
+  notes: 3D roadmap for interventional radiologist
+notes:
+  tech: Scan from L3 to proximal femur. Arterial phase essential. Focus on internal
+    iliac branches and prostate supply
+  nursing: 18-20G IV | Chcek BP for nitroglycerin administration, check for contraindications
+  rad: Identify prostate artery origins (usually anterior division of internal iliac).
+    Map anatomy for IR. Note variants and anastomoses
+  tips: Full bladder helpful for prostate visualization. Coordinate with IR before
+    scan
+  additional_recons: 3D VR with prostate vessels highlighted. Curved MPR of internal
+    iliac branches. Measure vessel diameters
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history
+---
+
 # CTA Pelvis Prostate Artery Embolization
 
 **Last Updated:** 2024-01-15  

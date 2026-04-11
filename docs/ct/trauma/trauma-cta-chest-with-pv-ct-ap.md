@@ -1,3 +1,86 @@
+---
+title: Trauma CTA Chest with PV CT AP
+slug: trauma-cta-chest-with-pv-ct-ap
+category: trauma
+protocol_type: vascular
+last_updated: '2024-01-15'
+author: Dr. Lee
+synonyms: []
+clinical_indications:
+- Blunt thoracic trauma
+- Aortic injury
+- Great vessel injury
+- Multi-trauma
+position: Supine with arms raised
+npo: None - trauma
+premedication: ''
+contrast:
+  agent: Omnipaque 350
+  volume: 125 mL
+  flow_rate: 4 mL/s
+  timing: 'Dual phase: CTA Chest arterial + Portal venous AP'
+  roi: Descending aorta
+  trigger: 150 HU
+tech_params:
+  kv: 100-120
+  mas: Auto (reference 250)
+  rotation_time: 0.5s
+  pitch: 1.0-1.2
+series:
+- name: CTA Chest
+  start: Lung apices
+  end: Diaphragm
+  delay: Bolus tracked
+  thickness: 0.625 mm
+  notes: Arterial phase
+- name: Portal Venous AP
+  start: Diaphragm
+  end: Pubic symphysis
+  delay: 70 sec from start
+  thickness: 0.625 mm
+  notes: Portal venous phase
+recons:
+- plane: Axial
+  acquisition: CTA chest
+  fov: Chest
+  thickness_increment: 1.25 mm/1.25 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Aorta and great vessels
+- plane: Axial
+  acquisition: PV AP
+  fov: Abdomen/Pelvis
+  thickness_increment: 2.5 mm/2.5 mm
+  kernel: Standard
+  ir_strength: '3'
+  notes: Solid organs
+- plane: Coronal
+  acquisition: CTA chest
+  fov: Chest
+  thickness_increment: 2 mm/2 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Aorta overview
+- plane: Sagittal
+  acquisition: CTA chest
+  fov: Aorta
+  thickness_increment: 2 mm/2 mm
+  kernel: Vascular
+  ir_strength: '3'
+  notes: Sagittal aorta
+notes:
+  tech: 'TWO acquisitions: 1) CTA CHEST arterial (bolus track) 2) Portal venous ABDOMEN/PELVIS
+    70s. Chest arterial for aorta/vessels'
+  nursing: Large bore IV 18-20G. Verify flow
+  rad: 'Chest arterial: aortic injury (intimal flap pseudoaneurysm). AP portal venous:
+    solid organ injury'
+  tips: Trauma indication. Fast scan. Good IV essential
+  additional_recons: 3D aorta and great vessels. Curved MPR aorta. Grade aortic injury
+safety:
+  renal: eGFR > 30 if known
+  allergy: Trauma indication
+---
+
 # Trauma CTA Chest with PV CT AP
 
 **Last Updated:** 2024-01-15  

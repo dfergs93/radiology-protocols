@@ -1,3 +1,87 @@
+---
+title: Gated CTA Heart Left Atrial Mapping
+slug: gated-cta-heart-left-atrial-mapping
+category: cardiac
+protocol_type: cardiac gated
+last_updated: '2024-01-15'
+author: Dr. Kim
+synonyms: []
+clinical_indications:
+- Pre-ablation planning
+- Atrial fibrillation
+- Pulmonary vein anatomy
+position: Supine feet-first
+npo: NPO 2-4 hours
+premedication: HR < 65 preferred. Premedication not required.
+contrast:
+  agent: Isovue 370
+  volume: 1.1 mL/kg
+  flow_rate: 5 mL/s
+  duration: 15 sec
+  timing: Bolus Tracking
+  roi: Left Atrium
+  trigger: 200 HU
+tech_params:
+  kv: '100'
+  mas: Auto ECG modulation
+  rotation_time: 0.28s
+  pitch: 0.2-0.24
+series:
+- name: Gated CTA
+  start: Pulmonary veins
+  end: Below LA
+  delay: Bolus tracked
+  thickness: 0.5 mm
+  notes: Retrospective - thin slices critical
+- name: Delayed CTA
+  start: Pulmonary veins
+  end: Below LA
+  delay: 40s
+  thickness: 0.5 mm
+  notes: Retrospective - thin slices critical
+recons:
+- plane: Axial
+  acquisition: Gated CTA
+  fov: LA/PV
+  thickness_increment: 0.5 mm/0.5 mm
+  kernel: Cardiac
+  ir_strength: '3'
+  notes: Primary PV anatomy
+- plane: Coronal
+  acquisition: Gated CTA
+  fov: LA/PV
+  thickness_increment: 0.75 mm
+  kernel: Cardiac
+  ir_strength: '3'
+  notes: PV ostia en face
+- plane: Sagittal
+  acquisition: Gated CTA
+  fov: LA/PV
+  thickness_increment: 0.75 mm
+  kernel: Cardiac
+  ir_strength: '3'
+  notes: Lateral PV views
+- plane: Axial
+  acquisition: Delayed CTA
+  fov: LA/PV
+  thickness_increment: 0.5 mm/0.5 mm
+  kernel: Cardiac
+  ir_strength: '3'
+  notes: Left Atrial Appendage Thrombus
+notes:
+  tech: Retrospective gating. Focus on left atrium and pulmonary veins. Thin slices
+    critical. Extended coverage for all PV ostia
+  nursing: 20G IV
+  rad: Map pulmonary vein anatomy (number ostia diameters). Left atrial appendage
+    morphology. Esophageal position. LA size
+  tips: Thin slices essential. Complete PV coverage. Document variants
+  additional_recons: 3D LA reconstruction. PV ostia measurements (diameter area).
+    LAA morphology. Esophageal position
+safety:
+  renal: Verify eGFR > 30
+  allergy: Check allergy history
+---
+
 # Gated CTA Heart Left Atrial Mapping
 
 **Last Updated:** 2024-01-15  

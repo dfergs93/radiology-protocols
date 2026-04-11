@@ -1,3 +1,70 @@
+---
+title: CT Complete Spine
+slug: ct-complete-spine
+category: neuro
+protocol_type: spine
+last_updated: '2024-01-15'
+author: Dr. Chen
+synonyms: []
+clinical_indications:
+- Spine trauma pan-scan
+- Multi-level disease
+- Metastatic survey
+- Infection
+position: Supine
+npo: None - usually trauma
+premedication: ''
+contrast:
+  agent: None typically. Contrast if infection/mets
+  volume: 'If contrast: 125 mL'
+  flow_rate: 3 mL/s
+tech_params:
+  kv: '120'
+  mas: Auto (reference 250)
+  rotation_time: 0.5s
+  pitch: Helical
+series:
+- name: Complete Spine
+  start: Skull base
+  end: Sacrum
+  delay: N/A or 60s if contrast
+  thickness: 0.625-1 mm
+  notes: Submillimeter entire spine
+recons:
+- plane: Axial
+  acquisition: Spine
+  fov: Full spine
+  thickness_increment: 2 mm/2 mm
+  kernel: Bone
+  ir_strength: '3'
+  notes: Axial entire spine
+- plane: Sagittal
+  acquisition: Spine
+  fov: Full spine
+  thickness_increment: 2 mm/1.5 mm
+  kernel: Bone
+  ir_strength: '3'
+  notes: Sagittal full spine
+- plane: Coronal
+  acquisition: Spine
+  fov: Full spine
+  thickness_increment: 2.5 mm/2 mm
+  kernel: Bone
+  ir_strength: '3'
+  notes: Coronal full spine
+notes:
+  tech: Skull base to sacrum. LONG COVERAGE. Submillimeter. Sagittal and coronal entire
+    spine. May do in segments
+  nursing: No IV unless contrast needed. Complete spine coverage
+  rad: Entire spine alignment. Fractures all levels. Spinal canal. Paraspinal masses.
+    Metastatic disease
+  tips: Long coverage. May need multiple acquisitions
+  additional_recons: Sagittal and coronal bone reconstructions. Oblique for foramina
+safety:
+  renal: N/A or verify eGFR
+  allergy: N/A or check allergy
+---
+
 # CT Complete Spine
 
 **Last Updated:** 2024-01-15  
