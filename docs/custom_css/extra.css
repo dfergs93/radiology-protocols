@@ -110,9 +110,22 @@
 /* Body Parts Grid */
 .body-parts-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
-  margin: 2rem 0;
+  margin: 1.5rem 0;
+}
+
+.body-parts-grid .body-part-card.last {
+  grid-column: 2;
+}
+
+.body-parts-section-heading {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--md-default-fg-color--light);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0.5rem 0 0;
 }
 
 .body-part-card {

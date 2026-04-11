@@ -1,0 +1,43 @@
+{
+  "planPath": "docs/superpowers/plans/2026-04-10-product-documentation.md",
+  "tasks": [
+    {
+      "id": 9,
+      "subject": "Task 1: Rewrite README.md",
+      "status": "completed",
+      "description": "**Goal:** Replace the current institution-specific README with one that frames Protocol Manager as an open-source product any department can adopt.\n\n**Files:**\n- Modify: `README.md`\n\n**Acceptance Criteria:**\n- [ ] Describes the tool in 1–2 factual sentences with no marketing language\n- [ ] Links to live demo\n- [ ] Lists features factually\n- [ ] Explains architecture in plain terms\n- [ ] States prerequisites clearly\n- [ ] Provides a 5-step quick start\n\n**Verify:** Read the file and confirm content matches the plan.\n\n```json:metadata\n{\"files\": [\"README.md\"], \"verifyCommand\": \"cat README.md\", \"acceptanceCriteria\": [\"factual 1-2 sentence description\", \"live demo link\", \"feature list\", \"architecture explanation\", \"prerequisites\", \"5-step quick start\"]}\n```"
+    },
+    {
+      "id": 10,
+      "subject": "Task 2: Create Overview page",
+      "status": "completed",
+      "description": "**Goal:** Write `docs/for-institutions/index.md` — a factual overview of what Protocol Manager is and what it requires.\n\n**Files:**\n- Create: `docs/for-institutions/index.md`\n\n**Acceptance Criteria:**\n- [ ] Clinical use case paragraph\n- [ ] Technical model paragraph\n- [ ] Constraints stated explicitly\n- [ ] No marketing language\n\n**Verify:** `mkdocs serve` — navigate to /for-institutions/ and confirm page renders.\n\n```json:metadata\n{\"files\": [\"docs/for-institutions/index.md\"], \"verifyCommand\": \"mkdocs serve\", \"acceptanceCriteria\": [\"clinical use case\", \"technical model\", \"constraints listed\"]}\n```"
+    },
+    {
+      "id": 11,
+      "subject": "Task 3: Create How It Works page",
+      "status": "completed",
+      "description": "**Goal:** Write `docs/for-institutions/how-it-works.md` — technical walkthrough of system components.\n\n**Files:**\n- Create: `docs/for-institutions/how-it-works.md`\n\n**Acceptance Criteria:**\n- [ ] Covers protocol pages, comparison tool, SVG diagrams, CI pipeline\n- [ ] Chrome extension mentioned as optional\n- [ ] All file paths accurate\n\n**Verify:** `mkdocs serve` — navigate to /for-institutions/how-it-works/ and confirm page renders.\n\n```json:metadata\n{\"files\": [\"docs/for-institutions/how-it-works.md\"], \"verifyCommand\": \"mkdocs serve\", \"acceptanceCriteria\": [\"protocol pages section\", \"comparison tool section\", \"SVG diagrams section\", \"CI pipeline section\", \"chrome extension optional mention\"]}\n```"
+    },
+    {
+      "id": 12,
+      "subject": "Task 4: Create Adoption Guide page",
+      "status": "completed",
+      "description": "**Goal:** Write `docs/for-institutions/adoption-guide.md` — step-by-step setup for a new institution.\n\n**Files:**\n- Create: `docs/for-institutions/adoption-guide.md`\n\n**Acceptance Criteria:**\n- [ ] Fork and configure step\n- [ ] CSV bulk import path (Path A)\n- [ ] Manual authoring path (Path B)\n- [ ] Protocol editing WIP noted\n- [ ] All commands accurate\n\n**Verify:** `mkdocs serve` — navigate to /for-institutions/adoption-guide/ and confirm page renders.\n\n```json:metadata\n{\"files\": [\"docs/for-institutions/adoption-guide.md\"], \"verifyCommand\": \"mkdocs serve\", \"acceptanceCriteria\": [\"fork/configure step\", \"CSV path A\", \"manual path B\", \"WIP note on editing\"]}\n```"
+    },
+    {
+      "id": 13,
+      "subject": "Task 5: Create Hosting page",
+      "status": "completed",
+      "description": "**Goal:** Write `docs/for-institutions/hosting.md` — GitHub Pages and local/intranet hosting options.\n\n**Files:**\n- Create: `docs/for-institutions/hosting.md`\n\n**Acceptance Criteria:**\n- [ ] GitHub Pages setup including custom domain\n- [ ] Local/intranet static file serving\n- [ ] Subdirectory base path configuration\n\n**Verify:** `mkdocs serve` — navigate to /for-institutions/hosting/ and confirm page renders.\n\n```json:metadata\n{\"files\": [\"docs/for-institutions/hosting.md\"], \"verifyCommand\": \"mkdocs serve\", \"acceptanceCriteria\": [\"GitHub Pages setup\", \"custom domain instructions\", \"local/intranet hosting\", \"subdirectory base path config\"]}\n```"
+    },
+    {
+      "id": 14,
+      "subject": "Task 6: Wire up navigation",
+      "status": "completed",
+      "blockedBy": [9, 10, 11, 12, 13],
+      "description": "**Goal:** Add the for-institutions section to site navigation.\n\n**Files:**\n- Modify: `docs/.pages`\n- Create: `docs/for-institutions/.pages`\n\n**Acceptance Criteria:**\n- [ ] \"For Institutions\" appears in site nav\n- [ ] Sub-pages in correct order: Overview → How It Works → Adoption Guide → Hosting\n- [ ] mkdocs serve renders without errors\n\n**Verify:** `mkdocs serve` — confirm For Institutions tab and all four sub-pages are navigable.\n\n```json:metadata\n{\"files\": [\"docs/.pages\", \"docs/for-institutions/.pages\"], \"verifyCommand\": \"mkdocs serve\", \"acceptanceCriteria\": [\"For Institutions in nav\", \"correct sub-page order\", \"no build errors\"]}\n```"
+    }
+  ],
+  "lastUpdated": "2026-04-11T00:00:00Z"
+}

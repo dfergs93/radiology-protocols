@@ -1,0 +1,19 @@
+{
+  "planPath": "docs/superpowers/plans/2026-04-11-homepage-grid.md",
+  "tasks": [
+    {
+      "id": 0,
+      "subject": "Task 1: Update CSS for 3-column grid",
+      "status": "completed",
+      "description": "**Goal:** Adjust `.body-parts-grid` to use a fixed 3-column layout and add the section heading + last-card centering rules.\n\n**Files:**\n- Modify: `docs/custom_css/extra.css:111-116`\n\n**Acceptance Criteria:**\n- [ ] `.body-parts-grid` uses `repeat(3, 1fr)` columns\n- [ ] `.body-part-card.last` sets `grid-column: 2`\n- [ ] `.body-parts-section-heading` style exists\n\n**Verify:** `grep -n \"repeat(3, 1fr)\\|body-part-card.last\\|body-parts-section-heading\" docs/custom_css/extra.css` → 3 matches\n\n```json:metadata\n{\"files\": [\"docs/custom_css/extra.css\"], \"verifyCommand\": \"grep -n 'repeat(3, 1fr)\\\\|body-part-card.last\\\\|body-parts-section-heading' docs/custom_css/extra.css\", \"acceptanceCriteria\": [\".body-parts-grid uses repeat(3, 1fr)\", \".body-part-card.last sets grid-column: 2\", \".body-parts-section-heading style exists\"]}\n```"
+    },
+    {
+      "id": 1,
+      "subject": "Task 2: Rewrite homepage markup",
+      "status": "completed",
+      "blockedBy": [0],
+      "description": "**Goal:** Replace the 'What's Here' prose section in `docs/index.md` with a divider, section heading, and 7-card region grid.\n\n**Files:**\n- Modify: `docs/index.md`\n\n**Acceptance Criteria:**\n- [ ] `## What's Here` section removed\n- [ ] `<p class=\"body-parts-section-heading\">` label present\n- [ ] 7 `<a class=\"body-part-card\">` elements in `.body-parts-grid`\n- [ ] Trauma card has class `body-part-card last`\n- [ ] All links use `/radiology-protocols/ct/<region>/` pattern\n\n**Verify:** `mkdocs serve` → open http://127.0.0.1:8000/radiology-protocols/ → 3-column grid, Trauma centered\n\n```json:metadata\n{\"files\": [\"docs/index.md\"], \"verifyCommand\": \"mkdocs serve\", \"acceptanceCriteria\": [\"What's Here section removed\", \"7 region cards present\", \"Trauma card centered on last row\", \"Cards link to correct region index pages\"]}\n```"
+    }
+  ],
+  "lastUpdated": "2026-04-11T00:00:00Z"
+}

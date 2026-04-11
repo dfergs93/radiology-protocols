@@ -17,10 +17,35 @@ Contrast-enhanced CT protocols for all major body regions. Each protocol include
 
 ---
 
-## What's Here
+<p class="body-parts-section-heading">Browse by Body Region</p>
 
-**Protocol pages** — One page per CT exam. Covers contrast agent, injection rate, volume, timing, kV/mAs, and each acquisition series. Includes an SVG phase diagram.
-
-**Comparison tool** — Select two or more protocols to view parameters side-by-side. URLs are deep-linkable, so comparisons can be bookmarked and shared.
-
-**Full-text search** — Use the search bar at the top right to find protocols by name, indication, or parameter.
+<div class="body-parts-grid">
+  <a href="/radiology-protocols/ct/chest/" class="body-part-card">
+    <span class="body-part-icon">🫁</span>
+    <h3>Chest</h3>
+  </a>
+  <a href="/radiology-protocols/ct/abdomen/" class="body-part-card">
+    <span class="body-part-icon">🫃</span>
+    <h3>Abdomen</h3>
+  </a>
+  <a href="/radiology-protocols/ct/cardiac/" class="body-part-card">
+    <span class="body-part-icon">❤️</span>
+    <h3>Cardiac</h3>
+  </a>
+  <a href="/radiology-protocols/ct/neuro/" class="body-part-card">
+    <span class="body-part-icon">🧠</span>
+    <h3>Neuro</h3>
+  </a>
+  <a href="/radiology-protocols/ct/msk/" class="body-part-card">
+    <span class="body-part-icon">🦴</span>
+    <h3>MSK</h3>
+  </a>
+  <a href="/radiology-protocols/ct/vascular/" class="body-part-card">
+    <span class="body-part-icon">🩸</span>
+    <h3>Vascular</h3>
+  </a>
+  <a href="/radiology-protocols/ct/trauma/" class="body-part-card last">
+    <span class="body-part-icon">🚑</span>
+    <h3>Trauma</h3>
+  </a>
+</div>
