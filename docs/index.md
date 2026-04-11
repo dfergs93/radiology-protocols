@@ -1,46 +1,26 @@
 ---
-title: Radiology Protocol Manager
+title: CT Protocol Reference
 ---
 
-# Radiology Protocol Manager
+# CT Protocol Reference
 
-<p class="hero-subtitle">Comprehensive CT imaging protocols with interactive comparison tools and AI-powered assistance</p>
+Contrast-enhanced CT protocols for all major body regions. Each protocol includes acquisition parameters, injection technique, timing, and an SVG diagram of the contrast phases.
 
 <div class="hero-buttons">
   <a href="/radiology-protocols/compare/" class="hero-btn primary">
     Compare Protocols
   </a>
-  <a href="/radiology-protocols/ct/cardiac" class="hero-btn secondary">
+  <a href="/radiology-protocols/ct/cardiac/coronary-cta/" class="hero-btn secondary">
     Browse Protocols
   </a>
 </div>
 
 ---
 
-## Quick Start
+## What's Here
 
-!!! tip "Getting Started"
-    1. **Browse protocols** by body region above
-    2. **Compare protocols** using the comparison tool
+**Protocol pages** — One page per CT exam. Covers contrast agent, injection rate, volume, timing, kV/mAs, and each acquisition series. Includes an SVG phase diagram.
 
----
+**Comparison tool** — Select two or more protocols to view parameters side-by-side. URLs are deep-linkable, so comparisons can be bookmarked and shared.
 
-## Recent Updates
-
-<div class="updates-timeline">
-  <div class="update-item">
-    <div class="update-date">Latest</div>
-    <div class="update-content">
-      <h4>Protocol Comparison Tool</h4>
-      <p>Compare multiple protocols side-by-side with synchronized Gantt timelines</p>
-    </div>
-  </div>
-  
-  <div class="update-item">
-    <div class="update-date">Dec 2024</div>
-    <div class="update-content">
-      <h4>87 Protocols Added</h4>
-      <p>Comprehensive coverage across all major body regions</p>
-    </div>
-  </div>
-</div>
+**Full-text search** — Use the search bar at the top right to find protocols by name, indication, or parameter.
