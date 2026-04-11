@@ -18,6 +18,9 @@ venv/
 .superpowers/
 .worktrees/
 
+# MkDocs build output
+site/
+
 # Ignore legacy scripts but track the new data-layer scripts
 # Note: must use scripts/* (not scripts/) for negation to work
 scripts/*
