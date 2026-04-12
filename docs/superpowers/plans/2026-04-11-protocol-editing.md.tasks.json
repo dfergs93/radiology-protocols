@@ -4,36 +4,36 @@
     {
       "id": 2,
       "subject": "Task 1: Forms index and institution config generator",
-      "status": "pending",
+      "status": "completed",
       "description": "**Goal:** Script that reads all protocol YAML front matter and outputs `protocol-forms-index.json` and `institution-config.json`. Added to CI.\n\n**Files:**\n- Create: `scripts/generate_forms_index.py`\n- Create (generated): `docs/javascripts/protocol-forms-index.json`\n- Create (generated): `docs/javascripts/institution-config.json`\n- Create: `tests/test_generate_forms_index.py`\n- Modify: `.github/workflows/ci.yml`\n\n**Verify:** `python scripts/generate_forms_index.py && python -m pytest tests/test_generate_forms_index.py -v`\n\n```json:metadata\n{\"files\": [\"scripts/generate_forms_index.py\", \"tests/test_generate_forms_index.py\", \"docs/javascripts/protocol-forms-index.json\", \"docs/javascripts/institution-config.json\", \".github/workflows/ci.yml\"], \"verifyCommand\": \"python scripts/generate_forms_index.py && python -m pytest tests/test_generate_forms_index.py -v\", \"acceptanceCriteria\": [\"Script runs without error\", \"87 protocols in output\", \"All required fields present\", \"institution-config.json written\", \"CI updated\"]}\n```"
     },
     {
       "id": 3,
       "subject": "Task 2: Shared protocol renderer",
-      "status": "pending",
+      "status": "completed",
       "description": "**Goal:** `scripts/render_protocol.py` — takes a YAML front matter dict and returns the complete Markdown document.\n\n**Files:**\n- Create: `scripts/render_protocol.py`\n- Create: `tests/test_render_protocol.py`\n\n**Verify:** `python -m pytest tests/test_render_protocol.py -v`\n\n```json:metadata\n{\"files\": [\"scripts/render_protocol.py\", \"tests/test_render_protocol.py\"], \"verifyCommand\": \"python -m pytest tests/test_render_protocol.py -v\", \"acceptanceCriteria\": [\"render_document returns valid markdown\", \"Contrast section conditional on agent\", \"Series table rows match input\", \"12 tests pass\"]}\n```"
     },
     {
       "id": 4,
       "subject": "Task 3: Static change request form",
-      "status": "pending",
+      "status": "completed",
       "blockedBy": [2],
       "description": "**Goal:** Static MkDocs page with JS for change requests and new protocol requests.\n\n**Files:**\n- Create: `docs/request-change.md`\n- Create: `docs/javascripts/request-change.js`\n- Modify: `docs/.pages`\n- Modify: `mkdocs.yml`\n\n**Verify:** `mkdocs serve` then navigate to /request-change/?protocol=ct-pulmonary-embolism\n\n```json:metadata\n{\"files\": [\"docs/request-change.md\", \"docs/javascripts/request-change.js\", \"docs/.pages\", \"mkdocs.yml\"], \"verifyCommand\": \"mkdocs serve\", \"acceptanceCriteria\": [\"Form page loads\", \"Protocol pre-fill works\", \"New protocol mode works\", \"Diff logic excludes unchanged fields\", \"Request button on protocol pages\"]}\n```"
     },
     {
       "id": 5,
       "subject": "Task 4: Flask admin app",
-      "status": "pending",
+      "status": "completed",
       "blockedBy": [3],
       "description": "**Goal:** `scripts/admin.py` — local web app for editing and creating protocols.\n\n**Files:**\n- Create: `scripts/admin.py`\n\n**Verify:** `python scripts/admin.py` → browser opens → edit a field → save → verify MD updated\n\n```json:metadata\n{\"files\": [\"scripts/admin.py\"], \"verifyCommand\": \"python scripts/admin.py\", \"acceptanceCriteria\": [\"App starts on port 5173\", \"Protocol list renders\", \"Edit form pre-fills correctly\", \"Save updates MD file\", \"New protocol creates file\", \"Indexes regenerated after save\"]}\n```"
     },
     {
       "id": 6,
       "subject": "Task 5: Pre-commit hook and adoption guide update",
-      "status": "pending",
+      "status": "completed",
       "blockedBy": [2],
       "description": "**Goal:** Hook that auto-regenerates indexes when docs/ct/ files are staged, Python installer, updated docs.\n\n**Files:**\n- Create: `scripts/hooks/pre-commit`\n- Create: `scripts/install_hooks.py`\n- Modify: `docs/for-institutions/adoption-guide.md`\n\n**Verify:** `python scripts/install_hooks.py` → 'Installed pre-commit hook'\n\n```json:metadata\n{\"files\": [\"scripts/hooks/pre-commit\", \"scripts/install_hooks.py\", \"docs/for-institutions/adoption-guide.md\"], \"verifyCommand\": \"python scripts/install_hooks.py\", \"acceptanceCriteria\": [\"Hook installed\", \"Hook triggers on docs/ct/ changes\", \"Non-protocol commits skip hook\", \"Adoption guide updated\"]}\n```"
     }
   ],
-  "lastUpdated": "2026-04-11T00:00:00Z"
+  "lastUpdated": "2026-04-11T18:30:00Z"
 }
