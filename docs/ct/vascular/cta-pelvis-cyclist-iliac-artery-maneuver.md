@@ -173,15 +173,6 @@ safety:
     | CTA Resting Position | L3 | Mid femur | Bolus tracked | 0.625 mm | Supine resting position |
     | CTA Hip Flexion | L3 | Mid femur | Immediately after | 0.625 mm | Hips flexed 90 degrees - cycling position |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100 |
-    | mAs | Auto (reference 200) |
-    | Rotation Time | 0.5s |
-    | Pitch | 0.9 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

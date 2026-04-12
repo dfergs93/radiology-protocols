@@ -166,15 +166,6 @@ safety:
     | Scout | Aortic arch | Skull base | N/A | N/A | AP lateral |
     | CTA Neck | Aortic arch | Skull base | Bolus tracked | 0.625 mm | Caudocranial |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100-120 |
-    | mAs | Auto (reference 200) |
-    | Rotation Time | 0.5s |
-    | Pitch | 0.9 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

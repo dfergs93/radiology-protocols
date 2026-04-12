@@ -145,15 +145,6 @@ safety:
     | Scout | Frontal sinus | Hard palate | N/A | N/A | Lateral |
     | Stereotactic Sinus | Frontal sinus | Hard palate | N/A | 0.625 mm | Isotropic submillimeter |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 200) |
-    | Rotation Time | Helicals |
-    | Pitch | Pitch for isotropic |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

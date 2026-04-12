@@ -177,15 +177,6 @@ safety:
     | Corticomedullary | Top kidneys | Iliac crests | 20 sec | 1.25 mm | Arterial/nephrographic |
     | Nephrographic/IVP | Top kidneys | Pubic symphysis | 90-120 sec from 2nd injection | 1.25 mm | Delayed enhancement + collecting system |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100-120 |
-    | mAs | Auto (reference 200) |
-    | Rotation Time | 0.5s |
-    | Pitch | 1 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

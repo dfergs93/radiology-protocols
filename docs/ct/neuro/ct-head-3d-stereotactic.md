@@ -162,15 +162,6 @@ safety:
     | Scout | Vertex | Skull base | N/A | N/A | Lateral |
     | Stereotactic Head | Vertex | Skull base | N/A (or 60-90s if contrast) | 0.5-0.625 mm | Isotropic submillimeter |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 300) |
-    | Rotation Time | Helicals |
-    | Pitch | Pitch for isotropic |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

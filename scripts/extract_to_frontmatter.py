@@ -236,24 +236,6 @@ def extract_safety(content):
             allergy = re.sub(r'.*\*\*Allergy:\*\*\s*', '', stripped).strip('- ').strip()
     return renal, allergy
 
-
-def extract_additional_recons(content):
-    """Extract text under ### Additional Reconstructions."""
-    lines_out = []
-    in_section = False
-    for line in content.splitlines():
-        stripped = line.strip()
-        if stripped == '### Additional Reconstructions':
-            in_section = True
-            continue
-        if in_section:
-            if stripped.startswith('#') or stripped.startswith('Category:') or stripped.startswith('Protocol Type:'):
-                break
-            if stripped:
-                lines_out.append(stripped)
-    return ' '.join(lines_out) if lines_out else ''
-
-
 def extract_series(content):
     """Extract rows from Series Acquisition table. Skips Scout rows."""
     series = []
@@ -327,7 +309,7 @@ def build_frontmatter(title, slug, category, protocol_type, last_updated, author
                       indications, position, npo, premedication,
                       contrast, tech_params, series_list, recons_list,
                       tech_notes, nursing_notes, rad_notes, tips,
-                      additional_recons, safety_renal, safety_allergy):
+                      safety_renal, safety_allergy):
     data = {
         'title': title,
         'slug': slug,
@@ -357,7 +339,6 @@ def build_frontmatter(title, slug, category, protocol_type, last_updated, author
         'nursing': nursing_notes,
         'rad': rad_notes,
         'tips': tips,
-        'additional_recons': additional_recons,
     }
 
     data['safety'] = {
@@ -376,7 +357,7 @@ def protocol_csv_row(slug, title, category, protocol_type, last_updated, author,
                      indications, position, npo, premedication,
                      contrast, tech_params,
                      tech_notes, nursing_notes, rad_notes, tips,
-                     additional_recons, safety_renal, safety_allergy):
+                     safety_renal, safety_allergy):
     c = contrast or {}
     t = tech_params or {}
     return {
@@ -406,7 +387,6 @@ def protocol_csv_row(slug, title, category, protocol_type, last_updated, author,
         'nursing_notes': nursing_notes,
         'rad_notes': rad_notes,
         'tips': tips,
-        'additional_recons': additional_recons,
         'safety_renal': safety_renal,
         'safety_allergy': safety_allergy,
     }
@@ -418,7 +398,7 @@ PROTOCOLS_CSV_FIELDS = [
     'contrast_agent', 'contrast_volume', 'contrast_flow_rate', 'contrast_duration',
     'contrast_timing', 'contrast_roi', 'contrast_trigger',
     'kv', 'mas', 'rotation_time', 'pitch',
-    'tech_notes', 'nursing_notes', 'rad_notes', 'tips', 'additional_recons',
+    'tech_notes', 'nursing_notes', 'rad_notes', 'tips',
     'safety_renal', 'safety_allergy',
 ]
 
@@ -503,7 +483,6 @@ def process_file(md_path, dry_run=True):
     nursing_notes = extract_notes_section(content, 'Nursing Notes')
     rad_notes = extract_notes_section(content, 'Radiologist Notes')
     tips = extract_notes_section(content, 'Tips & Tricks')
-    additional_recons = extract_additional_recons(content)
     safety_renal, safety_allergy = extract_safety(content)
 
     fm = build_frontmatter(
@@ -511,7 +490,7 @@ def process_file(md_path, dry_run=True):
         indications, position, npo, premedication,
         contrast, tech_params, series_list, recons_list,
         tech_notes, nursing_notes, rad_notes, tips,
-        additional_recons, safety_renal, safety_allergy,
+        safety_renal, safety_allergy,
     )
 
     proto_row = protocol_csv_row(
@@ -519,7 +498,7 @@ def process_file(md_path, dry_run=True):
         indications, position, npo, premedication,
         contrast, tech_params,
         tech_notes, nursing_notes, rad_notes, tips,
-        additional_recons, safety_renal, safety_allergy,
+        safety_renal, safety_allergy,
     )
 
     s_rows = series_csv_rows(slug, series_list, recons_list)

@@ -173,15 +173,6 @@ safety:
     | NC Head (optional) | Vertex | Foramen magnum | N/A | 5 mm | Baseline if SAH |
     | CTA Head | Skull base | Vertex | Bolus tracked | 0.5-0.625 mm | Submillimeter for 3D |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100-120 |
-    | mAs | Auto (reference 250) |
-    | Rotation Time | 0.5-0.6s |
-    | Pitch | Helical |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

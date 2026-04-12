@@ -175,15 +175,6 @@ safety:
     | Gated CTA | Pulmonary veins | Below LA | Bolus tracked | 0.5 mm | Retrospective - thin slices critical |
     | Delayed CTA | Pulmonary veins | Below LA | 40s | 0.5 mm | Retrospective - thin slices critical |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100 |
-    | mAs | Auto ECG modulation |
-    | Rotation Time | 0.28s |
-    | Pitch | 0.2-0.24 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

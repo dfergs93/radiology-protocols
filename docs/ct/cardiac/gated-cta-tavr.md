@@ -173,15 +173,6 @@ safety:
     | Gated CTA Chest | Thoracic inlet | Diaphragm | Bolus tracked | 0.5 mm | Retrospective gating for valve |
     | Flash CTA AP | Diaphragm | Femoral heads | Immediate | 0.625 mm | Iliofemoral access planning |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100 |
-    | mAs | Auto ECG chest / High mAs AP |
-    | Rotation Time | 0.28 / 0.5s |
-    | Pitch | 0.2-0.24 / 1.2-1.5 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

@@ -154,15 +154,6 @@ safety:
     | Volumetric Inspiration | Lung apices | Costophrenic angles | Full inspiration (TLC) | 0.625-1 mm | Contiguous for quantification |
     | Volumetric Expiration | Lung apices | Costophrenic angles | Full expiration (RV) | 0.625-1 mm | Contiguous complete exhalation |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 150-200) |
-    | Rotation Time | 0.5s |
-    | Pitch | 1 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

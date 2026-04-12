@@ -147,15 +147,6 @@ safety:
     | Scout | Top of kidneys | Pubic symphysis | N/A | N/A | AP scout |
     | Non-Contrast KUB | Top of kidneys | Pubic symphysis | N/A | 1-2 mm | Low dose technique |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100-120 |
-    | mAs | Low dose (50-100 ref) |
-    | Rotation Time | 0.5s |
-    | Pitch | 1.375-1.5 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

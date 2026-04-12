@@ -190,15 +190,6 @@ safety:
     | Gated CTA Chest | Carina| Base of heart | Bolus tracked | 0.5 mm | NO DOSE PULSING - retrospective all phases |
     | Delayed CAP | Diaphragm | Femoral heads | 80 sec | 0.625 mm | Access planning and coronaries |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100 |
-    | mAs | NO ECG MODULATION chest / Auto AP |
-    | Rotation Time | 0.28 / 0.5s |
-    | Pitch | 0.2-0.24 / 1.2-1.5 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

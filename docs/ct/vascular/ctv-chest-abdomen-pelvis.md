@@ -161,15 +161,6 @@ safety:
     | Scout/Topogram | Thoracic inlet | Proximal femur | N/A | N/A | AP full body |
     | CTV Venous Phase | Thoracic inlet | Proximal femur | 180 sec | 0.625 mm | Extended venous phase |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 200) |
-    | Rotation Time | 0.5s |
-    | Pitch | 1.0-1.2 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

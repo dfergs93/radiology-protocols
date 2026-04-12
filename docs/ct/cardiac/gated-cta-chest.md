@@ -183,15 +183,6 @@ safety:
     | Gated CTA | Lung apices | Diaphragm | Bolus tracked | 0.5-0.625 mm | Retrospective ECG gating |
     | Stent delay (optional) | Start of Stent | End of Stent | 40 sec | 0.5-0.625 mm | Optional for stent assessment |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100 |
-    | mAs | Auto ECG modulation |
-    | Rotation Time | 0.28s |
-    | Pitch | 0.2-0.24 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

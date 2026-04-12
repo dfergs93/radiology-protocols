@@ -152,15 +152,6 @@ safety:
     | Scout | Skull base | Sacrum | N/A | N/A | Full AP and lateral |
     | Complete Spine | Skull base | Sacrum | N/A or 60s if contrast | 0.625-1 mm | Submillimeter entire spine |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 250) |
-    | Rotation Time | 0.5s |
-    | Pitch | Helical |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

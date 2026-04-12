@@ -135,7 +135,6 @@ def build_frontmatter(row, series_data):
             'nursing': row.get('nursing_notes', ''),
             'rad': row.get('rad_notes', ''),
             'tips': row.get('tips', ''),
-            'additional_recons': row.get('additional_recons', ''),
         },
         'safety': {
             'renal': row.get('safety_renal', ''),
@@ -217,8 +216,6 @@ def render_markdown_body(row, series_data):
         for r in recon_rows
     )
 
-    additional_recons = row.get('additional_recons', '') or ''
-
     safety_renal = row.get('safety_renal', '') or 'N/A'
     safety_allergy = row.get('safety_allergy', '') or 'N/A'
     kv = row.get('kv', '')
@@ -296,27 +293,11 @@ def render_markdown_body(row, series_data):
 {series_header}
 {series_rows_md}
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | {kv} |
-    | mAs | {mas} |
-    | Rotation Time | {rotation} |
-    | Pitch | {pitch} |
-
 === "Post-Processing"
 
 {recon_header}
 {recon_rows_md}
 
-### Additional Reconstructions
-
-{additional_recons}
-
-Category: {row.get("category", "").title()}
-
-Protocol Type: {row.get("protocol_type", "").title()}
 '''
     return body
 

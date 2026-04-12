@@ -140,15 +140,6 @@ safety:
     | Scout | Top of chest | Diaphragm | N/A | N/A | AP and lateral |
     | Calcium Score | Carina | Below heart | N/A | 1.5 mm | Sequential axial gated acquisition |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (low dose) |
-    | Rotation Time | 0.28-0.35s |
-    | Pitch | 1.0-1.2 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

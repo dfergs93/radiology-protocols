@@ -173,15 +173,6 @@ safety:
     | CTA Chest | Lung apices | Diaphragm | Bolus tracked | 0.625 mm | Arterial phase |
     | Portal Venous AP | Diaphragm | Pubic symphysis | 70 sec from start | 0.625 mm | Portal venous phase |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100-120 |
-    | mAs | Auto (reference 250) |
-    | Rotation Time | 0.5s |
-    | Pitch | 1.0-1.2 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

@@ -190,15 +190,6 @@ safety:
     | Flash CTA AP | Diaphragm | Pubic symphysis | Immediate after chest | 0.625 mm | High pitch helical - no gating |
     | Stent Delay (optional) | Top of Stent | Bottom of Stent | 40 sec | 0.625 mm | Stent coverage |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100 |
-    | mAs | Auto ECG chest / High mAs AP |
-    | Rotation Time | 0.28 chest / 0.5 APs |
-    | Pitch | 0.2-0.24 chest / 1.2-1.5 AP |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

@@ -161,15 +161,6 @@ safety:
     | Scout/Topogram | Xiphoid | Pubic symphysis | N/A | N/A | AP |
     | CTA Arterial | Xiphoid | Pubic symphysis | Bolus tracked | 0.625 mm | Focus on abdominal wall |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100 |
-    | mAs | Auto (reference 200) |
-    | Rotation Time | 0.5s |
-    | Pitch | 0.9 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

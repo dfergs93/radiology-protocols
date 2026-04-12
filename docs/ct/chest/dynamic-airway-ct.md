@@ -161,15 +161,6 @@ safety:
     | Mid-Expiration | Thoracic inlet | Carina+10cm | Forced mid-expiration | 0.625-1 mm | Same level as inspiration |
     | Cine (optional) | Carina level | Single slice | Continuous breathing | Cine mode | Dynamic collapse |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 200) |
-    | Rotation Time | 0.5s |
-    | Pitch | Helical |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

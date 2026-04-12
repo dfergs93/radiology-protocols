@@ -168,15 +168,6 @@ safety:
     | Scout/Topogram | Iliac crest | Lesser trochanters | N/A | N/A | AP pelvis |
     | CTA Arterial | Iliac crest | Lesser trochanters | Bolus tracked | 0.625 mm | Focus on internal iliac branches |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100 |
-    | mAs | Auto (reference 200) |
-    | Rotation Time | 0.5s |
-    | Pitch | 0.9 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

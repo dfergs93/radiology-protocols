@@ -162,15 +162,6 @@ safety:
     | Scout | Include scapula | Proximal humerus | N/A | N/A | AP and Y-view |
     | CT Shoulder | Entire scapula | Proximal humerus | N/A or 60s if contrast | 0.625 mm | Submillimeter |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 200) |
-    | Rotation Time | 0.5s |
-    | Pitch | Helical |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

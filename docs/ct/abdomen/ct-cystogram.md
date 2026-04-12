@@ -176,15 +176,6 @@ safety:
     | Bladder Filling | N/A | N/A | 90 sec | N/A | Fill via Foley - not scanned |
     | Cystogram | Iliac crests | Below bladder | 100 sec | 2 mm | Scan distended bladder |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 200) |
-    | Rotation Time | 0.5s |
-    | Pitch | 1 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

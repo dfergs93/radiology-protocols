@@ -156,15 +156,6 @@ safety:
     | Coronal Sinus | Frontal sinus | Maxillary sinus | N/A | 0.625 mm | Direct coronal if possible |
     | Axial reformat | Frontal | Maxillary | From coronal | 0.625 mm | Reformatted from coronal |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 200) |
-    | Rotation Time | Axial or coronals |
-    | Pitch | N/A |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

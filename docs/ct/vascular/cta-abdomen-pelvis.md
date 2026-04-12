@@ -177,15 +177,6 @@ safety:
     | CTA Arterial | Diaphragm | Femoral heads | Bolus tracked | 0.625 mm | Caudocranial direction |
     | Stent Delay (optional) | Top of Stent | Bottom of Stent | 40 sec | 0.625 mm | Stent coverage |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100 |
-    | mAs | Auto (reference 250) |
-    | Rotation Time | 0.5s |
-    | Pitch | 1.0-1.375 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

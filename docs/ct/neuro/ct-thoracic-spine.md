@@ -153,15 +153,6 @@ safety:
     | Scout | C7 | L1 | N/A | N/A | AP and lateral |
     | T-spine Helical | C7 | L1 | N/A or 60s if contrast | 0.625-1 mm | Submillimeter |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 250) |
-    | Rotation Time | 0.5s |
-    | Pitch | Helical |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

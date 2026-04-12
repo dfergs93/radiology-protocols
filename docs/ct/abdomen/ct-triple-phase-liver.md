@@ -191,15 +191,6 @@ safety:
     | Portal Venous | Diaphragm | Pubic symphysis | 70 sec | 2.5 mm | Full AP FOV |
     | Delayed Phase | Diaphragm | Iliac crests | 300 sec | 2.5 mm | Liver FOV - washout assessment |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100 |
-    | mAs | Auto (reference 200-250) |
-    | Rotation Time | 0.5s |
-    | Pitch | 0.9-1.0 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

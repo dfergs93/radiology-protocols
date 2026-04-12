@@ -183,15 +183,6 @@ safety:
     | CTA Delayed Neutral Position | Distal femur | Ankle | 40 sec delay from 1st injection | 0.625 mm | Both legs neutral resting position |
     | CTA Plantarflexion | Distal femur | Ankle | Bolus tracked from 2nd injection | 0.625 mm | Patient actively plantarflexes both feet - point toes |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100 |
-    | mAs | Auto (reference 200) |
-    | Rotation Time | 0.5s |
-    | Pitch | 0.9 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

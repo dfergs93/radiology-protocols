@@ -155,15 +155,6 @@ safety:
     | Scout C-spine | Skull base | T1 | N/A | N/A | AP and lateral |
     | NC C-spine | Skull base | T1 | N/A | 0.625 mm | Helical submillimeter |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (300 head / 250 spine) |
-    | Rotation Time | 1.0 head / 0.5 spines |
-    | Pitch | 0.5 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

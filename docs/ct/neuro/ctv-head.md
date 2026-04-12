@@ -168,15 +168,6 @@ safety:
     | NC Head | Vertex | Foramen magnum | N/A | 5 mm | Baseline |
     | CTV Head | Skull base | Vertex | 60-90 sec delay | 0.625-1 mm | Venous phase |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 250) |
-    | Rotation Time | 0.5-0.6s |
-    | Pitch | Helical |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

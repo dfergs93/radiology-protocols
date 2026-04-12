@@ -189,15 +189,6 @@ safety:
     | Calcium Score | Carina | Below heart | N/A | 3 mm | Calcium score |
     | Gated CTA | 2cm above LAD | 2cm below heart apex | Bolus tracked | 0.5-0.625 mm | Retrospective gating |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100-120 |
-    | mAs | Auto ECG modulation |
-    | Rotation Time | 0.28s |
-    | Pitch | 0.2-0.24 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

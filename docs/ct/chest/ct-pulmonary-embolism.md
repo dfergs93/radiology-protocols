@@ -166,15 +166,6 @@ safety:
     | Scout/Topogram | Lung apices | Adrenal glands | N/A | N/A | AP and lateral |
     | Pulmonary Angiogram | Lung apices | Adrenal glands | Bolus tracked | 0.625 mm | Caudocranial direction from diaphragm to apices |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100 |
-    | mAs | Auto (reference 200) |
-    | Rotation Time | 0.5s |
-    | Pitch | 1.0-1.2 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

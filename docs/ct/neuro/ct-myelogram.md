@@ -161,15 +161,6 @@ safety:
     | Scout | Coverage area | Based on region | N/A | N/A | AP and lateral |
     | CT Myelogram | Region of interest | Extended coverage | N/A | 0.625 mm | Submillimeter for detail |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 250) |
-    | Rotation Time | 0.5s |
-    | Pitch | Helical |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

@@ -171,15 +171,6 @@ safety:
     | Scout | Top of chest | Diaphragm | N/A | N/A | AP lateral |
     | Gated CTA | Top of heart | Below heart | Bolus tracked | 0.5-0.625 mm | Retrospective gating HIGH kV |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 130-140 |
-    | mAs | Auto ECG modulation |
-    | Rotation Time | 0.28s |
-    | Pitch | 0.2-0.24 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

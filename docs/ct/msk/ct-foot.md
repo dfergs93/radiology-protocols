@@ -161,15 +161,6 @@ safety:
     | Scout | Calcaneus | Toes | N/A | N/A | Lateral and AP |
     | CT Foot | Calcaneus | Toes | N/A or 60s if contrast | 0.625 mm | Submillimeter |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 200) |
-    | Rotation Time | 0.5s |
-    | Pitch | Helical |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

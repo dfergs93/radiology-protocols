@@ -155,15 +155,6 @@ safety:
     | Scout | Skull base | Thoracic inlet | N/A | N/A | Lateral |
     | Contrast Neck | Skull base | Thoracic inlet | 60-70 sec | 1-2 mm | Venous phase |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 200-250) |
-    | Rotation Time | 0.5s |
-    | Pitch | 1 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

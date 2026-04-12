@@ -162,15 +162,6 @@ safety:
     | NC C-spine | Skull base | T1 | N/A | 0.625 mm | Submillimeter |
     | NC Facial Bones | Frontal sinus | Mandible | N/A | 0.625 mm | Submillimeter for 3D |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (300 head / 250 other) |
-    | Rotation Time | 1.0 / 0.5s |
-    | Pitch | 0.5 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

@@ -180,15 +180,6 @@ safety:
     | Contrast phase | Region | Region | 60-90 sec if done | 0.625-1 mm | Standard if done |
     | Delayed phase | Region | Region | 5-10 min if done | 1-2 mm | For infection/tumor |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 200-250) |
-    | Rotation Time | 0.5s |
-    | Pitch | Helical |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

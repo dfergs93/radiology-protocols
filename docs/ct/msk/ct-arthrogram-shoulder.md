@@ -161,15 +161,6 @@ safety:
     | Scout | Shoulder region | Proximal humerus | N/A | N/A | AP |
     | CT Arthrogram | Acromion | Proximal humerus | Immediate post-injection | 0.625 mm | Submillimeter for labrum |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 150-200) |
-    | Rotation Time | 0.5s |
-    | Pitch | Helical |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

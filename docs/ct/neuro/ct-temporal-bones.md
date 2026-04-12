@@ -158,15 +158,6 @@ safety:
     | Axial Temporal | EAC | Petrous apex | N/A | 0.5-0.625 mm | Parallel to lateral SCC |
     | Coronal Temporal | EAC | IAC | N/A | 0.5-0.625 mm | Perpendicular to petrous ridge |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | High mAs (300-400) |
-    | Rotation Time | Axial/Coronals |
-    | Pitch | Sequential or helical |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

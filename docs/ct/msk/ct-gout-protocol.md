@@ -149,15 +149,6 @@ safety:
     | Scout | Joint region | Extended as needed | N/A | N/A | Appropriate views |
     | DECT or CT | Joint region | Extended coverage | N/A | 0.625-1 mm | Dual energy if available |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | Dual energy 80/140Sn or equivalent |
-    | mAs | Auto |
-    | Rotation Time | 0.5s |
-    | Pitch | Helical |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

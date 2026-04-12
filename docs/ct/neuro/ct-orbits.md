@@ -162,15 +162,6 @@ safety:
     | Scout | Superior orbital rim | Maxillary sinus | N/A | N/A | Lateral |
     | Axial Orbits | Superior orbital rim | Maxillary sinus | N/A or 60s if contrast | 1-1.5 mm | Parallel to optic nerves |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 200-250) |
-    | Rotation Time | 0.5s |
-    | Pitch | Helical |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

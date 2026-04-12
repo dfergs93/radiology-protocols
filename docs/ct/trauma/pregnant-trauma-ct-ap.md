@@ -150,15 +150,6 @@ safety:
     | Scout | Diaphragm | Pubic symphysis | N/A | N/A | Low dose scout |
     | Portal Venous AP | Diaphragm | Pubic symphysis | 70 sec | 2.5 mm | Single phase minimize radiation |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100 |
-    | mAs | Reduced mAs if possible |
-    | Rotation Time | 0.5s |
-    | Pitch | 1.375 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

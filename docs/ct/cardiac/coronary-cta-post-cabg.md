@@ -183,15 +183,6 @@ safety:
     | Calcium Score | Lung apices | Diaphragm | N/A | 1.5 mm | Calcium score |
     | Gated CTA | Lung apices | Diaphragm | Bolus tracked | 0.5-0.625 mm | Retrospective gating - full chest FOV |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100-120 |
-    | mAs | Auto ECG modulation |
-    | Rotation Time | 0.28s |
-    | Pitch | 0.2-0.24 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

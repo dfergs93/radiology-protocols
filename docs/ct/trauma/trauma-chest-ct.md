@@ -163,15 +163,6 @@ safety:
     | NC Chest | Lung apices | Costophrenic angles | N/A | 0.625-1 mm | Submillimeter for ribs |
     | CTA Chest | Arterial (bolus tracked) | Lung apices to Costophrenic angles | Bolus tracked | 0.625 mm | Evaluate for aortic injury |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 200) |
-    | Rotation Time | 0.5s |
-    | Pitch | 1.0-1.2 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

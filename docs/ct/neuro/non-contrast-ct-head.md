@@ -147,15 +147,6 @@ safety:
     | Scout/Topogram | Vertex | C1 | N/A | N/A | Lateral scout |
     | Non-Contrast Head | Vertex | Foramen magnum | N/A | 5 mm | Angle parallel to hard palate |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 300) |
-    | Rotation Time | 1s |
-    | Pitch | 0.5 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

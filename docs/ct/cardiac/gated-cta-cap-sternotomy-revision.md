@@ -181,15 +181,6 @@ safety:
     | Flash AP | Diaphragm | Pubic symphysis | Immediate | 0.625 mm | Arterial phase AP |
     | Venogram Chest | Thoracic inlet | Diaphragm | 60 sec | 1 mm | Retrosternal venous structures |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100 |
-    | mAs | Auto ECG chest / High mAs other |
-    | Rotation Time | 0.28 / 0.5s |
-    | Pitch | 0.2-0.24 / 1.2-1.5 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

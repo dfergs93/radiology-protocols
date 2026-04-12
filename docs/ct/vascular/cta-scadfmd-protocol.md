@@ -189,15 +189,6 @@ safety:
     | CTA CAP | Diaphragm | Pubic symphysis | 35 sec after neck | 0.625 mm | Arms UP - renal and mesenteric |
     | Post-contrast Head | Vertex | Foramen magnum | After CAP | 1.25 mm | Arms DOWN - intracranial vessels |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100-120 |
-    | mAs | Auto (reference 200-250) |
-    | Rotation Time | 0.5s |
-    | Pitch | 0.9-1.2 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

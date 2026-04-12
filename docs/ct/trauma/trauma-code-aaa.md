@@ -180,15 +180,6 @@ safety:
     | Arterial CAP | Diaphragm | Pubic symphysis | 25-30 sec | 0.625 mm | Active bleeding + aneurysm |
     | Portal Venous CAP | Diaphragm | Pubic symphysis | 70 sec | 2.5 mm | Organs and venous |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100-120 |
-    | mAs | High mAs (300 reference) |
-    | Rotation Time | 0.5s |
-    | Pitch | 1.0-1.375 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

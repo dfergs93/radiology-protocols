@@ -167,15 +167,6 @@ safety:
     | Scout/Topogram | Aortic arch | Fingertips | N/A | N/A | AP of arm |
     | CTA Arterial | Aortic arch | Fingertips | Bolus tracked | 0.625 mm | Include arch through hand |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100 |
-    | mAs | Auto (reference 200) |
-    | Rotation Time | 0.5s |
-    | Pitch | 0.9 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

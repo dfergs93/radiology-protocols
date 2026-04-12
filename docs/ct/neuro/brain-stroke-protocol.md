@@ -182,15 +182,6 @@ safety:
     | CTA Arch to Vertex | Aortic arch | Vertex | Bolus tracked aorta | 0.625 mm | Intracranial vessels |
     | CTP (optional) | Skull base | Vertex | Auto-triggered | 5 mm dynamic | Perfusion if candidate |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (300 head) |
-    | Rotation Time | 1.0 / 0.5s |
-    | Pitch | 0.5 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

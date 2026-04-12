@@ -164,15 +164,6 @@ safety:
     | Scout/Topogram | Diaphragm | Proximal femur | N/A | N/A | AP |
     | CTV Venous Phase | Diaphragm | Proximal femur | 180 sec | 0.625 mm | Extended delay for venous opacification |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 200) |
-    | Rotation Time | 0.5s |
-    | Pitch | 1.0-1.375 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

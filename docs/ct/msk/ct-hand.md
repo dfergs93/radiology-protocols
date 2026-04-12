@@ -162,15 +162,6 @@ safety:
     | Scout | Distal radius/ulna | Fingertips | N/A | N/A | AP and lateral |
     | CT Hand | Distal radius/ulna | Fingertips | N/A or 60s if contrast | 0.625 mm | Submillimeter |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 150-200) |
-    | Rotation Time | 0.5s |
-    | Pitch | Helical |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

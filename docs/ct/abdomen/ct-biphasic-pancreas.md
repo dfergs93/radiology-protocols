@@ -175,15 +175,6 @@ safety:
     | Pancreatic Phase | Diaphragm | Iliac crests | 40-45 sec or bolus track | 1-1.25 mm | Thin slices for small lesions |
     | Portal Venous | Diaphragm | Lesser Trochanter | 70 sec | 2.5 mm | Standard PV phase |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100 |
-    | mAs | Auto (reference 200-250) |
-    | Rotation Time | 0.5s |
-    | Pitch | 0.9-1.0 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

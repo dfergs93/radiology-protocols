@@ -175,15 +175,6 @@ safety:
     | Arterial Phase | Diaphragm | Iliac crests | 25 sec | 0.625 mm | Focus on celiac SMA IMA |
     | Portal Venous | Diaphragm | Pubic symphysis | 70 sec | 0.625 mm | Assess bowel wall enhancement |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100 |
-    | mAs | Auto (reference 300) |
-    | Rotation Time | 0.5s |
-    | Pitch | 1.375 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

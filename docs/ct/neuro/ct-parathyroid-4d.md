@@ -188,15 +188,6 @@ safety:
     | Venous Phase | Skull base | Carina | 55 sec | 2 mm | Thyroid enhancement |
     | Delayed Phase | Skull base | Carina | 90 sec | 2.5 mm | Washout phase |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 200) |
-    | Rotation Time | 0.5s |
-    | Pitch | 1 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

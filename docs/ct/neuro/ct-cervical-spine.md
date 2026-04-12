@@ -161,15 +161,6 @@ safety:
     | Scout | Skull base | T1 | N/A | N/A | AP and lateral |
     | C-spine Helical | Skull base | T1 | N/A or 60s if contrast | 0.625 mm | Submillimeter acquisition |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 250) |
-    | Rotation Time | 0.5s |
-    | Pitch | Helical |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

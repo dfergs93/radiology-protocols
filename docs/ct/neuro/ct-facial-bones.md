@@ -150,15 +150,6 @@ safety:
     | Scout | Frontal sinus | Mandible | N/A | N/A | Lateral |
     | Facial Bones | Frontal sinus | Mandible | N/A | 0.625 mm | Submillimeter for 3D |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 250) |
-    | Rotation Time | 0.5s |
-    | Pitch | Helical |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

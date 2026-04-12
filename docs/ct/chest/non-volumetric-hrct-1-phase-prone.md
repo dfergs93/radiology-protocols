@@ -138,15 +138,6 @@ safety:
     | Scout Prone | Lung apices | Costophrenic angles | N/A | N/A | Lateral |
     | HRCT Prone | Lung apices | Costophrenic angles | Full inspiration | 1 mm at 1-2cm intervals | Sequential prone |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Reduced (100-150 reference) |
-    | Rotation Time | Sequentials |
-    | Pitch | N/A |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

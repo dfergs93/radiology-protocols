@@ -143,15 +143,6 @@ safety:
     | Scout | Lung apices | Costophrenic angles | N/A | N/A | AP and lateral |
     | NC Chest | Lung apices | Costophrenic angles | N/A | 1-1.25 mm | Standard dose helical |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 120 |
-    | mAs | Auto (reference 200) |
-    | Rotation Time | 0.5s |
-    | Pitch | 1.0-1.2 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |

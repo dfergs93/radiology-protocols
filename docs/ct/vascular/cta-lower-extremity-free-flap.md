@@ -163,15 +163,6 @@ safety:
     | CTA Arterial | Mid-Thigh | Toes | Bolus tracked | 0.625 mm | Bilateral for comparison and variants |
     | CTA Delayed | Mid-Thigh | Toes | 60s | 0.625 mm | Bilateral for comparison and variants |
 
-=== "Technical Parameters"
-
-    | Parameter | Value |
-    |-----------|-------|
-    | kV | 100 |
-    | mAs | Auto (reference 200) |
-    | Rotation Time | 0.5s |
-    | Pitch | 0.9 |
-
 === "Post-Processing"
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |
