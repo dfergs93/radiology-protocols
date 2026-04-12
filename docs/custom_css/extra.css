@@ -222,6 +222,10 @@
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
+[data-md-color-scheme="slate"] .body-part-card h3 {
+  color: var(--md-typeset-a-color);
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
   .hero-buttons {
@@ -1472,4 +1476,16 @@ html {
     position: static;
     max-height: none;
   }
+}
+}
+
+/* ── Request Change button ── */
+.rc-request-btn {
+  border-color: var(--md-primary-fg-color);
+  color: var(--md-primary-fg-color) !important;
+}
+
+[data-md-color-scheme="slate"] .rc-request-btn {
+  border-color: var(--md-typeset-a-color);
+  color: var(--md-typeset-a-color) !important;
 }
