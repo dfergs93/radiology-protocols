@@ -1,4 +1,4 @@
 nav:
+  - CT Protocols: ct
   - compare.md
   - request-change.md
-  - CT Protocols: ct

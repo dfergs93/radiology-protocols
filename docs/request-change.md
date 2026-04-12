@@ -1,10 +1,13 @@
 ---
-title: Request a Protocol Change
+title: Request a New Protocol
+hide:
+  - navigation
+  
 ---
 
-# Request a Protocol Change
+# Request a New Protocol
 
-Use this form to request changes to an existing protocol or to propose a new protocol. Your request will be sent to the protocol lead for review.
+Use this form to propose a new protocol. Alternatively, request protocol changes using the button on each protocol page. Your request will be sent to the protocol lead for review.
 
 <div id="rc-app">
   <p>Loading…</p>

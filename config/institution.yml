@@ -13,7 +13,7 @@ institution:
 contact:
   department_email: ""
   # Optional: link shown in site footer
-  feedback_url: ""
+  feedback_url: "https://github.com/dfergs93/radiology-protocols/issues/new"
 
 branding:
   # Path to logo relative to docs/

@@ -71,17 +71,21 @@
     link.className = 'rc-request-btn';
     link.style.cssText = [
       'display:inline-block',
-      'margin-top:0.5rem',
-      'margin-bottom:1.25rem',
-      'padding:0.35rem 0.85rem',
+      'flex-shrink:0',
+      'margin-left:1rem',
+      'padding:0.25rem 0.75rem',
       'border:1px solid var(--md-primary-fg-color,#3f51b5)',
       'border-radius:4px',
       'color:var(--md-primary-fg-color,#3f51b5)',
-      'font-size:0.8rem',
+      'font-size:0.75rem',
+      'font-weight:normal',
       'text-decoration:none',
+      'white-space:nowrap',
+      'align-self:center',
     ].join(';');
 
-    h1.insertAdjacentElement('afterend', link);
+    h1.style.cssText = 'display:flex;align-items:center;justify-content:space-between;';
+    h1.appendChild(link);
   }
 
   // ─── Series row helpers ──────────────────────────────────────────────────────
