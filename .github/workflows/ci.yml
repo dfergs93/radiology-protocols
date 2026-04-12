@@ -16,4 +16,5 @@ jobs:
       - run: pip install mkdocs-material pymdown-extensions mkdocs-awesome-pages-plugin pyyaml
       - run: python scripts/generate_comparison_index.py
       - run: python scripts/generate_sitemap.py
+      - run: python scripts/generate_forms_index.py
       - run: mkdocs gh-deploy --force

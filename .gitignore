@@ -28,6 +28,11 @@ scripts/*
 !scripts/build_from_csv.py
 !scripts/generate_comparison_index.py
 !scripts/generate_sitemap.py
+!scripts/generate_forms_index.py
+!scripts/render_protocol.py
+!scripts/admin.py
+!scripts/install_hooks.py
+!scripts/hooks/
 !scripts/scripts_summary.md
 
 # Removed subsystems (prevent re-adding)
