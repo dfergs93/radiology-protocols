@@ -17,6 +17,11 @@ venv/
 # Tool state
 .superpowers/
 .worktrees/
+.claude/
+.github/
+CLAUDE.md
+TODO.md
+settings.json
 
 # MkDocs build output
 site/
