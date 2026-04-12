@@ -213,6 +213,19 @@
 
   // ─── Diff logic ──────────────────────────────────────────────────────────────
 
+  var FIELD_KEYS = {
+    'Title': 'title', 'Category': 'category', 'Position': 'position',
+    'NPO': 'npo', 'Clinical Indications': 'indications_json',
+    'Premedication': 'premedication',
+    'Contrast Agent': 'contrast_agent', 'Contrast Volume': 'contrast_volume',
+    'Flow Rate': 'contrast_flow_rate', 'Duration': 'contrast_duration',
+    'Timing': 'contrast_timing', 'ROI': 'contrast_roi', 'Trigger': 'contrast_trigger',
+    'Series': 'series_json',
+    'Tech Notes': 'notes_tech', 'Nursing Notes': 'notes_nursing',
+    'Radiologist Notes': 'notes_rad', 'Tips': 'notes_tips',
+    'Renal': 'safety_renal', 'Allergy': 'safety_allergy'
+  };
+
   function diffValues(original, current) {
     var changes = [];
 
@@ -220,7 +233,7 @@
       var o = (origVal === undefined || origVal === null) ? '' : String(origVal);
       var n = (newVal === undefined || newVal === null) ? '' : String(newVal);
       if (o !== n) {
-        changes.push({ label: label, original: o, proposed: n });
+        changes.push({ label: label, key: FIELD_KEYS[label] || label, original: o, proposed: n });
       }
     }
 
@@ -246,7 +259,7 @@
     var origSeries = JSON.stringify(original.series || []);
     var newSeries = JSON.stringify(current.series || []);
     if (origSeries !== newSeries) {
-      changes.push({ label: 'Series', original: origSeries, proposed: newSeries });
+      changes.push({ label: 'Series', key: 'series_json', original: origSeries, proposed: newSeries });
     }
 
     var on = original.notes || {};
@@ -666,6 +679,13 @@
       }
 
       var body = formatChangeBody(original, changes, freeText);
+      if (changes.length > 0) {
+        var changesMap = {};
+        changes.forEach(function (c) { if (c.key) { changesMap[c.key] = c.proposed; } });
+        var encoded = btoa(JSON.stringify(changesMap));
+        var slug = original.slug || '';
+        body += '\n---\nApply in Admin App: http://localhost:5173/edit/' + slug + '?apply=' + encoded;
+      }
       submitRequest(feedbackUrl, original.title || 'Unknown', original.slug || '', body);
     }
   }

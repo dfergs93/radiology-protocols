@@ -7,6 +7,7 @@ from the repo root.
 
 from __future__ import annotations
 
+import base64
 import json
 import subprocess
 import sys
@@ -139,6 +140,49 @@ def form_to_frontmatter(form) -> dict:
         },
     }
     return fm
+
+
+def apply_changes_to_fm(fm: dict, changes: dict) -> tuple[dict, set]:
+    """Overlay a flat changesMap (field_name -> value) onto an fm dict.
+
+    Returns (updated_fm, highlighted_fields) where highlighted_fields is the set
+    of form field names that were changed.
+    """
+    CONTRAST_FIELDS = {
+        "contrast_agent": "agent", "contrast_volume": "volume",
+        "contrast_flow_rate": "flow_rate", "contrast_duration": "duration",
+        "contrast_timing": "timing", "contrast_roi": "roi", "contrast_trigger": "trigger",
+    }
+    NOTES_FIELDS = {
+        "notes_tech": "tech", "notes_nursing": "nursing",
+        "notes_rad": "rad", "notes_tips": "tips",
+    }
+    SAFETY_FIELDS = {"safety_renal": "renal", "safety_allergy": "allergy"}
+
+    highlighted = set()
+    for key, value in changes.items():
+        if key in CONTRAST_FIELDS:
+            fm.setdefault("contrast", {})[CONTRAST_FIELDS[key]] = value
+            highlighted.add(key)
+        elif key in NOTES_FIELDS:
+            fm.setdefault("notes", {})[NOTES_FIELDS[key]] = value
+            highlighted.add(key)
+        elif key in SAFETY_FIELDS:
+            fm.setdefault("safety", {})[SAFETY_FIELDS[key]] = value
+            highlighted.add(key)
+        elif key == "indications_json":
+            fm["clinical_indications"] = [l.strip() for l in value.splitlines() if l.strip()]
+            highlighted.add(key)
+        elif key == "series_json":
+            try:
+                fm["series"] = json.loads(value)
+            except (json.JSONDecodeError, ValueError):
+                pass
+            highlighted.add(key)
+        elif key in ("title", "category", "protocol_type", "position", "npo", "premedication", "author"):
+            fm[key] = value
+            highlighted.add(key)
+    return fm, highlighted
 
 
 def rebuild_indexes() -> list[str]:
@@ -325,6 +369,12 @@ FORM_TEMPLATE = """<!DOCTYPE html>
   .base-picker button { white-space: nowrap; background: #e3f2fd; color: #1565c0;
                         border: 1px solid #90caf9; border-radius: 4px;
                         padding: 0.4rem 0.85rem; cursor: pointer; font-size: 0.88rem; }
+  /* Change request review */
+  .apply-highlight { background: #fffbe6 !important; border-color: #f0ad00 !important; }
+  .review-banner { background: #fff8e1; border: 1px solid #f0ad00; border-radius: 6px;
+                   padding: 0.75rem 1.25rem; margin-bottom: 1.25rem; font-size: 0.92rem;
+                   color: #5c4000; }
+  .review-banner strong { color: #3d2a00; }
 </style>
 </head>
 <body>
@@ -333,6 +383,12 @@ FORM_TEMPLATE = """<!DOCTYPE html>
   <h1>{{ page_title }}</h1>
 </nav>
 <div class="content">
+
+{% if reviewing_request %}
+<div class="review-banner">
+  <strong>Reviewing change request</strong> — highlighted fields contain the proposed values. Review and click Save to apply.
+</div>
+{% endif %}
 
 {% if is_new %}
 <div class="section">
@@ -357,6 +413,7 @@ FORM_TEMPLATE = """<!DOCTYPE html>
     <div>
       <label for="title">Title</label>
       <input type="text" id="title" name="title" value="{{ fm.title }}"
+             class="{{ 'apply-highlight' if 'title' in highlighted else '' }}"
              oninput="{% if is_new %}autoSlug(){% endif %}">
     </div>
     <div>
@@ -366,7 +423,7 @@ FORM_TEMPLATE = """<!DOCTYPE html>
     </div>
     <div>
       <label for="category">Category</label>
-      <select id="category" name="category">
+      <select id="category" name="category" class="{{ 'apply-highlight' if 'category' in highlighted else '' }}">
         {% for cat in categories %}
         <option value="{{ cat }}" {% if fm.category == cat %}selected{% endif %}>{{ cat }}</option>
         {% endfor %}
@@ -396,15 +453,15 @@ FORM_TEMPLATE = """<!DOCTYPE html>
   <div class="grid-2">
     <div class="span-full">
       <label for="indications_json">Clinical Indications (one per line)</label>
-      <textarea id="indications_json" name="indications_json" rows="4">{{ fm.clinical_indications | join('\n') }}</textarea>
+      <textarea id="indications_json" name="indications_json" rows="4" class="{{ 'apply-highlight' if 'indications_json' in highlighted else '' }}">{{ fm.clinical_indications | join('\n') }}</textarea>
     </div>
     <div>
       <label for="position">Position</label>
-      <input type="text" id="position" name="position" value="{{ fm.position }}">
+      <input type="text" id="position" name="position" value="{{ fm.position }}" class="{{ 'apply-highlight' if 'position' in highlighted else '' }}">
     </div>
     <div>
       <label for="npo">NPO Status</label>
-      <input type="text" id="npo" name="npo" value="{{ fm.npo }}">
+      <input type="text" id="npo" name="npo" value="{{ fm.npo }}" class="{{ 'apply-highlight' if 'npo' in highlighted else '' }}">
     </div>
   </div>
 </div>
@@ -413,7 +470,7 @@ FORM_TEMPLATE = """<!DOCTYPE html>
   <h2>Preparation</h2>
   <div>
     <label for="premedication">Premedication</label>
-    <textarea id="premedication" name="premedication" rows="3">{{ fm.premedication }}</textarea>
+    <textarea id="premedication" name="premedication" rows="3" class="{{ 'apply-highlight' if 'premedication' in highlighted else '' }}">{{ fm.premedication }}</textarea>
   </div>
 </div>
 
@@ -422,31 +479,31 @@ FORM_TEMPLATE = """<!DOCTYPE html>
   <div class="grid-4">
     <div>
       <label>Agent</label>
-      <input type="text" name="contrast_agent" value="{{ fm.contrast.agent }}">
+      <input type="text" name="contrast_agent" value="{{ fm.contrast.agent }}" class="{{ 'apply-highlight' if 'contrast_agent' in highlighted else '' }}">
     </div>
     <div>
       <label>Volume</label>
-      <input type="text" name="contrast_volume" value="{{ fm.contrast.volume }}">
+      <input type="text" name="contrast_volume" value="{{ fm.contrast.volume }}" class="{{ 'apply-highlight' if 'contrast_volume' in highlighted else '' }}">
     </div>
     <div>
       <label>Flow Rate</label>
-      <input type="text" name="contrast_flow_rate" value="{{ fm.contrast.flow_rate }}">
+      <input type="text" name="contrast_flow_rate" value="{{ fm.contrast.flow_rate }}" class="{{ 'apply-highlight' if 'contrast_flow_rate' in highlighted else '' }}">
     </div>
     <div>
       <label>Duration</label>
-      <input type="text" name="contrast_duration" value="{{ fm.contrast.duration }}">
+      <input type="text" name="contrast_duration" value="{{ fm.contrast.duration }}" class="{{ 'apply-highlight' if 'contrast_duration' in highlighted else '' }}">
     </div>
     <div>
       <label>Timing Method</label>
-      <input type="text" name="contrast_timing" value="{{ fm.contrast.timing }}">
+      <input type="text" name="contrast_timing" value="{{ fm.contrast.timing }}" class="{{ 'apply-highlight' if 'contrast_timing' in highlighted else '' }}">
     </div>
     <div>
       <label>ROI</label>
-      <input type="text" name="contrast_roi" value="{{ fm.contrast.roi }}">
+      <input type="text" name="contrast_roi" value="{{ fm.contrast.roi }}" class="{{ 'apply-highlight' if 'contrast_roi' in highlighted else '' }}">
     </div>
     <div>
       <label>Trigger (HU)</label>
-      <input type="text" name="contrast_trigger" value="{{ fm.contrast.trigger }}">
+      <input type="text" name="contrast_trigger" value="{{ fm.contrast.trigger }}" class="{{ 'apply-highlight' if 'contrast_trigger' in highlighted else '' }}">
     </div>
   </div>
 </div>
@@ -470,19 +527,19 @@ FORM_TEMPLATE = """<!DOCTYPE html>
   <div class="grid-2">
     <div>
       <label>Tech Notes</label>
-      <textarea name="notes_tech" rows="3">{{ fm.notes.tech }}</textarea>
+      <textarea name="notes_tech" rows="3" class="{{ 'apply-highlight' if 'notes_tech' in highlighted else '' }}">{{ fm.notes.tech }}</textarea>
     </div>
     <div>
       <label>Nursing Notes</label>
-      <textarea name="notes_nursing" rows="3">{{ fm.notes.nursing }}</textarea>
+      <textarea name="notes_nursing" rows="3" class="{{ 'apply-highlight' if 'notes_nursing' in highlighted else '' }}">{{ fm.notes.nursing }}</textarea>
     </div>
     <div>
       <label>Radiologist Notes</label>
-      <textarea name="notes_rad" rows="3">{{ fm.notes.rad }}</textarea>
+      <textarea name="notes_rad" rows="3" class="{{ 'apply-highlight' if 'notes_rad' in highlighted else '' }}">{{ fm.notes.rad }}</textarea>
     </div>
     <div>
       <label>Tips &amp; Tricks</label>
-      <textarea name="notes_tips" rows="3">{{ fm.notes.tips }}</textarea>
+      <textarea name="notes_tips" rows="3" class="{{ 'apply-highlight' if 'notes_tips' in highlighted else '' }}">{{ fm.notes.tips }}</textarea>
     </div>
   </div>
 </div>
@@ -492,11 +549,11 @@ FORM_TEMPLATE = """<!DOCTYPE html>
   <div class="grid-2">
     <div>
       <label>Renal Considerations</label>
-      <input type="text" name="safety_renal" value="{{ fm.safety.renal }}">
+      <input type="text" name="safety_renal" value="{{ fm.safety.renal }}" class="{{ 'apply-highlight' if 'safety_renal' in highlighted else '' }}">
     </div>
     <div>
       <label>Allergy Considerations</label>
-      <input type="text" name="safety_allergy" value="{{ fm.safety.allergy }}">
+      <input type="text" name="safety_allergy" value="{{ fm.safety.allergy }}" class="{{ 'apply-highlight' if 'safety_allergy' in highlighted else '' }}">
     </div>
   </div>
 </div>
@@ -762,6 +819,17 @@ def edit(slug: str):
             return jsonify({"success": False, "error": str(exc)})
 
     fm = _ensure_fm_keys(item["fm"])
+    highlighted = set()
+    apply_param = request.args.get("apply", "")
+    if apply_param:
+        try:
+            # Pad to multiple of 4 for standard base64 decode
+            padding = "=" * ((4 - len(apply_param) % 4) % 4)
+            apply_changes = json.loads(base64.b64decode(apply_param + padding))
+            fm, highlighted = apply_changes_to_fm(fm, apply_changes)
+        except Exception:
+            pass  # Malformed apply param — ignore, show unmodified form
+
     return render_template_string(
         FORM_TEMPLATE,
         page_title=f"Edit: {fm['title']}",
@@ -772,6 +840,8 @@ def edit(slug: str):
         series_json=json.dumps(fm.get("series", [])),
         recons_json=json.dumps(fm.get("recons", [])),
         all_protocols=[],
+        highlighted=highlighted,
+        reviewing_request=bool(highlighted),
     )
 
 
@@ -816,6 +886,8 @@ def new():
         series_json="[]",
         recons_json="[]",
         all_protocols=all_protocols,
+        highlighted=set(),
+        reviewing_request=False,
     )
 
 
