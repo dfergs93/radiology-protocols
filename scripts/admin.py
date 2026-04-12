@@ -141,25 +141,31 @@ def form_to_frontmatter(form) -> dict:
     return fm
 
 
-def rebuild_indexes():
-    """Run index-generation scripts via subprocess."""
+def rebuild_indexes() -> list[str]:
+    """Run index-generation scripts via subprocess. Returns list of failure messages."""
     scripts = [
         "generate_comparison_index.py",
         "generate_sitemap.py",
         "generate_forms_index.py",
     ]
+    failures = []
     for script in scripts:
         script_path = SCRIPTS_DIR / script
         if script_path.exists():
             try:
-                subprocess.run(
+                result = subprocess.run(
                     [sys.executable, str(script_path)],
                     cwd=str(REPO_ROOT),
                     timeout=30,
                     check=False,
+                    capture_output=True,
+                    text=True,
                 )
-            except Exception:
-                pass
+                if result.returncode != 0:
+                    failures.append(f"{script} failed: {result.stderr.strip() or 'non-zero exit'}")
+            except Exception as exc:
+                failures.append(f"{script} error: {exc}")
+    return failures
 
 
 # ---------------------------------------------------------------------------
@@ -377,6 +383,10 @@ FORM_TEMPLATE = """<!DOCTYPE html>
     <div>
       <label for="author">Author</label>
       <input type="text" id="author" name="author" value="{{ fm.author }}">
+    </div>
+    <div class="span-full">
+      <label for="synonyms">Synonyms (one per line)</label>
+      <textarea id="synonyms" name="synonyms" rows="2">{{ fm.synonyms | join('\n') }}</textarea>
     </div>
   </div>
 </div>
@@ -733,12 +743,20 @@ def edit(slug: str):
 
     if request.method == "POST":
         try:
+            original_fm = item["fm"]
             fm = form_to_frontmatter(request.form)
             # Preserve slug (readonly on edit)
             fm["slug"] = slug
+            # Preserve fields not exposed in the form to avoid silent data loss
+            if "tech_params" in original_fm:
+                fm["tech_params"] = original_fm["tech_params"]
+            if original_fm.get("notes", {}).get("additional_recons"):
+                fm.setdefault("notes", {})["additional_recons"] = original_fm["notes"]["additional_recons"]
             md_content = render_document(fm)
             item["filepath"].write_text(md_content, encoding="utf-8")
-            rebuild_indexes()
+            failures = rebuild_indexes()
+            if failures:
+                return jsonify({"success": True, "warnings": failures})
             return jsonify({"success": True})
         except Exception as exc:
             return jsonify({"success": False, "error": str(exc)})
@@ -760,19 +778,28 @@ def edit(slug: str):
 @app.route("/new", methods=["GET", "POST"])
 def new():
     if request.method == "POST":
+        import re as _re
         try:
             fm = form_to_frontmatter(request.form)
             slug = fm.get("slug", "").strip()
             if not slug:
                 return jsonify({"success": False, "error": "Slug is required."})
+            if not _re.fullmatch(r'[a-z0-9][a-z0-9-]*', slug):
+                return jsonify({"success": False, "error": "Slug must contain only lowercase letters, digits, and hyphens."})
             category = fm.get("category", "abdomen")
+            if category not in CATEGORIES:
+                return jsonify({"success": False, "error": f"Invalid category: {category}"})
             target_path = DOCS_CT / category / f"{slug}.md"
+            if not str(target_path.resolve()).startswith(str(DOCS_CT.resolve())):
+                return jsonify({"success": False, "error": "Invalid path."})
             if target_path.exists():
                 return jsonify({"success": False, "error": f"File already exists: {target_path.relative_to(REPO_ROOT)}"})
             target_path.parent.mkdir(parents=True, exist_ok=True)
             md_content = render_document(fm)
             target_path.write_text(md_content, encoding="utf-8")
-            rebuild_indexes()
+            failures = rebuild_indexes()
+            if failures:
+                return jsonify({"success": True, "redirect": url_for("edit", slug=slug), "warnings": failures})
             return jsonify({"success": True, "redirect": url_for("edit", slug=slug)})
         except Exception as exc:
             return jsonify({"success": False, "error": str(exc)})
@@ -803,4 +830,4 @@ if __name__ == "__main__":
     # Open browser after a short delay so Flask is ready
     import threading
     threading.Timer(1.0, lambda: webbrowser.open(url)).start()
-    app.run(host="0.0.0.0", port=port, debug=False)
+    app.run(host="127.0.0.1", port=port, debug=False)
