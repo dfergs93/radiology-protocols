@@ -1,0 +1,37 @@
+#!/bin/bash
+
+# Pre-commit hook: regenerate JSON indexes when CT protocol files are staged.
+
+STAGED=$(git diff --cached --name-only | grep '^docs/ct/.*\.md$')
+
+if [ -z "$STAGED" ]; then
+    exit 0
+fi
+
+echo "CT protocol files staged — regenerating indexes..."
+
+python scripts/generate_comparison_index.py
+if [ $? -ne 0 ]; then
+    echo "ERROR: generate_comparison_index.py failed"
+    exit 1
+fi
+
+python scripts/generate_sitemap.py
+if [ $? -ne 0 ]; then
+    echo "ERROR: generate_sitemap.py failed"
+    exit 1
+fi
+
+python scripts/generate_forms_index.py
+if [ $? -ne 0 ]; then
+    echo "ERROR: generate_forms_index.py failed"
+    exit 1
+fi
+
+git add \
+    docs/javascripts/protocol-comparison-index.json \
+    docs/sitemap.json \
+    docs/javascripts/protocol-forms-index.json \
+    docs/javascripts/institution-config.json
+
+echo "Indexes regenerated and staged."

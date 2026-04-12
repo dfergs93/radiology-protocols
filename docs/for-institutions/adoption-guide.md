@@ -35,7 +35,13 @@ If you are hosting in a subdirectory on an internal server (e.g. `https://intran
 ## Step 2 — Install Dependencies
 
 ```bash
-pip install mkdocs-material pymdown-extensions mkdocs-awesome-pages-plugin pyyaml
+pip install mkdocs-material pymdown-extensions mkdocs-awesome-pages-plugin pyyaml flask
+```
+
+Install the pre-commit hook so indexes are regenerated automatically whenever you commit protocol changes:
+
+```bash
+python scripts/install_hooks.py
 ```
 
 ## Step 3 — Migrate Existing Protocols
@@ -118,11 +124,18 @@ See [Hosting](hosting.md) for GitHub Pages and local/intranet deployment options
 
 ## Updating Protocols
 
-Updating an existing protocol requires editing the Markdown file directly. After editing:
+The **recommended approach** for editing protocols is the Flask admin app:
+
+```bash
+python scripts/admin.py
+```
+
+The admin app auto-regenerates all indexes on save, so you never need to run index scripts manually.
+
+If you edit protocol Markdown files directly instead, the pre-commit hook (installed via `python scripts/install_hooks.py`) acts as a safety net: it detects staged changes under `docs/ct/` and regenerates all indexes before the commit lands.
+
+For direct file edits without the hook, regenerate indexes manually:
 
 1. Update the YAML front matter if any structured parameters changed
-2. Run `python scripts/generate_comparison_index.py` to regenerate the comparison index
-3. Commit and push (CI handles deployment)
-
-!!! note "Work in progress"
-    A pipeline to automate YAML front matter updates and index regeneration is planned but not yet implemented. Currently, both steps must be done manually.
+2. Run `python scripts/generate_comparison_index.py`, `python scripts/generate_sitemap.py`, and `python scripts/generate_forms_index.py`
+3. Commit all changed files and push (CI handles deployment)
