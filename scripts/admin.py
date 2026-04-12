@@ -384,9 +384,13 @@ FORM_TEMPLATE = """<!DOCTYPE html>
 </nav>
 <div class="content">
 
-{% if reviewing_request %}
+{% if reviewing_request == true %}
 <div class="review-banner">
   <strong>Reviewing change request</strong> — highlighted fields contain the proposed values. Review and click Save to apply.
+</div>
+{% elif reviewing_request %}
+<div class="review-banner" style="background:#fff3cd;border-color:#ffc107;color:#664d03;">
+  <strong>Warning:</strong> {{ reviewing_request }}
 </div>
 {% endif %}
 
@@ -820,6 +824,7 @@ def edit(slug: str):
 
     fm = _ensure_fm_keys(item["fm"])
     highlighted = set()
+    reviewing_request = False
     apply_param = request.args.get("apply", "")
     if apply_param:
         try:
@@ -827,8 +832,9 @@ def edit(slug: str):
             padding = "=" * ((4 - len(apply_param) % 4) % 4)
             apply_changes = json.loads(base64.b64decode(apply_param + padding))
             fm, highlighted = apply_changes_to_fm(fm, apply_changes)
-        except Exception:
-            pass  # Malformed apply param — ignore, show unmodified form
+            reviewing_request = True
+        except Exception as exc:
+            reviewing_request = f"Could not decode change request link: {exc}"
 
     return render_template_string(
         FORM_TEMPLATE,
@@ -841,7 +847,7 @@ def edit(slug: str):
         recons_json=json.dumps(fm.get("recons", [])),
         all_protocols=[],
         highlighted=highlighted,
-        reviewing_request=bool(highlighted),
+        reviewing_request=reviewing_request,
     )
 
 

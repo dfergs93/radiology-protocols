@@ -682,7 +682,7 @@
       if (changes.length > 0) {
         var changesMap = {};
         changes.forEach(function (c) { if (c.key) { changesMap[c.key] = c.proposed; } });
-        var encoded = btoa(JSON.stringify(changesMap));
+        var encoded = encodeURIComponent(btoa(JSON.stringify(changesMap)));
         var slug = original.slug || '';
         body += '\n---\nApply in Admin App: http://localhost:5173/edit/' + slug + '?apply=' + encoded;
       }
