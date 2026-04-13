@@ -3067,11 +3067,11 @@
     "category": "Neuro",
     "slug": "ctv-head",
     "contrast": {
-      "agent": "Omnipaque 350",
+      "agent": "Isovue 370",
       "volume": "75-100 mL",
       "flow_rate": "3-4 mL/s",
-      "duration": "",
-      "timing": "",
+      "duration": "15-20s",
+      "timing": "Fixed Delay",
       "roi": "",
       "trigger": "",
       "type": "IV Contrast"
@@ -3084,7 +3084,7 @@
         "delay": "N/A",
         "thickness": "5 mm",
         "notes": "Baseline",
-        "delay_seconds": 0,
+        "delay_seconds": -10,
         "phase_type": "non-contrast",
         "coverage": "Vertex \u2192 Foramen magnum"
       },

@@ -5509,76 +5509,80 @@
     "npo": "NPO 2 hours",
     "premedication": "",
     "contrast": {
-      "agent": "Omnipaque 350",
-      "volume": "75-100 mL",
-      "flow_rate": "3-4 mL/s"
+      "agent": "Isovue 370",
+      "duration": "15-20s",
+      "flow_rate": "3-4 mL/s",
+      "roi": "",
+      "timing": "Fixed Delay",
+      "trigger": "",
+      "volume": "75-100 mL"
     },
     "series": [
       {
-        "name": "NC Head",
-        "start": "Vertex",
-        "end": "Foramen magnum",
         "delay": "N/A",
-        "thickness": "5 mm",
-        "notes": "Baseline"
+        "end": "Foramen magnum",
+        "name": "NC Head",
+        "notes": "Baseline",
+        "start": "Vertex",
+        "thickness": "5 mm"
       },
       {
-        "name": "CTV Head",
-        "start": "Skull base",
-        "end": "Vertex",
         "delay": "60-90 sec delay",
-        "thickness": "0.625-1 mm",
-        "notes": "Venous phase"
+        "end": "Vertex",
+        "name": "CTV Head",
+        "notes": "Venous phase",
+        "start": "Skull base",
+        "thickness": "0.625-1 mm"
       }
     ],
     "recons": [
       {
-        "plane": "Axial",
         "acquisition": "CTV",
         "fov": "Head",
-        "thickness_increment": "1 mm/1 mm",
-        "kernel": "Brain",
         "ir_strength": "3",
-        "notes": "Venous sinuses"
+        "kernel": "Brain",
+        "notes": "Venous sinuses",
+        "plane": "Axial",
+        "thickness_increment": "1 mm/1 mm"
       },
       {
-        "plane": "MIP",
         "acquisition": "CTV",
         "fov": "Sinuses",
-        "thickness_increment": "Thick slab",
-        "kernel": "Brain",
         "ir_strength": "N/A",
-        "notes": "Venogram overview"
+        "kernel": "Brain",
+        "notes": "Venogram overview",
+        "plane": "MIP",
+        "thickness_increment": "Thick slab"
       },
       {
-        "plane": "3D VR",
         "acquisition": "CTV",
         "fov": "Venous system",
-        "thickness_increment": "1 mm source",
-        "kernel": "Brain",
         "ir_strength": "N/A",
-        "notes": "3D venogram"
+        "kernel": "Brain",
+        "notes": "3D venogram",
+        "plane": "3D VR",
+        "thickness_increment": "1 mm source"
       },
       {
-        "plane": "Sagittal",
         "acquisition": "CTV",
         "fov": "Midline",
-        "thickness_increment": "1.5 mm",
-        "kernel": "Brain",
         "ir_strength": "3",
-        "notes": "Sagittal sinus"
+        "kernel": "Brain",
+        "notes": "Sagittal sinus",
+        "plane": "Sagittal",
+        "thickness_increment": "1.5 mm"
       }
     ],
     "notes": {
-      "tech": "NC Head then delayed venous CTV (60-90 sec). Skull base to vertex. Assess venous sinuses",
+      "additional_recons": "3D VR venogram. MIP maximum intensity projection. Document filling defects",
       "nursing": "18-20G IV",
       "rad": "NC: hemorrhage. CTV: filling defects in sinuses. Venous thrombosis. Cortical vein thrombosis",
-      "tips": "Delayed timing 60-90 sec. Look for filling defects",
-      "additional_recons": "3D VR venogram. MIP maximum intensity projection. Document filling defects"
+      "tech": "NC Head then delayed venous CTV (60-90 sec). Skull base to vertex. Assess venous sinuses",
+      "tips": "Delayed timing 60-90 sec. Look for filling defects"
     },
     "safety": {
-      "renal": "Verify eGFR > 30",
-      "allergy": "Check allergy history"
+      "allergy": "Check allergy history",
+      "renal": "Verify eGFR > 30"
     }
   },
   {
