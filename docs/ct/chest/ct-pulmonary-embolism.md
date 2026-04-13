@@ -1,83 +1,83 @@
 ---
-title: CT Pulmonary Embolism
-slug: ct-pulmonary-embolism
-category: chest
-protocol_type: contrast-enhanced
-last_updated: '2026-01-01'
 author: ''
-synonyms: []
+category: vascular
 clinical_indications:
 - Suspected pulmonary embolism
 - Acute dyspnea
 - Chest pain with elevated D-dimer
-position: Supine feet-first with arms raised
-npo: NPO 2 hours recommended
-premedication: None required
 contrast:
   agent: Isovue 370
-  volume: 1.3 mL/kg
-  flow_rate: 5 mL/s
   duration: 15 - 20s
-  timing: Bolus Tracking
+  flow_rate: 5 mL/s
   roi: Main Pulmonary Artery
+  timing: Bolus Tracking
   trigger: 100 HU
-tech_params:
-  kv: '100'
-  mas: Auto (reference 200)
-  rotation_time: 0.5s
-  pitch: 1.0-1.2
-series:
-- name: Pulmonary Angiogram
-  start: Lung apices
-  end: Adrenal glands
-  delay: Bolus tracked
-  thickness: 0.625 mm
-  notes: Caudocranial direction from diaphragm to apices
-recons:
-- plane: Axial
-  acquisition: Angiogram
-  fov: Chest
-  thickness_increment: 1.25 mm/1.25 mm
-  kernel: Standard
-  ir_strength: '3'
-  notes: Mediastinal window for PE assessment
-- plane: Axial
-  acquisition: Angiogram
-  fov: Chest
-  thickness_increment: 2.5 mm/2.5 mm
-  kernel: Lung
-  ir_strength: '3'
-  notes: Lung window for parenchymal assessment
-- plane: Coronal
-  acquisition: Angiogram
-  fov: Chest
-  thickness_increment: 3 mm/3 mm
-  kernel: Standard
-  ir_strength: '3'
-  notes: Overview of pulmonary vasculature
-- plane: Sagittal
-  acquisition: Angiogram
-  fov: Chest
-  thickness_increment: 3 mm/3 mm
-  kernel: Standard
-  ir_strength: '3'
-  notes: Optional for clinical correlation
+  volume: 1.3 mL/kg
+last_updated: '2026-01-01'
 notes:
-  tech: Caudocranial scan direction. Coach breath hold. ROI in main PA at level of
-    bifurcation
+  additional_recons: MIP reconstructions of pulmonary arteries
   nursing: 20G or larger IV in antecubital preferred. Verify good flow before injection
   rad: Assess RV/LV ratio. Look for signs of right heart strain. Check for DVT in
     leg veins if imaged
+  tech: Caudocranial scan direction. Coach breath hold. ROI in main PA at level of
+    bifurcation
   tips: Arms fully raised to reduce beam hardening
-  additional_recons: MIP reconstructions of pulmonary arteries
+npo: NPO 2 hours recommended
+position: Supine feet-first with arms raised
+premedication: None required
+protocol_type: contrast-enhanced
+recons:
+- acquisition: Angiogram
+  fov: Chest
+  ir_strength: '3'
+  kernel: Standard
+  notes: Mediastinal window for PE assessment
+  plane: Axial
+  thickness_increment: 1.25 mm/1.25 mm
+- acquisition: Angiogram
+  fov: Chest
+  ir_strength: '3'
+  kernel: Lung
+  notes: Lung window for parenchymal assessment
+  plane: Axial
+  thickness_increment: 2.5 mm/2.5 mm
+- acquisition: Angiogram
+  fov: Chest
+  ir_strength: '3'
+  kernel: Standard
+  notes: Overview of pulmonary vasculature
+  plane: Coronal
+  thickness_increment: 3 mm/3 mm
+- acquisition: Angiogram
+  fov: Chest
+  ir_strength: '3'
+  kernel: Standard
+  notes: Optional for clinical correlation
+  plane: Sagittal
+  thickness_increment: 3 mm/3 mm
 safety:
-  renal: Verify eGFR > 30
   allergy: Check iodine allergy history and prior reactions
+  renal: Verify eGFR > 30
+series:
+- delay: Bolus tracked
+  end: Adrenal glands
+  name: Pulmonary Angiogram
+  notes: Caudocranial direction from diaphragm to apices
+  start: Lung apices
+  thickness: 0.625 mm
+slug: ct-pulmonary-embolism
+synonyms: []
+tech_params:
+  kv: '100'
+  mas: Auto (reference 200)
+  pitch: 1.0-1.2
+  rotation_time: 0.5s
+title: CT Pulmonary Embolism
 ---
 
 # CT Pulmonary Embolism
 
-**Last Updated:** 2026-01-01  
+**Last Updated:** 2026-01-01
 **Author:** 
 
 ---
@@ -92,7 +92,7 @@ safety:
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Pulmonary Angiogram | Arterial (bolus tracked) | Lung apices to Costophrenic Angles |
+        | Pulmonary Angiogram | Bolus tracked | Lung apices → Adrenal glands |
 
     === "Clinical Indications"
 
@@ -109,12 +109,11 @@ safety:
     - **Pre-Medication:**
         - None required
 
--   __3. IV Contrast & Injection__    
+-   __3. IV Contrast & Injection__
 
     ---
-    
-    ===   "Injection Parameters"
-        
+    === "Injection Parameters"
+
         | Parameter | Value |
         |-----------|-------|
         | Agent | Isovue 370 |
@@ -125,7 +124,7 @@ safety:
         | ROI Placement | Main Pulmonary Artery |
         | Trigger (HU) | 100 HU |
 
-    ===   "Lab Requirements"
+    === "Lab Requirements"
         Use full dose if GFR > 30
         !!! warning "If GFR < 30"
             **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
@@ -137,7 +136,6 @@ safety:
     === "Technologist Notes"
 
         - Caudocranial scan direction. Coach breath hold. ROI in main PA at level of bifurcation
-        - Additional Recons: MIP reconstructions of pulmonary arteries
 
     === "Nursing Notes"
 
@@ -163,7 +161,6 @@ safety:
 
     | Series Name | Start Location | End Location | Delay | Slice Thickness | Notes |
     |:------------|:---------------|:-------------|:------|:----------------|:------|
-    | Scout/Topogram | Lung apices | Adrenal glands | N/A | N/A | AP and lateral |
     | Pulmonary Angiogram | Lung apices | Adrenal glands | Bolus tracked | 0.625 mm | Caudocranial direction from diaphragm to apices |
 
 === "Post-Processing"

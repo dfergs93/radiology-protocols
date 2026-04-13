@@ -270,18 +270,6 @@
     "category": "cardiac"
   },
   {
-    "slug": "ct-pulmonary-embolism",
-    "title": "CT Pulmonary Embolism",
-    "url": "https://dfergs93.github.io/radiology-protocols/ct/chest/ct-pulmonary-embolism/",
-    "synonyms": [],
-    "clinical_indications": [
-      "Suspected pulmonary embolism",
-      "Acute dyspnea",
-      "Chest pain with elevated D-dimer"
-    ],
-    "category": "chest"
-  },
-  {
     "slug": "dynamic-airway-ct",
     "title": "Dynamic Airway CT",
     "url": "https://dfergs93.github.io/radiology-protocols/ct/chest/dynamic-airway-ct/",
@@ -920,6 +908,18 @@
       "Pulseless extremity"
     ],
     "category": "trauma"
+  },
+  {
+    "slug": "ct-pulmonary-embolism",
+    "title": "CT Pulmonary Embolism",
+    "url": "https://dfergs93.github.io/radiology-protocols/ct/vascular/ct-pulmonary-embolism/",
+    "synonyms": [],
+    "clinical_indications": [
+      "Suspected pulmonary embolism",
+      "Acute dyspnea",
+      "Chest pain with elevated D-dimer"
+    ],
+    "category": "vascular"
   },
   {
     "slug": "cta-abdomen-pelvis",
