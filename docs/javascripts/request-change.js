@@ -350,7 +350,40 @@
 
   // ─── Submission ──────────────────────────────────────────────────────────────
 
-  function submitRequest(feedbackUrl, title, slug, body) {
+  function parseGithubRepo(feedbackUrl) {
+    // Extract owner/repo from https://github.com/owner/repo/issues/new
+    var m = feedbackUrl.match(/github\.com\/([^/]+)\/([^/]+)/);
+    return m ? { owner: m[1], repo: m[2] } : null;
+  }
+
+  function submitViaGithubApi(token, owner, repo, subject, body) {
+    var submitBtn = document.querySelector('.rc-submit-btn');
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Submitting…'; }
+
+    fetch('https://api.github.com/repos/' + owner + '/' + repo + '/issues', {
+      method: 'POST',
+      headers: {
+        'Authorization': 'Bearer ' + token,
+        'Content-Type': 'application/json',
+        'Accept': 'application/vnd.github+json',
+        'X-GitHub-Api-Version': '2022-11-28',
+      },
+      body: JSON.stringify({ title: subject, body: body }),
+    }).then(function (r) {
+      if (r.ok) return r.json();
+      return r.json().then(function (d) { throw new Error(d.message || ('HTTP ' + r.status)); });
+    }).then(function (data) {
+      showMessage('Request submitted. Issue #' + data.number + ' created.', 'info');
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Submit Request'; }
+    }).catch(function (err) {
+      showMessage('Submission failed: ' + err.message, 'error');
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Submit Request'; }
+    });
+  }
+
+  function submitRequest(config, title, slug, body) {
+    var feedbackUrl = config.feedback_url || '';
+    var token = config.github_token || '';
     var subject = 'Protocol Change Request: ' + title + ' (' + slug + ')';
 
     if (!feedbackUrl) {
@@ -363,14 +396,26 @@
         '?subject=' + encodeURIComponent(subject) +
         '&body=' + encodeURIComponent(body);
       window.location.href = mailUrl;
-    } else if (feedbackUrl.indexOf('github.com') !== -1) {
+      return;
+    }
+
+    if (feedbackUrl.indexOf('github.com') !== -1) {
+      if (token) {
+        var ghRepo = parseGithubRepo(feedbackUrl);
+        if (ghRepo) {
+          submitViaGithubApi(token, ghRepo.owner, ghRepo.repo, subject, body);
+          return;
+        }
+      }
+      // Fallback: open GitHub new-issue page (requires user login)
       var issueUrl = feedbackUrl +
         '?title=' + encodeURIComponent(subject) +
         '&body=' + encodeURIComponent(body);
       window.open(issueUrl, '_blank');
-    } else {
-      showMessage('Contact your protocol lead directly.', 'info');
+      return;
     }
+
+    showMessage('Contact your protocol lead directly.', 'info');
   }
 
   function showMessage(msg, type) {
@@ -653,7 +698,6 @@
 
   function handleSubmit(protocols, config, isNewMode, preselectedProtocol) {
     var current = readFormValues();
-    var feedbackUrl = config.feedback_url || '';
 
     if (isNewMode) {
       // Mode B: new protocol
@@ -669,7 +713,7 @@
       var body = formatNewProtocolBody(baseProt, current);
       var title = 'New Protocol Request: ' + current.title;
       var slug = current.slug || slugify(current.title);
-      submitRequest(feedbackUrl, title, slug, body);
+      submitRequest(config, title, slug, body);
     } else {
       // Mode A: change request
       var original = preselectedProtocol || {};
@@ -689,7 +733,7 @@
         var slug = original.slug || '';
         body += '\n---\nApply in Admin App: http://localhost:5173/edit/' + slug + '?apply=' + encoded;
       }
-      submitRequest(feedbackUrl, original.title || 'Unknown', original.slug || '', body);
+      submitRequest(config, original.title || 'Unknown', original.slug || '', body);
     }
   }
 

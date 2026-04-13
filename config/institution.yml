@@ -14,6 +14,11 @@ contact:
   department_email: ""
   # Optional: link shown in site footer
   feedback_url: "https://github.com/dfergs93/radiology-protocols/issues/new"
+  # Optional: fine-grained GitHub PAT with Issues: write scope on this repo.
+  # When set, change requests are submitted directly via the GitHub API so
+  # users do not need a GitHub account. If blank, the button opens the
+  # GitHub new-issue page (requires the user to be logged in).
+  github_token: ""
 
 branding:
   # Path to logo relative to docs/

@@ -1,5 +1,6 @@
 {
   "feedback_url": "https://github.com/dfergs93/radiology-protocols/issues/new",
+  "github_token": "",
   "institution_name": "Radiology Department",
   "site_url": "https://dfergs93.github.io/radiology-protocols",
   "base_path": "/radiology-protocols"
