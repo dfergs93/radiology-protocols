@@ -285,9 +285,17 @@
       '**Protocol:** ' + protocol.title,
       '**Slug:** ' + protocol.slug,
       '',
-      '## Requested Changes',
-      '',
     ];
+
+    if (freeText && changes.length === 0) {
+      lines.push('## Note from Requestor', '', '> ' + freeText.replace(/\n/g, '\n> '), '');
+    }
+
+    lines.push('## Requested Changes', '');
+
+    if (changes.length === 0) {
+      lines.push('_(No specific field changes — see note above)_', '');
+    }
 
     changes.forEach(function (c) {
       lines.push('**' + c.label + '**');
@@ -296,7 +304,7 @@
       lines.push('');
     });
 
-    if (freeText) {
+    if (freeText && changes.length > 0) {
       lines.push('## Additional Notes', '', freeText);
     }
 
@@ -717,14 +725,16 @@
       }
 
       var body = formatChangeBody(original, changes, freeText);
+      var slug = original.slug || '';
       if (changes.length > 0) {
         var changesMap = {};
         changes.forEach(function (c) { if (c.key) { changesMap[c.key] = c.proposed; } });
         var encoded = encodeURIComponent(btoa(JSON.stringify(changesMap)));
-        var slug = original.slug || '';
         body += '\n---\nApply in Admin App: http://localhost:5173/edit/' + slug + '?apply=' + encoded;
+      } else {
+        body += '\n---\nOpen in Admin App: http://localhost:5173/edit/' + slug;
       }
-      submitRequest(config, original.title || 'Unknown', original.slug || '', body);
+      submitRequest(config, original.title || 'Unknown', slug, body);
     }
   }
 
