@@ -729,7 +729,10 @@
       if (changes.length > 0) {
         var changesMap = {};
         changes.forEach(function (c) { if (c.key) { changesMap[c.key] = c.proposed; } });
-        var encoded = encodeURIComponent(btoa(JSON.stringify(changesMap)));
+        if (freeText) { changesMap['_notes'] = freeText; }
+        // URL-safe base64: no +/= so no encodeURIComponent needed, no double-encoding risk
+        var encoded = btoa(JSON.stringify(changesMap))
+          .replace(/\+/g, '-').replace(/\//g, '_').replace(/=/g, '');
         body += '\n---\nApply in Admin App: http://localhost:5173/edit/' + slug + '?apply=' + encoded;
       } else {
         body += '\n---\nOpen in Admin App: http://localhost:5173/edit/' + slug;
