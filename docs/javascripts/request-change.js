@@ -350,9 +350,40 @@
 
   // ─── Submission ──────────────────────────────────────────────────────────────
 
+  function submitViaGoogleForm(formUrl, entryTitle, entryBody, subject, body) {
+    var submitBtn = document.querySelector('.rc-submit-btn');
+    if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Submitting…'; }
+
+    var payload = entryTitle + '=' + encodeURIComponent(subject) +
+                  '&' + entryBody + '=' + encodeURIComponent(body);
+
+    // Google Forms does not support CORS — use no-cors (fire-and-forget).
+    // The response is always opaque; we show optimistic confirmation.
+    fetch(formUrl, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: payload,
+    }).then(function () {
+      showMessage('Request submitted successfully.', 'info');
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Submit Request'; }
+    }).catch(function () {
+      showMessage('Submission failed. Please try again or contact your protocol lead.', 'error');
+      if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = 'Submit Request'; }
+    });
+  }
+
   function submitRequest(config, title, slug, body) {
-    var feedbackUrl = config.feedback_url || '';
+    var feedbackUrl  = config.feedback_url || '';
+    var formUrl      = config.google_form_url || '';
+    var entryTitle   = config.google_form_entry_title || '';
+    var entryBody    = config.google_form_entry_body || '';
     var subject = 'Protocol Change Request: ' + title + ' (' + slug + ')';
+
+    if (formUrl && entryTitle && entryBody) {
+      submitViaGoogleForm(formUrl, entryTitle, entryBody, subject, body);
+      return;
+    }
 
     if (!feedbackUrl) {
       showMessage('Contact your protocol lead directly.', 'info');
