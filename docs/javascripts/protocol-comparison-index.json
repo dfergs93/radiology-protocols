@@ -655,7 +655,7 @@
       "agent": "Isovue 370",
       "volume": "1.1 mL/kg",
       "flow_rate": "4-5 mL/s",
-      "duration": "18s",
+      "duration": "20s",
       "timing": "Bolus Tracking",
       "roi": "Ascending aorta",
       "trigger": "200 HU",
@@ -680,7 +680,7 @@
         "delay": "Bolus tracked",
         "thickness": "0.5-0.625 mm",
         "notes": "Retrospective gating",
-        "delay_seconds": 18,
+        "delay_seconds": 20,
         "phase_type": "other",
         "coverage": "2cm above LAD \u2192 2cm below heart apex"
       }

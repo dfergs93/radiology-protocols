@@ -1030,79 +1030,79 @@
     "premedication": "HR < 60 target. | Metoprolol 5mg IV increments up to 15mg. Metoprolol contraindications include sBP < 100, 2nd/3rd degree heart block, and inhaler dependent asthma. | Nitroglycerin 0.4mg SL 5 minutes before scan. Nitroglycerin contraindications include sBP < 100, PDE5 inhibitors within 48 hrs, severe aortic stenosis.",
     "contrast": {
       "agent": "Isovue 370",
-      "volume": "1.1 mL/kg",
+      "duration": "20s",
       "flow_rate": "4-5 mL/s",
-      "duration": "18s",
-      "timing": "Bolus Tracking",
       "roi": "Ascending aorta",
-      "trigger": "200 HU"
+      "timing": "Bolus Tracking",
+      "trigger": "200 HU",
+      "volume": "1.1 mL/kg"
     },
     "series": [
       {
-        "name": "Calcium Score",
-        "start": "Carina",
-        "end": "Below heart",
         "delay": "N/A",
-        "thickness": "3 mm",
-        "notes": "Calcium score"
+        "end": "Below heart",
+        "name": "Calcium Score",
+        "notes": "Calcium score",
+        "start": "Carina",
+        "thickness": "3 mm"
       },
       {
-        "name": "Gated CTA",
-        "start": "2cm above LAD",
-        "end": "2cm below heart apex",
         "delay": "Bolus tracked",
-        "thickness": "0.5-0.625 mm",
-        "notes": "Retrospective gating"
+        "end": "2cm below heart apex",
+        "name": "Gated CTA",
+        "notes": "Retrospective gating",
+        "start": "2cm above LAD",
+        "thickness": "0.5-0.625 mm"
       }
     ],
     "recons": [
       {
-        "plane": "Axial",
         "acquisition": "Calcium score",
         "fov": "Heart",
-        "thickness_increment": "3 mm/3 mm",
-        "kernel": "Standard",
         "ir_strength": "3",
-        "notes": "For Agatston score calculation"
+        "kernel": "Standard",
+        "notes": "For Agatston score calculation",
+        "plane": "Axial",
+        "thickness_increment": "3 mm/3 mm"
       },
       {
-        "plane": "Axial",
         "acquisition": "Calcium score",
         "fov": "Chest",
-        "thickness_increment": "1.5 mm/1.5 mm",
+        "ir_strength": "3",
         "kernel": "Lung",
-        "ir_strength": "3",
-        "notes": "Lung FOV for Extracardiac findings"
-      },
-      {
+        "notes": "Lung FOV for Extracardiac findings",
         "plane": "Axial",
-        "acquisition": "Gated CTA",
-        "fov": "Heart",
-        "thickness_increment": "0.625 mm/0.625 mm",
-        "kernel": "Cardiac",
-        "ir_strength": "3",
-        "notes": "Native coronary assessment"
+        "thickness_increment": "1.5 mm/1.5 mm"
       },
       {
-        "plane": "3D VR",
         "acquisition": "Gated CTA",
         "fov": "Heart",
-        "thickness_increment": "0.5 mm source",
-        "kernel": "Cardiac",
         "ir_strength": "3",
-        "notes": "MPRs by 3D lab"
+        "kernel": "Cardiac",
+        "notes": "Native coronary assessment",
+        "plane": "Axial",
+        "thickness_increment": "0.625 mm/0.625 mm"
+      },
+      {
+        "acquisition": "Gated CTA",
+        "fov": "Heart",
+        "ir_strength": "3",
+        "kernel": "Cardiac",
+        "notes": "MPRs by 3D lab",
+        "plane": "3D VR",
+        "thickness_increment": "0.5 mm source"
       }
     ],
     "notes": {
-      "tech": "Non-valsalva breathing technique, cardiac breathing instruction. Put in study notes if patient unable to follow breathing instructions. | If high HR variability, can trigger by millisecond (200ms - 450 ms pulse range). Revolution CT is better for Afib. | Target End diastole if HR < 65bpm. Target End systole if HR > 86bpm. Target End diastole to End systole if HR 66 - 75 bpm",
+      "additional_recons": "Curved MPR of all coronaries.",
       "nursing": "20G IV minimum. Check for metoprolol or nitroglycerin contraindications. Nitro is priority over metoprolol if BP is borderline.",
       "rad": "Calculate Agatston score. Give CAD-RADS score. Check function look for potential focal wall motion abnormalities",
-      "tips": "Full chest coverage essential. Extended FOV. Low pitch for retrospective gating",
-      "additional_recons": "Curved MPR of all coronaries."
+      "tech": "Non-valsalva breathing technique, cardiac breathing instruction. Put in study notes if patient unable to follow breathing instructions. | If high HR variability, can trigger by millisecond (200ms - 450 ms pulse range). Revolution CT is better for Afib. | Target End diastole if HR < 65bpm. Target End systole if HR > 86bpm. Target End diastole to End systole if HR 66 - 75 bpm",
+      "tips": "Full chest coverage essential. Extended FOV. Low pitch for retrospective gating"
     },
     "safety": {
-      "renal": "Verify eGFR > 30",
-      "allergy": "Check allergy history"
+      "allergy": "Check allergy history",
+      "renal": "Verify eGFR > 30"
     }
   },
   {
