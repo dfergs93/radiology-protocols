@@ -12,8 +12,14 @@ institution:
 
 contact:
   department_email: ""
-  # Optional: link shown in site footer
+  # Fallback link if google_form_url is not set (opens GitHub new-issue page)
   feedback_url: "https://github.com/dfergs93/radiology-protocols/issues/new"
+  # Google Form submission (no GitHub account required).
+  # Set google_form_url + both entry IDs to enable direct form submission.
+  # See workers/google-form-setup.md for setup instructions.
+  google_form_url: "https://docs.google.com/forms/d/e/1FAIpQLSeVD49hiCfJm8qo6ol6NPv2ytU7Ohxw8CKjcXij_TkKj4-MkA/formResponse"
+  google_form_entry_title: "entry.1147256966"
+  google_form_entry_body: "entry.2104758313"
 
 branding:
   # Path to logo relative to docs/

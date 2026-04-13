@@ -86,6 +86,9 @@ def build_institution_config(config_path: Path) -> dict:
 
     return {
         'feedback_url': contact.get('feedback_url') or '',
+        'google_form_url': contact.get('google_form_url') or '',
+        'google_form_entry_title': contact.get('google_form_entry_title') or '',
+        'google_form_entry_body': contact.get('google_form_entry_body') or '',
         'institution_name': institution.get('name') or '',
         'site_url': institution.get('site_url') or '',
         'base_path': institution.get('base_path') or '',
