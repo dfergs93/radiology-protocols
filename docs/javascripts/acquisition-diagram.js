@@ -562,10 +562,39 @@
     const phaseRowCount = rangeOrder.length;
     const totalRows = injectionRowCount + phaseRowCount;
 
+    // ── Resolve overlapping phases in the same row ──────────────────────────
+    // Multi-phase protocols (e.g. respiratory: Inspiration + Mid-Expiration)
+    // may have non-numeric delays that all parse to t=0, causing bars to
+    // overlay each other. Spread them out end-to-end in document order.
+    for (const range of rangeOrder) {
+      const rowPhases = rangeMap[range];
+      if (rowPhases.length < 2) continue;
+
+      const hasOverlap = rowPhases.some((a, i) =>
+        rowPhases.slice(i + 1).some(b =>
+          a.delaySeconds < b.delaySeconds + b.durationSeconds &&
+          b.delaySeconds < a.delaySeconds + a.durationSeconds
+        )
+      );
+
+      if (hasOverlap) {
+        let cursor = Math.min(...rowPhases.map(p => p.delaySeconds));
+        for (const ph of rowPhases) {
+          ph.delaySeconds = cursor;
+          cursor += ph.durationSeconds;
+        }
+      }
+    }
+
     // ── Time extents ────────────────────────────────────────────────────────
     const natural = computeTimeExtents(data);
-    const minTime = (options && options.minTime != null) ? options.minTime : natural.minTime;
-    const maxTime = (options && options.maxTime != null) ? options.maxTime : natural.maxTime;
+    let minTime = (options && options.minTime != null) ? options.minTime : natural.minTime;
+    let maxTime = (options && options.maxTime != null) ? options.maxTime : natural.maxTime;
+
+    // Ensure sequential layout didn't push phases past the computed max
+    for (const ph of phases) {
+      maxTime = Math.max(maxTime, ph.delaySeconds + ph.durationSeconds + 5);
+    }
 
     const timeRange = maxTime - minTime;
     const svgContentWidth = SVG_TOTAL_WIDTH - LEFT_PAD - LABEL_WIDTH - RIGHT_PAD;
