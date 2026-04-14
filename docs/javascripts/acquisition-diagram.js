@@ -581,7 +581,7 @@
         let cursor = Math.min(...rowPhases.map(p => p.delaySeconds));
         for (const ph of rowPhases) {
           ph.delaySeconds = cursor;
-          cursor += ph.durationSeconds;
+          cursor += ph.durationSeconds + 10;
         }
       }
     }
