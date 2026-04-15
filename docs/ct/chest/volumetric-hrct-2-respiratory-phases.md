@@ -1,86 +1,91 @@
 ---
-title: Volumetric HRCT 2 Respiratory Phases
-slug: volumetric-hrct-2-respiratory-phases
+author: None
 category: chest
-protocol_type: chest/pulmonary
-last_updated: '2026-01-01'
-author: 
-synonyms: []
 clinical_indications:
 - Interstitial lung disease without prone imaging
 - ILD diagnosis
 - Diffuse lung disease
-position: Supine with arms raised
-npo: N/A
-premedication: ''
 contrast:
   agent: N/A
-  type: non-contrast
-tech_params:
-  kv: '120'
-  mas: Auto (reference 150-200)
-  rotation_time: 0.5s
-  pitch: '1'
-series:
-- name: Volumetric Inspiration
-  start: Lung apices
-  end: Costophrenic angles
-  delay: Full inspiration
-  thickness: 1 mm
-  notes: Contiguous 1mm slices
-- name: Limited Expiration
-  start: Carina
-  end: Costophrenic angles
-  delay: Full expiration
-  thickness: 1 mm
-  notes: Limited coverage expiration
-recons:
-- plane: Axial
-  acquisition: Inspiration
-  fov: Chest
-  thickness_increment: 1 mm/1 mm
-  kernel: Lung
-  ir_strength: '3'
-  notes: Thin slice ILD assessment
-- plane: Axial
-  acquisition: Expiration
-  fov: Lower lungs
-  thickness_increment: 1 mm/1 mm
-  kernel: Lung
-  ir_strength: '3'
-  notes: Air trapping assessment
-- plane: Coronal
-  acquisition: Inspiration
-  fov: Chest
-  thickness_increment: 1.5 mm
-  kernel: Lung
-  ir_strength: '3'
-  notes: ILD distribution
-- plane: Sagittal
-  acquisition: Inspiration
-  fov: Chest
-  thickness_increment: 2 mm
-  kernel: Lung
-  ir_strength: '3'
-  notes: Craniocaudal distribution
+  duration: ''
+  flow_rate: ''
+  roi: ''
+  timing: ''
+  trigger: ''
+  volume: ''
+last_updated: '2026-01-01'
 notes:
-  tech: 'TWO acquisitions: 1) Full INSPIRATION 2) Limited EXPIRATION (carina to bases).
-    Volumetric (contiguous thin slice). Coach breathing'
+  additional_recons: Thin slice for ILD detail. Compare inspiration vs expiration.
+    Quantitative analysis if available
   nursing: No IV. Careful breath hold coaching. Inspiration and expiration
   rad: ILD pattern recognition. Honeycombing. Ground glass. Reticular. Mosaic attenuation
     on expiration
+  tech: 'TWO acquisitions: 1) Full INSPIRATION 2) EXPIRATION  Volumetric (contiguous
+    thin slice). Coach breathing'
   tips: Volumetric contiguous slices. Coach breathing carefully
-  additional_recons: Thin slice for ILD detail. Compare inspiration vs expiration.
-    Quantitative analysis if available
+npo: N/A
+position: Supine with arms raised
+premedication: ''
+protocol_type: chest/pulmonary
+recons:
+- acquisition: Inspiration
+  fov: Chest
+  ir_strength: '3'
+  kernel: Lung
+  notes: Thin slice ILD assessment
+  plane: Axial
+  thickness_increment: 1 mm/1 mm
+- acquisition: Expiration
+  fov: Lower lungs
+  ir_strength: '3'
+  kernel: Lung
+  notes: Air trapping assessment
+  plane: Axial
+  thickness_increment: 1 mm/1 mm
+- acquisition: Inspiration
+  fov: Chest
+  ir_strength: '3'
+  kernel: Lung
+  notes: ILD distribution
+  plane: Coronal
+  thickness_increment: 1.5 mm
+- acquisition: Inspiration
+  fov: Chest
+  ir_strength: '3'
+  kernel: Lung
+  notes: Craniocaudal distribution
+  plane: Sagittal
+  thickness_increment: 2 mm
 safety:
-  renal: N/A
   allergy: N/A
+  renal: N/A
+series:
+- delay: Full inspiration
+  end: Costophrenic angles
+  name: Volumetric Inspiration
+  notes: Contiguous 1mm slices
+  start: Lung apices
+  thickness: 1 mm
+- delay: Full expiration
+  end: Costophrenic angles
+  name: Expiration
+  notes: Limited coverage expiration
+  start: Lung apices
+  thickness: 1 mm
+slug: volumetric-hrct-2-respiratory-phases
+synonyms: []
+tech_params:
+  kv: '120'
+  mas: Auto (reference 150-200)
+  pitch: '1'
+  rotation_time: 0.5s
+title: Volumetric HRCT 2 Respiratory Phases
 ---
 
 # Volumetric HRCT 2 Respiratory Phases
 
 **Last Updated:** 2026-01-01
-**Author:** 
+**Author:** None
 
 ---
 
@@ -94,8 +99,8 @@ safety:
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Volumetric Inspiration | Contrast (Full inspiration delay) | Lung apices to Costophrenic angles |
-        | Limited Expiration | Contrast (Full expiration delay) | Carina to Costophrenic angles |
+        | Volumetric Inspiration | Full inspiration | Lung apices → Costophrenic angles |
+        | Expiration | Full expiration | Lung apices → Costophrenic angles |
 
     === "Clinical Indications"
 
@@ -109,9 +114,10 @@ safety:
 
     - **Position:** Supine with arms raised
     - **NPO Status:** N/A
-    
+    - **Pre-Medication:**
+        - None required
 
--   __3. IV Contrast & Injection__    
+-   __3. IV Contrast & Injection__
 
     ---
     !!! info "No Intravenous Contrast"
@@ -123,8 +129,7 @@ safety:
 
     === "Technologist Notes"
 
-        - TWO acquisitions: 1) Full INSPIRATION 2) Limited EXPIRATION (carina to bases). Volumetric (contiguous thin slice). Coach breathing
-        - Additional Recons: Thin slice for ILD detail. Compare inspiration vs expiration. Quantitative analysis if available
+        - TWO acquisitions: 1) Full INSPIRATION 2) EXPIRATION  Volumetric (contiguous thin slice). Coach breathing
 
     === "Nursing Notes"
 
@@ -150,9 +155,8 @@ safety:
 
     | Series Name | Start Location | End Location | Delay | Slice Thickness | Notes |
     |:------------|:---------------|:-------------|:------|:----------------|:------|
-    | Scout | Lung apices | Costophrenic angles | N/A | N/A | AP lateral |
     | Volumetric Inspiration | Lung apices | Costophrenic angles | Full inspiration | 1 mm | Contiguous 1mm slices |
-    | Limited Expiration | Carina | Costophrenic angles | Full expiration | 1 mm | Limited coverage expiration |
+    | Expiration | Lung apices | Costophrenic angles | Full expiration | 1 mm | Limited coverage expiration |
 
 === "Post-Processing"
 

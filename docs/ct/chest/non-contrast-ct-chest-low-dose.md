@@ -1,77 +1,81 @@
 ---
-title: Non-Contrast CT Chest Low Dose
-slug: non-contrast-ct-chest-low-dose
+author: None
 category: chest
-protocol_type: non-contrast
-last_updated: '2026-01-01'
-author: 
-synonyms: []
 clinical_indications:
 - Non Contrast chest for patient's age < 60
-position: Supine with arms raised
-npo: N/A
-premedication: ''
 contrast:
   agent: N/A
-  type: non-contrast
+  duration: ''
+  flow_rate: ''
+  roi: ''
+  timing: ''
+  trigger: ''
+  volume: ''
+last_updated: '2026-01-01'
+notes:
+  additional_recons: CAD nodule detection. Measure all nodules ≥3mm. Lung-RADS reporting
+  nursing: No IV. Explain screening purpose and low radiation
+  rad: Lung nodule detection. Measure nodules. Emphysema assessment
+  tech: LOW DOSE technique. Reduced mAs 30-50% of standard. Helical acquisition. High
+    IR strength
+  tips: Low dose protocol. High iterative reconstruction. Nodule measurement software
+npo: N/A
+position: Supine with arms raised
+premedication: ''
+protocol_type: non-contrast
+recons:
+- acquisition: Chest
+  fov: Chest
+  ir_strength: High IR 4-5
+  kernel: Lung
+  notes: Thin slice nodule detection
+  plane: Axial
+  thickness_increment: 1.25 mm/1.25 mm
+- acquisition: Chest
+  fov: Chest
+  ir_strength: '3'
+  kernel: Standard
+  notes: Mediastinal window
+  plane: Axial
+  thickness_increment: 2.5 mm/2.5 mm
+- acquisition: Chest
+  fov: Chest
+  ir_strength: High IR
+  kernel: Lung
+  notes: Coronal overview
+  plane: Coronal
+  thickness_increment: 2 mm/2 mm
+- acquisition: Chest
+  fov: Lungs
+  ir_strength: N/A
+  kernel: Lung
+  notes: Nodule detection
+  plane: MIP
+  thickness_increment: 5 mm slab
+safety:
+  allergy: N/A
+  renal: N/A
+series:
+- delay: N/A
+  end: Costophrenic angles
+  name: Low Dose Chest
+  notes: Low dose helical
+  start: Lung apices
+  thickness: 1-1.25 mm
+slug: non-contrast-ct-chest-low-dose
+synonyms: []
 tech_params:
   kv: 100-120
   mas: Low dose (40-60 reference)
-  rotation_time: 0.5s
   pitch: 1.0-1.2
-series:
-- name: Low Dose Chest
-  start: Lung apices
-  end: Costophrenic angles
-  delay: N/A
-  thickness: 1-1.25 mm
-  notes: Low dose helical
-recons:
-- plane: Axial
-  acquisition: Chest
-  fov: Chest
-  thickness_increment: 1.25 mm/1.25 mm
-  kernel: Lung
-  ir_strength: High IR 4-5
-  notes: Thin slice nodule detection
-- plane: Axial
-  acquisition: Chest
-  fov: Chest
-  thickness_increment: 2.5 mm/2.5 mm
-  kernel: Standard
-  ir_strength: '3'
-  notes: Mediastinal window
-- plane: Coronal
-  acquisition: Chest
-  fov: Chest
-  thickness_increment: 2 mm/2 mm
-  kernel: Lung
-  ir_strength: High IR
-  notes: Coronal overview
-- plane: MIP
-  acquisition: Chest
-  fov: Lungs
-  thickness_increment: 5 mm slab
-  kernel: Lung
-  ir_strength: N/A
-  notes: Nodule detection
-notes:
-  tech: LOW DOSE technique. Reduced mAs 30-50% of standard. Helical acquisition. High
-    IR strength
-  nursing: No IV. Explain screening purpose and low radiation
-  rad: Lung nodule detection. Measure nodules. Lung-RADS classification. Emphysema
-    assessment
-  tips: Low dose protocol. High iterative reconstruction. Nodule measurement software
-  additional_recons: CAD nodule detection. Measure all nodules ≥3mm. Lung-RADS reporting
-safety:
-  renal: N/A
-  allergy: N/A
+  rotation_time: 0.5s
+title: Non-Contrast CT Chest Low Dose
 ---
 
 # Non-Contrast CT Chest Low Dose
 
 **Last Updated:** 2026-01-01
-**Author:** 
+**Author:** None
 
 ---
 
@@ -85,7 +89,7 @@ safety:
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
-        | Low Dose Chest | Non-contrast | Lung apices to Costophrenic angles |
+        | Low Dose Chest | N/A | Lung apices → Costophrenic angles |
 
     === "Clinical Indications"
 
@@ -97,9 +101,10 @@ safety:
 
     - **Position:** Supine with arms raised
     - **NPO Status:** N/A
-    
+    - **Pre-Medication:**
+        - None required
 
--   __3. IV Contrast & Injection__    
+-   __3. IV Contrast & Injection__
 
     ---
     !!! info "No Intravenous Contrast"
@@ -112,7 +117,6 @@ safety:
     === "Technologist Notes"
 
         - LOW DOSE technique. Reduced mAs 30-50% of standard. Helical acquisition. High IR strength
-        - Additional Recons: CAD nodule detection. Measure all nodules ≥3mm. Lung-RADS reporting
 
     === "Nursing Notes"
 
@@ -124,7 +128,7 @@ safety:
 
     === "Radiologist Notes"
 
-        - Lung nodule detection. Measure nodules. Lung-RADS classification. Emphysema assessment
+        - Lung nodule detection. Measure nodules. Emphysema assessment
 
     === "Tips & Tricks"
 
@@ -138,7 +142,6 @@ safety:
 
     | Series Name | Start Location | End Location | Delay | Slice Thickness | Notes |
     |:------------|:---------------|:-------------|:------|:----------------|:------|
-    | Scout | Lung apices | Costophrenic angles | N/A | N/A | Low dose AP |
     | Low Dose Chest | Lung apices | Costophrenic angles | N/A | 1-1.25 mm | Low dose helical |
 
 === "Post-Processing"

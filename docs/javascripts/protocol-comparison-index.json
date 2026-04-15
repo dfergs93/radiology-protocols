@@ -1697,12 +1697,12 @@
         "coverage": "Lung apices \u2192 Costophrenic angles"
       },
       {
-        "name": "Volumetric Expiration",
+        "name": "Expiration",
         "start": "Lung apices",
         "end": "Costophrenic angles",
         "delay": "Full expiration",
         "thickness": "1 mm",
-        "notes": "",
+        "notes": "Limited coverage expiration",
         "delay_seconds": 0,
         "phase_type": "other",
         "coverage": "Lung apices \u2192 Costophrenic angles"
@@ -1715,7 +1715,7 @@
         "coverage": "Lung apices \u2192 Costophrenic angles"
       },
       {
-        "series": "Volumetric Expiration",
+        "series": "Expiration",
         "phase": "Full expiration",
         "coverage": "Lung apices \u2192 Costophrenic angles"
       }
