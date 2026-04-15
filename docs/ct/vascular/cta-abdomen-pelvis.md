@@ -3,8 +3,8 @@ title: CTA Abdomen Pelvis
 slug: cta-abdomen-pelvis
 category: vascular
 protocol_type: vascular
-last_updated: '2024-01-15'
-author: Dr. Martinez
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Abdominal aortic aneurysm
@@ -84,8 +84,8 @@ safety:
 
 # CTA Abdomen Pelvis
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Martinez
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

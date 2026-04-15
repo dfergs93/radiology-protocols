@@ -4,7 +4,7 @@ slug: ct-abdomen-pelvis-with-contrast
 category: abdomen
 protocol_type: contrast-enhanced
 last_updated: '2026-01-02'
-author: ''
+author: 
 synonyms: []
 clinical_indications:
 - Abdominal pain

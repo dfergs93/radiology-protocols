@@ -3,8 +3,8 @@ title: Trauma CTA Chest with PV CT AP
 slug: trauma-cta-chest-with-pv-ct-ap
 category: trauma
 protocol_type: vascular
-last_updated: '2024-01-15'
-author: Dr. Lee
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Blunt thoracic trauma
@@ -83,8 +83,8 @@ safety:
 
 # Trauma CTA Chest with PV CT AP
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Lee
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

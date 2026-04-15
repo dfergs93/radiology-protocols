@@ -3,8 +3,8 @@ title: Volumetric HRCT 2 Respiratory Phases
 slug: volumetric-hrct-2-respiratory-phases
 category: chest
 protocol_type: chest/pulmonary
-last_updated: '2024-01-15'
-author: Dr. White
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Interstitial lung disease without prone imaging
@@ -79,8 +79,8 @@ safety:
 
 # Volumetric HRCT 2 Respiratory Phases
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. White
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

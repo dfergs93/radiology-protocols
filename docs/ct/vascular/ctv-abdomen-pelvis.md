@@ -3,8 +3,8 @@ title: CTV Abdomen Pelvis
 slug: ctv-abdomen-pelvis
 category: vascular
 protocol_type: vascular
-last_updated: '2024-01-15'
-author: Dr. Chen
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Deep vein thrombosis
@@ -76,8 +76,8 @@ safety:
 
 # CTV Abdomen Pelvis
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Chen
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

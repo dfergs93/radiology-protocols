@@ -3,8 +3,8 @@ title: CTA Pelvis Prostate Artery Embolization
 slug: cta-pelvis-prostate-artery-embolization
 category: vascular
 protocol_type: vascular
-last_updated: '2024-01-15'
-author: Dr. Jackson
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Pre-procedural planning for prostate artery embolization
@@ -78,8 +78,8 @@ safety:
 
 # CTA Pelvis Prostate Artery Embolization
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Jackson
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

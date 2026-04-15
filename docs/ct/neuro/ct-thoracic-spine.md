@@ -3,8 +3,8 @@ title: CT Thoracic Spine
 slug: ct-thoracic-spine
 category: neuro
 protocol_type: spine
-last_updated: '2024-01-15'
-author: Dr. White
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Thoracic spine trauma
@@ -68,8 +68,8 @@ safety:
 
 # CT Thoracic Spine
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. White
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

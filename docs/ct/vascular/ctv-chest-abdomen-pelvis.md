@@ -3,8 +3,8 @@ title: CTV Chest Abdomen Pelvis
 slug: ctv-chest-abdomen-pelvis
 category: vascular
 protocol_type: vascular
-last_updated: '2024-01-15'
-author: Dr. White
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Superior vena cava syndrome
@@ -75,8 +75,8 @@ safety:
 
 # CTV Chest Abdomen Pelvis
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. White
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

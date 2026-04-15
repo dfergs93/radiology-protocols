@@ -3,8 +3,8 @@ title: Gated CTA Chest Post-op Cardiac Valve
 slug: gated-cta-chest-post-op-cardiac-valve
 category: cardiac
 protocol_type: cardiac gated
-last_updated: '2024-01-15'
-author: Dr. Thompson
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Post-operative valve assessment
@@ -80,8 +80,8 @@ safety:
 
 # Gated CTA Chest Post-op Cardiac Valve
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Thompson
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

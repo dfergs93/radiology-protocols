@@ -3,8 +3,8 @@ title: CT Biphasic Pancreas
 slug: ct-biphasic-pancreas
 category: abdomen
 protocol_type: contrast-enhanced
-last_updated: '2024-01-15'
-author: Dr. Williams
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Pancreatic mass
@@ -84,8 +84,8 @@ safety:
 
 # CT Biphasic Pancreas
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Williams
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

@@ -3,8 +3,8 @@ title: CTA Upper Extremity
 slug: cta-upper-extremity
 category: vascular
 protocol_type: vascular
-last_updated: '2024-01-15'
-author: Dr. Davis
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Upper extremity arterial insufficiency
@@ -78,8 +78,8 @@ safety:
 
 # CTA Upper Extremity
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Davis
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

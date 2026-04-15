@@ -3,8 +3,8 @@ title: Gated CTA Heart Left Atrial Mapping
 slug: gated-cta-heart-left-atrial-mapping
 category: cardiac
 protocol_type: cardiac gated
-last_updated: '2024-01-15'
-author: Dr. Kim
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Pre-ablation planning
@@ -84,8 +84,8 @@ safety:
 
 # Gated CTA Heart Left Atrial Mapping
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Kim
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

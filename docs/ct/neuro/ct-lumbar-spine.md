@@ -3,8 +3,8 @@ title: CT Lumbar Spine
 slug: ct-lumbar-spine
 category: neuro
 protocol_type: spine
-last_updated: '2024-01-15'
-author: Dr. Hayes
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Lumbar spine trauma
@@ -75,8 +75,8 @@ safety:
 
 # CT Lumbar Spine
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Hayes
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

@@ -4,7 +4,7 @@ slug: coronary-cta-post-cabg
 category: cardiac
 protocol_type: vascular
 last_updated: '2026-02-02'
-author: ''
+author: 
 synonyms: []
 clinical_indications:
 - Post-CABG graft patency assessment

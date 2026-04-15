@@ -3,8 +3,8 @@ title: CTA Lower Extremity Runoff for PAD
 slug: cta-lower-extremity-runoff-for-pad
 category: vascular
 protocol_type: vascular
-last_updated: '2024-01-15'
-author: Dr. Anderson
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Peripheral arterial disease
@@ -85,8 +85,8 @@ safety:
 
 # CTA Lower Extremity Runoff for PAD
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Anderson
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

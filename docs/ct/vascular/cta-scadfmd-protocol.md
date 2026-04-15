@@ -3,8 +3,8 @@ title: CTA SCAD/FMD Protocol
 slug: cta-scadfmd-protocol
 category: vascular
 protocol_type: vascular
-last_updated: '2024-01-15'
-author: Dr. Hayes
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Spontaneous coronary artery dissection screening
@@ -97,8 +97,8 @@ safety:
 
 # CTA SCAD/FMD Protocol
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Hayes
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

@@ -4,7 +4,7 @@ slug: cta-for-gi-bleed
 category: vascular
 protocol_type: vascular
 last_updated: '2026-01-05'
-author: ''
+author: 
 synonyms: []
 clinical_indications:
 - Active GI bleeding

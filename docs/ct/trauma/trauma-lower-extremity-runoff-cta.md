@@ -3,8 +3,8 @@ title: Trauma Lower Extremity Runoff CTA
 slug: trauma-lower-extremity-runoff-cta
 category: trauma
 protocol_type: vascular
-last_updated: '2024-01-15'
-author: Dr. Williams
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Extremity vascular injury
@@ -77,8 +77,8 @@ safety:
 
 # Trauma Lower Extremity Runoff CTA
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Williams
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

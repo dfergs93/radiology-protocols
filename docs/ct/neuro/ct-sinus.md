@@ -3,8 +3,8 @@ title: CT Sinus
 slug: ct-sinus
 category: neuro
 protocol_type: neuroradiology
-last_updated: '2024-01-15'
-author: Dr. Hayes
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Sinusitis
@@ -80,8 +80,8 @@ safety:
 
 # CT Sinus
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Hayes
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

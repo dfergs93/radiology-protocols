@@ -3,8 +3,8 @@ title: CTA Chest
 slug: cta-chest
 category: vascular
 protocol_type: vascular
-last_updated: '2024-01-15'
-author: Dr. Johnson
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Thoracic aortic aneurysm (not involving the aortic root)
@@ -82,8 +82,8 @@ safety:
 
 # CTA Chest
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Johnson
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

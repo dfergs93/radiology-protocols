@@ -3,8 +3,8 @@ title: CT Orbits
 slug: ct-orbits
 category: neuro
 protocol_type: contrast-enhanced
-last_updated: '2024-01-15'
-author: Dr. Davis
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Orbital mass
@@ -76,8 +76,8 @@ safety:
 
 # CT Orbits
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Davis
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

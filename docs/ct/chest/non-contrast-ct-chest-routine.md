@@ -3,8 +3,8 @@ title: Non-Contrast CT Chest Routine
 slug: non-contrast-ct-chest-routine
 category: chest
 protocol_type: non-contrast
-last_updated: '2024-01-15'
-author: Dr. Thompson
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Age > 60
@@ -71,8 +71,8 @@ safety:
 
 # Non-Contrast CT Chest Routine
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Thompson
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

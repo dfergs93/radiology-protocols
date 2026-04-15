@@ -3,8 +3,8 @@ title: CTA Popliteal Entrapment
 slug: cta-popliteal-entrapment
 category: vascular
 protocol_type: vascular
-last_updated: '2024-01-15'
-author: Dr. Thompson
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Popliteal entrapment syndrome
@@ -91,8 +91,8 @@ safety:
 
 # CTA Popliteal Entrapment
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Thompson
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

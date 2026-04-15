@@ -3,8 +3,8 @@ title: CTA Neck
 slug: cta-neck
 category: neuro
 protocol_type: vascular
-last_updated: '2024-01-15'
-author: Dr. Kim
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Carotid stenosis
@@ -78,8 +78,8 @@ safety:
 
 # CTA Neck
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Kim
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

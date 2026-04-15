@@ -3,8 +3,8 @@ title: CT Soft Tissue Neck
 slug: ct-soft-tissue-neck
 category: neuro
 protocol_type: contrast-enhanced
-last_updated: '2024-01-15'
-author: Dr. Thompson
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Neck mass
@@ -69,8 +69,8 @@ safety:
 
 # CT Soft Tissue Neck
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Thompson
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

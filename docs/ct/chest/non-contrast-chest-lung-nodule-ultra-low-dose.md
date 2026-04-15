@@ -3,8 +3,8 @@ title: Non-Contrast Chest Lung Nodule Ultra Low Dose
 slug: non-contrast-chest-lung-nodule-ultra-low-dose
 category: chest
 protocol_type: chest/pulmonary
-last_updated: '2024-01-15'
-author: Dr. Rodriguez
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Pulmonary nodule follow-up
@@ -63,8 +63,8 @@ safety:
 
 # Non-Contrast Chest Lung Nodule Ultra Low Dose
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Rodriguez
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

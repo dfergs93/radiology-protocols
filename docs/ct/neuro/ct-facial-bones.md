@@ -3,8 +3,8 @@ title: CT Facial Bones
 slug: ct-facial-bones
 category: neuro
 protocol_type: non-contrast
-last_updated: '2024-01-15'
-author: Dr. Martinez
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Facial trauma
@@ -75,8 +75,8 @@ safety:
 
 # CT Facial Bones
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Martinez
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

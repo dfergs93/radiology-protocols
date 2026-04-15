@@ -3,8 +3,8 @@ title: Gated CTA TMVR
 slug: gated-cta-tmvr
 category: cardiac
 protocol_type: cardiac gated
-last_updated: '2024-01-15'
-author: Dr. Rodriguez
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Pre-TMVR planning
@@ -97,8 +97,8 @@ safety:
 
 # Gated CTA TMVR
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Rodriguez
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

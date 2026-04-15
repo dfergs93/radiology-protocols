@@ -1346,17 +1346,6 @@
         "delay_seconds": 0,
         "phase_type": "other",
         "coverage": "Thoracic inlet \u2192 Carina+10cm"
-      },
-      {
-        "name": "Cine (optional)",
-        "start": "Carina level",
-        "end": "Single slice",
-        "delay": "Continuous breathing",
-        "thickness": "Cine mode",
-        "notes": "Dynamic collapse",
-        "delay_seconds": 0,
-        "phase_type": "other",
-        "coverage": "Carina level \u2192 Single slice"
       }
     ],
     "summary": [
@@ -1369,11 +1358,6 @@
         "series": "Mid-Expiration",
         "phase": "Forced mid-expiration",
         "coverage": "Thoracic inlet \u2192 Carina+10cm"
-      },
-      {
-        "series": "Cine (optional)",
-        "phase": "Continuous breathing",
-        "coverage": "Carina level \u2192 Single slice"
       }
     ],
     "gantt": null
@@ -1713,15 +1697,15 @@
         "coverage": "Lung apices \u2192 Costophrenic angles"
       },
       {
-        "name": "Limited Expiration",
-        "start": "Carina",
+        "name": "Volumetric Expiration",
+        "start": "Lung apices",
         "end": "Costophrenic angles",
         "delay": "Full expiration",
         "thickness": "1 mm",
-        "notes": "Limited coverage expiration",
+        "notes": "",
         "delay_seconds": 0,
         "phase_type": "other",
-        "coverage": "Carina \u2192 Costophrenic angles"
+        "coverage": "Lung apices \u2192 Costophrenic angles"
       }
     ],
     "summary": [
@@ -1731,9 +1715,9 @@
         "coverage": "Lung apices \u2192 Costophrenic angles"
       },
       {
-        "series": "Limited Expiration",
+        "series": "Volumetric Expiration",
         "phase": "Full expiration",
-        "coverage": "Carina \u2192 Costophrenic angles"
+        "coverage": "Lung apices \u2192 Costophrenic angles"
       }
     ],
     "gantt": null

@@ -3,8 +3,8 @@ title: CT Gout Protocol
 slug: ct-gout-protocol
 category: msk
 protocol_type: non-contrast
-last_updated: '2024-01-15'
-author: Dr. Johnson
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Gout
@@ -74,8 +74,8 @@ safety:
 
 # CT Gout Protocol
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Johnson
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

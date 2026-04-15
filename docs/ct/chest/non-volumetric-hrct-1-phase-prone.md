@@ -3,8 +3,8 @@ title: Non-Volumetric HRCT 1 Phase Prone
 slug: non-volumetric-hrct-1-phase-prone
 category: chest
 protocol_type: chest/pulmonary
-last_updated: '2024-01-15'
-author: Dr. Martinez
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Dependent atelectasis vs fibrosis
@@ -65,8 +65,8 @@ safety:
 
 # Non-Volumetric HRCT 1 Phase Prone
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Martinez
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

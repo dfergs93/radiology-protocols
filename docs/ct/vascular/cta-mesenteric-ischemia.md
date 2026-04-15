@@ -3,8 +3,8 @@ title: CTA Mesenteric Ischemia
 slug: cta-mesenteric-ischemia
 category: vascular
 protocol_type: vascular
-last_updated: '2024-01-15'
-author: Dr. Lee
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Acute mesenteric ischemia
@@ -83,8 +83,8 @@ safety:
 
 # CTA Mesenteric Ischemia
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Lee
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

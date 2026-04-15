@@ -3,8 +3,8 @@ title: Non-Volumetric HRCT 3 Respiratory Phases
 slug: non-volumetric-hrct-3-respiratory-phases
 category: chest
 protocol_type: chest/pulmonary
-last_updated: '2024-01-15'
-author: Dr. Hayes
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Interstitial lung disease
@@ -77,8 +77,8 @@ safety:
 
 # Non-Volumetric HRCT 3 Respiratory Phases
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Hayes
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

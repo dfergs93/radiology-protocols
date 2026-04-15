@@ -3,8 +3,8 @@ title: CT KUB Non-Contrast
 slug: ct-kub-non-contrast
 category: abdomen
 protocol_type: non-contrast
-last_updated: '2024-01-15'
-author: Dr. Johnson
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Nephrolithiasis
@@ -73,8 +73,8 @@ safety:
 
 # CT KUB Non-Contrast
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Johnson
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

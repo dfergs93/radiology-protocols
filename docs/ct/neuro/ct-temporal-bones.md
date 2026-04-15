@@ -3,8 +3,8 @@ title: CT Temporal Bones
 slug: ct-temporal-bones
 category: neuro
 protocol_type: neuroradiology
-last_updated: '2024-01-15'
-author: Dr. Anderson
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Hearing loss
@@ -81,8 +81,8 @@ safety:
 
 # CT Temporal Bones
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Anderson
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

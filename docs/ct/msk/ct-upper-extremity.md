@@ -3,8 +3,8 @@ title: CT Upper Extremity
 slug: ct-upper-extremity
 category: msk
 protocol_type: contrast-enhanced
-last_updated: '2024-01-15'
-author: Dr. White
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Upper extremity fracture
@@ -76,8 +76,8 @@ safety:
 
 # CT Upper Extremity
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. White
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

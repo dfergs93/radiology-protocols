@@ -3,8 +3,8 @@ title: CT Elbow
 slug: ct-elbow
 category: msk
 protocol_type: musculoskeletal
-last_updated: '2024-01-15'
-author: Dr. Martinez
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Elbow fracture
@@ -76,8 +76,8 @@ safety:
 
 # CT Elbow
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Martinez
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

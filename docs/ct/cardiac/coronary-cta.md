@@ -1,5 +1,5 @@
 ---
-author: ''
+author: 
 category: cardiac
 clinical_indications:
 - Intermediate chest pain

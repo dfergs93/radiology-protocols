@@ -3,8 +3,8 @@ title: CT Chest Abdomen Pelvis with Contrast
 slug: ct-chest-abdomen-pelvis-with-contrast
 category: abdomen
 protocol_type: contrast-enhanced
-last_updated: '2024-01-15'
-author: Dr. Smith
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Oncology staging
@@ -75,8 +75,8 @@ safety:
 
 # CT Chest Abdomen Pelvis with Contrast
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Smith
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

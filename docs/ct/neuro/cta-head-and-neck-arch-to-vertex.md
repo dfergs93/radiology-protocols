@@ -4,7 +4,7 @@ slug: cta-head-and-neck-arch-to-vertex
 category: neuro
 protocol_type: vascular
 last_updated: '2026-01-04'
-author: ''
+author: 
 synonyms: []
 clinical_indications:
 - Stroke workup

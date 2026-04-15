@@ -4,7 +4,7 @@ slug: non-contrast-ct-head
 category: neuro
 protocol_type: neuroradiology
 last_updated: '2026-01-03'
-author: ''
+author: 
 synonyms: []
 clinical_indications:
 - Acute stroke protocol

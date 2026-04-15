@@ -4,7 +4,7 @@ slug: endocarditiscardiac-mass
 category: cardiac
 protocol_type: cardiac gated
 last_updated: '2026-02-02'
-author: ''
+author: 
 synonyms: []
 clinical_indications:
 - Endocarditis

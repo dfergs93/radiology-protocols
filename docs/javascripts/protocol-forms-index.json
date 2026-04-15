@@ -2108,82 +2108,79 @@
     "premedication": "",
     "contrast": {
       "agent": "N/A",
-      "type": "non-contrast"
+      "duration": "",
+      "flow_rate": "",
+      "roi": "",
+      "timing": "",
+      "trigger": "",
+      "volume": ""
     },
     "series": [
       {
-        "name": "Inspiration",
-        "start": "Thoracic inlet",
-        "end": "Carina+10cm",
         "delay": "Full inspiration",
-        "thickness": "0.625-1 mm",
-        "notes": "Thin for 3D"
-      },
-      {
-        "name": "Mid-Expiration",
-        "start": "Thoracic inlet",
         "end": "Carina+10cm",
-        "delay": "Forced mid-expiration",
-        "thickness": "0.625-1 mm",
-        "notes": "Same level as inspiration"
+        "name": "Inspiration",
+        "notes": "Thin for 3D",
+        "start": "Thoracic inlet",
+        "thickness": "0.625-1 mm"
       },
       {
-        "name": "Cine (optional)",
-        "start": "Carina level",
-        "end": "Single slice",
-        "delay": "Continuous breathing",
-        "thickness": "Cine mode",
-        "notes": "Dynamic collapse"
+        "delay": "Forced mid-expiration",
+        "end": "Carina+10cm",
+        "name": "Mid-Expiration",
+        "notes": "Same level as inspiration",
+        "start": "Thoracic inlet",
+        "thickness": "0.625-1 mm"
       }
     ],
     "recons": [
       {
+        "acquisition": "Both phases",
+        "fov": "Airway",
+        "ir_strength": "3",
+        "kernel": "Lung",
+        "notes": "Axial airway",
         "plane": "Axial",
-        "acquisition": "Both phases",
-        "fov": "Airway",
-        "thickness_increment": "1-2 mm/1 mm",
-        "kernel": "Lung",
-        "ir_strength": "3",
-        "notes": "Axial airway"
+        "thickness_increment": "1-2 mm/1 mm"
       },
       {
+        "acquisition": "Both phases",
+        "fov": "Airway",
+        "ir_strength": "3",
+        "kernel": "Lung",
+        "notes": "Coronal airway",
         "plane": "Coronal",
-        "acquisition": "Both phases",
-        "fov": "Airway",
-        "thickness_increment": "1.5 mm",
-        "kernel": "Lung",
-        "ir_strength": "3",
-        "notes": "Coronal airway"
+        "thickness_increment": "1.5 mm"
       },
       {
+        "acquisition": "Both phases",
+        "fov": "Airway",
+        "ir_strength": "3",
+        "kernel": "Lung",
+        "notes": "Sagittal airway",
         "plane": "Sagittal",
-        "acquisition": "Both phases",
-        "fov": "Airway",
-        "thickness_increment": "1.5 mm",
-        "kernel": "Lung",
-        "ir_strength": "3",
-        "notes": "Sagittal airway"
+        "thickness_increment": "1.5 mm"
       },
       {
-        "plane": "3D VR",
         "acquisition": "Both phases",
         "fov": "Airway",
-        "thickness_increment": "0.625-1 mm source",
-        "kernel": "Lung",
         "ir_strength": "N/A",
-        "notes": "3D airway reconstruction"
+        "kernel": "Lung",
+        "notes": "3D airway reconstruction",
+        "plane": "3D VR",
+        "thickness_increment": "0.625-1 mm source"
       }
     ],
     "notes": {
-      "tech": "TWO acquisitions: 1) INSPIRATION carina to carina+10cm 2) MID-EXPIRATION same level. Cine if available. Airway reconstructions required",
+      "additional_recons": "Measure tracheal AP diameter inspiration vs expiration. Calculate collapse percentage. 3D airway",
       "nursing": "No IV. Coach dynamic breathing. May need forced expiration",
       "rad": "Measure tracheal collapse percentage. >50% collapse suggests tracheomalacia. Assess bronchi",
-      "tips": "Coach forced expiration. Exact same level both phases",
-      "additional_recons": "Measure tracheal AP diameter inspiration vs expiration. Calculate collapse percentage. 3D airway"
+      "tech": "TWO acquisitions: 1) INSPIRATION carina to carina+10cm 2) MID-EXPIRATION same level. Airway reconstructions required",
+      "tips": "Coach forced expiration. Exact same level both phases"
     },
     "safety": {
-      "renal": "N/A",
-      "allergy": "N/A"
+      "allergy": "N/A",
+      "renal": "N/A"
     }
   },
   {
@@ -2203,66 +2200,71 @@
     "premedication": "",
     "contrast": {
       "agent": "N/A",
-      "type": "non-contrast"
+      "duration": "",
+      "flow_rate": "",
+      "roi": "",
+      "timing": "",
+      "trigger": "",
+      "volume": ""
     },
     "series": [
       {
-        "name": "Low Dose Chest",
-        "start": "Lung apices",
-        "end": "Costophrenic angles",
         "delay": "N/A",
-        "thickness": "1-1.25 mm",
-        "notes": "Low dose helical"
+        "end": "Costophrenic angles",
+        "name": "Low Dose Chest",
+        "notes": "Low dose helical",
+        "start": "Lung apices",
+        "thickness": "1-1.25 mm"
       }
     ],
     "recons": [
       {
-        "plane": "Axial",
         "acquisition": "Chest",
         "fov": "Chest",
-        "thickness_increment": "1.25 mm/1.25 mm",
-        "kernel": "Lung",
         "ir_strength": "High IR 4-5",
-        "notes": "Thin slice nodule detection"
-      },
-      {
-        "plane": "Axial",
-        "acquisition": "Chest",
-        "fov": "Chest",
-        "thickness_increment": "2.5 mm/2.5 mm",
-        "kernel": "Standard",
-        "ir_strength": "3",
-        "notes": "Mediastinal window"
-      },
-      {
-        "plane": "Coronal",
-        "acquisition": "Chest",
-        "fov": "Chest",
-        "thickness_increment": "2 mm/2 mm",
         "kernel": "Lung",
-        "ir_strength": "High IR",
-        "notes": "Coronal overview"
+        "notes": "Thin slice nodule detection",
+        "plane": "Axial",
+        "thickness_increment": "1.25 mm/1.25 mm"
       },
       {
-        "plane": "MIP",
+        "acquisition": "Chest",
+        "fov": "Chest",
+        "ir_strength": "3",
+        "kernel": "Standard",
+        "notes": "Mediastinal window",
+        "plane": "Axial",
+        "thickness_increment": "2.5 mm/2.5 mm"
+      },
+      {
+        "acquisition": "Chest",
+        "fov": "Chest",
+        "ir_strength": "High IR",
+        "kernel": "Lung",
+        "notes": "Coronal overview",
+        "plane": "Coronal",
+        "thickness_increment": "2 mm/2 mm"
+      },
+      {
         "acquisition": "Chest",
         "fov": "Lungs",
-        "thickness_increment": "5 mm slab",
-        "kernel": "Lung",
         "ir_strength": "N/A",
-        "notes": "Nodule detection"
+        "kernel": "Lung",
+        "notes": "Nodule detection",
+        "plane": "MIP",
+        "thickness_increment": "5 mm slab"
       }
     ],
     "notes": {
-      "tech": "LOW DOSE technique. Reduced mAs 30-50% of standard. Helical acquisition. High IR strength",
+      "additional_recons": "CAD nodule detection. Measure all nodules \u22653mm. Lung-RADS reporting",
       "nursing": "No IV. Explain screening purpose and low radiation",
-      "rad": "Lung nodule detection. Measure nodules. Lung-RADS classification. Emphysema assessment",
-      "tips": "Low dose protocol. High iterative reconstruction. Nodule measurement software",
-      "additional_recons": "CAD nodule detection. Measure all nodules \u22653mm. Lung-RADS reporting"
+      "rad": "Lung nodule detection. Measure nodules. Emphysema assessment",
+      "tech": "LOW DOSE technique. Reduced mAs 30-50% of standard. Helical acquisition. High IR strength",
+      "tips": "Low dose protocol. High iterative reconstruction."
     },
     "safety": {
-      "renal": "N/A",
-      "allergy": "N/A"
+      "allergy": "N/A",
+      "renal": "N/A"
     }
   },
   {
@@ -2757,74 +2759,79 @@
     "premedication": "",
     "contrast": {
       "agent": "N/A",
-      "type": "non-contrast"
+      "duration": "",
+      "flow_rate": "",
+      "roi": "",
+      "timing": "",
+      "trigger": "",
+      "volume": ""
     },
     "series": [
       {
-        "name": "Volumetric Inspiration",
-        "start": "Lung apices",
-        "end": "Costophrenic angles",
         "delay": "Full inspiration",
-        "thickness": "1 mm",
-        "notes": "Contiguous 1mm slices"
+        "end": "Costophrenic angles",
+        "name": "Volumetric Inspiration",
+        "notes": "Contiguous 1mm slices",
+        "start": "Lung apices",
+        "thickness": "1 mm"
       },
       {
-        "name": "Limited Expiration",
-        "start": "Carina",
-        "end": "Costophrenic angles",
         "delay": "Full expiration",
-        "thickness": "1 mm",
-        "notes": "Limited coverage expiration"
+        "end": "Costophrenic angles",
+        "name": "Volumetric Expiration",
+        "notes": "",
+        "start": "Lung apices",
+        "thickness": "1 mm"
       }
     ],
     "recons": [
       {
-        "plane": "Axial",
         "acquisition": "Inspiration",
         "fov": "Chest",
-        "thickness_increment": "1 mm/1 mm",
-        "kernel": "Lung",
         "ir_strength": "3",
-        "notes": "Thin slice ILD assessment"
+        "kernel": "Lung",
+        "notes": "Thin slice ILD assessment",
+        "plane": "Axial",
+        "thickness_increment": "1 mm/1 mm"
       },
       {
-        "plane": "Axial",
         "acquisition": "Expiration",
         "fov": "Lower lungs",
-        "thickness_increment": "1 mm/1 mm",
-        "kernel": "Lung",
         "ir_strength": "3",
-        "notes": "Air trapping assessment"
+        "kernel": "Lung",
+        "notes": "Air trapping assessment",
+        "plane": "Axial",
+        "thickness_increment": "1 mm/1 mm"
       },
       {
+        "acquisition": "Inspiration",
+        "fov": "Chest",
+        "ir_strength": "3",
+        "kernel": "Lung",
+        "notes": "ILD distribution",
         "plane": "Coronal",
-        "acquisition": "Inspiration",
-        "fov": "Chest",
-        "thickness_increment": "1.5 mm",
-        "kernel": "Lung",
-        "ir_strength": "3",
-        "notes": "ILD distribution"
+        "thickness_increment": "1.5 mm"
       },
       {
-        "plane": "Sagittal",
         "acquisition": "Inspiration",
         "fov": "Chest",
-        "thickness_increment": "2 mm",
-        "kernel": "Lung",
         "ir_strength": "3",
-        "notes": "Craniocaudal distribution"
+        "kernel": "Lung",
+        "notes": "Craniocaudal distribution",
+        "plane": "Sagittal",
+        "thickness_increment": "2 mm"
       }
     ],
     "notes": {
-      "tech": "TWO acquisitions: 1) Full INSPIRATION 2) Limited EXPIRATION (carina to bases). Volumetric (contiguous thin slice). Coach breathing",
+      "additional_recons": "Thin slice for ILD detail. Compare inspiration vs expiration. Quantitative analysis if available",
       "nursing": "No IV. Careful breath hold coaching. Inspiration and expiration",
       "rad": "ILD pattern recognition. Honeycombing. Ground glass. Reticular. Mosaic attenuation on expiration",
-      "tips": "Volumetric contiguous slices. Coach breathing carefully",
-      "additional_recons": "Thin slice for ILD detail. Compare inspiration vs expiration. Quantitative analysis if available"
+      "tech": "TWO acquisitions: 1) Full INSPIRATION 2) EXPIRATION  Volumetric (contiguous thin slice). Coach breathing",
+      "tips": "Volumetric contiguous slices. Coach breathing carefully"
     },
     "safety": {
-      "renal": "N/A",
-      "allergy": "N/A"
+      "allergy": "N/A",
+      "renal": "N/A"
     }
   },
   {

@@ -3,8 +3,8 @@ title: CTA Head
 slug: cta-head
 category: neuro
 protocol_type: vascular
-last_updated: '2024-01-15'
-author: Dr. Thompson
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Aneurysm screening
@@ -83,8 +83,8 @@ safety:
 
 # CTA Head
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Thompson
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

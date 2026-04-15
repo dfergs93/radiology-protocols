@@ -3,8 +3,8 @@ title: CT Foot
 slug: ct-foot
 category: msk
 protocol_type: musculoskeletal
-last_updated: '2024-01-15'
-author: Dr. Davis
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Foot fracture
@@ -75,8 +75,8 @@ safety:
 
 # CT Foot
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Davis
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

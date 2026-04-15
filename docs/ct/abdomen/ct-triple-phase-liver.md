@@ -3,8 +3,8 @@ title: CT Triple Phase Liver
 slug: ct-triple-phase-liver
 category: abdomen
 protocol_type: contrast-enhanced
-last_updated: '2024-01-15'
-author: Dr. Lee
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Liver lesion characterization
@@ -96,8 +96,8 @@ safety:
 
 # CT Triple Phase Liver
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Lee
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

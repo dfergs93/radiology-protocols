@@ -3,8 +3,8 @@ title: CT Arthrogram Shoulder
 slug: ct-arthrogram-shoulder
 category: msk
 protocol_type: musculoskeletal
-last_updated: '2024-01-15'
-author: Dr. Patel
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Labral tear
@@ -75,8 +75,8 @@ safety:
 
 # CT Arthrogram Shoulder
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Patel
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

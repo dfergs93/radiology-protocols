@@ -3,8 +3,8 @@ title: Gated CTA CAP Sternotomy Revision
 slug: gated-cta-cap-sternotomy-revision
 category: cardiac
 protocol_type: cardiac gated
-last_updated: '2024-01-15'
-author: Dr. Williams
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Pre-operative planning for redo sternotomy
@@ -89,8 +89,8 @@ safety:
 
 # Gated CTA CAP Sternotomy Revision
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Williams
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

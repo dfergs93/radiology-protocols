@@ -3,8 +3,8 @@ title: CTA Pelvis Cyclist Iliac Artery Maneuver
 slug: cta-pelvis-cyclist-iliac-artery-maneuver
 category: vascular
 protocol_type: vascular
-last_updated: '2024-01-15'
-author: Dr. Rodriguez
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - External iliac artery endofibrosis
@@ -84,8 +84,8 @@ safety:
 
 # CTA Pelvis Cyclist Iliac Artery Maneuver
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Rodriguez
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

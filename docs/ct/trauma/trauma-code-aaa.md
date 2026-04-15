@@ -3,8 +3,8 @@ title: Trauma Code AAA
 slug: trauma-code-aaa
 category: trauma
 protocol_type: trauma
-last_updated: '2024-01-15'
-author: Dr. Davis
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Ruptured AAA
@@ -89,8 +89,8 @@ safety:
 
 # Trauma Code AAA
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Davis
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

@@ -3,8 +3,8 @@ title: Dynamic Airway CT
 slug: dynamic-airway-ct
 category: chest
 protocol_type: non-contrast
-last_updated: '2024-01-15'
-author: Dr. Lee
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Tracheobronchomalacia
@@ -85,8 +85,8 @@ safety:
 
 # Dynamic Airway CT
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Lee
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

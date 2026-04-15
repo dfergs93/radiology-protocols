@@ -3,8 +3,8 @@ title: CT Lower Extremity
 slug: ct-lower-extremity
 category: msk
 protocol_type: contrast-enhanced
-last_updated: '2024-01-15'
-author: Dr. Rodriguez
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Lower extremity fracture
@@ -74,8 +74,8 @@ safety:
 
 # CT Lower Extremity
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Rodriguez
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

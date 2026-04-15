@@ -3,8 +3,8 @@ title: Non-Volumetric HRCT 1 Respiratory Phase
 slug: non-volumetric-hrct-1-respiratory-phase
 category: chest
 protocol_type: chest/pulmonary
-last_updated: '2024-01-15'
-author: Dr. Chen
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - HRCT follow-up
@@ -64,8 +64,8 @@ safety:
 
 # Non-Volumetric HRCT 1 Respiratory Phase
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Chen
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

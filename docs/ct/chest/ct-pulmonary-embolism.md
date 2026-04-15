@@ -1,5 +1,5 @@
 ---
-author: ''
+author: 
 category: vascular
 clinical_indications:
 - Suspected pulmonary embolism

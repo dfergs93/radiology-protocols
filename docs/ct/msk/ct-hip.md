@@ -3,8 +3,8 @@ title: CT Hip
 slug: ct-hip
 category: msk
 protocol_type: musculoskeletal
-last_updated: '2024-01-15'
-author: Dr. Anderson
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Hip fracture
@@ -76,8 +76,8 @@ safety:
 
 # CT Hip
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Anderson
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

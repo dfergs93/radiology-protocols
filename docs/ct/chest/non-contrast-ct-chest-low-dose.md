@@ -3,8 +3,8 @@ title: Non-Contrast CT Chest Low Dose
 slug: non-contrast-ct-chest-low-dose
 category: chest
 protocol_type: non-contrast
-last_updated: '2024-01-15'
-author: Dr. Kim
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Non Contrast chest for patient's age < 60
@@ -70,8 +70,8 @@ safety:
 
 # Non-Contrast CT Chest Low Dose
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Kim
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

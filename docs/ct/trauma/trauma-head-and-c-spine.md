@@ -3,8 +3,8 @@ title: Trauma Head and C-Spine
 slug: trauma-head-and-c-spine
 category: trauma
 protocol_type: trauma
-last_updated: '2024-01-15'
-author: Dr. Smith
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Trauma head injury
@@ -79,8 +79,8 @@ safety:
 
 # Trauma Head and C-Spine
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Smith
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

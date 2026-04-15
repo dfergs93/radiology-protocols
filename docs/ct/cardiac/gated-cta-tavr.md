@@ -3,8 +3,8 @@ title: Gated CTA TAVR
 slug: gated-cta-tavr
 category: cardiac
 protocol_type: cardiac gated
-last_updated: '2024-01-15'
-author: Dr. Davis
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Pre-TAVR planning
@@ -83,8 +83,8 @@ safety:
 
 # Gated CTA TAVR
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Davis
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

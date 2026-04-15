@@ -3,8 +3,8 @@ title: CT Cystogram
 slug: ct-cystogram
 category: abdomen
 protocol_type: contrast-enhanced
-last_updated: '2024-01-15'
-author: Dr. Kim
+last_updated: '2026-01-01'
+author: 
 synonyms: []
 clinical_indications:
 - Bladder rupture
@@ -88,8 +88,8 @@ safety:
 
 # CT Cystogram
 
-**Last Updated:** 2024-01-15  
-**Author:** Dr. Kim
+**Last Updated:** 2026-01-01
+**Author:** 
 
 ---
 

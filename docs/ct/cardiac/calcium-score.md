@@ -4,7 +4,7 @@ slug: calcium-score
 category: cardiac
 protocol_type: non-contrast
 last_updated: '2026-02-02'
-author: ''
+author: 
 synonyms: []
 clinical_indications:
 - Cardiovascular risk assessment
