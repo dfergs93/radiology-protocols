@@ -1151,6 +1151,17 @@
     },
     "series": [
       {
+        "name": "Non-contrast CAP",
+        "start": "Thoracic Inlet",
+        "end": "Femoral heads",
+        "delay": "Non-contrast",
+        "thickness": "1 mm",
+        "notes": "",
+        "delay_seconds": -10,
+        "phase_type": "non-contrast",
+        "coverage": "Thoracic Inlet \u2192 Femoral heads"
+      },
+      {
         "name": "Gated CTA Chest",
         "start": "Thoracic inlet",
         "end": "Diaphragm",
@@ -1171,20 +1182,14 @@
         "delay_seconds": 27,
         "phase_type": "other",
         "coverage": "Diaphragm \u2192 Femoral heads"
-      },
-      {
-        "name": "Non-contrast CAP",
-        "start": "Thoracic Inlet",
-        "end": "Femoral heads",
-        "delay": "Non-contrast",
-        "thickness": "1 mm",
-        "notes": "",
-        "delay_seconds": -10,
-        "phase_type": "non-contrast",
-        "coverage": "Thoracic Inlet \u2192 Femoral heads"
       }
     ],
     "summary": [
+      {
+        "series": "Non-contrast CAP",
+        "phase": "Non-contrast",
+        "coverage": "Thoracic Inlet \u2192 Femoral heads"
+      },
       {
         "series": "Gated CTA Chest",
         "phase": "Bolus tracked",
@@ -1194,11 +1199,6 @@
         "series": "Flash CTA AP",
         "phase": "Immediate",
         "coverage": "Diaphragm \u2192 Femoral heads"
-      },
-      {
-        "series": "Non-contrast CAP",
-        "phase": "Non-contrast",
-        "coverage": "Thoracic Inlet \u2192 Femoral heads"
       }
     ],
     "gantt": null

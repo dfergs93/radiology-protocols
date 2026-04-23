@@ -1820,6 +1820,14 @@
     },
     "series": [
       {
+        "delay": "Non-contrast",
+        "end": "Femoral heads",
+        "name": "Non-contrast CAP",
+        "notes": "",
+        "start": "Thoracic Inlet",
+        "thickness": "1 mm"
+      },
+      {
         "delay": "Bolus tracked",
         "end": "Diaphragm",
         "name": "Gated CTA Chest",
@@ -1834,17 +1842,18 @@
         "notes": "Iliofemoral access planning",
         "start": "Diaphragm",
         "thickness": "0.625 mm"
-      },
-      {
-        "delay": "Non-contrast",
-        "end": "Femoral heads",
-        "name": "Non-contrast CAP",
-        "notes": "",
-        "start": "Thoracic Inlet",
-        "thickness": "1 mm"
       }
     ],
     "recons": [
+      {
+        "acquisition": "Non-contrast CAP",
+        "fov": "CAP",
+        "ir_strength": "3",
+        "kernel": "Standard",
+        "notes": "",
+        "plane": "Axial",
+        "thickness_increment": "1 mm/1 mm"
+      },
       {
         "acquisition": "Gated chest",
         "fov": "Heart",
