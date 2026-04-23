@@ -238,7 +238,9 @@
     "slug": "gated-cta-tavr",
     "title": "Gated CTA TAVR",
     "url": "https://dfergs93.github.io/radiology-protocols/ct/cardiac/gated-cta-tavr/",
-    "synonyms": [],
+    "synonyms": [
+      "TAVR, Transcatheter aortic valve replacement"
+    ],
     "clinical_indications": [
       "Pre-TAVR planning",
       "Aortic stenosis valve replacement planning"

@@ -1173,15 +1173,15 @@
         "coverage": "Diaphragm \u2192 Femoral heads"
       },
       {
-        "name": "Noncon CAP",
+        "name": "Non-contrast CAP",
         "start": "Thoracic Inlet",
-        "end": "Femoral Heads",
-        "delay": "NA",
+        "end": "Femoral heads",
+        "delay": "Non-contrast",
         "thickness": "1 mm",
         "notes": "",
-        "delay_seconds": 0,
-        "phase_type": "other",
-        "coverage": "Thoracic Inlet \u2192 Femoral Heads"
+        "delay_seconds": -10,
+        "phase_type": "non-contrast",
+        "coverage": "Thoracic Inlet \u2192 Femoral heads"
       }
     ],
     "summary": [
@@ -1196,9 +1196,9 @@
         "coverage": "Diaphragm \u2192 Femoral heads"
       },
       {
-        "series": "Noncon CAP",
-        "phase": "NA",
-        "coverage": "Thoracic Inlet \u2192 Femoral Heads"
+        "series": "Non-contrast CAP",
+        "phase": "Non-contrast",
+        "coverage": "Thoracic Inlet \u2192 Femoral heads"
       }
     ],
     "gantt": null

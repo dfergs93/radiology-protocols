@@ -1799,7 +1799,9 @@
     "protocol_type": "cardiac gated",
     "last_updated": "2026-01-01",
     "author": "None",
-    "synonyms": [],
+    "synonyms": [
+      "TAVR, Transcatheter aortic valve replacement"
+    ],
     "clinical_indications": [
       "Pre-TAVR planning",
       "Aortic stenosis valve replacement planning"
@@ -1834,9 +1836,9 @@
         "thickness": "0.625 mm"
       },
       {
-        "delay": "NA",
-        "end": "Femoral Heads",
-        "name": "Noncon CAP",
+        "delay": "Non-contrast",
+        "end": "Femoral heads",
+        "name": "Non-contrast CAP",
         "notes": "",
         "start": "Thoracic Inlet",
         "thickness": "1 mm"

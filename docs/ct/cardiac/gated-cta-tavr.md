@@ -27,6 +27,13 @@ position: Supine with arms raised
 premedication: HR < 65 target. Premedication not required.
 protocol_type: cardiac gated
 recons:
+- acquisition: Non-contrast CAP
+  fov: CAP
+  ir_strength: '3'
+  kernel: Standard
+  notes: ''
+  plane: Axial
+  thickness_increment: 1 mm/1 mm
 - acquisition: Gated chest
   fov: Heart
   ir_strength: '3'
@@ -59,6 +66,12 @@ safety:
   allergy: Check allergy history
   renal: Verify eGFR > 30
 series:
+- delay: Non-contrast
+  end: Femoral heads
+  name: Non-contrast CAP
+  notes: ''
+  start: Thoracic Inlet
+  thickness: 1 mm
 - delay: Bolus tracked
   end: Diaphragm
   name: Gated CTA Chest
@@ -71,14 +84,9 @@ series:
   notes: Iliofemoral access planning
   start: Diaphragm
   thickness: 0.625 mm
-- delay: NA
-  end: Femoral Heads
-  name: Noncon CAP
-  notes: ''
-  start: Thoracic Inlet
-  thickness: 1 mm
 slug: gated-cta-tavr
-synonyms: []
+synonyms:
+- TAVR, Transcatheter aortic valve replacement
 tech_params:
   kv: '100'
   mas: Auto ECG chest / High mAs AP
@@ -104,9 +112,9 @@ title: Gated CTA TAVR
 
         | Series | Phase | Coverage |
         |:-------|:------|:---------|
+        | Non-contrast CAP | Non-contrast | Thoracic Inlet → Femoral heads |
         | Gated CTA Chest | Bolus tracked | Thoracic inlet → Diaphragm |
         | Flash CTA AP | Immediate | Diaphragm → Femoral heads |
-        | Noncon CAP | NA | Thoracic Inlet → Femoral Heads |
 
     === "Clinical Indications"
 
@@ -174,7 +182,7 @@ title: Gated CTA TAVR
 
     | Series Name | Start Location | End Location | Delay | Slice Thickness | Notes |
     |:------------|:---------------|:-------------|:------|:----------------|:------|
-    | Noncon CAP | Thoracic Inlet | Femoral Heads | NA | 1 mm |  |
+    | Non-contrast CAP | Thoracic Inlet | Femoral heads | Non-contrast | 1 mm |  |
     | Gated CTA Chest | Thoracic inlet | Diaphragm | Bolus tracked | 0.5 mm | Retrospective gating for valve |
     | Flash CTA AP | Diaphragm | Femoral heads | Immediate | 0.625 mm | Iliofemoral access planning |
 
@@ -182,6 +190,7 @@ title: Gated CTA TAVR
 
     | Plane | Acquisition | FOV | Thickness/Increment | Kernel | IR Strength | Notes |
     |:------|:------------|:----|:--------------------|:-------|:------------|:------|
+    | Axial | Non-contrast CAP | Thoracic Inlet | 1 mm/1 mm | Standard | 3 |  |
     | Axial | Gated chest | Heart | 0.5 mm/0.5 mm | Cardiac | 3 | Aortic valve and root measurements |
     | Axial | Flash AP | AP | 2 mm/2 mm | Vascular | 3 | Access vessel assessment |
     | Double oblique | Gated chest | Aortic valve | 0.5 mm | Cardiac | 3 | En face aortic annulus for sizing |
