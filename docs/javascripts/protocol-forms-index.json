@@ -1798,7 +1798,7 @@
     "category": "cardiac",
     "protocol_type": "cardiac gated",
     "last_updated": "2026-01-01",
-    "author": "",
+    "author": "None",
     "synonyms": [],
     "clinical_indications": [
       "Pre-TAVR planning",
@@ -1809,79 +1809,87 @@
     "premedication": "HR < 65 target. Premedication not required.",
     "contrast": {
       "agent": "Isovue 370",
-      "volume": "1.6 mL/kg",
-      "flow_rate": "4 mL/s",
       "duration": "22s",
-      "timing": "Bolus Tracking",
+      "flow_rate": "4 mL/s",
       "roi": "Ascending aorta",
-      "trigger": "180 HU"
+      "timing": "Bolus Tracking",
+      "trigger": "180 HU",
+      "volume": "1.6 mL/kg"
     },
     "series": [
       {
-        "name": "Gated CTA Chest",
-        "start": "Thoracic inlet",
-        "end": "Diaphragm",
         "delay": "Bolus tracked",
-        "thickness": "0.5 mm",
-        "notes": "Retrospective gating for valve"
+        "end": "Diaphragm",
+        "name": "Gated CTA Chest",
+        "notes": "Retrospective gating for valve",
+        "start": "Thoracic inlet",
+        "thickness": "0.5 mm"
       },
       {
-        "name": "Flash CTA AP",
-        "start": "Diaphragm",
-        "end": "Femoral heads",
         "delay": "Immediate",
-        "thickness": "0.625 mm",
-        "notes": "Iliofemoral access planning"
+        "end": "Femoral heads",
+        "name": "Flash CTA AP",
+        "notes": "Iliofemoral access planning",
+        "start": "Diaphragm",
+        "thickness": "0.625 mm"
+      },
+      {
+        "delay": "NA",
+        "end": "Femoral Heads",
+        "name": "Noncon CAP",
+        "notes": "",
+        "start": "Thoracic Inlet",
+        "thickness": "1 mm"
       }
     ],
     "recons": [
       {
-        "plane": "Axial",
         "acquisition": "Gated chest",
         "fov": "Heart",
-        "thickness_increment": "0.5 mm/0.5 mm",
-        "kernel": "Cardiac",
         "ir_strength": "3",
-        "notes": "Aortic valve and root measurements"
+        "kernel": "Cardiac",
+        "notes": "Aortic valve and root measurements",
+        "plane": "Axial",
+        "thickness_increment": "0.5 mm/0.5 mm"
       },
       {
-        "plane": "Axial",
         "acquisition": "Flash AP",
         "fov": "AP",
-        "thickness_increment": "2 mm/2 mm",
-        "kernel": "Vascular",
         "ir_strength": "3",
-        "notes": "Access vessel assessment"
+        "kernel": "Vascular",
+        "notes": "Access vessel assessment",
+        "plane": "Axial",
+        "thickness_increment": "2 mm/2 mm"
       },
       {
-        "plane": "Double oblique",
         "acquisition": "Gated chest",
         "fov": "Aortic valve",
-        "thickness_increment": "0.5 mm",
-        "kernel": "Cardiac",
         "ir_strength": "3",
-        "notes": "En face aortic annulus for sizing"
+        "kernel": "Cardiac",
+        "notes": "En face aortic annulus for sizing",
+        "plane": "Double oblique",
+        "thickness_increment": "0.5 mm"
       },
       {
-        "plane": "3D VR",
         "acquisition": "Flash AP",
         "fov": "Iliofemoral",
-        "thickness_increment": "1.5 mm source",
-        "kernel": "Vascular",
         "ir_strength": "3",
-        "notes": "3D access planning"
+        "kernel": "Vascular",
+        "notes": "3D access planning",
+        "plane": "3D VR",
+        "thickness_increment": "1.5 mm source"
       }
     ],
     "notes": {
-      "tech": "Gated CHEST retrospective + Flash AP. Gated for valve measurements. AP for access planning. TAVR post-processing required",
+      "additional_recons": "TAVR measurements: annulus area perimeter diameters. Coronary heights. Sinus of Valsalva. STJ. Ascending aorta. Access vessels",
       "nursing": "20G IV antecubital",
       "rad": "Measure aortic annulus (3 diameters). Coronary heights. Access vessels (iliofemoral). Valve calcium. Comprehensive TAVR measurements",
-      "tips": "TAVR-specific measurements protocol. Thin slices critical",
-      "additional_recons": "TAVR measurements: annulus area perimeter diameters. Coronary heights. Sinus of Valsalva. STJ. Ascending aorta. Access vessels"
+      "tech": "Gated CHEST retrospective + Flash AP. Gated for valve measurements. AP for access planning. TAVR post-processing required",
+      "tips": "TAVR-specific measurements protocol. Thin slices critical"
     },
     "safety": {
-      "renal": "Verify eGFR > 30",
-      "allergy": "Check allergy history"
+      "allergy": "Check allergy history",
+      "renal": "Verify eGFR > 30"
     }
   },
   {

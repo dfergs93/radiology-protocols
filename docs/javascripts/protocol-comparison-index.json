@@ -1171,6 +1171,17 @@
         "delay_seconds": 27,
         "phase_type": "other",
         "coverage": "Diaphragm \u2192 Femoral heads"
+      },
+      {
+        "name": "Noncon CAP",
+        "start": "Thoracic Inlet",
+        "end": "Femoral Heads",
+        "delay": "NA",
+        "thickness": "1 mm",
+        "notes": "",
+        "delay_seconds": 0,
+        "phase_type": "other",
+        "coverage": "Thoracic Inlet \u2192 Femoral Heads"
       }
     ],
     "summary": [
@@ -1183,6 +1194,11 @@
         "series": "Flash CTA AP",
         "phase": "Immediate",
         "coverage": "Diaphragm \u2192 Femoral heads"
+      },
+      {
+        "series": "Noncon CAP",
+        "phase": "NA",
+        "coverage": "Thoracic Inlet \u2192 Femoral Heads"
       }
     ],
     "gantt": null
