@@ -115,13 +115,38 @@
       row.appendChild(input);
     });
 
+    var btnGroup = document.createElement('div');
+    btnGroup.style.cssText = 'display:flex;flex-direction:column;gap:0.2rem;';
+
+    var upBtn = document.createElement('button');
+    upBtn.type = 'button';
+    upBtn.textContent = '▲';
+    upBtn.title = 'Move up';
+    upBtn.style.cssText = 'padding:0.15rem 0.4rem;cursor:pointer;background:#e0e0e0;color:#333;border:none;border-radius:3px;font-size:0.7rem;line-height:1;';
+    upBtn.addEventListener('click', function () {
+      if (row.previousElementSibling) { row.parentNode.insertBefore(row, row.previousElementSibling); }
+    });
+
+    var downBtn = document.createElement('button');
+    downBtn.type = 'button';
+    downBtn.textContent = '▼';
+    downBtn.title = 'Move down';
+    downBtn.style.cssText = 'padding:0.15rem 0.4rem;cursor:pointer;background:#e0e0e0;color:#333;border:none;border-radius:3px;font-size:0.7rem;line-height:1;';
+    downBtn.addEventListener('click', function () {
+      if (row.nextElementSibling) { row.parentNode.insertBefore(row.nextElementSibling, row); }
+    });
+
     var removeBtn = document.createElement('button');
     removeBtn.type = 'button';
     removeBtn.textContent = '✕';
     removeBtn.title = 'Remove row';
     removeBtn.style.cssText = 'padding:0.25rem 0.5rem;cursor:pointer;background:#e57373;color:#fff;border:none;border-radius:3px;';
     removeBtn.addEventListener('click', function () { row.parentNode.removeChild(row); });
-    row.appendChild(removeBtn);
+
+    btnGroup.appendChild(upBtn);
+    btnGroup.appendChild(downBtn);
+    btnGroup.appendChild(removeBtn);
+    row.appendChild(btnGroup);
 
     return row;
   }

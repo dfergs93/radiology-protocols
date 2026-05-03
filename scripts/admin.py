@@ -347,11 +347,16 @@ FORM_TEMPLATE = """<!DOCTYPE html>
   .series-row-grid { grid-template-columns: 2fr 1fr 1fr 1fr 1fr; }
   .recon-row-grid { grid-template-columns: 1fr 1fr 1fr 1fr 1fr; }
   .recon-row-grid2 { grid-template-columns: 1fr 1fr 1fr; margin-top: 0.5rem; }
-  .remove-btn { position: absolute; top: 0.5rem; right: 0.5rem;
-                background: #fbe9e7; color: #c62828; border: 1px solid #ef9a9a;
+  .row-actions { position: absolute; top: 0.5rem; right: 0.5rem;
+                 display: flex; gap: 0.25rem; }
+  .remove-btn { background: #fbe9e7; color: #c62828; border: 1px solid #ef9a9a;
                 border-radius: 3px; padding: 0.15rem 0.5rem; cursor: pointer;
                 font-size: 0.78rem; }
   .remove-btn:hover { background: #ffcdd2; }
+  .move-btn { background: #eeeeee; color: #444; border: 1px solid #bdbdbd;
+              border-radius: 3px; padding: 0.15rem 0.4rem; cursor: pointer;
+              font-size: 0.75rem; line-height: 1; }
+  .move-btn:hover { background: #e0e0e0; }
   .add-btn { background: #e8f5e9; color: #2e7d32; border: 1px solid #a5d6a7;
              border-radius: 4px; padding: 0.35rem 0.85rem; cursor: pointer;
              font-size: 0.85rem; margin-top: 0.4rem; }
@@ -578,13 +583,26 @@ const IS_NEW = {{ 'true' if is_new else 'false' }};
 const SAVE_URL = {{ save_url | tojson }};
 
 // ---- Dynamic row builders ----
+function moveRow(el, dir) {
+  const parent = el.parentNode;
+  if (dir === 'up' && el.previousElementSibling) {
+    parent.insertBefore(el, el.previousElementSibling);
+  } else if (dir === 'down' && el.nextElementSibling) {
+    parent.insertBefore(el.nextElementSibling, el);
+  }
+}
+
 function addSeriesRow(s) {
   s = s || {};
   const container = document.getElementById('series-container');
   const div = document.createElement('div');
   div.className = 'dynamic-row series-row';
   div.innerHTML = `
-    <button type="button" class="remove-btn" onclick="this.parentElement.remove()">Remove</button>
+    <div class="row-actions">
+      <button type="button" class="move-btn" title="Move up" onclick="moveRow(this.closest('.dynamic-row'),'up')">▲</button>
+      <button type="button" class="move-btn" title="Move down" onclick="moveRow(this.closest('.dynamic-row'),'down')">▼</button>
+      <button type="button" class="remove-btn" onclick="this.closest('.dynamic-row').remove()">Remove</button>
+    </div>
     <div class="row-grid series-row-grid">
       <div><label>Name</label><input type="text" data-field="name" value="${esc(s.name)}"></div>
       <div><label>Start</label><input type="text" data-field="start" value="${esc(s.start)}"></div>
@@ -605,7 +623,11 @@ function addReconRow(r) {
   const div = document.createElement('div');
   div.className = 'dynamic-row recon-row';
   div.innerHTML = `
-    <button type="button" class="remove-btn" onclick="this.parentElement.remove()">Remove</button>
+    <div class="row-actions">
+      <button type="button" class="move-btn" title="Move up" onclick="moveRow(this.closest('.dynamic-row'),'up')">▲</button>
+      <button type="button" class="move-btn" title="Move down" onclick="moveRow(this.closest('.dynamic-row'),'down')">▼</button>
+      <button type="button" class="remove-btn" onclick="this.closest('.dynamic-row').remove()">Remove</button>
+    </div>
     <div class="row-grid recon-row-grid">
       <div><label>Plane</label><input type="text" data-field="plane" value="${esc(r.plane)}"></div>
       <div><label>Acquisition</label><input type="text" data-field="acquisition" value="${esc(r.acquisition)}"></div>
