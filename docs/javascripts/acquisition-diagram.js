@@ -150,7 +150,7 @@
     if (/carina level/.test(s)) return 'Heart';
 
     // ── Chest-Abdomen-Pelvis ────────────────────────────────────────────────
-    if (/(thoracic inlet|lung)/.test(s) && /(pubic|femur|trochanter|toes)/.test(s)) return 'Chest-Abdomen-Pelvis';
+    if (/(thoracic inlet|lung)/.test(s) && /(pubic|femur|femoral|trochanter|toes)/.test(s)) return 'Chest-Abdomen-Pelvis';
     if (/diaphragm/.test(s) && /toes/.test(s)) return 'Abdomen-Pelvis-Runoff';
     if (/above the diaphragm/.test(s) && /toes/.test(s)) return 'Chest-Abdomen-Pelvis-Runoff';
 

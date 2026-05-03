@@ -13,7 +13,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: 3.x
-      - run: pip install mkdocs-material pymdown-extensions mkdocs-awesome-pages-plugin pyyaml
+      - run: pip install mkdocs==1.6.1 mkdocs-material==9.7.2 pymdown-extensions==10.21 mkdocs-awesome-pages-plugin==2.10.1 pyyaml==6.0.2
       - run: python scripts/generate_comparison_index.py
       - run: python scripts/generate_sitemap.py
       - run: python scripts/generate_forms_index.py
