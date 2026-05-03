@@ -4228,6 +4228,17 @@
     },
     "series": [
       {
+        "name": "Non-contrast",
+        "start": "Diaphragm",
+        "end": "Pubic symphysis",
+        "delay": "Non-contrast",
+        "thickness": "0.625 mm",
+        "notes": "",
+        "delay_seconds": -10,
+        "phase_type": "non-contrast",
+        "coverage": "Diaphragm \u2192 Pubic symphysis"
+      },
+      {
         "name": "Arterial Phase",
         "start": "Diaphragm",
         "end": "Pubic symphysis",
@@ -4251,6 +4262,11 @@
       }
     ],
     "summary": [
+      {
+        "series": "Non-contrast",
+        "phase": "Non-contrast",
+        "coverage": "Diaphragm \u2192 Pubic symphysis"
+      },
       {
         "series": "Arterial Phase",
         "phase": "25 sec",

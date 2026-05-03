@@ -7546,7 +7546,7 @@
     "category": "vascular",
     "protocol_type": "vascular",
     "last_updated": "2026-01-05",
-    "author": "",
+    "author": "None",
     "synonyms": [],
     "clinical_indications": [
       "Active GI bleeding",
@@ -7559,70 +7559,87 @@
     "premedication": "",
     "contrast": {
       "agent": "Isovue 370",
-      "volume": "1.5 mL/kg",
-      "flow_rate": "4-5 mL/s",
       "duration": "20s",
-      "timing": "Triple phase: Arterial + Portal Venous + Delayed",
+      "flow_rate": "4-5 mL/s",
       "roi": "Abdominal aorta",
-      "trigger": "150 HU"
+      "timing": "Triple phase: Arterial + Portal Venous + Delayed",
+      "trigger": "150 HU",
+      "volume": "1.5 mL/kg"
     },
     "series": [
       {
-        "name": "Arterial Phase",
-        "start": "Diaphragm",
+        "delay": "Non-contrast",
         "end": "Pubic symphysis",
-        "delay": "25 sec",
-        "thickness": "0.625 mm",
-        "notes": "High flow rate 5 mL/s critical"
+        "name": "Non-contrast",
+        "notes": "",
+        "start": "Diaphragm",
+        "thickness": "0.625 mm"
       },
       {
-        "name": "Delayed Phase",
-        "start": "Diaphragm",
+        "delay": "25 sec",
         "end": "Pubic symphysis",
+        "name": "Arterial Phase",
+        "notes": "High flow rate 5 mL/s critical",
+        "start": "Diaphragm",
+        "thickness": "0.625 mm"
+      },
+      {
         "delay": "90 sec",
-        "thickness": "0.625 mm",
-        "notes": "Extended delay to see pooling of contrast"
+        "end": "Pubic symphysis",
+        "name": "Delayed Phase",
+        "notes": "Extended delay to see pooling of contrast",
+        "start": "Diaphragm",
+        "thickness": "0.625 mm"
       }
     ],
     "recons": [
       {
+        "acquisition": "Non-contrast",
+        "fov": "Full AP",
+        "ir_strength": "3",
+        "kernel": "Standard",
+        "notes": "Look for intrinsic hyperdensities",
         "plane": "Axial",
+        "thickness_increment": "1 mm/1 mm"
+      },
+      {
         "acquisition": "Arterial",
         "fov": "Full AP",
-        "thickness_increment": "2.5 mm/2.5 mm",
-        "kernel": "Standard",
         "ir_strength": "3",
-        "notes": "Look for arterial blush/extravasation"
+        "kernel": "Standard",
+        "notes": "Look for arterial blush/extravasation",
+        "plane": "Axial",
+        "thickness_increment": "0.75 mm/0.75 mm"
       },
       {
-        "plane": "Axial",
         "acquisition": "Delayed",
         "fov": "Full AP",
-        "thickness_increment": "2.5 mm/2.5 mm",
-        "kernel": "Standard",
         "ir_strength": "3",
-        "notes": "Look for contrast pooling in bowel"
+        "kernel": "Standard",
+        "notes": "Look for contrast pooling in bowel",
+        "plane": "Axial",
+        "thickness_increment": "1 mm/1 mm"
       },
       {
-        "plane": "Coronal",
         "acquisition": "All phases",
         "fov": "Full AP",
-        "thickness_increment": "3 mm/3 mm",
-        "kernel": "Standard",
         "ir_strength": "3",
-        "notes": "MIP to track extravasation"
+        "kernel": "Standard",
+        "notes": "MIP to track extravasation",
+        "plane": "Coronal",
+        "thickness_increment": "3 mm/3 mm"
       }
     ],
     "notes": {
-      "tech": "High flow rate critical for arterial phase. Scan arterial at 25 sec then portal at 70 sec then delayed at 90-180 sec. Look for active extravasation",
+      "additional_recons": "MIP of all three phases side-by-side for comparison",
       "nursing": "Large bore IV 18-20G essential. Verify with saline test",
       "rad": "Look for arterial extravasation (early) and pooling (delayed). Note location and potential source vessel",
-      "tips": "Arms raised to avoid artifacts. Fast table speed to cover area quickly in arterial phase",
-      "additional_recons": "MIP of all three phases side-by-side for comparison"
+      "tech": "High flow rate critical for arterial phase. Scan arterial at 25 sec then portal at 70 sec then delayed at 90-180 sec. Look for active extravasation",
+      "tips": "Arms raised to avoid artifacts. Fast table speed to cover area quickly in arterial phase"
     },
     "safety": {
-      "renal": "eGFR > 30 preferred but can proceed emergently",
-      "allergy": "Document allergy history. Emergency indication overrides mild allergy"
+      "allergy": "Document allergy history. Emergency indication overrides mild allergy",
+      "renal": "eGFR > 30 preferred but can proceed emergently"
     }
   },
   {
