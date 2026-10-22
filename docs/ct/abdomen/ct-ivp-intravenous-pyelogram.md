@@ -4,6 +4,7 @@ slug: ct-ivp-intravenous-pyelogram
 category: abdomen
 protocol_type: contrast-enhanced
 last_updated: '2026-01-01'
+modality: CT
 author: 
 synonyms: []
 clinical_indications:

@@ -1,16 +1,32 @@
 #!/bin/bash
 
-# Pre-commit hook: regenerate JSON indexes when CT protocol files are staged.
+# Pre-commit hook: validate staged protocol files, then regenerate JSON indexes.
 
 cd "$(git rev-parse --show-toplevel)" || exit 1
 
-STAGED=$(git diff --cached --name-only | grep '^docs/ct/.*\.md$')
+# Any staged protocol change (including deletions) triggers index regeneration
+STAGED=$(git diff --cached --name-only | grep -E '^docs/(ct|mr)/.*\.md$')
+# Only added/modified protocol pages (not index.md) are validated
+TO_VALIDATE=$(git diff --cached --name-only --diff-filter=ACMR | grep -E '^docs/(ct|mr)/.*\.md$' | grep -v '/index\.md$')
 
 if [ -z "$STAGED" ]; then
     exit 0
 fi
 
-echo "CT protocol files staged — regenerating indexes..."
+if [ -z "$TO_VALIDATE" ]; then
+    :
+elif python3 -c "import jsonschema" 2>/dev/null; then
+    echo "Validating staged protocols..."
+    # shellcheck disable=SC2086
+    python3 scripts/validate_protocols.py $TO_VALIDATE || {
+        echo "ERROR: protocol validation failed — fix the errors above before committing."
+        exit 1
+    }
+else
+    echo "WARNING: jsonschema not installed; skipping validation (pip install -r requirements-dev.txt)"
+fi
+
+echo "Protocol files staged — regenerating indexes..."
 
 python3 scripts/generate_comparison_index.py
 if [ $? -ne 0 ]; then

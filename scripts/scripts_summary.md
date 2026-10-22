@@ -17,7 +17,7 @@ Description of each script, organized by their purpose
 ## Protocol Indexing
 
 1. `generate_comparison_index.py`
-- Reads YAML front matter from all `docs/ct/**/*.md` files and outputs `docs/javascripts/protocol-comparison-index.json`.
+- Reads YAML front matter from all `docs/ct/**/*.md` and `docs/mr/**/*.md` files and outputs `docs/javascripts/protocol-comparison-index.json` (including review dates for the Review Status page).
 - Powers the Protocol Comparison UI (`protocol-compare.js`).
 - Run automatically by CI before `mkdocs gh-deploy`.
 
@@ -25,3 +25,10 @@ Description of each script, organized by their purpose
 - Reads YAML front matter and `config/institution.yml` and outputs `docs/javascripts/sitemap.json`.
 - Used by the radiology-agent Chrome extension to discover protocols without cross-repo pushes.
 - Run automatically by CI before `mkdocs gh-deploy`.
+
+## Validation
+
+1. `validate_protocols.py`
+- Checks every protocol's YAML front matter against `schema/protocol.schema.json`, plus: slug matches file name, category matches folder, modality matches top-level folder, unique slugs, no future review dates.
+- Run by CI on every pull request and by the pre-commit hook on staged protocol files.
+- `python scripts/validate_protocols.py` (all) or pass specific file paths.

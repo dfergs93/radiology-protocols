@@ -1,0 +1,8 @@
+# Build + validation (used by CI). Pinned so builds are reproducible.
+# Note: Material for MkDocs does not support MkDocs 2.x; keep mkdocs on 1.6.x.
+mkdocs==1.6.1
+mkdocs-material==9.7.2
+pymdown-extensions==10.21
+mkdocs-awesome-pages-plugin==2.10.1
+pyyaml==6.0.2
+jsonschema==4.26.0

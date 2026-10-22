@@ -1489,3 +1489,19 @@ html {
   border-color: var(--md-typeset-a-color);
   color: var(--md-typeset-a-color) !important;
 }
+
+/* ---- Review Status page ---- */
+.rs-filters { display: flex; flex-wrap: wrap; gap: 0.5rem; margin: 1rem 0; }
+.rs-filter {
+  padding: 0.3rem 0.8rem; border-radius: 1rem; cursor: pointer;
+  border: 1px solid var(--md-default-fg-color--lighter);
+  background: transparent; color: var(--md-default-fg-color); font: inherit; font-size: 0.75rem;
+}
+.rs-filter[aria-pressed="true"] { background: var(--md-primary-fg-color); color: var(--md-primary-bg-color); border-color: transparent; }
+.rs-table-wrap { overflow-x: auto; }
+.md-typeset .rs-table { font-size: 0.75rem; width: 100%; }
+.rs-badge { display: inline-block; padding: 0.1rem 0.5rem; border-radius: 0.25rem; font-weight: 600; white-space: nowrap; }
+.rs-badge.rs-overdue { background: #c62828; color: #fff; }
+.rs-badge.rs-never   { background: #616161; color: #fff; }
+.rs-badge.rs-soon    { background: #f9a825; color: #000; }
+.rs-badge.rs-current { background: #2e7d32; color: #fff; }

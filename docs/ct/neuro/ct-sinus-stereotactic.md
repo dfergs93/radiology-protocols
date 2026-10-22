@@ -4,6 +4,7 @@ slug: ct-sinus-stereotactic
 category: neuro
 protocol_type: neuroradiology
 last_updated: '2026-01-01'
+modality: CT
 author: 
 synonyms: []
 clinical_indications:

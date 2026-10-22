@@ -11,6 +11,9 @@ Protocol Manager is an open-source static site for managing and sharing CT proto
 - Protocol pages for each CT exam — acquisition parameters, injection parameters, contrast timing, and SVG phase diagrams
 - Side-by-side protocol comparison tool with deep-linkable URLs
 - Full-text search across all protocols
+- Protocol review tracking: `last_reviewed` / `reviewed_by` fields and a Review Status page flagging overdue protocols
+- Schema validation of every protocol (`schema/protocol.schema.json`) in CI and the pre-commit hook
+- Works fully offline: no CDN scripts or web fonts, so it can run on an internal hospital network
 - CI pipeline that rebuilds and redeploys automatically on every commit
 - Sitemap JSON consumed by the [radiology-agent](https://github.com/dfergs93/radiology-agent) Chrome extension (optional)
 
@@ -20,7 +23,7 @@ Protocol Manager is an open-source static site for managing and sharing CT proto
 
 Each protocol is a Markdown file under `docs/ct/<body-area>/`. Structured parameters (contrast agent, injection rate, series list, kV/mAs, etc.) are stored as YAML front matter. The Markdown body is the human-readable protocol document.
 
-On every push to `main`, GitHub Actions:
+On every pull request and push, GitHub Actions validates all protocols, runs the tests and builds the site (the built site is attached to the run as a downloadable zip). On `main` it then:
 1. Reads all YAML front matter and regenerates `protocol-comparison-index.json`
 2. Regenerates `sitemap.json`
 3. Builds the site with `mkdocs build` and deploys to GitHub Pages
@@ -55,7 +58,7 @@ Full documentation: https://dfergs93.github.io/radiology-protocols/for-instituti
 ## Repository Structure
 
 ```
-protocol_manager/
+radiology-protocols/
 ├── docs/
 │   ├── ct/                          # Protocol Markdown files (YAML front matter + body)
 │   ├── for-institutions/            # Adoption documentation
@@ -68,7 +71,10 @@ protocol_manager/
 │   ├── build_from_csv.py            # Generate protocol files from CSV (new institution onboarding)
 │   ├── extract_to_frontmatter.py    # Add/update YAML front matter on existing files
 │   ├── generate_comparison_index.py # Build comparison index JSON (run by CI)
-│   └── generate_sitemap.py          # Build sitemap JSON for radiology-agent (run by CI)
+│   ├── generate_sitemap.py          # Build sitemap JSON for radiology-agent (run by CI)
+│   └── validate_protocols.py        # Check front matter against the schema (CI + pre-commit)
+├── schema/
+│   └── protocol.schema.json         # Allowed protocol fields and values
 ├── data/
 │   ├── protocols.csv                # One row per protocol
 │   └── protocol_series.csv          # One row per acquisition series
@@ -82,7 +88,10 @@ protocol_manager/
 ## Local Development
 
 ```bash
-pip install mkdocs-material pymdown-extensions mkdocs-awesome-pages-plugin pyyaml
+pip install -r requirements-dev.txt
+python scripts/install_hooks.py    # validate + regenerate indexes on commit
+python scripts/validate_protocols.py
+python -m pytest -q tests
 mkdocs serve
 # Site at http://127.0.0.1:8000/<base_path>/
 ```

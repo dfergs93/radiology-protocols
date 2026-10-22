@@ -12,6 +12,7 @@ contrast:
   trigger: ''
   volume: ''
 last_updated: '2026-01-01'
+modality: CT
 notes:
   additional_recons: CAD nodule detection. Measure all nodules ≥3mm. Lung-RADS reporting
   nursing: No IV. Explain screening purpose and low radiation

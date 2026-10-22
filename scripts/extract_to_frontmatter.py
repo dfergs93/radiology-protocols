@@ -7,7 +7,7 @@ Extract structured data from existing CT protocol Markdown files and:
 Usage:
   python scripts/extract_to_frontmatter.py            # dry run - prints what would change
   python scripts/extract_to_frontmatter.py --apply    # writes front matter + CSVs
-  python scripts/extract_to_frontmatter.py --file docs/ct/chest/ct-pulmonary-embolism.md
+  python scripts/extract_to_frontmatter.py --file docs/ct/vascular/ct-pulmonary-embolism.md
 """
 
 import argparse
@@ -314,6 +314,7 @@ def build_frontmatter(title, slug, category, protocol_type, last_updated, author
         'title': title,
         'slug': slug,
         'category': category,
+        'modality': 'CT',  # this migration script only handles the legacy CT pages
         'protocol_type': protocol_type,
         'last_updated': last_updated,
         'author': author,

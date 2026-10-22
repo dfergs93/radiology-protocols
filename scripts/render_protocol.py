@@ -51,7 +51,7 @@ def _contrast_section(contrast: dict) -> str:
         '    === "Lab Requirements"\n',
         '        Use full dose if GFR > 30\n',
         '        !!! warning "If GFR < 30"\n',
-        r'            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)' + '\n',
+        '            **Max Contrast** = 2 × [(Patient Weight ÷ 75 kg) × eGFR]\n',
     ]
     return ''.join(lines)
 

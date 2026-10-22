@@ -5,5 +5,7 @@
   "google_form_entry_body": "entry.2104758313",
   "institution_name": "Radiology Department",
   "site_url": "https://dfergs93.github.io/radiology-protocols",
-  "base_path": "/radiology-protocols"
+  "base_path": "/radiology-protocols",
+  "review_interval_months": 12,
+  "review_due_soon_days": 60
 }

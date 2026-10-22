@@ -1,0 +1,4 @@
+# Local development: tests + the admin editor (scripts/admin.py)
+-r requirements.txt
+pytest==9.1.1
+flask==3.1.3

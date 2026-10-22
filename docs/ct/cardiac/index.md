@@ -56,4 +56,4 @@ Protocols for coronary CTA, calcium scoring, and functional cardiac imaging.
     \(\text{Scan Delay} = \text{Scan Time} - 5 \text{ seconds}\)
 
 !!! warning "Low Contrast Dose Calculation"
-    **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
+    **Max Contrast** = 2 × [(Patient Weight ÷ 75 kg) × eGFR]

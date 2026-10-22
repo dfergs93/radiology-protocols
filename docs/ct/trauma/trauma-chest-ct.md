@@ -4,6 +4,7 @@ slug: trauma-chest-ct
 category: trauma
 protocol_type: trauma
 last_updated: '2026-01-01'
+modality: CT
 author: 
 synonyms: []
 clinical_indications:

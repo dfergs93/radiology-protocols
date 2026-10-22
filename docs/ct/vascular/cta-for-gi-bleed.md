@@ -15,6 +15,7 @@ contrast:
   trigger: 150 HU
   volume: 1.5 mL/kg
 last_updated: '2026-01-05'
+modality: CT
 notes:
   additional_recons: MIP of all three phases side-by-side for comparison
   nursing: Large bore IV 18-20G essential. Verify with saline test
@@ -144,7 +145,7 @@ title: CTA for GI Bleed
     === "Lab Requirements"
         Use full dose if GFR > 30
         !!! warning "If GFR < 30"
-            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
+            **Max Contrast** = 2 × [(Patient Weight ÷ 75 kg) × eGFR]
 
 -   __4. Special Notes__
 

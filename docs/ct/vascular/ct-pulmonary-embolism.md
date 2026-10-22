@@ -14,6 +14,7 @@ contrast:
   trigger: 100 HU
   volume: 1.3 mL/kg
 last_updated: '2026-01-01'
+modality: CT
 notes:
   additional_recons: MIP reconstructions of pulmonary arteries
   nursing: 20G or larger IV in antecubital preferred. Verify good flow before injection
@@ -127,7 +128,7 @@ title: CT Pulmonary Embolism
     === "Lab Requirements"
         Use full dose if GFR > 30
         !!! warning "If GFR < 30"
-            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
+            **Max Contrast** = 2 × [(Patient Weight ÷ 75 kg) × eGFR]
 
 -   __4. Special Notes__
 

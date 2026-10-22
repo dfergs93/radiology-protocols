@@ -113,6 +113,7 @@ def build_frontmatter(row, series_data):
         'title': row['title'],
         'slug': slug,
         'category': row.get('category', ''),
+        'modality': (row.get('modality') or 'CT').upper(),
         'protocol_type': row.get('protocol_type', ''),
         'last_updated': row.get('last_updated', ''),
         'author': row.get('author', ''),
@@ -141,6 +142,11 @@ def build_frontmatter(row, series_data):
             'allergy': row.get('safety_allergy', ''),
         },
     }
+    # Optional review columns (see schema/protocol.schema.json)
+    if row.get('last_reviewed'):
+        fm['last_reviewed'] = row['last_reviewed']
+    if row.get('reviewed_by'):
+        fm['reviewed_by'] = pipe_split(row['reviewed_by'])
     return yaml.dump(fm, allow_unicode=True, default_flow_style=False, sort_keys=False)
 
 
@@ -328,7 +334,8 @@ def main():
     for row in protocols:
         slug = row['slug']
         category = row.get('category', 'general').lower()
-        out_dir = DOCS_CT_DIR / category
+        modality_dir = (row.get('modality') or 'CT').lower()  # CT -> docs/ct, MR -> docs/mr
+        out_dir = DOCS_CT_DIR.parent / modality_dir / category
         out_path = out_dir / f'{slug}.md'
 
         fm = build_frontmatter(row, series_data)

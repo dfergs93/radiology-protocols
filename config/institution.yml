@@ -21,6 +21,14 @@ contact:
   google_form_entry_title: "entry.1147256966"
   google_form_entry_body: "entry.2104758313"
 
+review:
+  # How often each protocol must be formally reviewed (ACR / Joint Commission
+  # expect at least annual review). A protocol can override this with
+  # review_interval_months in its front matter.
+  interval_months: 12
+  # Flag protocols as "due soon" this many days before their review date.
+  due_soon_days: 60
+
 branding:
   # Path to logo relative to docs/
   logo: ""

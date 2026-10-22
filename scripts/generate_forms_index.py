@@ -54,6 +54,7 @@ def build_forms_entry(fm: dict, filepath: Path) -> dict:
         'title': fm.get('title') or '',
         'category': fm.get('category') or '',
         'protocol_type': fm.get('protocol_type') or '',
+        'modality': fm.get('modality') or '',
         'last_updated': fm.get('last_updated') or '',
         'author': fm.get('author') or '',
         'synonyms': fm.get('synonyms') or [],
@@ -83,6 +84,7 @@ def build_institution_config(config_path: Path) -> dict:
 
     institution = cfg.get('institution') or {}
     contact = cfg.get('contact') or {}
+    review = cfg.get('review') or {}
 
     return {
         'feedback_url': contact.get('feedback_url') or '',
@@ -92,6 +94,8 @@ def build_institution_config(config_path: Path) -> dict:
         'institution_name': institution.get('name') or '',
         'site_url': institution.get('site_url') or '',
         'base_path': institution.get('base_path') or '',
+        'review_interval_months': review.get('interval_months') or 12,
+        'review_due_soon_days': review.get('due_soon_days') or 60,
     }
 
 

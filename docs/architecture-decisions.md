@@ -2,7 +2,7 @@
 
 ## Current System State
 
-Protocol Manager is a MkDocs Material static site hosted on GitHub Pages. It serves CT protocol documentation for a single institution. There is no backend server. All data lives in Markdown files with YAML front matter under `docs/ct/`. The comparison tool and acquisition diagrams are vanilla JS running entirely in the browser. CI auto-generates the comparison index and sitemap JSON on every push to `main`.
+Protocol Manager is a MkDocs Material static site hosted on GitHub Pages. It serves CT protocol documentation for a single institution. There is no backend server. All data lives in Markdown files with YAML front matter under `docs/ct/`. The comparison tool and acquisition diagrams are vanilla JS running entirely in the browser. CI validates every protocol against a schema, runs tests, and auto-generates the comparison index and sitemap JSON on every push to `main`.
 
 ---
 
@@ -28,6 +28,18 @@ Protocol Manager is a MkDocs Material static site hosted on GitHub Pages. It ser
 - `generate_sitemap.py` outputs `docs/javascripts/sitemap.json`
 - Used by the `radiology-agent` Chrome extension to discover protocol URLs without cross-repo pushes
 
+### Foundation for internal, department-wide use (October 2026, "Phase 1")
+Goal: make the site deployable on an internal hospital network for a whole department, vendor-agnostic, ready for MR.
+- **No external network requests.** Removed the unused `marked` CDN script and MathJax (CDN). The only formula (eGFR max-contrast) is now plain text. Google Fonts disabled (`theme.font: false`). Hospital networks commonly block CDNs.
+- **No hard-coded base path.** JS resolves data files relative to its own script URL; homepage links are relative. The site works at any URL (GitHub Pages subfolder or internal server root).
+- **Schema validation.** `schema/protocol.schema.json` + `scripts/validate_protocols.py`, run in CI on every pull request and in the pre-commit hook. Unknown fields are rejected so typos can't slip in.
+- **`modality` field** (`CT` / `MR`), required, must match the top-level folder (`docs/ct`, `docs/mr`). Index generation already scans `docs/mr`.
+- **Review tracking.** Optional `last_reviewed`, `reviewed_by`, `review_interval_months`; default interval in `config/institution.yml`. Due date is computed, not stored. Review Status page lists overdue / due soon / never reviewed. Supports ACR / Joint Commission annual protocol review.
+- **Vendor-neutral data.** Field names stay generic; `ir_strength` is free text. Existing values (mostly `'3'`) were left as-is rather than guessed.
+- **CI split** into a check job (validate, test, strict build, upload site zip) and a deploy job (main only).
+- **Admin editor** now merges the form into the saved file instead of rebuilding it, so fields the form doesn't show are no longer dropped on save.
+- **Known risk:** Material for MkDocs does not support MkDocs 2.x and is in maintenance mode (successor: Zensical). Versions are pinned in `requirements.txt`; revisit migration later.
+
 ---
 
 ## What Was Abandoned and Why
@@ -35,7 +47,7 @@ Protocol Manager is a MkDocs Material static site hosted on GitHub Pages. It ser
 ### FastAPI + ChromaDB + OpenAI RAG Backend
 - **What it was:** A Python FastAPI server that embedded protocol/guideline Markdown into ChromaDB and answered clinical questions via GPT-4o-mini RAG.
 - **Why abandoned:** Explicitly de-scoped. Protocol Manager's purpose is static reference documentation — a chatbot adds maintenance overhead (API keys, server costs, cold-start latency) for marginal value. AI-assisted queries are handled by the `radiology-agent` Chrome extension using the sitemap as a discovery layer.
-- **Removed:** April 2026. Entire `backend/` directory, root `chroma_db/`, and `tests/` deleted.
+- **Removed:** April 2026. Entire `backend/` directory, root `chroma_db/`, and the backend's tests deleted. (A new `tests/` suite for the scripts was added later.)
 - **Don't re-suggest:** Do not add a backend API, vector database, or OpenAI integration to this repo.
 
 ### Mermaid Gantt Diagrams
@@ -57,6 +69,6 @@ Protocol Manager is a MkDocs Material static site hosted on GitHub Pages. It ser
 ## In Progress / Active
 
 ### Protocol Combination View
-- **Spec:** `docs/superpowers/specs/2026-03-21-protocol-combination-view-design.md`
-- **Status:** Spec approved, implementation plan not yet written (as of April 2026)
+- **Spec:** originally `docs/superpowers/specs/2026-03-21-protocol-combination-view-design.md`; that file is no longer in the repo
+- **Status:** Not started; spec needs re-writing (as of October 2026)
 - **What it is:** A view in the comparison tool showing how two selected protocols could be run together in one visit — combined contrast phases, merged acquisition schedule
