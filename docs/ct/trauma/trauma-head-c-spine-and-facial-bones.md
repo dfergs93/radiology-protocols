@@ -4,6 +4,7 @@ slug: trauma-head-c-spine-and-facial-bones
 category: trauma
 protocol_type: trauma
 last_updated: '2026-01-01'
+modality: CT
 author: 
 synonyms: []
 clinical_indications:

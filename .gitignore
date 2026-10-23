@@ -18,7 +18,6 @@ venv/
 .superpowers/
 .worktrees/
 .claude/
-.github/
 CLAUDE.md
 TODO.md
 settings.json
@@ -35,6 +34,7 @@ scripts/*
 !scripts/generate_sitemap.py
 !scripts/generate_forms_index.py
 !scripts/render_protocol.py
+!scripts/validate_protocols.py
 !scripts/admin.py
 !scripts/install_hooks.py
 !scripts/hooks/

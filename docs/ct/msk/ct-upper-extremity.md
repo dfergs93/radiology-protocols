@@ -4,6 +4,7 @@ slug: ct-upper-extremity
 category: msk
 protocol_type: contrast-enhanced
 last_updated: '2026-01-01'
+modality: CT
 author: 
 synonyms: []
 clinical_indications:
@@ -124,7 +125,7 @@ safety:
     ===   "Lab Requirements"
         Use full dose if GFR > 30
         !!! warning "If GFR < 30"
-            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
+            **Max Contrast** = 2 × [(Patient Weight ÷ 75 kg) × eGFR]
 
 -   __4. Special Notes__
 

@@ -102,6 +102,9 @@ def form_to_frontmatter(form) -> dict:
     if not last_updated:
         last_updated = str(date.today())
 
+    reviewed_by_raw = form.get("reviewed_by", "")
+    reviewed_by = [s.strip() for s in reviewed_by_raw.splitlines() if s.strip()]
+
     synonyms_raw = form.get("synonyms", "")
     synonyms = [s.strip() for s in synonyms_raw.splitlines() if s.strip()]
 
@@ -112,6 +115,8 @@ def form_to_frontmatter(form) -> dict:
         "protocol_type": form.get("protocol_type", "").strip(),
         "last_updated": last_updated,
         "author": form.get("author", "").strip(),
+        "last_reviewed": form.get("last_reviewed", "").strip() or None,
+        "reviewed_by": reviewed_by,
         "synonyms": synonyms,
         "clinical_indications": indications,
         "position": form.get("position", "").strip(),
@@ -140,6 +145,21 @@ def form_to_frontmatter(form) -> dict:
         },
     }
     return fm
+
+
+def merge_frontmatter(original: dict, edited: dict) -> dict:
+    """Overlay *edited* (from the form) onto *original* (from the file).
+
+    Keys the form doesn't know about survive, including keys inside nested
+    dicts such as contrast.type or notes.additional_recons.
+    """
+    merged = dict(original)
+    for key, value in edited.items():
+        if isinstance(value, dict) and isinstance(original.get(key), dict):
+            merged[key] = {**original[key], **value}
+        else:
+            merged[key] = value
+    return merged
 
 
 def apply_changes_to_fm(fm: dict, changes: dict) -> tuple[dict, set]:
@@ -449,6 +469,14 @@ FORM_TEMPLATE = """<!DOCTYPE html>
     <div>
       <label for="author">Author</label>
       <input type="text" id="author" name="author" value="{{ fm.author }}">
+    </div>
+    <div>
+      <label for="last_reviewed">Last Reviewed</label>
+      <input type="date" id="last_reviewed" name="last_reviewed" value="{{ fm.last_reviewed or '' }}">
+    </div>
+    <div>
+      <label for="reviewed_by">Reviewed By (one per line, with role)</label>
+      <textarea id="reviewed_by" name="reviewed_by" rows="2">{{ fm.reviewed_by | join('\n') }}</textarea>
     </div>
     <div class="span-full">
       <label for="synonyms">Synonyms (one per line)</label>
@@ -770,9 +798,12 @@ EMPTY_FM: dict = {
     "title": "",
     "slug": "",
     "category": "abdomen",
+    "modality": "CT",
     "protocol_type": "",
     "last_updated": str(date.today()),
     "author": "",
+    "last_reviewed": None,
+    "reviewed_by": [],
     "synonyms": [],
     "clinical_indications": [],
     "position": "",
@@ -827,14 +858,11 @@ def edit(slug: str):
     if request.method == "POST":
         try:
             original_fm = item["fm"]
-            fm = form_to_frontmatter(request.form)
+            # Start from the saved file and overlay the form, so fields the form
+            # doesn't show (tech_params, modality, review dates, ...) are kept.
+            fm = merge_frontmatter(original_fm, form_to_frontmatter(request.form))
             # Preserve slug (readonly on edit)
             fm["slug"] = slug
-            # Preserve fields not exposed in the form to avoid silent data loss
-            if "tech_params" in original_fm:
-                fm["tech_params"] = original_fm["tech_params"]
-            if original_fm.get("notes", {}).get("additional_recons"):
-                fm.setdefault("notes", {})["additional_recons"] = original_fm["notes"]["additional_recons"]
             md_content = render_document(fm)
             item["filepath"].write_text(md_content, encoding="utf-8")
             failures = rebuild_indexes()
@@ -879,6 +907,7 @@ def new():
         import re as _re
         try:
             fm = form_to_frontmatter(request.form)
+            fm["modality"] = "CT"  # the editor only creates CT protocols for now
             slug = fm.get("slug", "").strip()
             if not slug:
                 return jsonify({"success": False, "error": "Slug is required."})

@@ -13,6 +13,7 @@ contrast:
   trigger: 180 HU
   volume: 1.6 mL/kg
 last_updated: '2026-01-01'
+modality: CT
 notes:
   additional_recons: 'TAVR measurements: annulus area perimeter diameters. Coronary
     heights. Sinus of Valsalva. STJ. Ascending aorta. Access vessels'
@@ -148,7 +149,7 @@ title: Gated CTA TAVR
     === "Lab Requirements"
         Use full dose if GFR > 30
         !!! warning "If GFR < 30"
-            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
+            **Max Contrast** = 2 × [(Patient Weight ÷ 75 kg) × eGFR]
 
 -   __4. Special Notes__
 

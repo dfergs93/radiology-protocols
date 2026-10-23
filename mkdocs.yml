@@ -3,6 +3,8 @@ site_url: https://dfergs93.github.io/radiology-protocols/
 
 theme:
   name: material
+  # No Google Fonts: the site must work on hospital networks with no internet access
+  font: false
   features:
     - navigation.tabs
     # - navigation.expand
@@ -39,12 +41,9 @@ extra_css:
 extra_javascript:
   - javascripts/acquisition-diagram.js
   - javascripts/acquisition-diagram-init.js
-  - https://cdn.jsdelivr.net/npm/marked/marked.min.js
   - javascripts/protocol-compare.js
-  - javascripts/protocol-comparison-index.json  # Pre-generated JSON data for comparison index
   - javascripts/request-change.js
-  - javascripts/mathjax.js
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - javascripts/review-status.js
 
 markdown_extensions:
   - admonition
@@ -57,5 +56,3 @@ markdown_extensions:
       emoji_index: !!python/name:material.extensions.emoji.twemoji
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.superfences
-  - pymdownx.arithmatex:
-      generic: true

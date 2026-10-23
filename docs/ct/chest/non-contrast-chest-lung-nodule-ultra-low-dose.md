@@ -4,6 +4,7 @@ slug: non-contrast-chest-lung-nodule-ultra-low-dose
 category: chest
 protocol_type: chest/pulmonary
 last_updated: '2026-01-01'
+modality: CT
 author: 
 synonyms: []
 clinical_indications:

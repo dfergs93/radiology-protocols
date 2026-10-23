@@ -1,3 +1,9 @@
+// Resolve data files relative to this script so the site works under any base path
+// (GitHub Pages subfolder, internal server root, etc.)
+const SCRIPT_URL = (document.currentScript && document.currentScript.src) || window.location.href;
+const PROTOCOL_INDEX_URL = new URL('protocol-comparison-index.json', SCRIPT_URL).href;
+const SITE_ROOT_URL = new URL('../', SCRIPT_URL).href;
+
 let protocolData = [];
 let selectedProtocols = [];
 let selectorCount = 2;
@@ -6,7 +12,7 @@ let selectorCount = 2;
 document.addEventListener('DOMContentLoaded', function () {
   console.log('Page loaded, fetching protocol data...');
 
-  fetch('/radiology-protocols/javascripts/protocol-comparison-index.json')
+  fetch(PROTOCOL_INDEX_URL)
     .then(response => {
       console.log('Fetch response status:', response.status);
       if (!response.ok) {
@@ -455,7 +461,7 @@ function displayGanttComparison() {
     const title = document.createElement('h4');
     const link = document.createElement('a');
     const url = protocol.filepath.replace('.md', '/');
-    link.href = '/radiology-protocols/' + url;
+    link.href = SITE_ROOT_URL + url;
     link.textContent = protocol.title;
     link.style.textDecoration = 'none';
     link.style.color = 'inherit';

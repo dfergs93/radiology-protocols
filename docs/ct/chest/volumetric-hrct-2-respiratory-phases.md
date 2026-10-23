@@ -14,6 +14,7 @@ contrast:
   trigger: ''
   volume: ''
 last_updated: '2026-01-01'
+modality: CT
 notes:
   additional_recons: Thin slice for ILD detail. Compare inspiration vs expiration.
     Quantitative analysis if available

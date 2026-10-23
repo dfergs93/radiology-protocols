@@ -35,7 +35,7 @@ If you are hosting in a subdirectory on an internal server (e.g. `https://intran
 ## Step 2 — Install Dependencies
 
 ```bash
-pip install mkdocs-material pymdown-extensions mkdocs-awesome-pages-plugin pyyaml flask
+pip install -r requirements-dev.txt
 ```
 
 Install the pre-commit hook so indexes are regenerated automatically whenever you commit protocol changes:
@@ -101,7 +101,7 @@ Use this path for a small number of protocols or when adding protocols one at a 
 1. Copy an existing protocol file as a template:
 
    ```bash
-   cp docs/ct/chest/ct-pulmonary-embolism.md docs/ct/chest/my-new-protocol.md
+   cp docs/ct/vascular/ct-pulmonary-embolism.md docs/ct/vascular/my-new-protocol.md
    ```
 
 2. Edit the YAML front matter at the top of the file — update all parameter values for the new protocol.

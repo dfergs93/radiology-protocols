@@ -1,16 +1,23 @@
 #!/usr/bin/env python3
 """
-Generate protocol comparison index from YAML front matter in CT protocol Markdown files.
+Generate protocol comparison index from YAML front matter in protocol Markdown files
+(docs/ct and docs/mr). Also carries review dates used by the Review Status page.
 
 Reads front matter written by extract_to_frontmatter.py and outputs
 docs/javascripts/protocol-comparison-index.json in the format consumed by
 protocol-compare.js.
 """
 
+import calendar
+import datetime as dt
 import json
 from pathlib import Path
 
 import yaml
+
+# Top-level docs folders that hold protocols
+PROTOCOL_DIRS = ['docs/ct', 'docs/mr']
+DEFAULT_REVIEW_INTERVAL_MONTHS = 12
 
 
 # ---------------------------------------------------------------------------
@@ -107,14 +114,51 @@ def compute_delay_seconds(delay_str, series_name, contrast_duration_secs, saline
 
 
 # ---------------------------------------------------------------------------
+# Review dates
+# ---------------------------------------------------------------------------
+
+def load_review_interval(config_path=Path('config/institution.yml')):
+    """Default review interval (months) from institution.yml."""
+    try:
+        cfg = yaml.safe_load(config_path.read_text(encoding='utf-8')) or {}
+    except (FileNotFoundError, yaml.YAMLError):
+        cfg = {}
+    return (cfg.get('review') or {}).get('interval_months') or DEFAULT_REVIEW_INTERVAL_MONTHS
+
+
+def add_months(day, months):
+    """Return *day* plus *months*, clamped to the end of the month (Jan 31 + 1 month = Feb 28/29)."""
+    month_index = day.month - 1 + months
+    year = day.year + month_index // 12
+    month = month_index % 12 + 1
+    return dt.date(year, month, min(day.day, calendar.monthrange(year, month)[1]))
+
+
+def next_review_due(last_reviewed, interval_months):
+    """ISO date the next review is due, or '' if never reviewed or the date is unreadable."""
+    if not last_reviewed:
+        return ''
+    try:
+        day = last_reviewed if isinstance(last_reviewed, dt.date) else dt.date.fromisoformat(str(last_reviewed))
+    except ValueError:
+        return ''
+    return add_months(day, interval_months).isoformat()
+
+
+def _date_str(value):
+    return value.isoformat() if isinstance(value, dt.date) else (str(value) if value else '')
+
+
+# ---------------------------------------------------------------------------
 # Protocol builder
 # ---------------------------------------------------------------------------
 
-def build_protocol_entry(fm, filepath):
+def build_protocol_entry(fm, filepath, default_review_interval=DEFAULT_REVIEW_INTERVAL_MONTHS):
     """Build a protocol dict for the comparison index from front matter."""
     contrast = fm.get('contrast') or {}
     series_list = fm.get('series') or []
     recons_list = fm.get('recons') or []
+    review_interval = fm.get('review_interval_months') or default_review_interval
 
     # Contrast info in the format protocol-compare.js expects
     contrast_entry = {
@@ -171,6 +215,12 @@ def build_protocol_entry(fm, filepath):
         'title': fm.get('title', ''),
         'category': fm.get('category', '').title(),
         'slug': fm.get('slug', ''),
+        'modality': fm.get('modality') or 'CT',
+        'last_updated': _date_str(fm.get('last_updated')),
+        'last_reviewed': _date_str(fm.get('last_reviewed')),
+        'reviewed_by': fm.get('reviewed_by') or [],
+        'review_interval_months': review_interval,
+        'next_review_due': next_review_due(fm.get('last_reviewed'), review_interval),
         'contrast': contrast_entry,
         'series': series_entries,
         'summary': summary,
@@ -183,10 +233,11 @@ def build_protocol_entry(fm, filepath):
 # ---------------------------------------------------------------------------
 
 def generate_comparison_index():
-    docs_dir = Path('docs/ct')
     protocols = []
+    review_interval = load_review_interval()
+    md_files = [f for d in PROTOCOL_DIRS if Path(d).is_dir() for f in sorted(Path(d).rglob('*.md'))]
 
-    for md_file in sorted(docs_dir.rglob('*.md')):
+    for md_file in md_files:
         if md_file.name == 'index.md':
             continue
 
@@ -198,7 +249,7 @@ def generate_comparison_index():
             continue
 
         print(f'Processing: {md_file}')
-        entry = build_protocol_entry(fm, md_file.relative_to('docs'))
+        entry = build_protocol_entry(fm, md_file.relative_to('docs'), review_interval)
         protocols.append(entry)
 
     protocols.sort(key=lambda x: (x.get('category', ''), x.get('title', '')))

@@ -14,6 +14,7 @@ contrast:
   trigger: ''
   volume: ''
 last_updated: '2026-01-01'
+modality: CT
 notes:
   additional_recons: Measure tracheal AP diameter inspiration vs expiration. Calculate
     collapse percentage. 3D airway

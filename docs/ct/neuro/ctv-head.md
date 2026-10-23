@@ -15,6 +15,7 @@ contrast:
   trigger: ''
   volume: 75-100 mL
 last_updated: '2026-01-01'
+modality: CT
 notes:
   additional_recons: 3D VR venogram. MIP maximum intensity projection. Document filling
     defects
@@ -137,7 +138,7 @@ title: CTV Head
     === "Lab Requirements"
         Use full dose if GFR > 30
         !!! warning "If GFR < 30"
-            **Max Contrast** = \(2*\left[\frac{\text{Patient Weight}}{75 \text{ kg}} * \text{eGFR}\right]\)
+            **Max Contrast** = 2 × [(Patient Weight ÷ 75 kg) × eGFR]
 
 -   __4. Special Notes__
 
